@@ -1,0 +1,489 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "武装魔法使"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "人类散兵"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "游民妖精"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "游民妖怪"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "初等付丧神"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "人形付丧神"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "初始魔法编制"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "人偶突击兵团"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
+	}
+}
+
+######################
+units = {
+	division = {
+		name = "人类散兵"
+		location = 2025
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类散兵"
+		location = 999
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2253
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 969
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2197
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 4365
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 3261
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2272
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 1904
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 1904
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "武装魔法使"
+		location = 3259
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装魔法使"
+		location = 3259
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装魔法使"
+		location = 3259
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装魔法使"
+		location = 3259
+		division_template = "武装魔法使"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 1565
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类散兵"
+		location = 1565
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	
+
+	division = {
+		name = "武装魔法使"
+		location = 208
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 3271
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 2380
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	# 妖精
+	division = {
+		name = "游民妖精"
+		location = 2253
+		division_template = "游民妖精"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖精"
+		location = 2253
+		division_template = "游民妖精"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖精"
+		location = 2253
+		division_template = "游民妖精"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖精"
+		location = 2253
+		division_template = "游民妖精"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖精"
+		location = 2253
+		division_template = "游民妖精"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	# 妖怪
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游民妖怪"
+		location = 208
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "游民妖怪"
+		location = 3258
+		division_template = "游民妖怪"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	# 道具
+	division = {
+		name = "初等付丧神"
+		location = 4365
+		division_template = "初等付丧神"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初等付丧神"
+		location = 969
+		division_template = "初等付丧神"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人形付丧神"
+		location = 2025
+		division_template = "人形付丧神"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人形付丧神"
+		location = 2025
+		division_template = "人形付丧神"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人形付丧神"
+		location = 2025
+		division_template = "人形付丧神"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	# 爱丽丝
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2380
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2380
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

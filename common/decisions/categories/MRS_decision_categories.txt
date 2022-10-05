@@ -1,0 +1,135 @@
+# 内战决议组
+MRS_mo_fa_zhi_sen_nei_zhan = {
+	icon = generic_political_actions
+
+	priority = 96
+
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NRM
+		}
+	}
+
+	visible = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NRM
+		}
+		has_global_flag = MRS_civil_war_prepare_flag
+		NOT = {
+			has_global_flag = MRS_civil_war_end_flag
+		}
+	}
+	
+}
+
+# 内战后决议组
+MRS_mo_fa_zhi_sen_chong_jian = {
+	icon = generic_political_actions
+
+	priority = 97
+
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NRM
+		}
+	}
+
+	visible = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NRM
+		}
+		has_global_flag = MRS_civil_war_end_flag
+	}
+}
+
+MRS_Offer_peace_MSD = {
+
+	icon = generic_political_actions
+
+	priority = 95
+  
+  allowed = {
+    original_tag = MRS
+    	
+	}
+
+	visible = {
+    original_tag = MRS
+	}
+}
+
+MRS_Magic_Forest_Management = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+      OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+    	
+	}
+
+	visible = {
+	    OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+	    has_completed_focus = MRS_Hold_Economic_Investigation_Conference
+	}
+}
+
+MRS_Literature_Center = {
+
+	icon = generic_political_actions
+
+	priority = 85
+  
+  	allowed = {
+    	OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+	}
+
+	visible = {
+	    OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+	    has_completed_focus = MRS_Establish_Literature_Center
+	}
+}
+
+
+MRS_enemies_in_all_direction = {
+
+	icon = generic_political_actions
+
+	priority = 80
+  
+  	allowed = {
+    	OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+	}
+
+	visible = {
+	    OR = {
+        original_tag = MRS
+        original_tag = ALI
+      }
+	    has_completed_focus = MRS_enemies_in_all_direction
+	}
+}

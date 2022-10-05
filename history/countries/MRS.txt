@@ -1,0 +1,199 @@
+﻿capital = 188
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        linglizhufu = 1
+        linglicunchu = 1
+        spell_card2 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+        #种族
+        # yanjiujingshen1 = 1
+
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        linglizhufu = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        spear2 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        ziyuankaifa130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+        #种族
+        # yanjiujingshen1 = 1
+
+            
+    }
+    
+}
+143.7.1 = {
+	# set_research_slots = 1
+	add_ideas = {
+        type2_manpowerlv4
+        Magician
+    	Tribal
+        dove2
+        open0
+        normal_border
+    }
+    add_ideas = {
+        mrs_fenliedemofashi
+        mrs_bushimofashi
+    }
+    # if = {
+    #     limit = {
+    #         has_start_date < 143.7.2
+    #     }
+    #     add_manpower = 460
+    # }
+    
+	oob = "MRS_143"
+
+	set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    } 
+    set_popularities = {
+        qinwai = 5
+        guli = 80
+        neworder = 0
+        oldorder = 0
+        fandong = 15
+    }
+    create_equipment_variant = {
+       name = "魔符「ミルキーウェイ」"
+       type = magic_core141
+       upgrades = {
+          # upgrade_reliability = 3
+          upgrade_softattack = 4
+          # upgrade_hardattack = 1
+          upgrade_aaattack = 2
+          upgrade_defense = 1
+          upgrade_breakthrough = 5
+          # upgrade_ic = 2
+          upgrade_ic_reverse = 5
+          upgrade_reliability_reverse = 5
+       }
+    }
+}
+146.1.1={
+    oob = "MRS_146"
+    # set_research_slots = 4
+    # Starting tech
+    # give_guarantee = RNS
+    set_country_flag = bunengsuiyiqiehuanzhengti
+    country_lock_all_division_template = yes
+
+    add_ideas = {
+        type2_manpowerlv2
+        Magician
+        Tribal
+        dove3
+        close2
+        normal_border
+        sc_rule
+    }
+    add_ideas = {
+        mrs_fen_lie_de_mo_fa_shi_idea
+        mrs_bushimofashi
+        mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_idea
+        mrs_hun_luan_de_zhi_hui_xi_tong_idea
+        mrs_luo_hou_de_wu_qi_sheng_chan_idea
+    }
+
+    #########局势修改
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    } 
+    set_popularities = {
+        qinwai = 30
+        guli = 40
+        neworder = 5
+        oldorder = 0
+        fandong = 25
+    }
+
+    set_truce = {target = RMI days = 365}
+    set_truce = {target = NIB days = 365}
+    set_truce = {target = SEJ days = 365}
+
+    # 将领
+    recruit_character = ALI_ali
+    recruit_character = ALI_shh
+    recruit_character = ALI_hor
+    recruit_character = MRS_ellen
+    recruit_character = MRS_narumi
+    recruit_character = MRS_mrs
+}

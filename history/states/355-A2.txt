@@ -1,0 +1,45 @@
+state={
+	id=355
+	name="STATE_355"
+
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=5.000
+		crystal=5.000
+	}
+
+
+	history={
+		143.7.1 = {
+			owner = MRS
+			add_core_of = MYK
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = MRS
+			add_core_of = MRS
+			remove_core_of = MYK
+			add_core_of = RMI
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+	}
+	state_category=s2
+	local_supplies=2.5
+	provinces={
+		698 1771 3261 4518 4520 4521 4527 
+	}
+	manpower=1003.0
+	buildings_max_level_factor=1.000
+}

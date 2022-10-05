@@ -1,0 +1,1535 @@
+spriteTypes = {
+	#logo
+	spriteType = {
+		name = "GFX_logo_roa"
+		texturefile = "gfx//interface//logo_roa.dds"
+		noOfFrames = 2
+	}
+	#menu button
+	spriteType = {
+		name = "GFX_icon_discord"
+		texturefile = "gfx//interface//icon_discord.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_icon_qq"
+		texturefile = "gfx//interface//icon_qq.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_icon_steam"
+		texturefile = "gfx//interface//icon_steam.dds"
+		noOfFrames = 1
+	}
+	#music album
+	spriteType = {
+		name = "GFX_roa_test_album_art"
+		texturefile = "gfx//interface//topbar//musicplayer//roa_test.dds"
+		noOfFrames = 2
+	}
+#political advisor(buffer)
+	# spriteType = {
+	# 	name = "GFX_idea_slot_political_advisor"
+	# 	textureFile = "gfx/interface/idea_slot_high_command.dds"
+	# }
+	spriteType = {
+		name = "GFX_idea_slot_ideo_slot"
+		textureFile = "gfx/interface/idea_slot_high_command.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_character_coop"
+		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_political_strategy"
+		textureFile = "gfx/interface/idea_slot_materiel_manufacturer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_zhongtian1"
+		texturefile = "gfx/interface/buffs/1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_zhongtian2"
+		texturefile = "gfx/interface/buffs/3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_zhongtian3"
+		texturefile = "gfx/interface/buffs/2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_weiwen1"
+		texturefile = "gfx/interface/buffs/4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_weiwen2"
+		texturefile = "gfx/interface/buffs/5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_weiwen3"
+		texturefile = "gfx/interface/buffs/6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_weiwen4"
+		texturefile = "gfx/interface/buffs/12.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_junshi1"
+		texturefile = "gfx/interface/buffs/7.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_junshi2"
+		texturefile = "gfx/interface/buffs/8.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_junshi3"
+		texturefile = "gfx/interface/buffs/9.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_junshi4"
+		texturefile = "gfx/interface/buffs/13.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ziyuan1"
+		texturefile = "gfx/interface/buffs/10.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ziyuan2"
+		texturefile = "gfx/interface/buffs/11.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_kaifangjiaqiang"
+		texturefile = "gfx/interface/buffs/kaifangjiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_baoshoujiaqiang"
+		texturefile = "gfx/interface/buffs/baoshoujiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_yingpaijiaqiang"
+		texturefile = "gfx/interface/buffs/yingpaijiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gepaijiaqiang"
+		texturefile = "gfx/interface/buffs/gepaijiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gulijiaqiang"
+		texturefile = "gfx/interface/buffs/gulijiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_qinwaijiaqiang"
+		texturefile = "gfx/interface/buffs/qinwaijiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fandongjiaqiang"
+		texturefile = "gfx/interface/buffs/fandongjiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_neworderjiaqiang"
+		texturefile = "gfx/interface/buffs/neworderjiaqiang.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_oldorderjiaqiang"
+		texturefile = "gfx/interface/buffs/oldorderjiaqiang.dds"
+	}
+	
+#manpower
+	spriteType = {
+		name = "GFX_idea_manpowerlv1"
+		texturefile = "gfx/interface/ideas/manpowerlv1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv2"
+		texturefile = "gfx/interface/ideas/manpowerlv2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv3"
+		texturefile = "gfx/interface/ideas/manpowerlv3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv4"
+		texturefile = "gfx/interface/ideas/manpowerlv4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv5"
+		texturefile = "gfx/interface/ideas/manpowerlv5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv6"
+		texturefile = "gfx/interface/ideas/manpowerlv6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manpowerlv7"
+		texturefile = "gfx/interface/ideas/manpowerlv7.dds"
+	}
+#ECO
+	spriteType = {
+		name = "GFX_idea_v_isolation"
+		texturefile = "gfx/interface/ideas/v_isolation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_v_civilian_economy"
+		texturefile = "gfx/interface/ideas/v_civilian_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_v_low_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/v_low_economic_mobilisation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_v_partial_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/v_partial_economic_mobilisation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_v_war_economy"
+		texturefile = "gfx/interface/ideas/v_war_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_v_tot_economic_mobilisation"
+		texturefile = "gfx/interface/ideas/v_tot_economic_mobilisation.dds"
+	}
+
+#idea
+	spriteType = {
+		name = "GFX_idea_cir9"
+		texturefile = "gfx/interface/ideas/cir9.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_notgensokyo"
+		texturefile = "gfx/interface/ideas/notgensokyo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gensokyo_primary_idea"
+		texturefile = "gfx/interface/ideas/gensokyo_pri.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_low_faith"
+		texturefile = "gfx/interface/ideas/low_faith.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_from_outside"
+		texturefile = "gfx/interface/ideas/from_outside.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_sytle_buddism"
+		texturefile = "gfx/interface/ideas/new_sytle_buddism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_gensoukyo_creator_idea"
+		texturefile = "gfx/interface/ideas/gensoukyo_creator.dds"
+	}
+	
+	
+
+	
+    #############Status
+	##############mil pro status
+	spriteType = {
+		name = "GFX_idea_production7"
+		texturefile = "gfx/interface/laws/production7.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military7"
+		texturefile = "gfx/interface/laws/military7.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production6"
+		texturefile = "gfx/interface/laws/production6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military6"
+		texturefile = "gfx/interface/laws/military6.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production5"
+		texturefile = "gfx/interface/laws/production5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military5"
+		texturefile = "gfx/interface/laws/military5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production4"
+		texturefile = "gfx/interface/laws/production4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military4"
+		texturefile = "gfx/interface/laws/military4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production3"
+		texturefile = "gfx/interface/laws/production3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military3"
+		texturefile = "gfx/interface/laws/military3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production2"
+		texturefile = "gfx/interface/laws/production2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military2"
+		texturefile = "gfx/interface/laws/military2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production1"
+		texturefile = "gfx/interface/laws/production1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military1"
+		texturefile = "gfx/interface/laws/military1.dds"
+	}
+	
+	###############stability
+	spriteType = {
+		name = "GFX_idea_very_high"
+		texturefile = "gfx/interface/laws/very_high.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_very_low"
+		texturefile = "gfx/interface/laws/very_low.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_high"
+		texturefile = "gfx/interface/laws/high.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_low"
+		texturefile = "gfx/interface/laws/low.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_average"
+		texturefile = "gfx/interface/laws/average.dds"
+	}
+
+	##################exhuastion
+	spriteType = {
+		name = "GFX_idea_war0"
+		texturefile = "gfx/interface/laws/war0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war1"
+		texturefile = "gfx/interface/laws/war1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war2"
+		texturefile = "gfx/interface/laws/war2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war3"
+		texturefile = "gfx/interface/laws/war3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war4"
+		texturefile = "gfx/interface/laws/war4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war5"
+		texturefile = "gfx/interface/laws/war5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_war6"
+		texturefile = "gfx/interface/laws/war6.dds"
+	}
+	
+	##################lobby
+	spriteType = {
+		name = "GFX_idea_hawk5"
+		texturefile = "gfx/interface/laws/hawk5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hawk4"
+		texturefile = "gfx/interface/laws/hawk4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hawk3"
+		texturefile = "gfx/interface/laws/hawk3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hawk2"
+		texturefile = "gfx/interface/laws/hawk2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hawk1"
+		texturefile = "gfx/interface/laws/hawk1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hawk0"
+		texturefile = "gfx/interface/laws/hawk0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dove1"
+		texturefile = "gfx/interface/laws/dove1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dove2"
+		texturefile = "gfx/interface/laws/dove2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dove3"
+		texturefile = "gfx/interface/laws/dove3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dove4"
+		texturefile = "gfx/interface/laws/dove4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dove5"
+		texturefile = "gfx/interface/laws/dove5.dds"
+	}
+	##################conservative
+	spriteType = {
+		name = "GFX_idea_close5"
+		texturefile = "gfx/interface/laws/close5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_close4"
+		texturefile = "gfx/interface/laws/close4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_close3"
+		texturefile = "gfx/interface/laws/close3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_close2"
+		texturefile = "gfx/interface/laws/close2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_close1"
+		texturefile = "gfx/interface/laws/close1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open0"
+		texturefile = "gfx/interface/laws/open0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open1"
+		texturefile = "gfx/interface/laws/open1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open2"
+		texturefile = "gfx/interface/laws/open2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open3"
+		texturefile = "gfx/interface/laws/open3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open4"
+		texturefile = "gfx/interface/laws/open4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_open5"
+		texturefile = "gfx/interface/laws/open5.dds"
+	}
+	##################techfocus
+	spriteType = {
+		name = "GFX_idea_loose_border"
+		texturefile = "gfx/interface/laws/loose_border.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_normal_border"
+		texturefile = "gfx/interface/laws/normal_border.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_strict_border"
+		texturefile = "gfx/interface/laws/strict_border.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_close_border"
+		texturefile = "gfx/interface/laws/close_border.dds"
+	}
+	##################border_policy
+	spriteType = {
+		name = "GFX_idea_waike_idea"
+		texturefile = "gfx/interface/laws/outside_focus_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_none_theory"
+		texturefile = "gfx/interface/laws/none_theory.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lingben_idea"
+		texturefile = "gfx/interface/laws/individual_focus_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lingben_improve_idea"
+		texturefile = "gfx/interface/laws/lingben_improve_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_waike_improve_idea"
+		texturefile = "gfx/interface/laws/waike_improve_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sca_tech"
+		texturefile = "gfx/interface/laws/sca_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_p_youkai_tech"
+		texturefile = "gfx/interface/laws/p_youkai_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_big_youkai_tech"
+		texturefile = "gfx/interface/laws/youkai_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hum_tech"
+		texturefile = "gfx/interface/laws/hum_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_kap_tech"
+		texturefile = "gfx/interface/laws/kap_tech.dds"
+	}
+	##################magic rule
+	spriteType = {
+		name = "GFX_idea_free_magic"
+		texturefile = "gfx/interface/laws/free_magic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sc_rule"
+		texturefile = "gfx/interface/laws/sc_rule.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_limit_magic"
+		texturefile = "gfx/interface/laws/limit_magic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_forbidden_magic"
+		texturefile = "gfx/interface/laws/forbidden_magic.dds"
+	}
+	##################research_allowance
+	spriteType = {
+		name = "GFX_idea_no_focus"
+		texturefile = "gfx/interface/laws/no_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_on_military"
+		texturefile = "gfx/interface/laws/on_military.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_on_both"
+		texturefile = "gfx/interface/laws/on_both.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_on_civilian"
+		texturefile = "gfx/interface/laws/on_civilian.dds"
+	}
+	##################scale
+	spriteType = {
+		name = "GFX_idea_Shrine"
+		texturefile = "gfx/interface/laws/shrine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_World"
+		texturefile = "gfx/interface/laws/world.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Organization"
+		texturefile = "gfx/interface/laws/org.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Tribal"
+		texturefile = "gfx/interface/laws/Tribal.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Village"
+		texturefile = "gfx/interface/laws/village.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Town"
+		texturefile = "gfx/interface/laws/town.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Country"
+		texturefile = "gfx/interface/laws/country.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Empire"
+		texturefile = "gfx/interface/laws/empire.dds"
+	}
+	
+	###############popularity
+	spriteType = {
+		name = "GFX_idea_low_popularity"
+		texturefile = "gfx/interface/laws/low_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_average_popularity"
+		texturefile = "gfx/interface/laws/average_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_high_popularity"
+		texturefile = "gfx/interface/laws/high_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_very_high_popularity"
+		texturefile = "gfx/interface/laws/very_high_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_average_popularity_m"
+		texturefile = "gfx/interface/laws/average_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_high_popularity_m"
+		texturefile = "gfx/interface/laws/high_pop.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_very_high_popularity_m"
+		texturefile = "gfx/interface/laws/very_high_pop.dds"
+	}
+
+    ###############race
+	spriteType = {
+		name = "GFX_idea_God"
+		texturefile = "gfx/interface/laws/Ethnicity_Kami.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Tenggu"
+		texturefile = "gfx/interface/laws/Ethnicity_Tengu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ghost"
+		texturefile = "gfx/interface/laws/Ethnicity_Yurei.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Human"
+		texturefile = "gfx/interface/laws/Ethnicity_Ningen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Youkai"
+		texturefile = "gfx/interface/laws/Ethnicity_Yokai.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Pri_youkai"
+		texturefile = "gfx/interface/laws/Ethnicity_YoungYosei.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Magician"
+		texturefile = "gfx/interface/laws/Ethnicity_Mahoji.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Kappa"
+		texturefile = "gfx/interface/laws/Ethnicity_Neppa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Fairy"
+		texturefile = "gfx/interface/laws/Ethnicity_Yosei.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Beast"
+		texturefile = "gfx/interface/laws/Ethnicity_Beast.dds"
+	}
+	###########
+	spriteType = {
+		name = "GFX_state_God"
+		texturefile = "gfx/interface/state_system/Ethnicity_Kami.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Tenggu"
+		texturefile = "gfx/interface/state_system/Ethnicity_Tengu.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Ghost"
+		texturefile = "gfx/interface/state_system/Ethnicity_Yurei.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Human"
+		texturefile = "gfx/interface/state_system/Ethnicity_Ningen.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Youkai"
+		texturefile = "gfx/interface/state_system/Ethnicity_Yokai.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Pri_youkai"
+		texturefile = "gfx/interface/state_system/Ethnicity_YoungYosei.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Magician"
+		texturefile = "gfx/interface/state_system/Ethnicity_Mahoji.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Kappa"
+		texturefile = "gfx/interface/state_system/Ethnicity_Neppa.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Fairy"
+		texturefile = "gfx/interface/state_system/Ethnicity_Yosei.dds"
+	}
+	spriteType = {
+		name = "GFX_state_Beast"
+		texturefile = "gfx/interface/state_system/Ethnicity_Beast.dds"
+	}
+	#############Manufacture##########
+	spriteType = {
+		name = "GFX_idea_slot_manufacturer"
+		textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_AKI"
+		texturefile = "gfx/interface/manufacturers/manufacture_AKI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_CHE"
+		texturefile = "gfx/interface/manufacturers/manufacture_CHE.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SGS"
+		texturefile = "gfx/interface/manufacturers/manufacture_SGS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_CIR"
+		texturefile = "gfx/interface/manufacturers/manufacture_CIR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_EET"
+		texturefile = "gfx/interface/manufacturers/manufacture_EET.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_GHO"
+		texturefile = "gfx/interface/manufacturers/manufacture_GHO.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HKM"
+		texturefile = "gfx/interface/manufacturers/manufacture_HKM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HKR"
+		texturefile = "gfx/interface/manufacturers/manufacture_HKR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HUB"
+		texturefile = "gfx/interface/manufacturers/manufacture_HUB.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HUM"
+		texturefile = "gfx/interface/manufacturers/manufacture_HUM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_INB"
+		texturefile = "gfx/interface/manufacturers/manufacture_INB.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KAG"
+		texturefile = "gfx/interface/manufacturers/manufacture_KAG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_TKM"
+		texturefile = "gfx/interface/manufacturers/manufacture_TKM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KAP"
+		texturefile = "gfx/interface/manufacturers/manufacture_KAP.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KAS"
+		texturefile = "gfx/interface/manufacturers/manufacture_KAS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_YUG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_LAC"
+		texturefile = "gfx/interface/manufacturers/manufacture_LAC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MAM"
+		texturefile = "gfx/interface/manufacturers/manufacture_MAM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MEL"
+		texturefile = "gfx/interface/manufacturers/manufacture_MEL.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YMM2"
+		texturefile = "gfx/interface/manufacturers/manufacture_YMM2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MRS"
+		texturefile = "gfx/interface/manufacturers/manufacture_MRS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MSD"
+		texturefile = "gfx/interface/manufacturers/manufacture_MSD.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NDG"
+		texturefile = "gfx/interface/manufacturers/manufacture_NDG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NGH"
+		texturefile = "gfx/interface/manufacturers/manufacture_NGH.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NIB"
+		texturefile = "gfx/interface/manufacturers/manufacture_NIB.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NMS"
+		texturefile = "gfx/interface/manufacturers/manufacture_NMS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NUC"
+		texturefile = "gfx/interface/manufacturers/manufacture_NUC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_OKI"
+		texturefile = "gfx/interface/manufacturers/manufacture_OKI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ONI"
+		texturefile = "gfx/interface/manufacturers/manufacture_ONI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ONS"
+		texturefile = "gfx/interface/manufacturers/manufacture_ONS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_OTG"
+		texturefile = "gfx/interface/manufacturers/manufacture_OTG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_RMI"
+		texturefile = "gfx/interface/manufacturers/manufacture_RMI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_RNS"
+		texturefile = "gfx/interface/manufacturers/manufacture_RNS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UTH"
+		texturefile = "gfx/interface/manufacturers/manufacture_UTH.dds"	
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NMN"
+		texturefile = "gfx/interface/manufacturers/manufacture_NMN.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SAT"
+		texturefile = "gfx/interface/manufacturers/manufacture_SAT.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SCA"
+		texturefile = "gfx/interface/manufacturers/manufacture_SCA.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SEJ"
+		texturefile = "gfx/interface/manufacturers/manufacture_SEJ.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_PRI"
+		texturefile = "gfx/interface/manufacturers/manufacture_PRI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SKI"
+		texturefile = "gfx/interface/manufacturers/manufacture_SKI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_LIL"
+		texturefile = "gfx/interface/manufacturers/manufacture_LIL.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SRB"
+		texturefile = "gfx/interface/manufacturers/manufacture_SRB.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_TEG"
+		texturefile = "gfx/interface/manufacturers/manufacture_TEG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_TES"
+		texturefile = "gfx/interface/manufacturers/manufacture_TES.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UNA"
+		texturefile = "gfx/interface/manufacturers/manufacture_UNA.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UNL"
+		texturefile = "gfx/interface/manufacturers/manufacture_UNL.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_UUG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KMC"
+		texturefile = "gfx/interface/manufacturers/manufacture_KMC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_WAK"
+		texturefile = "gfx/interface/manufacturers/manufacture_WAK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SBK"
+		texturefile = "gfx/interface/manufacturers/manufacture_SBK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YKR"
+		texturefile = "gfx/interface/manufacturers/manufacture_YKR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MRY"
+		texturefile = "gfx/interface/manufacturers/manufacture_MRY.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YUK"
+		texturefile = "gfx/interface/manufacturers/manufacture_YUK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YYK"
+		texturefile = "gfx/interface/manufacturers/manufacture_YYK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ZYD"
+		texturefile = "gfx/interface/manufacturers/manufacture_ZYD.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_manufacturer_NTR"
+		texturefile = "gfx/interface/manufacturers/manufacture_NTR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UDO"
+		texturefile = "gfx/interface/manufacturers/manufacture_UDO.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_manufacturer_YYK"
+		texturefile = "gfx/interface/manufacturers/manufacture_YYK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_TES"
+		texturefile = "gfx/interface/manufacturers/manufacture_TES.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_CFA"
+		texturefile = "gfx/interface/manufacturers/manufacture_CFA.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KMC"
+		texturefile = "gfx/interface/manufacturers/manufacture_KMC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SKI"
+		texturefile = "gfx/interface/manufacturers/manufacture_SKI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SAT"
+		texturefile = "gfx/interface/manufacturers/manufacture_SAT.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UTH"
+		texturefile = "gfx/interface/manufacturers/manufacture_UTH.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_YUG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_UUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_UUG.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_PRS"
+		texturefile = "gfx/interface/manufacturers/manufacture_PRS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_manufacturer_RGO"
+		texturefile = "gfx/interface/manufacturers/manufacture_RGO.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ALI"
+		texturefile = "gfx/interface/manufacturers/manufacture_ALI.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MOK"
+		texturefile = "gfx/interface/manufacturers/manufacture_MOK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_CLO"
+		texturefile = "gfx/interface/manufacturers/manufacture_CLO.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_GYK"
+		texturefile = "gfx/interface/manufacturers/manufacture_GYK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KEK"
+		texturefile = "gfx/interface/manufacturers/manufacture_KEK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HCT"
+		texturefile = "gfx/interface/manufacturers/manufacture_HCT.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_URM"
+		texturefile = "gfx/interface/manufacturers/manufacture_URM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YCE"
+		texturefile = "gfx/interface/manufacturers/manufacture_YCE.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_SAK"
+		texturefile = "gfx/interface/manufacturers/manufacture_SAK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KYK"
+		texturefile = "gfx/interface/manufacturers/manufacture_KYK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HGH"
+		texturefile = "gfx/interface/manufacturers/manufacture_HGH.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_IKU"
+		texturefile = "gfx/interface/manufacturers/manufacture_IKU.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YMM"
+		texturefile = "gfx/interface/manufacturers/manufacture_YMM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ICR"
+		texturefile = "gfx/interface/manufacturers/manufacture_ICR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MNM"
+		texturefile = "gfx/interface/manufacturers/manufacture_MNM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_NUE"
+		texturefile = "gfx/interface/manufacturers/manufacture_NUE.dds"
+	}
+
+	#############New Ideo
+	spriteType = {
+		name = "GFX_ideology_fandong_group"
+		texturefile = "gfx/interface/ideologies/radicals.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ideology_qinwai_group"
+		texturefile = "gfx/interface/ideologies/reformists.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_guli_group"
+		texturefile = "gfx/interface/ideologies/isolationists.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_neworder_group"
+		texturefile = "gfx/interface/ideologies/hegemonists.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_oldorder_group"
+		texturefile = "gfx/interface/ideologies/youkais.dds"
+	}
+	
+#	spriteType = {
+#		name = "GFX_ideology_totalism_group"
+#		texturefile = "gfx/interface/ideologies/totalism.dds"
+#	}
+	
+	# spriteType = {
+	# 	name = "GFX_ideology_shawen_group"
+	# 	texturefile = "gfx/interface/ideologies/chauvinism.dds"
+	# }
+	
+	# spriteType = {
+	# 	name = "GFX_ideology_gexin_group"
+	# 	texturefile = "gfx/interface/ideologies/gexin.dds"
+	# }
+	
+	##################difficulty#####################
+	spriteType = {
+   		name = "GFX_idea_E_d"
+   		texturefile = "gfx/interface/ideas/E_d.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_E_s"
+   		texturefile = "gfx/interface/ideas/E_s.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_N_d"
+   		texturefile = "gfx/interface/ideas/N_d.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_N_s"
+   		texturefile = "gfx/interface/ideas/N_s.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_H_d"
+   		texturefile = "gfx/interface/ideas/H_d.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_H_s"
+   		texturefile = "gfx/interface/ideas/H_s.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_L_d"
+   		texturefile = "gfx/interface/ideas/L_d.dds"
+   	}
+	spriteType = {
+   		name = "GFX_idea_L_s"
+   		texturefile = "gfx/interface/ideas/L_s.dds"
+   	}
+	
+	#New terrain
+	spriteType = {
+		name = "GFX_terrain_farms"
+		textureFile = "gfx/interface/terrains/terrain_farms.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_farms_winter"
+		textureFile = "gfx/interface/terrains/terrain_farms_winter.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_terrain_bamboo"
+		textureFile = "gfx/interface/terrains/terrain_bamboo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_terrain_bamboo_winter"
+		textureFile = "gfx/interface/terrains/terrain_bamboo_winter.dds"
+	}
+
+	###city
+	spriteType = {
+		name = "GFX_terrain_baiyulou"
+		textureFile = "gfx/interface/terrains/terrain_baiyulou.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_bolishenshe"
+		textureFile = "gfx/interface/terrains/terrain_bolishenshe.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_dilingdian"
+		textureFile = "gfx/interface/terrains/terrain_dilingdian.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_hongmoguan"
+		textureFile = "gfx/interface/terrains/terrain_hongmoguan.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_huizhencheng"
+		textureFile = "gfx/interface/terrains/terrain_huizhencheng.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_mingliansi"
+		textureFile = "gfx/interface/terrains/terrain_mingliansi.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_taiyanghuatian"
+		textureFile = "gfx/interface/terrains/terrain_taiyanghuatian.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_xianglintang"
+		textureFile = "gfx/interface/terrains/terrain_xianglintang.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_yongyuanting"
+		textureFile = "gfx/interface/terrains/terrain_yongyuanting.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_huizhencheng"
+		textureFile = "gfx/interface/terrains/terrain_huizhencheng.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_shenlingmiao"
+		textureFile = "gfx/interface/terrains/terrain_shenlingmiao.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_shoushishenshe"
+		textureFile = "gfx/interface/terrains/terrain_shoushishenshe.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_chirediyu"
+		textureFile = "gfx/interface/terrains/terrain_chirediyu.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_dajimiao"
+		textureFile = "gfx/interface/terrains/terrain_dajimiao.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_dizangqun"
+		textureFile = "gfx/interface/terrains/terrain_dizangqun.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_huashandexianjie"
+		textureFile = "gfx/interface/terrains/terrain_huashandexianjie.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_jiudu"
+		textureFile = "gfx/interface/terrains/terrain_jiudu.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_renleicunluo"
+		textureFile = "gfx/interface/terrains/terrain_renleicunluo.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_shifeiquzhiting"
+		textureFile = "gfx/interface/terrains/terrain_shifeiquzhiting.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_tengyuanyinjudi"
+		textureFile = "gfx/interface/terrains/terrain_tengyuanyinjudi.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_xuanwuze"
+		textureFile = "gfx/interface/terrains/terrain_xuanwuze.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_yushendemuchang"
+		textureFile = "gfx/interface/terrains/terrain_yushendemuchang.dds"
+	}
+	# spriteType = {
+	# 	name = "GFX_terrain_houhuzhiguo"
+	# 	textureFile = "gfx/interface/terrains/terrain_huizhencheng.dds"
+	# }
+	# spriteType = {
+	# 	name = "GFX_terrain_huashandi"
+	# 	textureFile = "gfx/interface/terrains/terrain_shenlingmiao.dds"
+	# }
+	# spriteType = {
+	# 	name = "GFX_terrain_bayunzhichao"
+	# 	textureFile = "gfx/interface/terrains/terrain_shoushishenshe.dds"
+	# }
+
+	#########
+	#achievement
+	spriteType = {
+		name = "GFX_achievement_entry_bg_can"
+		textureFile = "gfx/interface/achievement_entry_bg_can.dds"
+	}
+	spriteType = {
+		name = "GFX_achievement_entry_bg_cant"
+		textureFile = "gfx/interface/achievement_entry_bg_cant.dds"
+	}
+
+	###subject
+	spriteType = {
+		name = "GFX_autonomy_puppet_qinwai_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_integrated_puppet_qinwai_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_supervised_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_integrated_puppet_neworder_fandong_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichskommissariat_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_puppet_neworder_fandong_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichsprotectorate_icon.dds"
+	}
+
+	###trait
+	spriteType = {
+		name = "GFX_trait_th_character"
+		texturefile = "gfx/traits/personal/trait_th_character.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_th_trait_qianxianzhandou"
+		texturefile = "gfx/traits/personal/trait_th_trait_qianxianzhandou.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_th_trait_jijiacaokongzhe"
+		texturefile = "gfx/traits/personal/trait_th_trait_jijiacaokongzhe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_th_trait_tezhongzhuanjia"
+		texturefile = "gfx/traits/personal/trait_th_trait_tezhongzhuanjia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_th_trait_yinyangshi"
+		texturefile = "gfx/traits/personal/trait_th_trait_yinyangshi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_th_trait_chongjizhuanjia"
+		texturefile = "gfx/traits/personal/trait_th_trait_chongjizhuanjia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_th_trait_huoqiangzhuanjia"
+		texturefile = "gfx/traits/personal/trait_th_trait_huoqiangzhuanjia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_th_trait_moulvedashi"
+		texturefile = "gfx/traits/personal/trait_th_trait_moulvedashi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_th_trait_dayaoguai"
+		texturefile = "gfx/traits/personal/trait_th_trait_dayaoguai.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_trait_th_trait_huolizhuanjia"
+		texturefile = "gfx/traits/personal/trait_th_trait_huolizhuanjia.dds"
+	}	
+
+	####idea
+	spriteType = {
+		name = "GFX_idea_th_nuke_idea1"
+		textureFile = "gfx/interface/ideas/nuke_icon..dds"
+	}
+	spriteType = {
+		name = "GFX_idea_th_nuke_idea2"
+		textureFile = "gfx/interface/ideas/th_nuke_idea_2.dds"
+	}
+
+	###agency
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_1"
+		texturefile = "gfx/interface/operatives/agencies/agent_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_2"
+		texturefile = "gfx/interface/operatives/agencies/agent_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_3"
+		texturefile = "gfx/interface/operatives/agencies/agent_3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_ALI"
+		texturefile = "gfx/interface/operatives/agencies/agent_ALI.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_CHE"
+		texturefile = "gfx/interface/operatives/agencies/agent_CHE.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_CIR1"
+		texturefile = "gfx/interface/operatives/agencies/agent_CIR1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_CIR2"
+		texturefile = "gfx/interface/operatives/agencies/agent_CIR2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_CLO"
+		texturefile = "gfx/interface/operatives/agencies/agent_CLO.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_HCT1"
+		texturefile = "gfx/interface/operatives/agencies/agent_HCT1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_HCT2"
+		texturefile = "gfx/interface/operatives/agencies/agent_HCT2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_HKR"
+		texturefile = "gfx/interface/operatives/agencies/agent_HKR.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_KAG"
+		texturefile = "gfx/interface/operatives/agencies/agent_KAG.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_KMC"
+		texturefile = "gfx/interface/operatives/agencies/agent_KMC.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_KYK"
+		texturefile = "gfx/interface/operatives/agencies/agent_KYK.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_LIL"
+		texturefile = "gfx/interface/operatives/agencies/agent_LIL.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MNM"
+		texturefile = "gfx/interface/operatives/agencies/agent_MNM.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MRS"
+		texturefile = "gfx/interface/operatives/agencies/agent_MRS.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MRY1"
+		texturefile = "gfx/interface/operatives/agencies/agent_MRY1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MRY2"
+		texturefile = "gfx/interface/operatives/agencies/agent_MRY2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MRY3"
+		texturefile = "gfx/interface/operatives/agencies/agent_MRY3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_MSD"
+		texturefile = "gfx/interface/operatives/agencies/agent_MSD.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_NMS1"
+		texturefile = "gfx/interface/operatives/agencies/agent_NMS1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_NMS2"
+		texturefile = "gfx/interface/operatives/agencies/agent_NMS2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_NMS3"
+		texturefile = "gfx/interface/operatives/agencies/agent_NMS3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_NMS4"
+		texturefile = "gfx/interface/operatives/agencies/agent_NMS4.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_NUE"
+		texturefile = "gfx/interface/operatives/agencies/agent_NUE.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_PRI1"
+		texturefile = "gfx/interface/operatives/agencies/agent_PRI1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_PRI2"
+		texturefile = "gfx/interface/operatives/agencies/agent_PRI2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_PRI3"
+		texturefile = "gfx/interface/operatives/agencies/agent_PRI3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_PRI4"
+		texturefile = "gfx/interface/operatives/agencies/agent_PRI4.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_PRS"
+		texturefile = "gfx/interface/operatives/agencies/agent_PRS.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_RMI"
+		texturefile = "gfx/interface/operatives/agencies/agent_RMI.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SBK"
+		texturefile = "gfx/interface/operatives/agencies/agent_SBK.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SCA1"
+		texturefile = "gfx/interface/operatives/agencies/agent_SCA1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SCA2"
+		texturefile = "gfx/interface/operatives/agencies/agent_SCA2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SEJ1"
+		texturefile = "gfx/interface/operatives/agencies/agent_SEJ1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SGS1"
+		texturefile = "gfx/interface/operatives/agencies/agent_SGS1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SGS2"
+		texturefile = "gfx/interface/operatives/agencies/agent_SGS2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SGS3"
+		texturefile = "gfx/interface/operatives/agencies/agent_SGS3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SGS4"
+		texturefile = "gfx/interface/operatives/agencies/agent_SGS4.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SKI"
+		texturefile = "gfx/interface/operatives/agencies/agent_SKI.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_SRB"
+		texturefile = "gfx/interface/operatives/agencies/agent_SRB.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_UTH"
+		texturefile = "gfx/interface/operatives/agencies/agent_UTH.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_WAK"
+		texturefile = "gfx/interface/operatives/agencies/agent_WAK.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_YMM"
+		texturefile = "gfx/interface/operatives/agencies/agent_YMM.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_YUG"
+		texturefile = "gfx/interface/operatives/agencies/agent_YUG.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_intelligence_agency_agent_YYK"
+		texturefile = "gfx/interface/operatives/agencies/agent_YYK.dds"
+		noOfFrames = 2
+	}
+}

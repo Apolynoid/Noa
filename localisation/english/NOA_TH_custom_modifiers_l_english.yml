@@ -1,0 +1,19 @@
+﻿l_english:
+scientific_weapons_research:0 "外界武器研究速度"
+scientific_weapons:0 "外界武器"
+magical_weapons_research:0 "灵力武器研究速度"
+magical_weapons:0 "灵力武器"
+combined_weapons_research:0 "混合武器研究速度"
+combined_weapons:0 "混合武器"
+
+ transportation:0 "运输载具"
+ transportation_research:0 "运输载具研究速度"
+
+ ####系统修正
+  ST_race_penalty_Fairy_factor:0 "§Y$Fairy$§!不合作种族惩罚"
+  CO_auto_core_Fairy:0 "§Y$Fairy$§!种族的省份将自动获得核心"
+
+
+ 
+
+ 

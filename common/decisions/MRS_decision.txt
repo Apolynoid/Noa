@@ -1,0 +1,3289 @@
+MRS_mo_fa_zhi_sen_nei_zhan = {
+  # 内战爆发
+  MRS_nei_zhan_bao_fa = {
+    activation = {
+        has_global_flag = MRS_civil_war_prepare_flag
+        NOT = {
+          has_global_flag = MRS_civil_war_flag
+        }
+        NOT = {
+          OR = {
+            MRS = {
+              has_war_with = ALI
+            }
+            MRS = {
+              has_war_with = NRM
+            }
+          }
+        }
+    }
+    available = {
+      always = no
+    }
+    cancel_trigger = {
+      OR = {
+        MRS = {
+          has_war_with = ALI
+        }
+        MRS = {
+          has_war_with = NRM
+        }
+      }
+    }
+    icon = mission_icon     # For GFX_decision_mission_icon
+    is_good = no
+    war_with_on_timeout = MRS
+    war_with_on_timeout = ALI
+    war_with_on_timeout = NRM
+    days_mission_timeout = 30
+    selectable_mission = no
+    complete_effect = {
+      
+    }
+    timeout_effect = {
+      hidden_effect = {
+        news_event = {
+          id = mrs.112
+        }
+        MRS = {
+          add_timed_idea = {
+            idea = mrs_nei_zhan_re_qing_idea
+            days = 30
+          }
+        }
+        ALI = {
+          add_timed_idea = {
+            idea = mrs_nei_zhan_re_qing_idea
+            days = 30
+          }
+        }
+        NRM = {
+          add_timed_idea = {
+            idea = mrs_nei_zhan_re_qing_idea
+            days = 30
+          }
+        }
+      }
+      if = {
+        limit = {
+          tag = MRS
+        }
+        if = {
+          limit = {
+            country_exists = ALI
+          }
+          declare_war_on = {
+            target = ALI
+            type = MRS_Civil_War
+          }
+          if = {
+            limit = {
+              country_exists = NRM
+            }
+            ALI = {
+              declare_war_on = {
+                target = NRM
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = NRM
+          }
+          declare_war_on = {
+            target = NRM
+            type = MRS_Civil_War
+          }
+        }
+      }
+      if = {
+        limit = {
+          tag = ALI
+        }
+        if = {
+          limit = {
+            country_exists = MRS
+          }
+          declare_war_on = {
+            target = MRS
+            type = MRS_Civil_War
+          }
+          if = {
+            limit = {
+              country_exists = NRM
+            }
+            MRS = {
+              declare_war_on = {
+                target = NRM
+                type = MRS_Civil_War
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = NRM
+          }
+          declare_war_on = {
+            target = NRM
+            type = MRS_Civil_War
+          }
+        }
+      }
+      if = {
+        limit = {
+          tag = NRM
+        }
+        if = {
+          limit = {
+            country_exists = ALI
+          }
+          declare_war_on = {
+            target = ALI
+            type = MRS_Civil_War
+          }
+          if = {
+            limit = {
+              country_exists = MRS
+            }
+            ALI = {
+              declare_war_on = {
+                target = MRS
+                type = MRS_Civil_War
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = MRS
+          }
+          declare_war_on = {
+            target = MRS
+            type = MRS_Civil_War
+          }
+        }
+      }
+    }
+  }
+
+  # 招募民兵
+  MRS_zhao_mu_min_bing = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NRM
+      }
+    }
+    fire_only_once = no
+    days_remove = 15
+    cost = 30
+    modifier = {
+      weekly_manpower = -1
+    }
+    remove_effect = {
+      ROOT = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            owner = ROOT
+          }
+        }
+      }
+    }
+  }
+
+  # 购买步兵装备
+  MRS_gou_mai_bu_bing_zhuang_bei = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NRM
+      }
+    }
+    fire_only_once = no
+    days_remove = 15
+    cost = 15
+
+    remove_effect = {
+      add_equipment_to_stockpile = {
+        type = magic_core_a
+        amount = 100
+        producer = ROOT
+      }
+    }
+  }
+
+  # 对魔女联盟发起宣传攻势
+  MRS_dui_MRS_fa_qi_xuan_chuan_gong_shi = {
+    allowed = {
+      tag = ALI
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_fa_dong_xuan_chuan_gong_shi
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+        NOT = {
+          has_idea = mrs_xuan_chuan_gong_shi_idea
+        }
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      MRS = {
+        add_timed_idea = {
+          idea = mrs_xuan_chuan_gong_shi_idea
+          days = 30
+        }
+      }
+    }
+  }
+
+  # 对魔法之森联合体发起宣传攻势
+  MRS_dui_NRM_fa_qi_xuan_chuan_gong_shi = {
+    allowed = {
+      tag = ALI
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_fa_dong_xuan_chuan_gong_shi
+      }
+      NRM = {
+        exists = yes
+        is_puppet = no
+        NOT = {
+          has_idea = mrs_xuan_chuan_gong_shi_idea
+        }
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+
+    cancel_trigger = {
+      NRM = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      NRM = {
+        add_timed_idea = {
+          idea = mrs_xuan_chuan_gong_shi_idea
+          days = 30
+        }
+      }
+    }
+  }
+
+  # 接触魔女联盟的激进同情者
+  MRS_jie_chu_MRS_de_ji_jin_tong_qing_zhe = {
+    allowed = {
+      tag = NRM
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NRM_jie_chu_ji_jin_tong_qing_zhe
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      MRS = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"魔法使激进同情者\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            allow_spawning_on_enemy_provs = yes
+            owner = NRM
+          }
+        }
+      }
+    }
+  }
+
+  # 煽动人偶师协会的人偶
+  MRS_shan_dong_ALI_de_ren_ou = {
+    allowed = {
+      tag = NRM
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NRM_jie_chu_ji_jin_tong_qing_zhe
+      }
+      ALI = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+
+    cancel_trigger = {
+      ALI = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      ALI = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"人偶反叛部队\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            allow_spawning_on_enemy_provs = yes
+            owner = NRM
+          }
+        }
+      }
+    }
+  }
+
+  # 对魔女联盟发起最终攻势
+  MRS_dui_MRS_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = ALI
+        tag = NRM
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NRM_zhun_bei_zui_hou_yi_ji
+        has_completed_focus = ALI_xiang_sheng_li_jin_jun
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = MRS
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+
+  # 对人偶师协会发起最终攻势
+  MRS_dui_ALI_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = NRM
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NRM_zhun_bei_zui_hou_yi_ji
+      }
+      ALI = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+
+    cancel_trigger = {
+      ALI = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = ALI
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+
+  # 对魔法之森联合体发起最终攻势
+  MRS_dui_NRM_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_xiang_sheng_li_jin_jun
+      }
+      NRM = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+
+    cancel_trigger = {
+      NRM = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = NRM
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+}
+
+MRS_mo_fa_zhi_sen_chong_jian = {
+  # 削弱反对派
+  MRS_xue_ruo_fan_dui_pai = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NRM
+      }
+    }
+    fire_only_once = yes
+    days_remove = 60
+    modifier = {
+      weekly_manpower = -2
+      political_power_cost = 0.7
+      stability_factor = -0.1
+    }
+    remove_effect = {
+      swap_ideas = {
+        remove_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+        add_idea = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+      }
+    }
+  }
+  # 镇压抵抗
+  MRS_zhen_ya_di_kang = {
+    state_target = yes
+    target_root_trigger = {
+        has_global_flag = MRS_civil_war_end_flag
+    }
+    targets = { 138 552 153 468 174 188 487 354 169 191 206 465 170 172 185 162 154 175 355 182 }
+    target_trigger = {
+      FROM = {
+        NOT = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    available = {
+      FROM = {
+        resistance > 30
+      }
+    }
+    on_map_mode = map_only
+    icon = GFX_decision_generic_police_action
+    cost = 10
+    days_remove = 10
+    remove_effect = {
+        FROM = {
+          add_resistance = -20
+        }
+    }
+  } 
+  # 增进合作
+  MRS_zeng_jin_he_zuo = {
+    state_target = yes
+    target_root_trigger = {
+        has_global_flag = MRS_civil_war_end_flag
+    }
+    targets = { 138 552 153 468 174 188 487 354 169 191 206 465 170 172 185 162 154 175 355 182 }
+    target_trigger = {
+      FROM = {
+        NOT = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    available = {
+      FROM = {
+        compliance < 50
+      }
+    }
+    on_map_mode = map_only
+    icon = GFX_decision_hol_exchange_intelligence_data
+    cost = 15
+    days_remove = 20
+    remove_effect = {
+        FROM = {
+            add_compliance = 30
+        }
+    }
+  } 
+  # 恢复秩序
+  MRS_hui_fu_zhi_xu = {
+    state_target = yes
+    target_root_trigger = {
+        has_global_flag = MRS_civil_war_end_flag
+    }
+    targets = { 138 552 153 468 174 188 487 354 169 191 206 465 170 172 185 162 154 175 355 182 }
+    target_trigger = {
+      FROM = {
+        NOT = {
+          is_core_of = ROOT
+        }
+        any_neighbor_state = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    available = {
+      FROM = {
+        compliance > 50
+      }
+    }
+    on_map_mode = map_only
+    icon = GFX_decision_generic_form_nation
+    cost = 5
+    days_remove = 30
+    remove_effect = {
+        FROM = {
+            add_core_of = ROOT
+        }
+    }
+  } 
+
+  # 整合魔法之森联合体
+  MRS_zheng_he_mo_fa_zhi_sen_lian_he_ti = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      country_exists = NRM
+      NRM = {
+        is_puppet_of = ROOT
+      }
+    }
+    available = {
+      NRM = {
+        all_core_state = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    cost = 20
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_NRM_tt
+      hidden_effect = {
+        NRM = {
+          every_character = {
+            set_nationality = ROOT
+          }
+        }
+        NRM = {
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+        }
+        promote_character = {
+          character = MRS_narumi
+          ideology = fandong_type
+        }
+      }
+    }
+  }
+
+  # 整合人偶师协会
+  MRS_zheng_he_ren_ou_shi_xie_hui = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = NRM
+      }
+    }
+    visible = {
+      country_exists = ALI
+      ALI = {
+        is_puppet_of = ROOT
+      }
+    }
+    available = {
+      ALI = {
+        all_core_state = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    cost = 20
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_ALI_tt
+      hidden_effect = {
+        ALI = {
+          every_character = {
+            set_nationality = ROOT
+          }
+        }
+        ALI = {
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = qinwai_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = neworder_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = oldorder_type
+        }
+      }
+    }
+  }
+
+  # 整合魔女联盟
+  MRS_zheng_he_mo_nv_lian_meng = {
+    allowed = {
+      OR = {
+        tag = ALI
+        tag = NRM
+      }
+    }
+    visible = {
+      country_exists = MRS
+      MRS = {
+        is_puppet_of = ROOT
+      }
+    }
+    available = {
+      MRS = {
+        all_core_state = {
+          is_core_of = ROOT
+        }
+      }
+    }
+    cost = 20
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_MRS_tt
+      hidden_effect = {
+        MRS = {
+          every_character = {
+            set_nationality = ROOT
+          }
+        }
+        MRS = {
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+          low_puppet_level = yes
+        }
+        promote_character = {
+          character = MRS_narumi
+          ideology = fandong_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = qinwai_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = neworder_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = oldorder_type
+        }
+        promote_character = {
+          character = MRS_mrs
+          ideology = guli_type
+        }
+      }
+    }
+  }
+
+  # 魔法之森再统一
+  MRS_mo_fa_zhi_sen_zai_tong_yi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NRM
+      }
+    }
+    available = {
+      468 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      174 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      188 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      487 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      172 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      138 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      552 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      153 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      465 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      170 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      185 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      162 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      154 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      354 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      169 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      191 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      175 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      355 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      182 = {
+        is_core_of = ROOT
+        is_owned_by = ROOT
+      }
+      206 = {
+        OR = {
+          AND = {
+            is_core_of = ROOT
+            is_owned_by = ROOT
+          }
+          NOT = {
+            is_owned_by = MRS
+            is_owned_by = ALI
+            is_owned_by = NRM
+          }
+        }
+      }
+    }
+    cost = 20
+    fire_only_once = yes
+    complete_effect = {
+      add_political_power = 300
+      add_ideas = mrs_zai_tong_yi_de_mo_fa_zhi_sen_idea
+      if = {
+        limit = {
+          has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+        }
+        remove_ideas = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+      }
+      if = {
+        limit = {
+          has_idea = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+        }
+        remove_ideas = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+      }
+      if = {
+        limit = {
+          has_idea = mrs_bushimofashi
+        }
+        remove_ideas = mrs_bushimofashi
+      }
+      hidden_effect = {
+        if = {
+          limit = {
+            NOT = {
+              tag = MRS
+            }
+          }
+          MRS = {
+            every_core_state = {
+              remove_core_of = MRS
+            }
+          }
+        }
+        if = {
+          limit = {
+            NOT = {
+              tag = ALI
+            }
+          }
+          ALI = {
+            every_core_state = {
+              remove_core_of = ALI
+            }
+          }
+        }
+        if = {
+          limit = {
+            NOT = {
+              tag = NRM
+            }
+          }
+          NRM = {
+            every_core_state = {
+              remove_core_of = NRM
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+MRS_Offer_peace_MSD = {
+  MRS_Offer_peace_MSD_dec = {
+    allowed = {
+      original_tag = MRS
+    }
+    visible = {    
+      has_war_with = MSD   
+      MSD = { has_idea = MRS_Kemonomichi_war_idea_1 }
+      MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
+    }
+    target_trigger = {
+      FROM = {
+        original_tag = MSD
+      }
+    }
+    targets = { MSD }
+
+    available = {
+      original_tag = MRS
+      has_war_with = MSD
+      MSD = { has_idea = MRS_Kemonomichi_war_idea_1 }
+      MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
+
+      or = {
+        MRS = { surrender_progress > 0 }
+        and = {
+          or = {
+            and = {
+              date > 147.3.1
+              MSD = {
+                not = { has_war_with = HKR}
+              }
+            }
+            and = {
+              date > 147.7.1
+              MSD = {
+                has_war_with = HKR
+              }
+            }
+          }	
+          or = {
+            182 = {
+              is_controlled_by = MSD
+            }
+            206 = {
+              is_controlled_by = MSD
+            }
+            355 = {
+              is_controlled_by = MSD
+            }
+            175 = {
+              is_controlled_by = MSD
+            }
+          }
+        }
+        and = {
+          182 = {
+            is_controlled_by = MSD
+          }
+          206 = {
+            is_controlled_by = MSD
+          }
+          355 = {
+            is_controlled_by = MSD
+          }
+          175 = {
+            is_controlled_by = MSD
+          }
+        }
+      }
+
+
+    }
+
+    cost = 0
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+    }
+  
+    complete_effect = {
+
+      if = {
+        limit = {
+          NOT = { date > 147.3.1 }
+        }
+        add_political_power = -100
+        add_stability = -0.05
+      }
+
+      army_experience = 20
+      MSD = {
+        set_state_owner = 206
+      }
+      white_peace = MSD
+
+      hidden_effect = {
+        country_event = { id = mrs.46 days = 60 random = 600}
+      }
+
+    }
+  }
+
+  MRS_Declare_our_victory_dec = {
+    allowed = {
+      original_tag = MRS
+    }
+    visible = {       
+      has_war_with = MSD
+      MSD = { has_idea = MRS_Kemonomichi_war_idea_1 }
+      MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
+    }
+
+    target_trigger = {
+      FROM = {
+        original_tag = MSD
+      }
+    }
+    targets = { MSD }
+
+    available = {
+      original_tag = MRS
+      has_war_with = MSD
+      MSD = { has_idea = MRS_Kemonomichi_war_idea_1 }
+      MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
+
+      or = {
+        and = {
+          date > 147.6.1
+          MSD = {
+            not = { has_war_with = HKR}
+          }
+        }
+        and = {
+          date > 147.10.1
+          MSD = {
+            has_war_with = HKR
+          }
+        }
+      }
+
+      and = {
+        182 = {
+          NOT = { is_controlled_by = MSD }
+        }
+        206 = {
+          NOT = { is_controlled_by = MSD }
+        }
+        355 = {
+          NOT = { is_controlled_by = MSD }
+        }
+        175 = {
+          NOT = { is_controlled_by = MSD }
+        }
+      }
+
+    }
+
+    cost = 0
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+    }
+  
+    complete_effect = {
+
+      add_political_power = 100
+      add_war_support = 0.10
+
+      army_experience = 10
+      white_peace = MSD
+
+      MSD = {
+        add_political_power = -200
+        add_stability = -0.20
+        add_war_support = -0.30
+      }
+
+      hidden_effect = {
+        country_event = { id = mrs.46 days = 60 random = 600}
+      }
+
+    }
+  }
+
+}
+
+MRS_Magic_Forest_Management = {
+  MRS_mushroom_greenhouse = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_reform_facilities
+    }
+    available = {
+      has_completed_focus = MRS_reform_facilities
+      153 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      has_tech = minyongjianzao146
+      has_tech = ziyuankaifa146
+    }
+
+    cost = 50
+    days_remove = 85
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+    }
+    
+  
+    remove_effect = {
+      153 = {
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = industrial_complex
+          level = 3
+          instant_build = yes
+        }
+      }
+      add_tech_bonus = {
+        name = MRS_mushroom_greenhouse
+        bonus = 0.50
+        ahead_reduction = 0.25
+        uses = 2
+        category = fuzhu
+      }
+    }
+  }
+  
+  MRS_electric_wave_tower = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_reform_facilities
+    }
+    available = {
+      has_completed_focus = MRS_reform_facilities
+      138 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      has_tech = lingganleida142
+      has_tech = jisuangongju149
+      has_tech = jijianjianzao146
+    }
+
+    cost = 75
+    days_remove = 85
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+    }
+  
+    remove_effect = {
+      138 = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+        set_state_name = MRS_tower_fixed       
+      }
+      add_ideas = { MRS_electric_wave_tower_idea }
+      set_province_name = { id = 2253 name = MRS_tower_fixed_province }
+      
+    }
+  }
+  
+  MRS_puppet_active_center = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_reform_facilities
+    }
+    available = {
+      has_completed_focus = MRS_reform_facilities
+      185 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      has_tech = dulichengzu1
+      has_tech = jijianjianzao146
+      OR = {
+        has_tech = ma_linglixishou
+        has_tech = sc_linglixishou
+      }
+    }
+
+    cost = 75
+    days_remove = 85
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+    }
+  
+    remove_effect = {
+      185 = {
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = arms_factory
+          level = 2
+          instant_build = yes
+        }
+        set_state_name = MRS_puppet_active_center_fixed   
+      }
+      set_province_name = { id = 2025 name = MRS_puppet_active_center_province }
+      set_technology = { ALI_gaoxiaorenouzhanshu_tech = 1}
+    }
+  }
+    
+  MRS_enhance_civil_industry = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+         
+      }
+      available = {
+        NOT = { has_idea = MRS_expenditure_increase }
+      }
+
+      cost = 30
+      days_remove = 30
+
+      ai_will_do = {
+        factor = 1000
+        modifier = {
+          factor = 0
+          date > 148.1.1
+        }
+      }
+      
+      complete_effect = {
+        add_ideas = { MRS_qianghuamingong_idea } 
+        add_timed_idea = {
+          days = 90
+          idea = MRS_expenditure_increase
+        }
+      }
+    
+      remove_effect = {
+        remove_ideas = { MRS_qianghuamingong_idea }
+      }
+  }
+    
+  MRS_enhance_war_industry = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+       
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase }
+    }
+
+    cost = 30
+
+    ai_will_do = {
+      factor = 1000
+      modifier = {
+        factor = 0
+        date < 148.1.1
+      }
+    }
+    
+    complete_effect = {
+      add_ideas = { MRS_qianghuajungong_idea } 
+      add_timed_idea = {
+        days = 90
+        idea = MRS_expenditure_increase
+      }
+    }
+  }
+  
+  MRS_south_west_mountain_defence = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      has_tech = jianzaojishu146
+      185 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 50
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+      modifier = {
+        factor = 0
+        date < 147.1.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 80 }
+    }
+  
+    remove_effect = {
+      185 = {
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 1498
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 4312
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 3221
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 4315
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 4323
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 2817
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 4341
+        }
+      }
+    }
+  }
+  
+  
+  MRS_south_west_lake_defence = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_tech = jianzaojishu146
+      has_completed_focus = MRS_defend_via_terrain
+      465 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 50
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+      modifier = {
+        factor = 0
+        date < 148.6.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 80 }
+    }
+  
+    remove_effect = {
+      if = { 
+        limit = { 185 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        185 = {
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4323
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2817
+          }
+        }
+      }
+      if = { 
+        limit = { 170 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        170 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+        }
+      }
+      if = { 
+        limit = { 465 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        465 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 3236
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4358
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4360
+          }
+        }           
+      }
+      
+    }
+  }
+  
+  MRS_south_barrier_defence = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_tech = jianzaojishu146
+      has_completed_focus = MRS_defend_via_terrain
+      188 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      487 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 50
+    fire_only_once = yes
+
+    ai_will_do = {
+      factor = 1000
+      modifier = {
+        factor = 0
+        date < 147.1.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 80 }
+    }
+  
+    remove_effect = {
+      188 = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+          level = 4
+          instant_build = yes
+          province = 1837
+        }
+        add_building_construction = {
+          type = bunker
+          level = 4
+          instant_build = yes
+          province = 4310
+        }   
+      }
+      487 = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+          level = 4
+          instant_build = yes
+          province = 4309
+        }
+        add_building_construction = {
+          type = bunker
+          level = 4
+          instant_build = yes
+          province = 247
+        }
+      }
+    }
+  }
+  
+  
+  MRS_south_fog_defence = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      NOT = { has_country_flag = MRS_southern_fog_released }
+      has_completed_focus = MRS_an_accurate_map_of_forest
+    }
+    available = {
+      188 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      has_completed_focus = MRS_an_accurate_map_of_forest
+    }
+
+    cost = 50
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 100
+        has_war_with = TKM
+      }
+      modifier = {
+        factor = 0
+        188 = { CONTROLLER = { has_war = ROOT } }
+      }
+    }
+    
+    complete_effect = {
+      hidden_effect = {
+        set_country_flag = MRS_southern_fog_released
+      } 
+      188 = {
+        add_province_modifier = {
+          static_modifiers = { forest_foggy }
+          province = {
+            id = 4310 
+            id = 4313 
+            id = 1837
+          }
+        }
+      }
+      487 = {
+        add_province_modifier = {
+          static_modifiers = { forest_foggy }
+          province = {
+            id = 4309 
+            id = 247
+          }
+        }
+      }
+    }
+  
+  }
+  
+  
+  MRS_south_fog_defence_scatter = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_country_flag = MRS_southern_fog_released
+    }
+    available = {
+      # 188 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      has_completed_focus = MRS_an_accurate_map_of_forest
+    }
+
+    cost = 10
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 100
+        has_war = no
+      }
+      modifier = {
+        add = 100
+        188 = { CONTROLLER = { has_war = ROOT } }
+      }
+    }
+    
+    complete_effect = {
+      hidden_effect = {
+        clr_country_flag = MRS_southern_fog_released
+      } 
+      188 = {
+        remove_province_modifier = {
+          static_modifiers = { forest_foggy }
+          province = {
+            id = 4310 
+            id = 4313 
+            id = 1837
+          }
+        }
+      }
+      487 = {
+        remove_province_modifier = {
+          static_modifiers = { forest_foggy }
+          province = {
+            id = 4309 
+            id = 247
+          }
+        }
+      }
+    }
+  }
+  
+  
+  MRS_south_defensive_infrastructure = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      191 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 50
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.8.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 80 }
+    }
+    
+    remove_effect = {
+      191 = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 2490
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 803
+        }
+        add_building_construction = {
+          type = bunker
+          level = 3
+          instant_build = yes
+          province = 3320
+        }
+      }
+      if = {
+        limit = { 206 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        206 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 1565
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4299
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4298
+          }
+        }
+      }
+    }
+  }
+  
+  MRS_south_east_defensive_infrastructure = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      206 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 30
+    days_remove = 30
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.8.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 45 }
+    }
+    
+    remove_effect = {
+      if = {
+        limit = { 206 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        206 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 4
+            instant_build = yes
+            province = 2212
+          }
+          add_building_construction = {
+            type = bunker
+            level = 4
+            instant_build = yes
+            province = 9
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 446
+          }
+        }
+      }
+    }
+  }
+  
+  MRS_north_defence = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      153 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      138 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      552 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 45
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.11.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 70 }
+    }
+    
+    remove_effect = {
+      if = {
+        limit = { 153 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        153 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 3
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 3273
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 5755
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4387
+          }
+        }
+      }
+      if = {
+        limit = { 552 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        552 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 3
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 671
+          }
+        }
+      }
+      if = {
+        limit = { 138 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        138 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 1979
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4389
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 5759
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 910
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2002
+          }
+        }
+      }
+    }
+  }
+  
+  
+  MRS_north_defence_2 = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      468 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 45
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.11.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 70 }
+    }
+    
+    remove_effect = {
+      if = {
+        limit = { 468 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        468 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 1483
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2783
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 1285
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2798
+          }
+        }
+      }
+      if = {
+        limit = { 170 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        170 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4377
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 3245
+          }
+        }
+      }
+      if = {
+        limit = { 172 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        172 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 3331
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4379
+          }
+        }
+      }
+    }
+  }
+  
+  
+  MRS_eastern_defence_1 = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      154 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 60
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.11.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 85 }
+    }
+    
+    remove_effect = {
+      if = {
+        limit = { 154 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        154 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 5935
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 1781
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 5936
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 4541
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 367
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 2762
+          }
+        }
+      }
+      if = {
+        limit = { 138 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        138 = {
+          add_building_construction = {
+            type = bunker
+            level = 5
+            instant_build = yes
+            province = 2002
+          }
+        }
+      }
+      if = {
+        limit = { 182 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        182 = {
+          add_building_construction = {
+            type = bunker
+            level = 5
+            instant_build = yes
+            province = 632
+          }
+        }
+      }
+      if = {
+        limit = { 175 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        175 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4522
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 667
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2800
+          }
+        }
+      }
+      if = {
+        limit = { 355 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        355 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 1771
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 698
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4518
+          }
+        }
+      }
+    }
+  }
+  
+  MRS_eastern_defence_2 = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      has_completed_focus = MRS_defend_via_terrain
+    }
+    available = {
+      has_completed_focus = MRS_defend_via_terrain
+      162 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+      NOT = { has_idea = MRS_expenditure_increase_2 }
+      num_of_civilian_factories_available_for_projects > 11
+    }
+
+    cost = 50
+    days_remove = 40
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        date > 147.11.1
+      }
+    }
+    
+    complete_effect = {
+      add_timed_idea = { idea = MRS_expenditure_increase_2  days = 65 }
+    }
+    
+    remove_effect = {
+      if = {
+        limit = { 162 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        162 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 4359
+          }
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = 1034
+          }
+        }
+      }
+      if = {
+        limit = { 355 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        355 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4527
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 3261
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 698
+          }
+        }
+      }
+      if = {
+        limit = { 154 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } } }
+        154 = {
+          add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2762
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 2297
+          }
+          add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+            province = 4543
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+MRS_Literature_Center = {
+    MRS_share_our_knowledge_advanced_building = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = neworder
+          has_government = fandong
+          has_government = guli
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_Advanced_Production_Tools
+        has_completed_focus = MRS_defend_via_terrain
+      }
+      
+      cost = 50
+      days_remove = 100
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 10
+      }
+      
+      complete_effect = {
+        add_timed_idea = {
+          idea = MRS_shared_knowledge_building
+          days = 100
+        }
+      }
+      
+      remove_effect = {
+        if = {
+          limit = { has_idea = MRS_shared_knowledge_building }
+          remove_ideas = { MRS_shared_knowledge_building }
+        }
+      }
+    }
+    
+    MRS_share_our_knowledge_advanced_race = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = neworder
+          has_government = fandong
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_enemies_in_all_direction
+      }
+      
+      cost = 50
+      days_remove = 100
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 10
+      }
+      
+      complete_effect = {
+        add_timed_idea = {
+          idea = MRS_shared_knowledge_race
+          days = 100
+        }
+      }
+      
+      remove_effect = {
+        if = {
+          limit = { has_idea = MRS_shared_knowledge_race }
+          remove_ideas = { MRS_shared_knowledge_race }
+        }
+        if = {
+          limit = { has_government = neworder }
+          add_ideas = { MRS_shared_knowledge_race_permanent_neworder }
+        }
+        if = {
+          limit = { has_government = fandong }
+          add_ideas = { MRS_shared_knowledge_race_permanent_radicalist }
+        }
+      }
+    }
+    
+    MRS_share_our_knowledge_combustion = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = neworder
+          has_government = fandong
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_tech = dulichengzu1
+      }
+      
+      cost = 50
+      days_remove = 100
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 10
+      }
+      
+      remove_effect = {
+        add_tech_bonus = {
+          bonus = 0.75
+          uses = 2
+          ahead_reduction = 0.5
+          category = mortar
+          category = bomber
+        }
+        add_tech_bonus = {
+          bonus = 1.5
+          uses = 1
+          ahead_reduction = 1.5
+          category = anti_shield
+        }
+        
+      }
+    }
+    
+    MRS_share_our_knowledge_shield = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = neworder
+          has_government = guli
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        
+      }
+      
+      cost = 50
+      days_remove = 100
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 10
+      }
+      
+      remove_effect = {
+        add_tech_bonus = {
+          bonus = 0.75
+          uses = 2
+          ahead_reduction = 0.5
+          category = shield
+        }      
+        add_tech_bonus = {
+          bonus = 1.5
+          uses = 1
+          ahead_reduction = 1.5
+          category = shield_weapons
+        }
+      }
+    }
+    
+    MRS_share_our_knowledge_fairy_forging = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = qinwai
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_unified_industrial_devices
+      }
+      
+      cost = 50
+      days_remove = 25
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 1000
+      }
+
+      remove_effect = {
+        add_ideas = { MRS_share_our_knowledge_fairy_forging_idea }
+      }
+    }
+    
+    MRS_share_our_knowledge_human_military = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = qinwai
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_Tactics_Discussion
+      }
+      
+      cost = 50
+      days_remove = 25
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 1000
+      }
+
+      remove_effect = {
+        army_experience = 30
+        add_doctrine_cost_reduction = {
+          cost_reduction = 0.33
+          uses = 2
+          category = land_doctrine
+        }
+      }
+    }
+    
+    MRS_share_our_knowledge_tsukumo_materials = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = qinwai
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_Open_Up_aceess_to_more_Madou_weapons
+      }
+      
+      cost = 50
+      days_remove = 120
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 1000
+      }
+      
+      complete_effect = {
+        add_timed_idea = {
+           days = 120
+           idea = MRS_share_our_knowledge_tsukumo_materials_2_idea
+        }
+      }
+
+      remove_effect = {
+        if = {
+          limit = { has_idea = MRS_share_our_knowledge_tsukumo_materials_2_idea }
+          remove_ideas = { MRS_share_our_knowledge_tsukumo_materials_2_idea }
+        }
+        add_ideas = { MRS_share_our_knowledge_tsukumo_materials_idea }    
+      }
+    }
+    
+    MRS_share_our_knowledge_youkai_medicine = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_government = qinwai
+        }
+        has_completed_focus = MRS_share_our_knowledge
+      }
+      
+      available = {
+        has_completed_focus = MRS_supportive_unit
+      }
+      
+      cost = 50
+      days_remove = 25
+      fire_only_once = yes
+
+      ai_will_do = {
+        factor = 1000
+      }
+
+      remove_effect = {
+        add_tech_bonus = {
+          bonus = 1.0
+          uses = 2
+          ahead_reduction = 0.5
+          technology = houfangyiliao146
+          technology = houfangyiliao151
+          technology = houfangyiliao156
+          technology = houfangyiliao161
+          technology = houfangyiliao166
+        }
+      }
+    }
+    
+
+    MRS_Expand_Literature_Center = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        OR = {
+          has_idea = MRS_Establish_Literature_Center_idea
+          has_idea = MRS_Establish_Literature_Center_2_idea
+          has_idea = MRS_Establish_Literature_Center_3_idea
+          has_idea = MRS_Establish_Literature_Center_4_idea
+        }
+      }
+      available = {
+        if = {
+          limit = { has_idea = MRS_Establish_Literature_Center_idea }
+          has_tech = jisuangongju144
+          has_tech = jianzaojishu140
+        }
+        if = {
+          limit = { has_idea = MRS_Establish_Literature_Center_2_idea }
+          OR = {
+            has_tech = wuxiandian147
+            has_tech = lingliganying147
+          }
+          has_tech = jianzaojishu146
+        }
+        if = {
+          limit = { has_idea = MRS_Establish_Literature_Center_3_idea }
+          has_tech = dulichengzu1
+          has_tech = linglixiulian1
+          amount_research_slots > 3
+        }
+        if = {
+          limit = { has_idea = MRS_Establish_Literature_Center_4_idea }
+          amount_research_slots > 4
+        }
+      }
+
+      cost = 75
+      days_remove = 100
+
+      ai_will_do = {
+        factor = 100
+      }
+    
+      remove_effect = {
+        MRS_Expand_Literature_Center_effect = yes
+      }
+    }
+
+    MRS_equip_barrage = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_barrage
+        NOT = { has_idea = MRS_barrage_idea }
+      }
+      available = {
+        has_completed_focus= MRS_barrage
+      }
+      
+      cost = 25
+
+      ai_will_do = {
+        base = 0
+        modifier = {
+          add = 1000
+          OR = {
+            has_war_with = CIR
+            has_war_with = MFA
+          }
+        }
+      }
+
+      complete_effect = {
+        add_ideas = { MRS_barrage_idea }
+      }
+
+    }
+    
+    MRS_unequip_barrage = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_barrage
+        has_idea = MRS_barrage_idea
+      }
+      available = {
+        has_completed_focus= MRS_barrage
+        has_idea = MRS_barrage_idea
+      }
+
+      cost = 0
+
+      ai_will_do = {
+        base = 1000
+        modifier = {
+          factor = 0
+          OR = {
+            has_war_with = CIR
+            has_war_with = MFA
+          }
+        }
+      }
+
+      complete_effect = {
+        remove_ideas = { MRS_barrage_idea }
+      }
+
+    }
+    
+    MRS_equip_flare_bomb = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_flare_bomb
+        NOT = { has_idea = MRS_flare_bomb_idea }
+      }
+      available = {
+        has_completed_focus= MRS_flare_bomb
+      }
+
+      cost = 25
+
+      ai_will_do = {
+        base = 0
+        modifier = {
+          add = 1000
+          OR = {
+            has_war_with = MYK
+            has_war_with = RMI
+            has_war_with = SEJ
+            has_war_with = NIB
+          }
+        }
+      }
+
+      complete_effect = {
+        add_ideas = { MRS_flare_bomb_idea }
+      }
+
+    }
+    
+    MRS_unequip_flare_bomb = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_flare_bomb
+        has_idea = MRS_flare_bomb_idea
+        
+      }
+      available = {
+        has_completed_focus= MRS_flare_bomb
+        has_idea = MRS_flare_bomb_idea
+      }
+
+      cost = 0
+
+      ai_will_do = {
+        base = 1000
+        modifier = {
+          factor = 0
+          OR = {
+            has_war_with = MYK
+            has_war_with = RMI
+            has_war_with = SEJ
+            has_war_with = NIB
+          }
+        }
+      }
+
+      complete_effect = {
+        remove_ideas = { MRS_flare_bomb_idea }
+      }
+    }
+    
+    MRS_equip_resonace_jamming = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_Resonace_jamming
+        NOT = { has_idea = MRS_Resonace_jamming_idea }
+      }
+      available = {
+        has_completed_focus= MRS_Resonace_jamming
+      }
+
+      cost = 25
+
+      ai_will_do = {
+        base = 0
+        modifier = {
+          add = 1000
+          OR = {
+            has_war_with = TKM
+            has_war_with = MTM
+            has_war_with = ALI
+            has_war_with = MEL
+          }
+        }
+      }
+
+      complete_effect = {
+        add_ideas = { MRS_Resonace_jamming_idea }
+      }
+
+    }
+    
+    MRS_unequip_resonace_jamming = {
+      allowed = {
+        or = {
+          tag = MRS
+          tag = ALI
+        }
+      }
+      visible = {
+        has_completed_focus= MRS_Resonace_jamming
+        has_idea = MRS_Resonace_jamming_idea
+      }
+      available = {
+        has_completed_focus= MRS_Resonace_jamming
+        has_idea = MRS_Resonace_jamming_idea
+      }
+
+      cost = 0
+
+      ai_will_do = {
+        base = 1000
+        modifier = {
+          factor = 0
+          OR = {
+            has_war_with = TKM
+            has_war_with = MTM
+            has_war_with = ALI
+            has_war_with = MEL
+          }
+        }
+      }
+
+      complete_effect = {
+        remove_ideas = { MRS_Resonace_jamming_idea }
+      }
+    }
+
+}
+
+
+MRS_enemies_in_all_direction = {
+  MRS_pressure_TKM = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase_3 }
+    }
+
+    cost = 25
+    days_remove = 10
+
+    fire_only_once = yes
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        OR = {
+          has_war_with = TKM
+        }
+      }
+    }
+    
+    target_trigger = {
+      FROM = {
+        original_tag = TKM
+      }
+    }
+
+    complete_effect = {
+      add_timed_idea = {
+        days = 120
+        idea = MRS_expenditure_increase_3
+      }
+    }
+    
+    remove_effect = {
+      add_timed_idea = {
+        days = 60
+        idea = MRS_pressure_TKM_idea
+      }
+    }
+  }
+  
+  MRS_pressure_MSD = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase_3 }
+    }
+
+    fire_only_once = yes
+
+    cost = 25
+    days_remove = 10
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        OR = {
+          has_war_with = MSD
+        }
+      }
+    }
+    
+    target_trigger = {
+      FROM = {
+        original_tag = MSD
+      }
+    }
+    targets = {
+      MSD
+    }
+
+    complete_effect = {
+      add_timed_idea = {
+        days = 120
+        idea = MRS_expenditure_increase_3
+      }
+    }
+    
+    remove_effect = {
+      add_timed_idea = {
+        days = 60
+        idea = MRS_pressure_MSD_idea
+      }
+    }
+  }
+  
+  MRS_pressure_CIR = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase_3 }
+    }
+
+    fire_only_once = yes
+
+    cost = 25
+    days_remove = 10
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        OR = {
+          has_war_with = MSD
+        }
+      }
+    }
+    
+    target_trigger = {
+      FROM = {
+        original_tag = CIR
+      }
+    }
+    targets = {
+      CIR
+    }
+
+    complete_effect = {
+      add_timed_idea = {
+        days = 120
+        idea = MRS_expenditure_increase_3
+      }
+    }
+    
+    remove_effect = {
+      add_timed_idea = {
+        days = 60
+        idea = MRS_pressure_CIR_idea
+      }
+    }
+  }
+  
+  
+  MRS_pressure_SCA = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase_3 }
+    }
+
+    fire_only_once = yes
+
+    cost = 25
+    days_remove = 10
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        OR = {
+          has_war_with = SCA
+        }
+      }
+    }
+    
+    target_trigger = {
+      FROM = {
+        original_tag = SCA
+      }
+    }
+    targets = {
+      SCA
+    }
+
+    complete_effect = {
+      add_timed_idea = {
+        days = 120
+        idea = MRS_expenditure_increase_3
+      }
+    }
+    
+    remove_effect = {
+      add_timed_idea = {
+        days = 60
+        idea = MRS_pressure_SCA_idea
+      }
+    }
+  }
+  
+  
+  MRS_pressure_SEJ = {
+    allowed = {
+      or = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+
+    }
+    available = {
+      NOT = { has_idea = MRS_expenditure_increase_3 }
+    }
+
+    fire_only_once = yes
+
+    cost = 25
+    days_remove = 10
+
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 1000
+        OR = {
+          has_war_with = SEJ
+        }
+      }
+    }
+    
+    target_trigger = {
+      FROM = {
+        original_tag = SEJ
+      }
+    }
+    targets = {
+      SEJ
+    }
+
+    complete_effect = {
+      add_timed_idea = {
+        days = 120
+        idea = MRS_expenditure_increase_3
+      }
+    }
+    
+    remove_effect = {
+      add_timed_idea = {
+        days = 60
+        idea = MRS_pressure_SEJ_idea
+      }
+    }
+  }
+  
+}

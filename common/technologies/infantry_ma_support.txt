@@ -1,0 +1,972 @@
+technologies = {
+	@x1 = 1
+	@x2 = 4
+	@x3 = 7
+	@x4 = 10
+	@x5 = 13
+	@x6 = 16
+	@x7 = 19
+	@y1 = 1
+	@y2 = 3
+	@y3 = 5
+	@y4 = 7
+	@y5 = 9
+	@y6 = 11
+	@y7 = 13
+	@y8 = 15
+	@y9 = 17
+	@y10 = 19
+	###################
+	linglijiejie149 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+
+		enable_subunits = {
+			sp_jiaqiangban
+		}
+
+		path = {
+			leads_to_tech = linglijiejie155
+			research_cost_coeff = 1
+		}
+
+		start_year = 149
+		research_cost = 2
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 0 y = 5 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglijiejie155 = {
+		path = {
+			leads_to_tech = linglijiejie161
+			research_cost_coeff = 1
+		}
+
+		sp_jiaqiangban = {
+			soft_attack = 2
+		}
+
+		start_year = 155
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 0 y = 9 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglijiejie161 = {
+		path = {
+			leads_to_tech = linglijiejie167
+			research_cost_coeff = 1
+		}
+
+		sp_jiaqiangban = {
+			hard_attack = 2
+		}
+
+		start_year = 161
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 0 y = 13 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglijiejie167 = {
+
+		start_year = 167
+		research_cost = 2.3
+
+		sp_jiaqiangban = {
+			soft_attack = 1
+			hard_attack = 1
+		}
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 0 y = 17 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	feixingzhencha149 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+
+		enable_subunits = {
+			sp_feixingzhencha
+		}
+
+		path = {
+			leads_to_tech = feixingzhencha155
+			research_cost_coeff = 1
+		}
+
+		start_year = 149
+		research_cost = 2
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 6 y = 5 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	feixingzhencha155 = {
+		path = {
+			leads_to_tech = feixingzhencha161
+			research_cost_coeff = 1
+		}
+
+		sp_feixingzhencha = {
+			recon = 2
+		}
+
+		start_year = 155
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 6 y = 9 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	feixingzhencha161 = {
+		path = {
+			leads_to_tech = feixingzhencha167
+			research_cost_coeff = 1
+		}
+
+		sp_feixingzhencha = {
+			recon = 0.5
+			initiative = 0.05
+		}
+
+		start_year = 161
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 6 y = 13 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	feixingzhencha167 = {
+
+		start_year = 167
+		research_cost = 2.3
+
+		sp_feixingzhencha = {
+			recon = 1
+			initiative = 0.02
+		}
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = 6 y = 17 }
+		}
+		
+		categories = {
+			
+			support_tech
+			magic
+			military
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##########
+	magic_energy1 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = mofaranliao1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_energy143
+		}	
+
+		enable_subunits = {
+			ma_magic_energy_brigade
+		}
+		
+		start_year = 143
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y1 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mofaranliao1 = {
+		path = {
+			leads_to_tech = magic_energy2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 146
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y2 }
+		}
+		
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_energy2 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = mofaranliao2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = magic_focus1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_energy149
+		}	
+
+		on_research_complete = {
+			ma_a149 = yes
+		}
+		
+		start_year = 149
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y3 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mofaranliao2 = {
+		path = {
+			leads_to_tech = magic_energy3
+			research_cost_coeff = 1
+		}
+		
+		start_year = 152
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y4 }
+		}
+		
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_energy3 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = mofaranliao3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_energy155
+		}	
+
+		on_research_complete = {
+			ma_a155 = yes
+		}
+		
+		start_year = 155
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y5 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mofaranliao3 = {
+		path = {
+			leads_to_tech = magic_energy4
+			research_cost_coeff = 1
+		}
+		
+		start_year = 158
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y6 }
+		}
+		
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_energy4 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = mofaranliao4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_energy161
+		}	
+
+		on_research_complete = {
+			ma_a161 = yes
+		}
+		
+		start_year = 161
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y7 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mofaranliao4 = {
+		path = {
+			leads_to_tech = magic_energy5
+			research_cost_coeff = 1
+		}
+		
+		start_year = 164
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y8 }
+		}
+		
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_energy5 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = mofaranliao5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_energy167
+		}	
+
+		on_research_complete = {
+			ma_a167 = yes
+		}
+		
+		start_year = 167
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y9 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mofaranliao5 = {
+		path = {
+			leads_to_tech = magic_energy6
+			research_cost_coeff = 1
+		}
+		
+		start_year = 170
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x5 y = @y10 }
+		}
+		
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_focus1 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = dongnenggailiang1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_focus152
+		}	
+
+		enable_subunits = {
+			ma_magic_focus_brigade
+		}
+		
+		start_year = 152
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y4 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dongnenggailiang1 = {
+
+		path = {
+			leads_to_tech = magic_focus2
+			research_cost_coeff = 1
+		}
+
+		ma_magic_focus_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		
+		start_year = 155
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y5 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_focus2 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = dongnenggailiang2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_focus158
+		}	
+		
+		start_year = 158
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y6 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dongnenggailiang2 = {
+		path = {
+			leads_to_tech = magic_focus3
+			research_cost_coeff = 1
+		}
+
+		ma_magic_focus_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		start_year = 161
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y7 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_focus3 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = dongnenggailiang3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	magic_focus164
+		}	
+		
+		start_year = 164
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y8 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dongnenggailiang3 = {
+
+		path = {
+			leads_to_tech = magic_focus4
+			research_cost_coeff = 1
+		}
+
+		ma_magic_focus_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		start_year = 167
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y9 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_focus4 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		enable_equipments = {
+		  	magic_focus170
+		}	
+		
+		start_year = 170
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x6 y = @y10 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_scout1 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		dependencies = {
+		   zhihuixiaodui146 = 1
+		}
+		
+		enable_equipments = {
+		  	ma_scout146
+		}	
+
+		path = {
+			leads_to_tech = magic_scout2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 146
+		research_cost = 2
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x7 y = @y2 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_ai = yes
+			}
+		}
+	}
+	magic_scout2 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		enable_equipments = {
+		  	ma_scout155
+		}	
+
+		path = {
+			leads_to_tech = magic_scout3
+			research_cost_coeff = 1
+		}
+		
+		start_year = 155
+		research_cost = 2
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x7 y = @y5 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_scout3 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		enable_equipments = {
+		  	ma_scout164
+		}	
+
+		path = {
+			leads_to_tech = magic_scout2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 164
+		research_cost = 2
+		
+		folder = {
+			name = infantry_ma_support_folder
+			position = { x = @x7 y = @y8 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			magic
+			magical_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

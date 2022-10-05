@@ -1,0 +1,91 @@
+﻿capital = 191
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        linglizhufu = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        spear2 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+        ziyuankaifa130 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+        #种族
+        # yanjiujingshen1 = 1
+            
+    }
+    
+}
+146.1.1={
+    add_manpower = 500
+    oob = "ALI_146"
+    # set_research_slots = 4
+    # Starting tech
+    set_country_flag = bunengsuiyiqiehuanzhengti
+
+    add_ideas = {
+        ali_zhenduidaojudeliliang_idea
+        mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_idea
+        mrs_luo_hou_de_wu_qi_sheng_chan_idea
+        mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+        Magician
+        Tribal
+        dove3
+        close1
+        normal_border
+        sc_rule
+    }
+    #########局势修改
+    set_politics = {
+        ruling_party = qinwai
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 80
+        guli = 0
+        neworder = 19
+        oldorder = 0
+        fandong = 1
+    }
+
+    set_truce = {target = RMI days = 365}
+    set_truce = {target = NIB days = 365}
+    set_truce = {target = SEJ days = 365}
+
+
+}

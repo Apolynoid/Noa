@@ -1,0 +1,1305 @@
+# 军事线 military
+
+# 军事动员
+shared_focus = {
+  id = MRS_jun_shi_dong_yuan
+  icon = GFX_focus_SOV_mobilization_plan
+  cost = 7
+  x = 40
+  y = 1
+
+  available = {
+    has_global_flag = main_scenario
+  }
+
+  completion_reward = {
+    add_manpower = 500
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 先进魔法使武装
+shared_focus = {
+  id = MRS_xian_jin_mo_fa_shi_wu_zhuang
+  icon = GFX_focus_army_dicipline
+  cost = 7
+  x = -4
+  y = 1
+
+  relative_position_id = MRS_jun_shi_dong_yuan
+
+  prerequisite = {
+    focus = MRS_jun_shi_dong_yuan
+  }
+
+  completion_reward = {
+    add_ideas = mrs_xian_jin_wu_zhuang_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 军备审查
+shared_focus = {
+  id = MRS_jun_bei_shen_cha
+  icon = GFX_focus_eqiupment_check
+  cost = 12
+  x = -2
+  y = 1
+
+  relative_position_id = MRS_xian_jin_mo_fa_shi_wu_zhuang
+
+  prerequisite = {
+    focus = MRS_xian_jin_mo_fa_shi_wu_zhuang
+  }
+
+  completion_reward = {
+    add_equipment_to_stockpile = {
+      type = magic_core141
+      amount = 100
+      producer = MRS
+    }
+    remove_ideas = mrs_luo_hou_de_wu_qi_sheng_chan_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 召回老兵
+shared_focus = {
+  id = MRS_zhao_hui_lao_bing
+  icon = GFX_focus_generic_manpower
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_jun_bei_shen_cha
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_end_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jun_bei_shen_cha
+  }
+
+  completion_reward = {
+    army_experience = 20
+    add_manpower = 300
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 建立军事学院
+shared_focus = {
+  id = MRS_jian_li_jun_shi_xue_yuan
+  icon = GFX_focus_generic_military_academy
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_zhao_hui_lao_bing
+
+  prerequisite = {
+    focus = MRS_zhao_hui_lao_bing
+  }
+
+  completion_reward = {
+    add_ideas = mrs_jun_shi_xue_yuan_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 四面皆敌
+shared_focus = {
+  id = MRS_si_mian_jie_di
+  icon = GFX_focus_enemy_in_all_directions
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_jian_li_jun_shi_xue_yuan
+
+  prerequisite = {
+    focus = MRS_jian_li_jun_shi_xue_yuan
+  }
+
+  completion_reward = {
+    add_stability = 0.1
+    add_war_support = 0.2
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 魔法之森地图测绘
+shared_focus = {
+  id = MRS_mo_fa_zhi_sen_di_tu_ce_hui
+  icon = MRS_focus_magical_forest_map
+  cost = 12
+  x = 2
+  y = 1
+
+  relative_position_id = MRS_xian_jin_mo_fa_shi_wu_zhuang
+
+  prerequisite = {
+    focus = MRS_xian_jin_mo_fa_shi_wu_zhuang
+  }
+
+  completion_reward = {
+    add_ideas = mrs_mo_fa_zhi_sen_di_tu_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 防御工程建设
+shared_focus = {
+  id = MRS_fang_yu_gong_cheng_jian_she
+  icon = GFX_goal_generic_construct_military
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_mo_fa_zhi_sen_di_tu_ce_hui
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_prepare_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_mo_fa_zhi_sen_di_tu_ce_hui
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_xian_jin_wu_zhuang_idea
+      add_idea = mrs_xian_jin_jun_shi_ti_xi_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 改善后勤体系
+shared_focus = {
+  id = MRS_gai_shan_hou_qin_ti_xi
+  icon = GFX_focus_improve_logistics
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_fang_yu_gong_cheng_jian_she
+
+  prerequisite = {
+    focus = MRS_fang_yu_gong_cheng_jian_she
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_xian_jin_jun_shi_ti_xi_idea
+      add_idea = mrs_xian_jin_jun_shi_ti_xi_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 军民结合
+shared_focus = {
+  id = MRS_jun_min_jie_he
+  icon = GFX_focus_civ_mil_combination
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_gai_shan_hou_qin_ti_xi
+
+  prerequisite = {
+    focus = MRS_gai_shan_hou_qin_ti_xi
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_xian_jin_jun_shi_ti_xi_a_idea
+      add_idea = mrs_xian_jin_jun_shi_ti_xi_b_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 强化军队建设
+shared_focus = {
+  id = MRS_qiang_hua_jun_dui_jian_she
+  icon = GFX_focus_chi_army_reform
+  cost = 7
+  x = 4
+  y = 1
+
+  relative_position_id = MRS_jun_shi_dong_yuan
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_prepare_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jun_shi_dong_yuan
+  }
+
+  completion_reward = {
+    if = {
+      limit = {
+        has_idea = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+      }
+      remove_idea = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+    }
+    add_ideas = mrs_jun_dui_jian_she_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 成美的方案
+shared_focus = {
+  id = MRS_cheng_mei_de_fang_an
+  icon = MSR_focus_narumi_plan
+  cost = 3
+  x = -2
+  y = 1
+
+  relative_position_id = MRS_qiang_hua_jun_dui_jian_she
+
+  available = {
+    has_character = MRS_narumi
+  }
+
+  bypass = {
+    has_character = MRS_narumi
+    OR = {
+      has_completed_focus = MRS_mo_li_sha_de_fang_an
+      has_completed_focus = MRS_ai_li_si_de_fang_an
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_qiang_hua_jun_dui_jian_she
+  }
+
+  completion_reward = {
+    custom_effect_tooltip = MRS_doctrine_skip_tt
+    add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = jitizhuyi
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 本土防御
+shared_focus = {
+  id = MRS_ben_tu_fang_yu
+  icon = GFX_goal_generic_defence
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_cheng_mei_de_fang_an
+
+  prerequisite = {
+    focus = MRS_cheng_mei_de_fang_an
+  }
+
+  completion_reward = {
+    add_ideas = mrs_cheng_mei_gai_ge_fang_an_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 适应地形
+shared_focus = {
+  id = MRS_shi_ying_di_xing
+  icon = GFX_focus_GRE_a_land_of_mountains
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_ben_tu_fang_yu
+
+  prerequisite = {
+    focus = MRS_ben_tu_fang_yu
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_cheng_mei_gai_ge_fang_an_idea
+      add_idea = mrs_cheng_mei_gai_ge_fang_an_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 激发抵抗意志
+shared_focus = {
+  id = MRS_ji_fa_di_kang_yi_zhi
+  icon = GFX_focus_focus_fra_revolution_utmost
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_shi_ying_di_xing
+
+  prerequisite = {
+    focus = MRS_shi_ying_di_xing
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_cheng_mei_gai_ge_fang_an_a_idea
+      add_idea = mrs_cheng_mei_gai_ge_fang_an_b_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 魔理沙的方案
+shared_focus = {
+  id = MRS_mo_li_sha_de_fang_an
+  icon = MSR_focus_marisa_plan
+  cost = 3
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_qiang_hua_jun_dui_jian_she
+
+  available = {
+    has_character = MRS_mrs
+  }
+
+  bypass = {
+    has_character = MRS_mrs
+    OR = {
+      has_completed_focus = MRS_cheng_mei_de_fang_an
+      has_completed_focus = MRS_ai_li_si_de_fang_an
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_qiang_hua_jun_dui_jian_she
+  }
+
+  completion_reward = {
+    custom_effect_tooltip = MRS_doctrine_skip_tt
+    add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = xinxingkeji
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 炮兵革新
+shared_focus = {
+  id = MRS_pao_bing_ge_xin
+  icon = GFX_goal_generic_army_artillery2
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_mo_li_sha_de_fang_an
+
+  prerequisite = {
+    focus = MRS_mo_li_sha_de_fang_an
+  }
+
+  completion_reward = {
+    add_ideas = mrs_mo_li_sha_gai_ge_fang_an_idea
+    add_tech_bonus = {
+      bonus = 0.5
+      uses = 1
+      category = artillery_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 量产“八卦炉”
+shared_focus = {
+  id = MRS_liang_chan_ba_gua_lu
+  icon = MSR_focus_hakkero_production
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_pao_bing_ge_xin
+
+  prerequisite = {
+    focus = MRS_pao_bing_ge_xin
+  }
+
+  completion_reward = {
+    if = {
+      limit = {
+        has_tech = magic_energy2
+      }
+      add_tech_bonus = {
+        bonus = 2
+        uses = 1
+        category = artillery_tech
+      }
+    }
+    else = {
+      custom_effect_tooltip = MRS_magic_energy_149_tt
+      hidden_effect = {
+        set_technology = {
+          magic_energy2 = 1
+        }
+      }
+    }
+    create_equipment_variant = {
+      name = "八卦炉"
+      type = magic_energy149
+      upgrades = {
+        upgrade_softattack = 2
+        upgrade_hardattack = 1
+        upgrade_aaattack = 2
+        upgrade_breakthrough = 2
+        upgrade_ic_reverse = 1
+        up_ma_attack = 1
+        up_ap_attack = 1
+      }
+      icon = "GFX_magic_energy149_hakkero"
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 研制魔能火炮
+shared_focus = {
+  id = MRS_yan_zhi_mo_neng_huo_pao
+  icon = GFX_goal_generic_army_artillery
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_liang_chan_ba_gua_lu
+
+  prerequisite = {
+    focus = MRS_liang_chan_ba_gua_lu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      ahead_reduction = 3
+      bonus = 2
+      uses = 1
+      category = artillery_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 爱丽丝的方案
+shared_focus = {
+  id = MRS_ai_li_si_de_fang_an
+  icon = MSR_focus_alice_plan
+  cost = 3
+  x = 2
+  y = 1
+
+  relative_position_id = MRS_qiang_hua_jun_dui_jian_she
+
+  available = {
+    has_character = ALI_ali
+  }
+
+  bypass = {
+    has_character = ALI_ali
+    OR = {
+      has_completed_focus = MRS_cheng_mei_de_fang_an
+      has_completed_focus = MRS_mo_li_sha_de_fang_an
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_qiang_hua_jun_dui_jian_she
+  }
+
+  completion_reward = {
+    custom_effect_tooltip = MRS_doctrine_skip_tt
+    add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = yingxiongzhuyi
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 人偶军团
+shared_focus = {
+  id = MRS_ren_ou_jun_tuan
+  icon = MSR_focus_puppet_legion
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_ai_li_si_de_fang_an
+
+  prerequisite = {
+    focus = MRS_ai_li_si_de_fang_an
+  }
+
+  completion_reward = {
+    add_ideas = mrs_ai_li_si_gai_ge_fang_an_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 改进军用人偶
+shared_focus = {
+  id = MRS_gai_jin_jun_yong_ren_ou
+  icon = MSR_focus_improve_puppet
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_ren_ou_jun_tuan
+
+  prerequisite = {
+    focus = MRS_ren_ou_jun_tuan
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_ai_li_si_gai_ge_fang_an_idea
+      add_idea = mrs_ai_li_si_gai_ge_fang_an_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 人偶支援部队
+shared_focus = {
+  id = MRS_ren_ou_zhi_yuan_bu_dui
+  icon = MSR_focus_puppet_support
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_gai_jin_jun_yong_ren_ou
+
+  prerequisite = {
+    focus = MRS_gai_jin_jun_yong_ren_ou
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.5
+      uses = 2
+      category = support_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 工业线 industry
+
+# 建设魔法之森
+shared_focus = {
+  id = MRS_jian_she_mo_fa_zhi_sen
+  icon = unknown
+  cost = 3
+  x = 0
+  y = 7
+
+  relative_position_id = MRS_jun_shi_dong_yuan
+
+  available = {
+    has_global_flag = main_scenario
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1
+      uses = 1
+      category = build
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 工业技术进步
+shared_focus = {
+  id = MRS_gong_ye_ji_shu_jin_bu
+  icon = GFX_goal_generic_construction
+  cost = 7
+  x = -6
+  y = 1
+
+  relative_position_id = MRS_jian_she_mo_fa_zhi_sen
+
+  prerequisite = {
+    focus = MRS_jian_she_mo_fa_zhi_sen
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.5
+      uses = 2
+      category = industrys
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 优化生产结构
+shared_focus = {
+  id = MRS_you_hua_sheng_chan_jie_gou
+  icon = GFX_goal_continuous_non_factory_construct
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_gong_ye_ji_shu_jin_bu
+
+  prerequisite = {
+    focus = MRS_gong_ye_ji_shu_jin_bu
+  }
+
+  completion_reward = {
+    add_ideas = mrs_you_hua_sheng_chan_jie_gou_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 建筑技术革新
+shared_focus = {
+  id = MRS_jian_zhu_ji_shu_ge_xin
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_you_hua_sheng_chan_jie_gou
+
+  prerequisite = {
+    focus = MRS_you_hua_sheng_chan_jie_gou
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.5
+      uses = 2
+      category = build
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 魔法之森资源勘探
+shared_focus = {
+  id = MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
+  icon = GFX_goal_generic_construction2
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_jian_zhu_ji_shu_ge_xin
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_prepare_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jian_zhu_ji_shu_ge_xin
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.5
+      uses = 1
+      category = resource
+    }
+    swap_ideas = {
+      remove_idea = mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_idea
+      add_idea = mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 军事工业建设
+shared_focus = {
+  id = MRS_jun_shi_gong_ye_jian_she
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 12
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
+
+  prerequisite = {
+    focus = MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
+  }
+
+  completion_reward = {
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 4
+      add_building_construction = {
+        type = arms_factory
+        level = 4
+        instant_build = yes
+      }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 改造大自然
+shared_focus = {
+  id = MRS_gai_zao_da_zi_ran
+  icon = GFX_goal_generic_production
+  cost = 7
+  x = -2
+  y = 1
+
+  relative_position_id = MRS_jian_she_mo_fa_zhi_sen
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_prepare_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jian_she_mo_fa_zhi_sen
+  }
+
+  mutually_exclusive = {
+    focus = MRS_zun_xun_chuan_tong
+  }
+
+  completion_reward = {
+    add_timed_idea = {
+      idea = mrs_gai_zao_mo_fa_zhi_sen_idea
+      days = 365
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 引入魔导机械
+shared_focus = {
+  id = MRS_yin_ru_mo_dao_ji_xie
+  icon = unknown
+  cost = 12
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_gai_zao_da_zi_ran
+
+  prerequisite = {
+    focus = MRS_gai_zao_da_zi_ran
+  }
+
+  completion_reward = {
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 现代化生产方式
+shared_focus = {
+  id = MRS_xian_dai_hua_sheng_chan_fang_shi
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_yin_ru_mo_dao_ji_xie
+
+  prerequisite = {
+    focus = MRS_yin_ru_mo_dao_ji_xie
+  }
+
+  completion_reward = {
+    add_ideas = mrs_xian_dai_sheng_chan_fang_shi_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 全面工业化
+shared_focus = {
+  id = MRS_quan_mian_gong_ye_hua
+  icon = GFX_goal_generic_construct_civilian
+  cost = 12
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_xian_dai_hua_sheng_chan_fang_shi
+
+  prerequisite = {
+    focus = MRS_xian_dai_hua_sheng_chan_fang_shi
+  }
+
+  completion_reward = {
+    add_offsite_building = {
+      type = industrial_complex
+      level = 2
+    }
+    add_offsite_building = {
+      type = arms_factory 
+      level = 1
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 遵循传统
+shared_focus = {
+  id = MRS_zun_xun_chuan_tong
+  icon = unknown
+  cost = 7
+  x = 2
+  y = 1
+
+  relative_position_id = MRS_jian_she_mo_fa_zhi_sen
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_prepare_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jian_she_mo_fa_zhi_sen
+  }
+
+  mutually_exclusive = {
+    focus = MRS_gai_zao_da_zi_ran
+  }
+
+  completion_reward = {
+    add_ideas = mrs_chuan_tong_sheng_chan_fang_shi_idea
+    PO_add6 = yes
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 谨慎机械化
+shared_focus = {
+  id = MRS_jin_shen_ji_xie_hua
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_zun_xun_chuan_tong
+
+  prerequisite = {
+    focus = MRS_zun_xun_chuan_tong
+  }
+
+  completion_reward = {
+    add_offsite_building = {
+      type = industrial_complex
+      level = 1
+    }
+    add_offsite_building = {
+      type = arms_factory 
+      level = 1
+    }
+    swap_ideas = {
+      remove_idea = mrs_chuan_tong_sheng_chan_fang_shi_idea
+      add_idea = mrs_chuan_tong_sheng_chan_fang_shi_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+
+# 复兴村社主义
+shared_focus = {
+  id = MRS_fu_xing_cun_she_zhu_yi
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_jin_shen_ji_xie_hua
+
+  prerequisite = {
+    focus = MRS_jin_shen_ji_xie_hua
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_chuan_tong_sheng_chan_fang_shi_a_idea
+      add_idea = mrs_chuan_tong_sheng_chan_fang_shi_b_idea
+    }
+    PO_add4 = yes
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 鼓励合作生产
+shared_focus = {
+  id = MRS_gu_li_he_zuo_sheng_chan
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_fu_xing_cun_she_zhu_yi
+
+  prerequisite = {
+    focus = MRS_fu_xing_cun_she_zhu_yi
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_chuan_tong_sheng_chan_fang_shi_b_idea
+      add_idea = mrs_chuan_tong_sheng_chan_fang_shi_c_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 扩大生产线
+shared_focus = {
+  id = MRS_kuo_da_sheng_chan_xian
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_quan_mian_gong_ye_hua
+
+  prerequisite = {
+    focus = MRS_quan_mian_gong_ye_hua
+    focus = MRS_gu_li_he_zuo_sheng_chan
+  }
+
+  mutually_exclusive = {
+    focus = MRS_jian_hua_sheng_chan_xian
+  }
+
+  completion_reward = {
+    add_ideas = mrs_kuo_da_sheng_chan_xian_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 简化生产线
+shared_focus = {
+  id = MRS_jian_hua_sheng_chan_xian
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_gu_li_he_zuo_sheng_chan
+
+  prerequisite = {
+    focus = MRS_quan_mian_gong_ye_hua
+    focus = MRS_gu_li_he_zuo_sheng_chan
+  }
+
+  mutually_exclusive = {
+    focus = MRS_kuo_da_sheng_chan_xian
+  }
+
+  completion_reward = {
+    add_ideas = mrs_jian_hua_sheng_chan_xian_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 建立魔法文献馆
+shared_focus = {
+  id = MRS_jian_li_mo_fa_wen_xian_guan
+  icon = unknown
+  cost = 7
+  x = 6
+  y = 1
+
+  relative_position_id = MRS_jian_she_mo_fa_zhi_sen
+
+  available = {
+    OR = {
+      has_global_flag = MRS_civil_war_end_flag
+      has_global_flag = MRS_civil_war_avoided_flag
+    }
+  }
+
+  prerequisite = {
+    focus = MRS_jian_she_mo_fa_zhi_sen
+  }
+
+  completion_reward = {
+    add_ideas = mrs_mo_fa_wen_xian_guan_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 知识共享
+shared_focus = {
+  id = MRS_zhi_shi_gong_xiang
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_jian_li_mo_fa_wen_xian_guan
+
+  prerequisite = {
+    focus = MRS_jian_li_mo_fa_wen_xian_guan
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 2
+      uses = 2
+      category = math, jiami, jiemi
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 平等教育机会
+shared_focus = {
+  id = MRS_ping_deng_jiao_yu_ji_hui
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_zhi_shi_gong_xiang
+
+  prerequisite = {
+    focus = MRS_zhi_shi_gong_xiang
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_mo_fa_wen_xian_guan_idea
+      add_idea = mrs_mo_fa_wen_xian_guan_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 扩大科研团队
+shared_focus = {
+  id = MRS_kuo_da_ke_yan_tuan_dui
+  icon = GFX_focus_research2
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_ping_deng_jiao_yu_ji_hui
+
+  prerequisite = {
+    focus = MRS_ping_deng_jiao_yu_ji_hui
+  }
+
+  completion_reward = {
+    add_research_slot = 1
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 新技术
+shared_focus = {
+  id = MRS_xin_ji_shu
+  icon = unknown
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = MRS_kuo_da_ke_yan_tuan_dui
+
+  prerequisite = {
+    focus = MRS_kuo_da_ke_yan_tuan_dui
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      ahead_reduction = 2.0
+      bonus = 1
+      uses = 1
+      category = civil
+    }
+    add_tech_bonus = {
+      ahead_reduction = 2.0
+      bonus = 1
+      uses = 1
+      category = military
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}

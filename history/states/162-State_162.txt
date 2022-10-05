@@ -1,0 +1,46 @@
+
+state={
+	id=162
+	name="STATE_162"
+	resources={
+		energy=0.000
+		powder = 1.0
+		metal = 5.0
+		gas=5.000
+		crystal=10.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = MRS
+			add_core_of = MYK
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 1
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = MRS
+			add_core_of = MRS
+			remove_core_of = MYK
+			add_core_of = RMI
+			buildings = {
+				infrastructure =0
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		121 183 208 1034 4535 4539 4545 5940 5941 5944 
+	}
+	manpower=1651
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

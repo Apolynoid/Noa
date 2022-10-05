@@ -1,0 +1,664 @@
+technologies = {
+	@x1 = 1
+	@x2 = 4
+	@x3 = 7
+	@x4 = 10
+	@x5 = 13
+	@x6 = 16
+	@x7 = 19
+	@y1 = 1
+	@y2 = 3
+	@y3 = 5
+	@y4 = 7
+	@y5 = 9
+	@y6 = 11
+	@y7 = 13
+	@y8 = 15
+	@y9 = 17
+	@y10 = 19
+############start let's go#########
+	gun1 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			gun117
+		}
+
+		enable_subunits = {
+			sc_infantry
+			sc_light_infantry
+		}
+
+		on_research_complete = {
+
+		}
+
+		path = {
+			leads_to_tech = linglidanyao
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1
+		start_year = 117
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x1 y = @y1 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			science
+			scientific_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	linglidanyao = {
+  #   	xp_research_type = army
+		# xp_boost_cost = 25
+		# xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			
+		}
+
+		enable_subunits = {
+
+		}
+
+		sc_infantry = {
+			hard_attack = 0.2
+		}
+		
+		sc_light_infantry = {
+			hard_attack = 0.2
+		}
+
+		path = {
+			leads_to_tech = gun2
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 138
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x1 y = @y2 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			science
+			scientific_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	gun2 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			gun141
+		}
+
+		enable_subunits = {
+
+		}
+
+		path = {
+			leads_to_tech = lingliliushuixian
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 141
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x1 y = @y3 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			science
+			scientific_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	lingliliushuixian = {
+  #   	xp_research_type = army
+		# xp_boost_cost = 25
+		# xp_research_bonus = 0.25
+			
+		enable_equipments = {
+
+		}
+
+		enable_subunits = {
+
+		}
+
+		sc_infantry = {
+			need = {
+				gun_a = -25
+			}
+		}
+		sc_light_infantry = {
+			need = {
+				gun_a = -25
+			}
+		}
+		ma_infantry = {
+			need = {
+				magic_core_a = -25
+			}
+		}
+		ma_light_infantry = {
+			need = {
+				magic_core_a = -25
+			}
+		}
+		melee_infantry = {
+			need = {
+				melee_a = -25
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = lingliliushuixian_tt
+		}
+
+		path = {
+			leads_to_tech = gun3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = spear3
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = spell_card3
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 144
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x2 y = @y4 }
+		}
+
+		
+		categories = {
+			combined
+			military
+			infantry
+			combined_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	gun3 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		dependencies = {
+		   gun2 = 1
+		}
+
+		enable_equipments = {
+			gun147
+		}
+
+		enable_subunits = {
+
+		}
+
+		on_research_complete = {
+			hidden_effect = { load_oob = sc_infantry }
+			custom_effect_tooltip = gun147_oob
+			sc_p147 = yes
+		}
+
+
+		research_cost = 2
+		start_year = 147
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x1 y = @y5 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			science
+			scientific_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+	
+	spear1 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			melee117
+		}
+
+		enable_subunits = {
+			melee_infantry
+		}
+
+		on_research_complete = {
+
+		}
+
+		path = {
+			leads_to_tech = linglizhufu
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1
+		start_year = 117
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x2 y = @y1 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			melee
+			combined
+			combined_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	linglizhufu = {
+			
+		enable_equipments = {
+			
+		}
+
+		enable_subunits = {
+
+		}
+
+		melee_infantry = {
+			breakthrough = 0.05
+		    defense = 0.25
+		}
+
+		melee_cavalry = {
+			breakthrough = 0.05
+		    defense = 0.25
+		}
+
+		path = {
+			leads_to_tech = spear2
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 138
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x2 y = @y2 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			melee
+			combined
+			combined_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	spear2 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			melee141
+		}
+
+		enable_subunits = {
+
+		}
+
+		path = {
+			leads_to_tech = lingliliushuixian
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 141
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x2 y = @y3 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			melee
+			combined
+			combined_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	spear3 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+		
+		dependencies = {
+		   spear2 = 1
+		}
+
+		enable_equipments = {
+			melee147
+		}
+
+		enable_subunits = {
+
+		}
+
+		# path = {
+		# 	leads_to_tech = lingliliushuixian
+		# 	research_cost_coeff = 1
+		# }
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 2
+		start_year = 147
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x2 y = @y5 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			melee
+			combined
+			combined_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	spell_card1 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			magic_core117
+		}
+
+		enable_subunits = {
+			ma_infantry
+			ma_light_infantry
+		}
+
+		on_research_complete = {
+
+		}
+
+		path = {
+			leads_to_tech = linglicunchu
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1
+		start_year = 117
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x3 y = @y1 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			magic
+			magical_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	linglicunchu = {
+			
+		enable_equipments = {
+			
+		}
+
+		enable_subunits = {
+
+		}
+
+		ma_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		ma_light_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		path = {
+			leads_to_tech = spell_card2
+			research_cost_coeff = 1
+		}
+
+		on_research_complete = {
+
+		}
+
+
+		research_cost = 1.5
+		start_year = 138
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x3 y = @y2 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			magic
+			magical_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	spell_card2 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+			
+		enable_equipments = {
+			magic_core141
+		}
+
+		enable_subunits = {
+
+		}
+
+		path = {
+			leads_to_tech = lingliliushuixian
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1.5
+		start_year = 141
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x3 y = @y3 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			magic
+			magical_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	spell_card3 = {
+    	xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+		
+		dependencies = {
+		   spell_card2 = 1
+		}
+
+		enable_equipments = {
+			magic_core147
+		}
+
+		enable_subunits = {
+
+		}
+
+		# path = {
+		# 	leads_to_tech = lingliliushuixian
+		# 	research_cost_coeff = 1
+		# }
+
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = ma_infantry
+			}
+			custom_effect_tooltip = magic_core147_oob
+			ma_p147 = yes
+		}
+
+
+		research_cost = 2
+		start_year = 147
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x3 y = @y5 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			primary_weapons
+			magic
+			magical_weapons
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	##############
+}

@@ -1,0 +1,24 @@
+spriteTypes = {	
+
+	### generic 通用
+	spriteType = {
+		name = "GFX_idea_backward_production"
+		texturefile = "gfx/interface/ideas/generic_backward_production.dds"
+	}		
+	
+	#### MRS Kirisame Marisa 魔法之森
+	spriteType = {
+		name = "GFX_idea_alice_plan"
+		texturefile = "gfx/interface/ideas/mrs_alice_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_marisa_plan"
+		texturefile = "gfx/interface/ideas/mrs_marisa_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_narumi_plan"
+		texturefile = "gfx/interface/ideas/mrs_narumi_plan.dds"
+	}
+}

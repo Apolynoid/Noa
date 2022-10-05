@@ -1,0 +1,36 @@
+
+state={
+	id=170
+	name="STATE_170"
+
+	history={
+		143.7.1 = {
+			owner = MRS
+			add_core_of = MTM
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = MRS
+			add_core_of = MRS
+			remove_core_of = MTM
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+		}
+	}
+
+	provinces={
+		969 3245 4366 4370 4377 
+	}
+	manpower=236
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

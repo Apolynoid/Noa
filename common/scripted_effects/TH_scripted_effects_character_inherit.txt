@@ -1,0 +1,943 @@
+get_original_general_skills = {
+    every_character = {
+        if = {
+            limit = {
+                is_corps_commander = yes
+            }
+            set_variable = { corps_commander = 1 }
+        }
+        set_variable = {
+            general_attack = attack_level
+        }
+        set_variable = {
+            general_defense = defense_level
+        }
+        set_variable = {
+            general_planning = planning_level
+        }
+        set_variable = {
+            general_logistics = logistics_level
+        }
+        set_variable = {
+            general_skill = skill_level
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_qianxianzhandou
+            }
+            set_variable = { has_th_trait_qianxianzhandou = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_jijiacaokongzhe
+            }
+            set_variable = { has_th_trait_jijiacaokongzhe = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_tezhongzhuanjia
+            }
+            set_variable = { has_th_trait_tezhongzhuanjia = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_yinyangshi
+            }
+            set_variable = { has_th_trait_yinyangshi = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_chongjizhuanjia
+            }
+            set_variable = { has_th_trait_chongjizhuanjia = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_huoqiangzhuanjia
+            }
+            set_variable = { has_th_trait_huoqiangzhuanjia = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_moulvedashi
+            }
+            set_variable = { has_th_trait_moulvedashi = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_dayaoguai
+            }
+            set_variable = { has_th_trait_dayaoguai = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = th_trait_huolizhuanjia
+            }
+            set_variable = { has_th_trait_huolizhuanjia = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = trait_reckless
+            }
+            set_variable = { has_trait_reckless = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = media_personality
+            }
+            set_variable = { has_media_personality = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = war_hero
+            }
+            set_variable = { has_war_hero = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = trait_cautious
+            }
+            set_variable = { has_trait_cautious = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = career_officer
+            }
+            set_variable = { has_career_officer = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = old_guard
+            }
+            set_variable = { has_old_guard = 1 }
+        }
+        if = {
+            limit = {
+                has_trait = harsh_leader
+            }
+            set_variable = { has_harsh_leader = 1 }
+        }
+	}
+}
+leader_nationality_set = { #外部scope 国家
+    every_character = {
+        limit = {
+            has_trait = th_original_character #只有初始国家
+        }
+        set_character_flag = nationality_@PREV
+    }
+}
+leader_nationality_change = { #改变国籍 ROOT必须是目标国籍 PREV则是原国籍
+    set_nationality = PREV.PREV
+    set_character_flag = nationality_@ROOT
+    clr_character_flag = nationality_@PREV 
+    # custom_effect_tooltip = leader_nationality_change_tt
+}
+
+army_character_inherit_146 = {
+    hidden_effect = {
+        PREV = {
+            every_unit_leader = {
+                limit = {
+                    has_character_flag = nationality_@PREV
+                }
+                set_nationality = PREV.PREV
+                reduce_skills_to_original = yes
+            }
+            save_event_target_as = inherited_target
+        }
+    }
+    custom_effect_tooltip = army_character_inherit_tt
+    hidden_effect = {
+        XXX = { #因事件被隐藏的将领
+            every_unit_leader = {
+                limit = {
+                    has_character_flag = nationality_@event_target:inherited_target
+                }
+                set_nationality = PREV.PREV
+                reduce_skills_to_original = yes
+            }
+        }
+        army_character_cant_inherit = yes # 不能被继承的将领
+    }
+}
+army_character_release_146 = {
+    FROM = {
+        every_unit_leader = {
+            limit = {
+                has_character_flag = nationality_@ROOT
+            }
+            set_nationality = ROOT
+            reduce_skills_to_original = yes
+        }
+    }
+    XXX = { #因事件被隐藏的将领
+        every_unit_leader = {
+            limit = {
+                has_character_flag = nationality_@ROOT
+            }
+            set_nationality = ROOT
+            reduce_skills_to_original = yes
+        }
+    }
+    ROOT = {
+        set_country_flag = need_refresh_leader
+    }
+}
+army_character_peace_return = {
+    every_unit_leader = {
+        limit = { #被继承获得的将领
+            not = {
+                has_character_flag = nationality_@PREV
+            }
+            has_trait = th_original_character
+        }
+        random_country = {
+            limit = { #是被继承得到将领的国家
+                PREV = { has_character_flag = nationality_@PREV }
+            }
+            PREV = { 
+                set_nationality = PREV
+                reduce_skills_to_original = yes
+            }
+            set_country_flag = need_refresh_leader 
+            save_event_target_as = inherited_target
+            XXX = { #因事件被隐藏的将领
+                every_unit_leader = {
+                    limit = {
+                        has_character_flag = nationality_@event_target:inherited_target
+                    }
+                    set_nationality = PREV.PREV
+                    reduce_skills_to_original = yes
+                }
+            }
+        }
+    }
+}
+army_character_gone = {
+    hidden_effect = {
+        set_nationality = XXX
+    }
+    custom_effect_tooltip = army_character_gone_tt
+}
+army_character_return = {
+    hidden_effect = {
+        set_nationality = ROOT
+    }
+    custom_effect_tooltip = army_character_return_tt
+}
+army_character_cant_inherit = {
+    if = {
+        limit = {
+            has_country_flag = ALI_moheiquchumolisha #抹黑驱除魔理沙
+        }
+        MRS_mrs = {
+            army_character_gone = yes
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ALI_bazhongyaodemofashizuochengrenou #把魔法使变成人偶
+        }
+        MRS_narumi = {
+            army_character_gone = yes
+        }
+    }
+}
+reduce_skills_to_original = {
+    while_loop_effect = {
+        limit = {
+            not = { check_variable = { attack_level = general_attack } }
+        }
+        if = {
+            limit = {
+                check_variable = { attack_level > general_attack }
+            }
+            add_attack = -1
+        }
+        if = {
+            limit = {
+                check_variable = { attack_level < general_attack }
+            }
+            add_attack = 1
+        }
+    }
+    while_loop_effect = {
+        limit = {
+            not = { check_variable = { defense_level = general_defense } }
+        }
+        if = {
+            limit = {
+                check_variable = { defense_level > general_defense }
+            }
+            add_defense = -1
+        }
+        if = {
+            limit = {
+                check_variable = { defense_level < general_defense }
+            }
+            add_defense = 1
+        }
+    }
+    while_loop_effect = {
+        limit = {
+            not = { check_variable = { planning_level = general_planning } }
+        }
+        if = {
+            limit = {
+                check_variable = { planning_level > general_planning }
+            }
+            add_planning = -1
+        }
+        if = {
+            limit = {
+                check_variable = { planning_level < general_planning }
+            }
+            add_planning = 1
+        }
+    }
+    while_loop_effect = {
+        limit = {
+            not = { check_variable = { logistics_level = general_logistics } }
+        }
+        if = {
+            limit = {
+                check_variable = { logistics_level > general_logistics }
+            }
+            add_logistics = -1
+        }
+        if = {
+            limit = {
+                check_variable = { logistics_level < general_logistics }
+            }
+            add_logistics = 1
+        }
+    }
+    while_loop_effect = {
+        limit = {
+            not = { check_variable = { skill_level = general_skill } }
+        }
+        if = {
+            limit = {
+                check_variable = { skill_level > general_skill }
+            }
+            add_skill_level = -1
+        }
+        if = {
+            limit = {
+                check_variable = { skill_level < general_skill }
+            }
+            add_skill_level = 1
+        }
+    }
+    #field -> corps
+    if = {
+        limit = {
+            check_variable = {
+                corps_commander = 1
+            }
+            is_field_marshal = yes
+        }
+        demote_leader = yes
+    }
+    #trait reset
+    remove_unit_leader_trait = old_guard
+    remove_unit_leader_trait = brilliant_strategist
+    remove_unit_leader_trait = inflexible_strategist
+    remove_unit_leader_trait = politically_connected
+    remove_unit_leader_trait = war_hero
+    remove_unit_leader_trait = career_officer
+    remove_unit_leader_trait = trait_cautious
+    remove_unit_leader_trait = trait_reckless
+    remove_unit_leader_trait = media_personality
+    remove_unit_leader_trait = harsh_leader
+    remove_unit_leader_trait = bearer_of_artillery
+    remove_unit_leader_trait = infantry_officer
+    remove_unit_leader_trait = cavalry_officer
+    remove_unit_leader_trait = armor_officer
+    remove_unit_leader_trait = engineer_officer
+    remove_unit_leader_trait = logistics_wizard
+    remove_unit_leader_trait = offensive_doctrine
+    remove_unit_leader_trait = defensive_doctrine
+    remove_unit_leader_trait = fast_planner
+    remove_unit_leader_trait = thorough_planner
+    remove_unit_leader_trait = unyielding_defender
+    remove_unit_leader_trait = aggressive_assaulter
+    remove_unit_leader_trait = organisational_leader
+    remove_unit_leader_trait = inspirational_leader
+    remove_unit_leader_trait = expert_delegator
+    remove_unit_leader_trait = organizer
+    remove_unit_leader_trait = cavalry_leader
+    remove_unit_leader_trait = infantry_leader
+    remove_unit_leader_trait = skilled_staffer
+    remove_unit_leader_trait = trickster
+    remove_unit_leader_trait = winter_specialist
+    remove_unit_leader_trait = adaptable
+    remove_unit_leader_trait = winter_expert
+    remove_unit_leader_trait = trait_engineer
+    remove_unit_leader_trait = panzer_leader
+    remove_unit_leader_trait = commando
+    remove_unit_leader_trait = bamboo_rabbit
+    remove_unit_leader_trait = swamp_fox
+    remove_unit_leader_trait = trait_mountaineer
+    remove_unit_leader_trait = hill_fighter
+    remove_unit_leader_trait = jungle_rat
+    remove_unit_leader_trait = ranger
+    remove_unit_leader_trait = urban_assault_specialist
+    remove_unit_leader_trait = panzer_expert
+    remove_unit_leader_trait = combined_arms_expert
+    remove_unit_leader_trait = cavalry_expert
+    remove_unit_leader_trait = fortress_buster
+    remove_unit_leader_trait = scavenger
+    remove_unit_leader_trait = infantry_expert
+    remove_unit_leader_trait = ambusher
+    remove_unit_leader_trait = skirmisher
+    remove_unit_leader_trait = camouflage_expert
+    remove_unit_leader_trait = expert_improviser
+    remove_unit_leader_trait = guerilla_fighter
+    remove_unit_leader_trait = sick
+    remove_unit_leader_trait = wounded
+    remove_unit_leader_trait = reassigned
+    remove_unit_leader_trait = disgruntled
+    remove_unit_leader_trait = demoted
+    remove_unit_leader_trait = substance_abuser
+    remove_unit_leader_trait = substance_addict
+    remove_unit_leader_trait = hidden_sympathies
+    remove_unit_leader_trait = recently_promoted
+    remove_unit_leader_trait = exiled_leader
+    remove_unit_leader_trait = operative_commando
+    remove_unit_leader_trait = operative_seducer
+    remove_unit_leader_trait = operative_infiltrator
+    remove_unit_leader_trait = operative_master_interrogator
+    remove_unit_leader_trait = operative_linguist
+    remove_unit_leader_trait = operative_double_agent
+    remove_unit_leader_trait = operative_tough
+    remove_unit_leader_trait = operative_safe_cracker
+    remove_unit_leader_trait = operative_well_groomed
+    remove_unit_leader_trait = operative_escape_artist
+    remove_unit_leader_trait = operative_demolition_expert
+    # remove_unit_leader_trait = th_character
+    # remove_unit_leader_trait = th_original_character
+    remove_unit_leader_trait = th_trait_qianxianzhandou
+    remove_unit_leader_trait = th_trait_jijiacaokongzhe
+    remove_unit_leader_trait = th_trait_tezhongzhuanjia
+    remove_unit_leader_trait = th_trait_yinyangshi
+    remove_unit_leader_trait = th_trait_chongjizhuanjia
+    remove_unit_leader_trait = th_trait_huoqiangzhuanjia
+    remove_unit_leader_trait = th_trait_moulvedashi
+    remove_unit_leader_trait = th_trait_dayaoguai
+    remove_unit_leader_trait = th_trait_huolizhuanjia
+    remove_unit_leader_trait = desert_fox
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_qianxianzhandou = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_qianxianzhandou
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_jijiacaokongzhe = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_jijiacaokongzhe
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_tezhongzhuanjia = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_tezhongzhuanjia
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_yinyangshi = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_yinyangshi
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_chongjizhuanjia = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_chongjizhuanjia
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_huoqiangzhuanjia = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_huoqiangzhuanjia
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_moulvedashi = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_moulvedashi
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_dayaoguai = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_dayaoguai
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_th_trait_huolizhuanjia = 1
+            }
+        }
+        add_unit_leader_trait = th_trait_huolizhuanjia
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_trait_reckless = 1
+            }
+        }
+        add_unit_leader_trait = trait_reckless
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_media_personality = 1
+            }
+        }
+        add_unit_leader_trait = media_personality
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_war_hero = 1
+            }
+        }
+        add_unit_leader_trait = war_hero
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_trait_cautious = 1
+            }
+        }
+        add_unit_leader_trait = trait_cautious
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_career_officer = 1
+            }
+        }
+        add_unit_leader_trait = career_officer
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_old_guard = 1
+            }
+        }
+        add_unit_leader_trait = old_guard
+    }
+    if = {
+        limit = {
+            check_variable = {
+                has_harsh_leader = 1
+            }
+        }
+        add_unit_leader_trait = harsh_leader
+    }
+}
+initial_leader_setting = {
+    XXX = { #set
+        recruit_character = CLO_juk
+
+        recruit_character = YYK_yok
+
+        recruit_character = ALI_yumeko
+        recruit_character = ALI_ski
+
+        recruit_character = HKR_suika
+        recruit_character = HKR_jyo
+        recruit_character = HKR_son
+
+        recruit_character = SCA_yuugenmagan
+
+        recruit_character = TES_singyoku
+
+        recruit_character = HKR_genjii
+        recruit_character = HKR_mima
+        recruit_character = HKR_ruukoto
+
+        recruit_character = YUK_elly
+        recruit_character = YUK_gengetsu
+        recruit_character = YUK_kurumi
+        recruit_character = YUK_mugetsu
+        recruit_character = YUK_orange
+
+        recruit_character = UND_sts
+        recruit_character = UND_sara
+        recruit_character = UND_kana
+        recruit_character = UND_kotohime
+        recruit_character = UND_luize
+
+        recruit_character = KYD_mike
+        recruit_character = KYD_sannyo
+        recruit_character = KYD_chimata
+        recruit_character = KYD_misumaru
+        recruit_character = KYD_momoyo
+    }
+    AKI = {
+        recruit_character = AKI_hin
+        recruit_character = AKI_szh
+        recruit_character = AKI_sizuha
+        recruit_character = AKI_hin_leader
+        recruit_character = AKI_szh_leader
+        recruit_character = AKI_sizuha_leader
+    }
+    CHE = {
+        recruit_character = CHE_che
+        recruit_character = CHE_che_leader
+    }
+    CLO = {
+        recruit_character = CLO_clown
+        recruit_character = CLO_clown_leader
+        recruit_character = CLO_hct
+        recruit_character = CLO_hct_leader
+    }
+    CIR = {
+        recruit_character = CIR_cir
+        recruit_character = CIR_cir_leader
+        recruit_character = CIR_dys
+        recruit_character = CIR_dys_leader
+    }
+    EET = {
+        recruit_character = EET_eri
+        recruit_character = EET_eri_leader
+        recruit_character = EET_kaguya
+        recruit_character = EET_kaguya_leader
+    }
+    EMB = {
+        recruit_character = EMB_may
+        recruit_character = EMB_may_leader
+    }
+    GYK = {
+        recruit_character = GYK_yuma
+        recruit_character = GYK_yuma_leader
+    }
+    HGH = {
+        recruit_character = HGH_esh
+        recruit_character = HGH_esh_leader
+    }
+    HKR = {
+        recruit_character = HKR_meira
+        
+        recruit_character = HKR_hkr
+        recruit_character = HKR_hkr_leader
+        recruit_character = HKR_aunn
+        recruit_character = HKR_aunn_leader
+    }
+    HUM = {
+        recruit_character = HUM_ymm
+        recruit_character = HUM_cyr
+        recruit_character = HUM_ask
+        recruit_character = HUM_rika
+
+        recruit_character = HUM_keine
+        recruit_character = HUM_aky
+        recruit_character = HUM_keine_leader
+        recruit_character = HUM_aky_leader
+    }
+    IKU = {
+        recruit_character = IKU_iku
+        recruit_character = IKU_iku_leader
+    }
+    INB = {
+        recruit_character = INB_inb
+        recruit_character = INB_inb_leader
+    }
+    KAG = {
+        recruit_character = KAG_kag
+        recruit_character = KAG_kag_leader
+    }
+    KAS = {
+        recruit_character = KAS_kas
+        recruit_character = KAS_kas_leader
+    }
+    KEK = {
+        recruit_character = KEK_jtg
+        recruit_character = KEK_jtg_leader
+        recruit_character = KEK_kek
+        recruit_character = KEK_kek_leader
+    }
+    KMC = {
+        recruit_character = KMC_elis
+        recruit_character = KMC_sariel
+        recruit_character = KMC_kmc
+        recruit_character = KMC_kmc_leader
+        recruit_character = KMC_elis_leader
+        recruit_character = KMC_sariel_leader
+    }
+    KYK = {
+        recruit_character = NMS_kyouko_leader
+    }
+    LIL = {
+        recruit_character = LIL_lil
+        recruit_character = LIL_lil_leader
+    }
+    MAM = {
+        recruit_character = MAM_mam
+        recruit_character = MAM_mam_leader
+    }
+    MEL = {
+        recruit_character = MEL_mel
+        recruit_character = MEL_mel_leader
+    }
+    MNM = {
+        recruit_character = NMS_murasa_leader
+    }
+    MOK = {
+        recruit_character = MOK_mokou
+        recruit_character = MOK_mokou_leader
+    }
+    MRY = {
+        recruit_character = MRY_ysk
+        recruit_character = MRY_ysk_leader
+        recruit_character = MRY_sanae
+        recruit_character = MRY_sanae_leader
+        recruit_character = MRY_mry
+        recruit_character = MRY_mry_leader
+    }
+    MSD = {
+        recruit_character = MSD_msd
+        recruit_character = MSD_msd_leader
+    }
+    NIB = {
+        recruit_character = NIB_nib
+        recruit_character = NIB_nib_leader
+    }
+    NMN = {
+        recruit_character = NMN_nmn
+        recruit_character = NMN_nmn_leader
+    }
+    NUE = {
+        recruit_character = NMS_nue_leader
+    }
+    NMS = {
+        recruit_character = NMS_bkr
+        recruit_character = NMS_bkr_leader
+        recruit_character = NMS_syou
+        recruit_character = NMS_syou_leader
+        recruit_character = NMS_mouse
+        recruit_character = NMS_mouse_leader
+        recruit_character = NMS_kumoi
+        recruit_character = NMS_kyouko
+        recruit_character = NMS_murasa
+        recruit_character = NMS_nue
+    }
+    NTR = {
+        recruit_character = NTR_ntr
+        recruit_character = NTR_ntr_leader
+    }
+    OKI = {
+        recruit_character = OKI_kikuri
+
+        recruit_character = OKI_oki
+        recruit_character = OKI_mai
+        recruit_character = OKI_satono
+        recruit_character = OKI_oki_leader
+    }
+    OTG = {
+        recruit_character = OTG_tsukasa
+        recruit_character = OTG_megumu
+        recruit_character = OTG_megumu_leader
+        recruit_character = OTG_council_leader
+    }
+    PRI = {
+        recruit_character = PRI_luna
+        recruit_character = PRI_luna_leader
+        recruit_character = PRI_lyrica
+        recruit_character = PRI_lyrica_leader
+        recruit_character = PRI_merlin
+        recruit_character = PRI_merlin_leader
+    }
+    PRS = {
+        recruit_character = PRS_prs
+        recruit_character = PRS_prs_leader
+    }
+    RGO = {
+        recruit_character = RGO_rgo
+        recruit_character = RGO_rgo_leader
+        recruit_character = RGO_ser
+        recruit_character = RGO_ser_leader
+    }
+    RMI = {
+        recruit_character = RMI_rmi
+        recruit_character = RMI_rmi_leader
+    }
+    RNS = {
+        recruit_character = RNS_rns
+        recruit_character = RNS_rns_leader
+        recruit_character = RNS_tokiko
+        recruit_character = RNS_tokiko_leader
+    }
+    SAK = {
+        recruit_character = SAK_sak
+        recruit_character = SAK_sak_leader
+    }
+    SAT = {
+        recruit_character = SAT_sat
+        recruit_character = SAT_sat_leader
+        recruit_character = SAT_koishi
+        recruit_character = SAT_koishi_leader
+    }
+    SBK = {
+        recruit_character = SBK_sek
+        recruit_character = SBK_sek_leader
+    }
+    SCA = {
+        recruit_character = SCA_rem
+        recruit_character = SCA_rem_leader
+        recruit_character = SCA_flan
+        recruit_character = SCA_flan_leader
+        recruit_character = SCA_kak
+        recruit_character = SCA_kak_leader
+        recruit_character = SCA_pachy
+        recruit_character = SCA_pachy_leader
+        recruit_character = SCA_mli
+        recruit_character = SCA_sky
+        recruit_character = SCA_sky_leader
+        recruit_character = SCA_council_leader
+    }
+    SEJ = {
+        recruit_character = SEJ_smm
+        recruit_character = SEJ_smm_leader
+        recruit_character = SEJ_sej
+        recruit_character = SEJ_sej_leader
+        recruit_character = SEJ_nib_leader
+        recruit_character = SEJ_rmi_leader
+    }
+    SGS = {
+        recruit_character = SGS_lunar
+        recruit_character = SGS_lunar_leader
+        recruit_character = SGS_sun
+        recruit_character = SGS_sun_leader
+        recruit_character = SGS_star
+        recruit_character = SGS_star_leader
+    }
+    SKI = {
+        recruit_character = SKI_ski
+        recruit_character = SKI_ski_leader
+        recruit_character = SKI_nwt
+        recruit_character = SKI_nwt_leader
+    }
+    SRB = {
+        recruit_character = SRB_mik
+        recruit_character = SRB_mik_leader
+        recruit_character = SRB_seiga
+        recruit_character = SRB_seiga_leader
+        recruit_character = SRB_toziko
+        recruit_character = SRB_futo
+        recruit_character = SRB_yoshika
+    }
+    TEG = {
+        recruit_character = TEG_hatate
+        recruit_character = TEG_hatate_leader
+        recruit_character = TEG_mom
+        recruit_character = TEG_mom_leader
+        recruit_character = TEG_aya
+        recruit_character = TEG_aya_leader
+    }
+    TES = {
+        recruit_character = TES_tes
+        recruit_character = TES_tes_leader
+        recruit_character = TES_iku_leader
+        recruit_character = TES_mai
+        recruit_character = TES_yuki
+    }
+    TKM = {
+        recruit_character = TKM_kog
+        recruit_character = TKM_kog_leader
+        recruit_character = TKM_raiko
+        recruit_character = TKM_raiko_leader
+        recruit_character = TKM_kokoro
+        recruit_character = TKM_kokoro_leader
+        recruit_character = TKM_yatsuhashi
+        recruit_character = TKM_yatsuhashi_leader
+        recruit_character = TKM_benben
+        recruit_character = TKM_benben_leader
+    }
+    UDO = {
+        recruit_character = UDO_reisen
+        recruit_character = UDO_reisen_leader
+    }
+    URM = {
+        recruit_character = URM_ebs
+        recruit_character = URM_ebs_leader
+        recruit_character = URM_urm
+        recruit_character = URM_urm_leader
+    }
+    UTH = {
+        recruit_character = UTH_uth
+        recruit_character = UTH_uth_leader
+        recruit_character = UTH_rin
+        recruit_character = UTH_rin_leader
+    }
+    WAK = {
+        recruit_character = WAK_wak
+        recruit_character = WAK_wak_leader
+        recruit_character = WAK_flan_leader
+        recruit_character = WAK_rem_leader
+    }
+    YAW = {
+        recruit_character = YAW_takane
+        recruit_character = YAW_takane_leader
+    }
+    YCE = {
+        recruit_character = YCE_yce
+        recruit_character = YCE_yce_leader
+    }
+    YKR = {
+        recruit_character = YKR_ykr
+        recruit_character = YKR_ykr_leader
+        recruit_character = YKR_ykm
+    }
+    YMM = {
+        recruit_character = YMM_yamame
+        recruit_character = YMM_yamame_leader
+        recruit_character = YMM_kisume
+        recruit_character = YMM_kisume_leader
+    }
+    YUG = {
+        recruit_character = YUG_konngara
+
+        recruit_character = YUG_yug
+        recruit_character = YUG_yug_leader
+    }
+    YUK = {
+        recruit_character = YUK_yuk
+        recruit_character = YUK_yuk_leader
+        recruit_character = YUK_larva
+        recruit_character = YUK_larva_leader
+    }
+    YYK = {
+        recruit_character = YYK_youmu
+        recruit_character = YYK_youmu_leader
+        recruit_character = YYK_yyk
+        recruit_character = YYK_yyk_leader
+        #YYK_yok 妖忌
+    }
+    ZBT = {
+        recruit_character = ZBT_kosuzu
+        recruit_character = ZBT_kosuzu_leader
+    }
+}

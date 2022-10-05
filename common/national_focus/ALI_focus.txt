@@ -1,0 +1,224 @@
+#!gfx:interface\TH_focus.gfx
+focus_tree = {
+	id = ALI_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALI
+		}
+	}
+
+  continuous_focus_position = { x = 50 y = 1800 }
+
+  shared_focus = MRS_jun_shi_dong_yuan
+  shared_focus = MRS_jian_she_mo_fa_zhi_sen
+  shared_focus = ty_medium_main 
+  
+		# ai_will_do = {
+		# 	factor = 1
+		# }
+
+		# bypass = {
+			
+		# }
+
+		# cancel_if_invalid = no
+		# continue_if_invalid = yes
+		# available_if_capitulated = yes
+	default = no
+
+  # 反抗暴政
+  focus = {
+    id = ALI_fan_kang_bao_zheng
+    icon = ALI_focus_fight_against_tyranny
+    cost = 7
+    x = 16
+    y = 0
+
+    available ={
+      has_global_flag = main_scenario
+    }
+    bypass = {
+
+    }
+
+    completion_reward = {
+      add_war_support = 0.2
+      add_stability = 0.1
+      add_political_power = 100
+    }
+    ai_will_do = {
+      factor = 1000
+    }
+  }
+
+  # 稳定指挥链
+  focus = {
+    id = ALI_wen_ding_zhi_hui_lian
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_fan_kang_bao_zheng
+
+    prerequisite = {
+      focus = ALI_fan_kang_bao_zheng
+    }
+
+    completion_reward = {
+      remove_ideas = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 人偶协助生产
+  focus = {
+    id = ALI_ren_ou_xie_zhu_sheng_chan
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_wen_ding_zhi_hui_lian
+
+    prerequisite = {
+      focus = ALI_wen_ding_zhi_hui_lian
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = mrs_ren_ou_de_xie_zhu_b_idea
+        }
+        swap_ideas = {
+          remove_idea = mrs_ren_ou_de_xie_zhu_b_idea
+          add_idea = mrs_ren_ou_de_xie_zhu_c_idea
+        }
+      }
+      else = {
+        add_ideas = mrs_ren_ou_de_xie_zhu_a_idea
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 怀柔政策
+  focus = {
+    id = ALI_huai_rou_zheng_ce
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_ren_ou_xie_zhu_sheng_chan
+
+    prerequisite = {
+      focus = ALI_ren_ou_xie_zhu_sheng_chan
+    }
+
+    completion_reward = {
+      every_controlled_state = {
+        add_compliance = 30
+      }
+      add_ideas = mrs_huai_rou_zheng_ce_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 人偶协助战斗
+  focus = {
+    id = ALI_ren_ou_xie_zhu_zhan_dou
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_wen_ding_zhi_hui_lian
+
+    prerequisite = {
+      focus = ALI_wen_ding_zhi_hui_lian
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = mrs_ren_ou_de_xie_zhu_a_idea
+        }
+        swap_ideas = {
+          remove_idea = mrs_ren_ou_de_xie_zhu_a_idea
+          add_idea = mrs_ren_ou_de_xie_zhu_c_idea
+        }
+      }
+      else = {
+        add_ideas = mrs_ren_ou_de_xie_zhu_b_idea
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 发动宣传攻势
+  focus = {
+    id = ALI_fa_dong_xuan_chuan_gong_shi
+    icon = GFX_goal_generic_propaganda
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_ren_ou_xie_zhu_zhan_dou
+
+    bypass = {
+      has_global_flag = MRS_civil_war_end_flag
+    }
+
+    prerequisite = {
+      focus = ALI_ren_ou_xie_zhu_zhan_dou
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_propaganda_tt
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 向胜利进军
+  focus = {
+    id = ALI_xiang_sheng_li_jin_jun
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 3
+
+    relative_position_id = ALI_wen_ding_zhi_hui_lian
+
+    bypass = {
+      has_global_flag = MRS_civil_war_end_flag
+    }
+
+    prerequisite = {
+      focus = ALI_huai_rou_zheng_ce
+    }
+
+    prerequisite = {
+      focus = ALI_fa_dong_xuan_chuan_gong_shi
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_final_push_tt
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+}

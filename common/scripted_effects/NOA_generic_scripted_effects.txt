@@ -1,0 +1,26 @@
+remove_all_ai_templates = {
+    delete_unit_template_and_units = {
+        division_template = "弹幕攻击小队师1型"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "弹幕攻击小队师2型"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "弹幕攻击小队师3型"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "灵力游击队师1型"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "灵力游击队师2型"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "灵力游击队师3型"
+        disband = yes
+    }
+}

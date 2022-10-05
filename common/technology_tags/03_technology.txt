@@ -1,0 +1,318 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	#########通用#######
+	science
+	magic
+	combined
+	
+	civil
+	military
+	
+	########战斗相关
+	#武器系
+	scientific_weapons
+	magical_weapons
+	combined_weapons
+
+	infantry
+	primary_weapons
+	melee
+
+	support_tech
+
+	artillery_tech
+	mortar
+	anti_shield
+
+	shield
+	sf_force
+	heavy
+
+	shield_weapons
+
+	air_equipment
+	fighter
+	bomber
+	st_bomber
+	scout
+	
+	basic_doctrine
+	land_doctrine
+	jitizhuyi
+	yingxiongzhuyi
+	xinxingkeji
+
+	##########
+	#工业类	
+	industrys
+	jiegou
+	build
+
+	main
+	fuzhu
+
+	resource
+	resource_mining
+	resource_building
+	oil_res
+	metal_res
+	powder_res
+	gas_res
+	crystal_res
+
+	transportation
+	###########
+	#电子
+	math
+	radio
+	jiemi
+	jiami
+	
+	##############
+	#种族科技
+	race
+
+	##############
+	#科技树科技
+	techtree_tech
+
+	###########
+	#秘密武器
+	secret
+}
+
+technology_folders = {
+	land_doctrine_folder = {
+		ledger = army
+		doctrine = yes
+		available = {
+			always = yes
+		}
+	}
+	support_folder = {
+		ledger = army
+		available = {
+			always = yes
+		}
+	}
+	industry_folder = {
+		ledger = civilian
+		available = {
+			always = yes
+		}
+	}
+	electronics_folder = {
+		ledger = civilian
+		available = {
+			always = yes
+		}
+	}
+	electronics_sc_folder = {
+		ledger = civilian
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	electronics_ma_folder = {
+		ledger = civilian
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	industry_sc_folder = {
+		ledger = civilian
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	industry_ma_folder = {
+		ledger = civilian
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	hum_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = hum_tech
+		}
+	}
+	kap_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = kap_tech
+		}
+	}
+	p_youkai_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = p_youkai_tech
+		}
+	}
+	youkai_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = big_youkai_tech
+		}
+	}
+
+	Beast_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Beast
+		}
+	}
+	Human_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Human
+		}
+	}
+	Pri_youkai_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Pri_youkai
+		}
+	}
+	Youkai_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Youkai
+		}
+	}
+	Magician_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Magician
+		}
+	}
+	Kappa_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Kappa
+		}
+	}
+	Tenggu_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Tenggu
+		}
+	}
+	God_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = God
+		}
+	}
+	Fairy_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Fairy
+		}
+	}
+	Ghost_race_tech_folder = {
+		ledger = civilian
+		available = {
+			has_idea = Ghost
+		}
+	}
+
+	secret_folder = {
+		ledger = civilian
+		available = {
+			# always = no
+		}
+	}
+
+	infantry_general_folder = {
+		ledger = army
+	}	
+	infantry_sc_support_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_sc_primary_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_sc_advanced_folder = {
+		ledger = air
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_ma_support_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_ma_primary_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_ma_advanced_folder = {
+		ledger = air
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_ma_combined_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_sc_combined_folder = {
+		ledger = army
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+}
+
+ 

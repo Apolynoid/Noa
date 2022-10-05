@@ -1,0 +1,155 @@
+characters={
+	MRS_mrs ={
+		name = MRS_mrs
+		portraits={
+			civilian={
+				large="gfx/leaders/MRS/MRS_mrs.dds"
+				small="gfx/leaders/MRS/MRS_mrs_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRS/MRS_mrs.dds"
+				small="gfx/leaders/MRS/MRS_mrs_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
+			# id = 19
+			attack_skill = 11
+			defense_skill = 6
+			planning_skill = 1
+			logistics_skill = 2
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = MRS_mrs
+			name = MRS_mrs
+			cost = 200
+			modifier = {
+				army_artillery_attack_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			traits = {
+				MRS_ming_sheng_xian_he_de_da_mo_nv
+			}
+			id=-1
+		}
+	}
+	MRS_narumi ={
+		name = MRS_narumi
+		portraits={
+			civilian={
+				large="gfx/leaders/MRS/MRS_narumi.dds"
+				small="gfx/leaders/MRS/MRS_narumi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRS/MRS_narumi.dds"
+				small="gfx/leaders/MRS/MRS_narumi_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_cautious  }
+			# id = 20
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 6
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = MRS_narumi
+			name = MRS_narumi
+			cost = 200
+			modifier = {
+				weekly_manpower = 2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			traits = {
+				MRS_ruo_zhe_de_bao_hu_zhe
+			}
+			id=-1
+		}
+	}
+	MRS_ellen ={
+		name = MRS_ellen
+		portraits={
+			civilian={
+				large="gfx/leaders/MRS/MRS_ellen.dds"
+				small="gfx/leaders/MRS/MRS_ellen_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRS/MRS_ellen.dds"
+				small="gfx/leaders/MRS/MRS_ellen_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_huolizhuanjia }
+			skill = 8
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = MRS_ellen
+			name = MRS_ellen
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				magic = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	MRS_mrs_98 ={
+		name = MRS_mrs_98
+		portraits={
+			civilian={
+				large="gfx/leaders/MRS/MRS_mrs_98.dds"
+				small="gfx/leaders/MRS/MRS_mrs_98_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRS/MRS_mrs_98.dds"
+				small="gfx/leaders/MRS/MRS_mrs_98_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = MRS_mrs_98
+		# 	name = MRS_mrs_98
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+}

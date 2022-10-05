@@ -1,0 +1,982 @@
+technologies = {
+	@x1 = 1
+	@x2 = 4
+	@x3 = 7
+	@x4 = 10
+	@x5 = 13
+	@x6 = 16
+	@x7 = 19
+	@y1 = 1
+	@y2 = 3
+	@y3 = 5
+	@y4 = 7
+	@y5 = 9
+	@y6 = 11
+	@y7 = 13
+	@y8 = 15
+	@y9 = 17
+	@y10 = 19
+	###################
+	wunvzhiyuan149 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+
+		enable_subunits = {
+			sp_wunv
+		}
+
+		path = {
+			leads_to_tech = wunvzhiyuan155
+			research_cost_coeff = 1
+		}
+
+		start_year = 149
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 5 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan155 = {
+		path = {
+			leads_to_tech = wunvzhiyuan161
+			research_cost_coeff = 1
+		}
+
+		sp_wunv = {
+			supply_consumption_factor = -0.05
+		}
+
+		start_year = 155
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 9 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan161 = {
+		path = {
+			leads_to_tech = wunvzhiyuan167
+			research_cost_coeff = 1
+		}
+
+		sp_wunv = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+		}
+
+		start_year = 161
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 13 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan167 = {
+
+		start_year = 167
+		research_cost = 2.3
+
+		sp_wunv = {
+			breakthrough = 0.2
+			defense = 0.2
+		}
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 17 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao149 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		   mortar1 = 1
+		}
+
+		path = {
+			leads_to_tech = gongjianpao155
+			research_cost_coeff = 1
+		}
+
+		enable_subunits = {
+			sp_gongjianpao
+		}
+
+		start_year = 149
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 5 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao155 = {
+		path = {
+			leads_to_tech = gongjianpao161
+			research_cost_coeff = 1
+		}
+
+		sp_gongjianpao = {
+			hills = {
+				attack = 0.05
+			}
+			fort = {
+				attack = 0.05
+			}
+		}
+
+		start_year = 155
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 9 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao161 = {
+		path = {
+			leads_to_tech = gongjianpao167
+			research_cost_coeff = 1
+		}
+
+		sp_gongjianpao = {
+			mountain = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.05
+			}
+		}
+
+		start_year = 161
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 13 }
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao167 = {
+
+		start_year = 167
+		research_cost = 2.3
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 17 }
+		}
+
+		sp_gongjianpao = {
+			maximum_speed = 0.1
+		}
+		
+		categories = {
+			
+			support_tech
+			science
+			military
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##########
+	mortar1 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = tuiyaopopian1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	mortar143
+		}	
+
+		enable_subunits = {
+			sc_mortar_brigade
+		}
+		
+		start_year = 143
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y1 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tuiyaopopian1 = {
+		path = {
+			leads_to_tech = mortar2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 146
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y2 }
+		}
+		
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mortar2 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = tuiyaopopian2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = anti_shield1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	mortar149
+		}	
+
+		on_research_complete = {
+			sc_a149 = yes
+		}
+		
+		start_year = 149
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y3 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tuiyaopopian2 = {
+		path = {
+			leads_to_tech = mortar3
+			research_cost_coeff = 1
+		}
+		
+		start_year = 152
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y4 }
+		}
+		
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mortar3 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = tuiyaopopian3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	mortar155
+		}	
+
+		on_research_complete = {
+			sc_a155 = yes
+		}
+		
+		start_year = 155
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y5 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tuiyaopopian3 = {
+		path = {
+			leads_to_tech = mortar4
+			research_cost_coeff = 1
+		}
+		
+		start_year = 158
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y6 }
+		}
+		
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mortar4 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = tuiyaopopian4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	mortar161
+		}	
+
+		on_research_complete = {
+			sc_a161 = yes
+		}
+		
+		start_year = 161
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y7 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tuiyaopopian4 = {
+		path = {
+			leads_to_tech = mortar5
+			research_cost_coeff = 1
+		}
+		
+		start_year = 164
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y8 }
+		}
+		
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	mortar5 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+
+		path = {
+			leads_to_tech = tuiyaopopian5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	mortar167
+		}	
+
+		on_research_complete = {
+			sc_a167 = yes
+		}
+		
+		start_year = 167
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y9 }
+		}
+		
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tuiyaopopian5 = {
+		path = {
+			leads_to_tech = mortar6
+			research_cost_coeff = 1
+		}
+		
+		start_year = 170
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x5 y = @y10 }
+		}
+		
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+
+		categories = {
+			mortar
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	anti_shield1 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = chuanjiadan1
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	anti_shield152
+		}	
+
+		enable_subunits = {
+			sc_anti_shield_brigade
+		}
+		
+		start_year = 152
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y4 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chuanjiadan1 = {
+
+		path = {
+			leads_to_tech = anti_shield2
+			research_cost_coeff = 1
+		}
+
+		sc_anti_shield_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+		
+		start_year = 155
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y5 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	anti_shield2 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = chuanjiadan2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	anti_shield158
+		}	
+		
+		start_year = 158
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y6 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chuanjiadan2 = {
+		path = {
+			leads_to_tech = anti_shield3
+			research_cost_coeff = 1
+		}
+
+		sc_anti_shield_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		start_year = 161
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y7 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	anti_shield3 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		path = {
+			leads_to_tech = chuanjiadan3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	anti_shield164
+		}	
+		
+		start_year = 164
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y8 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	chuanjiadan3 = {
+
+		path = {
+			leads_to_tech = anti_shield4
+			research_cost_coeff = 1
+		}
+
+		sc_anti_shield_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.2
+		}
+
+		start_year = 167
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y9 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	anti_shield4 = {
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.1
+
+		enable_equipments = {
+		  	anti_shield170
+		}	
+		
+		start_year = 170
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x6 y = @y10 }
+		}
+		
+		categories = {
+			anti_shield
+			artillery_tech
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	science_scout1 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		dependencies = {
+		   zhihuixiaodui146 = 1
+		}
+		
+		enable_equipments = {
+		  	sc_scout146
+		}	
+
+		path = {
+			leads_to_tech = science_scout2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 146
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x7 y = @y2 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_ai = yes
+			}
+		}
+	}
+	science_scout2 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		enable_equipments = {
+		  	sc_scout155
+		}	
+
+		path = {
+			leads_to_tech = science_scout3
+			research_cost_coeff = 1
+		}
+		
+		start_year = 155
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x7 y = @y5 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	science_scout3 = {
+		xp_research_type = air
+		xp_boost_cost = 25
+		xp_research_bonus = 0.25
+
+		enable_equipments = {
+		  	sc_scout164
+		}	
+
+		path = {
+			leads_to_tech = science_scout2
+			research_cost_coeff = 1
+		}
+		
+		start_year = 164
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = @x7 y = @y8 }
+		}
+		
+		categories = {
+			air_equipment
+			scout
+			military
+			science
+			scientific_weapons
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

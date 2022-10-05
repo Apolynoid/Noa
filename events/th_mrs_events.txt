@@ -1,0 +1,2294 @@
+﻿add_namespace = mrs
+##########事件###########
+
+news_event = { #向妖怪复仇###
+	id = mrs.9
+	title = mrs.9.t
+	desc = mrs.9.d
+	picture = GFX_news_event_mrs.9
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.9.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.9.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = SEJ
+			}
+		}
+	}
+
+	option = {
+		name = mrs.9.3#非本认
+		trigger = {
+			tag = SEJ
+		}
+	}
+}
+
+news_event = { #多种族大同
+	id = mrs.11
+	title = mrs.11.t
+	desc = mrs.11.d
+	picture = GFX_news_event_mrs.11
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.11.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.11.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #南魔法之森
+	id = mrs.12
+	title = mrs.12.t
+	desc = mrs.12.d
+	picture = GFX_news_event_mrs.12
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.12.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.12.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #命莲寺关系
+	id = mrs.13
+	title = mrs.13.t
+	desc = mrs.13.d
+	picture = GFX_news_event_mrs.13
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.13.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.13.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #天狗关系
+	id = mrs.14
+	title = mrs.14.t
+	desc = mrs.14.d
+	picture = GFX_news_event_mrs.14
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.14.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.14.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #辉针城关系
+	id = mrs.15
+	title = mrs.15.t
+	desc = mrs.15.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.15.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.15.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #付丧神关系
+	id = mrs.16
+	title = mrs.16.t
+	desc = mrs.16.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.16.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.16.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #妖精关系
+	id = mrs.17
+	title = mrs.17.t
+	desc = mrs.17.d
+	picture = GFX_news_event_mrs.17
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.17.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.17.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #同情弱者
+	id = mrs.18
+	title = mrs.18.t
+	desc = mrs.18.d
+	picture = GFX_news_event_mrs.18
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.18.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.18.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #重新考虑兽道关系
+	id = mrs.19
+	title = mrs.19.t
+	desc = mrs.19.d
+	picture = GFX_news_event_mrs.19
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.19.1#本人
+		trigger = {
+			or = {
+				tag = MRS
+				tag = MSD
+			}
+			
+		}
+	}
+
+	option = {
+		name = mrs.19.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = MSD
+			}
+		}
+	}
+}
+
+news_event = { #魔法使妖怪联邦
+	id = mrs.20
+	title = mrs.20.t
+	desc = mrs.20.d
+	picture = GFX_news_event_mrs.20
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.20.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.20.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #自建革命
+	id = mrs.21
+	title = mrs.21.t
+	desc = mrs.21.d
+	picture = GFX_news_event_mrs.21
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.21.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.21.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				has_government = fandong
+			}
+		}
+	}
+	option = {
+		name = mrs.21.3#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+			}
+			has_government = fandong
+		}
+	}
+}
+
+news_event = { #解决妖精###
+	id = mrs.22
+	title = mrs.22.t
+	desc = mrs.22.d
+	picture = [MRS.mrs22]
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.22.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.22.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = CIR
+			}
+		}
+	}
+
+	option = {
+		name = mrs.22.3#非本认
+		trigger = {
+			tag = CIR
+		}
+	}
+}
+
+news_event = { #静观其变
+	id = mrs.23
+	title = mrs.23.t
+	desc = mrs.23.d
+	picture = GFX_news_event_mrs.23
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.23.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.23.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #请求妖精帮助
+	id = mrs.24
+	title = mrs.24.t
+	desc = mrs.24.d
+	picture = GFX_news_event_mrs.24
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.24.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.24.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = CIR
+			}
+		}
+	}
+
+	option = {
+		name = mrs.24.3#
+		trigger = {
+			tag = CIR
+		}
+	}
+}
+
+news_event = { #辉针城一员
+	id = mrs.25
+	title = mrs.25.t
+	desc = mrs.25.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.25.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.25.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = SEJ
+			}
+		}
+	}
+
+	option = {
+		name = mrs.25.3#非本认
+		trigger = {
+			tag = SEJ
+		}
+	}
+}
+
+news_event = { #红魔馆帮助
+	id = mrs.26
+	title = mrs.26.t
+	desc = mrs.26.d
+	picture = GFX_news_event_mrs.26
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.26.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.26.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = SCA
+			}
+		}
+	}
+	option = {
+		name = mrs.26.3#非本认
+		trigger = {
+			tag = SCA
+		}
+	}
+}
+
+news_event = { #付丧神帮助
+	id = mrs.27
+	title = mrs.27.t
+	desc = mrs.27.d
+	picture = GFX_news_event_mrs.27
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.27.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.27.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = TKM
+			}
+		}
+	}
+
+	option = {
+		name = mrs.27.3
+		trigger = {
+			tag = TKM
+		}
+	}
+}
+
+news_event = { #签订绯红条约
+	id = mrs.28
+	title = mrs.28.t
+	desc = mrs.28.d
+	picture = GFX_news_event_mrs.28
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.28.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.28.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+
+	option = {
+		name = mrs.28.3#非本认
+		trigger = {
+			not = {
+				tag = MRS
+			}
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+news_event = { #走近贤者
+	id = mrs.29
+	title = mrs.29.t
+	desc = mrs.29.d
+	picture = GFX_news_event_mrs.29
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.29.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.29.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+news_event = { #完全附庸
+	id = mrs.30
+	title = mrs.30.t
+	desc = mrs.30.d
+	picture = GFX_news_event_mrs.30
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.30.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.30.2#非本认
+		trigger = {
+			not = { 
+				tag = MRS
+				tag = SCA
+			}
+		}
+	}
+	option = {
+		name = mrs.30.3#非本认
+		trigger = {
+			tag = SCA
+		}
+	}
+}
+
+news_event = { #再审和人类关系
+	id = mrs.31
+	title = mrs.31.t
+	desc = mrs.31.d
+	picture = GFX_news_event_mrs.31
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.31.1#本人
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = mrs.31.2#非本认
+		trigger = {
+			not = { tag = MRS}
+		}
+	}
+}
+
+country_event = { #兽道关系
+	id = mrs.40
+	title = mrs.40.t
+	desc = mrs.40.d
+	picture = GFX_news_event_mrs.40
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.40.1#接受
+		MRS = {
+			MSD = {
+				subject_level4 = yes
+			}
+			hidden_effect = {
+				news_event = { id = mrs.19 days = 2 }
+			}
+		}
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 50
+				MRS = {
+					num_divisions > 69
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mrs.40.2#拒绝
+		trigger = {
+
+		}
+		hidden_effect = {
+			country_event = { id = glo.2002 days = 2}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+}
+##########事件
+country_event = { #MSD VS MRS(trigger)
+	id = mrs.41
+	title = mrs.41.t
+	desc = mrs.41.d
+	picture = GFX_news_event_mrs.41
+	fire_only_once = yes
+	trigger = {
+		date > 146.7.15
+		has_global_flag = main_scenario
+		country_exists = MRS
+		country_exists = MSD
+		tag = MSD
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			MRS = {
+				complete_national_focus = MRS_bianjingchongtudebaofa
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = mrs.41.1
+
+		set_global_flag = MRS_shoudaozhanzheng_flag
+
+		army_experience = 10
+		MSD = {
+			declare_war_on = {
+			    target = MRS
+			    type = take_state_focus
+			    generator = { 206 }
+			}
+		}
+		add_ideas = MRS_Kemonomichi_war_idea_1
+
+		MRS = { add_ideas = MRS_Kemonomichi_war_idea_2 }
+		
+		hidden_effect = {
+			MRS = { set_major = yes }
+			news_event = { days = 2 id = mrs.42}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 0
+		}
+		name = mrs.41.3
+	}
+}
+
+news_event = { #MSD VS MRS
+	id = mrs.42
+	title = mrs.42.t
+	desc = mrs.42.d
+	picture = GFX_news_event_mrs.42
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.42.1
+		trigger = {
+			not = {
+				tag = MSD
+				tag = MRS
+			}
+		}
+	}
+	option = {
+		name = mrs.42.2
+		trigger = {
+			or = {
+				tag = MSD
+				tag = MRS
+			}
+		}
+	}
+}
+
+country_event = { #MSD VS MRS(trigger)
+	id = mrs.43
+	title = mrs.43.t
+	desc = mrs.43.d
+	fire_only_once = yes
+	picture = GFX_news_event_mrs.43
+	trigger = {
+		or = {
+			and = {
+				date > 147.6.1
+				MSD = {
+					not = { has_war_with = HKR}
+				}
+			}
+			and = {
+				date > 147.10.1
+				MSD = {
+					has_war_with = HKR
+				}
+			}
+			and = {
+				or = {
+					and = {
+						date > 147.3.1
+						MSD = {
+							not = { has_war_with = HKR}
+						}
+					}
+					and = {
+						date > 147.7.1
+						MSD = {
+							has_war_with = HKR
+						}
+					}
+				}	
+				or = {
+					182 = {
+						is_controlled_by = MSD
+					}
+					206 = {
+						is_controlled_by = MSD
+					}
+					355 = {
+						is_controlled_by = MSD
+					}
+					175 = {
+						is_controlled_by = MSD
+					}
+				}
+			}
+			and = {
+				182 = {
+					is_controlled_by = MSD
+				}
+				206 = {
+					is_controlled_by = MSD
+				}
+				355 = {
+					is_controlled_by = MSD
+				}
+				175 = {
+					is_controlled_by = MSD
+				}
+			}
+		}
+		has_global_flag = main_scenario
+		country_exists = MRS
+		country_exists = MSD
+    	MSD = { has_idea = MRS_Kemonomichi_war_idea_1 }
+    	MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
+		MRS = { has_war_with = MSD}
+		tag = MSD
+	}
+	mean_time_to_happen = {
+		days = 70
+		modifier = {
+			or = {
+				182 = {
+					is_controlled_by = MSD
+				}
+				206 = {
+					is_controlled_by = MSD
+				}
+				355 = {
+					is_controlled_by = MSD
+				}
+				175 = {
+					is_controlled_by = MSD
+				}
+			}
+			factor = 0.4
+		}
+		modifier = {
+			date > 148.1.1
+			factor = 0.25
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			MRS = { set_major = no }
+		}
+	}
+
+	option = {
+		name = mrs.43.1
+		trigger = {
+			any_country = {
+				is_subject_of = MRS
+				any_owned_state = {
+					is_controlled_by = MSD
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 99
+		}
+
+		MRS = {
+			country_event = { days = 2 id = mrs.44}
+		}
+
+		custom_effect_tooltip = TEG_accept
+
+		effect_tooltip = {
+			MRS = {
+				army_experience = 20
+			}	
+
+			set_state_owner = 206
+
+			MRS = { white_peace = MSD}
+		}
+	}
+	option = {
+		name = mrs.43.2
+
+		ai_chance = {
+			base = 1
+		}
+
+		trigger = {
+			not = {
+				any_country = {
+					is_subject_of = MRS
+					any_owned_state = {
+						is_controlled_by = MSD
+					}
+				}
+			}
+		}
+
+		MRS = {
+			country_event = { days = 2 id = mrs.45}
+		}
+
+		custom_effect_tooltip = TEG_accept
+
+		effect_tooltip = {
+			MRS = {
+				army_experience = 10
+			}	
+
+			MRS = { white_peace = MSD }
+		}
+	}
+
+	option = {
+		name = mrs.43.3
+
+		ai_chance = {
+			base = 0
+		}
+
+		trigger = {
+
+		}
+	}
+}
+
+country_event = {
+	id = mrs.44
+	title = mrs.44.t
+	desc = mrs.44.d
+	is_triggered_only = yes
+	picture = GFX_news_event_mrs.44
+	option = {
+		name = mrs.44.1
+		if = {
+			limit = {
+				NOT = { date > 147.3.1 }
+			}
+			add_political_power = -100
+			add_stability = -0.05
+		}
+		army_experience = 20
+		MSD = {
+			set_state_owner = 206
+		}
+		white_peace = MSD
+
+		ai_chance = {
+			base = 100
+		}
+
+		hidden_effect = {
+			country_event = { id = mrs.46 days = 60 random = 600}
+		}
+	}
+}
+
+country_event = {
+	id = mrs.45
+	title = mrs.44.t
+	desc = mrs.45.d
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.45.1
+
+		add_political_power = 100
+    	add_war_support = 0.10
+		army_experience = 10
+		white_peace = MSD
+		
+
+		MSD = {
+			add_political_power = -200
+			add_stability = -0.20
+			add_war_support = -0.30
+		}
+
+		ai_chance = {
+			base = 100
+		}
+
+		hidden_effect = {
+			country_event = { id = mrs.46 days = 60 random = 600}
+		}
+	}
+
+	option = {
+		name = mrs.45.2
+		ai_chance = {
+			base = 20
+		}
+
+	}
+}
+
+country_event = {
+	id = mrs.51
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+
+	}
+
+	immediate = {
+		MRS = {
+			country_event = { id = mrs.53 days = 30}
+		}
+	}
+}
+
+country_event = {
+	id = mrs.52
+	title = mrs.52.t
+	desc = mrs.52.d
+	picture = GFX_news_event_mrs.52
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = mrs.52.1
+		clr_country_flag = MRS_tongyi
+		set_country_flag = MRS_butongyi
+		MRS = {
+			add_to_variable = { butongyifuyong = 1}
+			add_to_variable = { tongyifuyong = -1}
+		}
+	}
+	option = {
+		name = mrs.52.2
+	}
+}
+
+news_event = {
+	id = mrs.54
+	title = mrs.54.t
+	desc = mrs.54.d
+
+	major = yes
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = mrs.54.1
+		trigger = {
+			tag = MRS
+		}
+	}
+	option = {
+		name = mrs.54.2
+		trigger = {
+			not = { tag = MRS }
+		}
+	}
+}
+
+country_event = { #获得RNS的支持
+	id = mrs.57
+	title = mrs.57.t
+	desc = mrs.57.d
+	picture = GFX_news_event_mrs.57
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.57.1#同意
+		FROM = {
+			ROOT = {
+				subject_level4 = yes
+			}
+			hidden_effect = {
+				country_event = { id = glo.2001 days = 2}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = mrs.57.2#不同意
+		hidden_effect = {
+			country_event = { id = glo.2002 days = 2}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #让慧音下台(HUM)
+	id = mrs.58
+	title = mrs.58.t
+	desc = mrs.58.d
+	picture = GFX_news_event_mrs.58
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = mrs.58.1#同意
+		HUM_keine_leader = {
+			remove_country_leader_role = {
+				ideology = guli_type
+			}
+			remove_country_leader_role = {
+				ideology = qinwai_type
+			}
+			remove_country_leader_role = {
+				ideology = neworder_type
+			}
+		}
+		FROM = {
+			ROOT = {
+				end_puppet = ZBT
+				subject_level3 = yes
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				not = {
+					has_government = guli
+					has_government = qinwai
+					has_government = neworder
+				}
+				factor = 1.5
+			}
+		}
+	}
+
+	option = {
+		name = mrs.58.2#不同意
+		MRS = {
+			country_event = { id = mrs.59 days = 2}
+		}
+		ai_chance = {
+			base = 75
+			modifier = {
+				num_divisions > 59
+				add = -10
+			}
+			modifier = {
+				num_divisions > 99
+				add = -10
+			}
+			modifier = {
+				num_divisions > 139
+				add = -10
+			}
+			modifier = {
+				num_divisions > 169
+				add = -10
+			}
+			modifier = {
+				num_divisions > 199
+				add = -10
+			}
+		}
+	}
+}
+
+country_event = { #让慧音下台(失败)
+	id = mrs.59
+	title = mrs.59.t
+	desc = mrs.59.d
+	picture = GFX_news_event_mrs.59
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.59.1#同意
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		name = mrs.59.2#不同意
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# 国家事件 country events
+
+# 魔法之森魔女大会（召开魔女大会）
+country_event = {
+	id = mrs.101
+	title = mrs.101.t
+	desc = mrs.101.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	# 魔理沙
+	option = {
+		name = mrs.101.1
+		ai_chance = {
+			base = 7
+		}
+		add_popularity = {
+			ideology = guli
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = guli
+			elections_allowed = no
+		}
+		hidden_effect = {
+			complete_national_focus = MRS_da_mo_nv_mo_li_sha
+		}
+	}
+
+	# 成美
+	option = {
+		name = mrs.101.2
+		ai_chance = {
+			base = 1
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = fandong
+			elections_allowed = no
+		}
+		hidden_effect = {
+			complete_national_focus = MRS_da_mo_nv_cheng_mei
+		}
+	}
+
+	# 爱丽丝
+	option = {
+		name = mrs.101.3
+		ai_chance = {
+			base = 2
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = qinwai
+			elections_allowed = no
+		}
+		hidden_effect = {
+			complete_national_focus = MRS_da_mo_nv_ai_li_si
+		}
+	}
+}
+
+# 成美叛乱
+country_event = {
+	id = mrs.103
+	title = mrs.103.t
+	desc = mrs.103.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 继续游戏
+	option = {
+		name = mrs.103.1
+		ai_chance = {
+			base = 7
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			NRM = {
+				load_oob = "NRM_146"
+			}
+		}
+	}
+
+	# 转到成美
+	option = {
+		name = mrs.103.2
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			MRS = {
+				add_stability = -0.05
+			}
+			NRM = {
+				remove_all_ai_templates = yes
+				load_oob = "NRM_146"
+				change_tag_from = ROOT
+			}
+		}
+	}
+}
+
+# 爱丽丝叛乱
+country_event = {
+	id = mrs.102
+	title = mrs.102.t
+	desc = mrs.102.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 继续游戏
+	option = {
+		name = mrs.102.1
+		ai_chance = {
+			base = 7
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			ALI = {
+				load_oob = "ALI_146"
+			}
+		}
+	}
+
+	# 转到爱丽丝
+	option = {
+		name = mrs.102.2
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			MRS = {
+				add_stability = -0.05
+			}
+			ALI = {
+				remove_all_ai_templates = yes
+				load_oob = "ALI_146"
+				change_tag_from = ROOT
+			}
+		}
+	}
+}
+
+# 成美 与爱丽丝谈判（尝试接触爱丽丝）（兽道战争胜利）
+country_event = {
+	id = mrs.104
+	title = mrs.104.t
+	desc = mrs.104.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 同意
+	option = {
+		name = mrs.104.1
+		add_timed_idea = {
+			idea = mrs_yu_ai_li_si_tuo_xie_idea
+			days = 365
+		}
+	}
+
+	# 不同意
+	option = {
+		name = mrs.104.2
+		hidden_effect = {
+			set_country_flag = MRS_alice_refuse_flag
+		}
+	}
+}
+
+# 成美 与爱丽丝谈判（尝试接触爱丽丝）（兽道战争失败）
+country_event = {
+	id = mrs.105
+	title = mrs.105.t
+	desc = mrs.105.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.105.1
+		set_country_flag = MRS_alice_refuse_flag
+	}
+}
+
+# 爱丽丝 与成美谈判（尝试接触成美）（兽道战争胜利）
+country_event = {
+	id = mrs.106
+	title = mrs.106.t
+	desc = mrs.106.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 同意
+	option = {
+		name = mrs.106.1
+		add_timed_idea = {
+			idea = mrs_yu_cheng_mei_tuo_xie_idea
+			days = 365
+		}
+	}
+
+	# 不同意
+	option = {
+		name = mrs.106.2
+		hidden_effect = {
+			set_country_flag = MRS_narumi_refuse_flag
+		}
+	}
+}
+
+# 爱丽丝 与成美谈判（尝试接触成美）（兽道战争失败）
+country_event = {
+	id = mrs.107
+	title = mrs.107.t
+	desc = mrs.107.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.107.1
+		set_country_flag = MRS_narumi_refuse_flag
+	}
+}
+
+# 避免内战
+country_event = {
+	id = mrs.108
+	title = mrs.108.t
+	desc = mrs.108.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.108.1
+		custom_effect_tooltip = MRS_army_unlocked_tt
+		hidden_effect = {
+			swap_ideas = {
+				remove_idea = mrs_hun_luan_de_zhi_hui_xi_tong_idea
+				add_idea = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+			}
+			country_lock_all_division_template = no
+			set_global_flag = MRS_civil_war_avoided_flag
+		}
+	}
+}
+
+# hidden 爱丽丝分裂
+country_event = {
+	id = mrs.109
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		# 移除部队
+		country_lock_all_division_template = no
+		delete_unit_template_and_units = {
+			division_template = "初始魔法编制"
+			disband = no
+		}
+		delete_unit_template_and_units = {
+			division_template = "人偶突击兵团"
+			disband = no
+		}
+		country_lock_all_division_template = yes
+		# 划分地块
+		ALI = {
+			transfer_state = 354
+			transfer_state = 169
+			transfer_state = 191
+			transfer_state = 175
+			transfer_state = 355
+			transfer_state = 182
+			354 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			169 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			191 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			175 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			355 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			182 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			if = {
+				limit = {
+					206 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				transfer_state = 206
+				206 = {
+					add_core_of = ALI
+					remove_core_of = MRS
+					teleport_armies = {
+						limit = {
+							tag = MRS
+						}
+					}
+				}
+			}
+		}
+		# 删除继承模板
+		ALI = {
+			MRS_remove_all_templates = yes
+		}
+		# 移交枪械
+		send_equipment_fraction = {
+			value = 0.3
+			target = ALI
+		}
+		# 继承科技
+		ALI = {
+			inherit_technology = MRS
+		}
+		# 领导人变动
+		set_nationality = {
+			target_country = ALI
+			character = ALI_ali
+		}
+		set_nationality = {
+			target_country = ALI
+			character = ALI_shh
+		}
+		set_nationality = {
+			target_country = ALI
+			character = ALI_hor
+		}
+		ALI = {
+			retire_ideology_leader = qinwai
+			retire_ideology_leader = neworder
+			retire_ideology_leader = oldorder
+		}
+		country_event = {
+			id = mrs.102
+			days = 3
+		}
+	}
+}
+
+# hidden 成美分裂
+country_event = {
+	id = mrs.110
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		# 移除部队
+		country_lock_all_division_template = no
+		delete_unit_template_and_units = {
+			division_template = "游民妖精"
+			disband = no
+		}
+		delete_unit_template_and_units = {
+			division_template = "游民妖怪"
+			disband = no
+		}
+		delete_unit_template_and_units = {
+			division_template = "初等付丧神"
+			disband = no
+		}
+		delete_unit_template_and_units = {
+			division_template = "人形付丧神"
+			disband = no
+		}
+		country_lock_all_division_template = yes
+		# 划分地块
+		NRM = {
+			transfer_state = 138
+			transfer_state = 552
+			transfer_state = 153
+			transfer_state = 465
+			transfer_state = 170
+			transfer_state = 185
+			transfer_state = 162
+			transfer_state = 154
+			138 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			552 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			153 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			465 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			170 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			185 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			162 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			154 = {
+				add_core_of = NRM
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+		}
+		# 删除继承模板
+		NRM = {
+			MRS_remove_all_templates = yes
+		}
+		# 移交枪械
+		send_equipment_fraction = {
+			value = 0.3
+			target = NRM
+		}
+		# 继承科技
+		NRM = {
+			inherit_technology = MRS
+		}
+		# 领导人变动
+		set_nationality = {
+			target_country = NRM
+			character = MRS_narumi
+		}
+		NRM = {
+			retire_ideology_leader = fandong
+		}
+		country_event = {
+			id = mrs.103
+			days = 3
+		}
+	}
+}
+
+# 魔法之森陷入对峙
+news_event = {
+	id = mrs.111
+	title = mrs.111.t
+	desc = mrs.111.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MRS_civil_war_prepare_flag
+			if = {
+				limit = {
+					country_exists = MRS
+				}
+				206 = {
+					add_core_of = MRS
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ALI
+				}
+				206 = {
+					add_core_of = ALI
+				}
+			}
+			if = {
+				limit = {
+					country_exists = NRM
+				}
+				206 = {
+					add_core_of = NRM
+				}
+			}
+			MRS = {
+				remove_ideas = mrs_hun_luan_de_zhi_hui_xi_tong_idea
+				country_lock_all_division_template = no
+				division_template = {
+				  name = "内战民兵"
+				  is_locked = yes
+				  regiments = {
+					  ma_infantry = { x = 0 y = 0 }
+					  ma_light_infantry = { x = 0 y = 1 }
+				  }
+				}
+			  }
+			  ALI = {
+				division_template = {
+				  name = "内战民兵"
+				  is_locked = yes
+				  regiments = {
+					  ma_infantry = { x = 0 y = 0 }
+					  ma_light_infantry = { x = 0 y = 1 }
+				  }
+				}
+				if = {
+					limit = {
+						country_exists = ALI
+						NOT = {
+							country_exists = NRM
+						}
+					}
+					country_event = {
+						id = mrs.115
+						days = 3
+					}
+				}
+			  }
+			  NRM = {
+				division_template = {
+				  name = "内战民兵"
+				  is_locked = yes
+				  regiments = {
+					  ma_infantry = { x = 0 y = 0 }
+					  ma_light_infantry = { x = 0 y = 1 }
+				  }
+				}
+				if = {
+					limit = {
+						country_exists = NRM
+						NOT = {
+							country_exists = ALI
+						}
+					}
+					country_event = {
+						id = mrs.115
+						days = 3
+					}
+				}
+			  }
+		}
+	}
+
+	option = {
+		name = mrs.111.1#本人
+		trigger = {
+			OR = {
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+	}
+
+	option = {
+		name = mrs.111.2#非本人
+		trigger = {
+			NOT = { 
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+	}
+}
+
+# 魔法之森内战
+news_event = {
+	id = mrs.112
+	title = mrs.112.t
+	desc = mrs.112.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MRS_civil_war_flag
+		}
+	}
+
+	option = {
+		name = mrs.112.1#本人
+		trigger = {
+			OR = {
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+	}
+
+	option = {
+		name = mrs.112.2#非本人
+		trigger = {
+			NOT = { 
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+	}
+}
+
+# 魔法之森内战结束
+news_event = {
+	id = mrs.113
+	title = mrs.113.t
+	desc = mrs.113.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		NOT = {
+			has_global_flag = MRS_civil_war_end_flag
+		}
+		has_global_flag = MRS_civil_war_flag
+		OR = {
+			# 魔理沙胜利
+			AND = {
+				ALI = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+				NRM = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+			# 爱丽丝胜利
+			AND = {
+				MRS = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+				NRM = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+			# 成美胜利
+			AND = {
+				ALI = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+				MRS = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MRS_civil_war_end_flag
+		}
+	}
+
+	option = {
+		name = mrs.113.1#本人
+		trigger = {
+			OR = {
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = mrs.114
+				days = 3
+			}
+			if = {
+				limit = {
+					ROOT = {
+						is_puppet = no
+					}
+				}
+				add_ideas = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+			}
+		}
+	}
+
+	option = {
+		name = mrs.113.2#非本人
+		trigger = {
+			NOT = { 
+				tag = MRS
+				tag = ALI
+				tag = NRM
+			}
+		}
+	}
+}
+
+# 民兵解散
+country_event = {
+	id = mrs.114
+	title = mrs.114.t
+	desc = mrs.114.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.114.1#本人
+		hidden_effect = {
+			set_division_template_lock = {
+				division_template = "内战民兵"
+				is_locked = no
+			}
+		}
+		delete_unit_template_and_units = {
+			division_template = "内战民兵"
+			disband = no
+		}
+	}
+}
+
+# 民兵志愿者
+country_event = {
+	id = mrs.115
+	title = mrs.115.t
+	desc = mrs.115.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.115.1#本人
+		hidden_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+		}
+		custom_effect_tooltip = MRS_militia_volunteer_tt
+	}
+}
+
+# 魔理沙 与成美谈判（争取成美支持）（兽道战争失败）（未支持爱丽丝）
+country_event = {
+	id = mrs.116
+	title = mrs.116.t
+	desc = mrs.116.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 同意
+	option = {
+		name = mrs.116.1
+		add_timed_idea = {
+			idea = mrs_yu_cheng_mei_tuo_xie_idea
+			days = 365
+		}
+		hidden_effect = {
+			set_country_flag = MRS_narumi_overly_compromise_flag
+		}
+	}
+
+	# 不同意
+	option = {
+		name = mrs.116.2
+		hidden_effect = {
+			set_country_flag = MRS_narumi_refuse_flag
+		}
+	}
+}
+
+# 魔理沙 与爱丽丝谈判（争取爱丽丝支持）（兽道战争失败）（未支持成美）
+country_event = {
+	id = mrs.117
+	title = mrs.117.t
+	desc = mrs.117.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 同意
+	option = {
+		name = mrs.117.1
+		add_timed_idea = {
+			idea = mrs_yu_ai_li_si_tuo_xie_idea
+			days = 365
+		}
+		hidden_effect = {
+			set_country_flag = MRS_alice_overly_compromise_flag
+		}
+	}
+
+	# 不同意
+	option = {
+		name = mrs.117.2
+		hidden_effect = {
+			set_country_flag = MRS_alice_refuse_flag
+		}
+	}
+}
+
+# 成美 请求外界援助
+country_event = {
+	id = mrs.118
+	title = mrs.118.t
+	desc = mrs.118.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 正邪
+	option = {
+		name = mrs.118.1
+		trigger = {
+			country_exists = SEJ
+			SEJ = {
+				has_government = fandong
+			}
+		}
+		hidden_effect = {
+			SEJ = {
+				country_event = {
+					id = mrs.119
+					days = 1
+				}
+			}
+			set_country_flag = NRM_ask_SEJ_for_help_flag
+		}
+	}
+
+	# 琪露诺
+	option = {
+		name = mrs.118.2
+		trigger = {
+			country_exists = CIR
+			CIR = {
+				has_government = fandong
+			}
+		}
+		hidden_effect = {
+			CIR = {
+				country_event = {
+					id = mrs.119
+					days = 1
+				}
+			}
+			set_country_flag = NRM_ask_CIR_for_help_flag
+		}
+	}
+
+	# 九十九
+	option = {
+		name = mrs.118.3
+		trigger = {
+			country_exists = TKM
+			TKM = {
+				has_government = fandong
+			}
+		}
+		hidden_effect = {
+			TKM = {
+				country_event = {
+					id = mrs.119
+					days = 1
+				}
+			}
+			set_country_flag = NRM_ask_TKM_for_help_flag
+		}
+	}
+}
+
+# 请求援助
+country_event = {
+	id = mrs.119
+	title = mrs.119.t
+	desc = mrs.119.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 同意
+	option = {
+		name = mrs.119.1
+		send_equipment = {
+			equipment = magic_core_a
+			amount = 300
+			target = NRM
+		}
+		hidden_effect = {
+			NRM = {
+				set_country_flag = NRM_request_accepted_flag
+				country_event = {
+					id = mrs.120
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	# 不同意
+	option = {
+		name = mrs.119.2
+		hidden_effect = {
+			NRM = {
+				set_country_flag = NRM_request_denied_flag
+				country_event = {
+					id = mrs.121
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# 请求援助结果（成功）
+country_event = {
+	id = mrs.120
+	title = mrs.120.t
+	desc = mrs.120.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.120.1
+	}
+}
+
+# 请求援助结果（失败）
+country_event = {
+	id = mrs.121
+	title = mrs.121.t
+	desc = mrs.121.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.121.1
+	}
+}

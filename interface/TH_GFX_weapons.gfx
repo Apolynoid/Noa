@@ -1,0 +1,7 @@
+spriteTypes = {
+# MSR
+	spriteType = {
+		name = "GFX_magic_energy149_hakkero"
+		texturefile = "gfx/equipments/art/hakkero.dds"
+	}
+}

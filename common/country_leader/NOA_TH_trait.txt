@@ -1,0 +1,109 @@
+leader_traits = {
+	# HKR
+	# 赤色杀人魔
+	HKR_chi_se_sha_ren_mo = {
+		random = no
+		#generic
+
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		production_speed_buildings_factor = -0.15
+		research_speed_factor = -0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 人类英雄
+	HKR_ren_lei_ying_xiong = {
+		random = no
+		#generic
+
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		research_speed_factor = 0.05
+		ST_race_penalty_Human_factor = -0.3
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# MRS
+	# 弱者的保护者
+	MRS_ruo_zhe_de_bao_hu_zhe = {
+		random = no
+		#generic
+		ST_race_penalty_Pri_youkai_factor = -0.3
+		ST_race_penalty_Fairy_factor = -0.3
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 平等的象征
+	MRS_ping_deng_de_xiang_zheng = {
+		random = no
+		#generic
+		ST_race_penalty_Pri_youkai_factor = -0.3
+		ST_race_penalty_Fairy_factor = -0.3
+		ST_race_penalty_all_factor = -0.4
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 名声显赫的大魔女
+	MRS_ming_sheng_xian_he_de_da_mo_nv = {
+		random = no
+		#generic
+		stability_factor = 0.3
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+#=========生产商通用============
+    manufacturer_cost_increase = {
+		random = no
+		#generic
+
+		manufacturer_cost_factor = 0.05
+		political_power_gain = -0.03
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+#=========adviosr通用============
+    advisor_cost_increase = {
+		random = no
+		#generic
+
+		political_strategy_cost_factor = 0.1
+		political_power_gain = -0.05
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	ideo_slot_increase = {
+		random = no
+		#generic
+
+		ideo_slot_cost_factor = 0.1
+		political_power_gain = -0.05
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+}

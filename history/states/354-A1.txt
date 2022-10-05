@@ -1,0 +1,48 @@
+
+state={
+	id=354
+	name="STATE_354"
+	resources={
+		energy=2.000
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = MRS
+			add_core_of = ALI
+			add_core_of = MRS
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+		146.1.1 = {
+			owner = MRS
+			add_core_of = MRS
+			remove_core_of = ALI
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		394 832 1273 2789 3271 3326 4367 4378 4382 4534 
+	}
+	manpower=232
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

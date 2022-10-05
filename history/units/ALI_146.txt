@@ -1,0 +1,152 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "初始魔法编制"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "人偶突击兵团"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
+	}
+}
+
+units = {
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 3271
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2380
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 1565
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "初始魔法编制"
+		location = 2455
+		division_template = "初始魔法编制"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2455
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2380
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶突击兵团"
+		location = 2380
+		division_template = "人偶突击兵团"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,38 @@
+MRS_remove_all_templates = {
+    delete_unit_template_and_units = {
+        division_template = "扫荡编制"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "武装魔法使"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人类散兵"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "游民妖精"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "游民妖怪"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "初等付丧神"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人形付丧神"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "初始魔法编制"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人偶突击兵团"
+        disband = yes
+    }
+}
