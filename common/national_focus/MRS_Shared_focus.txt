@@ -5,7 +5,7 @@ shared_focus = {
   id = MRS_jun_shi_dong_yuan
   icon = GFX_focus_SOV_mobilization_plan
   cost = 7
-  x = 40
+  x = 25
   y = 1
 
   available = {

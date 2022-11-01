@@ -1,0 +1,41 @@
+# 征服世界的雄心
+ALI_zheng_fu_shi_jie_de_xiong_xin = {
+	icon = generic_political_actions
+
+	priority = 96
+
+	allowed = {
+		original_tag = ALI
+	}
+
+	visible = {
+		original_tag = ALI
+		has_completed_focus = ALI_zheng_fu_shi_jie_de_xiong_xin
+		NOT = {
+			has_completed_focus = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
+		}
+	}
+	
+}
+
+# 战争计划
+ALI_zhan_zheng_ji_hua = {
+	icon = generic_political_actions
+
+	priority = 95
+
+	visible_when_empty = yes
+
+	allowed = {
+		original_tag = ALI
+	}
+
+	visible = {
+		original_tag = ALI
+		has_completed_focus = ALI_dui_shi_jie_zhan_zheng_ji_hua
+		NOT = {
+			has_completed_focus = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
+		}
+	}
+	
+}

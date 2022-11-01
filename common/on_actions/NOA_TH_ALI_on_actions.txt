@@ -1,0 +1,21 @@
+on_actions = {
+	on_daily_ALI = {
+		effect = {
+			sphere_of_influence_check = yes
+			if = {
+				limit = {
+					date < 150.1.1
+					NOT = {
+						has_country_flag = ALI_mojie
+					}
+				}
+				if = {
+					limit = {
+						surrender_progress > 0.3
+					}
+					set_country_flag = ALI_mojie
+				}
+			}
+		}
+	}
+}

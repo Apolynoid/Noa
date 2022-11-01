@@ -1,0 +1,70 @@
+ideas = {
+	country = {
+		#mrs
+
+    # 妖怪的战斗力
+    nrm_yao_guai_de_zhan_dou_li_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        breakthrough_factor = 0.1
+      }
+    }
+
+    # 社会化生产
+    nrm_she_hui_hua_sheng_chan_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_start_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        consumer_goods_factor = -0.02
+      }
+    }
+
+    # 社会化生产 生产竞赛
+    nrm_she_hui_hua_sheng_chan_a_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_start_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        industrial_capacity_factory = 0.1
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    # 民兵
+    nrm_min_bing_idea = {
+      picture = unknown
+      modifier = {
+        conscription = 0.02
+        training_time_army_factor = -0.1
+        minimum_training_level = -0.1
+      }
+    }
+
+    # 公民军
+    nrm_gong_min_jun_idea = {
+      picture = unknown
+      modifier = {
+        conscription = 0.02
+        training_time_army_factor = -0.2
+        minimum_training_level = -0.1
+        army_attack_factor = 0.05
+        army_defence_factor = 0.05
+        army_org_factor = 0.1
+        army_org_regain = 0.1
+      }
+    }
+
+    # 魔法之森科学院
+    nrm_mo_fa_zhi_sen_ke_xue_yuan_idea = {
+      picture = unknown
+      modifier = {
+        research_speed_factor = 0.1
+      }
+    }
+	}
+}

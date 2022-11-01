@@ -19,9 +19,9 @@ focus_tree = {
   # 召开魔女大会
   focus = {
       id = MRS_zhao_kai_mo_nv_da_hui
-      icon = unknown
+      icon = MRS_focus_convene_the_witch_meeting
       cost = 12
-      x = 16
+      x = 6
       y = 1
 
       available ={
@@ -132,6 +132,7 @@ focus_tree = {
     relative_position_id = MRS_mo_fa_shi_ruo_zhe_lun
 
     available = {
+      has_war = no
       OR = {
         MSD = {
           OR = {
@@ -144,6 +145,7 @@ focus_tree = {
             is_owned_and_controlled_by = ROOT
           }
         }
+        has_country_flag = MRS_victory_in_MSD_war_flag
       }
     }
 
@@ -335,6 +337,7 @@ focus_tree = {
     relative_position_id = MRS_wen_ding_hang_xiang
 
     available = {
+      has_war = no
       OR = {
         MSD = {
           OR = {
@@ -347,6 +350,7 @@ focus_tree = {
             is_owned_and_controlled_by = ROOT
           }
         }
+        has_country_flag = MRS_victory_in_MSD_war_flag
       }
     }
 
@@ -397,6 +401,7 @@ focus_tree = {
     relative_position_id = MRS_wen_ding_hang_xiang
 
     available = {
+      has_war = no
       OR = {
         MSD = {
           OR = {
@@ -409,6 +414,7 @@ focus_tree = {
             is_owned_and_controlled_by = ROOT
           }
         }
+        has_country_flag = MRS_victory_in_MSD_war_flag
       }
     }
 
@@ -675,6 +681,7 @@ focus_tree = {
     relative_position_id = MRS_cu_jin_ji_ji_ping_deng
 
     available = {
+      has_war = no
       OR = {
         MSD = {
           OR = {
@@ -687,6 +694,7 @@ focus_tree = {
             is_owned_and_controlled_by = ROOT
           }
         }
+        has_country_flag = MRS_victory_in_MSD_war_flag
       }
     }
 

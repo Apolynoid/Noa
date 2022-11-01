@@ -37,6 +37,11 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_eqiupment_check.dds"			
 	}
 
+	SpriteType = {
+	name = "GFX_focus_attack_SCA"
+	texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
+	}
+
 	#### HKR Hakurei Reimu 博丽神社
 
 	SpriteType = {
@@ -50,6 +55,11 @@ spriteTypes = {
 	}
 
 	#### MRS Kirisame Marisa 魔法之森
+
+	SpriteType = {
+	name = "MRS_focus_convene_the_witch_meeting"
+	texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.dds"			
+	}
 
 	SpriteType = {
 	name = "MSR_focus_archmage_alice"

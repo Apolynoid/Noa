@@ -17,17 +17,78 @@ NRM_qing_qiu_wai_bu_yuan_zhu:0 "请求外部援助"
 NRM_qing_qiu_wai_bu_yuan_zhu_desc:0 ""
 NRM_zhun_bei_zui_hou_yi_ji:0 "准备最后一击"
 NRM_zhun_bei_zui_hou_yi_ji_desc:0 ""
+NRM_yu_huo_chong_sheng:0 "浴火重生"
+NRM_yu_huo_chong_sheng_desc:0 ""
+NRM_sheng_er_ping_deng:0 "生而平等"
+NRM_sheng_er_ping_deng_desc:0 ""
+NRM_she_hui_bao_zhang:0 "社会保障"
+NRM_she_hui_bao_zhang_desc:0 ""
+NRM_she_hui_hua_sheng_chan:0 "社会化生产"
+NRM_she_hui_hua_sheng_chan_desc:0 ""
+NRM_sheng_chan_jing_sai:0 "生产竞赛"
+NRM_sheng_chan_jing_sai_desc:0 ""
+NRM_chong_jian_min_bing_zu_zhi:0 "重建民兵组织"
+NRM_chong_jian_min_bing_zu_zhi_desc:0 ""
+NRM_gong_min_jun:0 "公民军"
+NRM_gong_min_jun_desc:0 ""
+NRM_sao_mang_yun_dong:0 "扫盲运动"
+NRM_sao_mang_yun_dong_desc:0 ""
+NRM_mo_fa_zhi_sen_ke_xue_yuan:0 "魔法之森科学院"
+NRM_mo_fa_zhi_sen_ke_xue_yuan_desc:0 ""
+NRM_ge_ming_wai_jiao:0 "革命外交"
+NRM_ge_ming_wai_jiao_desc:0 ""
+NRM_jia_ru_ge_ming_yun_dong:0 "加入革命运动"
+NRM_jia_ru_ge_ming_yun_dong_desc:0 ""
+NRM_yu_jiu_shi_jiu_jie_meng:0 "与九十九结盟"
+NRM_yu_jiu_shi_jiu_jie_meng_desc:0 ""
+NRM_du_li_zi_zhu:0 "独立自主"
+NRM_du_li_zi_zhu_desc:0 ""
+NRM_chuan_bo_ge_ming:0 "传播革命"
+NRM_chuan_bo_ge_ming_desc:0 ""
+NRM_xiao_mie_ge_ming_pan_tu:0 "消灭革命叛徒"
+NRM_xiao_mie_ge_ming_pan_tu_desc:0 ""
+NRM_tuan_jie_mo_fa_dao_ju:0 "团结魔法道具"
+NRM_tuan_jie_mo_fa_dao_ju_desc:0 ""
+NRM_fen_sui_di_guo:0 "粉碎帝国"
+NRM_fen_sui_di_guo_desc:0 ""
+NRM_ben_tu_fang_yu:0 "本土防御"
+NRM_ben_tu_fang_yu_desc:0 ""
+NRM_wu_zhuang_qun_zhong:0 "武装群众"
+NRM_wu_zhuang_qun_zhong_desc:0 ""
+NRM_min_yong_gong_cheng_yao_sai_hua:0 "民用工程要塞化"
+NRM_min_yong_gong_cheng_yao_sai_hua_desc:0 ""
+NRM_ge_ming_de_lian_he_ti:0 "革命的联合体"
+NRM_ge_ming_de_lian_he_ti_desc:0 ""
 
 #idea
-
+nrm_yao_guai_de_zhan_dou_li_idea:0 "妖怪的战斗力"
+nrm_yao_guai_de_zhan_dou_li_idea_desc:0 ""
+nrm_she_hui_hua_sheng_chan_idea:0 "社会化生产"
+nrm_she_hui_hua_sheng_chan_idea_desc:0 ""
+nrm_she_hui_hua_sheng_chan_a_idea:0 "社会化生产"
+nrm_she_hui_hua_sheng_chan_a_idea_desc:0 ""
+nrm_min_bing_idea:0 "民兵"
+nrm_min_bing_idea_desc:0 ""
+nrm_gong_min_jun_idea:0 "公民军"
+nrm_gong_min_jun_idea_desc:0 ""
+nrm_mo_fa_zhi_sen_ke_xue_yuan_idea:0 "魔法之森科学院"
+nrm_mo_fa_zhi_sen_ke_xue_yuan_idea_desc:0 ""
 
 #op
-
+NRM_ge_ming_wai_jiao_radicalist_op:0 "革命外交"
+NRM_ge_ming_wai_jiao_non_radicalist_op:0 "革命外交"
 
 #tt
 
 
  #decision
 
+
+# flag
+NRM_ask_SEJ_for_help_flag:0 "向[SEJ.GetName]求援"
+NRM_ask_CIR_for_help_flag:0 "向[CIR.GetName]求援"
+NRM_ask_TKM_for_help_flag:0 "向[TKM.GetName]求援"
+NRM_request_accepted_flag:0 "他们同意了请求"
+NRM_request_denied_flag:0 "他们拒绝了请求"
 
  #other

@@ -59,12 +59,71 @@ leader_traits = {
 		}
 	}
 
+	# 平等的捍卫者
+	MRS_ping_deng_de_han_wei_zhe = {
+		random = no
+		#generic
+		ST_race_penalty_all_factor = -1
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	# 名声显赫的大魔女
 	MRS_ming_sheng_xian_he_de_da_mo_nv = {
 		random = no
 		#generic
 		stability_factor = 0.3
 		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 七色的人偶使
+	MRS_qi_se_de_ren_ou_shi = {
+		random = no
+		#generic
+		weekly_manpower = 2
+		training_time_factor = -0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 魔法之国的爱丽丝
+	MRS_mo_fa_zhi_guo_de_ai_li_si = {
+		random = no
+		#generic
+		research_speed_factor = 0.05
+		oldorder_drift = 0.01
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		experience_gain_army_factor = 0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#ALI
+	# 魔界之神
+	ALI_mo_jie_zhi_shen = {
+		random = no
+
+		research_speed_factor = 0.1
+		surrender_limit = 0.2
+		offensive_war_stability_factor = 0.1
+		war_support_weekly_factor = 0.1
+		drift_defence_factor = 0.5
+		oldorder_drift = 0.02
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		breakthrough_factor = 0.1
+
 		ai_will_do = {
 			factor = -5
 		}

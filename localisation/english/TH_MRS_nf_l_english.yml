@@ -1,7 +1,7 @@
 ﻿l_english:
 # 政治线 political
 MRS_zhao_kai_mo_nv_da_hui:0 "召开魔女大会"
-MRS_zhao_kai_mo_nv_da_hui_desc:0 ""
+MRS_zhao_kai_mo_nv_da_hui_desc:0 "随着我们在复权战争中的失败，魔法森林表面上的团结岌岌可危。不仅如此，对魔理沙能否继续胜任大魔女之位的质疑也此起彼伏。在这一次的魔女大会上，我们会决定下一位大魔女的最佳人选，也随之决定魔法森林未来的命运..."
 # 激进线 radicals
 MRS_da_mo_nv_cheng_mei:0 "大魔女成美"
 MRS_da_mo_nv_cheng_mei_desc:0 ""
@@ -148,18 +148,6 @@ MRS_xin_ji_shu_desc:0 ""
 # 内战 civil war
 mrs_nei_zhan_re_qing_idea:0 "内战热情"
 mrs_nei_zhan_re_qing_idea_desc:0 ""
-mrs_ren_ou_de_xie_zhu_a_idea:0 "人偶的协助"
-mrs_ren_ou_de_xie_zhu_a_idea_desc:0 ""
-mrs_ren_ou_de_xie_zhu_b_idea:0 "人偶的协助"
-mrs_ren_ou_de_xie_zhu_b_idea_desc:0 ""
-mrs_ren_ou_de_xie_zhu_c_idea:0 "人偶的协助"
-mrs_ren_ou_de_xie_zhu_c_idea_desc:0 ""
-mrs_huai_rou_zheng_ce_idea:0 "怀柔政策"
-mrs_huai_rou_zheng_ce_idea_desc:0 ""
-mrs_xuan_chuan_gong_shi_idea:0 "宣传攻势"
-mrs_xuan_chuan_gong_shi_idea_desc:0 ""
-mrs_yao_guai_de_zhan_dou_li_idea:0 "妖怪的战斗力"
-mrs_yao_guai_de_zhan_dou_li_idea_desc:0 ""
 mrs_shi_bai_de_zui_zhong_gong_shi_idea:0 "失败的最终攻势"
 mrs_shi_bai_de_zui_zhong_gong_shi_idea_desc:0 ""
 mrs_fan_dui_zhe_di_kang_yun_dong_idea:0 "反对者抵抗运动"
@@ -270,24 +258,6 @@ MRS_integrate_NRM_tt:0 "§G吞并魔法之森联合体并获得其所有将领§
 MRS_integrate_ALI_tt:0 "§G吞并人偶师协会并获得其所有将领§!"
 MRS_integrate_MRS_tt:0 "§G吞并魔女联盟并获得其所有将领§!"
 
-MRS_liangchangeliya_tt:0 "§Y工兵支援连突破+50%，防御+50%，对要塞攻击+50%。§!\n"
-MRS_defend_via_terrain_tt:0 "将会解锁利§Y地形§!建立§G防御设施§!的决议，但是这些决议需要我们付出相应的§R民用工厂§!。"
-MRS_phrase_our_achievements_tt:0 "根据之前选择的§Y工业化路线§!不同将会获得不同的奖励。"
-MRS_knowledge_sharing_tt:0 "将会解锁§G分享知识§!的§Y决议§!，但是§Y决议§!的内容，也即可以分享的知识，和我们当前的§R理念§!有直接关系！"
-MRS_xunlianailisi_tt:0 "有爱丽丝作为将领。"
-MRS_zhenzhengmofashi_tt:0 "把纯正魔法使的利益第一位。"
-MRS_duozhongzudatong_tt:0 "支持绝大部分种族的利益。"
-MRS_tongqingruozhe_tt:0 "把魔法使种族的利益靠后。"
-MRS_jingguanqibian_tt:0 "没有明显倾向。"
-MRS_mojiehua_tt:0 "不得不靠着爱丽丝与魔界的关系来救场。"
-MRS_neiluan_tt:0 "内乱已开始"
-MRS_neiluan_tt2:0 "内乱规模太大了"
-MRS_yixiangbudao_tt:0 "未曾设想的解决方案"
-MRS_kuozhanshengcunkongjian_tt:0 "§Y将你当前拥有的非魔法使地块转化为魔法使，同时该地块额外增加150人口。§!"
-MRS_quganshaoshuzuyi_tt:0 "§Y将你当前拥有的非魔法使地块转化为魔法使，并马上拥有核心，但该地块额外减少50人口。§!"
-MRS_jiechurenleideshufu_tt:0 "§Y上白泽慧音会下台。§!"
-MRS_weidadezuguoweidademolisha_tt:0 "完成前置国策中的两个以上。"
-
  #decision
 # 内战决议组
 MRS_mo_fa_zhi_sen_nei_zhan:0 "魔法之森内战"
@@ -317,6 +287,8 @@ MRS_mo_fa_zhi_sen_chong_jian:0 "魔法之森重建"
 MRS_mo_fa_zhi_sen_chong_jian_desc:0 ""
 MRS_xue_ruo_fan_dui_pai:0 "削弱反对派"
 MRS_xue_ruo_fan_dui_pai_desc:0 ""
+MRS_tuo_yan_TKM:0 "拖延[TKM.GetName]"
+MRS_tuo_yan_TKM_desc:0 "[TKM.GetName]正在筹划一场针对我们的战争，而我们还远没有做好准备。通过一些特殊的手段，我们能够拖延[TKM.GetName]的宣战事件。不过，恐怕我们只有这一次机会了。"
 MRS_zhen_ya_di_kang:0 "镇压抵抗"
 MRS_zhen_ya_di_kang_desc:0 ""
 MRS_zeng_jin_he_zuo:0 "增进合作"
@@ -337,16 +309,13 @@ MRS_mo_fa_zhi_sen_zai_tong_yi_desc:0 ""
  MRS_jicheng_tt:0 "你会变成[MRS.GetFlag][MRS.GetName]"
 
 # flag
+MRS_victory_in_MSD_war_flag:0 "在兽道战争中胜利"
 MRS_civil_war_prepare_flag:0 "魔法森林陷入对峙"
 MRS_civil_war_flag:0 "魔法之森内战爆发"
 MRS_civil_war_end_flag:0 "魔法之森内战结束"
 MRS_civil_war_avoided_flag:0 "避免了魔法之森内战"
 
  #other
- changing_effect2:0 "§Y效果会因外界情况的变化而变化。§!\n"
- MRS_liangchangeliya_tech:0 "量产歌莉娅"
- MRS_geming:0 "魔法使革命会"
- 
  MRS_Kemonomichi_war_idea_1:0 "兽道战争"
  MRS_Kemonomichi_war_idea_1_desc:0 "[MSD.GetLeader]为了拿下与魔法使的争议领土把餐车都抵押了，其他兽道妖怪亦做了类似的事情，如果不能早日结束战争内部恐怕会出现问题。"
 

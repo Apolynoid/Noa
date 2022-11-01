@@ -1,0 +1,164 @@
+﻿add_namespace = nrm
+##########事件###########
+
+# SEJ NRM请求加入同盟
+country_event = {
+	id = nrm.101
+	title = nrm.101.t
+	desc = nrm.101.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.101.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = NRM
+		}
+	}
+
+	option = {
+		name = nrm.101.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NRM = {
+				country_event = nrm.104
+			}
+		}
+	}
+}
+
+# CIR NRM请求加入同盟
+country_event = {
+	id = nrm.102
+	title = nrm.102.t
+	desc = nrm.102.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.102.1
+		ai_chance = {
+			base = 10
+		}
+		CIR = {
+			add_to_faction = NRM
+		}
+	}
+
+	option = {
+		name = nrm.102.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NRM = {
+				country_event = nrm.105
+			}
+		}
+	}
+}
+
+# TKM NRM请求加入同盟
+country_event = {
+	id = nrm.103
+	title = nrm.103.t
+	desc = nrm.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.103.1
+		ai_chance = {
+			base = 10
+		}
+		TKM = {
+			add_to_faction = NRM
+		}
+	}
+
+	option = {
+		name = nrm.103.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NRM = {
+				country_event = nrm.106
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = nrm.104
+	title = nrm.104.t
+	desc = nrm.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.104.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = NRM_jia_ru_ge_ming_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = NRM_du_li_zi_zhu
+		}
+	}
+}
+
+# CIR 请求被拒绝
+country_event = {
+	id = nrm.105
+	title = nrm.105.t
+	desc = nrm.105.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.105.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = NRM_jia_ru_ge_ming_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = NRM_du_li_zi_zhu
+		}
+	}
+}
+
+# TKM 请求被拒绝
+country_event = {
+	id = nrm.106
+	title = nrm.106.t
+	desc = nrm.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nrm.106.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = NRM_yu_jiu_shi_jiu_jie_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = NRM_du_li_zi_zhu
+		}
+	}
+}

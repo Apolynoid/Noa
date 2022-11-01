@@ -68,81 +68,7 @@ ideas = {
         has_global_flag = MRS_civil_war_end_flag
       }
       modifier = {
-        army_core_defence_factor = 0.3
         army_org_factor = 0.1
-        org_loss_at_low_org_factor = -0.2
-      }
-    }
-
-    # 人偶的协助 生产
-    mrs_ren_ou_de_xie_zhu_a_idea = {
-      picture = unknown
-      modifier = {
-        production_factory_efficiency_gain_factor = 0.1
-        production_factory_max_efficiency_factor = 0.1
-        production_factory_start_efficiency_factor = 0.1
-        industrial_capacity_factory = 0.2
-      }
-    }
-
-    # 人偶的协助 战斗
-    mrs_ren_ou_de_xie_zhu_b_idea = {
-      picture = unknown
-      modifier = {
-        army_attack_factor = 0.1
-        army_defence_factor = 0.1
-        breakthrough_factor = 0.1
-        weekly_manpower = 2
-      }
-    }
-
-    # 人偶的协助 综合
-    mrs_ren_ou_de_xie_zhu_c_idea = {
-      picture = unknown
-      modifier = {
-        production_factory_efficiency_gain_factor = 0.1
-        production_factory_max_efficiency_factor = 0.1
-        production_factory_start_efficiency_factor = 0.1
-        industrial_capacity_factory = 0.2
-        army_attack_factor = 0.1
-        army_defence_factor = 0.1
-        breakthrough_factor = 0.1
-        weekly_manpower = 2
-      }
-    }
-
-    # 怀柔政策
-    mrs_huai_rou_zheng_ce_idea = {
-      picture = unknown
-      modifier = {
-        ST_race_penalty_all_factor = -0.3
-        political_power_cost = 0.05
-      }
-    }
-
-    # 宣传攻势
-    mrs_xuan_chuan_gong_shi_idea = {
-      picture = unknown
-      cancel = {
-        has_global_flag = MRS_civil_war_end_flag
-      }
-      modifier = {
-        monthly_population = -0.05
-        stability_factor = -0.05
-        war_support_factor = -0.05
-        army_attack_factor = -0.05
-        army_morale_factor = -0.05
-        qinwai_drift = 0.03
-      }
-    }
-
-    # 妖怪的战斗力
-    mrs_yao_guai_de_zhan_dou_li_idea = {
-      picture = unknown
-      modifier = {
-        army_attack_factor = 0.1
-        army_defence_factor = 0.1
-        breakthrough_factor = 0.1
       }
     }
 
@@ -175,11 +101,11 @@ ideas = {
         monthly_population = -0.1
         research_speed_factor = -0.1
         party_popularity_stability_factor = -0.3
-        political_power_factor = -0.4
-        stability_factor = -0.2
-        war_support_factor = -0.4
-        production_speed_buildings_factor = -0.3
-        required_garrison_factor = 0.3
+        political_power_factor = -0.2
+        stability_factor = -0.1
+        war_support_factor = -0.2
+        production_speed_buildings_factor = -0.1
+        required_garrison_factor = 0.1
       }
     }
 
@@ -190,7 +116,6 @@ ideas = {
         monthly_population = -0.05
         party_popularity_stability_factor = -0.1
         political_power_factor = -0.05
-        required_garrison_factor = 0.1
       }
     }
 
@@ -910,98 +835,6 @@ ideas = {
 	    	}
 	    }
 	    
-	    
-	    
-	    
-	    
-	    MRS_yichumolisha_idea = {
-
-			picture = officers_purged
-
-	    	modifier = {
-	    		stability_weekly = 0.003
-	    		war_support_weekly = 0.001
-	    	}
-	    }
-	    MRS_tongyiyaojing_idea = {
-
-			picture = FRA_motorized_focus
-
-	    	modifier = {
-	    		supply_consumption_factor = -0.1
-	    	}
-	    }
-	    MRS_tongyifusangshen_idea = {
-
-			picture = great_depression
-
-	    	modifier = {
-	    		political_power_factor = -0.08
-	    	}
-	    }
-	    MRS_tongyifusangshen2_idea = {
-
-			picture = generic_production_bonus
-
-	    	modifier = {
-
-	    		line_change_production_efficiency_factor = 0.1
-	    	}
-	    	research_bonus = {
-	    		military = 0.01
-	    	}
-	    }
-	    MRS_feichangtongyifusangshen_idea = {
-
-			picture = great_depression
-
-	    	modifier = {
-	    		political_power_factor = -0.1
-	    		line_change_production_efficiency_factor = -0.15
-	    	}
-	    	research_bonus = {
-	    		military = -0.05
-	    	}
-	    }
-	    MRS_tongyiyaoguai_idea = {
-
-			picture = great_depression
-
-	    	modifier = {
-	    		political_power_factor = -0.08
-	    	}
-	    }
-	    MRS_tongyiyaoguai2_idea = {
-
-			picture = FRA_army_of_aggression_focus
-
-	    	modifier = {
-	    		conscription = 0.005
-	    		land_night_attack = 0.1
-	    	}
-	    }
-	    MRS_tongyimofashi_idea = {
-
-		    picture = imperial_glory_idea
-
-	    	modifier = {
-	    		conscription = 0.015
-	    		political_power_gain = 0.05
-	    	}
-	    	research_bonus = {
-	    		magic = -0.03
-	    		military = 0.05
-	    		civil = 0.02
-	    	}
-	    }
-	    MRS_feichangtongyimofashi_idea = {
-
-			picture = great_depression
-
-	    	modifier = {
-	    		research_speed_factor = -0.1
-	    	}
-	    }
 	    MRS_neiluanhuanchong_idea = {
 
 			picture = sour_loser
@@ -1048,51 +881,6 @@ ideas = {
 
 	    	modifier = {
 	    		research_speed_factor = 0.4
-	    	}
-	    }
-	    MRS_mofashizhiye_idea = {
-
-			picture = generic_purge
-
-	    	modifier = {
-	    		political_power_factor = 0.35
-	    		manufacturer_cost_factor = 0.5
-	    	}
-	    }
-	    MRS_mofashifuchouzhuyi_idea = {
-
-			picture = warrior_traditions_idea
-
-	    	modifier = {
-	    		training_time_factor = -0.15
-	    		conscription = 0.08
-	    	}
-	    }
-	    MRS_weidadezuguoweidademolisha_idea = {
-
-	    	picture = vittoria_mutilata
-
-			modifier = {
-	    		offensive_war_stability_factor = 0.2
-				defensive_war_stability_factor = 0.2
-	    	}
-	    }
-	    MRS_fusangshenshiyongfangan_idea = {
-
-	    	picture = generic_acquire_tanks
-
-	    	targeted_modifier = {
-	    		tag = TKM
-	    		attack_bonus_against = 0.1
-	    		defense_bonus_against = 0.1
-	    	}
-	    }
-	    MRS_mofashidemofasenlin_idea = {
-
-	    	picture = prc_low_popular_support3
-
-	    	modifier = {
-	    		monthly_population = 0.15
 	    	}
 	    }
       ### New ideas
@@ -1232,116 +1020,6 @@ ideas = {
 	    	}
       }
       
-      
-      MRS_an_accurate_map_of_forest_idea = {
-        picture = CZE_planning_bonus
-        name = MRS_an_accurate_map_of_forest
-	    	modifier = {
-	    		army_core_attack_factor = 0.05
-          army_core_defence_factor = 0.10
-          global_building_slots_factor = 0.20
-          enemy_operative_detection_chance_factor = 0.20
-          enemy_operative_capture_chance_factor = 0.20
-	    	}
-      }
-      
-      MRS_flare_bomb_idea = {
-        picture = generic_acquire_tanks
-        name = MRS_flare_bomb
-	    	modifier = {
-          land_night_attack = 0.25
-          recon_factor = 0.15
-          air_superiority_bonus_in_combat = -0.15
-          political_power_cost = 0.15
-	    	}
-        targeted_modifier = {
-          tag = SEJ
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.05
-        }
-        targeted_modifier = {
-          tag = RMI
-          attack_bonus_against = 0.20
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = NIB
-          attack_bonus_against = 0.15
-          defense_bonus_against = 0.05
-        }
-        targeted_modifier = {
-          tag = MYK
-          attack_bonus_against = 0.15
-          defense_bonus_against = 0.05
-        }
-      }
-
-      MRS_barrage_idea = {
-        picture = generic_acquire_tanks
-        name = MRS_barrage
-	    	modifier = {
-	    		breakthrough_factor = 0.10
-          attrition = 0.10
-          experience_gain_army_factor = -0.10
-          political_power_cost = 0.15
-	    	}
-        targeted_modifier = {
-          tag = CIR
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = MFA
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = SGS
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = UFA
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = CLO
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.10
-        }
-      }
-
-      MRS_Resonace_jamming_idea = {
-        picture = generic_acquire_tanks
-        name = MRS_Resonace_jamming
-	    	modifier = {
-          industrial_capacity_factory = -0.10
-          equipment_capture_factor = -0.25
-          political_power_cost = 0.15
-	    	}
-        targeted_modifier = {
-          tag = TKM
-          attack_bonus_against = 0.15
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = MTM
-          attack_bonus_against = 0.15
-          defense_bonus_against = 0.10
-        }
-        targeted_modifier = {
-          tag = ALI
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.05
-        }
-        targeted_modifier = {
-          tag = MEL
-          attack_bonus_against = 0.10
-          defense_bonus_against = 0.05
-        }  
-      }
-
       MRS_multirace_transportation_tongyiyaojing_idea = {
         name = MRS_Multi_race_transportation
         picture = FRA_motorized_focus
@@ -1361,56 +1039,6 @@ ideas = {
           production_speed_infrastructure_factor = 0.05
 	    	}
 	    }
-      
-      MRS_Establish_Literature_Center_idea = {
-        picture = jap_supremacy_of_technology
-        name = MRS_Literature_Center
-	    	modifier = {
-	    		research_speed_factor = 0.05
-	    	}
-      }
-      
-      MRS_Establish_Literature_Center_2_idea = {
-        picture = jap_supremacy_of_technology
-        name = MRS_Literature_Center
-	    	modifier = {
-	    		research_speed_factor = 0.075
-          stability_factor =  0.025
-          experience_gain_army_factor = 0.05
-	    	}
-      }
-      
-      MRS_Establish_Literature_Center_3_idea = {
-        picture = jap_supremacy_of_technology
-        name = MRS_Literature_Center
-	    	modifier = {
-	    		research_speed_factor = 0.10
-          stability_factor =  0.025
-          experience_gain_army_factor = 0.075
-	    	}
-      }
-      
-      MRS_Establish_Literature_Center_4_idea = {
-        picture = jap_supremacy_of_technology
-        name = MRS_Literature_Center
-	    	modifier = {
-	    		research_speed_factor = 0.10
-          stability_factor =  0.05
-          experience_gain_army_factor = 0.10
-	    	}
-      }
-      
-      MRS_Establish_Literature_Center_5_idea = {
-        picture = jap_supremacy_of_technology
-        name = MRS_Literature_Center
-	    	modifier = {
-	    		research_speed_factor = 0.10
-          stability_factor =  0.05
-          experience_gain_army_factor = 0.10
-          army_leader_start_logistics_level = 1
-          army_leader_start_planning_level = 1
-	    	}
-      }
       
       MRS_expenditure_increase = {
         name = MRS_expenditure_increase
@@ -1478,191 +1106,7 @@ ideas = {
         }
         
 	    }
-      
-      
-      MRS_shared_knowledge_building = {
-	    	picture = generic_research_bonus
-          allowed = {
-          always = no
-        }
 
-        available = {
-
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-    
-        modifier = {
-          production_speed_industrial_complex_factor = 0.05
-          production_speed_arms_factory_factor = 0.05
-        }
-        research_bonus = {
-          build = 0.30
-        }
-	    }
-      
-      MRS_shared_knowledge_race = {
-	    	picture = generic_research_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-
-        research_bonus = {
-          race = 0.30
-        }
-	    }
-      
-      MRS_shared_knowledge_race_permanent_neworder = {
-        name = MRS_shared_knowledge_race_permanent
-	    	picture = generic_fascism_drift_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-          is_subject = no
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          stability_factor = 0.10
-          neworder_drift = 0.10
-        }
-        
-	    }
-      
-      MRS_shared_knowledge_race_permanent_radicalist = {
-        name = MRS_shared_knowledge_race_permanent
-	    	picture = generic_communism_drift_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-          is_subject = no
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          stability_factor = 0.10
-          fandong_drift = 0.10
-        }
-        
-	    }
-      
-      MRS_share_our_knowledge_fairy_forging_idea = {
-	    	picture = generic_research_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-          is_subject = no
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          production_factory_max_efficiency_factor = 0.05
-          production_factory_start_efficiency_factor = 0.05
-        }
-        
-        research_bonus = {
-          fuzhu = 0.10
-        }
-        
-      }
-      
-      MRS_share_our_knowledge_tsukumo_materials_idea = {
-	    	picture = generic_research_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-          
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          production_speed_arms_factory_factor = 0.05
-        }
-        
-        equipment_bonus = {
-	    		magic_core_a = {
-	    			instant = yes
-	    			reliability = 0.10
-	    		}
-	    		magic_energy_a = {
-	    			instant = yes
-	    			reliability = 0.10
-	    		}
-	    		magic_focus_a = {
-	    			instant = yes
-	    			reliability = 0.10
-	    		}
-	    	}
-        
-        research_bonus = {
-          melee = 0.10
-          primary_weapons = 0.10
-        }
-      }
-      
-      MRS_share_our_knowledge_tsukumo_materials_2_idea = {
-        name = MRS_share_our_knowledge_tsukumo_materials_idea
-	    	picture = generic_research_bonus
-          allowed = {
-          always = no
-        }
-
-        available = {
-          
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          production_speed_arms_factory_factor = 0.10
-        }
-        
-        research_bonus = {
-          melee = 0.20
-          artillery_tech = 0.20
-          primary_weapons = 0.15
-        }
-      
-      }
       MRS_Elite_Divisions_idea = {
         name = MRS_Elite_Divisions
 	    	picture = air_war_plans_division_focus
@@ -1684,83 +1128,6 @@ ideas = {
 				  special_forces_cap = 0.03
           special_forces_no_supply_grace = 120
           special_forces_out_of_supply_factor = -0.25
-        }
-      }
-      
-      MRS_enemies_in_all_direction_idea = {
-        name = MRS_enemies_in_all_direction
-	    	picture = generic_intel_bonus
-        allowed = {
-          always = no
-        }
-
-        available = {
-          
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          planning_speed = 0.15
-          max_dig_in_factor = 0.15
-          pocket_penalty = -0.15
-        }
-      }
-      
-      MRS_enemies_in_all_direction_partisan_idea = {
-        name = MRS_enemies_in_all_direction
-	    	picture = generic_intel_bonus
-        allowed = {
-          always = no
-        }
-
-        available = {
-          
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          recon_factor_while_entrenched = 0.20
-          terrain_penalty_reduction = 0.20
-          cas_damage_reduction = 0.20
-          attrition = -0.10
-          planning_speed = 0.10
-          max_dig_in_factor = 0.20
-          pocket_penalty = -0.15
-        }
-      }
-      
-      MRS_enemies_in_all_direction_mobile_idea = {
-        name = MRS_enemies_in_all_direction
-	    	picture = generic_intel_bonus
-        allowed = {
-          always = no
-        }
-
-        available = {
-          
-        }
-
-        allowed_civil_war = {
-        }
-        
-        removal_cost = -1
-        
-        modifier = {
-          recon_factor = 0.10
-          org_loss_when_moving = -0.15
-          supply_consumption_factor = -0.15
-          terrain_penalty_reduction = 0.15
-          planning_speed = 0.25
-          max_dig_in_factor = 0.15
-          pocket_penalty = -0.15
         }
       }
       
@@ -1979,7 +1346,7 @@ ideas = {
 
 		MRS_Kemonomichi_war_idea_1 = {
 
-			picture = sour_loser
+			picture = MSD_war
 
 	    allowed = {
 				always = no
@@ -2041,7 +1408,7 @@ ideas = {
 
 		MRS_Kemonomichi_war_idea_2 = {
 
-			picture = sour_loser
+			picture = MSD_war
 
 	    allowed = {
 				always = no
@@ -2069,175 +1436,12 @@ ideas = {
 			}
 
 		}
-
-		MRS_ai_war_idea_1 = {
-
-			picture = sour_loser
-
-	    allowed = {
-				always = no
-			}
-
-			available = {
-				is_ai = yes
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = MYK
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.30
-			}
-
-			targeted_modifier = {
-				tag = MFA
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.30
-			}
-
-			targeted_modifier = {
-				tag = MTM
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.30
-			}
-
-			modifier = {
-		    attrition = -0.50
-	      industrial_capacity_factory = 0.30
-			}
-
-		}
-
-		MRS_civil_war_idea_1 = {
-
-			picture = sour_loser
-
-	    allowed = {
-				always = no
-			}
-
-			available = {
-				is_ai = no
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = MYK
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-
-			targeted_modifier = {
-				tag = MFA
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-
-			targeted_modifier = {
-				tag = MTM
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-
-			modifier = {
-		    attrition = -0.20
-	      industrial_capacity_factory = 0.10
-			}
-
-		}
- 
-		MRS_ai_war_idea_2 = {
-
-			picture = sour_loser
-
-	    allowed = {
-				always = no
-			}
-
-			available = {
-				is_ai = yes
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = MRS
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.30
-			}
-
-			modifier = {
-
-			}
-
-		}
- 
-		MRS_civil_war_idea_2 = {
-
-			picture = sour_loser
-
-	    allowed = {
-				always = no
-			}
-
-			available = {
-				is_ai = no
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-
-			targeted_modifier = {
-				tag = MRS
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-
-			modifier = {
-
-			}
-
-		} 
-    MRS_gaoguiderenleizhongzu_idea = {
-      name = MRS_gaoguiderenleizhongzu
-      picture = generic_fascism_drift_bonus
-      modifier = {
-        CO_auto_core_Human = 1
-        CO_auto_core_Magician = 1
-      }
-    }
+    
     MRS_pingxineiluan_idea = {
       name = MRS_pingxineiluan
       picture = officers_purged
       modifier = {
         LS_subject_level_low_time_factor = -0.5
-      }
-    }
-    MRS_duozhongzudatong_idea = {
-      name = MRS_duozhongzudatong
-      picture = generic_democratic_drift_bonus
-      modifier = {
-        LS_subject_level_low_pp_cost = -0.3
-      }
-    }
-    MRS_quelimofashideningjuli_idea = {
-      name = MRS_quelimofashideningjuli
-      picture = spa_duty_to_work
-      modifier = {
-        EXHC_increase_period_factor = 0.1
       }
     }
     MRS_zhunbeigeming_idea = {

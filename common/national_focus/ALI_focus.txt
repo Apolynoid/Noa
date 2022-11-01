@@ -9,7 +9,7 @@ focus_tree = {
 		}
 	}
 
-  continuous_focus_position = { x = 50 y = 1800 }
+  continuous_focus_position = { x = 50 y = 2200 }
 
   shared_focus = MRS_jun_shi_dong_yuan
   shared_focus = MRS_jian_she_mo_fa_zhi_sen
@@ -33,8 +33,8 @@ focus_tree = {
     id = ALI_fan_kang_bao_zheng
     icon = ALI_focus_fight_against_tyranny
     cost = 7
-    x = 16
-    y = 0
+    x = 8
+    y = 1
 
     available ={
       has_global_flag = main_scenario
@@ -92,15 +92,15 @@ focus_tree = {
     completion_reward = {
       if = {
         limit = {
-          has_idea = mrs_ren_ou_de_xie_zhu_b_idea
+          has_idea = ali_ren_ou_de_xie_zhu_b_idea
         }
         swap_ideas = {
-          remove_idea = mrs_ren_ou_de_xie_zhu_b_idea
-          add_idea = mrs_ren_ou_de_xie_zhu_c_idea
+          remove_idea = ali_ren_ou_de_xie_zhu_b_idea
+          add_idea = ali_ren_ou_de_xie_zhu_c_idea
         }
       }
       else = {
-        add_ideas = mrs_ren_ou_de_xie_zhu_a_idea
+        add_ideas = ali_ren_ou_de_xie_zhu_a_idea
       }
     }
     ai_will_do = {
@@ -126,7 +126,7 @@ focus_tree = {
       every_controlled_state = {
         add_compliance = 30
       }
-      add_ideas = mrs_huai_rou_zheng_ce_idea
+      add_ideas = ali_huai_rou_zheng_ce_idea
     }
     ai_will_do = {
       factor = 1
@@ -150,15 +150,15 @@ focus_tree = {
     completion_reward = {
       if = {
         limit = {
-          has_idea = mrs_ren_ou_de_xie_zhu_a_idea
+          has_idea = ali_ren_ou_de_xie_zhu_a_idea
         }
         swap_ideas = {
-          remove_idea = mrs_ren_ou_de_xie_zhu_a_idea
-          add_idea = mrs_ren_ou_de_xie_zhu_c_idea
+          remove_idea = ali_ren_ou_de_xie_zhu_a_idea
+          add_idea = ali_ren_ou_de_xie_zhu_c_idea
         }
       }
       else = {
-        add_ideas = mrs_ren_ou_de_xie_zhu_b_idea
+        add_ideas = ali_ren_ou_de_xie_zhu_b_idea
       }
     }
     ai_will_do = {
@@ -221,4 +221,1102 @@ focus_tree = {
       factor = 1
     }
   }
+
+  # 从内战中恢复
+  focus = {
+    id = ALI_cong_nei_zhan_zhong_hui_fu
+    icon = unknown
+    cost = 7
+    x = -4
+    y = 1
+
+    relative_position_id = ALI_xiang_sheng_li_jin_jun
+
+    available = {
+      has_global_flag = MRS_civil_war_end_flag
+      NOT = {
+        is_puppet = yes
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_xiang_sheng_li_jin_jun
+    }
+
+    mutually_exclusive = {
+      focus = ALI_mo_jie_hua
+    }
+
+    completion_reward = {
+      add_political_power = 150
+      add_popularity = {
+        ideology = qinwai
+        popularity = 0.3
+      }
+      add_ideas = Town
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 人偶工坊扩大化
+  focus = {
+    id = ALI_ren_ou_gong_fang_kuo_da_hua
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_cong_nei_zhan_zhong_hui_fu
+
+    prerequisite = {
+      focus = ALI_cong_nei_zhan_zhong_hui_fu
+    }
+
+    completion_reward = {
+      add_ideas = ali_ren_ou_gong_fang_kuo_da_hua_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军用人偶编制化
+  focus = {
+    id = ALI_jun_yong_ren_ou_bian_zhi_hua
+    icon = unknown
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_ren_ou_gong_fang_kuo_da_hua
+
+    prerequisite = {
+      focus = ALI_ren_ou_gong_fang_kuo_da_hua
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_tech = core_shield1
+        }
+        add_tech_bonus = {
+          bonus = 1
+          ahead_reduction = 2.0
+          uses = 1
+          category = sf_force
+        }
+      }
+      else = {
+        set_technology = {
+          core_shield1 = 1
+        }
+      }
+      if = {
+        limit = {
+          has_tech = zhanshujiejiehexin1
+        }
+        add_tech_bonus = {
+          bonus = 1
+          ahead_reduction = 2.0
+          uses = 1
+          category = heavy
+        }
+      }
+      else = {
+        set_technology = {
+          zhanshujiejiehexin1 = 1
+        }
+      }
+      custom_effect_tooltip = ALI_military_dolls_tt
+      hidden_effect = {
+        load_oob = "ALI_military_dolls"
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 大规模重建
+  focus = {
+    id = ALI_da_gui_mo_chong_jian
+    icon = unknown
+    cost = 12
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_cong_nei_zhan_zhong_hui_fu
+
+    prerequisite = {
+      focus = ALI_cong_nei_zhan_zhong_hui_fu
+    }
+
+    completion_reward = {
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = industrial_complex
+          level = 3
+          instant_build = yes
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 资助中小企业
+  focus = {
+    id = ALI_zi_zhu_zhong_xiao_qi_ye
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_da_gui_mo_chong_jian
+
+    prerequisite = {
+      focus = ALI_da_gui_mo_chong_jian
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_fa_zhi_sen_zhong_xiao_qi_ye_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 人偶用于宣传
+  focus = {
+    id = ALI_ren_ou_yong_yu_xuan_chuan
+    icon = unknown
+    cost = 3
+    x = 0
+    y = 3
+
+    relative_position_id = ALI_cong_nei_zhan_zhong_hui_fu
+
+    prerequisite = {
+      focus = ALI_jun_yong_ren_ou_bian_zhi_hua
+    }
+
+    prerequisite = {
+      focus = ALI_zi_zhu_zhong_xiao_qi_ye
+    }
+
+    completion_reward = {
+      add_ideas = ali_ren_ou_yong_yu_xuan_chuan_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 战争宣传
+  focus = {
+    id = ALI_zhan_zheng_xuan_chuan
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_ren_ou_yong_yu_xuan_chuan
+
+    prerequisite = {
+      focus = ALI_ren_ou_yong_yu_xuan_chuan
+    }
+
+    mutually_exclusive = {
+      focus = ALI_he_ping_xuan_chuan
+    }
+
+    completion_reward = {
+      add_war_support = 0.2
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 和平宣传
+  focus = {
+    id = ALI_he_ping_xuan_chuan
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_ren_ou_yong_yu_xuan_chuan
+
+    prerequisite = {
+      focus = ALI_ren_ou_yong_yu_xuan_chuan
+    }
+
+    mutually_exclusive = {
+      focus = ALI_zhan_zheng_xuan_chuan
+    }
+
+    completion_reward = {
+      add_stability = 0.2
+      add_war_support = -0.05
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法森林自卫能力
+  focus = {
+    id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = ALI_ren_ou_yong_yu_xuan_chuan
+
+    prerequisite = {
+      focus = ALI_zhan_zheng_xuan_chuan
+      focus = ALI_he_ping_xuan_chuan
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_fa_zhi_sen_zi_wei_neng_li_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 警惕绯红恶魔
+  focus = {
+    id = ALI_jing_ti_fei_hong_e_mo
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    bypass = {
+      SCA = {
+        OR = {
+          exists = no
+          is_puppet = yes
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_mo_fa_sen_lin_zi_wei_neng_li
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_SEJ_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_SEJ_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_all_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_TKM_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SEJ_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SEJ_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_SEJ_idea
+        }
+      }
+      else = 
+      {
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 警惕叛乱者
+  focus = {
+    id = ALI_jing_ti_pan_luan_zhe
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    bypass = {
+      AND = {
+        SEJ = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            has_government = qinwai
+          }
+        }
+        CIR = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            has_government = qinwai
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_mo_fa_sen_lin_zi_wei_neng_li
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_TKM_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_TKM_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_all_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_SEJ_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_SEJ_idea
+        }
+      }
+      else = 
+      {
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SEJ_idea
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 警惕魔法道具
+  focus = {
+    id = ALI_jing_ti_mo_fa_dao_ju
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    bypass = {
+      TKM = {
+        OR = {
+          exists = no
+          is_puppet = yes
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_mo_fa_sen_lin_zi_wei_neng_li
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_SEJ_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_SEJ_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_all_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_TKM_idea
+        }
+      }
+      else_if = {
+        limit = {
+          has_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SEJ_idea
+        }
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_SEJ_idea
+        }
+      }
+      else = 
+      {
+        swap_ideas = {
+          remove_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_idea
+          add_idea = ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗结盟
+  focus = {
+    id = ALI_yu_tian_gou_jie_meng
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 2
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    available = {
+      TEG = {
+        AND = {
+          exists = yes
+          is_puppet = no
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_jing_ti_fei_hong_e_mo
+    }
+
+    prerequisite = {
+      focus = ALI_jing_ti_pan_luan_zhe
+    }
+
+    prerequisite = {
+      focus = ALI_jing_ti_mo_fa_dao_ju
+    }
+
+    mutually_exclusive = {
+      focus = ALI_you_hao_er_du_li
+    }
+
+    completion_reward = {
+      TEG = {
+        country_event = ali.103
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 妖怪山经济援助
+  focus = {
+    id = ALI_yao_guai_shan_jing_ji_yuan_zhu
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_yu_tian_gou_jie_meng
+
+    prerequisite = {
+      focus = ALI_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      add_timed_idea = {
+        idea = ali_tian_gou_de_jing_ji_yuan_zhu_idea
+        days = 365
+      }
+      hidden_effect = {
+        TEG = {
+          add_timed_idea = {
+            idea = ali_yuan_zhu_mo_fa_zhi_sen_idea
+            days = 365
+          }
+          country_event = ali.105
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 友好而独立
+  focus = {
+    id = ALI_you_hao_er_du_li
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 2
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    prerequisite = {
+      focus = ALI_jing_ti_fei_hong_e_mo
+    }
+
+    prerequisite = {
+      focus = ALI_jing_ti_pan_luan_zhe
+    }
+
+    prerequisite = {
+      focus = ALI_jing_ti_mo_fa_dao_ju
+    }
+
+    mutually_exclusive = {
+      focus = ALI_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 自力更生
+  focus = {
+    id = ALI_zi_li_geng_sheng
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_you_hao_er_du_li
+
+    prerequisite = {
+      focus = ALI_you_hao_er_du_li
+    }
+
+    completion_reward = {
+      add_ideas = ali_zi_li_geng_sheng_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法之森的新面貌
+  focus = {
+    id = ALI_mo_fa_zhi_sen_de_xin_mian_mao
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = ALI_mo_fa_sen_lin_zi_wei_neng_li
+
+    prerequisite = {
+      focus = ALI_yao_guai_shan_jing_ji_yuan_zhu
+      focus = ALI_zi_li_geng_sheng
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_fa_zhi_sen_de_xin_mian_mao_idea
+      add_ideas = Country
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界化
+  focus = {
+    id = ALI_mo_jie_hua
+    icon = GFX_focus_ALI_mojiehua
+    cost = 7
+    x = 4
+    y = 1
+
+    relative_position_id = ALI_xiang_sheng_li_jin_jun
+
+    available = {
+      has_global_flag = MRS_civil_war_end_flag
+      NOT = {
+        is_puppet = yes
+      }
+      has_country_flag = ALI_mojie
+    }
+
+    prerequisite = {
+      focus = ALI_xiang_sheng_li_jin_jun
+    }
+
+    mutually_exclusive = {
+      focus = ALI_cong_nei_zhan_zhong_hui_fu
+    }
+
+    completion_reward = {
+      add_popularity = {
+        ideology = oldorder
+        popularity = 0.5
+      }
+      add_named_threat = {
+        name = ALI_mo_jie_hua
+        threat = 5
+      }
+      set_politics = {
+        ruling_party = oldorder
+        elections_allowed = no
+      }
+      add_ideas = Town
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 邀请魔界神
+  focus = {
+    id = ALI_yao_qing_mo_jie_shen
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_jie_hua
+
+    prerequisite = {
+      focus = ALI_mo_jie_hua
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = ALI_youkai_character_tt
+      hidden_effect = {
+        XXX = {
+          ALI_ski = {
+              set_nationality = ALI
+          }
+        }
+        XXX = {
+          ALI_yumeko = {
+              set_nationality = ALI
+          }
+        }
+        country_event = ali.101
+      }
+    }
+    
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界移民计划
+  focus = {
+    id = ALI_mo_jie_yi_min_ji_hua
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_yao_qing_mo_jie_shen
+
+    prerequisite = {
+      focus = ALI_yao_qing_mo_jie_shen
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_jie_yi_min_ji_hua_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的知识
+  focus = {
+    id = ALI_mo_jie_de_zhi_shi
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_mo_jie_yi_min_ji_hua
+
+    prerequisite = {
+      focus = ALI_mo_jie_yi_min_ji_hua
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_jie_de_zhi_shi_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的研究能力
+  focus = {
+    id = ALI_mo_jie_de_yan_jiu_neng_li
+    icon = GFX_focus_research2
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_jie_de_zhi_shi
+
+    prerequisite = {
+      focus = ALI_mo_jie_de_zhi_shi
+    }
+
+    completion_reward = {
+      add_research_slot = 1
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的力量
+  focus = {
+    id = ALI_mo_jie_de_li_liang
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_jie_yi_min_ji_hua
+
+    prerequisite = {
+      focus = ALI_mo_jie_yi_min_ji_hua
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_jie_de_li_liang_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的训练系统
+  focus = {
+    id = ALI_mo_jie_de_xun_lian_xi_tong
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_jie_de_li_liang
+
+    prerequisite = {
+      focus = ALI_mo_jie_de_li_liang
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = ali_mo_jie_de_li_liang_idea
+        add_idea = ali_mo_jie_de_xun_lian_xi_tong_idea
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的生产
+  focus = {
+    id = ALI_mo_jie_de_sheng_chan
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_mo_jie_yi_min_ji_hua
+
+    prerequisite = {
+      focus = ALI_mo_jie_yi_min_ji_hua
+    }
+
+    completion_reward = {
+      add_ideas = ali_mo_jie_de_sheng_chan_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔界的建造能力
+  focus = {
+    id = ALI_mo_jie_de_jian_zao_neng_li
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_mo_jie_de_sheng_chan
+
+    prerequisite = {
+      focus = ALI_mo_jie_de_sheng_chan
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = ali_mo_jie_de_sheng_chan_idea
+        add_idea = ali_mo_jie_de_jian_zao_neng_li_idea
+      }
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = arms_factory
+          level = 2
+          instant_build = yes
+        }
+      }
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = industrial_complex
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 征服世界的雄心
+  focus = {
+    id = ALI_zheng_fu_shi_jie_de_xiong_xin
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = ALI_mo_jie_yi_min_ji_hua
+
+    prerequisite = {
+      focus = ALI_mo_jie_de_yan_jiu_neng_li
+    }
+
+    prerequisite = {
+      focus = ALI_mo_jie_de_xun_lian_xi_tong
+    }
+    
+    prerequisite = {
+      focus = ALI_mo_jie_de_jian_zao_neng_li
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = ALI_other_country_embargo_tt
+      custom_effect_tooltip = ALI_long_peace_danger_tt
+      add_war_support = 0.4
+      add_stability = 0.2
+      hidden_effect = {
+        every_country = {
+          if = {
+            limit = {
+              NOT = {
+                is_subject_of = ALI
+              }
+            }
+            send_embargo = ALI
+            add_opinion_modifier = {
+              target = ALI
+              modifier = ALI_ambition_of_conquering_the_world_op
+            }
+          }
+        }
+        news_event = {
+          id = ali.102
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 大规模战争动员
+  focus = {
+    id = ALI_da_gui_mo_zhan_zheng_dong_yuan
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = ALI_zheng_fu_shi_jie_de_xiong_xin
+
+    prerequisite = {
+      focus = ALI_zheng_fu_shi_jie_de_xiong_xin
+    }
+
+    completion_reward = {
+      add_ideas = ali_da_gui_mo_zhan_zheng_dong_yuan_idea
+      add_days_mission_timeout = {
+        mission = ALI_zhu_zhan_pai_bu_man
+        days = 30
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 战争经济体制
+  focus = {
+    id = ALI_zhan_zheng_jing_ji_ti_zhi
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_zheng_fu_shi_jie_de_xiong_xin
+
+    prerequisite = {
+      focus = ALI_zheng_fu_shi_jie_de_xiong_xin
+    }
+
+    completion_reward = {
+      add_ideas = ali_zhan_shi_jing_ji_idea
+      add_days_mission_timeout = {
+        mission = ALI_zhu_zhan_pai_bu_man
+        days = 30
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 对世界战争计划
+  focus = {
+    id = ALI_dui_shi_jie_zhan_zheng_ji_hua
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = ALI_zheng_fu_shi_jie_de_xiong_xin
+
+    prerequisite = {
+      focus = ALI_zheng_fu_shi_jie_de_xiong_xin
+    }
+
+    completion_reward = {
+      unlock_decision_category_tooltip = ALI_zhan_zheng_ji_hua
+      add_days_mission_timeout = {
+        mission = ALI_zhu_zhan_pai_bu_man
+        days = 30
+      }
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 蚕食策略
+  focus = {
+    id = ALI_can_shi_ce_lve
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = ALI_zheng_fu_shi_jie_de_xiong_xin
+
+    prerequisite = {
+      focus = ALI_da_gui_mo_zhan_zheng_dong_yuan
+    }
+
+    prerequisite = {
+      focus = ALI_zhan_zheng_jing_ji_ti_zhi
+    }
+
+    prerequisite = {
+      focus = ALI_dui_shi_jie_zhan_zheng_ji_hua
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = ALI_nibbling_strategy_tt
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 幻想乡的唯一霸权
+  focus = {
+    id = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = ALI_can_shi_ce_lve
+
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = ALI_SI_occupied_Gensokyo_ratio_tt
+        check_variable = {
+            SI_Gensokyo_ratio > 0.5
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = ALI_can_shi_ce_lve
+    }
+
+    completion_reward = {
+      remove_ideas = ali_da_gui_mo_zhan_zheng_dong_yuan_idea
+      remove_ideas = ali_zhan_shi_jing_ji_idea
+      if = {
+        limit = {
+          has_idea = ali_ting_zhi_de_zhan_zheng_ji_qi_idea
+        }
+        remove_ideas = ali_ting_zhi_de_zhan_zheng_ji_qi_idea
+      }
+      add_ideas = ali_huan_xiang_xiang_de_wei_yi_ba_quan_idea
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
 }

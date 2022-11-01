@@ -22,8 +22,8 @@ focus_tree = {
       id = NRM_shu_yu_ruo_zhe_de_jun_dui
       icon = NRM_focus_union_army
       cost = 7
-      x = 16
-      y = 0
+      x = 6
+      y = 1
 
       available ={
          has_global_flag = main_scenario
@@ -133,7 +133,7 @@ focus_tree = {
     }
 
     completion_reward = {
-      add_ideas = mrs_yao_guai_de_zhan_dou_li_idea
+      add_ideas = nrm_yao_guai_de_zhan_dou_li_idea
     }
 
     ai_will_do = {
@@ -229,6 +229,691 @@ focus_tree = {
 
     completion_reward = {
       custom_effect_tooltip = MRS_final_push_tt
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 浴火重生
+  focus = {
+    id = NRM_yu_huo_chong_sheng
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_zhun_bei_zui_hou_yi_ji
+
+    available = {
+      has_global_flag = MRS_civil_war_end_flag
+      NOT = {
+        is_puppet = yes
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_zhun_bei_zui_hou_yi_ji
+    }
+
+    completion_reward = {
+      add_political_power = 150
+      add_popularity = {
+        ideology = fandong
+        popularity = 0.3
+      }
+      add_ideas = Town
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 生而平等
+  focus = {
+    id = NRM_sheng_er_ping_deng
+    icon = unknown
+    cost = 7
+    x = -3
+    y = 1
+
+    relative_position_id = NRM_yu_huo_chong_sheng
+
+    prerequisite = {
+      focus = NRM_yu_huo_chong_sheng
+    }
+
+    completion_reward = {
+      swap_ruler_traits = {
+        remove = MRS_ping_deng_de_xiang_zheng
+        add = MRS_ping_deng_de_han_wei_zhe
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 社会保障
+  focus = {
+    id = NRM_she_hui_bao_zhang
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_sheng_er_ping_deng
+
+    prerequisite = {
+      focus = NRM_sheng_er_ping_deng
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+      add_political_power = 50
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 社会化生产
+  focus = {
+    id = NRM_she_hui_hua_sheng_chan
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = NRM_yu_huo_chong_sheng
+
+    prerequisite = {
+      focus = NRM_yu_huo_chong_sheng
+    }
+
+    completion_reward = {
+      add_ideas = nrm_she_hui_hua_sheng_chan_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 生产竞赛
+  focus = {
+    id = NRM_sheng_chan_jing_sai
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_she_hui_hua_sheng_chan
+
+    prerequisite = {
+      focus = NRM_she_hui_hua_sheng_chan
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = nrm_she_hui_hua_sheng_chan_idea
+        add_idea = nrm_she_hui_hua_sheng_chan_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重建民兵组织
+  focus = {
+    id = NRM_chong_jian_min_bing_zu_zhi
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = NRM_yu_huo_chong_sheng
+
+    prerequisite = {
+      focus = NRM_yu_huo_chong_sheng
+    }
+
+    completion_reward = {
+      add_ideas = nrm_min_bing_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 公民军
+  focus = {
+    id = NRM_gong_min_jun
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_chong_jian_min_bing_zu_zhi
+
+    prerequisite = {
+      focus = NRM_chong_jian_min_bing_zu_zhi
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = nrm_min_bing_idea
+        add_idea = nrm_gong_min_jun_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 扫盲运动
+  focus = {
+    id = NRM_sao_mang_yun_dong
+    icon = unknown
+    cost = 7
+    x = 3
+    y = 1
+
+    relative_position_id = NRM_yu_huo_chong_sheng
+
+    prerequisite = {
+      focus = NRM_yu_huo_chong_sheng
+    }
+
+    completion_reward = {
+      add_research_slot = 1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法之森科学院
+  focus = {
+    id = NRM_mo_fa_zhi_sen_ke_xue_yuan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_sao_mang_yun_dong
+
+    prerequisite = {
+      focus = NRM_sao_mang_yun_dong
+    }
+
+    completion_reward = {
+      add_ideas = nrm_mo_fa_zhi_sen_ke_xue_yuan_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 革命外交
+  focus = {
+    id = NRM_ge_ming_wai_jiao
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 3
+
+    relative_position_id = NRM_yu_huo_chong_sheng
+
+    prerequisite = {
+      focus = NRM_she_hui_bao_zhang
+    }
+
+    prerequisite = {
+      focus = NRM_sheng_chan_jing_sai
+    }
+
+    prerequisite = {
+      focus = NRM_gong_min_jun
+    }
+
+    prerequisite = {
+      focus = NRM_mo_fa_zhi_sen_ke_xue_yuan
+    }
+
+    completion_reward = {
+      every_other_country = {
+        limit = {
+          has_government = NRM
+        }
+        add_opinion_modifier = {
+          target = NRM
+          modifier = NRM_ge_ming_wai_jiao_radicalist_op
+        }
+      }
+      every_other_country = {
+        limit = {
+          NOT = {
+            has_government = NRM
+          }
+        }
+        add_opinion_modifier = {
+          target = NRM
+          modifier = NRM_ge_ming_wai_jiao_non_radicalist_op
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加入革命运动
+  focus = {
+    id = NRM_jia_ru_ge_ming_yun_dong
+    icon = unknown
+    cost = 7
+    x = -3
+    y = 1
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    available = {
+      NOT = {
+        OR = {
+          AND = {
+            has_country_flag = NRM_ask_TKM_for_help_flag
+            has_country_flag = NRM_request_accepted_flag
+          }
+          AND = {
+            SEJ = {
+              OR = {
+                exists = no
+                is_puppet = yes
+              }
+            }
+            CIR = {
+              OR = {
+                exists = no
+                is_puppet = yes
+              }
+            }
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_ge_ming_wai_jiao
+    }
+
+    mutually_exclusive = {
+      focus = NRM_yu_jiu_shi_jiu_jie_meng
+      focus = NRM_du_li_zi_zhu
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          SEJ = {
+            OR = {
+              exists = no
+              is_puppet = yes
+            }
+          }
+        }
+        CIR = {
+          country_event = nrm.102
+        }
+      }
+      else = {
+        SEJ = {
+          country_event = nrm.101
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与九十九结盟
+  focus = {
+    id = NRM_yu_jiu_shi_jiu_jie_meng
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    available = {
+      NOT = {
+        OR = {
+          AND = {
+            OR = {
+              has_country_flag = NRM_ask_SEJ_for_help_flag
+              has_country_flag = NRM_ask_CIR_for_help_flag
+            }
+            has_country_flag = NRM_request_accepted_flag
+          }
+          TKM = {
+            OR = {
+              exists = no
+              is_puppet = yes
+            }
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_ge_ming_wai_jiao
+    }
+
+    mutually_exclusive = {
+      focus = NRM_jia_ru_ge_ming_yun_dong
+      focus = NRM_du_li_zi_zhu
+    }
+
+    completion_reward = {
+      TKM = {
+        country_event = ali.103
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 独立自主
+  focus = {
+    id = NRM_du_li_zi_zhu
+    icon = unknown
+    cost = 7
+    x = 3
+    y = 1
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    prerequisite = {
+      focus = NRM_ge_ming_wai_jiao
+    }
+
+    mutually_exclusive = {
+      focus = NRM_jia_ru_ge_ming_yun_dong
+      focus = NRM_yu_jiu_shi_jiu_jie_meng
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 传播革命
+  focus = {
+    id = NRM_chuan_bo_ge_ming
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 2
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    prerequisite = {
+      focus = NRM_jia_ru_ge_ming_yun_dong
+      focus = NRM_yu_jiu_shi_jiu_jie_meng
+      focus = NRM_du_li_zi_zhu
+    }
+
+    mutually_exclusive = {
+      focus = NRM_ben_tu_fang_yu
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 消灭革命叛徒
+  focus = {
+    id = NRM_xiao_mie_ge_ming_pan_tu
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = NRM_chuan_bo_ge_ming
+
+    available = {
+      NOT = {
+        TKM = {
+          OR = {
+            has_government = fandong
+            has_government = qinwai
+          }
+        }
+      }
+    }
+
+    bypass = {
+      TKM = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_chuan_bo_ge_ming
+    }
+
+    mutually_exclusive = {
+      focus = NRM_tuan_jie_mo_fa_dao_ju
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 团结魔法道具
+  focus = {
+    id = NRM_tuan_jie_mo_fa_dao_ju
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = NRM_chuan_bo_ge_ming
+
+    available = {
+      TKM = {
+        OR = {
+          has_government = fandong
+          has_government = qinwai
+        }
+      }
+    }
+
+    bypass = {
+      TKM = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_chuan_bo_ge_ming
+    }
+
+    mutually_exclusive = {
+      focus = NRM_xiao_mie_ge_ming_pan_tu
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 粉碎帝国
+  focus = {
+    id = NRM_fen_sui_di_guo
+    icon = GFX_focus_attack_SCA
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = NRM_chuan_bo_ge_ming
+
+    bypass = {
+      SCA = {
+        OR = {
+          exists = no
+          is_puppet = yes
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NRM_xiao_mie_ge_ming_pan_tu
+      focus = NRM_tuan_jie_mo_fa_dao_ju
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 本土防御
+  focus = {
+    id = NRM_ben_tu_fang_yu
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 2
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    prerequisite = {
+      focus = NRM_jia_ru_ge_ming_yun_dong
+      focus = NRM_yu_jiu_shi_jiu_jie_meng
+      focus = NRM_du_li_zi_zhu
+    }
+
+    mutually_exclusive = {
+      focus = NRM_chuan_bo_ge_ming
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 武装群众
+  focus = {
+    id = NRM_wu_zhuang_qun_zhong
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_ben_tu_fang_yu
+
+    prerequisite = {
+      focus = NRM_ben_tu_fang_yu
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 民用工程要塞化
+  focus = {
+    id = NRM_min_yong_gong_cheng_yao_sai_hua
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NRM_wu_zhuang_qun_zhong
+
+    prerequisite = {
+      focus = NRM_wu_zhuang_qun_zhong
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 革命的联合体
+  focus = {
+    id = NRM_ge_ming_de_lian_he_ti
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 5
+
+    relative_position_id = NRM_ge_ming_wai_jiao
+
+    prerequisite = {
+      focus = NRM_min_yong_gong_cheng_yao_sai_hua
+      focus = NRM_fen_sui_di_guo
+    }
+
+    completion_reward = {
+      
     }
 
     ai_will_do = {

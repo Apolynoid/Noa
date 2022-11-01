@@ -1,0 +1,407 @@
+ideas = {
+	country = {
+		#mrs
+
+    # 人偶的协助 生产
+    ali_ren_ou_de_xie_zhu_a_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        production_factory_start_efficiency_factor = 0.1
+        industrial_capacity_factory = 0.2
+      }
+    }
+
+    # 人偶的协助 战斗
+    ali_ren_ou_de_xie_zhu_b_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        breakthrough_factor = 0.1
+        weekly_manpower = 2
+      }
+    }
+
+    # 人偶的协助 综合
+    ali_ren_ou_de_xie_zhu_c_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        production_factory_start_efficiency_factor = 0.1
+        industrial_capacity_factory = 0.2
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        breakthrough_factor = 0.1
+        weekly_manpower = 2
+      }
+    }
+
+    # 怀柔政策
+    ali_huai_rou_zheng_ce_idea = {
+      picture = unknown
+      modifier = {
+        ST_race_penalty_all_factor = -0.3
+        political_power_cost = 0.05
+      }
+    }
+
+    # 宣传攻势
+    ali_xuan_chuan_gong_shi_idea = {
+      picture = unknown
+      cancel = {
+        has_global_flag = MRS_civil_war_end_flag
+      }
+      modifier = {
+        monthly_population = -0.05
+        stability_factor = -0.05
+        war_support_factor = -0.05
+        army_attack_factor = -0.05
+        army_morale_factor = -0.05
+        qinwai_drift = 0.03
+      }
+    }
+
+    # 人偶工坊扩大化
+    ali_ren_ou_gong_fang_kuo_da_hua_idea = {
+      picture = unknown
+      modifier = {
+        weekly_manpower = 10
+      }
+    }
+
+    # 魔法之森中小企业
+    ali_mo_fa_zhi_sen_zhong_xiao_qi_ye_idea = {
+      picture = unknown
+      modifier = {
+        research_speed_factor = 0.05
+        political_power_cost = 0.05
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    # 人偶用于宣传
+    ali_ren_ou_yong_yu_xuan_chuan_idea = {
+      picture = unknown
+      modifier = {
+        political_power_gain = 0.2
+        drift_defence_factor = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 SCA
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = SCA
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 TKM
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = TKM
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 SEJ
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_SEJ_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = SEJ
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = CIR
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 SCA + TKM
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_TKM_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = SCA
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = TKM
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 SCA + SEJ
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_SCA_SEJ_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = SCA
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = SEJ
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = CIR
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 TKM + SEJ
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_TKM_SEJ_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = TKM
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = SEJ
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = CIR
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 魔法之森自卫能力 全部
+    ali_mo_fa_zhi_sen_zi_wei_neng_li_all_idea = {
+      picture = unknown
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+      targeted_modifier = {
+        tag = SCA
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = TKM
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = SEJ
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+      targeted_modifier = {
+        tag = CIR
+        attack_bonus_against = 0.1
+        defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+      }
+    }
+
+    # 天狗的经济援助
+    ali_tian_gou_de_jing_ji_yuan_zhu_idea = {
+      picture = unknown
+      modifier = {
+        production_speed_buildings_factor = 0.2
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    # 援助魔法之森
+    ali_yuan_zhu_mo_fa_zhi_sen_idea = {
+      picture = unknown
+      modifier = {
+        consumer_goods_factor = 0.01
+      }
+    }
+
+    # 自力更生
+    ali_zi_li_geng_sheng_idea = {
+      picture = unknown
+      modifier = {
+        production_speed_buildings_factor = 0.1
+        production_factory_start_efficiency_factor = 0.1
+      }
+    }
+
+    # 魔法之森的新面貌
+    ali_mo_fa_zhi_sen_de_xin_mian_mao_idea = {
+      picture = unknown
+      modifier = {
+        stability_factor = 0.1
+        political_power_gain = 0.2
+        drift_defence_factor = 0.2
+      }
+    }
+
+    # 魔界移民计划
+    ali_mo_jie_yi_min_ji_hua_idea = {
+      picture = unknown
+      modifier = {
+        monthly_population = 0.02
+      }
+    }
+
+    # 魔界的知识
+    ali_mo_jie_de_zhi_shi_idea = {
+      picture = unknown
+      research_bonus = {
+        magic = 0.15
+      }
+    }
+
+    # 魔界的力量
+    ali_mo_jie_de_li_liang_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        breakthrough_factor = 0.1
+      }
+    }
+
+    # 魔界的训练系统
+    ali_mo_jie_de_xun_lian_xi_tong_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.1
+        breakthrough_factor = 0.1
+        command_power_gain = 0.1
+        experience_gain_army_factor = 0.05
+        training_time_army_factor = -0.1
+      }
+    }
+
+    # 魔界的生产
+    ali_mo_jie_de_sheng_chan_idea = {
+      picture = unknown
+      modifier = {
+        industrial_capacity_factory = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.2
+        production_factory_start_efficiency_factor = 0.2
+      }
+    }
+
+    # 魔界的建造能力
+    ali_mo_jie_de_jian_zao_neng_li_idea = {
+      picture = unknown
+      modifier = {
+        industrial_capacity_factory = 0.1
+        production_factory_max_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.2
+        production_factory_start_efficiency_factor = 0.2
+        production_speed_buildings_factor = 0.1
+      }
+    }
+
+    # 大规模战争动员
+    ali_da_gui_mo_zhan_zheng_dong_yuan_idea = {
+      picture = unknown
+      modifier = {
+        conscription_factor = 0.1
+        training_time_army_factor = 0.05
+      }
+    }
+
+    # 战时经济
+    ali_zhan_shi_jing_ji_idea = {
+      picture = unknown
+      modifier = {
+        industrial_capacity_factory = 0.2
+        production_factory_max_efficiency_factor = 0.2
+        production_speed_buildings_factor = -0.2
+      }
+    }
+
+    # 幻想乡的唯一霸权
+    ali_huan_xiang_xiang_de_wei_yi_ba_quan_idea = {
+      picture = unknown
+      modifier = {
+        stability_factor = 0.3
+      }
+    }
+
+    # 停滞的战争机器
+    ali_ting_zhi_de_zhan_zheng_ji_qi_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = -0.5
+        army_defence_factor = -0.5
+        breakthrough_factor = -0.5
+        army_morale_factor = -0.3
+        command_power_gain = -0.1
+        experience_gain_army_factor = -0.2
+        training_time_army_factor = 0.3
+        political_power_cost = 0.5
+        stability_factor = -0.3
+        production_factory_efficiency_gain_factor = -0.3
+        production_factory_max_efficiency_factor = -0.3
+        production_factory_start_efficiency_factor = -0.3
+        industrial_capacity_factory = -0.2
+      }
+    }
+  }
+}

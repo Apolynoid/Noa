@@ -1,0 +1,1611 @@
+﻿add_namespace = ali
+country_event = { #魔界化（选领导人）
+	id = ali.1
+	title = ali.1.t
+	desc = ali.1.d
+	picture = GFX_news_event_ali.1
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.1.1#爱丽丝
+		trigger = {
+
+		}
+	}
+
+	option = {
+		name = ali.1.2#神绮
+		ALI_ski = {
+			add_country_leader_role = {
+				Promote_leader = yes
+				Country_leader = {
+					ideology = oldorder_type
+				}
+			}
+		}
+		trigger = {
+
+		}
+	}
+}
+
+country_event = { #附庸的感受
+	id = ali.2
+	title = ali.2.t
+	desc = ali.2.d
+	picture = GFX_news_event_ali.2
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.2.1#妥协
+		add_to_variable = { ALI_tuoxie = 1}
+		event_target:ALI_target = {
+			subject_level2 = yes
+			can_core = yes
+		}
+		if = {
+			limit = {
+				event_target:ALI_target = {
+					tag = MFA
+				}
+			}
+			every_owned_state = {
+				limit = {
+					infrastructure > 0
+				}
+				remove_building = { type = infrastructure  level = 1 }
+		        # add_extra_state_shared_building_slots = 2 
+			}
+		}
+		if = {
+			limit = {
+				event_target:ALI_target = {
+					tag = MTM
+				}
+			}
+			add_political_power = -50
+			add_timed_idea = {
+				idea = MRS_tongyifusangshen_idea
+				days = 182
+			}
+		}
+		if = {
+			limit = {
+				event_target:ALI_target = {
+					tag = MYK
+				}
+			}
+			add_political_power = -100
+			# add_ideas = MRS_tongyiyaoguai2_idea
+			add_timed_idea = {
+				idea = MRS_tongyiyaoguai_idea
+				days = 182
+			}
+		}
+		if = {
+			limit = {
+				event_target:ALI_target = {
+					tag = MTM
+				}
+			}
+			set_country_flag = ALI_fusangshen
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = ali.2.2#宣战
+		add_to_variable = { ALI_xuanzhan = 1}
+		event_target:ALI_target = {
+			can_core = yes
+		}
+		declare_war_on = {
+			target = event_target:ALI_target
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 85
+		}
+	}
+
+	option = {
+		name = ali.2.3#问问他们
+		event_target:ALI_target = {
+			can_core = yes
+		}
+		event_target:ALI_target = { country_event = { id = ali.3 days = 2 } }
+		ai_chance = {
+			base = 0
+			modifier = {
+				event_target:ALI_target = {
+					has_opinion = {
+						target = ROOT
+						value > 40
+					}
+				}
+				add = 500
+			}
+		}
+	}
+}
+
+country_event = { #附庸的感受
+	id = ali.3
+	title = ali.3.t
+	desc = ali.3.d
+	picture = GFX_news_event_ali.3
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.3.1#妥协
+		FROM = {
+			country_event = { days = 2 id = ali.70}
+			add_to_variable = { ALI_tuoxie = 1}
+			ROOT = {
+				subject_level2 = yes
+				can_core = yes
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = MTM
+					}
+				}
+				FROM = { set_country_flag = ALI_fusangshen }
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 50
+					}
+				}
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = ali.3.2#宣战
+		FROM = {
+			country_event = { days = 2 id = ali.71}
+			add_to_variable = { ALI_xuanzhan = 1}
+		}
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+}
+
+#新闻
+news_event = { #求助魔界
+	id = ali.5
+	title = ali.5.t
+	desc = ali.5.d
+	picture = GFX_news_event_mrs.5
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.5.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.5.2#非本认
+		trigger = {
+			not = { tag = ALI}
+		}
+	}
+}
+
+news_event = { #贤者友好
+	id = ali.6
+	title = ali.6.t
+	desc = ali.6.d
+	picture = GFX_news_event_mrs.6
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.6.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.6.2#非本认
+		trigger = {
+			not = { tag = ALI}
+		}
+	}
+}
+
+news_event = { #红魔馆友好
+	id = ali.7
+	title = ali.7.t
+	desc = ali.7.d
+	picture = GFX_news_event_mrs.7
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.7.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.7.2#非本认
+		trigger = {
+			not = { tag = ALI}
+		}
+	}
+}
+
+news_event = { #加入绯红
+	id = ali.8
+	title = ali.8.t
+	desc = ali.8.d
+	picture = GFX_news_event_mrs.8
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.8.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.8.2#非本认
+		trigger = {
+			not = { 
+				tag = ALI
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+
+	option = {
+		name = ali.8.3#非本认
+		trigger = {
+			NOT = {
+				tag = ALI
+			}
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+news_event = { #走近贤者(魔界)
+	id = ali.9
+	title = ali.9.t
+	desc = ali.9.d
+	picture = GFX_news_event_mrs.55
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.9.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.9.2#非本认
+		trigger = {
+			not = { 
+				tag = ALI
+				tag = OKI
+				tag = YKR
+				tag = KAS
+			}
+		}
+	}
+
+	option = {
+		name = ali.9.3#非本认
+		trigger = {
+			or = { 
+				tag = OKI
+				tag = YKR
+				tag = KAS
+			}
+		}
+	}
+}
+
+news_event = { #魔界化
+	id = ali.32
+	title = ali.32.t
+	desc = ali.32.d
+	picture = GFX_news_event_mrs.32
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.32.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.32.2#非本认
+		trigger = {
+			not = { tag = ALI}
+		}
+	}
+}
+
+news_event = { #魔界特区
+	id = ali.36
+	title = ali.36.t
+	desc = ali.36.d
+	picture = GFX_news_event_mrs.36
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.36.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.36.2#非本认
+		trigger = {
+			not = { 
+				tag = ALI
+				tag = OKI
+				tag = KAS
+				tag = YKR
+			}
+		}
+	}
+
+	option = {
+		name = ali.36.3#非本认
+		trigger = {
+			or = { 
+				tag = OKI
+				tag = KAS
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = { #幻想乡根基
+	id = ali.37
+	title = ali.37.t
+	desc = ali.37.d
+	picture = GFX_news_event_mrs.37
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.37.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.37.2#非本认
+		trigger = {
+			not = { tag = ALI}
+		}
+	}
+}
+
+news_event = { #魔界殖民地
+	id = ali.38
+	title = ali.38.t
+	desc = ali.38.d
+	picture = GFX_news_event_mrs.38
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.38.1#本人
+		trigger = {
+			or = {
+				tag = ALI
+				has_idea = Human
+			}
+			
+		}
+	}
+
+	option = {
+		name = ali.38.2#非本认
+		trigger = {
+			not = { 
+				tag = ALI
+				has_idea = Human
+			}
+		}
+	}
+}
+
+news_event = {#加强爱丽丝的威望
+	id = ali.40
+	title = ali.40.t
+	desc = ali.40.d
+	picture = GFX_news_event_ali.40
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.40.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.40.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#抹黑驱除魔理沙
+	id = ali.41
+	title = ali.41.t
+	desc = ali.41.d
+	picture = GFX_news_event_ali.41
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.41.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.41.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#统一的南魔法森林
+	id = ali.42
+	title = ali.42.t
+	desc = ali.42.d
+	picture = GFX_news_event_ali.42
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.42.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.42.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#消灭堕落的道具
+	id = ali.43
+	title = ali.43.t
+	desc = ali.43.d
+	picture = GFX_news_event_ali.43
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.43.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.43.2
+		trigger = {
+			tag = TKM
+		}
+	}
+
+	option = {
+		name = ali.43.3
+		trigger = {
+			not = {
+				tag = ALI
+				tag = TKM
+			}
+		}
+	}
+}
+
+news_event = {#与付丧神的深层外交
+	id = ali.44
+	title = ali.44.t
+	desc = ali.44.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.44.1
+		trigger = {
+			or = {
+				tag = ALI
+				tag = TKM
+			}
+		}
+	}
+
+	option = {
+		name = ali.44.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = TKM
+			}
+		}
+	}
+}
+
+news_event = {#与辉针城的深层外交
+	id = ali.45
+	title = ali.45.t
+	desc = ali.45.d
+	picture = GFX_news_event_ali.45
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.45.1
+		trigger = {
+			or = {
+				tag = ALI
+				tag = SEJ
+			}
+		}
+	}
+
+	option = {
+		name = ali.45.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#与妖精的深层外交
+	id = ali.46
+	title = ali.46.t
+	desc = ali.46.d
+	picture = GFX_news_event_ali.46
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.46.1
+		trigger = {
+			or = {
+				tag = ALI
+				tag = CIR
+			}
+		}
+	}
+
+	option = {
+		name = ali.46.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = {#攻击雾之湖的压迫者
+	id = ali.47
+	title = ali.47.t
+	desc = ali.47.d
+	picture = GFX_news_event_ali.47
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.47.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.47.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#人偶夺得权力
+	id = ali.48
+	title = ali.48.t
+	desc = ali.48.d
+	picture = GFX_news_event_ali.48
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.48.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.48.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = TKM
+				tag = MEL
+			}
+		}
+	}
+
+	option = {
+		name = ali.48.3
+		trigger = {
+			or = {
+				tag = TKM
+				tag = MEL
+			}
+		}
+	}
+}
+
+news_event = {#奴役有机体
+	id = ali.49
+	title = ali.49.t
+	desc = ali.49.d
+	picture = GFX_news_event_ali.49
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.49.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.49.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#把重要的魔法使变成人偶
+	id = ali.50
+	title = ali.50.t
+	desc = ali.50.d
+	picture = GFX_news_event_ali.50
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.50.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.50.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#加入道具大家庭
+	id = ali.51
+	title = ali.51.t
+	desc = ali.51.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.51.1
+		trigger = {
+			or = {
+				tag = ALI
+				tag = TKM
+			}
+			
+		}
+	}
+
+	option = {
+		name = ali.51.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#人偶森林化
+	id = ali.52
+	title = ali.52.t
+	desc = ali.52.d
+    picture = GFX_news_event_ali.52
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.52.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.52.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#“寻找”妖精人偶素材
+	id = ali.53
+	title = ali.53.t
+	desc = ali.53.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.53.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.53.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = CIR
+			}
+		}
+	}
+	option = {
+		name = ali.53.3
+		trigger = {
+			tag = CIR
+		}
+	}
+}
+
+news_event = {#“寻找”妖怪人偶素材
+	id = ali.54
+	title = ali.54.t
+	desc = ali.54.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.54.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.54.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = SEJ
+			}
+		}
+	}
+	option = {
+		name = ali.54.3
+		trigger = {
+			tag = SEJ
+		}
+	}
+}
+
+news_event = {#世界人偶化
+	id = ali.55
+	title = ali.55.t
+	desc = ali.55.d
+    picture = GFX_news_event_ali.55
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.55.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.55.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#恐怖的人偶之乡
+	id = ali.56
+	title = ali.56.t
+	desc = ali.56.d
+    picture = GFX_news_event_ali.56
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.56.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.56.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#泛生命体操控术
+	id = ali.57
+	title = ali.57.t
+	desc = ali.57.d
+	picture = GFX_news_event_ali.57
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.57.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.57.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#向兽道复仇
+	id = ali.58
+	title = ali.58.t
+	desc = ali.58.d
+	picture = GFX_news_event_ali.58
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.58.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.58.2
+		trigger = {
+			tag = MSD
+		}
+	}
+
+	option = {
+		name = ali.58.3
+		trigger = {
+			not = {
+				tag = ALI
+				tag = MSD
+			}
+		}
+	}
+}
+
+news_event = {#向北部的妖怪复仇
+	id = ali.60
+	title = ali.60.t
+	desc = ali.60.d
+	picture = GFX_news_event_ali.60
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.60.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.60.2
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.60.3
+		trigger = {
+			not = {
+				tag = ALI
+				tag = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#建立魔法帝国
+	id = ali.61
+	title = ali.61.t
+	desc = ali.61.d
+	picture = GFX_news_event_ali.61
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.61.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.61.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+news_event = {#世界人偶化
+	id = ali.62
+	title = ali.62.t
+	desc = ali.62.d
+	picture = GFX_news_event_ali.62
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.62.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.62.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+country_event = { #强大的歌莉娅人偶(开始)
+	id = ali.65
+	title = ali.65.t
+	desc = ali.65.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		has_war_with = ALI
+		ALI = {
+			has_country_flag = ALI_qiangdadegeliyarenou
+		}
+		not = {
+			has_idea = ALI_qiangdadegeliyarenou_idea
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = ali.65.1
+		add_ideas = ALI_qiangdadegeliyarenou_idea
+	}
+}
+
+country_event = { #魔理沙如果把协会送你，就会触发
+	id = ali.66
+	title = ali.66.t
+	desc = ali.66.d
+	picture = GFX_news_event_ali.66
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.66.1
+		MRS = {
+			end_puppet = ROOT
+		}
+		set_country_flag = ALI_hepingjicheng
+		set_cosmetic_tag = ALI_duli
+		add_ideas = Village
+		if = {
+			limit = {
+				MTM = {
+					has_war_with = ROOT
+				}
+			}
+			add_to_variable = { ALI_xuanzhan = 1}
+		}
+		if = {
+			limit = {
+				MFA = {
+					has_war_with = ROOT
+				}
+			}
+			add_to_variable = { ALI_xuanzhan = 1}
+		}
+		if = {
+			limit = {
+				MYK = {
+					has_war_with = ROOT
+				}
+			}
+			add_to_variable = { ALI_xuanzhan = 1}
+		}
+		if = {
+			limit = {
+				MTM = {
+					is_subject_of = MRS
+				}
+			}
+			add_to_variable = { ALI_tuoxie = 1}
+			set_country_flag = ALI_fusangshen
+			MTM = {
+				subject_level2 = yes
+				can_core = yes
+			}
+		}
+		if = {
+			limit = {
+				MFA = {
+					is_subject_of = MRS
+				}
+			}
+			add_to_variable = { ALI_tuoxie = 1}
+			MFA = {
+				subject_level2 = yes
+				can_core = yes
+			}
+		}
+		if = {
+			limit = {
+				MYK = {
+					is_subject_of = MRS
+				}
+			}
+			add_to_variable = { ALI_tuoxie = 1}
+			MYK = {
+				subject_level2 = yes
+				can_core = yes
+			}
+		}
+		MRS = {
+			subject_level3 = yes
+			can_core = yes
+		}
+		hidden_effect = {
+			news_event = { id = ali.67 days = 2}
+		}
+	}
+}
+
+news_event = {#爱丽丝成为了[MRS.GetName]的大魔女（和平）
+	id = ali.67
+	title = ali.67.t
+	desc = ali.67.d
+    picture = GFX_news_event_ali.67
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.67.1
+		trigger = {
+			tag = MRS
+		}
+	}
+
+	option = {
+		name = ali.67.2
+		trigger = {
+			not = {
+				tag = ALI
+				tag = MRS
+			}
+		}
+	}
+
+	option = {
+		name = ali.67.3
+		trigger = {
+			tag = ALI
+		}
+	}
+
+}
+
+country_event = { #如果你把魔理沙附庸了或者拿到了魔法大议会
+	id = ali.68
+	title = ali.68.t
+	desc = ali.68.d
+	major = no
+	picture = GFX_news_event_ali.68
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = ALI
+		not = {
+			has_country_flag = ALI_hepingjicheng
+		}
+		or = {
+			MRS = {
+				is_subject_of = ROOT
+			}
+			controls_state = 188
+		}
+	}
+
+	option = {
+		name = ali.68.1
+		add_war_support = 0.05
+		set_country_flag = ALI_duoqu
+		set_cosmetic_tag = ALI_duli
+		add_ideas = Village
+		army_experience = 5
+		every_owned_state = {
+	        add_building_construction = {
+	          type = infrastructure
+	          level = 1
+	          instant_build = yes
+	        }
+		}
+		191 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+	          type = industrial_complex
+	          level = 1
+	          instant_build = yes
+	        }
+		}
+		if = {
+			limit = {
+				MRS = {
+					exists = yes
+				}
+			}
+			every_country = {
+				limit = {
+					or = {
+						tag = MRS
+						tag = ALI
+						tag = MTM
+						tag = MYK
+						tag = MFA
+					}
+				}
+				white_peace = MTM
+				white_peace = MFA
+				white_peace = MYK
+				white_peace = MRS
+				white_peace = MFA
+			}
+		}
+		every_country = {
+			limit = {
+				has_war_with = MRS
+			}
+			white_peace = MRS
+		}
+		MRS = {
+			subject_level2 = yes
+			can_core = yes
+		}
+		hidden_effect = {
+			news_event = { id = ali.69 days = 2}
+		}
+	}
+}
+
+news_event = {#爱丽丝成为了[MRS.GetName]的大魔女（武力）
+	id = ali.69
+	title = ali.69.t
+	desc = ali.69.d
+	picture = GFX_news_event_ali.69
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ali.69.1
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.69.2
+		trigger = {
+			not = {
+				tag = ALI
+			}
+		}
+	}
+}
+
+country_event = { #少数民族直接妥协
+	id = ali.70
+	title = ali.70.t
+	desc = ali.70.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.70.1
+	}
+}
+country_event = { #少数民族直接宣战
+	id = ali.71
+	title = ali.71.t
+	desc = ali.71.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.71.1
+	}
+}
+
+# 魔界化 选择领导人
+country_event = {
+	id = ali.101
+	title = ali.101.t
+	desc = ali.101.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 爱丽丝
+	option = {
+		name = ali.101.1
+	}
+
+	# 神绮
+	option = {
+		name = ali.101.2
+		promote_character = {
+			character = ALI_ski
+			ideology = oldorder
+		}
+		custom_effect_tooltip = ALI_other_country_dissatisfied_tt
+		hidden_effect = {
+			every_country = {
+				add_opinion_modifier = {
+					target = ALI
+					modifier = ALI_shinki_as_leader_op
+				}
+			}
+		}
+	}
+}
+
+# 新魔界宣称雄心
+news_event = {
+	id = ali.102
+	title = ali.102.t
+	desc = ali.102.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.102.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.102.2#非本人
+		trigger = {
+			NOT = { 
+				tag = ALI
+			}
+		}
+	}
+}
+
+# TEG ALI请求加入同盟
+country_event = {
+	id = ali.103
+	title = ali.103.t
+	desc = ali.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.103.1
+		ai_chance = {
+			base = 10
+		}
+		TEG = {
+			add_to_faction = ALI
+		}
+	}
+
+	option = {
+		name = ali.103.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			ALI = {
+				country_event = ali.104
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = ali.104
+	title = ali.104.t
+	desc = ali.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.104.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = ALI_yu_tian_gou_jie_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = ALI_zi_li_geng_sheng
+		}
+	}
+}
+
+# TEG 援助魔法之森
+country_event = {
+	id = ali.105
+	title = ali.105.t
+	desc = ali.105.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.105.1
+	}
+}

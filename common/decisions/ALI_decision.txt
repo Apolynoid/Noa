@@ -1,0 +1,145 @@
+# 征服世界的雄心
+ALI_zheng_fu_shi_jie_de_xiong_xin = {
+  # 主战派不满
+  ALI_zhu_zhan_pai_bu_man = {
+    activation = {
+      has_completed_focus = ALI_zheng_fu_shi_jie_de_xiong_xin
+      NOT = {
+        has_completed_focus = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
+        has_war = yes
+      }
+    }
+    available = {
+      always = no
+    }
+    cancel_trigger = {
+      OR = {
+        has_completed_focus = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
+        has_war = yes
+      }
+    }
+    icon = mission_icon     # For GFX_decision_mission_icon
+    is_good = no
+    days_mission_timeout = 180
+    selectable_mission = no
+    timeout_effect = {
+      add_ideas = ali_ting_zhi_de_zhan_zheng_ji_qi_idea
+    }
+  }
+
+  # 宣战
+  ALI_dui_FROM_xuan_zhan = {
+    target_root_trigger = {
+        has_completed_focus = ALI_can_shi_ce_lve
+    }
+    target_array = global.countries
+    targets_dynamic = yes
+    target_trigger = {
+      # 接壤
+      FROM = {
+        any_neighbor_country = {
+          OR = {
+            original_tag = ALI
+            is_subject_of = ALI
+          }
+        }
+      }
+      # 可攻击
+      FROM = {
+        NOT = {
+          is_subject_of = ALI
+        }
+      }
+    }
+    cost = 30
+    days_remove = 30
+    war_with_target_on_complete = yes
+    remove_effect = {
+      declare_war_on = {
+        target = FROM
+        type = puppet_wargoal_focus
+      }
+    }
+  }
+}
+
+# 战争计划
+ALI_zhan_zheng_ji_hua = {
+  # 拟定战争计划
+  ALI_ni_ding_dui_FROM_de_zhan_zheng_ji_hua = {
+    target_root_trigger = {
+        has_completed_focus = ALI_dui_shi_jie_zhan_zheng_ji_hua
+    }
+    target_array = global.countries
+    targets_dynamic = yes
+    target_trigger = {
+      # 接壤
+      FROM = {
+        any_neighbor_country = {
+          OR = {
+            original_tag = ALI
+            is_subject_of = ALI
+          }
+        }
+      }
+      # 未执行
+      FROM = {
+        NOT = {
+          has_country_flag = ALI_war_plan
+          is_subject_of = ALI
+        }
+      }
+    }
+    available = {
+      NOT = {
+        has_country_flag = ALI_making_war_plan_flag
+      }
+    }
+    cost = 30
+    days_remove = 90
+    complete_effect = {
+      ROOT = {
+        set_country_flag = ALI_making_war_plan_flag
+      }
+    }
+    remove_effect = {
+      FROM = {
+        set_country_flag = ALI_war_plan
+      }
+      ROOT = {
+        clr_country_flag = ALI_making_war_plan_flag
+      }
+    }
+  }
+
+  # 执行战争计划
+  ALI_zhi_xing_dui_FROM_de_zhan_zheng_ji_hua = {
+    target_root_trigger = {
+        has_completed_focus = ALI_dui_shi_jie_zhan_zheng_ji_hua
+    }
+    target_array = global.countries
+    targets_dynamic = yes
+    target_trigger = {
+      FROM = {
+        # 已拟定
+        has_country_flag = ALI_war_plan
+        # 未执行
+        NOT = {
+          has_country_flag = ALI_war_plan_executed
+        }
+      }
+    }
+    days_remove = 90
+    remove_effect = {
+      FROM = {
+        set_country_flag = ALI_war_plan_executed
+      }
+    }
+    targeted_modifier = {
+      tag = FROM
+      attack_bonus_against = 0.1
+      defense_bonus_against = 0.1
+      breakthrough_bonus_against = 0.1
+    }
+  }
+}

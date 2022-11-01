@@ -135,9 +135,7 @@ bookmarks = {
 				mrs_hun_luan_de_zhi_hui_xi_tong_idea
 			}	
             focuses = {
-            	MRS_jingguanqibian
-            	MRS_fangyuyaojing
-            	MRS_feihongtiaoyue
+            	MRS_zhao_kai_mo_nv_da_hui
 			}			
 		}
 		"TES"={

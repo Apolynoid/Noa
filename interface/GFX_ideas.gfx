@@ -8,6 +8,11 @@ spriteTypes = {
 	
 	#### MRS Kirisame Marisa 魔法之森
 	spriteType = {
+		name = "GFX_idea_MSD_war"
+		texturefile = "gfx/interface/ideas/mrs_MSD_war.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_alice_plan"
 		texturefile = "gfx/interface/ideas/mrs_alice_plan.dds"
 	}
