@@ -16,5 +16,9 @@ opinion_modifiers = {
 	NRM_ge_ming_wai_jiao_non_radicalist_op = {
 		value = -50
 	}
+
+	NRM_tuan_jie_mo_fa_dao_ju_op = {
+		value = 30
+	}
 }	
 
