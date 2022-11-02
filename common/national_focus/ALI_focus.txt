@@ -700,7 +700,7 @@ focus_tree = {
   # 与天狗结盟
   focus = {
     id = ALI_yu_tian_gou_jie_meng
-    icon = unknown
+    icon = GFX_focus_befriend_TEG
     cost = 7
     x = -2
     y = 2

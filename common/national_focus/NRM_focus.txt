@@ -373,7 +373,7 @@ focus_tree = {
   # 重建民兵组织
   focus = {
     id = NRM_chong_jian_min_bing_zu_zhi
-    icon = unknown
+    icon = GFX_focus_ETH_peacekeeping_forces
     cost = 7
     x = 1
     y = 1
@@ -396,7 +396,7 @@ focus_tree = {
   # 公民军
   focus = {
     id = NRM_gong_min_jun
-    icon = unknown
+    icon = GFX_focus_generic_infiltration
     cost = 7
     x = 0
     y = 1
@@ -445,7 +445,7 @@ focus_tree = {
   # 魔法之森科学院
   focus = {
     id = NRM_mo_fa_zhi_sen_ke_xue_yuan
-    icon = unknown
+    icon = GFX_goal_tfv_generic_tech_sharing
     cost = 7
     x = 0
     y = 1
@@ -613,6 +613,9 @@ focus_tree = {
             OR = {
               exists = no
               is_puppet = yes
+              NOT = {
+                has_government = fandong
+              }
             }
           }
         }
@@ -684,7 +687,7 @@ focus_tree = {
     }
 
     mutually_exclusive = {
-      focus = NRM_ben_tu_fang_yu
+      focus = NRM_zhuan_zhu_guo_nei
     }
 
     completion_reward = {
@@ -699,7 +702,7 @@ focus_tree = {
   # 消灭革命叛徒
   focus = {
     id = NRM_xiao_mie_ge_ming_pan_tu
-    icon = unknown
+    icon = GFX_focus_attack_hegemonist_TKM
     cost = 7
     x = -1
     y = 1
@@ -749,7 +752,7 @@ focus_tree = {
   # 团结魔法道具
   focus = {
     id = NRM_tuan_jie_mo_fa_dao_ju
-    icon = unknown
+    icon = GFX_focus_generic_befriend_TKM
     cost = 3
     x = 1
     y = 1
@@ -837,9 +840,9 @@ focus_tree = {
     }
   }
 
-  # 本土防御
+  # 专注国内
   focus = {
-    id = NRM_ben_tu_fang_yu
+    id = NRM_zhuan_zhu_guo_nei
     icon = unknown
     cost = 7
     x = 2
@@ -858,7 +861,7 @@ focus_tree = {
     }
 
     completion_reward = {
-      add_ideas = nrm_ben_tu_fang_yu_idea
+      add_ideas = nrm_zhuan_zhu_guo_nei_idea
     }
 
     ai_will_do = {
@@ -869,21 +872,21 @@ focus_tree = {
   # 武装群众
   focus = {
     id = NRM_wu_zhuang_qun_zhong
-    icon = unknown
+    icon = GFX_focus_ETH_freedom_at_gunpoint
     cost = 7
     x = 0
     y = 1
 
-    relative_position_id = NRM_ben_tu_fang_yu
+    relative_position_id = NRM_zhuan_zhu_guo_nei
 
     prerequisite = {
-      focus = NRM_ben_tu_fang_yu
+      focus = NRM_zhuan_zhu_guo_nei
     }
 
     completion_reward = {
       swap_ideas = {
-        remove_idea = nrm_ben_tu_fang_yu_idea
-        add_idea = nrm_ben_tu_fang_yu_a_idea
+        remove_idea = nrm_zhuan_zhu_guo_nei_idea
+        add_idea = nrm_zhuan_zhu_guo_nei_a_idea
       }
     }
 
@@ -895,7 +898,7 @@ focus_tree = {
   # 民用工程要塞化
   focus = {
     id = NRM_min_yong_gong_cheng_yao_sai_hua
-    icon = unknown
+    icon = GFX_goal_generic_fortify_city
     cost = 7
     x = 0
     y = 1
@@ -908,8 +911,8 @@ focus_tree = {
 
     completion_reward = {
       swap_ideas = {
-        remove_idea = nrm_ben_tu_fang_yu_a_idea
-        add_idea = nrm_ben_tu_fang_yu_b_idea
+        remove_idea = nrm_zhuan_zhu_guo_nei_a_idea
+        add_idea = nrm_zhuan_zhu_guo_nei_b_idea
       }
     }
 

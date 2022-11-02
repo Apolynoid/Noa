@@ -79,8 +79,8 @@ ideas = {
       }
     }
 
-    # 本土防御
-    nrm_ben_tu_fang_yu_idea = {
+    # 专注国内
+    nrm_zhuan_zhu_guo_nei_idea = {
       picture = unknown
       modifier = {
         surrender_limit = 0.1
@@ -93,8 +93,8 @@ ideas = {
       }
     }
 
-    # 本土防御 武装群众
-    nrm_ben_tu_fang_yu_a_idea = {
+    # 专注国内 武装群众
+    nrm_zhuan_zhu_guo_nei_a_idea = {
       picture = unknown
       modifier = {
         surrender_limit = 0.1
@@ -114,8 +114,8 @@ ideas = {
       }
     }
 
-    # 本土防御 武装群众
-    nrm_ben_tu_fang_yu_b_idea = {
+    # 专注国内 武装群众
+    nrm_zhuan_zhu_guo_nei_b_idea = {
       picture = unknown
       modifier = {
         surrender_limit = 0.1

@@ -42,6 +42,21 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
 	}
 
+	SpriteType = {
+	name = "GFX_focus_attack_hegemonist_TKM"
+	texturefile = "gfx/interface/goals/focus_generic_attack_hegemonist_TKM.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_befriend_TEG"
+	texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_befriend_TKM"
+	texturefile = "gfx/interface/goals/focus_generic_befriend_TKM.dds"			
+	}
+
 	#### HKR Hakurei Reimu 博丽神社
 
 	SpriteType = {
