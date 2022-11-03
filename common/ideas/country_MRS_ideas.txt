@@ -72,6 +72,29 @@ ideas = {
       }
     }
 
+    # 内战紧急生产
+    mrs_nei_zhan_jin_ji_sheng_chan_idea = {
+      picture = unknown
+      cancel = {
+        has_global_flag = MRS_civil_war_end_flag
+      }
+      on_add = {
+        add_offsite_building = {
+          type = arms_factory 
+          level = 4
+        }
+      }
+      on_remove = {
+        add_offsite_building = {
+          type = arms_factory 
+          level = -4
+        }
+      }
+      modifier = {
+        custom_modifier_tooltip = MRS_civil_war_emergent_production_tt
+      }
+    }
+
     # 失败的最终攻势
     mrs_shi_bai_de_zui_zhong_gong_shi_idea = {
       picture = unknown

@@ -146,6 +146,8 @@ MRS_xin_ji_shu_desc:0 ""
 
 #idea
 # 内战 civil war
+mrs_nei_zhan_jin_ji_sheng_chan_idea:0 "内战紧急生产"
+mrs_nei_zhan_jin_ji_sheng_chan_idea_desc:0 ""
 mrs_nei_zhan_re_qing_idea:0 "内战热情"
 mrs_nei_zhan_re_qing_idea_desc:0 "魔法之森的分歧终于到了不可弥合的地步，彻底解决魔法森林分歧的时候到了。"
 mrs_shi_bai_de_zui_zhong_gong_shi_idea:0 "失败的最终攻势"
@@ -244,6 +246,7 @@ MRS_xianzheyouhao_op:0 "和妖怪贤者友好"
 MRS_quganshaoshuzuyi_op:0 "驱赶南魔法森林的少数族裔"
 
 #tt
+MRS_civil_war_emergent_production_tt:0 "§G获得4个军用工厂§!"
 MRS_auto_complete_tt:0 "§G这项国策会随着游戏进程自动完成§!"
 MRS_doctrine_skip_tt:0 "§R请注意三个方案国策在完成一个后会自动跳过另外两个！§!"
 MRS_magic_energy_149_tt:0 "§Y获得149季魔导聚能核心科技§!"

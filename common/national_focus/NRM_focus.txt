@@ -1,5 +1,5 @@
 focus_tree = {
-  id = MRS_focus
+  id = NRM_focus
   country = {
     factor = 0
     modifier = {
@@ -21,7 +21,7 @@ focus_tree = {
   focus = {
       id = NRM_shu_yu_ruo_zhe_de_jun_dui
       icon = NRM_focus_union_army
-      cost = 7
+      cost = 3
       x = 6
       y = 1
 
@@ -46,7 +46,7 @@ focus_tree = {
   focus = {
     id = NRM_tong_yi_zhi_hui_xi_tong
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 1
 
@@ -92,7 +92,7 @@ focus_tree = {
   focus = {
     id = NRM_fu_sang_shen_de_sheng_chan_neng_li
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 1
 
@@ -109,7 +109,7 @@ focus_tree = {
       }
       add_offsite_building = {
         type = arms_factory 
-        level = 1
+        level = 2
       }
     }
 
@@ -145,7 +145,7 @@ focus_tree = {
   focus = {
     id = NRM_jie_chu_ji_jin_tong_qing_zhe
     icon = unknown
-    cost = 7
+    cost = 3
     x = -1
     y = 2
 
@@ -176,7 +176,7 @@ focus_tree = {
   focus = {
     id = NRM_qing_qiu_wai_bu_yuan_zhu
     icon = GFX_focus_generic_concessions
-    cost = 7
+    cost = 3
     x = 1
     y = 2
 
@@ -209,7 +209,7 @@ focus_tree = {
   focus = {
     id = NRM_zhun_bei_zui_hou_yi_ji
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 3
 

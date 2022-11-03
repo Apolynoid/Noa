@@ -1489,13 +1489,23 @@ country_event = {
 		country_lock_all_division_template = yes
 		# 划分地块
 		ALI = {
-			transfer_state = 354
+			transfer_state = 154
+			transfer_state = 162
 			transfer_state = 169
 			transfer_state = 191
 			transfer_state = 175
 			transfer_state = 355
 			transfer_state = 182
-			354 = {
+			154 = {
+				add_core_of = ALI
+				remove_core_of = MRS
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+				}
+			}
+			162 = {
 				add_core_of = ALI
 				remove_core_of = MRS
 				teleport_armies = {
@@ -1640,8 +1650,7 @@ country_event = {
 			transfer_state = 465
 			transfer_state = 170
 			transfer_state = 185
-			transfer_state = 162
-			transfer_state = 154
+			transfer_state = 172
 			138 = {
 				add_core_of = NRM
 				remove_core_of = MRS
@@ -1696,16 +1705,7 @@ country_event = {
 					}
 				}
 			}
-			162 = {
-				add_core_of = NRM
-				remove_core_of = MRS
-				teleport_armies = {
-					limit = {
-						tag = MRS
-					}
-				}
-			}
-			154 = {
+			172 = {
 				add_core_of = NRM
 				remove_core_of = MRS
 				teleport_armies = {
@@ -1755,6 +1755,32 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			set_global_flag = MRS_civil_war_prepare_flag
+			# 增加地图外工厂
+			if = {
+				limit = {
+					country_exists = MRS
+				}
+				MRS = {
+					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ALI
+				}
+				ALI = {
+					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
+			if = {
+				limit = {
+					country_exists = NRM
+				}
+				NRM = {
+					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
+			# 特殊地块造核
 			if = {
 				limit = {
 					country_exists = MRS
@@ -1779,8 +1805,18 @@ news_event = {
 					add_core_of = NRM
 				}
 			}
+			# MRS 特殊处理
 			MRS = {
 				remove_ideas = mrs_hun_luan_de_zhi_hui_xi_tong_idea
+				if = {
+					limit = {
+						num_subjects > 0
+					}
+					country_event = {
+						id = mrs.122
+						days = 1
+					}
+				}
 				country_lock_all_division_template = no
 				division_template = {
 				  name = "内战民兵"
@@ -1965,6 +2001,30 @@ news_event = {
 	immediate = {
 		hidden_effect = {
 			set_global_flag = MRS_civil_war_end_flag
+			if = {
+				limit = {
+					country_exists = MRS
+				}
+				MRS = {
+					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ALI
+				}
+				ALI = {
+					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
+			if = {
+				limit = {
+					country_exists = NRM
+				}
+				NRM = {
+					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+				}
+			}
 		}
 	}
 
@@ -1989,6 +2049,15 @@ news_event = {
 					}
 				}
 				add_ideas = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+				if = {
+					limit = {
+						has_country_flag = MRS_lost_puppet_flag
+					}
+					country_event = {
+						id = mrs.124
+						days = 1
+					}
+				}
 			}
 		}
 	}
@@ -2039,6 +2108,18 @@ country_event = {
 	option = {
 		name = mrs.115.1#本人
 		hidden_effect = {
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
 			random_owned_controlled_state = {
 				create_unit = {
 					division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
@@ -2290,5 +2371,94 @@ country_event = {
 
 	option = {
 		name = mrs.121.1
+	}
+}
+
+# 内战 傀儡离开
+country_event = {
+	id = mrs.122
+	title = mrs.122.t
+	desc = mrs.122.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			MRS = {
+				every_subject_country = {
+					country_event = mrs.123
+					MRS = {
+						end_puppet = PREV
+					}
+					set_country_flag = MRS_puppet_flag
+				}
+				set_country_flag = MRS_lost_puppet_flag
+			}
+			ALI = {
+				set_country_flag = MRS_lost_puppet_flag
+			}
+			NRM = {
+				set_country_flag = MRS_lost_puppet_flag
+			}
+		}
+	}
+
+	option = {
+		name = mrs.122.1
+	}
+}
+
+# 内战 傀儡离开（傀儡）
+country_event = {
+	id = mrs.123
+	title = mrs.123.t
+	desc = mrs.123.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.123.1
+	}
+}
+
+# 内战 傀儡回归
+country_event = {
+	id = mrs.124
+	title = mrs.124.t
+	desc = mrs.124.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = MRS_puppet_flag
+				}
+				country_event = mrs.125
+				ROOT = {
+					puppet = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mrs.124.1
+		clr_country_flag = MRS_lost_puppet_flag
+	}
+}
+
+# 内战 傀儡回归（傀儡）
+country_event = {
+	id = mrs.125
+	title = mrs.125.t
+	desc = mrs.125.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.125.1
+		clr_country_flag = MRS_puppet_flag
 	}
 }

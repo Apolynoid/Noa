@@ -105,9 +105,11 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
           limit = {
             country_exists = MRS
           }
-          declare_war_on = {
-            target = MRS
-            type = MRS_Civil_War
+          MRS = {
+            declare_war_on = {
+              target = ALI
+              type = MRS_Civil_War
+            }
           }
           if = {
             limit = {
@@ -159,9 +161,11 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
           limit = {
             country_exists = MRS
           }
-          declare_war_on = {
-            target = MRS
-            type = MRS_Civil_War
+          MRS = {
+            declare_war_on = {
+              target = NRM
+              type = MRS_Civil_War
+            }
           }
         }
       }
@@ -180,11 +184,20 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
     fire_only_once = no
     days_remove = 15
     cost = 30
+    available = {
+      num_divisions < 40
+    }
     modifier = {
       weekly_manpower = -1
     }
     remove_effect = {
       ROOT = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            owner = ROOT
+          }
+        }
         random_owned_controlled_state = {
           create_unit = {
             division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
@@ -211,7 +224,7 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
     remove_effect = {
       add_equipment_to_stockpile = {
         type = magic_core_a
-        amount = 100
+        amount = 200
         producer = ROOT
       }
     }
@@ -230,7 +243,7 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
         exists = yes
         is_puppet = no
         NOT = {
-          has_idea = mrs_xuan_chuan_gong_shi_idea
+          has_idea = ali_xuan_chuan_gong_shi_idea
         }
       }
     }
@@ -250,7 +263,7 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
     remove_effect = {
       MRS = {
         add_timed_idea = {
-          idea = mrs_xuan_chuan_gong_shi_idea
+          idea = ali_xuan_chuan_gong_shi_idea
           days = 30
         }
       }
@@ -270,7 +283,7 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
         exists = yes
         is_puppet = no
         NOT = {
-          has_idea = mrs_xuan_chuan_gong_shi_idea
+          has_idea = ali_xuan_chuan_gong_shi_idea
         }
       }
     }
@@ -290,7 +303,7 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
     remove_effect = {
       NRM = {
         add_timed_idea = {
-          idea = mrs_xuan_chuan_gong_shi_idea
+          idea = ali_xuan_chuan_gong_shi_idea
           days = 30
         }
       }
@@ -536,6 +549,9 @@ MRS_mo_fa_zhi_sen_chong_jian = {
         tag = NRM
       }
     }
+    visible = {
+      has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+    }
     fire_only_once = yes
     days_remove = 45
     modifier = {
@@ -543,6 +559,7 @@ MRS_mo_fa_zhi_sen_chong_jian = {
       political_power_cost = 0.7
       stability_factor = -0.1
     }
+    cancel_if_not_visible = yes
     remove_effect = {
       swap_ideas = {
         remove_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea

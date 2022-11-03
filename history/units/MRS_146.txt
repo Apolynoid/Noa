@@ -149,7 +149,7 @@ units = {
 		name = "武装魔法使"
 		location = 1904
 		division_template = "武装魔法使"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 
@@ -157,7 +157,7 @@ units = {
 		name = "武装魔法使"
 		location = 1904
 		division_template = "武装魔法使"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	
@@ -165,7 +165,7 @@ units = {
 		name = "武装魔法使"
 		location = 3259
 		division_template = "武装魔法使"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
@@ -236,35 +236,35 @@ units = {
 		name = "游民妖精"
 		location = 2253
 		division_template = "游民妖精"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "游民妖精"
 		location = 2253
 		division_template = "游民妖精"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "游民妖精"
 		location = 2253
 		division_template = "游民妖精"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "游民妖精"
 		location = 2253
 		division_template = "游民妖精"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "游民妖精"
 		location = 2253
 		division_template = "游民妖精"
-		start_experience_factor = 0.1
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 

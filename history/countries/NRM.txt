@@ -61,8 +61,8 @@
         type2_manpowerlv2
         Magician
         Tribal
-        dove3
-        close2
+        hawk3
+        open2
         normal_border
         sc_rule
     }

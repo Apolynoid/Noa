@@ -3,16 +3,6 @@ spriteTypes = {
 	#### Generic goal icons
 
 	SpriteType = {
-	name = "GFX_focus_research_resources"
-	texturefile = "gfx/interface/goals/focus_research_resources.dds"			
-	}	
-
-	SpriteType = {
-	name = "GFX_focus_invite_scientists"
-	texturefile = "gfx/interface/goals/focus_invite_scientists.dds"			
-	}	
-
-	SpriteType = {
 	name = "GFX_focus_civ_mil_combination"
 	texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
 	}	
@@ -59,15 +49,7 @@ spriteTypes = {
 
 	#### HKR Hakurei Reimu 博丽神社
 
-	SpriteType = {
-	name = "HKR_focus_repair_hakurei_shrine"
-	texturefile = "gfx/interface/goals/focus_HKR_repair_hakurei_shrine.dds"			
-	}
-
-	SpriteType = {
-	name = "HKR_focus_improve_education"
-	texturefile = "gfx/interface/goals/focus_HKR_improve_education.dds"			
-	}
+	
 
 	#### MRS Kirisame Marisa 魔法之森
 
@@ -152,5 +134,10 @@ spriteTypes = {
 	SpriteType = {
 	name = "ALI_focus_fight_against_tyranny"
 	texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
+	}
+
+	SpriteType = {
+	name = "ALI_focus_the_only_hegemony_in_gensokyo"
+	texturefile = "gfx/interface/goals/focus_ALI_the_only_hegemony_in_gensokyo.dds"			
 	}
 }

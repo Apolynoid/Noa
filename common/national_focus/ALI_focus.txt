@@ -32,7 +32,7 @@ focus_tree = {
   focus = {
     id = ALI_fan_kang_bao_zheng
     icon = ALI_focus_fight_against_tyranny
-    cost = 7
+    cost = 3
     x = 8
     y = 1
 
@@ -57,7 +57,7 @@ focus_tree = {
   focus = {
     id = ALI_wen_ding_zhi_hui_lian
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 1
 
@@ -79,7 +79,7 @@ focus_tree = {
   focus = {
     id = ALI_ren_ou_xie_zhu_sheng_chan
     icon = unknown
-    cost = 7
+    cost = 3
     x = -2
     y = 1
 
@@ -112,7 +112,7 @@ focus_tree = {
   focus = {
     id = ALI_huai_rou_zheng_ce
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 1
 
@@ -137,7 +137,7 @@ focus_tree = {
   focus = {
     id = ALI_ren_ou_xie_zhu_zhan_dou
     icon = unknown
-    cost = 7
+    cost = 3
     x = 2
     y = 1
 
@@ -170,7 +170,7 @@ focus_tree = {
   focus = {
     id = ALI_fa_dong_xuan_chuan_gong_shi
     icon = GFX_goal_generic_propaganda
-    cost = 7
+    cost = 3
     x = 0
     y = 1
 
@@ -196,7 +196,7 @@ focus_tree = {
   focus = {
     id = ALI_xiang_sheng_li_jin_jun
     icon = unknown
-    cost = 7
+    cost = 3
     x = 0
     y = 3
 
@@ -495,7 +495,7 @@ focus_tree = {
   # 警惕绯红恶魔
   focus = {
     id = ALI_jing_ti_fei_hong_e_mo
-    icon = unknown
+    icon = GFX_focus_attack_SCA
     cost = 7
     x = -2
     y = 1
@@ -634,7 +634,7 @@ focus_tree = {
   # 警惕魔法道具
   focus = {
     id = ALI_jing_ti_mo_fa_dao_ju
-    icon = unknown
+    icon = GFX_focus_attack_hegemonist_TKM
     cost = 7
     x = 2
     y = 1
@@ -1283,7 +1283,7 @@ focus_tree = {
   # 幻想乡的唯一霸权
   focus = {
     id = ALI_huan_xiang_xiang_de_wei_yi_ba_quan
-    icon = unknown
+    icon = ALI_focus_the_only_hegemony_in_gensokyo
     cost = 7
     x = 0
     y = 1
