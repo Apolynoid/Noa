@@ -560,7 +560,7 @@ focus_tree = {
   # 警惕叛乱者
   focus = {
     id = ALI_jing_ti_pan_luan_zhe
-    icon = unknown
+    icon = GFX_focus_attack_SEJ
     cost = 7
     x = 0
     y = 1

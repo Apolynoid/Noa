@@ -227,6 +227,38 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_SEJ_shine"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_TEG_shine"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -290,6 +322,70 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	SpriteType = {
+		name = "GFX_focus_befriend_radicalist_TKM_shine"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_SEJ_shine"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
 	#### Hakurei Reimu 博丽神社
 
 
@@ -329,11 +425,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "MSR_focus_archmage_alice_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_archmage_alice.dds"			
+		name = "MRS_focus_archmage_alice_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_alice.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -346,7 +442,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_alice.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -361,11 +457,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_archmage_marisa_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_archmage_marisa.dds"			
+		name = "MRS_focus_archmage_marisa_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_marisa.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -378,7 +474,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_marisa.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -393,11 +489,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_archmage_narumi_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_archmage_narumi.dds"			
+		name = "MRS_focus_archmage_narumi_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_narumi.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -410,7 +506,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_archmage_narumi.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -425,11 +521,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_alice_plan_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_alice_plan.dds"			
+		name = "MRS_focus_alice_plan_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_alice_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -442,7 +538,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_alice_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -457,11 +553,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_marisa_plan_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_marisa_plan.dds"			
+		name = "MRS_focus_marisa_plan_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_marisa_plan.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_marisa_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_marisa_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -474,7 +570,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_marisa_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_marisa_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -489,11 +585,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_narumi_plan_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_narumi_plan.dds"			
+		name = "MRS_focus_narumi_plan_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_narumi_plan.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_narumi_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_narumi_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -506,7 +602,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_narumi_plan.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_narumi_plan.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -521,11 +617,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_puppet_legion_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_puppet_legion.dds"			
+		name = "MRS_focus_puppet_legion_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_legion.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_puppet_legion.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_puppet_legion.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -538,7 +634,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_puppet_legion.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_puppet_legion.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -553,11 +649,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "MSR_focus_improve_puppet_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_improve_puppet.dds"			
+		name = "MRS_focus_improve_puppet_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_improve_puppet.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_improve_puppet.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_improve_puppet.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -570,7 +666,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_improve_puppet.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_improve_puppet.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -585,11 +681,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_puppet_support_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_puppet_support.dds"			
+		name = "MRS_focus_puppet_support_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_support.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_puppet_support.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_puppet_support.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -602,7 +698,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_puppet_support.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_puppet_support.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -617,11 +713,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_hakkero_production_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_hakkero_production.dds"			
+		name = "MRS_focus_hakkero_production_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_hakkero_production.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -634,7 +730,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_hakkero_production.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -649,11 +745,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_contact_alice_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_contact_alice.dds"			
+		name = "MRS_focus_contact_alice_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_contact_alice.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -666,7 +762,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_contact_alice.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -681,11 +777,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "MSR_focus_contact_narumi_shine"
-		texturefile = "gfx/interface/goals/focus_MSR_contact_narumi.dds"			
+		name = "MRS_focus_contact_narumi_shine"
+		texturefile = "gfx/interface/goals/focus_MRS_contact_narumi.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_contact_narumi.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_contact_narumi.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -698,7 +794,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_MSR_contact_narumi.dds"			
+			animationmaskfile = "gfx/interface/goals/focus_MRS_contact_narumi.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

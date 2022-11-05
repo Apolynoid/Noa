@@ -297,7 +297,7 @@ shared_focus = {
 # 成美的方案
 shared_focus = {
   id = MRS_cheng_mei_de_fang_an
-  icon = MSR_focus_narumi_plan
+  icon = MRS_focus_narumi_plan
   cost = 3
   x = -2
   y = 1
@@ -412,7 +412,7 @@ shared_focus = {
 # 魔理沙的方案
 shared_focus = {
   id = MRS_mo_li_sha_de_fang_an
-  icon = MSR_focus_marisa_plan
+  icon = MRS_focus_marisa_plan
   cost = 3
   x = 0
   y = 1
@@ -480,7 +480,7 @@ shared_focus = {
 # 量产“八卦炉”
 shared_focus = {
   id = MRS_liang_chan_ba_gua_lu
-  icon = MSR_focus_hakkero_production
+  icon = MRS_focus_hakkero_production
   cost = 7
   x = 0
   y = 1
@@ -562,7 +562,7 @@ shared_focus = {
 # 爱丽丝的方案
 shared_focus = {
   id = MRS_ai_li_si_de_fang_an
-  icon = MSR_focus_alice_plan
+  icon = MRS_focus_alice_plan
   cost = 3
   x = 2
   y = 1
@@ -602,7 +602,7 @@ shared_focus = {
 # 人偶军团
 shared_focus = {
   id = MRS_ren_ou_jun_tuan
-  icon = MSR_focus_puppet_legion
+  icon = MRS_focus_puppet_legion
   cost = 7
   x = 0
   y = 1
@@ -625,7 +625,7 @@ shared_focus = {
 # 改进军用人偶
 shared_focus = {
   id = MRS_gai_jin_jun_yong_ren_ou
-  icon = MSR_focus_improve_puppet
+  icon = MRS_focus_improve_puppet
   cost = 7
   x = 0
   y = 1
@@ -651,7 +651,7 @@ shared_focus = {
 # 人偶支援部队
 shared_focus = {
   id = MRS_ren_ou_zhi_yuan_bu_dui
-  icon = MSR_focus_puppet_support
+  icon = MRS_focus_puppet_support
   cost = 7
   x = 0
   y = 1

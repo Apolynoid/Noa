@@ -11,7 +11,7 @@ focus_tree = {
   shared_focus = MRS_jian_she_mo_fa_zhi_sen
   shared_focus = ty_medium_main 
 
-  continuous_focus_position = { x = 20 y = 2000 }
+  continuous_focus_position = { x = 20 y = 2500 }
   
   default = no
 
@@ -44,9 +44,9 @@ focus_tree = {
   # 大魔女成美
   focus = {
     id = MRS_da_mo_nv_cheng_mei
-    icon = MSR_focus_archmage_narumi
+    icon = MRS_focus_archmage_narumi
     cost = 1
-    x = -3
+    x = -4
     y = 1
 
     relative_position_id = MRS_zhao_kai_mo_nv_da_hui
@@ -124,7 +124,7 @@ focus_tree = {
   # 尝试接触爱丽丝
   focus = {
     id = MRS_chang_shi_jie_chu_ai_li_si
-    icon = MSR_focus_contact_alice
+    icon = MRS_focus_contact_alice
     cost = 3
     x = 0
     y = 1
@@ -273,7 +273,7 @@ focus_tree = {
   # 大魔女魔理沙
   focus = {
     id = MRS_da_mo_nv_mo_li_sha
-    icon = MSR_focus_archmage_marisa
+    icon = MRS_focus_archmage_marisa
     cost = 1
     x = 0
     y = 1
@@ -329,7 +329,7 @@ focus_tree = {
   # 争取成美支持
   focus = {
     id = MRS_zheng_qu_cheng_mei_zhi_chi
-    icon = MSR_focus_contact_narumi
+    icon = MRS_focus_contact_narumi
     cost = 3
     x = -1
     y = 1
@@ -393,7 +393,7 @@ focus_tree = {
   # 争取爱丽丝支持
   focus = {
     id = MRS_zheng_qu_ai_li_si_zhi_chi
-    icon = MSR_focus_contact_alice
+    icon = MRS_focus_contact_alice
     cost = 3
     x = 1
     y = 1
@@ -595,9 +595,9 @@ focus_tree = {
   # 大魔女爱丽丝
   focus = {
     id = MRS_da_mo_nv_ai_li_si
-    icon = MSR_focus_archmage_alice
+    icon = MRS_focus_archmage_alice
     cost = 1
-    x = 3
+    x = 4
     y = 1
 
     relative_position_id = MRS_zhao_kai_mo_nv_da_hui
@@ -673,7 +673,7 @@ focus_tree = {
   # 尝试接触成美
   focus = {
     id = MRS_chang_shi_jie_chu_cheng_mei
-    icon = MSR_focus_contact_narumi
+    icon = MRS_focus_contact_narumi
     cost = 3
     x = 0
     y = 1
@@ -810,6 +810,759 @@ focus_tree = {
           }
         }
       }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 内战后 after civil war
+  # 尘埃落定
+  focus = {
+    id = MRS_chen_ai_luo_ding
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 8
+
+    relative_position_id = MRS_zhao_kai_mo_nv_da_hui
+
+    available = {
+      OR = {
+        has_global_flag = MRS_civil_war_end_flag
+        has_global_flag = MRS_civil_war_avoided_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_xiao_mie_zhong_zu_qi_shi
+      focus = MRS_ya_zhi_pan_luan_fen_zi
+      focus = MRS_qu_di_ji_jin_si_xiang
+    }
+
+    completion_reward = {
+      add_political_power = 150
+      add_stability = 0.2
+      add_ideas = Town
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 分化反对派
+  focus = {
+    id = MRS_fen_hua_fan_dui_pai
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_chen_ai_luo_ding
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重塑集体认同
+  focus = {
+    id = MRS_chong_su_ji_ti_ren_tong
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_chen_ai_luo_ding
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 恢复生产
+  focus = {
+    id = MRS_hui_fu_sheng_chan
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 培养技术工人
+  focus = {
+    id = MRS_pei_yang_ji_shu_gong_ren
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_hui_fu_sheng_chan
+
+    prerequisite = {
+      focus = MRS_hui_fu_sheng_chan
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加强边界防御
+  focus = {
+    id = MRS_jia_qiang_bian_jie_fang_yu
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 战争计划部
+  focus = {
+    id = MRS_zhan_zheng_ji_hua_bu
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_jia_qiang_bian_jie_fang_yu
+
+    prerequisite = {
+      focus = MRS_jia_qiang_bian_jie_fang_yu
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 改革教育制度
+  focus = {
+    id = MRS_gai_ge_jiao_yu_zhi_du
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 开放教育资源
+  focus = {
+    id = MRS_kai_fang_jiao_yu_zi_yuan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_gai_ge_jiao_yu_zhi_du
+
+    prerequisite = {
+      focus = MRS_gai_ge_jiao_yu_zhi_du
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法之森的未来
+  focus = {
+    id = MRS_mo_fa_zhi_sen_de_wei_lai
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_pei_yang_ji_shu_gong_ren
+    }
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_ji_hua_bu
+    }
+
+    prerequisite = {
+      focus = MRS_kai_fang_jiao_yu_zi_yuan
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 全面合作化
+  focus = {
+    id = MRS_quan_mian_he_zuo_hua
+    icon = unknown
+    cost = 7
+    x = -4
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      has_government = fandong
+    }
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_wei_lai
+    }
+
+    mutually_exclusive = {
+      focus = MRS_mo_fa_shi_gu_li_zhu_yi
+      focus = MRS_mei_gui_yu_he_ping_ge
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 鼓励集体生产
+  focus = {
+    id = MRS_gu_li_ji_ti_sheng_chan
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_quan_mian_he_zuo_hua
+
+    prerequisite = {
+      focus = MRS_quan_mian_he_zuo_hua
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军事委员会
+  focus = {
+    id = MRS_jun_shi_wei_yuan_hui
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_quan_mian_he_zuo_hua
+
+    prerequisite = {
+      focus = MRS_quan_mian_he_zuo_hua
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加入革命运动
+  focus = {
+    id = MRS_jia_ru_ge_ming_yun_dong
+    icon = GFX_focus_befriend_SEJ
+    cost = 7
+    x = -4
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      NOT = {
+        AND = {
+          SEJ = {
+            OR = {
+              exists = no
+              is_puppet = yes
+            }
+          }
+          CIR = {
+            OR = {
+              exists = no
+              is_puppet = yes
+            }
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_gu_li_ji_ti_sheng_chan
+    }
+
+    prerequisite = {
+      focus = MRS_jun_shi_wei_yuan_hui
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法使孤立主义
+  focus = {
+    id = MRS_mo_fa_shi_gu_li_zhu_yi
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      has_government = guli
+    }
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_wei_lai
+    }
+
+    mutually_exclusive = {
+      focus = MRS_quan_mian_he_zuo_hua
+      focus = MRS_mei_gui_yu_he_ping_ge
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 支持现有产业
+  focus = {
+    id = MRS_zhi_chi_xian_you_chan_ye
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_mo_fa_shi_gu_li_zhu_yi
+
+    prerequisite = {
+      focus = MRS_mo_fa_shi_gu_li_zhu_yi
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 选拔精英魔法使
+  focus = {
+    id = MRS_xuan_ba_jing_ying_mo_fa_shi
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_mo_fa_shi_gu_li_zhu_yi
+
+    prerequisite = {
+      focus = MRS_mo_fa_shi_gu_li_zhu_yi
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加入绯红体系
+  focus = {
+    id = MRS_jia_ru_fei_hong_ti_xi
+    icon = unknown
+    cost = 7
+    x = -2
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    prerequisite = {
+      focus = MRS_zhi_chi_xian_you_chan_ye
+    }
+
+    prerequisite = {
+      focus = MRS_xuan_ba_jing_ying_mo_fa_shi
+    }
+
+    available = {
+      NOT = {
+        SCA = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            has_government = neworder
+          }
+        }
+      }
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 独善其身
+  focus = {
+    id = MRS_du_shan_qi_shen
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    prerequisite = {
+      focus = MRS_gu_li_ji_ti_sheng_chan
+      focus = MRS_zhi_chi_xian_you_chan_ye
+      focus = MRS_gu_li_zi_you_jing_zheng
+    }
+
+    prerequisite = {
+      focus = MRS_jun_shi_wei_yuan_hui
+      focus = MRS_xuan_ba_jing_ying_mo_fa_shi
+      focus = MRS_xin_shi_jun_shi_si_xiang
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 博丽-魔法使联邦
+  focus = {
+    id = MRS_bo_li_mo_fa_shi_lian_bang
+    icon = unknown
+    cost = 7
+    x = 2
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    prerequisite = {
+      focus = MRS_zhi_chi_xian_you_chan_ye
+    }
+
+    prerequisite = {
+      focus = MRS_xuan_ba_jing_ying_mo_fa_shi
+    }
+
+    available = {
+      NOT = {
+        HKR = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            NOT = {
+              has_government = qinwai
+              has_government = guli
+            }
+          }
+        }
+      }
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 玫瑰与和平鸽
+  focus = {
+    id = MRS_mei_gui_yu_he_ping_ge
+    icon = unknown
+    cost = 7
+    x = 4
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      has_government = qinwai
+    }
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_wei_lai
+    }
+
+    mutually_exclusive = {
+      focus = MRS_quan_mian_he_zuo_hua
+      focus = MRS_mo_fa_shi_gu_li_zhu_yi
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 鼓励自由竞争
+  focus = {
+    id = MRS_gu_li_zi_you_jing_zheng
+    icon = unknown
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_mei_gui_yu_he_ping_ge
+
+    prerequisite = {
+      focus = MRS_mei_gui_yu_he_ping_ge
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 新式军事思想
+  focus = {
+    id = MRS_xin_shi_jun_shi_si_xiang
+    icon = unknown
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_mei_gui_yu_he_ping_ge
+
+    prerequisite = {
+      focus = MRS_mei_gui_yu_he_ping_ge
+    }
+
+    completion_reward = {
+      
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗结盟
+  focus = {
+    id = MRS_yu_tian_gou_jie_meng
+    icon = GFX_focus_befriend_TEG
+    cost = 7
+    x = 4
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      TEG = {
+        AND = {
+          exists = yes
+          is_puppet = no
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_gu_li_zi_you_jing_zheng
+    }
+
+    prerequisite = {
+      focus = MRS_xin_shi_jun_shi_si_xiang
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+    }
+
+    completion_reward = {
+
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法之森的黎明
+  focus = {
+    id = MRS_mo_fa_zhi_sen_de_li_ming
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    prerequisite = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      
     }
 
     ai_will_do = {

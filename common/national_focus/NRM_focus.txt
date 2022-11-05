@@ -522,7 +522,7 @@ focus_tree = {
   # 加入革命运动
   focus = {
     id = NRM_jia_ru_ge_ming_yun_dong
-    icon = unknown
+    icon = GFX_focus_befriend_SEJ
     cost = 7
     x = -3
     y = 1
@@ -592,7 +592,7 @@ focus_tree = {
   # 与九十九结盟
   focus = {
     id = NRM_yu_jiu_shi_jiu_jie_meng
-    icon = unknown
+    icon = GFX_focus_befriend_radicalist_TKM
     cost = 7
     x = 0
     y = 1

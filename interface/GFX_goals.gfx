@@ -38,6 +38,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+	name = "GFX_focus_attack_SEJ"
+	texturefile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+	}
+
+	SpriteType = {
 	name = "GFX_focus_befriend_TEG"
 	texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
 	}
@@ -45,6 +50,16 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_focus_befriend_TKM"
 	texturefile = "gfx/interface/goals/focus_generic_befriend_TKM.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_befriend_radicalist_TKM"
+	texturefile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_befriend_SEJ"
+	texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
 	}
 
 	#### HKR Hakurei Reimu 博丽神社
@@ -59,63 +74,63 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "MSR_focus_archmage_alice"
-	texturefile = "gfx/interface/goals/focus_MSR_archmage_alice.dds"			
+	name = "MRS_focus_archmage_alice"
+	texturefile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_archmage_marisa"
-	texturefile = "gfx/interface/goals/focus_MSR_archmage_marisa.dds"			
+	name = "MRS_focus_archmage_marisa"
+	texturefile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_archmage_narumi"
-	texturefile = "gfx/interface/goals/focus_MSR_archmage_narumi.dds"			
+	name = "MRS_focus_archmage_narumi"
+	texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_alice_plan"
-	texturefile = "gfx/interface/goals/focus_MSR_alice_plan.dds"			
+	name = "MRS_focus_alice_plan"
+	texturefile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_marisa_plan"
-	texturefile = "gfx/interface/goals/focus_MSR_marisa_plan.dds"			
+	name = "MRS_focus_marisa_plan"
+	texturefile = "gfx/interface/goals/focus_MRS_marisa_plan.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_narumi_plan"
-	texturefile = "gfx/interface/goals/focus_MSR_narumi_plan.dds"			
+	name = "MRS_focus_narumi_plan"
+	texturefile = "gfx/interface/goals/focus_MRS_narumi_plan.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_puppet_legion"
-	texturefile = "gfx/interface/goals/focus_MSR_puppet_legion.dds"			
+	name = "MRS_focus_puppet_legion"
+	texturefile = "gfx/interface/goals/focus_MRS_puppet_legion.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_improve_puppet"
-	texturefile = "gfx/interface/goals/focus_MSR_improve_puppet.dds"			
+	name = "MRS_focus_improve_puppet"
+	texturefile = "gfx/interface/goals/focus_MRS_improve_puppet.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_puppet_support"
-	texturefile = "gfx/interface/goals/focus_MSR_puppet_support.dds"			
+	name = "MRS_focus_puppet_support"
+	texturefile = "gfx/interface/goals/focus_MRS_puppet_support.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_hakkero_production"
-	texturefile = "gfx/interface/goals/focus_MSR_hakkero_production.dds"			
+	name = "MRS_focus_hakkero_production"
+	texturefile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_contact_alice"
-	texturefile = "gfx/interface/goals/focus_MSR_contact_alice.dds"			
+	name = "MRS_focus_contact_alice"
+	texturefile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
 	}
 
 	SpriteType = {
-	name = "MSR_focus_contact_narumi"
-	texturefile = "gfx/interface/goals/focus_MSR_contact_narumi.dds"			
+	name = "MRS_focus_contact_narumi"
+	texturefile = "gfx/interface/goals/focus_MRS_contact_narumi.dds"			
 	}
 
 	SpriteType = {
