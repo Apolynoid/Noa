@@ -28,6 +28,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+	name = "GFX_focus_dust_settled"
+	texturefile = "gfx/interface/goals/focus_generic_dust_settled.dds"			
+	}
+
+	SpriteType = {
 	name = "GFX_focus_attack_SCA"
 	texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
 	}

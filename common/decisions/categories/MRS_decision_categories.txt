@@ -50,6 +50,22 @@ MRS_mo_fa_zhi_sen_chong_jian = {
 	}
 }
 
+# 战争计划决议组
+MRS_fang_yu_zhan_zheng_ji_hua = {
+	icon = generic_political_actions
+
+	priority = 98
+
+	allowed = {
+		original_tag = MRS
+	}
+
+	visible = {
+		original_tag = MRS
+		has_completed_focus = MRS_zhan_zheng_ji_hua_bu
+	}
+}
+
 MRS_Offer_peace_MSD = {
 
 	icon = generic_political_actions

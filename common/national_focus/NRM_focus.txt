@@ -737,6 +737,8 @@ focus_tree = {
       focus = NRM_tuan_jie_mo_fa_dao_ju
     }
 
+    will_lead_to_war_with = TKM
+
     completion_reward = {
       create_wargoal = {
         type = puppet_wargoal_focus
@@ -827,6 +829,8 @@ focus_tree = {
       focus = NRM_xiao_mie_ge_ming_pan_tu
       focus = NRM_tuan_jie_mo_fa_dao_ju
     }
+
+    will_lead_to_war_with = SCA
 
     completion_reward = {
       create_wargoal = {

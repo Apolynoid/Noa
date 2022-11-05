@@ -1011,6 +1011,40 @@ MRS_mo_fa_zhi_sen_chong_jian = {
   }
 }
 
+# 战争计划决议组
+MRS_fang_yu_zhan_zheng_ji_hua = {
+  # 战争计划
+  MRS_dui_FROM_de_zhan_zheng_ji_hua = {
+    target_root_trigger = {
+        has_completed_focus = MRS_zhan_zheng_ji_hua_bu
+    }
+    target_array = global.countries
+    targets_dynamic = yes
+    target_trigger = {
+      FROM = {
+        has_offensive_war_with = MRS
+        NOT = {
+          has_country_flag = MRS_has_completed_war_plan
+        }
+      }
+    }
+    cost = 30
+    days_remove = 90
+
+    targeted_modifier = {
+      tag = FROM
+      attack_bonus_against_cores = 0.2
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      FROM = {
+        set_country_flag = MRS_has_completed_war_plan
+      }
+    }
+  }
+}
+
 MRS_Offer_peace_MSD = {
   MRS_Offer_peace_MSD_dec = {
     allowed = {

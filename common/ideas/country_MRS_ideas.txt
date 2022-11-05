@@ -191,6 +191,16 @@ ideas = {
         consumer_goods_factor = 0.05
       }
     }
+
+    # 内战后 after civil war
+    # 熟练技术工人
+    mrs_shu_lian_ji_shu_gong_ren_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.2
+        industrial_capacity_factory = 0.1
+      }
+    }
 	    
     # 通用国策 shared focus
 

@@ -51,7 +51,7 @@ MRS_qu_di_ji_jin_si_xiang:0 "取缔激进思想"
 MRS_qu_di_ji_jin_si_xiang_desc:0 ""
 # 内战后 after civil war
 MRS_chen_ai_luo_ding:0 "尘埃落定"
-MRS_chen_ai_luo_ding_desc:0 ""
+MRS_chen_ai_luo_ding_desc:0 "无论如何，我们成功的解决了魔法森林的分裂问题。然而，长期的分裂给魔法之森带来的创伤仍然需要许多时间与努力去弥合。我们必须尽快解决国内的遗留问题，以便应对外部潜藏的威胁。"
 MRS_fen_hua_fan_dui_pai:0 "分化反对派"
 MRS_fen_hua_fan_dui_pai_desc:0 ""
 MRS_chong_su_ji_ti_ren_tong:0 "重塑集体认同"
@@ -218,6 +218,9 @@ mrs_cu_jin_zhong_zu_rong_he_idea:0 "促进种族融合"
 mrs_cu_jin_zhong_zu_rong_he_idea_desc:0 ""
 mrs_yu_cheng_mei_tuo_xie_idea:0 "与成美妥协"
 mrs_yu_cheng_mei_tuo_xie_idea_desc:0 ""
+# 内战后 after civil war
+mrs_shu_lian_ji_shu_gong_ren_idea:0 "熟练技术工人"
+mrs_shu_lian_ji_shu_gong_ren_idea_desc:0 ""
 # 通用国策 shared focus
 # 军事线 military
 mrs_fen_lie_de_mo_fa_shi_idea:0 "分裂的魔法使"
@@ -311,6 +314,7 @@ MRS_final_push_tt:0 "解锁§Y最终攻势§!决议"
 MRS_integrate_NRM_tt:0 "§G吞并魔法之森联合体并获得其所有将领§!"
 MRS_integrate_ALI_tt:0 "§G吞并人偶师协会并获得其所有将领§!"
 MRS_integrate_MRS_tt:0 "§G吞并魔女联盟并获得其所有将领§!"
+MRS_border_bunker_tt:0 "§Y在魔法森林边界的每个省份修建2级堡垒§!"
 
  #decision
 # 内战决议组
@@ -357,10 +361,11 @@ MRS_zheng_he_mo_nv_lian_meng:0 "整合魔女联盟"
 MRS_zheng_he_mo_nv_lian_meng_desc:0 ""
 MRS_mo_fa_zhi_sen_zai_tong_yi:0 "魔法之森再统一"
 MRS_mo_fa_zhi_sen_zai_tong_yi_desc:0 ""
-
- bianshen_category:0 "变身决议"
- MMA_jicheng:0 "变为[MRS.GetFlag][MRS.GetName]"
- MRS_jicheng_tt:0 "你会变成[MRS.GetFlag][MRS.GetName]"
+# 战争计划决议组
+MRS_fang_yu_zhan_zheng_ji_hua:0 "防御战争计划"
+MRS_fang_yu_zhan_zheng_ji_hua_desc:0 ""
+MRS_dui_FROM_de_zhan_zheng_ji_hua:0 "对[FROM.GetFlag][FROM.GetName]的战争计划"
+MRS_dui_FROM_de_zhan_zheng_ji_hua_desc:0 ""
 
 # flag
 MRS_victory_in_MSD_war_flag:0 "在兽道战争中胜利"

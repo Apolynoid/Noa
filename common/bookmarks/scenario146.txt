@@ -136,6 +136,7 @@ bookmarks = {
 			}	
             focuses = {
             	MRS_zhao_kai_mo_nv_da_hui
+				MRS_chen_ai_luo_ding
 			}			
 		}
 		"TES"={
