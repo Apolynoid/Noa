@@ -1761,7 +1761,7 @@ news_event = {
 					country_exists = MRS
 				}
 				MRS = {
-					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					add_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 			if = {
@@ -1769,7 +1769,7 @@ news_event = {
 					country_exists = ALI
 				}
 				ALI = {
-					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					add_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 			if = {
@@ -1777,7 +1777,7 @@ news_event = {
 					country_exists = NRM
 				}
 				NRM = {
-					add_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					add_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 			# 特殊地块造核
@@ -1880,7 +1880,7 @@ news_event = {
 						days = 3
 					}
 				}
-			  }
+			}
 		}
 	}
 
@@ -2016,7 +2016,7 @@ news_event = {
 					country_exists = MRS
 				}
 				MRS = {
-					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					remove_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 			if = {
@@ -2024,7 +2024,7 @@ news_event = {
 					country_exists = ALI
 				}
 				ALI = {
-					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					remove_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 			if = {
@@ -2032,7 +2032,7 @@ news_event = {
 					country_exists = NRM
 				}
 				NRM = {
-					remove_ideas = mrs_nei_zhan_jin_ji_sheng_chan_idea
+					remove_ideas = mrs_mo_fa_zhi_sen_nei_zhan_idea
 				}
 			}
 		}
@@ -2470,5 +2470,332 @@ country_event = {
 	option = {
 		name = mrs.125.1
 		clr_country_flag = MRS_puppet_flag
+	}
+}
+
+# SEJ MRS请求加入同盟
+country_event = {
+	id = mrs.126
+	title = mrs.126.t
+	desc = mrs.126.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.126.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = MRS
+		}
+	}
+
+	option = {
+		name = mrs.126.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.128
+			}
+		}
+	}
+}
+
+# CIR MRS请求加入同盟
+country_event = {
+	id = mrs.127
+	title = mrs.127.t
+	desc = mrs.127.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.127.1
+		ai_chance = {
+			base = 10
+		}
+		CIR = {
+			add_to_faction = MRS
+		}
+	}
+
+	option = {
+		name = mrs.127.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.129
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = mrs.128
+	title = mrs.128.t
+	desc = mrs.128.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.128.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRS_jia_ru_ge_ming_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRS_du_shan_qi_shen
+		}
+	}
+}
+
+# CIR 请求被拒绝
+country_event = {
+	id = mrs.129
+	title = mrs.129.t
+	desc = mrs.129.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.129.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRS_jia_ru_ge_ming_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRS_du_shan_qi_shen
+		}
+	}
+}
+
+# SCA MRS请求加入同盟
+country_event = {
+	id = mrs.130
+	title = mrs.130.t
+	desc = mrs.130.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.130.1
+		ai_chance = {
+			base = 10
+		}
+		SCA = {
+			add_to_faction = MRS
+		}
+	}
+
+	option = {
+		name = mrs.130.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.131
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = mrs.131
+	title = mrs.131.t
+	desc = mrs.131.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.131.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRS_jia_ru_fei_hong_ti_xi
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRS_du_shan_qi_shen
+		}
+	}
+}
+
+# HKR MRS请求合并
+country_event = {
+	id = mrs.132
+	title = mrs.132.t
+	desc = mrs.132.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.132.1
+		ai_chance = {
+			base = 10
+		}
+		if = {
+			limit = {
+				MRS = {
+					is_ai = yes
+				}
+			}
+			custom_effect_tooltip = MRS_HKR_transfer_to_MRS_tt
+			hidden_effect = {
+				MRS = {
+					change_tag_from = ROOT
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = MRS_HKR_game_over_warning_tt
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.136
+				set_cosmetic_tag = HKR_MRS
+			}
+			# 将领移交
+			HKR = {
+				every_character = {
+					set_nationality = MRS
+				}
+			}
+			# 装备移交
+			HKR = {
+				transfer_units_fraction= {
+					target = MRS
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					air_ratio = 1
+				}
+			}
+			# 地块吞并
+			HKR = {
+				every_core_state = {
+					add_core_of = MRS
+					remove_core_of = HKR
+					transfer_state_to = MRS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mrs.132.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.133
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = mrs.133
+	title = mrs.133.t
+	desc = mrs.133.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.133.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRS_bo_li_mo_fa_shi_lian_bang
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRS_du_shan_qi_shen
+		}
+	}
+}
+
+# TEG MRS请求加入同盟
+country_event = {
+	id = mrs.134
+	title = mrs.134.t
+	desc = mrs.134.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.134.1
+		ai_chance = {
+			base = 10
+		}
+		TEG = {
+			add_to_faction = MRS
+		}
+	}
+
+	option = {
+		name = mrs.134.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRS = {
+				country_event = mrs.135
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = mrs.135
+	title = mrs.135.t
+	desc = mrs.135.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.135.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRS_yu_tian_gou_jie_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRS_du_shan_qi_shen
+		}
+	}
+}
+
+# 联邦请求被同意
+country_event = {
+	id = mrs.136
+	title = mrs.136.t
+	desc = mrs.136.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mrs.136.1
 	}
 }

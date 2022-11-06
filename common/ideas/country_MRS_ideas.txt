@@ -61,19 +61,8 @@ ideas = {
     }
 
     # 魔法之森内战 Civil War
-    # 内战热情
-    mrs_nei_zhan_re_qing_idea = {
-      picture = unknown
-      cancel = {
-        has_global_flag = MRS_civil_war_end_flag
-      }
-      modifier = {
-        army_org_factor = 0.1
-      }
-    }
-
-    # 内战紧急生产
-    mrs_nei_zhan_jin_ji_sheng_chan_idea = {
+    # 魔法之森内战
+    mrs_mo_fa_zhi_sen_nei_zhan_idea = {
       picture = unknown
       cancel = {
         has_global_flag = MRS_civil_war_end_flag
@@ -83,15 +72,23 @@ ideas = {
           type = arms_factory 
           level = 4
         }
+        set_rule = {
+					can_join_factions = no
+				}
       }
       on_remove = {
         add_offsite_building = {
           type = arms_factory 
           level = -4
         }
+        set_rule = {
+					can_join_factions = yes
+				}
       }
       modifier = {
+        army_org_factor = 0.1
         custom_modifier_tooltip = MRS_civil_war_emergent_production_tt
+        custom_modifier_tooltip = MRS_civil_war_faction_rule_tt
       }
     }
 
@@ -199,6 +196,85 @@ ideas = {
       modifier = {
         production_factory_efficiency_gain_factor = 0.2
         industrial_capacity_factory = 0.1
+      }
+    }
+
+    # 改革教育制度
+    mrs_gai_ge_jiao_yu_zhi_du_idea = {
+      picture = unknown
+      modifier = {
+        research_speed_factor = 0.1
+      }
+    }
+
+    # 集体生产
+    mrs_ji_ti_sheng_chan_idea = {
+      picture = unknown
+      modifier = {
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    # 军事委员会
+    mrs_jun_shi_wei_yuan_hui_idea = {
+      picture = unknown
+      modifier = {
+        command_power_gain_mult = 0.1
+        experience_gain_army_factor = 0.1
+        military_leader_cost_factor = -0.1
+        land_doctrine_cost_factor = -0.1
+      }
+    }
+
+    # 现有产业升级
+    mrs_xian_you_chan_ye_sheng_ji_idea = {
+      picture = unknown
+      modifier = {
+        production_factory_max_efficiency_factor = 0.3
+        production_lack_of_resource_penalty_factor = -0.1
+      }
+    }
+
+    # 选拔精英魔法使
+    mrs_xuan_ba_jing_ying_mo_fa_shi_idea = {
+      picture = unknown
+      modifier = {
+        max_command_power_mult = 0.2
+        command_abilities_cost_factor = -0.1
+        max_training = 0.2
+        assign_army_leader_cp_cost = -0.2
+        army_leader_start_attack_level = 1
+        army_leader_start_defense_level = 1
+        army_leader_start_logistics_level = 1
+        army_leader_start_planning_level = 1
+        field_officer_promotion_penalty = -0.2
+      }
+    }
+
+    # 自由竞争
+    mrs_zi_you_jing_zheng_idea = {
+      picture = unknown
+      modifier = {
+        consumer_goods_factor = -0.03
+        line_change_production_efficiency_factor = 0.2
+      }
+    }
+
+    # 新式军事思想
+    mrs_xin_shi_jun_shi_si_xiang_idea = {
+      picture = unknown
+      modifier = {
+        land_doctrine_cost_factor = -0.15
+      }
+    }
+
+    # 魔法之森的黎明
+    mrs_mo_fa_zhi_sen_de_li_ming_idea = {
+      picture = unknown
+      modifier = {
+        stability_factor = 0.2
+        political_power_gain = 0.1
+        drift_defence_factor = 0.2
       }
     }
 	    

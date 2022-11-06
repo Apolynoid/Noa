@@ -45,24 +45,6 @@ MRS_mo_fa_zhi_sen_nei_zhan = {
         news_event = {
           id = mrs.112
         }
-        MRS = {
-          add_timed_idea = {
-            idea = mrs_nei_zhan_re_qing_idea
-            days = 30
-          }
-        }
-        ALI = {
-          add_timed_idea = {
-            idea = mrs_nei_zhan_re_qing_idea
-            days = 30
-          }
-        }
-        NRM = {
-          add_timed_idea = {
-            idea = mrs_nei_zhan_re_qing_idea
-            days = 30
-          }
-        }
       }
       if = {
         limit = {

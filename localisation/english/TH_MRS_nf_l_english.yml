@@ -197,10 +197,8 @@ MRS_xin_ji_shu_desc:0 ""
 
 #idea
 # 内战 civil war
-mrs_nei_zhan_jin_ji_sheng_chan_idea:0 "内战紧急生产"
-mrs_nei_zhan_jin_ji_sheng_chan_idea_desc:0 ""
-mrs_nei_zhan_re_qing_idea:0 "内战热情"
-mrs_nei_zhan_re_qing_idea_desc:0 "魔法之森的分歧终于到了不可弥合的地步，彻底解决魔法森林分歧的时候到了。"
+mrs_mo_fa_zhi_sen_nei_zhan_idea:0 "魔法之森内战"
+mrs_mo_fa_zhi_sen_nei_zhan_idea_desc:0 "魔法之森的分歧终于到了不可弥合的地步，彻底解决魔法森林分歧的时候到了。"
 mrs_shi_bai_de_zui_zhong_gong_shi_idea:0 "失败的最终攻势"
 mrs_shi_bai_de_zui_zhong_gong_shi_idea_desc:0 "我们的最终攻势失败了，这无疑给我们的士气造成了巨大的打击，同时我们在最终攻势中消耗的大量物资也无疑会削弱前线的战斗力。"
 mrs_fan_dui_zhe_di_kang_yun_dong_idea:0 "反对者抵抗运动"
@@ -221,6 +219,22 @@ mrs_yu_cheng_mei_tuo_xie_idea_desc:0 ""
 # 内战后 after civil war
 mrs_shu_lian_ji_shu_gong_ren_idea:0 "熟练技术工人"
 mrs_shu_lian_ji_shu_gong_ren_idea_desc:0 ""
+mrs_gai_ge_jiao_yu_zhi_du_idea:0 "改革教育制度"
+mrs_gai_ge_jiao_yu_zhi_du_idea_desc:0 ""
+mrs_ji_ti_sheng_chan_idea:0 "集体生产"
+mrs_ji_ti_sheng_chan_idea_desc:0 ""
+mrs_jun_shi_wei_yuan_hui_idea:0 "军事委员会"
+mrs_jun_shi_wei_yuan_hui_idea_desc:0 ""
+mrs_zi_you_jing_zheng_idea:0 "自由竞争"
+mrs_zi_you_jing_zheng_idea_desc:0 ""
+mrs_xian_you_chan_ye_sheng_ji_idea:0 "现有产业升级"
+mrs_xian_you_chan_ye_sheng_ji_idea_desc:0 ""
+mrs_xuan_ba_jing_ying_mo_fa_shi_idea:0 "选拔精英魔法使"
+mrs_xuan_ba_jing_ying_mo_fa_shi_idea_desc:0 ""
+mrs_xin_shi_jun_shi_si_xiang_idea:0 "新式军事思想"
+mrs_xin_shi_jun_shi_si_xiang_idea_desc:0 ""
+mrs_mo_fa_zhi_sen_de_li_ming_idea:0 "魔法之森的黎明"
+mrs_mo_fa_zhi_sen_de_li_ming_idea_desc:0 ""
 # 通用国策 shared focus
 # 军事线 military
 mrs_fen_lie_de_mo_fa_shi_idea:0 "分裂的魔法使"
@@ -301,6 +315,7 @@ MRS_quganshaoshuzuyi_op:0 "驱赶南魔法森林的少数族裔"
 
 #tt
 MRS_civil_war_emergent_production_tt:0 "§G获得4个军用工厂§!"
+MRS_civil_war_faction_rule_tt:0 "§R不能加入阵营§!"
 MRS_auto_complete_tt:0 "§G这项国策会随着游戏进程自动完成§!"
 MRS_doctrine_skip_tt:0 "§R请注意三个方案国策在完成一个后会自动跳过另外两个！§!"
 MRS_magic_energy_149_tt:0 "§Y获得149季魔导聚能核心科技§!"
@@ -315,6 +330,8 @@ MRS_integrate_NRM_tt:0 "§G吞并魔法之森联合体并获得其所有将领§
 MRS_integrate_ALI_tt:0 "§G吞并人偶师协会并获得其所有将领§!"
 MRS_integrate_MRS_tt:0 "§G吞并魔女联盟并获得其所有将领§!"
 MRS_border_bunker_tt:0 "§Y在魔法森林边界的每个省份修建2级堡垒§!"
+MRS_HKR_transfer_to_MRS_tt:0 "§Y作为[MRS.GetName]继续游戏§!"
+MRS_HKR_game_over_warning_tt:0 "§R[MRS.GetName]吞并[HKR.GetName]，游戏结束§!"
 
  #decision
 # 内战决议组
@@ -397,3 +414,6 @@ MRS_civil_war_avoided_flag:0 "避免了魔法之森内战"
  
  MRS_douguoqule:0 "都过去了"
  MRS_douguoqule_desc:0 "我们现在也是妖怪了，没有必要再为之前的冲突流血了。"
+
+# rule description
+MRS_civil_war_faction_rule:0 "内战中不能加入阵营"
