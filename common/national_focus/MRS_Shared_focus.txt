@@ -524,6 +524,11 @@ shared_focus = {
       }
       icon = "GFX_magic_energy149_hakkero"
     }
+    add_equipment_to_stockpile = {
+      type = magic_energy149
+      amount = 100
+      variant_name = "八卦炉"
+    }
   }
 
   ai_will_do = {

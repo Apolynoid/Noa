@@ -1178,6 +1178,8 @@ focus_tree = {
         popularity = 0.2
       }
       add_stability = 0.1
+      lobbyincrease = yes
+		  conservativeincrease = yes
     }
 
     ai_will_do = {
@@ -1237,7 +1239,7 @@ focus_tree = {
     id = MRS_jia_ru_ge_ming_yun_dong
     icon = GFX_focus_befriend_SEJ
     cost = 7
-    x = -4
+    x = -6
     y = 3
 
     relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
@@ -1270,9 +1272,11 @@ focus_tree = {
     }
 
     mutually_exclusive = {
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_jia_ru_fei_hong_ti_xi
       focus = MRS_du_shan_qi_shen
       focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
       focus = MRS_yu_tian_gou_jie_meng
     }
 
@@ -1294,6 +1298,54 @@ focus_tree = {
         SEJ = {
           country_event = mrs.126
         }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 团结魔法道具
+  focus = {
+    id = MRS_tuan_jie_mo_fa_dao_ju
+    icon = GFX_focus_befriend_radicalist_TKM
+    cost = 7
+    x = -4
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    prerequisite = {
+      focus = MRS_gu_li_ji_ti_sheng_chan
+    }
+
+    prerequisite = {
+      focus = MRS_jun_shi_wei_yuan_hui
+    }
+
+    available = {
+      TKM = {
+        AND = {
+          exists = yes
+          is_puppet = no
+          has_government = fandong
+        }
+      }
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      TKM = {
+        country_event = mrs.139
       }
     }
 
@@ -1331,6 +1383,8 @@ focus_tree = {
         popularity = 0.2
       }
       add_stability = 0.1
+      lobbydecrease = yes
+      conservativedecrease = yes
     }
 
     ai_will_do = {
@@ -1391,7 +1445,7 @@ focus_tree = {
   # 加入绯红体系
   focus = {
     id = MRS_jia_ru_fei_hong_ti_xi
-    icon = unknown
+    icon = GFX_focus_befriend_SCA
     cost = 7
     x = -2
     y = 3
@@ -1420,8 +1474,10 @@ focus_tree = {
 
     mutually_exclusive = {
       focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_du_shan_qi_shen
       focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
       focus = MRS_yu_tian_gou_jie_meng
     }
 
@@ -1460,8 +1516,10 @@ focus_tree = {
 
     mutually_exclusive = {
       focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_jia_ru_fei_hong_ti_xi
       focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
       focus = MRS_yu_tian_gou_jie_meng
     }
 
@@ -1477,7 +1535,7 @@ focus_tree = {
   # 博丽-魔法使联邦
   focus = {
     id = MRS_bo_li_mo_fa_shi_lian_bang
-    icon = unknown
+    icon = MRS_focus_HKR_MRS_federation
     cost = 7
     x = 2
     y = 3
@@ -1509,8 +1567,10 @@ focus_tree = {
 
     mutually_exclusive = {
       focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_jia_ru_fei_hong_ti_xi
       focus = MRS_du_shan_qi_shen
+      focus = MRS_yu_fu_sang_shen_he_zuo
       focus = MRS_yu_tian_gou_jie_meng
     }
 
@@ -1554,6 +1614,8 @@ focus_tree = {
         popularity = 0.2
       }
       add_stability = 0.1
+      lobbydecrease = yes
+      conservativeincrease = yes
     }
 
     ai_will_do = {
@@ -1612,12 +1674,60 @@ focus_tree = {
     }
   }
 
+  # 与付丧神合作
+  focus = {
+    id = MRS_yu_fu_sang_shen_he_zuo
+    icon = GFX_focus_befriend_TKM
+    cost = 7
+    x = 4
+    y = 3
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
+
+    available = {
+      TKM = {
+        AND = {
+          exists = yes
+          is_puppet = no
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_gu_li_zi_you_jing_zheng
+    }
+
+    prerequisite = {
+      focus = MRS_xin_shi_jun_shi_si_xiang
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_du_shan_qi_shen
+      focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_tian_gou_jie_meng
+    }
+
+    completion_reward = {
+      TKM = {
+        country_event = mrs.137
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
   # 与天狗结盟
   focus = {
     id = MRS_yu_tian_gou_jie_meng
     icon = GFX_focus_befriend_TEG
     cost = 7
-    x = 4
+    x = 6
     y = 3
 
     relative_position_id = MRS_mo_fa_zhi_sen_de_wei_lai
@@ -1642,9 +1752,11 @@ focus_tree = {
 
     mutually_exclusive = {
       focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_jia_ru_fei_hong_ti_xi
       focus = MRS_du_shan_qi_shen
       focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
     }
 
     completion_reward = {

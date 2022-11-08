@@ -67,6 +67,11 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
 	}
 
+	SpriteType = {
+	name = "GFX_focus_befriend_SCA"
+	texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.dds"			
+	}
+
 	#### HKR Hakurei Reimu 博丽神社
 
 	
@@ -141,6 +146,11 @@ spriteTypes = {
 	SpriteType = {
 	name = "MRS_focus_magical_forest_map"
 	texturefile = "gfx/interface/goals/focus_MRS_magical_forest_map.dds"			
+	}
+
+	SpriteType = {
+	name = "MRS_focus_HKR_MRS_federation"
+	texturefile = "gfx/interface/goals/focus_MRS_HKR_MRS_federation.png"			
 	}
 
 	#### NRM Yatadera Narumi 魔法之森联合体

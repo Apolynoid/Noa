@@ -65,7 +65,7 @@
         Magician
         Tribal
         dove3
-        close1
+        open1
         normal_border
         sc_rule
     }

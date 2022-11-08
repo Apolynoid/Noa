@@ -37,7 +37,7 @@ ideas = {
 
     # 民兵
     nrm_min_bing_idea = {
-      picture = unknown
+      picture = citizen_militia_1
       modifier = {
         conscription = 0.02
         training_time_army_factor = -0.1
@@ -47,7 +47,7 @@ ideas = {
 
     # 公民军
     nrm_gong_min_jun_idea = {
-      picture = unknown
+      picture = ETH_peacekeeping_forces
       modifier = {
         conscription = 0.02
         training_time_army_factor = -0.2
@@ -61,7 +61,7 @@ ideas = {
 
     # 魔法之森科学院
     nrm_mo_fa_zhi_sen_ke_xue_yuan_idea = {
-      picture = unknown
+      picture = generic_research_bonus
       modifier = {
         research_speed_factor = 0.1
       }
@@ -140,7 +140,7 @@ ideas = {
 
     # 革命的魔法之森
     nrm_ge_ming_de_mo_fa_zhi_sen_idea = {
-      picture = unknown
+      picture = SPR_torchbearers_of_tomorrow
       modifier = {
         stability_factor = 0.1
         war_support_factor = 0.1

@@ -4,12 +4,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_backward_production"
 		texturefile = "gfx/interface/ideas/generic_backward_production.dds"
-	}		
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_TEG_support"
+		texturefile = "gfx/interface/ideas/generic_TEG_support.dds"
+	}	
 	
 	#### MRS Kirisame Marisa 魔法之森
 	spriteType = {
 		name = "GFX_idea_MSD_war"
 		texturefile = "gfx/interface/ideas/mrs_MSD_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_magical_forest_map"
+		texturefile = "gfx/interface/ideas/mrs_magical_forest_map.dds"
 	}
 
 	spriteType = {
