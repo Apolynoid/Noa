@@ -91,23 +91,13 @@ ALI_zhan_zheng_ji_hua = {
       }
     }
     available = {
-      NOT = {
-        has_country_flag = ALI_making_war_plan_flag
-      }
+
     }
     cost = 30
     days_remove = 90
-    complete_effect = {
-      ROOT = {
-        set_country_flag = ALI_making_war_plan_flag
-      }
-    }
     remove_effect = {
       FROM = {
         set_country_flag = ALI_war_plan
-      }
-      ROOT = {
-        clr_country_flag = ALI_making_war_plan_flag
       }
     }
   }

@@ -695,6 +695,8 @@ MRS_mo_fa_zhi_sen_chong_jian = {
         NRM = {
           every_character = {
             set_nationality = ROOT
+            clr_character_flag = nationality_NRM
+            set_character_flag = nationality_@ROOT
           }
         }
         NRM = {
@@ -741,6 +743,8 @@ MRS_mo_fa_zhi_sen_chong_jian = {
         ALI = {
           every_character = {
             set_nationality = ROOT
+            clr_character_flag = nationality_ALI
+            set_character_flag = nationality_@ROOT
           }
         }
         ALI = {
@@ -795,6 +799,8 @@ MRS_mo_fa_zhi_sen_chong_jian = {
         MRS = {
           every_character = {
             set_nationality = ROOT
+            clr_character_flag = nationality_MRS
+            set_character_flag = nationality_@ROOT
           }
         }
         MRS = {

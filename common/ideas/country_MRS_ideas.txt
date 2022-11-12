@@ -4,7 +4,7 @@ ideas = {
 
     # 分裂的魔法使
     mrs_fen_lie_de_mo_fa_shi_idea = {
-      picture = generic_disjointed_gov
+      picture = MRS_divided_MRS
       allowed = {
         always = no
       }
@@ -63,7 +63,7 @@ ideas = {
     # 魔法之森内战 Civil War
     # 魔法之森内战
     mrs_mo_fa_zhi_sen_nei_zhan_idea = {
-      picture = unknown
+      picture = tfv_can_conscription_crisis
       cancel = {
         has_global_flag = MRS_civil_war_end_flag
       }
@@ -94,7 +94,7 @@ ideas = {
 
     # 失败的最终攻势
     mrs_shi_bai_de_zui_zhong_gong_shi_idea = {
-      picture = unknown
+      picture = tur_disorganised_armed_forces
       cancel = {
         has_global_flag = MRS_civil_war_end_flag
       }
@@ -141,7 +141,7 @@ ideas = {
 
     # 再统一的魔法之森
     mrs_zai_tong_yi_de_mo_fa_zhi_sen_idea = {
-      picture = unknown
+      picture = generic_reunited
       modifier = {
         political_power_factor = 0.1
         stability_factor = 0.1
@@ -152,7 +152,7 @@ ideas = {
     # 政治线 political
     # 政治混乱 爱丽丝
     mrs_zheng_zhi_hun_luan_a_idea = {
-      picture = unknown
+      picture = generic_disjointed_gov
       modifier = {
         political_power_gain = -0.5
       }
@@ -160,7 +160,7 @@ ideas = {
 
     # 政治混乱 成美
     mrs_zheng_zhi_hun_luan_b_idea = {
-      picture = unknown
+      picture = generic_disjointed_gov
       modifier = {
         political_power_gain = -1.0
       }
@@ -168,7 +168,7 @@ ideas = {
 
     # 与爱丽丝妥协
     mrs_yu_ai_li_si_tuo_xie_idea = {
-      picture = unknown
+      picture = MRS_compromise_with_alice
       modifier = {
         political_power_cost = 0.1
         stability_factor = -0.05
@@ -179,7 +179,7 @@ ideas = {
 
     # 魔法之森的平等
     mrs_mo_fa_zhi_sen_de_ping_deng_idea = {
-      picture = unknown
+      picture = neutrality_idea
       modifier = {
         political_power_cost = 0.05
         ST_race_penalty_all_factor = -0.2
@@ -188,7 +188,7 @@ ideas = {
 
     # 促进种族融合
     mrs_cu_jin_zhong_zu_rong_he_idea = {
-      picture = unknown
+      picture = generic_cooperation
       modifier = {
         CONV_convert_cost_factor = -0.1
       }
@@ -196,7 +196,7 @@ ideas = {
 
     # 与成美妥协
     mrs_yu_cheng_mei_tuo_xie_idea = {
-      picture = unknown
+      picture = MRS_compromise_with_narumi
       modifier = {
         political_power_cost = 0.3
         stability_factor = -0.05
@@ -515,7 +515,7 @@ ideas = {
 
     # 优化生产结构
     mrs_you_hua_sheng_chan_jie_gou_idea = {
-      picture = unknown
+      picture = SOV_fourth_five_year_plan
       modifier = {
         industrial_capacity_factory = 0.15
       }
@@ -523,7 +523,7 @@ ideas = {
 
     # 改造魔法之森
     mrs_gai_zao_mo_fa_zhi_sen_idea = {
-      picture = SOV_fourth_five_year_plan
+      picture = generic_production_bonus
       modifier = {
         production_speed_buildings_factor = 0.15
       }
@@ -540,7 +540,7 @@ ideas = {
 
     # 传统生产方式
     mrs_chuan_tong_sheng_chan_fang_shi_idea = {
-      picture = unknown
+      picture = ETH_dire_dawa_industries
       modifier = {
         production_factory_efficiency_gain_factor = 0.15
       }
@@ -548,7 +548,7 @@ ideas = {
 
     # 传统生产方式 谨慎机械化
     mrs_chuan_tong_sheng_chan_fang_shi_a_idea = {
-      picture = unknown
+      picture = ETH_dire_dawa_industries
       modifier = {
         production_factory_efficiency_gain_factor = 0.15
         industrial_capacity_factory = 0.1
@@ -557,7 +557,7 @@ ideas = {
 
     # 传统生产方式 村社主义
     mrs_chuan_tong_sheng_chan_fang_shi_b_idea = {
-      picture = unknown
+      picture = ETH_dire_dawa_industries
       modifier = {
         production_factory_efficiency_gain_factor = 0.15
         production_factory_start_efficiency_factor = 0.2
@@ -568,7 +568,7 @@ ideas = {
 
     # 传统生产方式 合作生产
     mrs_chuan_tong_sheng_chan_fang_shi_c_idea = {
-      picture = unknown
+      picture = ETH_dire_dawa_industries
       modifier = {
         production_factory_efficiency_gain_factor = 0.2
         production_factory_start_efficiency_factor = 0.2
@@ -580,7 +580,7 @@ ideas = {
 
     # 扩大生产线
     mrs_kuo_da_sheng_chan_xian_idea = {
-      picture = unknown
+      picture = generic_mass_production
       modifier = {
         production_factory_efficiency_gain_factor = 0.1
         production_factory_max_efficiency_factor = 0.15
@@ -590,7 +590,7 @@ ideas = {
 
     # 简化生产线
     mrs_jian_hua_sheng_chan_xian_idea = {
-      picture = unknown
+      picture = generic_production
       modifier = {
         production_factory_efficiency_gain_factor = 0.3
         production_factory_max_efficiency_factor = 0.05
@@ -601,7 +601,7 @@ ideas = {
 
     # 魔法文献馆
     mrs_mo_fa_wen_xian_guan_idea = {
-      picture = unknown
+      picture = generic_book
       research_bonus = {
         magic = 0.1
       }
@@ -609,7 +609,7 @@ ideas = {
 
     # 魔法文献馆 平等教育机会
     mrs_mo_fa_wen_xian_guan_a_idea = {
-      picture = unknown
+      picture = generic_book
       research_bonus = {
         magic = 0.2
         race = 0.1

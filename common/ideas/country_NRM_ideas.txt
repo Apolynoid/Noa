@@ -4,7 +4,7 @@ ideas = {
 
     # 妖怪的战斗力
     nrm_yao_guai_de_zhan_dou_li_idea = {
-      picture = unknown
+      picture = eng_special_air_service
       modifier = {
         army_attack_factor = 0.1
         army_defence_factor = 0.1

@@ -5,6 +5,41 @@ spriteTypes = {
 		name = "GFX_idea_backward_production"
 		texturefile = "gfx/interface/ideas/generic_backward_production.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_generic_book"
+		texturefile = "gfx/interface/ideas/generic_book.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_generic_mass_production"
+		texturefile = "gfx/interface/ideas/generic_mass_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_production"
+		texturefile = "gfx/interface/ideas/generic_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_reunited"
+		texturefile = "gfx/interface/ideas/generic_reunited.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_propaganda_campaign"
+		texturefile = "gfx/interface/ideas/generic_propaganda_campaign.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_cooperation"
+		texturefile = "gfx/interface/ideas/generic_cooperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_placation"
+		texturefile = "gfx/interface/ideas/generic_placation.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_generic_TEG_support"
@@ -12,6 +47,11 @@ spriteTypes = {
 	}	
 	
 	#### MRS Kirisame Marisa 魔法之森
+	spriteType = {
+		name = "GFX_idea_MRS_divided_MRS"
+		texturefile = "gfx/interface/ideas/mrs_divided_MRS.dds"
+	}
+
 	spriteType = {
 		name = "GFX_idea_MSD_war"
 		texturefile = "gfx/interface/ideas/mrs_MSD_war.dds"
@@ -22,6 +62,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/mrs_magical_forest_map.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_MRS_compromise_with_alice"
+		texturefile = "gfx/interface/ideas/mrs_compromise_with_alice.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_compromise_with_narumi"
+		texturefile = "gfx/interface/ideas/mrs_compromise_with_narumi.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_idea_alice_plan"
 		texturefile = "gfx/interface/ideas/mrs_alice_plan.dds"
@@ -35,5 +85,17 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_narumi_plan"
 		texturefile = "gfx/interface/ideas/mrs_narumi_plan.dds"
+	}
+
+	#### ALI Alice Margatroid 人偶师协会
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo"
+		texturefile = "gfx/interface/ideas/ali_ningyo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ALI_the_only_hegemony_in_gensokyo"
+		texturefile = "gfx/interface/ideas/ali_the_only_hegemony_in_gensokyo.dds"
 	}
 }

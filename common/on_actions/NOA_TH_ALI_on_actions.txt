@@ -18,4 +18,19 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ALI
+						has_completed_focus = ALI_can_shi_ce_lve
+					}
+				}
+				FROM = {
+					country_event = ali.106
+				}
+			}
+		}
+	}
 }

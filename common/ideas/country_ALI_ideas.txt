@@ -4,7 +4,7 @@ ideas = {
 
     # 人偶的协助 生产
     ali_ren_ou_de_xie_zhu_a_idea = {
-      picture = unknown
+      picture = ALI_ningyo
       modifier = {
         production_factory_efficiency_gain_factor = 0.1
         production_factory_max_efficiency_factor = 0.1
@@ -15,7 +15,7 @@ ideas = {
 
     # 人偶的协助 战斗
     ali_ren_ou_de_xie_zhu_b_idea = {
-      picture = unknown
+      picture = ALI_ningyo
       modifier = {
         army_attack_factor = 0.1
         army_defence_factor = 0.1
@@ -26,7 +26,7 @@ ideas = {
 
     # 人偶的协助 综合
     ali_ren_ou_de_xie_zhu_c_idea = {
-      picture = unknown
+      picture = ALI_ningyo
       modifier = {
         production_factory_efficiency_gain_factor = 0.1
         production_factory_max_efficiency_factor = 0.1
@@ -41,7 +41,7 @@ ideas = {
 
     # 怀柔政策
     ali_huai_rou_zheng_ce_idea = {
-      picture = unknown
+      picture = generic_placation
       modifier = {
         ST_race_penalty_all_factor = -0.3
         political_power_cost = 0.05
@@ -50,7 +50,7 @@ ideas = {
 
     # 宣传攻势
     ali_xuan_chuan_gong_shi_idea = {
-      picture = unknown
+      picture = generic_propaganda_campaign
       cancel = {
         has_global_flag = MRS_civil_war_end_flag
       }
@@ -66,7 +66,7 @@ ideas = {
 
     # 人偶工坊扩大化
     ali_ren_ou_gong_fang_kuo_da_hua_idea = {
-      picture = unknown
+      picture = generic_central_management
       modifier = {
         weekly_manpower = 10
       }
@@ -270,7 +270,7 @@ ideas = {
 
     # 援助魔法之森
     ali_yuan_zhu_mo_fa_zhi_sen_idea = {
-      picture = unknown
+      picture = ETH_customs_barrier_ITA
       modifier = {
         consumer_goods_factor = 0.01
       }
@@ -373,12 +373,13 @@ ideas = {
         industrial_capacity_factory = 0.2
         production_factory_max_efficiency_factor = 0.2
         production_speed_buildings_factor = -0.2
+        production_speed_rail_way_factor = 0.3
       }
     }
 
     # 幻想乡的唯一霸权
     ali_huan_xiang_xiang_de_wei_yi_ba_quan_idea = {
-      picture = unknown
+      picture = ALI_the_only_hegemony_in_gensokyo
       modifier = {
         stability_factor = 0.3
       }
@@ -386,7 +387,7 @@ ideas = {
 
     # 停滞的战争机器
     ali_ting_zhi_de_zhan_zheng_ji_qi_idea = {
-      picture = unknown
+      picture = great_depression
       modifier = {
         army_attack_factor = -0.5
         army_defence_factor = -0.5

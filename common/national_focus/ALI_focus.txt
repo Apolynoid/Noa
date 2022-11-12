@@ -889,6 +889,7 @@ focus_tree = {
     }
 
     completion_reward = {
+      add_political_power = 50
       add_popularity = {
         ideology = oldorder
         popularity = 0.5
@@ -928,11 +929,13 @@ focus_tree = {
         XXX = {
           ALI_ski = {
               set_nationality = ALI
+              set_character_flag = nationality_ALI
           }
         }
         XXX = {
           ALI_yumeko = {
               set_nationality = ALI
+              set_character_flag = nationality_ALI
           }
         }
         country_event = ali.101
@@ -1313,6 +1316,11 @@ focus_tree = {
         remove_ideas = ali_ting_zhi_de_zhan_zheng_ji_qi_idea
       }
       add_ideas = ali_huan_xiang_xiang_de_wei_yi_ba_quan_idea
+      hidden_effect = {
+        news_event = {
+          id = ali.107
+        }
+      }
     }
     ai_will_do = {
       factor = 1

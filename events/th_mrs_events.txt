@@ -843,17 +843,20 @@ country_event = {
 			inherit_technology = MRS
 		}
 		# 领导人变动
-		set_nationality = {
-			target_country = ALI
-			character = ALI_ali
+		ALI_ali = {
+			set_nationality = ALI
+			set_character_flag = nationality_ALI
+			clr_character_flag = nationality_MRS
 		}
-		set_nationality = {
-			target_country = ALI
-			character = ALI_shh
+		ALI_shh = {
+			set_nationality = ALI
+			set_character_flag = nationality_ALI
+			clr_character_flag = nationality_MRS
 		}
-		set_nationality = {
-			target_country = ALI
-			character = ALI_hor
+		ALI_hor = {
+			set_nationality = ALI
+			set_character_flag = nationality_ALI
+			clr_character_flag = nationality_MRS
 		}
 		ALI = {
 			retire_ideology_leader = qinwai
@@ -981,9 +984,10 @@ country_event = {
 			inherit_technology = MRS
 		}
 		# 领导人变动
-		set_nationality = {
-			target_country = NRM
-			character = MRS_narumi
+		MRS_narumi = {
+			set_nationality = NRM
+			set_character_flag = nationality_NRM
+			clr_character_flag = nationality_MRS
 		}
 		NRM = {
 			retire_ideology_leader = fandong
@@ -1298,6 +1302,14 @@ news_event = {
 				tag = ALI
 				tag = NRM
 			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_puppet = no
+				}
+			}
+			add_political_power = 100
 		}
 		hidden_effect = {
 			country_event = {
