@@ -66,15 +66,18 @@ ideas = {
 
     # 人偶工坊扩大化
     ali_ren_ou_gong_fang_kuo_da_hua_idea = {
-      picture = generic_central_management
+      picture = ALI_ningyo_workshop
       modifier = {
-        weekly_manpower = 10
+        weekly_manpower = 4
+        army_morale_factor = 0.1
+        experience_loss_factor = -0.2
+        supply_consumption_factor = -0.1
       }
     }
 
     # 魔法之森中小企业
     ali_mo_fa_zhi_sen_zhong_xiao_qi_ye_idea = {
-      picture = unknown
+      picture = generic_local_self_management
       modifier = {
         research_speed_factor = 0.05
         political_power_cost = 0.05
@@ -84,7 +87,7 @@ ideas = {
 
     # 人偶用于宣传
     ali_ren_ou_yong_yu_xuan_chuan_idea = {
-      picture = unknown
+      picture = ALI_ningyo_propaganda
       modifier = {
         political_power_gain = 0.2
         drift_defence_factor = 0.1
@@ -278,7 +281,7 @@ ideas = {
 
     # 自力更生
     ali_zi_li_geng_sheng_idea = {
-      picture = unknown
+      picture = generic_intel_bonus
       modifier = {
         production_speed_buildings_factor = 0.1
         production_factory_start_efficiency_factor = 0.1

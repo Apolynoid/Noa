@@ -143,9 +143,9 @@ ideas = {
     mrs_zai_tong_yi_de_mo_fa_zhi_sen_idea = {
       picture = generic_reunited
       modifier = {
-        political_power_factor = 0.1
-        stability_factor = 0.1
-        war_support_factor = 0.2
+        political_power_factor = 0.2
+        stability_factor = 0.3
+        war_support_factor = 0.3
       }
     }
 

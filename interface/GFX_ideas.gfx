@@ -93,6 +93,16 @@ spriteTypes = {
 		name = "GFX_idea_ALI_ningyo"
 		texturefile = "gfx/interface/ideas/ali_ningyo.dds"
 	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo_propaganda"
+		texturefile = "gfx/interface/ideas/ali_ningyo_propaganda.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo_workshop"
+		texturefile = "gfx/interface/ideas/ali_ningyo_workshop.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_idea_ALI_the_only_hegemony_in_gensokyo"

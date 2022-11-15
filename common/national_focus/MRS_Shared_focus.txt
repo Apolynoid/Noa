@@ -94,7 +94,7 @@ shared_focus = {
   }
 
   completion_reward = {
-    army_experience = 20
+    army_experience = 30
     add_manpower = 300
   }
 
@@ -118,6 +118,7 @@ shared_focus = {
   }
 
   completion_reward = {
+    army_experience = 20
     add_ideas = mrs_jun_shi_xue_yuan_idea
   }
 
@@ -280,6 +281,7 @@ shared_focus = {
   }
 
   completion_reward = {
+    army_experience = 20
     if = {
       limit = {
         has_idea = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
