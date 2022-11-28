@@ -47,7 +47,7 @@ shared_focus = {
 # 军备审查
 shared_focus = {
   id = MRS_jun_bei_shen_cha
-  icon = GFX_focus_eqiupment_check
+  icon = GFX_focus_equipment_check
   cost = 12
   x = -2
   y = 1

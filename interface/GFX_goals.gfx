@@ -3,6 +3,11 @@ spriteTypes = {
 	#### Generic goal icons
 
 	SpriteType = {
+		name = "GFX_focus_skillful_workers"
+		texturefile = "gfx/interface/goals/focus_generic_skillful_workers.dds"			
+	}
+
+	SpriteType = {
 	name = "GFX_focus_civ_mil_combination"
 	texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
 	}	
@@ -23,8 +28,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_focus_eqiupment_check"
-	texturefile = "gfx/interface/goals/focus_eqiupment_check.dds"			
+	name = "GFX_focus_equipment_check"
+	texturefile = "gfx/interface/goals/focus_equipment_check.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improved_education"
+		texturefile = "gfx/interface/goals/focus_generic_improved_education.dds"			
 	}
 
 	SpriteType = {
@@ -164,6 +174,11 @@ spriteTypes = {
 	SpriteType = {
 	name = "ALI_focus_fight_against_tyranny"
 	texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
+	}
+
+	SpriteType = {
+	name = "ALI_focus_magical_forest_new_look"
+	texturefile = "gfx/interface/goals/focus_ALI_magical_forest_new_look.dds"			
 	}
 
 	SpriteType = {

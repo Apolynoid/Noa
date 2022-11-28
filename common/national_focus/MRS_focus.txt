@@ -178,7 +178,7 @@ focus_tree = {
   # 鼓励弱者联合
   focus = {
     id = MRS_gu_li_ruo_zhe_lian_he
-    icon = unknown
+    icon = GFX_focus_ITA_corpo_volontari_della_liberta
     cost = 7
     x = 0
     y = 1
@@ -532,7 +532,7 @@ focus_tree = {
   # 压制叛乱分子
   focus = {
     id = MRS_ya_zhi_pan_luan_fen_zi
-    icon = unknown
+    icon = GFX_focus_eng_move_to_secure_the_dominions
     cost = 7
     x = 0
     y = 1
@@ -727,7 +727,7 @@ focus_tree = {
   # 保护自治区
   focus = {
     id = MRS_bao_hu_zi_zhi_qu
-    icon = unknown
+    icon = GFX_focus_generic_self_management
     cost = 7
     x = 0
     y = 1
@@ -774,7 +774,7 @@ focus_tree = {
   # 取缔激进思想
   focus = {
     id = MRS_qu_di_ji_jin_si_xiang
-    icon = unknown
+    icon = GFX_goal_demand_sudetenland
     cost = 7
     x = 0
     y = 1
@@ -969,7 +969,7 @@ focus_tree = {
   # 培养技术工人
   focus = {
     id = MRS_pei_yang_ji_shu_gong_ren
-    icon = unknown
+    icon = GFX_focus_skillful_workers
     cost = 7
     x = 0
     y = 1
@@ -1070,7 +1070,7 @@ focus_tree = {
   # 改革教育制度
   focus = {
     id = MRS_gai_ge_jiao_yu_zhi_du
-    icon = unknown
+    icon = GFX_focus_improved_education
     cost = 7
     x = 2
     y = 2
@@ -1190,7 +1190,7 @@ focus_tree = {
   # 鼓励集体生产
   focus = {
     id = MRS_gu_li_ji_ti_sheng_chan
-    icon = unknown
+    icon = GFX_focus_SOV_merge_plants
     cost = 7
     x = -1
     y = 1
@@ -1626,7 +1626,7 @@ focus_tree = {
   # 鼓励自由竞争
   focus = {
     id = MRS_gu_li_zi_you_jing_zheng
-    icon = unknown
+    icon = GFX_goal_generic_positive_trade_relations
     cost = 7
     x = -1
     y = 1
@@ -1649,7 +1649,7 @@ focus_tree = {
   # 新式军事思想
   focus = {
     id = MRS_xin_shi_jun_shi_si_xiang
-    icon = unknown
+    icon = GFX_goal_generic_air_doctrine
     cost = 7
     x = 1
     y = 1
@@ -1782,9 +1782,11 @@ focus_tree = {
 
     prerequisite = {
       focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_tuan_jie_mo_fa_dao_ju
       focus = MRS_jia_ru_fei_hong_ti_xi
       focus = MRS_du_shan_qi_shen
       focus = MRS_bo_li_mo_fa_shi_lian_bang
+      focus = MRS_yu_fu_sang_shen_he_zuo
       focus = MRS_yu_tian_gou_jie_meng
     }
 

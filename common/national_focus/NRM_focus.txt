@@ -928,7 +928,7 @@ focus_tree = {
   # 革命的联合体
   focus = {
     id = NRM_ge_ming_de_lian_he_ti
-    icon = unknown
+    icon = GFX_focus_spr_torchbearers_of_tomorrow
     cost = 7
     x = 0
     y = 5

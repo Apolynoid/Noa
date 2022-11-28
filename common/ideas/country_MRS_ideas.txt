@@ -208,7 +208,7 @@ ideas = {
     # 内战后 after civil war
     # 熟练技术工人
     mrs_shu_lian_ji_shu_gong_ren_idea = {
-      picture = unknown
+      picture = generic_skillful_workers
       modifier = {
         production_factory_efficiency_gain_factor = 0.2
         industrial_capacity_factory = 0.1
@@ -217,7 +217,7 @@ ideas = {
 
     # 改革教育制度
     mrs_gai_ge_jiao_yu_zhi_du_idea = {
-      picture = unknown
+      picture = generic_improved_education
       modifier = {
         research_speed_factor = 0.1
       }
@@ -244,7 +244,7 @@ ideas = {
 
     # 现有产业升级
     mrs_xian_you_chan_ye_sheng_ji_idea = {
-      picture = unknown
+      picture = generic_production_upgrade
       modifier = {
         production_factory_max_efficiency_factor = 0.3
         production_lack_of_resource_penalty_factor = -0.1
@@ -278,7 +278,7 @@ ideas = {
 
     # 新式军事思想
     mrs_xin_shi_jun_shi_si_xiang_idea = {
-      picture = unknown
+      picture = generic_army_doctrine
       modifier = {
         land_doctrine_cost_factor = -0.15
       }
@@ -286,7 +286,7 @@ ideas = {
 
     # 魔法之森的黎明
     mrs_mo_fa_zhi_sen_de_li_ming_idea = {
-      picture = unknown
+      picture = MRS_dawn_of_the_magical_forest
       modifier = {
         stability_factor = 0.2
         political_power_gain = 0.1

@@ -7,6 +7,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_improved_education"
+		texturefile = "gfx/interface/ideas/generic_improved_education.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_book"
 		texturefile = "gfx/interface/ideas/generic_book.dds"
 	}	
@@ -22,6 +27,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_production_upgrade"
+		texturefile = "gfx/interface/ideas/generic_production_upgrade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_skillful_workers"
+		texturefile = "gfx/interface/ideas/generic_skillful_workers.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_reunited"
 		texturefile = "gfx/interface/ideas/generic_reunited.dds"
 	}
@@ -32,6 +47,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_revolution_propaganda"
+		texturefile = "gfx/interface/ideas/generic_revolution_propaganda.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_cooperation"
 		texturefile = "gfx/interface/ideas/generic_cooperation.dds"
 	}
@@ -39,6 +59,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_placation"
 		texturefile = "gfx/interface/ideas/generic_placation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_army_doctrine"
+		texturefile = "gfx/interface/ideas/generic_army_doctrine.dds"
 	}
 	
 	spriteType = {
@@ -54,7 +79,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_MSD_war"
-		texturefile = "gfx/interface/ideas/mrs_MSD_war.dds"
+		texturefile = "gfx/interface/ideas/mrs_MSD_war.png"
 	}
 
 	spriteType = {
@@ -70,6 +95,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_MRS_compromise_with_narumi"
 		texturefile = "gfx/interface/ideas/mrs_compromise_with_narumi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_dawn_of_the_magical_forest"
+		texturefile = "gfx/interface/ideas/mrs_dawn_of_the_magical_forest.dds"
 	}
 	
 	spriteType = {
@@ -102,6 +132,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ALI_ningyo_workshop"
 		texturefile = "gfx/interface/ideas/ali_ningyo_workshop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_magical_forest_new_look"
+		texturefile = "gfx/interface/ideas/ali_magical_forest_new_look.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_construction"
+		texturefile = "gfx/interface/ideas/ali_makai_construction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_immigrant"
+		texturefile = "gfx/interface/ideas/ali_makai_immigrant.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_production"
+		texturefile = "gfx/interface/ideas/ali_makai_production.dds"
 	}
 	
 	spriteType = {

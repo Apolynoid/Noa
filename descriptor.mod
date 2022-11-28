@@ -1,9 +1,9 @@
-version="0.0.1"
+version="0.0.3"
 tags={
 	"National Focuses"
 	"Events"
 }
-name="[Touhou Project Mod][RoA] Nirvana of the Apocalypse"
+name="[Touhou Project Mod][RoA][NoA] Nirvana of the Apocalypse"
 dependencies={
 	"[Touhou project mod] Remnants of the Apocalypse"
 }

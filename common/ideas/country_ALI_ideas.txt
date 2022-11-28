@@ -290,7 +290,7 @@ ideas = {
 
     # 魔法之森的新面貌
     ali_mo_fa_zhi_sen_de_xin_mian_mao_idea = {
-      picture = unknown
+      picture = ALI_magical_forest_new_look
       modifier = {
         stability_factor = 0.1
         political_power_gain = 0.2
@@ -300,7 +300,7 @@ ideas = {
 
     # 魔界移民计划
     ali_mo_jie_yi_min_ji_hua_idea = {
-      picture = unknown
+      picture = ALI_makai_immigrant
       modifier = {
         monthly_population = 0.02
       }
@@ -316,7 +316,7 @@ ideas = {
 
     # 魔界的力量
     ali_mo_jie_de_li_liang_idea = {
-      picture = unknown
+      picture = eng_special_air_service
       modifier = {
         army_attack_factor = 0.1
         army_defence_factor = 0.1
@@ -339,7 +339,7 @@ ideas = {
 
     # 魔界的生产
     ali_mo_jie_de_sheng_chan_idea = {
-      picture = unknown
+      picture = ALI_makai_production
       modifier = {
         industrial_capacity_factory = 0.1
         production_factory_max_efficiency_factor = 0.1
@@ -350,7 +350,7 @@ ideas = {
 
     # 魔界的建造能力
     ali_mo_jie_de_jian_zao_neng_li_idea = {
-      picture = unknown
+      picture = ALI_makai_construction
       modifier = {
         industrial_capacity_factory = 0.1
         production_factory_max_efficiency_factor = 0.1
@@ -371,7 +371,7 @@ ideas = {
 
     # 战时经济
     ali_zhan_shi_jing_ji_idea = {
-      picture = unknown
+      picture = generic_license_production
       modifier = {
         industrial_capacity_factory = 0.2
         production_factory_max_efficiency_factor = 0.2

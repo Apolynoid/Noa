@@ -14,7 +14,7 @@ ideas = {
 
     # 社会化生产
     nrm_she_hui_hua_sheng_chan_idea = {
-      picture = unknown
+      picture = generic_production_bonus
       modifier = {
         production_factory_start_efficiency_factor = 0.1
         production_factory_efficiency_gain_factor = 0.1
@@ -25,7 +25,7 @@ ideas = {
 
     # 社会化生产 生产竞赛
     nrm_she_hui_hua_sheng_chan_a_idea = {
-      picture = unknown
+      picture = generic_production_bonus
       modifier = {
         production_factory_start_efficiency_factor = 0.1
         production_factory_efficiency_gain_factor = 0.1
@@ -69,7 +69,7 @@ ideas = {
 
     # 传播革命
     nrm_chuan_bo_ge_ming_idea = {
-      picture = unknown
+      picture = generic_revolution_propaganda
       modifier = {
         surrender_limit = 0.1
         offensive_war_stability_factor = 0.1
@@ -81,7 +81,7 @@ ideas = {
 
     # 专注国内
     nrm_zhuan_zhu_guo_nei_idea = {
-      picture = unknown
+      picture = generic_pp_unity_bonus
       modifier = {
         surrender_limit = 0.1
         political_power_gain = 0.2
@@ -95,7 +95,7 @@ ideas = {
 
     # 专注国内 武装群众
     nrm_zhuan_zhu_guo_nei_a_idea = {
-      picture = unknown
+      picture = generic_pp_unity_bonus
       modifier = {
         surrender_limit = 0.1
         political_power_gain = 0.2
@@ -116,7 +116,7 @@ ideas = {
 
     # 专注国内 武装群众
     nrm_zhuan_zhu_guo_nei_b_idea = {
-      picture = unknown
+      picture = generic_pp_unity_bonus
       modifier = {
         surrender_limit = 0.1
         political_power_gain = 0.2

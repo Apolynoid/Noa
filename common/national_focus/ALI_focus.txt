@@ -840,7 +840,7 @@ focus_tree = {
   # 魔法之森的新面貌
   focus = {
     id = ALI_mo_fa_zhi_sen_de_xin_mian_mao
-    icon = unknown
+    icon = ALI_focus_magical_forest_new_look
     cost = 7
     x = 0
     y = 4
@@ -1204,7 +1204,7 @@ focus_tree = {
   # 战争经济体制
   focus = {
     id = ALI_zhan_zheng_jing_ji_ti_zhi
-    icon = unknown
+    icon = GFX_focus_SWI_issue_war_bonds
     cost = 7
     x = 0
     y = 1
