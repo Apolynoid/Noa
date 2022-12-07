@@ -912,7 +912,7 @@ focus_tree = {
   # 邀请魔界神
   focus = {
     id = ALI_yao_qing_mo_jie_shen
-    icon = unknown
+    icon = ALI_focus_invite_god_of_makai
     cost = 7
     x = 0
     y = 1
@@ -950,7 +950,7 @@ focus_tree = {
   # 魔界移民计划
   focus = {
     id = ALI_mo_jie_yi_min_ji_hua
-    icon = unknown
+    icon = ALI_focus_makai_immigrates
     cost = 7
     x = 0
     y = 1
@@ -972,7 +972,7 @@ focus_tree = {
   # 魔界的知识
   focus = {
     id = ALI_mo_jie_de_zhi_shi
-    icon = unknown
+    icon = ALI_focus_makai_knowledge_shine
     cost = 7
     x = -2
     y = 1
@@ -994,7 +994,7 @@ focus_tree = {
   # 魔界的研究能力
   focus = {
     id = ALI_mo_jie_de_yan_jiu_neng_li
-    icon = GFX_focus_research2
+    icon = ALI_focus_makai_research_ability
     cost = 7
     x = 0
     y = 1
@@ -1016,7 +1016,7 @@ focus_tree = {
   # 魔界的力量
   focus = {
     id = ALI_mo_jie_de_li_liang
-    icon = unknown
+    icon = ALI_focus_makai_power
     cost = 7
     x = 0
     y = 1
@@ -1038,7 +1038,7 @@ focus_tree = {
   # 魔界的训练系统
   focus = {
     id = ALI_mo_jie_de_xun_lian_xi_tong
-    icon = unknown
+    icon = ALI_focus_makai_training_system
     cost = 7
     x = 0
     y = 1
@@ -1063,7 +1063,7 @@ focus_tree = {
   # 魔界的生产
   focus = {
     id = ALI_mo_jie_de_sheng_chan
-    icon = unknown
+    icon = ALI_focus_makai_production
     cost = 7
     x = 2
     y = 1
@@ -1085,7 +1085,7 @@ focus_tree = {
   # 魔界的建造能力
   focus = {
     id = ALI_mo_jie_de_jian_zao_neng_li
-    icon = unknown
+    icon = ALI_focus_makai_construction
     cost = 7
     x = 0
     y = 1
@@ -1126,7 +1126,7 @@ focus_tree = {
   # 征服世界的雄心
   focus = {
     id = ALI_zheng_fu_shi_jie_de_xiong_xin
-    icon = unknown
+    icon = GFX_goal_generic_political_pressure
     cost = 7
     x = 0
     y = 4
@@ -1230,7 +1230,7 @@ focus_tree = {
   # 对世界战争计划
   focus = {
     id = ALI_dui_shi_jie_zhan_zheng_ji_hua
-    icon = unknown
+    icon = GFX_goal_generic_position_armies
     cost = 7
     x = 2
     y = 1
@@ -1256,7 +1256,7 @@ focus_tree = {
   # 蚕食策略
   focus = {
     id = ALI_can_shi_ce_lve
-    icon = unknown
+    icon = GFX_goal_generic_territory_or_war
     cost = 7
     x = 0
     y = 2

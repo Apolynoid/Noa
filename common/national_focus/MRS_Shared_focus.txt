@@ -897,7 +897,7 @@ shared_focus = {
 shared_focus = {
   id = MRS_yin_ru_mo_dao_ji_xie
   icon = unknown
-  cost = 12
+  cost = 7
   x = 0
   y = 1
 
@@ -966,7 +966,7 @@ shared_focus = {
 shared_focus = {
   id = MRS_quan_mian_gong_ye_hua
   icon = GFX_goal_generic_construct_civilian
-  cost = 12
+  cost = 7
   x = 0
   y = 1
 

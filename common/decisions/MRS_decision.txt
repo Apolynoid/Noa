@@ -843,92 +843,97 @@ MRS_mo_fa_zhi_sen_chong_jian = {
       }
     }
     available = {
-      468 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
+      custom_trigger_tooltip = {
+        tooltip = MRS_reunite_MRS_trigger_tt
       }
-      174 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      188 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      487 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      172 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      138 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      552 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      153 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      465 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      170 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      185 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      162 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      154 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      354 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      169 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      191 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      175 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      355 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      182 = {
-        is_core_of = ROOT
-        is_owned_by = ROOT
-      }
-      206 = {
-        OR = {
-          AND = {
-            is_core_of = ROOT
-            is_owned_by = ROOT
-          }
-          NOT = {
-            is_owned_by = MRS
-            is_owned_by = ALI
-            is_owned_by = NRM
+      hidden_trigger = {
+        468 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        174 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        188 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        487 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        172 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        138 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        552 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        153 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        465 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        170 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        185 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        162 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        154 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        354 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        169 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        191 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        175 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        355 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        182 = {
+          is_core_of = ROOT
+          is_owned_by = ROOT
+        }
+        206 = {
+          OR = {
+            AND = {
+              is_core_of = ROOT
+              is_owned_by = ROOT
+            }
+            NOT = {
+              is_owned_by = MRS
+              is_owned_by = ALI
+              is_owned_by = NRM
+            }
           }
         }
       }
@@ -1057,7 +1062,7 @@ MRS_Offer_peace_MSD = {
       MRS = { has_idea = MRS_Kemonomichi_war_idea_2 }
 
       or = {
-        MRS = { surrender_progress > 40 }
+        MRS = { surrender_progress > 0.4 }
         and = {
           or = {
             and = {

@@ -121,7 +121,7 @@ focus_tree = {
   # 妖怪的战斗力
   focus = {
     id = NRM_yao_guai_de_zhan_dou_li
-    icon = unknown
+    icon = GFX_goal_generic_secret_weapon
     cost = 3
     x = 2
     y = 1

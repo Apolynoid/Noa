@@ -521,7 +521,7 @@ focus_tree = {
     completion_reward = {
       add_war_support = -0.1
       add_stability = 0.1
-      add_political_power = 100
+      add_political_power = 30
     }
 
     ai_will_do = {
@@ -997,7 +997,7 @@ focus_tree = {
   # 战争计划部
   focus = {
     id = MRS_zhan_zheng_ji_hua_bu
-    icon = unknown
+    icon = GFX_goal_generic_position_armies
     cost = 7
     x = 0
     y = 2
@@ -1422,7 +1422,7 @@ focus_tree = {
   # 选拔精英魔法使
   focus = {
     id = MRS_xuan_ba_jing_ying_mo_fa_shi
-    icon = unknown
+    icon = GFX_focus_generic_military_mission
     cost = 7
     x = 1
     y = 1

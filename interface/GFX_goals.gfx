@@ -182,6 +182,46 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "ALI_focus_invite_god_of_makai"
+		texturefile = "gfx/interface/goals/focus_ALI_invite_god_of_makai.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_construction"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_construction.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_immigrates"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_immigrates.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_production"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_production.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_power"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_power.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_training_system"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_training_system.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_knowledge"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_knowledge.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_research_ability"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_research_ability.dds"			
+	}
+
+	SpriteType = {
 	name = "ALI_focus_the_only_hegemony_in_gensokyo"
 	texturefile = "gfx/interface/goals/focus_ALI_the_only_hegemony_in_gensokyo.dds"			
 	}
