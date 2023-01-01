@@ -8,6 +8,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_traditional_production"
+		texturefile = "gfx/interface/goals/focus_generic_traditional_production.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_construction"
+		texturefile = "gfx/interface/goals/focus_generic_construction.dds"			
+	}
+
+	SpriteType = {
 	name = "GFX_focus_civ_mil_combination"
 	texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
 	}	
@@ -33,8 +43,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_book"
+		texturefile = "gfx/interface/goals/focus_generic_book.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_improved_education"
 		texturefile = "gfx/interface/goals/focus_generic_improved_education.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_education_equality"
+		texturefile = "gfx/interface/goals/focus_generic_education_equality.dds"			
 	}
 
 	SpriteType = {
@@ -219,6 +239,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "ALI_focus_makai_research_ability"
 		texturefile = "gfx/interface/goals/focus_ALI_makai_research_ability.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_mass_mobilization"
+		texturefile = "gfx/interface/goals/focus_ALI_mass_mobilization.dds"			
 	}
 
 	SpriteType = {

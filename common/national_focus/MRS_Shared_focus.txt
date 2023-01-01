@@ -687,7 +687,7 @@ shared_focus = {
 # 建设魔法之森
 shared_focus = {
   id = MRS_jian_she_mo_fa_zhi_sen
-  icon = unknown
+  icon = GFX_focus_construction
   cost = 3
   x = 0
   y = 7
@@ -896,7 +896,7 @@ shared_focus = {
 # 引入魔导机械
 shared_focus = {
   id = MRS_yin_ru_mo_dao_ji_xie
-  icon = unknown
+  icon = GFX_focus_generic_industry_3
   cost = 7
   x = 0
   y = 1
@@ -995,7 +995,7 @@ shared_focus = {
 # 遵循传统
 shared_focus = {
   id = MRS_zun_xun_chuan_tong
-  icon = unknown
+  icon = GFX_focus_traditional_production
   cost = 7
   x = 2
   y = 1
@@ -1030,7 +1030,7 @@ shared_focus = {
 # 谨慎机械化
 shared_focus = {
   id = MRS_jin_shen_ji_xie_hua
-  icon = unknown
+  icon = GFX_focus_generic_industry_1
   cost = 7
   x = 0
   y = 1
@@ -1174,7 +1174,7 @@ shared_focus = {
 # 建立魔法文献馆
 shared_focus = {
   id = MRS_jian_li_mo_fa_wen_xian_guan
-  icon = unknown
+  icon = GFX_focus_book
   cost = 7
   x = 6
   y = 1
@@ -1204,7 +1204,7 @@ shared_focus = {
 # 知识共享
 shared_focus = {
   id = MRS_zhi_shi_gong_xiang
-  icon = unknown
+  icon = GFX_goal_tfv_generic_tech_sharing
   cost = 7
   x = 0
   y = 1
@@ -1231,7 +1231,7 @@ shared_focus = {
 # 平等教育机会
 shared_focus = {
   id = MRS_ping_deng_jiao_yu_ji_hui
-  icon = unknown
+  icon = GFX_focus_education_equality
   cost = 7
   x = 0
   y = 1
@@ -1280,7 +1280,7 @@ shared_focus = {
 # 新技术
 shared_focus = {
   id = MRS_xin_ji_shu
-  icon = unknown
+  icon = GFX_focus_generic_energy
   cost = 7
   x = 0
   y = 1

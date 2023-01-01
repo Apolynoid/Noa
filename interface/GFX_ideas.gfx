@@ -145,6 +145,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_ALI_makai_power"
+		texturefile = "gfx/interface/ideas/ali_makai_power.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_ALI_makai_immigrant"
 		texturefile = "gfx/interface/ideas/ali_makai_immigrant.dds"
 	}

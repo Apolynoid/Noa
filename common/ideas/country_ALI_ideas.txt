@@ -316,7 +316,7 @@ ideas = {
 
     # 魔界的力量
     ali_mo_jie_de_li_liang_idea = {
-      picture = eng_special_air_service
+      picture = ALI_makai_power
       modifier = {
         army_attack_factor = 0.1
         army_defence_factor = 0.1

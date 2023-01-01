@@ -445,7 +445,7 @@ focus_tree = {
   # 魔法之森科学院
   focus = {
     id = NRM_mo_fa_zhi_sen_ke_xue_yuan
-    icon = GFX_goal_tfv_generic_tech_sharing
+    icon = unknown
     cost = 7
     x = 0
     y = 1

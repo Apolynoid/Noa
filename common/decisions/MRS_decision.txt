@@ -813,17 +813,22 @@ MRS_mo_fa_zhi_sen_chong_jian = {
           character = MRS_narumi
           ideology = fandong_type
         }
-        promote_character = {
-          character = ALI_ali
-          ideology = qinwai_type
-        }
-        promote_character = {
-          character = ALI_ali
-          ideology = neworder_type
-        }
-        promote_character = {
-          character = ALI_ali
-          ideology = oldorder_type
+        if = {
+          limit = {
+              tag = NRM
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = qinwai_type
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = neworder_type
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = oldorder_type
+          }
         }
         promote_character = {
           character = MRS_mrs

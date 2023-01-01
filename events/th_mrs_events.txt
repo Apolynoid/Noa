@@ -1674,6 +1674,14 @@ country_event = {
 			NRM = {
 				set_country_flag = MRS_lost_puppet_flag
 			}
+			every_controlled_state = {
+				teleport_armies = {
+					limit = {
+						tag = MRS
+					}
+					to_state = 188
+				}
+			}
 		}
 	}
 

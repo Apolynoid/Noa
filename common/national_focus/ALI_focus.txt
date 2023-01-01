@@ -1178,7 +1178,7 @@ focus_tree = {
   # 大规模战争动员
   focus = {
     id = ALI_da_gui_mo_zhan_zheng_dong_yuan
-    icon = unknown
+    icon = ALI_focus_mass_mobilization
     cost = 7
     x = -2
     y = 1
