@@ -1,0 +1,308 @@
+ideas = {
+country = {
+	#政治线 political
+	#防备博丽
+	MSD_fang_bei_bo_li_wu_nv_idea = {
+		picture = YUG_federal_defense_council
+		targeted_modifier = {
+			tag = HKR
+			attack_bonus_against = -0.05
+			defense_bonus_against = 0.2
+		}
+	}
+	#兽道冲突
+	MSD_shou_dao_bian_jing_de_chong_tu_idea = {
+		picture = FRA_matignon_agreements
+		allowed = {
+			always = no
+		}
+		available = {
+		}
+		allowed_civil_war = {
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = 0.2
+		}
+	}
+	#租借条例
+	MSD_laizipanluan_idea = {
+		picture = HUN_treaty_of_triannon
+		allowed = {
+			always = no
+		}
+		available = {
+		}
+		allowed_civil_war = {
+		}
+	}
+	#武器租借条例
+	MSD_laizipanluan2_idea = {
+		picture = HUN_treaty_of_triannon
+		allowed = {
+			always = no
+		}
+		available = {
+		}
+		allowed_civil_war = {
+		}
+	}	
+	#兽道战争胜利了!
+	MSD_shoudaoshengli_idea = {
+		picture = HUN_treaty_of_triannon
+		allowed = {
+			always = no
+		}
+		modifier = {
+			stability_factor = 0.3
+		}
+	}
+	#兽道战争失败了
+	MSD_shibaidezhanzheng_idea = {
+		picture = HUN_treaty_of_triannon
+		allowed = {
+			always = no
+		}
+		modifier = {
+			stability_factor = 0.05
+		}
+	}
+
+	# 军事线 military
+	#伪劣的仿制
+	MSD_weiliefangzhi_idea = {
+		picture = HUN_treaty_of_triannon
+		equipment_bonus = {
+			magic_energy_a = {
+				soft_attack = -0.2
+				reliability = -0.3
+				build_cost_ic = 0.1
+				instant = yes
+			}
+		}
+	}
+	#后勤
+	MSD_houqingexin_idea = {
+		modifier = {
+			supply_node_range = 0.2
+		}
+	}
+	#民兵
+	MSD_mingbinzhidu_idea = {
+		picture = generic_manpower_bonus
+		modifier = {
+			conscription = 0.02
+		}
+	}
+	#夜雀之声
+	msd_ye_que_zhi_sheng_idea = {
+		modifier = {
+			army_morale_factor = 0.1
+		}
+	}
+	#袭击人类
+	MSD_xijirenlei_idea = {
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+
+	#噪声骚扰
+	MSD_zaoshengsaorao_idea = {
+		modifier = {
+			army_org_factor = 0.1
+			army_morale_factor = -0.05
+		}
+	}
+	#夜战加强
+	MSD_jiaqiangyezhan_idea = {
+		modifier = {
+			land_night_attack = 0.1
+		}
+	}
+	#临时参谋部
+	MSD_linshicanmou_idea = {
+		picture = chi_wargaming_division
+		modifier = {
+			command_power_gain_mult = 0.05
+			max_command_power = 10
+			max_planning = 0.05
+			planning_speed = 0.05
+			}
+		}
+	#参谋部
+	MSD_canmou_idea = {
+		picture = chi_wargaming_division
+		modifier = {
+			command_power_gain_mult = 0.15
+			max_command_power = 20
+			max_planning = 0.15
+			planning_speed = 0.1
+			}
+		}
+	#现代军队
+	msd_xian_dai_jun_dui_idea = {
+		picture = generic_intel_bonus
+		modifier = {
+			army_org_factor = 0.2
+			army_morale_factor = 0.2
+			org_loss_when_moving = -0.10
+			conscription = 0.04
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.05
+			land_night_attack = 0.1
+			army_morale_factor = 0.2
+			supply_node_range = 0.2
+			command_power_gain_mult = 0.15
+			max_command_power = 20
+			max_planning = 0.15
+			planning_speed = 0.1
+		}
+	}
+
+	#加紧建设
+    MSD_jiaji_idea = {
+		picture = generic_spy_political
+		modifier = {
+			production_speed_buildings_factor = 0.35
+		}
+		}
+	#经济总动员
+    MSD_zongdongy_idea = {
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+	#全军演讲
+	MSD_quanjunyanjiang_idea = {
+		picture = YUG_federal_defense_council
+		targeted_modifier = {
+			tag = ALI
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.2
+		}
+		targeted_modifier = {
+			tag = MRS
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.2
+		}
+		modifier = {
+			army_speed_factor = 0.05
+			attrition = 0.10
+		}
+	}
+	#经济危机
+    MSD_jingjiweiji_idea = {
+		modifier = {
+			consumer_goods_factor = 0.2
+		}
+		}
+	#租借还款
+    MSD_zujiehuankuan_idea = {
+		targeted_modifier = { 
+			tag = SEJ
+			cic_to_target_factor = 0.05	
+		}
+		modifier = {
+			consumer_goods_factor = 0.2
+			political_power_factor = -0.1
+		}
+		}
+	#糟糕的经济1
+    MSD_zaogaodejingji_idea_1 = {
+		modifier = {
+			consumer_goods_factor = 0.4
+			stability_factor = -0.3
+			war_support_factor = -0.5
+		}
+		}
+	#糟糕的经济2
+    MSD_zaogaodejingji_idea_2 = {
+		modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.15
+			war_support_factor = -0.25
+		}
+		}
+	#糟糕的经济3
+    MSD_zaogaodejingji_idea_3 = {
+		modifier = {
+			consumer_goods_factor = 0.05
+			stability_factor = -0.1
+			war_support_factor = -0.1
+		}
+		}
+	#道具的报复
+    MSD_daojudebaofu_idea = {
+		modifier = {
+			stability_factor = -0.10
+			industrial_capacity_factory = -0.15
+			production_speed_buildings_factor = -0.15
+		}
+		}
+	#科研加成
+    MSD_keyanjiacheng_idea = {
+		modifier = {
+			research_speed_factor = 0.15
+		}
+		}
+	#削减军事开支
+    MSD_xuejianjunshikaizhi_idea = {
+		modifier = {
+			training_time_army_factor = 0.2
+			army_org_factor = -0.1
+			army_infantry_attack_factor = -0.1
+			army_infantry_defence_factor = -0.1
+		}
+		}
+	#削减军事开支_1
+    MSD_xuejianjunshikaizhi_1_idea = {
+		modifier = {
+			training_time_army_factor = 0.5
+			army_org_factor = -0.05
+			army_infantry_attack_factor = -0.05
+			army_infantry_defence_factor = -0.05
+		}
+		}
+	#灵力工厂
+    MSD_lingliliushuixian_idea = {
+		modifier = {
+			production_factory_max_efficiency_factor = 0.2
+			production_factory_efficiency_gain_factor = 0.2
+		}
+	}
+	#基本识字
+    MSD_guominjiaoyu_idea = {
+		modifier = {
+			research_speed_factor = 0.1
+		}
+		}
+	
+	#一点小小的兽道震撼
+	MSD_qingxijijinfenzi_idea = {
+		modifier = {
+			LS_subject_level_low_time_factor = -0.3
+			LS_subject_level_low_pp_cost = -0.3
+			resistance_growth = -0.2
+			CO_core_resistance_required = -30
+			ST_race_penalty_all_factor = -0.1
+			compliance_growth = 0.1
+		}
+	}
+	#种族转换
+	MSD_zhuanhuan_idea = {
+		modifier = {
+			CONV_convert_cost_factor = -0.3
+		}
+	}
+	#紧急状态
+	MSD_jinjizhuangtai_idea = {
+		modifier = {
+			surrender_limit = 0.3
+			production_speed_bunker_factor = 0.2
+			monthly_population = 0.1
+			army_core_defence_factor = 0.2
+		}
+	}
+}
+}

@@ -256,6 +256,21 @@ bookmarks = {
 				SAT_the_second_sun
 			}			
 		}  
+
+		"MSD" = {
+			minor = yes
+			history = "MSD_DAWN_DESC"			#sat
+			ideas = {
+				MSD_jingjiweiji_idea
+				msd_xian_dai_jun_dui_idea
+				MSD_qingxijijinfenzi_idea
+			}
+			focuses = {
+				MSD_shou_dao_bian_jing_de_chong_tu
+				MSD_xian_dai_jun_dui
+				MSD_bei_mian_de_wei_xie
+			}
+		}
     
 		
 		effect = {

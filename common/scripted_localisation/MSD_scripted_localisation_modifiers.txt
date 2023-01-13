@@ -1,0 +1,45 @@
+defined_text = { 
+	name = MSD_jingjiqingkuang
+	text = {
+		trigger = {
+			and={
+			check_variable = {
+				MSD_M_display > 49.9
+			}
+			check_variable = {
+				MSD_M_display < 69.9
+			}
+		}
+		}
+		localization_key = MSD_jingjiqingkuang_1
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				MSD_M_display > 69.9
+			}
+		}
+		localization_key = MSD_jingjiqingkuang_2
+	}
+    text = {
+		trigger = {
+			and={
+				check_variable = {
+					MSD_M_display > 29.9
+				}
+				check_variable = {
+					MSD_M_display < 49.9
+				}
+			}
+		}
+		localization_key = MSD_jingjiqingkuang_3
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				MSD_M_display < 29.9
+			}
+		}
+		localization_key = MSD_jingjiqingkuang_4
+	}
+}

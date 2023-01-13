@@ -1,0 +1,40 @@
+spriteTypes = {
+
+	###############################################################
+	########            Lott Quadros Mechanic              ########
+	###############################################################
+
+	#### RESOURCES ####
+	spriteType = {
+		name = GFX_MOK_GUI_lianzi
+		texturefile = "gfx/interface/categories/MSD/lianzi.dds"
+	}
+	spriteType = {
+		name = GFX_MOK_GUI_meili
+		texturefile = "gfx/interface/categories/MSD/meili.dds"
+	}
+	
+	#### ICONS ####
+	#spriteType = {
+#		name = GFX_BRA_GUI_PSD
+#		texturefile = "gfx/interface/brazil/lottquadros/PSD.dds"
+#	}
+
+	#### PICTURES ####
+
+	#### PROGRESSBAR ####
+	progressbartype = {
+		name = "GFX_WOK_ceshi_Progressbar"
+		textureFile1 = "gfx/interface/categories/MSD/MSD_bar_full.dds"
+		textureFile2 = "gfx/interface/categories/MSD/MSD_bar_empty.dds"
+		size = { x = 372 y = 50 } 
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	spriteType = {
+		name = GFX_BRA_info_button
+		texturefile = "gfx/interface/MSD_info_button.dds"
+	}
+
+}

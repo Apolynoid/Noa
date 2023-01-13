@@ -1,0 +1,140 @@
+﻿capital = 259
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        gun2 = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+    }
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        gun2 = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+        yaohuakecheng1 = 1
+            
+    }
+    
+}
+143.7.1 = {
+    oob = "MSD_143"
+
+    add_ideas = {
+        Tribal
+        Beast
+        type4_manpowerlv6
+        close1
+        hawk1
+        normal_border
+        sc_rule
+    }
+    set_popularities = {
+        qinwai = 5
+        guli = 75
+        neworder = 5
+        oldorder = 0
+        fandong = 15
+    }
+	set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    } 
+}
+
+146.1.1={
+    oob = "MSD_146"
+    add_ideas = {
+        low_economic_mobilisation
+        Tribal
+        Beast
+        type4_manpowerlv3
+        close1
+        hawk2
+        normal_border
+        sc_rule
+    }
+    
+    set_politics = {
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        guli = 5
+        neworder = 60
+        oldorder = 0
+        fandong = 15
+    }
+}

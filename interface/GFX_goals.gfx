@@ -18,9 +18,14 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_focus_civ_mil_combination"
-	texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
-	}	
+		name = "GFX_focus_civ_mil_combination"
+		texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_village_socialism"
+		texturefile = "gfx/interface/goals/focus_generic_village_socialism.dds"			
+	}
 
 	SpriteType = {
 	name = "GFX_focus_improve_logistics"
@@ -95,6 +100,11 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_focus_befriend_SEJ"
 	texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_CIR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_CIR.dds"			
 	}
 
 	SpriteType = {

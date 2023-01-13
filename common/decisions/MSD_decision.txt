@@ -1,0 +1,1395 @@
+MSD_shoudaozhanzheng_category = {
+	MSD_jingjiweiji_decision = {
+		activation = {
+			and={
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+			MSD = { has_war_with = ALI }
+			}
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+		}
+		available = {
+			or = {
+				MSD = { has_idea = MSD_shoudaoshengli_idea }
+				MSD = { has_idea = MSD_shibaidezhanzheng_idea }
+			}
+		}
+		days_mission_timeout = 365
+		fire_only_once = yes
+		is_good = no
+		selectable_mission = no
+		timeout_effect = {
+			add_ideas = MSD_jingjiweiji_idea
+			add_to_variable = {
+				MSD_NIC = -20
+			}
+			country_event={
+				id=msd.6
+				days=1
+			}
+		}
+		complete_effect = {
+			add_political_power=50
+		}
+    }
+	####################
+	MSD_zhanzhengtishi_decision = {
+		activation = {
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+		}
+		available = {
+			has_war = yes
+		}
+		days_mission_timeout = 145
+		fire_only_once = yes
+		is_good = no
+		selectable_mission = no
+    }
+#################################
+    MSD_jinxingjunduidongyuan_decision = {
+	allowed ={
+			original_tag = MSD
+		}
+    visible = {
+		MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+		}
+	ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				and = {
+				  date > 146.7.30
+				}
+			  }
+		}
+	available = {
+			has_war_with = MRS
+		}
+    fire_only_once = yes
+	cost = 50
+	days_remove = 10
+	remove_effect = {
+			add_timed_idea={
+				idea = MSD_quanjunyanjiang_idea
+				days = 30
+		}
+	}
+    }
+	#####################
+    MSD_junshicaigou_decision = {
+	allowed ={
+			original_tag = MSD
+		}
+    visible = {
+		MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+		}
+	available = {
+		num_of_civilian_factories_available_for_projects > 2
+	}
+	cost = 50
+	days_remove = 30
+	modifier = {
+			civilian_factory_use = 3
+		}
+	remove_effect = {
+			add_equipment_to_stockpile={
+				type=gun_a
+				amount=300
+				producer=SEJ
+			}
+			add_equipment_to_stockpile={
+				type=melee_a
+				amount=300
+				producer=SEJ
+			}
+	}
+	ai_will_do = {
+		factor = 40
+	}
+    }
+	####################
+	MSD_jinjizujiewuqi_decision = {
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+			}
+		available = {
+			has_war_with = HKR
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		modifier = {
+				civilian_factory_use = 4
+			}
+		remove_effect = {
+				add_equipment_to_stockpile={
+					type=gun_a
+					amount=2500
+					producer=SEJ
+				}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		}
+	########################
+	MSD_minyongyunshu_decision = {
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			MSD = { has_idea = MSD_shou_dao_bian_jing_de_chong_tu_idea }
+			}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			#has_tech = yunshucheliang146
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		modifier = {
+				civilian_factory_use = 4
+			}
+		remove_effect = {
+				add_equipment_to_stockpile={
+					type=truck_a
+					amount=10
+					producer=SEJ
+				}
+				add_equipment_to_stockpile={
+					type=yunshudui_a
+					amount=150
+					producer=MSD
+				}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		}
+}
+##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MSD_jingjichongjian_category = {
+	MSD_kancexindeziyuan_decision{
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			or={
+			MSD = {has_idea=MSD_zaogaodejingji_idea_1}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_2}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_3}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			MSD = {
+				add_to_variable = {
+					MSD_NIC = 10
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = powder
+					amount = 4
+				}
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+				add_resource = {
+					type = crystal
+					amount = 4
+				}
+			}
+        }
+	}
+##############################################
+	MSD_junduicanyujianshe_decision{
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			or={
+			MSD = {has_idea=MSD_zaogaodejingji_idea_1}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_2}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_3}
+			}
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			MSD = {
+				add_to_variable = {
+					MSD_NIC = 20
+				}
+			}
+			add_timed_idea={
+				days=180
+				idea=MSD_jiaji_idea
+			}
+	}
+}
+###############################################
+MSD_chongzhenggongyeshengchan_decision{
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			or={
+			MSD = {has_idea=MSD_zaogaodejingji_idea_1}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_2}
+			MSD = {has_idea=MSD_zaogaodejingji_idea_3}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 45
+		remove_effect = {
+			MSD = {
+				add_to_variable = {
+					MSD_NIC = 20
+				}
+			}
+			add_timed_idea={
+				days=45
+				idea=MSD_jiansheyequezhisheng_idea
+			}
+	}
+}
+###############################################
+MSD_youxianbaozhangshenghuo_decision{
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_idea=MSD_zaogaodejingji_idea_1}
+	}
+	fire_only_once = yes
+	cost = 150
+	days_remove = 60
+	remove_effect = {
+		MSD = {
+			add_to_variable = {
+				MSD_NIC = 30
+			}
+			add_stability=0.2
+		}
+}
+}
+##################################################
+MSD_xiayijieduan1_decision{
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_idea=MSD_zaogaodejingji_idea_1}
+	}
+	available = {
+		check_variable = { MSD_NIC > 39}
+	}
+	fire_only_once = yes
+	cost = 0
+	days_remove = 5
+	remove_effect = {
+		remove_ideas = MSD_zaogaodejingji_idea_1
+		add_ideas = MSD_zaogaodejingji_idea_2
+	}
+}
+#################################################
+MSD_xiayijieduan2_decision{
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_idea=MSD_zaogaodejingji_idea_2}
+	}
+	available = {
+		check_variable = { MSD_NIC > 79}
+	}
+	fire_only_once = yes
+	cost = 0
+	days_remove = 5
+	remove_effect = {
+		remove_ideas = MSD_zaogaodejingji_idea_2
+		add_ideas = MSD_zaogaodejingji_idea_3
+		country_event = msd.7
+	}
+}
+#################################################
+MSD_xiayijieduan3_decision{
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_idea=MSD_zaogaodejingji_idea_3}
+	}
+	available = {
+		check_variable = { MSD_NIC > 99}
+	}
+	fire_only_once = yes
+	cost = 0
+	days_remove = 5
+	remove_effect = {
+		remove_ideas = MSD_zaogaodejingji_idea_3
+		add_ideas = Village
+		MSD = {complete_national_focus = MSD_jin_yi_bu_kai_fa_shou_dao}
+		hidden_effect={
+			country_event = {
+				id=msd.24
+				days=20
+			}
+		}
+}
+}
+}
+##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MSD_jinyibukaifa_category = {
+	MSD_meibanyuezengzhang_decision{#每月加钱
+		activation = {
+			check_variable = {MSD_tiaobijiao > 0}
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_tiaobijiao = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			MSD = {has_completed_focus = MSD_xian_dai_hua_guo_jia}
+		}
+		days_mission_timeout = 15
+		fire_only_once = no
+		selectable_mission = no
+		
+		timeout_effect = {
+			set_variable = {MSD_IC = num_of_civilian_factories}
+			set_variable = {MSD_ICM = 10}
+			multiply_variable = {MSD_ICM = MSD_IC}
+			add_to_variable = {MSD_M = MSD_ICM}
+
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+			set_variable = {MSD_tiaobijiao = 0}
+			hidden_effect = {
+				country_event = {
+					id=msd.2000
+					days=1
+				}
+			}
+		}
+	}
+	MSD_huodejianshezijin_decision{#民工换经济
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 9
+		}
+		cost = 10
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			MSD = {
+				add_to_variable = {
+					MSD_M = 300
+				}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 200}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+			}
+        }
+	}
+	MSD_mingongjianshe_decision{#换民工
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>299 }
+			}
+		}
+		cost = 20
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 300}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+		remove_effect = {
+			random_owned_state={
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+        }
+	}
+	MSD_jungongjianshe_decision{#换军工
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>399 }
+			}
+		}
+		cost = 20
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 400}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+		remove_effect = {
+			random_owned_state={
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+        }
+	}
+	MSD_yongdichongzheng_decision{#加建筑物
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>199 }
+			}
+		}
+		cost = 20
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 200}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+		remove_effect = {
+			random_owned_state={
+				add_extra_state_shared_building_slots=1
+			}
+        }
+	}
+	MSD_junshirencai_decision{#换xp
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>399 }
+			}
+		}
+		cost = 20
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 400}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+		remove_effect = {
+			army_experience=15
+        }
+	}
+	MSD_jiadakeyantouru_decision{#换科研
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>399 }
+			}
+		}
+		cost = 40
+		days_remove = 180
+		complete_effect={
+				subtract_from_variable = {MSD_M = 400}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+				add_timed_idea={
+					idea=MSD_keyanjiacheng_idea
+					days=100
+				}
+		}
+	}
+	MSD_xiyinyimin_decision{#换人力
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>399 }
+			}
+		}
+		cost = 50
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 400}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+				random_list={
+					50={add_manpower=100}
+					30={add_manpower=250}
+					20={add_manpower=400}
+				}
+		}
+	}
+	MSD_fangbeipanluan_decision{#修堡垒
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available = {
+			and={
+			custom_trigger_tooltip = {
+				tooltip = MSD_huafei_tt
+				check_variable = { MSD_M>199 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = MSD_fangpanluan_tt
+				has_country_flag = juxinpoce
+			}
+		}
+		}
+		cost = 40
+		days_remove = 30
+		complete_effect={
+				subtract_from_variable = {MSD_M = 200}
+				set_variable = {MSD_M_display_1 = MSD_M}
+				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+				multiply_variable = {MSD_M_display_1 = 100}
+				round_variable = {MSD_M_display_1}
+				set_variable = {MSD_M_display = MSD_M_display_1}
+				198={
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4167
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4168
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4169
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 862
+					}
+				}
+				if={
+					limit={
+						or={
+							controls_state=346
+							HKR = { is_subject_of = ROOT}
+						}
+					}
+					346={
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4170
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 2024
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 4165
+					}
+				}
+				}
+		}
+	}
+}
+##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MSD_maiyejingji_category = {
+	MSD_xiangpanluanjiekuan_decision={
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available={
+			and = {
+				not={ has_war_with = SEJ}
+				custom_trigger_tooltip = {
+					tooltip = MSD_jiekuanshangxian_tt
+					check_variable = { MSD_panluan < MSD_panluan_1}
+				}
+				custom_trigger_tooltip = {
+					tooltip = MSD_lianxipanluan_tt
+					has_country_flag = MSD_panluanjiekuan_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_to_variable = {MSD_panluan = 525}
+			add_to_variable = {MSD_M = 500}
+			add_to_variable = {MSD_zongwaizhai = 525}
+			set_country_flag = {
+				flag = MSD_panluanjiekuan_flag_1
+				value = 1
+			}
+			
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	###################99
+	MSD_xiang99jiekuan_decision={
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available={
+			and = {
+				not={ has_war_with = TKM}
+				custom_trigger_tooltip = {
+					tooltip = MSD_jiekuanshangxian_tt
+					check_variable = { MSD_99waizhai < MSD_99waizhai_1}
+				}
+				custom_trigger_tooltip = {
+					tooltip = MSD_lianxipanluan_tt
+					has_country_flag = MSD_99jiekuan_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_to_variable = {MSD_99waizhai = 600}
+			add_to_variable = {MSD_M = 500}
+			add_to_variable = {MSD_zongwaizhai = 600}
+			set_country_flag = {
+				flag = MSD_99jiekuan_flag_1
+				value = 1
+			}
+			
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	###############################湖主
+	MSD_xianghuzhujiekuan_decision={
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+		visible = {
+			has_country_flag = {
+				flag = MSD_dakaifa_flag
+				value > 0
+			}
+		}
+		available={
+			and = {
+				not={ has_war_with = WAK}
+				custom_trigger_tooltip = {
+					tooltip = MSD_jiekuanshangxian_tt
+					check_variable = { MSD_huzhu < MSD_huzhu_1 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = MSD_lianxipanluan_tt
+					has_country_flag = MSD_huzhujiekuan_flag
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_to_variable = {MSD_huzhu = 575}
+			add_to_variable = {MSD_M = 500}
+			add_to_variable = {MSD_zongwaizhai = 575}
+			set_country_flag = {
+				flag = MSD_huzhujiekuan_flag_1
+				value = 1
+			}
+			
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	###############################立即还款
+	MSD_lijihuankuan_panluan_decision{
+		cost = 0
+		days_remove = 1
+		fire_only_once = no
+		days_re_enable = 150
+		visible = {
+			check_variable = {MSD_panluan > 0}
+		}
+		available={
+			and = {
+				not={has_war_with = SEJ}
+				custom_trigger_tooltip = {
+					tooltip = MSD_youqiankehuan_tt
+					check_variable = { MSD_M > MSD_panluan }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			subtract_from_variable = {MSD_M = MSD_panluan}
+			subtract_from_variable = {MSD_zongwaizhai = MSD_panluan}
+			set_variable = {MSD_panluan = 0}
+			clr_country_flag = MSD_panluanjiekuan_flag_1
+			clr_country_flag = MSD_panluanjiekuan_flag_2
+			country_event={
+				id = msd.11
+				days = 1
+			}
+		
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	###############################
+	MSD_lijihuankuan_99_decision{
+		cost = 0
+		days_remove = 1
+		fire_only_once = no
+		days_re_enable = 150
+		visible = {
+			check_variable = {MSD_99waizhai > 0}
+		}
+		available={
+			and = {
+				not={ has_war_with = TKM}
+				custom_trigger_tooltip = {
+					tooltip = MSD_youqiankehuan_tt
+					check_variable = { MSD_M > MSD_99waizhai }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			subtract_from_variable = {MSD_M = MSD_99waizhai}
+			subtract_from_variable = {MSD_zongwaizhai = MSD_99waizhai}
+			set_variable = {MSD_99waizhai = 0}
+			clr_country_flag = MSD_99jiekuan_flag_1
+			clr_country_flag = MSD_99jiekuan_flag_2
+			country_event={
+				id = msd.12
+				days = 1
+			}
+		
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	########################
+	MSD_lijihuankuan_huzhu_decision{
+		cost = 0
+		days_remove = 1
+		fire_only_once = no
+		days_re_enable = 150
+		visible = {
+			check_variable = {MSD_huzhu > 0}
+		}
+		available={
+			and = {
+				not={ has_war_with = WAK}
+				custom_trigger_tooltip = {
+					tooltip = MSD_youqiankehuan_tt
+					check_variable = { MSD_M > MSD_huzhu }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			subtract_from_variable = {MSD_M = MSD_huzhu}
+			subtract_from_variable = {MSD_zongwaizhai = MSD_huzhu}
+			set_variable = {MSD_huzhu = 0}
+			clr_country_flag = MSD_huzhujiekuan_flag_1
+			clr_country_flag = MSD_huzhujiekuan_flag_2
+			country_event={
+				id = msd.13
+				days = 1
+			}
+		
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+		}
+	}
+	###########还款倒计时
+	MSD_daojishi_panluan_decision = {
+		activation = {
+			check_variable = {MSD_panluan > 0}
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_panluan = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 355
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			country_event = msd.14
+		}
+    }
+	####################99
+	MSD_daojishi_99_decision = {
+		activation = {
+			check_variable = {MSD_99waizhai > 0}
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_99waizhai = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		} 
+		days_mission_timeout = 355
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			country_event = msd.15
+		}
+    }
+	##################湖主
+	MSD_daojishi_huzhu_decision = {
+		activation = {
+			check_variable = {MSD_huzhu > 0}
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_huzhu = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 355
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			country_event = msd.16
+		}
+    }
+	####################最后期限
+	MSD_zuizhong_panluan_decision = {
+		activation = {
+			has_country_flag = MSD_panluanjiekuan_flag_2
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_panluan = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 10
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			SEJ = {country_event = msd.17}
+			SEJ= {add_opinion_modifier = {
+				target = MSD
+				modifier = MSD_beibiwuchi_op
+			}}
+		
+			subtract_from_variable = {MSD_zongwaizhai = MSD_panluan}
+			set_variable = {MSD_panluan = 0}
+			clr_country_flag = MSD_panluanjiekuan_flag_1
+			clr_country_flag = MSD_panluanjiekuan_flag_2
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+			set_variable = {MSD_panluan_1 = 0}
+		}
+    }
+	##################99
+	MSD_zuizhong_99_decision = {
+		activation = {
+			has_country_flag = MSD_99jiekuan_flag_2
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_99waizhai = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		} 
+		is_good = no
+		days_mission_timeout = 10
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			TKM = {country_event = msd.18}
+			TKM= {add_opinion_modifier = {
+				target = MSD
+				modifier = MSD_beibiwuchi_op
+			}}
+
+			subtract_from_variable = {MSD_zongwaizhai = MSD_99waizhai}
+			set_variable = {MSD_99waizhai = 0}
+			clr_country_flag = MSD_99jiekuan_flag_1
+			clr_country_flag = MSD_99jiekuan_flag_2
+		
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+			set_variable = {MSD_99waizhai_1 = 0}
+		}
+	}
+	####################湖主
+	MSD_zuizhong_huzhu_decision = {
+		activation = {
+			has_country_flag = MSD_huzhujiekuan_flag_2
+		}
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			not={check_variable = {MSD_huzhu = 0}}
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 10
+		fire_only_once = no
+		selectable_mission = no
+		timeout_effect = {
+			WAK = {country_event = msd.19}
+			WAK= {add_opinion_modifier = {
+				target = MSD
+				modifier = MSD_beibiwuchi_op
+			}}
+
+			subtract_from_variable = {MSD_zongwaizhai = MSD_huzhu}
+			set_variable = {MSD_huzhu = 0}
+			clr_country_flag = MSD_huzhujiekuan_flag_1
+			clr_country_flag = MSD_huzhujiekuan_flag_2
+		
+			set_variable = {MSD_M_display_1 = MSD_M}
+			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
+			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
+			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
+			multiply_variable = {MSD_M_display_1 = 100}
+			round_variable = MSD_M_display_1
+			set_variable = {MSD_M_display = MSD_M_display_1}
+			set_variable = {MSD_huzhu_1 = 0}
+		}
+    }
+}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MSD_shoufushidi_category={
+	MSD_shoufugongsi_decision = {
+		icon = hol_draw_up_staff_plans
+		targets = {RNS}
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			AND = {
+				has_completed_focus=MSD_ji_xu_shou_fu_shi_di
+                country_exists = RNS
+                NOT = { RNS = { is_subject_of = MSD } }
+			}
+		}
+		available = {
+			NOT = { RNS = { is_in_faction_with = MSD } }
+			not = {
+			  has_non_aggression_pact_with = RNS
+			}
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect={
+			RNS = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = RNS
+			    type = take_state_focus
+			    generator = { 429 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MSD_shoufuboli_decision = {
+		icon = hol_draw_up_staff_plans
+		targets = {HKR}
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			AND = {
+				has_completed_focus=MSD_ji_xu_shou_fu_shi_di
+                country_exists = HKR
+                NOT = { HKR = { is_subject_of = MSD } }
+			}
+		}
+		available = {
+			NOT = { HKR = { is_in_faction_with = MSD } }
+			not = {
+			  has_non_aggression_pact_with = HKR
+			}
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect={
+			HKR = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = HKR
+			    type = take_state_focus
+			    generator = { 207 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MSD_shousenlin_decision = {
+		icon = hol_draw_up_staff_plans
+		targets = {MRS}
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			AND = {
+				NOT={controls_state=191}
+				has_completed_focus=MSD_ji_xu_shou_fu_shi_di
+                country_exists = MRS
+                NOT = { MRS = { is_subject_of = MSD } }
+			}
+		}
+		available = {
+			NOT = { MRS = { is_in_faction_with = MSD } }
+			not = {
+			  has_non_aggression_pact_with = MRS
+			}
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect={
+			MRS = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = MRS
+			    type = take_state_focus
+			    generator = { 191 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MSD_dagelangxian_decision = {
+		icon = hol_draw_up_staff_plans
+		targets = {KAG}
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			AND = {
+				has_completed_focus=MSD_nan_fang_guang_kuo_de_tu_di
+                country_exists = KAG
+                NOT = { KAG = { is_subject_of = MSD } }
+			}
+		}
+		available = {
+			NOT = { KAG = { is_in_faction_with = MSD } }
+			not = {
+			  has_non_aggression_pact_with = KAG
+			}
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect={
+			KAG = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = KAG
+			    type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MSD_chenxuerru_decision = {
+		icon = hol_draw_up_staff_plans
+		targets = {INB}
+		allowed ={
+				original_tag = MSD
+			}
+		visible = {
+			AND = {
+				has_completed_focus=MSD_nan_fang_guang_kuo_de_tu_di
+				controls_state = 267
+                country_exists = INB
+                NOT = { INB = { is_subject_of = MSD } }
+			}
+		}
+		available = {
+			NOT = { INB = { is_in_faction_with = MSD } }
+			not = {
+			  has_non_aggression_pact_with = INB
+			}
+		}
+		cost = 30
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect={
+			INB = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = INB
+			    type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

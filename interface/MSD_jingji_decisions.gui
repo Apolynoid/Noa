@@ -1,0 +1,93 @@
+guiTypes = {
+	
+	###############################################################
+	########            Lott Quadros Mechanic              ########
+	###############################################################
+
+	containerWindowType = {
+		name = "经济"
+		size = { width = 0 height = 465 }
+		position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "信息"
+			spriteType = "GFX_BRA_info_button"
+			position = { x = 440 y = -7 }
+			pdx_tooltip = MSD_jingji_info_tt
+		}
+
+		containerWindowType = {
+			name = "经济"
+			size = { width = 0 height = 0 }
+			position = { x = 18 y = -14 }
+
+			iconType = {
+				name = "lianzi"
+				spriteType = "GFX_MOK_GUI_lianzi"
+				position = { x = 20 y = -10 }
+				scale = 1.00
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "meili"
+				spriteType = "GFX_MOK_GUI_meili"
+				position = { x = 227 y = -10 }
+				scale = 1.00
+				Orientation = "CENTER"
+			}
+
+			iconType = {
+				name = "jingji_qinxiang_Meter"
+				spriteType = "GFX_WOK_ceshi_Progressbar"
+				position = { x = 44 y = 239 }
+				pdx_tooltip = MSD_jingjiduibi
+				Orientation = "CENTER"
+			}
+
+			instantTextBoxType = {
+				name = "MSD_M"
+				position = { x = 43 y = 281 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = left
+				font = "hoi_20bs"
+				text = MSD_M
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "MSD_zongwaizhai"
+				position = { x = 43 y = 281 }
+				maxWidth = 374
+				maxHeight = 2000
+				format = right
+				font = "hoi_20bs"
+				text = MSD_zongwaizhai
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "category_description"
+				position = { x = 0 y = 340 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = left
+				font = "hoi_20bs"
+				text = MSD_jingji_long
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "relationship_status"
+				position = { x = -15 y = 305 }
+				maxWidth = 482
+				maxHeight = 2000
+				format = center
+				font = "hoi_20bs"
+				text = MSD_jingjiqingkuang_display
+				alwaystransparent = yes
+			}
+		}
+	}
+}

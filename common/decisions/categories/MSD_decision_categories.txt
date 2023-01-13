@@ -1,0 +1,34 @@
+MSD_shoudaozhanzheng_category = {
+	visible = {
+		tag = MSD
+    }
+    priority = 100
+}
+MSD_jingjichongjian_category = {
+	visible = {
+		has_completed_focus = MSD_shou_dao_bian_jing_de_chong_tu
+		tag = MSD
+    }
+    priority = 101
+}
+MSD_jinyibukaifa_category = {
+	visible = {
+		has_completed_focus = MSD_jin_yi_bu_kai_fa_shou_dao
+		tag = MSD
+    }
+    priority = 102
+}
+MSD_maiyejingji_category = {
+	visible = {
+		has_completed_focus = MSD_ji_su_gong_ye_hua
+		tag = MSD
+    }
+	scripted_gui = MSD_jingji_decisions
+    priority = 103
+}
+MSD_shoufushidi_category = {
+	visible = {
+		tag = MSD
+    }
+    priority = 104
+}

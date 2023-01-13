@@ -214,28 +214,6 @@ focus_tree = {
 
     completion_reward = {
       add_ideas = mrs_mo_fa_zhi_sen_de_ping_deng_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 消灭种族歧视
-  focus = {
-    id = MRS_xiao_mie_zhong_zu_qi_shi
-    icon = GFX_focus_generic_support_the_left_right
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = MRS_xuan_yang_zhong_zu_ping_deng
-
-    prerequisite = {
-      focus = MRS_xuan_yang_zhong_zu_ping_deng
-    }
-
-    completion_reward = {
       swap_ruler_traits = {
         remove = MRS_ruo_zhe_de_bao_hu_zhe
         add = MRS_ping_deng_de_xiang_zheng
@@ -496,32 +474,9 @@ focus_tree = {
     }
 
     completion_reward = {
-      add_political_power = 150
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 魔法之森的和平
-  focus = {
-    id = MRS_mo_fa_zhi_sen_de_he_ping
-    icon = unknown
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = MRS_wei_chi_xian_zhuang
-
-    prerequisite = {
-      focus = MRS_wei_chi_xian_zhuang
-    }
-
-    completion_reward = {
       add_war_support = -0.1
       add_stability = 0.1
-      add_political_power = 30
+      add_political_power = 150
     }
 
     ai_will_do = {
@@ -537,10 +492,10 @@ focus_tree = {
     x = 0
     y = 1
 
-    relative_position_id = MRS_mo_fa_zhi_sen_de_he_ping
+    relative_position_id = MRS_wei_chi_xian_zhuang
 
     prerequisite = {
-      focus = MRS_mo_fa_zhi_sen_de_he_ping
+      focus = MRS_wei_chi_xian_zhuang
     }
 
     completion_reward = {
@@ -647,9 +602,9 @@ focus_tree = {
     }
   }
 
-  # 促进积极平等
+  # 宣扬和平共处
   focus = {
-    id = MRS_cu_jin_ji_ji_ping_deng
+    id = MRS_xuan_yang_he_ping_gong_chu
     icon = unknown
     cost = 7
     x = 0
@@ -663,6 +618,7 @@ focus_tree = {
 
     completion_reward = {
       add_stability = 0.2
+      remove_ideas = mrs_fen_lie_de_mo_fa_shi_idea
     }
 
     ai_will_do = {
@@ -678,7 +634,7 @@ focus_tree = {
     x = 0
     y = 1
 
-    relative_position_id = MRS_cu_jin_ji_ji_ping_deng
+    relative_position_id = MRS_xuan_yang_he_ping_gong_chu
 
     available = {
       has_war = no
@@ -699,7 +655,7 @@ focus_tree = {
     }
 
     prerequisite = {
-      focus = MRS_cu_jin_ji_ji_ping_deng
+      focus = MRS_xuan_yang_he_ping_gong_chu
     }
 
     completion_reward = {
@@ -748,29 +704,6 @@ focus_tree = {
     }
   }
 
-  # 宣扬和平共处
-  focus = {
-    id = MRS_xuan_yang_he_ping_gong_chu
-    icon = unknown
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = MRS_bao_hu_zi_zhi_qu
-
-    prerequisite = {
-      focus = MRS_bao_hu_zi_zhi_qu
-    }
-
-    completion_reward = {
-      remove_ideas = mrs_fen_lie_de_mo_fa_shi_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
   # 取缔激进思想
   focus = {
     id = MRS_qu_di_ji_jin_si_xiang
@@ -779,10 +712,10 @@ focus_tree = {
     x = 0
     y = 1
 
-    relative_position_id = MRS_xuan_yang_he_ping_gong_chu
+    relative_position_id = MRS_bao_hu_zi_zhi_qu
 
     prerequisite = {
-      focus = MRS_xuan_yang_he_ping_gong_chu
+      focus = MRS_bao_hu_zi_zhi_qu
     }
 
     completion_reward = {
@@ -824,7 +757,7 @@ focus_tree = {
     icon = GFX_focus_dust_settled
     cost = 7
     x = 0
-    y = 8
+    y = 7
 
     relative_position_id = MRS_zhao_kai_mo_nv_da_hui
 
@@ -836,7 +769,7 @@ focus_tree = {
     }
 
     prerequisite = {
-      focus = MRS_xiao_mie_zhong_zu_qi_shi
+      focus = MRS_xuan_yang_zhong_zu_ping_deng
       focus = MRS_ya_zhi_pan_luan_fen_zi
       focus = MRS_qu_di_ji_jin_si_xiang
     }

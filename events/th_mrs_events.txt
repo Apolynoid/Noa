@@ -1,52 +1,5 @@
 ﻿add_namespace = mrs
 ##########事件###########
-country_event = { #兽道关系
-	id = mrs.40
-	title = mrs.40.t
-	desc = mrs.40.d
-	picture = GFX_news_event_mrs.40
-	# major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = mrs.40.1#接受
-		MRS = {
-			MSD = {
-				subject_level4 = yes
-			}
-			hidden_effect = {
-				news_event = { id = mrs.19 days = 2 }
-			}
-		}
-		trigger = {
-
-		}
-		ai_chance = {
-			base = 25
-			modifier = {
-				add = 50
-				MRS = {
-					num_divisions > 69
-				}
-			}
-		}
-	}
-
-	option = {
-		name = mrs.40.2#拒绝
-		trigger = {
-
-		}
-		hidden_effect = {
-			country_event = { id = glo.2002 days = 2}
-		}
-		ai_chance = {
-			base = 75
-		}
-	}
-}
-##########事件
 country_event = { #MSD VS MRS(trigger)
 	id = mrs.41
 	title = mrs.41.t
@@ -96,13 +49,6 @@ country_event = { #MSD VS MRS(trigger)
 			MRS = { set_major = yes }
 			news_event = { days = 2 id = mrs.42}
 		}
-	}
-
-	option = {
-		ai_chance = {
-			base = 0
-		}
-		name = mrs.41.3
 	}
 }
 
@@ -384,71 +330,6 @@ country_event = {
 
 	}
 }
-
-country_event = {
-	id = mrs.51
-	hidden = yes
-	is_triggered_only = yes
-	fire_only_once = no
-
-	option = {
-
-	}
-
-	immediate = {
-		MRS = {
-			country_event = { id = mrs.53 days = 30}
-		}
-	}
-}
-
-country_event = {
-	id = mrs.52
-	title = mrs.52.t
-	desc = mrs.52.d
-	picture = GFX_news_event_mrs.52
-	is_triggered_only = yes
-	fire_only_once = no
-
-	option = {
-		name = mrs.52.1
-		clr_country_flag = MRS_tongyi
-		set_country_flag = MRS_butongyi
-		MRS = {
-			add_to_variable = { butongyifuyong = 1}
-			add_to_variable = { tongyifuyong = -1}
-		}
-	}
-	option = {
-		name = mrs.52.2
-	}
-}
-
-news_event = {
-	id = mrs.54
-	title = mrs.54.t
-	desc = mrs.54.d
-
-	major = yes
-
-	is_triggered_only = yes
-	fire_only_once = no
-
-	option = {
-		name = mrs.54.1
-		trigger = {
-			tag = MRS
-		}
-	}
-	option = {
-		name = mrs.54.2
-		trigger = {
-			not = { tag = MRS }
-		}
-	}
-}
-
-
 # 国家事件 country events
 
 # 魔法之森魔女大会（召开魔女大会）

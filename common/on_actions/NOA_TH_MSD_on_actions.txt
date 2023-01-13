@@ -1,0 +1,17 @@
+on_actions = {
+	on_monthly_MSD={
+		effect={
+			if = {
+				limit={
+				and={
+				has_country_flag = MSD_shashasha_flag
+				not = { has_country_flag = MSD_shashasha_year_flag}
+			   }
+			}
+		set_variable = {MSD_sha = num_of_civilian_factories}
+		multiply_variable = {MSD_sha = -2}
+		MSD = {country_event = msd.28}
+		}
+	}
+}
+}
