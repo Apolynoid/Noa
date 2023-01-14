@@ -1,5 +1,22 @@
 ideas = {
 country = {
+	#开局新增debuff
+	#边境的动荡
+	MSD_bian_jing_dong_dang_idea = {
+		picture = FRA_matignon_agreements
+		modifier = {
+			stability_factor = -0.1
+			production_speed_buildings_factor = -0.1
+		}
+	}
+	#善后人类战争
+	MSD_shan_hou_idea = {
+		picture = backward_production
+		modifier = {
+			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.05
+		}
+	}
 	#政治线 political
 	#防备博丽
 	MSD_fang_bei_bo_li_wu_nv_idea = {
@@ -179,12 +196,12 @@ country = {
 		targeted_modifier = {
 			tag = ALI
 			attack_bonus_against = 0.1
-			defense_bonus_against = 0.2
+			defense_bonus_against = 0.15
 		}
 		targeted_modifier = {
 			tag = MRS
 			attack_bonus_against = 0.1
-			defense_bonus_against = 0.2
+			defense_bonus_against = 0.15
 		}
 		modifier = {
 			army_speed_factor = 0.05

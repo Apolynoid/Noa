@@ -97,7 +97,7 @@ MSD_shoudaozhanzheng_category = {
 		num_of_civilian_factories_available_for_projects > 2
 	}
 	cost = 50
-	days_remove = 30
+	days_remove = 45
 	modifier = {
 			civilian_factory_use = 3
 		}
@@ -451,7 +451,7 @@ MSD_jinyibukaifa_category = {
 			}
 		}
 		cost = 20
-		days_remove = 30
+		days_remove = 45
 		complete_effect={
 				subtract_from_variable = {MSD_M = 300}
 				set_variable = {MSD_M_display_1 = MSD_M}
@@ -489,7 +489,7 @@ MSD_jinyibukaifa_category = {
 			}
 		}
 		cost = 20
-		days_remove = 30
+		days_remove = 45
 		complete_effect={
 				subtract_from_variable = {MSD_M = 400}
 				set_variable = {MSD_M_display_1 = MSD_M}
@@ -620,10 +620,16 @@ MSD_jinyibukaifa_category = {
 			}
 		}
 		available = {
+			and={
 			custom_trigger_tooltip = {
 				tooltip = MSD_huafei_tt
 				check_variable = { MSD_M>399 }
 			}
+			custom_trigger_tooltip = {
+				tooltip = MSD_jiarenli_tt
+				check_variable = { MSD_ren>0 }
+			}
+		}
 		}
 		cost = 50
 		days_remove = 30
@@ -636,10 +642,11 @@ MSD_jinyibukaifa_category = {
 				multiply_variable = {MSD_M_display_1 = 100}
 				round_variable = {MSD_M_display_1}
 				set_variable = {MSD_M_display = MSD_M_display_1}
+				subtract_from_variable = {MSD_ren = 1}
 				random_list={
-					50={add_manpower=100}
-					30={add_manpower=250}
-					20={add_manpower=400}
+					50={add_manpower=200}
+					30={add_manpower=300}
+					20={add_manpower=500}
 				}
 		}
 	}

@@ -124,6 +124,10 @@
         normal_border
         sc_rule
     }
+    add_ideas = {
+        MSD_bian_jing_dong_dang_idea
+        MSD_shan_hou_idea
+    }
     
     set_politics = {
     	ruling_party = neworder
