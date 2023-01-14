@@ -840,3 +840,36 @@ news_event = {#乡奸!
 		}
 	}
 }
+country_event = {
+	id = msd.29
+	title = msd.29.t
+	desc = mrs.29.d
+	fire_only_once = yes
+	trigger = {
+		date > 149.12.15
+		has_global_flag = main_scenario
+		country_exists = MRS
+		country_exists = MSD
+		tag = MSD
+		has_country_flag = MSD_touzi_flag
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			MSD = {
+				clr_country_flag = MSD_dakaifa_flag
+			}
+		}
+	}
+
+	option = {
+		custom_effect_tooltip = MSD_jieshukaifa_tt
+		ai_chance = {
+			base = 100
+		}
+		name = msd.29.1
+	}
+}
