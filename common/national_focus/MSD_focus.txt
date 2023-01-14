@@ -284,7 +284,10 @@ focus_tree={
 		prerequisite={focus=MSD_jin_kao_zi_ji}
 		cost=6
 		completion_reward={
-			add_ideas=MSD_zongdongy_idea
+			add_timed_idea={
+				days=400
+				idea=MSD_zongdongy_idea
+			}
 			add_war_support=-0.1
 		}
 		ai_will_do={
@@ -834,10 +837,11 @@ focus_tree={
 			has_completed_focus = MSD_shou_dao_bian_jing_de_chong_tu
 		}
 		completion_reward={
-			army_experience=25
+			army_experience=20
 			set_technology={
 				mortar1=1
 			}
+			remove_ideas = MSD_shan_hou_idea
 			add_ideas=MSD_weiliefangzhi_idea
 		}
 		ai_will_do={
@@ -988,6 +992,10 @@ focus_tree={
 		prerequisite={focus=MSD_yin_jin_min_bing_zhi_du}
 		cost=6
 		completion_reward={
+			HUM= {add_opinion_modifier = {
+				target = MSD
+				modifier = MSD_chiren_op
+			}}
 			add_ideas=MSD_xijirenlei_idea
 		}
 		ai_will_do={
@@ -1111,6 +1119,7 @@ focus_tree={
 				set_variable = {MSD_M_display_1 = 10}
 				set_variable = {MSD_IC = num_of_civilian_factories}
 				set_variable = {MSD_ICM = 10}
+				set_variable = {MSD_ren = 5}
 				multiply_variable = {MSD_ICM = MSD_IC}
 			}
 			custom_effect_tooltip = MSD_jinyibukaifa_tt
@@ -1141,6 +1150,11 @@ focus_tree={
 			country_event = {
 				id = msd.10
 				days = 15
+			}
+			custom_effect_tooltip = MSD_jisu_tt
+			set_country_flag = {
+				flag = MSD_touzi_flag
+				value = 1
 			}
 		}
 		ai_will_do={
@@ -1218,8 +1232,15 @@ focus_tree={
 		y=7
 		prerequisite={focus=MSD_jin_yi_bu_kai_fa_shou_dao}
 		mutually_exclusive={focus=MSD_ji_su_gong_ye_hua }
+		completion_reward = {
+			add_timed_idea={
+				idea=MSD_jiaji_idea
+				days=180
+			}
+		}
+		cost=6
 		ai_will_do={
-			factor=1
+			factor=100
 		}
 	}
 
