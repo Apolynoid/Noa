@@ -61,6 +61,7 @@ focus_tree={
 				days=1
 			}
 			custom_effect_tooltip = MSD_shou_dao_bian_jing_de_chong_tu_tt
+			custom_effect_tooltip = MSD_unlock_military_focuses_tt
 			MSD = {
 					set_variable = {MSD_NIC = 50}
 				}

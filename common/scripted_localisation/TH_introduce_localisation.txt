@@ -1,0 +1,329 @@
+
+defined_text = { # 某页内的文本
+	name = introduceText
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = TKM
+		}
+		localization_key = introduce_TKM_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = NMS
+		}
+		localization_key = introduce_NMS_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = SRB
+		}
+		localization_key = introduce_SRB_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = HKR
+		}
+		localization_key = introduce_HKR_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = TES
+		}
+		localization_key = introduce_TES_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = MRY
+		}
+		localization_key = introduce_MRY_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = TEG
+		}
+		localization_key = introduce_TEG_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = SCA
+		}
+		localization_key = introduce_SCA_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = SEJ
+		}
+		localization_key = introduce_SEJ_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = CIR
+		}
+		localization_key = introduce_CIR_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = MRS
+		}
+		localization_key = introduce_MRS_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = MSD
+		}
+		localization_key = introduce_MSD_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = AKI
+		}
+		localization_key = introduce_AKI_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = MEL
+		}
+		localization_key = introduce_MEL_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = YYK
+		}
+		localization_key = introduce_YYK_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = CLO
+		}
+		localization_key = introduce_CLO_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = SAT
+		}
+		localization_key = introduce_SAT_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+		}
+		localization_key = introduce_gsk_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			capital_scope = {
+				not = { is_on_continent = Gensokyo }
+			}
+		}
+		localization_key = introduce_notgsk_page1
+	}
+	text = { 
+		trigger = { check_variable = { introduce_page = 0 } }
+		localization_key = introduce_backup 
+	}
+	text = { 
+		trigger = { check_variable = { introduce_page = 1 } }
+		localization_key = introduce_page2
+	}
+	text = { 
+		trigger = { check_variable = { introduce_page = 2 } }
+		localization_key = introduce_page3
+	}
+	text = { 
+		trigger = { check_variable = { introduce_page = 3 } }
+		localization_key = introduce_page4
+	}
+	text = { 
+		trigger = { check_variable = { introduce_page = 4 } }
+		localization_key = introduce_page5
+	}
+}
+
+defined_text = { # 转到某页按钮的文本
+	name = introduceButtonText
+	# text = {
+	# 	trigger = { tag = CIR check_variable = { i = 1 } }
+	# 	localization_key = introduce_button_GER_p2
+	# }
+	text = { 
+		trigger = { check_variable = { i = 0 } }
+		localization_key = introduce_button_page1 
+	}
+	text = { 
+		trigger = { check_variable = { i = 1 } }
+		localization_key = introduce_button_page2 
+	}
+	text = { 
+		trigger = { check_variable = { i = 2 } }
+		localization_key = introduce_button_page3 
+	}
+	text = { 
+		trigger = { check_variable = { i = 3 } }
+		localization_key = introduce_button_page4 
+	}
+	text = { 
+		trigger = { check_variable = { i = 4 } }
+		localization_key = introduce_button_page5
+	}
+}
+
+defined_text = { # 某页有图则图的gfx名
+	name = introducePic
+	# text = {
+	# 	trigger = { tag = CIR check_variable = { introduce_page = 0 } }
+	# 	localization_key = GFX_introduceP_GER
+	# }
+}
+
+defined_text = { # 某页文本的背景图
+	name = introduceStylePic
+	# text = {
+	# 	trigger = { tag = CIR not = { introduce_show_pic = yes } }
+	# 	localization_key = GFX_introduce_bg_GER
+	# }
+	text = {
+		localization_key = GFX_introduce_bg_World
+	}
+}
+
+defined_text = { # 机制介绍
+	name = introduce_page2_01
+	text = {
+		localization_key = introduce_page2_1
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_02
+	text = {
+		localization_key = introduce_page2_2
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_03
+	text = {
+		localization_key = introduce_page2_3
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_04
+	text = {
+		localization_key = introduce_page2_4
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_05
+	text = {
+		localization_key = introduce_page2_5
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_06
+	text = {
+		localization_key = introduce_page2_6
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_07
+	text = {
+		localization_key = introduce_page2_7
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_08
+	text = {
+		localization_key = introduce_page2_8
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_09
+	text = {
+		localization_key = introduce_page2_9
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_010
+	text = {
+		localization_key = introduce_page2_10
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_011
+	text = {
+		localization_key = introduce_page2_11
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_012
+	text = {
+		localization_key = introduce_page2_12
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_013
+	text = {
+		localization_key = introduce_page2_13
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_014
+	text = {
+		localization_key = introduce_page2_14
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_015
+	text = {
+		localization_key = introduce_page2_15
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_016
+	text = {
+		localization_key = introduce_page2_16
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_017
+	text = {
+		localization_key = introduce_page2_17
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_018
+	text = {
+		localization_key = introduce_page2_18
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_019
+	text = {
+		localization_key = introduce_page2_19
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_020
+	text = {
+		localization_key = introduce_page2_20
+	}
+}

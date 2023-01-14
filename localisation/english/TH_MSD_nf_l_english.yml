@@ -1,11 +1,12 @@
 ﻿l_english:
 # 国策部分
 MSD_DAWN_DESC:0 "让夜雀再次伟大!"
+introduce_MSD_page1:0 "正在编写中"
 # 政治线 political
 MSD_ren_qing_xian_zhuang:0 "认清现状"
 MSD_fang_bei_bo_li_wu_nv:0 "防备博丽巫女"
 MSD_shou_dao_bian_jing_de_chong_tu:0 "兽道边境的冲突"
-MSD_shou_dao_bian_jing_de_chong_tu_desc:0 "虽然人类惩罚战争才结束不久,但是我们不能不再次动员起来准备下一场战争\n\n\n\n\n§Y解锁军事线国策§!"
+MSD_shou_dao_bian_jing_de_chong_tu_desc:0 "虽然人类惩罚战争才结束不久,但是我们不能不再次动员起来准备下一场战争。"
 MSD_qing_qiu_wai_bu_yuan_zhu:0 "请求外部援助"
 MSD_xiang_TKM_qing_qiu_yuan_zhu:0 "向九十九工业请求援助"
 MSD_xiang_CIR_qing_qiu_yuan_zhu:0 "向雾之湖妖精请求援助"
@@ -310,6 +311,7 @@ MSD_linshicanmou_idea:0 "尝试设置军事参谋中心"
 MSD_canmou_idea:0 "军事参谋中心"
 msd_xian_dai_jun_dui_idea:0 "现代军队"
 ## 国策描述
+MSD_unlock_military_focuses_tt:0 "§Y解锁军事线国策§!"
 MSD_shou_dao_bian_jing_de_chong_tu_tt:0 "§R将开启与兽道战争相关的决议§!"
 MSD_jingjichongjian_tt:0 "§R将开启战后重建相关的决议"
 MSD_jingjiweiji_tt:0 "§R这将会使我们战后重建变得更加困难§!"

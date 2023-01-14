@@ -11,7 +11,7 @@ country = {
 	}
 	#善后人类战争
 	MSD_shan_hou_idea = {
-		picture = backward_production
+		picture = ENG_the_war_to_end_all_wars
 		modifier = {
 			production_speed_buildings_factor = -0.1
 			consumer_goods_factor = 0.05
@@ -33,10 +33,6 @@ country = {
 		allowed = {
 			always = no
 		}
-		available = {
-		}
-		allowed_civil_war = {
-		}
 		modifier = {
 			stability_factor = -0.1
 			war_support_factor = 0.2
@@ -48,20 +44,12 @@ country = {
 		allowed = {
 			always = no
 		}
-		available = {
-		}
-		allowed_civil_war = {
-		}
 	}
 	#武器租借条例
 	MSD_laizipanluan2_idea = {
 		picture = HUN_treaty_of_triannon
 		allowed = {
 			always = no
-		}
-		available = {
-		}
-		allowed_civil_war = {
 		}
 	}	
 	#兽道战争胜利了!
