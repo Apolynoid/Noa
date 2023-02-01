@@ -56,7 +56,7 @@ focus_tree = {
   # 稳定指挥链
   focus = {
     id = ALI_wen_ding_zhi_hui_lian
-    icon = unknown
+    icon = GFX_focus_generic_military_mission
     cost = 3
     x = 0
     y = 1
@@ -111,7 +111,7 @@ focus_tree = {
   # 怀柔政策
   focus = {
     id = ALI_huai_rou_zheng_ce
-    icon = unknown
+    icon = GFX_goal_generic_national_unity
     cost = 3
     x = 0
     y = 1
@@ -225,7 +225,7 @@ focus_tree = {
   # 从内战中恢复
   focus = {
     id = ALI_cong_nei_zhan_zhong_hui_fu
-    icon = unknown
+    icon = GFX_focus_recover_from_ruins
     cost = 7
     x = -4
     y = 1
@@ -342,7 +342,7 @@ focus_tree = {
   # 大规模重建
   focus = {
     id = ALI_da_gui_mo_chong_jian
-    icon = unknown
+    icon = GFX_focus_reconstruction
     cost = 12
     x = 2
     y = 1
@@ -371,7 +371,7 @@ focus_tree = {
   # 资助中小企业
   focus = {
     id = ALI_zi_zhu_zhong_xiao_qi_ye
-    icon = unknown
+    icon = GFX_focus_mex_privatisation
     cost = 7
     x = 0
     y = 1
@@ -393,7 +393,7 @@ focus_tree = {
   # 人偶用于宣传
   focus = {
     id = ALI_ren_ou_yong_yu_xuan_chuan
-    icon = unknown
+    icon = ALI_focus_puppet_for_propaganda
     cost = 3
     x = 0
     y = 3
@@ -419,7 +419,7 @@ focus_tree = {
   # 战争宣传
   focus = {
     id = ALI_zhan_zheng_xuan_chuan
-    icon = unknown
+    icon = GFX_focus_war_propaganda
     cost = 7
     x = -2
     y = 1
@@ -445,7 +445,7 @@ focus_tree = {
   # 和平宣传
   focus = {
     id = ALI_he_ping_xuan_chuan
-    icon = unknown
+    icon = GFX_focus_peace_propaganda
     cost = 7
     x = 2
     y = 1
@@ -472,7 +472,7 @@ focus_tree = {
   # 魔法森林自卫能力
   focus = {
     id = ALI_mo_fa_sen_lin_zi_wei_neng_li
-    icon = unknown
+    icon = GFX_goal_generic_military_sphere
     cost = 7
     x = 0
     y = 2
@@ -782,7 +782,7 @@ focus_tree = {
   # 友好而独立
   focus = {
     id = ALI_you_hao_er_du_li
-    icon = unknown
+    icon = GFX_focus_independence
     cost = 7
     x = 2
     y = 2
@@ -817,7 +817,7 @@ focus_tree = {
   # 自力更生
   focus = {
     id = ALI_zi_li_geng_sheng
-    icon = unknown
+    icon = GFX_focus_generic_support_the_left_right
     cost = 7
     x = 0
     y = 1

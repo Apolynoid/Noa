@@ -45,7 +45,7 @@ focus_tree = {
   # 统一指挥系统
   focus = {
     id = NRM_tong_yi_zhi_hui_xi_tong
-    icon = unknown
+    icon = GFX_focus_generic_military_mission
     cost = 3
     x = 0
     y = 1
@@ -645,7 +645,7 @@ focus_tree = {
   # 独立自主
   focus = {
     id = NRM_du_li_zi_zhu
-    icon = unknown
+    icon = GFX_focus_independence
     cost = 7
     x = 3
     y = 1

@@ -1,5 +1,21 @@
 ﻿l_english:
 ############################
+# 国家名
+ALI_qinwai:0 "人偶师协会"
+ALI_qinwai_ADJ:0 "人偶师协会"
+ALI_qinwai_DEF:0 "人偶师协会"
+ALI_neworder:0 "人偶师协会"
+ALI_neworder_ADJ:0 "人偶师协会"
+ALI_neworder_DEF:0 "人偶师协会"
+ALI_guli:0 "人偶师协会"
+ALI_guli_ADJ:0 "人偶师协会"
+ALI_guli_DEF:0 "人偶师协会"
+ALI_oldorder:0 "新魔界"
+ALI_oldorder_ADJ:0 "新魔界"
+ALI_oldorder_DEF:0 "新魔界"
+ALI_fandong:0 "人偶师协会"
+ALI_fandong_ADJ:0 "人偶师协会"
+ALI_fandong_DEF:0 "人偶师协会"
 # 国策 national focus
 # 内战 civil war
 ALI_fan_kang_bao_zheng:0 "反抗暴政"

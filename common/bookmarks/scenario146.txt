@@ -257,6 +257,21 @@ bookmarks = {
 			}			
 		}  
 
+		"SGS"={
+		    minor = yes
+			history = "SGS_DAWN_DESC"		#sgs
+			ideas={ 
+				SGS_tuanjiexieding_idea
+				SGS_yaojingyoujidui_idea
+				SGS_captanul_idea
+			}	
+            focuses = {
+				SGS_xinanhuanxiangxianggongyehua
+				SGS_xinanhuanxiangxiangzhiguang
+				SGS_xinanzhanluan
+			}			
+		} 
+
 		"MSD" = {
 			minor = yes
 			history = "MSD_DAWN_DESC"			#sat

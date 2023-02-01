@@ -1,5 +1,5 @@
 get_original_general_skills = {
-    every_character = {
+    every_unit_leader = {
         if = {
             limit = {
                 is_corps_commander = yes
@@ -120,7 +120,7 @@ get_original_general_skills = {
 	}
 }
 leader_nationality_set = { #外部scope 国家
-    every_character = {
+    every_unit_leader = {
         limit = {
             has_trait = th_original_character #只有初始国家
         }

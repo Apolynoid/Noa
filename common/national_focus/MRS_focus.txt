@@ -1428,7 +1428,7 @@ focus_tree = {
   # 独善其身
   focus = {
     id = MRS_du_shan_qi_shen
-    icon = unknown
+    icon = GFX_focus_independence
     cost = 7
     x = 0
     y = 3

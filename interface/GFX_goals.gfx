@@ -13,8 +13,33 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_mass_production"
+		texturefile = "gfx/interface/goals/focus_generic_mass_production.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_cooperative_production"
+		texturefile = "gfx/interface/goals/focus_generic_cooperative_production.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_production"
+		texturefile = "gfx/interface/goals/focus_generic_production.dds"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_construction"
 		texturefile = "gfx/interface/goals/focus_generic_construction.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_reconstruction"
+		texturefile = "gfx/interface/goals/focus_generic_reconstruction.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_recover_from_ruins"
+		texturefile = "gfx/interface/goals/focus_generic_recover_from_ruins.dds"			
 	}
 
 	SpriteType = {
@@ -28,23 +53,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_focus_improve_logistics"
-	texturefile = "gfx/interface/goals/focus_improve_logistics.dds"			
+		name = "GFX_focus_army_dicipline"
+		texturefile = "gfx/interface/goals/focus_army_dicipline.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_army_dicipline"
-	texturefile = "gfx/interface/goals/focus_army_dicipline.dds"			
-	}
-
-	SpriteType = {
-	name = "GFX_focus_enemy_in_all_directions"
-	texturefile = "gfx/interface/goals/focus_enemy_in_all_directions.dds"			
-	}
-
-	SpriteType = {
-	name = "GFX_focus_equipment_check"
-	texturefile = "gfx/interface/goals/focus_equipment_check.dds"			
+		name = "GFX_focus_enemy_in_all_directions"
+		texturefile = "gfx/interface/goals/focus_enemy_in_all_directions.dds"			
 	}
 
 	SpriteType = {
@@ -63,13 +78,28 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_focus_dust_settled"
-	texturefile = "gfx/interface/goals/focus_generic_dust_settled.dds"			
+		name = "GFX_focus_dust_settled"
+		texturefile = "gfx/interface/goals/focus_generic_dust_settled.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_attack_SCA"
-	texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
+		name = "GFX_focus_independence"
+		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_peace_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_peace_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_war_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_war_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
 	}
 
 	SpriteType = {
@@ -202,13 +232,18 @@ spriteTypes = {
 
 	#### ALI Alice Margatroid 人偶师协会
 	SpriteType = {
-	name = "ALI_focus_fight_against_tyranny"
-	texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
+		name = "ALI_focus_fight_against_tyranny"
+		texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
 	}
 
 	SpriteType = {
-	name = "ALI_focus_magical_forest_new_look"
-	texturefile = "gfx/interface/goals/focus_ALI_magical_forest_new_look.dds"			
+		name = "ALI_focus_puppet_for_propaganda"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_for_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_magical_forest_new_look"
+		texturefile = "gfx/interface/goals/focus_ALI_magical_forest_new_look.dds"			
 	}
 
 	SpriteType = {

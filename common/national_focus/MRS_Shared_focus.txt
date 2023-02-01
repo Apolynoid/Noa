@@ -47,7 +47,7 @@ shared_focus = {
 # 军备审查
 shared_focus = {
   id = MRS_jun_bei_shen_cha
-  icon = GFX_focus_equipment_check
+  icon = GFX_focus_secret_rearmament
   cost = 12
   x = -2
   y = 1
@@ -210,7 +210,7 @@ shared_focus = {
 # 改善后勤体系
 shared_focus = {
   id = MRS_gai_shan_hou_qin_ti_xi
-  icon = GFX_focus_improve_logistics
+  icon = GFX_focus_generic_truck
   cost = 7
   x = 0
   y = 1
@@ -942,7 +942,7 @@ shared_focus = {
 # 现代化生产方式
 shared_focus = {
   id = MRS_xian_dai_hua_sheng_chan_fang_shi
-  icon = unknown
+  icon = GFX_focus_generic_railroad
   cost = 7
   x = 0
   y = 1
@@ -1092,7 +1092,7 @@ shared_focus = {
 # 鼓励合作生产
 shared_focus = {
   id = MRS_gu_li_he_zuo_sheng_chan
-  icon = unknown
+  icon = GFX_focus_cooperative_production
   cost = 7
   x = 0
   y = 1
@@ -1118,7 +1118,7 @@ shared_focus = {
 # 扩大生产线
 shared_focus = {
   id = MRS_kuo_da_sheng_chan_xian
-  icon = unknown
+  icon = GFX_focus_mass_production
   cost = 7
   x = 0
   y = 1
@@ -1146,7 +1146,7 @@ shared_focus = {
 # 简化生产线
 shared_focus = {
   id = MRS_jian_hua_sheng_chan_xian
-  icon = unknown
+  icon = GFX_focus_production
   cost = 7
   x = 0
   y = 1

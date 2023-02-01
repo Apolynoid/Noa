@@ -1,4 +1,20 @@
 ﻿l_english:
+# 国家名
+NRM_qinwai:0 "魔法之森联合体"
+NRM_qinwai_ADJ:0 "魔法之森联合体"
+NRM_qinwai_DEF:0 "魔法之森联合体"
+NRM_neworder:0 "魔法之森联合体"
+NRM_neworder_ADJ:0 "魔法之森联合体"
+NRM_neworder_DEF:0 "魔法之森联合体"
+NRM_guli:0 "魔法之森联合体"
+NRM_guli_ADJ:0 "魔法之森联合体"
+NRM_guli_DEF:0 "魔法之森联合体"
+NRM_oldorder:0 "魔法之森联合体"
+NRM_oldorder_ADJ:0 "魔法之森联合体"
+NRM_oldorder_DEF:0 "魔法之森联合体"
+NRM_fandong:0 "魔法之森联合体"
+NRM_fandong_ADJ:0 "魔法之森联合体"
+NRM_fandong_DEF:0 "魔法之森联合体"
 # 政治线 political
 # 内战部分 civil war
 NRM_shu_yu_ruo_zhe_de_jun_dui:0 "属于弱者的军队"

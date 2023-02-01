@@ -4,6 +4,13 @@ defined_text = { # 某页内的文本
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
+			tag = SGS
+		}
+		localization_key = introduce_SGS_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
 			tag = TKM
 		}
 		localization_key = introduce_TKM_page1
