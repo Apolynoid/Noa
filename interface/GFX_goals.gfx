@@ -9,7 +9,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_traditional_production"
-		texturefile = "gfx/interface/goals/focus_generic_traditional_production.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_traditional_production.png"			
 	}
 
 	SpriteType = {
@@ -85,6 +85,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_independence"
 		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_final_push"
+		texturefile = "gfx/interface/goals/focus_generic_final_push.png"			
 	}
 
 	SpriteType = {
@@ -234,6 +239,26 @@ spriteTypes = {
 	SpriteType = {
 		name = "ALI_focus_fight_against_tyranny"
 		texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_assisted_production"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_assisted_production.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_assisted_combat"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_assisted_combat.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_workshop_expansion"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_workshop_expansion.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppets_military_establishment"
+		texturefile = "gfx/interface/goals/focus_ALI_puppets_military_establishment.dds"			
 	}
 
 	SpriteType = {

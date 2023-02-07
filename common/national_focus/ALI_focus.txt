@@ -78,7 +78,7 @@ focus_tree = {
   # 人偶协助生产
   focus = {
     id = ALI_ren_ou_xie_zhu_sheng_chan
-    icon = unknown
+    icon = ALI_focus_puppet_assisted_production
     cost = 3
     x = -2
     y = 1
@@ -136,7 +136,7 @@ focus_tree = {
   # 人偶协助战斗
   focus = {
     id = ALI_ren_ou_xie_zhu_zhan_dou
-    icon = unknown
+    icon = ALI_focus_puppet_assisted_combat
     cost = 3
     x = 2
     y = 1
@@ -195,7 +195,7 @@ focus_tree = {
   # 向胜利进军
   focus = {
     id = ALI_xiang_sheng_li_jin_jun
-    icon = unknown
+    icon = GFX_focus_final_push
     cost = 3
     x = 0
     y = 3
@@ -263,7 +263,7 @@ focus_tree = {
   # 人偶工坊扩大化
   focus = {
     id = ALI_ren_ou_gong_fang_kuo_da_hua
-    icon = unknown
+    icon = ALI_focus_puppet_workshop_expansion
     cost = 7
     x = -2
     y = 1
@@ -285,7 +285,7 @@ focus_tree = {
   # 军用人偶编制化
   focus = {
     id = ALI_jun_yong_ren_ou_bian_zhi_hua
-    icon = unknown
+    icon = ALI_focus_puppets_military_establishment
     cost = 12
     x = 0
     y = 1
@@ -747,7 +747,7 @@ focus_tree = {
   # 妖怪山经济援助
   focus = {
     id = ALI_yao_guai_shan_jing_ji_yuan_zhu
-    icon = unknown
+    icon = GFX_focus_generic_concessions
     cost = 7
     x = 0
     y = 1
