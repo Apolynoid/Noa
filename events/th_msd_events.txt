@@ -873,3 +873,25 @@ country_event = {
 		name = msd.29.1
 	}
 }
+country_event = {#意识到叛乱的阳谋
+	id = msd.30
+	title = msd.30.t
+	desc = msd.30.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = msd.30.1
+		start_civil_war = {
+			ruling_party = fandong
+			ideology = ROOT
+			size = 0.5
+			capital = 259
+			states = {
+				424 221 428 259
+			}
+		}
+	}
+}
