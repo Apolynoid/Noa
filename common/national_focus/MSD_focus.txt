@@ -802,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		x = 21
-		y = 11
+		y = dong_lan_huan_xiang_lian
 		prerequisite = {
 			focus = MSD_bei_mian_de_wei_xie
 		}
@@ -1511,7 +1511,7 @@ focus_tree = {
 	focus = {
 		id = MSD_xian_dai_hua_guo_jia
 		x = 35
-		y = 11
+		y = dong_lan_huan_xiang_lian
 		available = {
 			num_of_factories > 45
 			428 = {
@@ -1535,4 +1535,146 @@ focus_tree = {
 			custom_effect_tooltip = MSD_jieshukaifa_tt
 		}
 	}
+	#激进线
+	focus={
+		id=da_ji_wan_gu_fen_zi
+		x=4
+		y=0
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=dong_lan_huan_xiang_lian
+		x=4
+		y=1
+		prerequisite={focus=da_ji_wan_gu_fen_zi}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=jie_ru_dong_lan
+		x=2
+		y=2
+		prerequisite={focus=dong_lan_huan_xiang_lian}
+		mutually_exclusive={focus=yu_ying_lang_he_zuo }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=yi_zhan_yang_zhan
+		x=4
+		y=3
+		prerequisite={focus=jie_ru_dong_lan}
+		mutually_exclusive={focus=zan_huan_jiao_bu }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=zan_huan_jiao_bu
+		x=0
+		y=3
+		prerequisite={focus=jie_ru_dong_lan}
+		mutually_exclusive={focus=yi_zhan_yang_zhan }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=yu_ying_lang_he_zuo
+		x=6
+		y=2
+		prerequisite={focus=dong_lan_huan_xiang_lian}
+		mutually_exclusive={focus=jie_ru_dong_lan }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=qing_xi_zhan_ling_qu
+		x=6
+		y=3
+		prerequisite={focus=yu_ying_lang_he_zuo}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=xin_de_ge_ming_zhong_xin
+		x=2
+		y=4
+		prerequisite={focus=zan_huan_jiao_bu focus=yi_zhan_yang_zhan focus=qing_xi_zhan_ling_qu }
+		mutually_exclusive={focus=jia_ru_xia_ke_shang_tong_meng }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
+	focus={
+		id=jia_ru_xia_ke_shang_tong_meng
+		x=6
+		y=4
+		prerequisite={focus=zan_huan_jiao_bu focus=yi_zhan_yang_zhan focus=qing_xi_zhan_ling_qu }
+		mutually_exclusive={focus=xin_de_ge_ming_zhong_xin }
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+		}
+	}
 }
+
