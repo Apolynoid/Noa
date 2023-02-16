@@ -850,7 +850,7 @@ focus_tree = {
 		cost = 10
 		will_lead_to_war_with = SEJ
 		prerequisite = {
-			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
+			focus = MSD_bei_mian_de_wei_xie
 		}
 		mutually_exclusive = {
 			focus = MSD_zhun_bei_fang_yu
@@ -873,7 +873,7 @@ focus_tree = {
 		y = 12
 		cost = 10
 		prerequisite = {
-			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
+			focus = MSD_bei_mian_de_wei_xie
 		}
 		mutually_exclusive = {
 			focus = MSD_zhu_dong_chu_ji
