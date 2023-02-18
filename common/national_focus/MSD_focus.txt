@@ -802,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		x = 21
-		y = dong_lan_huan_xiang_lian
+		y = 11
 		prerequisite = {
 			focus = MSD_bei_mian_de_wei_xie
 		}
@@ -850,7 +850,7 @@ focus_tree = {
 		cost = 10
 		will_lead_to_war_with = SEJ
 		prerequisite = {
-			focus = MSD_bei_mian_de_wei_xie
+			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
 		}
 		mutually_exclusive = {
 			focus = MSD_zhun_bei_fang_yu
@@ -873,7 +873,7 @@ focus_tree = {
 		y = 12
 		cost = 10
 		prerequisite = {
-			focus = MSD_bei_mian_de_wei_xie
+			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
 		}
 		mutually_exclusive = {
 			focus = MSD_zhu_dong_chu_ji
@@ -885,10 +885,31 @@ focus_tree = {
 			}
 		}
 	}
-	# 复兴我们的过去
+	# 停战协议
 	focus = {
-		id = MSD_fu_xing_wo_me_de_guo_qu
-		x = 21
+		id = MSD_ting_zhan_xie_yi
+		x = 20
+		y = 13
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = MSD_zhu_dong_chu_ji
+			focus = MSD_zhun_bei_fang_yu
+		}
+		mutually_exclusive = {
+			focus = MSD_xian_gao_sheng_li
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = MSD_xian_gao_sheng_li
+		x = 22
 		y = 13
 		available = {
 			always = no
@@ -900,9 +921,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
-		available_if_capitulated = yes
-		search_filters = {
 		}
 		completion_reward = {
 		}
@@ -1511,7 +1529,7 @@ focus_tree = {
 	focus = {
 		id = MSD_xian_dai_hua_guo_jia
 		x = 35
-		y = dong_lan_huan_xiang_lian
+		y = 11
 		available = {
 			num_of_factories > 45
 			428 = {
@@ -1677,4 +1695,3 @@ focus_tree = {
 		}
 	}
 }
-
