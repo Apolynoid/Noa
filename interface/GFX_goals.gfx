@@ -14,7 +14,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_mass_production"
-		texturefile = "gfx/interface/goals/focus_generic_mass_production.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_mass_production.png"			
 	}
 
 	SpriteType = {
@@ -24,7 +24,12 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_production"
-		texturefile = "gfx/interface/goals/focus_generic_production.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_production.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_production2"
+		texturefile = "gfx/interface/goals/focus_generic_production2.png"			
 	}
 
 	SpriteType = {
@@ -53,8 +58,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_spiritual_power"
+		texturefile = "gfx/interface/goals/focus_generic_spiritual_power.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_army_dicipline"
-		texturefile = "gfx/interface/goals/focus_army_dicipline.dds"			
+		texturefile = "gfx/interface/goals/focus_army_dicipline.png"			
 	}
 
 	SpriteType = {
@@ -83,6 +93,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_domestic_affairs"
+		texturefile = "gfx/interface/goals/focus_generic_domestic_affairs.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_independence"
 		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
 	}
@@ -103,38 +118,43 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_revolution_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_revolution_propaganda.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_SCA"
 		texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_attack_hegemonist_TKM"
-	texturefile = "gfx/interface/goals/focus_generic_attack_hegemonist_TKM.dds"			
+		name = "GFX_focus_attack_hegemonist_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_hegemonist_TKM.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_attack_SEJ"
-	texturefile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+		name = "GFX_focus_attack_SEJ"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_befriend_TEG"
-	texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
+		name = "GFX_focus_befriend_TEG"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_befriend_TKM"
-	texturefile = "gfx/interface/goals/focus_generic_befriend_TKM.dds"			
+		name = "GFX_focus_befriend_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_TKM.png"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_befriend_radicalist_TKM"
-	texturefile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.dds"			
+		name = "GFX_focus_befriend_radicalist_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.png"			
 	}
 
 	SpriteType = {
-	name = "GFX_focus_befriend_SEJ"
-	texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.dds"			
+		name = "GFX_focus_befriend_SEJ"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.png"			
 	}
 
 	SpriteType = {
@@ -143,8 +163,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "GFX_focus_befriend_SCA"
-	texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.dds"			
+		name = "GFX_focus_befriend_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.dds"			
 	}
 
 	#### HKR Hakurei Reimu 博丽神社
@@ -189,18 +209,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "MRS_focus_puppet_legion"
-	texturefile = "gfx/interface/goals/focus_MRS_puppet_legion.dds"			
+		name = "MRS_focus_puppet_legion"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_legion.png"			
 	}
 
 	SpriteType = {
-	name = "MRS_focus_improve_puppet"
-	texturefile = "gfx/interface/goals/focus_MRS_improve_puppet.dds"			
+		name = "MRS_focus_improve_puppet"
+		texturefile = "gfx/interface/goals/focus_MRS_improve_puppet.png"			
 	}
 
 	SpriteType = {
-	name = "MRS_focus_puppet_support"
-	texturefile = "gfx/interface/goals/focus_MRS_puppet_support.dds"			
+		name = "MRS_focus_puppet_support"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_support.png"			
 	}
 
 	SpriteType = {
@@ -231,14 +251,14 @@ spriteTypes = {
 	#### NRM Yatadera Narumi 魔法之森联合体
 
 	SpriteType = {
-	name = "NRM_focus_union_army"
-	texturefile = "gfx/interface/goals/focus_NRM_union_army.dds"			
+		name = "NRM_focus_union_army"
+		texturefile = "gfx/interface/goals/focus_NRM_union_army.png"			
 	}
 
 	#### ALI Alice Margatroid 人偶师协会
 	SpriteType = {
 		name = "ALI_focus_fight_against_tyranny"
-		texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.dds"			
+		texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.png"			
 	}
 
 	SpriteType = {
@@ -303,12 +323,12 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "ALI_focus_makai_knowledge"
-		texturefile = "gfx/interface/goals/focus_ALI_makai_knowledge.dds"			
+		texturefile = "gfx/interface/goals/focus_ALI_makai_knowledge.png"			
 	}
 
 	SpriteType = {
 		name = "ALI_focus_makai_research_ability"
-		texturefile = "gfx/interface/goals/focus_ALI_makai_research_ability.dds"			
+		texturefile = "gfx/interface/goals/focus_ALI_makai_research_ability.png"			
 	}
 
 	SpriteType = {

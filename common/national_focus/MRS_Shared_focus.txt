@@ -741,7 +741,7 @@ shared_focus = {
 # 优化生产结构
 shared_focus = {
   id = MRS_you_hua_sheng_chan_jie_gou
-  icon = GFX_goal_continuous_non_factory_construct
+  icon = GFX_goal_generic_production2
   cost = 7
   x = 0
   y = 1
