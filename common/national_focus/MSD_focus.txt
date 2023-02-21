@@ -99,6 +99,7 @@ focus_tree = {
 	# 向TKM请求援助
 	focus = {
 		id = MSD_xiang_TKM_qing_qiu_yuan_zhu
+<<<<<<< HEAD
 		icon = GFX_focus_generic_befriend_TKM
 		x = 13
 		y = 4
@@ -110,6 +111,17 @@ focus_tree = {
 			or = {
 				not = {
 					country_exists = TKM
+=======
+		icon = GFX_focus_befriend_TKM
+		x=13
+		y=4
+		prerequisite={focus=MSD_qing_qiu_wai_bu_yuan_zhu}
+		cost=6
+		bypass={
+			or={
+				not={
+					country_exists=TKM
+>>>>>>> 89109f61c6118b66530d2a24a8202602ecd4498c
 				}
 				TKM = {
 					is_puppet = yes
