@@ -676,13 +676,15 @@ focus_tree = {
 				ideology = fandong
 				popularity = 0.3
 			}
+			clr_country_flag = MSD_dakaifa_flag
 			custom_effect_tooltip=MSD_fandong_tt
 		}
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#组建游击队
 	focus = {
 		id = MSD_zhuanzhujingjijianshe
 		icon = GFX_goal_tfv_burn_the_royal_portraits
@@ -691,6 +693,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MSD_zhuanxiangneibu
 		}
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -1297,6 +1300,11 @@ focus_tree = {
 		prerequisite = {
 			focus = MSD_jin_yi_bu_kai_fa_shou_dao
 		}
+		available = {
+			not = {
+				has_completed_focus = MSD_zhuanxiangneibu
+			}
+		}
 		mutually_exclusive = {
 			focus = MSD_jin_shen_gong_ye_hua
 		}
@@ -1398,6 +1406,11 @@ focus_tree = {
 		y = 7
 		prerequisite = {
 			focus = MSD_jin_yi_bu_kai_fa_shou_dao
+		}
+		available = {
+			not = {
+				has_completed_focus = MSD_zhuanxiangneibu
+			}
 		}
 		mutually_exclusive = {
 			focus = MSD_ji_su_gong_ye_hua
