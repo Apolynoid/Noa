@@ -99,19 +99,6 @@ focus_tree = {
 	# 向TKM请求援助
 	focus = {
 		id = MSD_xiang_TKM_qing_qiu_yuan_zhu
-<<<<<<< HEAD
-		icon = GFX_focus_generic_befriend_TKM
-		x = 13
-		y = 4
-		prerequisite = {
-			focus = MSD_qing_qiu_wai_bu_yuan_zhu
-		}
-		cost = 6
-		bypass = {
-			or = {
-				not = {
-					country_exists = TKM
-=======
 		icon = GFX_focus_befriend_TKM
 		x=13
 		y=4
@@ -121,7 +108,6 @@ focus_tree = {
 			or={
 				not={
 					country_exists=TKM
->>>>>>> 89109f61c6118b66530d2a24a8202602ecd4498c
 				}
 				TKM = {
 					is_puppet = yes
@@ -706,10 +692,19 @@ focus_tree = {
 			focus = MSD_zhuanxiangneibu
 		}
 		cost = 3
+		completion_reward = {
+			add_stability = -0.15
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.05
+			}
+			custom_effect_tooltip = MSD_youjidui_tt
+		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#泛草根妖怪说
 	focus = {
 		id = MSD_shouliuzhulinnanmin
 		icon = GFX_focus_focus_fra_revolution_utmost
@@ -717,6 +712,15 @@ focus_tree = {
 		y = 8
 		prerequisite = {
 			focus = MSD_zhuanxiangneibu
+		}
+		cost = 3
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.1
+			}
+			add_manpower = 250
 		}
 		ai_will_do = {
 			factor = 1
@@ -727,11 +731,15 @@ focus_tree = {
 		id = MSD_pujijibenjiaoyu
 		x = 26
 		y = 9
+		cost = 6
 		prerequisite = {
 			focus = MSD_zhuanzhujingjijianshe
 		}
 		prerequisite = {
 			focus = MSD_shouliuzhulinnanmin
+		}
+		completion_reward = {
+			country_event = msd.30
 		}
 		ai_will_do = {
 			factor = 1
@@ -1581,8 +1589,8 @@ focus_tree = {
 	#激进线
 	focus={
 		id=da_ji_wan_gu_fen_zi
-		x=4
-		y=0
+		x=35
+		y=13
 		cost=10
 		ai_will_do={
 			factor=1
@@ -1595,8 +1603,8 @@ focus_tree = {
 	}
 	focus={
 		id=dong_lan_huan_xiang_lian
-		x=4
-		y=1
+		x=35
+		y=14
 		prerequisite={focus=da_ji_wan_gu_fen_zi}
 		cost=10
 		ai_will_do={
@@ -1610,8 +1618,8 @@ focus_tree = {
 	}
 	focus={
 		id=jie_ru_dong_lan
-		x=2
-		y=2
+		x=33
+		y=15
 		prerequisite={focus=dong_lan_huan_xiang_lian}
 		mutually_exclusive={focus=yu_ying_lang_he_zuo }
 		cost=10
@@ -1626,8 +1634,8 @@ focus_tree = {
 	}
 	focus={
 		id=yi_zhan_yang_zhan
-		x=4
-		y=3
+		x=35
+		y=16
 		prerequisite={focus=jie_ru_dong_lan}
 		mutually_exclusive={focus=zan_huan_jiao_bu }
 		cost=10
@@ -1642,8 +1650,8 @@ focus_tree = {
 	}
 	focus={
 		id=zan_huan_jiao_bu
-		x=0
-		y=3
+		x=31
+		y=16
 		prerequisite={focus=jie_ru_dong_lan}
 		mutually_exclusive={focus=yi_zhan_yang_zhan }
 		cost=10
@@ -1658,8 +1666,8 @@ focus_tree = {
 	}
 	focus={
 		id=yu_ying_lang_he_zuo
-		x=6
-		y=2
+		x=37
+		y=15
 		prerequisite={focus=dong_lan_huan_xiang_lian}
 		mutually_exclusive={focus=jie_ru_dong_lan }
 		cost=10
@@ -1674,8 +1682,8 @@ focus_tree = {
 	}
 	focus={
 		id=qing_xi_zhan_ling_qu
-		x=6
-		y=3
+		x=37
+		y=16
 		prerequisite={focus=yu_ying_lang_he_zuo}
 		cost=10
 		ai_will_do={
@@ -1689,8 +1697,8 @@ focus_tree = {
 	}
 	focus={
 		id=xin_de_ge_ming_zhong_xin
-		x=2
-		y=4
+		x=37
+		y=17
 		prerequisite={focus=zan_huan_jiao_bu focus=yi_zhan_yang_zhan focus=qing_xi_zhan_ling_qu }
 		mutually_exclusive={focus=jia_ru_xia_ke_shang_tong_meng }
 		cost=10
@@ -1705,8 +1713,8 @@ focus_tree = {
 	}
 	focus={
 		id=jia_ru_xia_ke_shang_tong_meng
-		x=6
-		y=4
+		x=33
+		y=17
 		prerequisite={focus=zan_huan_jiao_bu focus=yi_zhan_yang_zhan focus=qing_xi_zhan_ling_qu }
 		mutually_exclusive={focus=xin_de_ge_ming_zhong_xin }
 		cost=10

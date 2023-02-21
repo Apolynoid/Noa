@@ -1,341 +1,407 @@
 add_namespace = msd
 ##########事件###########
-country_event = {#兽道边境冲突
+country_event = {
+	#兽道边境冲突
 	id = msd.1
 	title = msd.1.t
 	desc = msd.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		ai_chance= {
+		ai_chance = {
 			base = 100
 		}
 		name = msd.1.1
 		add_ideas = MSD_shou_dao_bian_jing_de_chong_tu_idea
-		}
 	}
-	country_event = {#寻求99援助
-		id = msd.2
-		title = msd.2.t
-		desc = msd.2.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {#99给援助
-			name = msd.2.1
-			this = {
-				add_political_power = 30
-			}
-			from = {
-				add_offsite_building = {
-					type = industrial_complex
-					level = 1
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 1
-				}
-				country_event = {
-					id = msd.100
-					days = 1
-				}
-			}
-			ai_chance = {
-				factor = 10
-		}
-	}
-		option = {
-			name = msd.2.2		#不给
-			from = {
-				country_event = {
-					id = msd.101
-					days = 1
-				}
-			}
-			ai_chance = {
-				factor = 90
-			}
-		}
-	}
-	country_event = {#寻求9援助
-		id = msd.3
-		title = msd.3.t
-		desc = msd.3.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {#9给援助
-			name = msd.3.1
-			this = {
-				add_political_power = 30
-			}
-			from = {
-					add_equipment_to_stockpile={
-						type=gun_a
-						amount=1000
-						producer=MSD
-					}
-					add_equipment_to_stockpile={
-						type=shield_a
-						amount=500
-						producer=MSD
-					}
-					add_equipment_to_stockpile={
-						type=melee_a
-						amount=500
-						producer=MSD
-					}
-				country_event = {
-					id = msd.100
-					days = 1
-				}
-			}
-			ai_chance = {
-				factor = 90
-		}
-	}
-		option = {
-			name = msd.3.2		#不给
-			from = {
-				country_event = {
-					id = msd.101
-					days = 1
-				}
-			}
-			ai_chance = {
-				factor = 10
-			}
-		}
-	}
-	country_event = {#要到了
-		id = msd.100
-		title = msd.100.t
-		desc = msd.100.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.100.1
-		}
-	}
-	
-	country_event = {#没求到
-		id = msd.101
-		title = msd.101.t
-		desc = msd.101.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.101.1
-		}
-	}
+}
 
-	country_event = {#叛乱
-		id = msd.4
-		title = msd.4.t
-		desc = msd.4.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.4.1
-			add_ideas = MSD_laizipanluan_idea
-			from = {
-				add_offsite_building = {
-					type = industrial_complex
-					level = 1
-				}
-				add_offsite_building = {
-					type = arms_factory
-					level = 1
-				}
-				}
-				ai_chance = {
-					factor = 90
-				}
+country_event = {
+	#寻求99援助
+	id = msd.2
+	title = msd.2.t
+	desc = msd.2.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#99给援助
+		name = msd.2.1
+		this = {
+			add_political_power = 30
 		}
-		option = {
-			name = msd.4.2
-			add_ideas = MSD_laizipanluan_idea
-			from = {
-				add_offsite_building = {
-					type = industrial_complex
-					level = 3
-				}
-				}
-				ai_chance = {
-					factor = 10
-				}
-		}
-	}
-	country_event = {#还款
-		id = msd.5
-		title = msd.5.t
-		desc = msd.5.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.5.1
-			add_timed_idea={ 
-				idea = MSD_zujiehuankuan_idea
-				days=180
+		from = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
 			}
-			remove_ideas=MSD_laizipanluan_idea
-		}
-	}
-	country_event = {#经济寄了
-		id = msd.6
-		title = msd.6.t
-		desc = msd.6.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.6.1
-			custom_effect_tooltip = MSD_jingjiweiji_tt
-		}
-	}
-	country_event = {#餐车事件链1
-		id = msd.7
-		title = msd.7.t
-		desc = msd.7.d
-		picture = GFX_news_event_msd.7
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.7.1
-		}
-		option = {
-			name = msd.7.2
-		}
-	}
-	country_event = {#向叛乱借款
-		id = msd.8
-		title = msd.8.t
-		desc = msd.8.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.8.1
-			custom_effect_tooltip = MSD_xiang_SEJ_qing_qiu_yuan_zhuzhiyuan_tt
-			set_country_flag = {
-				flag = MSD_panluanjiekuan_flag
-				value = 1
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
 			}
-			add_to_variable = {MSD_panluan_1 = 1050}
-		}
-	}
-	country_event = {#向99借款
-		id = msd.9
-		title = msd.9.t
-		desc = msd.9.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.9.1
-			custom_effect_tooltip = MSD_xiang_TKM_qing_qiu_yuan_zhuzhiyuan_tt
-			set_country_flag = {
-				flag = MSD_99jiekuan_flag
-				value = 1
-			}
-			add_to_variable = {MSD_99waizhai_1 = 1200}
-		}
-	}
-	country_event = {#向湖主借款
-		id = msd.10
-		title = msd.10.t
-		desc = msd.10.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.10.1
-			custom_effect_tooltip = MSD_xiang_SEJ_qing_qiu_yuan_zhuhuzhuzhiyuan_tt
-			set_country_flag = {
-				flag = MSD_huzhujiekuan_flag
-				value = 1
-			}
-			add_to_variable = {MSD_huzhu_1 = 1150}
-		}
-	}
-	country_event = {#向叛乱换款
-		id = msd.11
-		title = msd.11.t
-		desc = msd.11.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.11.1
-			custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
-			set_country_flag = {
-				flag = MSD_panluanjiekuan_flag_1
-				value = 1
-			}
-			add_to_variable = {MSD_panluan_1 = 525}
-		}
-	}
-	country_event = {#向99换款
-		id = msd.12
-		title = msd.12.t
-		desc = msd.12.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.12.1
-			custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
-			set_country_flag = {
-				flag = MSD_99jiekuan_flag_1
-				value = 1
-			}
-			add_to_variable = {MSD_99waizhai_1 = 600}
-		}
-	}
-	country_event = {#向湖主换款
-		id = msd.13
-		title = msd.13.t
-		desc = msd.13.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.13.1
-			custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
-			set_country_flag = {
-				flag = MSD_huzhujiekuan_flag_1
-				value = 1
-			}
-			add_to_variable = {MSD_huzhu_1 = 575}
-		}
-	}
-	country_event = {#叛乱催你还款
-		id = msd.14
-		title = msd.14.t
-		desc = msd.14.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.14.1
-			set_country_flag = {
-				flag = MSD_panluanjiekuan_flag_2
-				value = 1
+			country_event = {
+				id = msd.100
+				days = 1
 			}
 		}
-		option = {
-			name = msd.14.2
-			SEJ = {country_event = msd.17}
-			SEJ= {add_opinion_modifier = {
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = msd.2.2		#不给
+		from = {
+			country_event = {
+				id = msd.101
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
+
+country_event = {
+	#寻求9援助
+	id = msd.3
+	title = msd.3.t
+	desc = msd.3.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#9给援助
+		name = msd.3.1
+		this = {
+			add_political_power = 30
+		}
+		from = {
+			add_equipment_to_stockpile = {
+				type = gun_a
+				amount = 1000
+				producer = MSD
+			}
+			add_equipment_to_stockpile = {
+				type = shield_a
+				amount = 500
+				producer = MSD
+			}
+			add_equipment_to_stockpile = {
+				type = melee_a
+				amount = 500
+				producer = MSD
+			}
+			country_event = {
+				id = msd.100
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = msd.3.2		#不给
+		from = {
+			country_event = {
+				id = msd.101
+				days = 1
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	#要到了
+	id = msd.100
+	title = msd.100.t
+	desc = msd.100.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.100.1
+	}
+}
+
+country_event = {
+	#没求到
+	id = msd.101
+	title = msd.101.t
+	desc = msd.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.101.1
+	}
+}
+
+country_event = {
+	#叛乱
+	id = msd.4
+	title = msd.4.t
+	desc = msd.4.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.4.1
+		add_ideas = MSD_laizipanluan_idea
+		from = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = msd.4.2
+		add_ideas = MSD_laizipanluan_idea
+		from = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	#还款
+	id = msd.5
+	title = msd.5.t
+	desc = msd.5.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.5.1
+		add_timed_idea = {
+			idea = MSD_zujiehuankuan_idea
+			days = 180
+		}
+		remove_ideas = MSD_laizipanluan_idea
+	}
+}
+
+country_event = {
+	#经济寄了
+	id = msd.6
+	title = msd.6.t
+	desc = msd.6.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.6.1
+		custom_effect_tooltip = MSD_jingjiweiji_tt
+	}
+}
+
+country_event = {
+	#餐车事件链1
+	id = msd.7
+	title = msd.7.t
+	desc = msd.7.d
+	picture = GFX_news_event_msd.7
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.7.1
+	}
+	option = {
+		name = msd.7.2
+	}
+}
+
+country_event = {
+	#向叛乱借款
+	id = msd.8
+	title = msd.8.t
+	desc = msd.8.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.8.1
+		custom_effect_tooltip = MSD_xiang_SEJ_qing_qiu_yuan_zhuzhiyuan_tt
+		set_country_flag = {
+			flag = MSD_panluanjiekuan_flag
+			value = 1
+		}
+		add_to_variable = {
+			MSD_panluan_1 = 1050
+		}
+	}
+}
+
+country_event = {
+	#向99借款
+	id = msd.9
+	title = msd.9.t
+	desc = msd.9.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.9.1
+		custom_effect_tooltip = MSD_xiang_TKM_qing_qiu_yuan_zhuzhiyuan_tt
+		set_country_flag = {
+			flag = MSD_99jiekuan_flag
+			value = 1
+		}
+		add_to_variable = {
+			MSD_99waizhai_1 = 1200
+		}
+	}
+}
+
+country_event = {
+	#向湖主借款
+	id = msd.10
+	title = msd.10.t
+	desc = msd.10.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.10.1
+		custom_effect_tooltip = MSD_xiang_SEJ_qing_qiu_yuan_zhuhuzhuzhiyuan_tt
+		set_country_flag = {
+			flag = MSD_huzhujiekuan_flag
+			value = 1
+		}
+		add_to_variable = {
+			MSD_huzhu_1 = 1150
+		}
+	}
+}
+
+country_event = {
+	#向叛乱换款
+	id = msd.11
+	title = msd.11.t
+	desc = msd.11.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.11.1
+		custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
+		set_country_flag = {
+			flag = MSD_panluanjiekuan_flag_1
+			value = 1
+		}
+		add_to_variable = {
+			MSD_panluan_1 = 525
+		}
+	}
+}
+
+country_event = {
+	#向99换款
+	id = msd.12
+	title = msd.12.t
+	desc = msd.12.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.12.1
+		custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
+		set_country_flag = {
+			flag = MSD_99jiekuan_flag_1
+			value = 1
+		}
+		add_to_variable = {
+			MSD_99waizhai_1 = 600
+		}
+	}
+}
+
+country_event = {
+	#向湖主换款
+	id = msd.13
+	title = msd.13.t
+	desc = msd.13.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.13.1
+		custom_effect_tooltip = MSD_tiqianhuankuanzengjia_tt
+		set_country_flag = {
+			flag = MSD_huzhujiekuan_flag_1
+			value = 1
+		}
+		add_to_variable = {
+			MSD_huzhu_1 = 575
+		}
+	}
+}
+
+country_event = {
+	#叛乱催你还款
+	id = msd.14
+	title = msd.14.t
+	desc = msd.14.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.14.1
+		set_country_flag = {
+			flag = MSD_panluanjiekuan_flag_2
+			value = 1
+		}
+	}
+	option = {
+		name = msd.14.2
+		SEJ = {
+			country_event = msd.17
+		}
+		SEJ = {
+			add_opinion_modifier = {
 				target = MSD
 				modifier = MSD_beibiwuchi_op
-			}}
-		
-			subtract_from_variable = {MSD_zongwaizhai = MSD_panluan}
-			set_variable = {MSD_panluan = 0}
-			clr_country_flag = MSD_panluanjiekuan_flag_1
-			clr_country_flag = MSD_panluanjiekuan_flag_2
-			set_variable = {MSD_M_display_1 = MSD_M}
-			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
-			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
-			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
-			multiply_variable = {MSD_M_display_1 = 100}
-			round_variable = MSD_M_display_1
-			set_variable = {MSD_M_display = MSD_M_display_1}
-			set_variable = {MSD_panluan_1 = 0}
+			}
+		}
+		subtract_from_variable = {
+			MSD_zongwaizhai = MSD_panluan
+		}
+		set_variable = {
+			MSD_panluan = 0
+		}
+		clr_country_flag = MSD_panluanjiekuan_flag_1
+		clr_country_flag = MSD_panluanjiekuan_flag_2
+		set_variable = {
+			MSD_M_display_1 = MSD_M
+		}
+		set_variable = {
+			MSD_zongwaizhai_display = MSD_zongwaizhai
+		}
+		add_to_variable = {
+			MSD_zongwaizhai_display = MSD_M_display_1
+		}
+		divide_variable = {
+			MSD_M_display_1 = MSD_zongwaizhai_display
+		}
+		multiply_variable = {
+			MSD_M_display_1 = 100
+		}
+		round_variable = MSD_M_display_1
+		set_variable = {
+			MSD_M_display = MSD_M_display_1
+		}
+		set_variable = {
+			MSD_panluan_1 = 0
 		}
 	}
-	country_event = {#99催你还款
+}
+
+country_event = {
+	#99催你还款
 	id = msd.15
 	title = msd.15.t
 	desc = msd.15.d
@@ -350,28 +416,50 @@ country_event = {#兽道边境冲突
 	}
 	option = {
 		name = msd.15.2
-		TKM = {country_event = msd.18}
-		TKM= {add_opinion_modifier = {
-			target = MSD
-			modifier = MSD_beibiwuchi_op
-		}}
-
-		subtract_from_variable = {MSD_zongwaizhai = MSD_99waizhai}
-		set_variable = {MSD_99waizhai = 0}
+		TKM = {
+			country_event = msd.18
+		}
+		TKM = {
+			add_opinion_modifier = {
+				target = MSD
+				modifier = MSD_beibiwuchi_op
+			}
+		}
+		subtract_from_variable = {
+			MSD_zongwaizhai = MSD_99waizhai
+		}
+		set_variable = {
+			MSD_99waizhai = 0
+		}
 		clr_country_flag = MSD_99jiekuan_flag_1
 		clr_country_flag = MSD_99jiekuan_flag_2
-	
-		set_variable = {MSD_M_display_1 = MSD_M}
-		set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
-		add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
-		divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
-		multiply_variable = {MSD_M_display_1 = 100}
+		set_variable = {
+			MSD_M_display_1 = MSD_M
+		}
+		set_variable = {
+			MSD_zongwaizhai_display = MSD_zongwaizhai
+		}
+		add_to_variable = {
+			MSD_zongwaizhai_display = MSD_M_display_1
+		}
+		divide_variable = {
+			MSD_M_display_1 = MSD_zongwaizhai_display
+		}
+		multiply_variable = {
+			MSD_M_display_1 = 100
+		}
 		round_variable = MSD_M_display_1
-		set_variable = {MSD_M_display = MSD_M_display_1}
-		set_variable = {MSD_99waizhai_1 = 0}
+		set_variable = {
+			MSD_M_display = MSD_M_display_1
+		}
+		set_variable = {
+			MSD_99waizhai_1 = 0
+		}
 	}
 }
-country_event = {#湖主催你还款
+
+country_event = {
+	#湖主催你还款
 	id = msd.16
 	title = msd.16.t
 	desc = msd.16.d
@@ -386,28 +474,50 @@ country_event = {#湖主催你还款
 	}
 	option = {
 		name = msd.16.2
-		WAK = {country_event = msd.19}
-			WAK= {add_opinion_modifier = {
+		WAK = {
+			country_event = msd.19
+		}
+		WAK = {
+			add_opinion_modifier = {
 				target = MSD
 				modifier = MSD_beibiwuchi_op
-			}}
-
-			subtract_from_variable = {MSD_zongwaizhai = MSD_huzhu}
-			set_variable = {MSD_huzhu = 0}
-			clr_country_flag = MSD_huzhujiekuan_flag_1
-			clr_country_flag = MSD_huzhujiekuan_flag_2
-		
-			set_variable = {MSD_M_display_1 = MSD_M}
-			set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
-			add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
-			divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
-			multiply_variable = {MSD_M_display_1 = 100}
-			round_variable = MSD_M_display_1
-			set_variable = {MSD_M_display = MSD_M_display_1}
-			set_variable = {MSD_huzhu_1 = 0}
+			}
+		}
+		subtract_from_variable = {
+			MSD_zongwaizhai = MSD_huzhu
+		}
+		set_variable = {
+			MSD_huzhu = 0
+		}
+		clr_country_flag = MSD_huzhujiekuan_flag_1
+		clr_country_flag = MSD_huzhujiekuan_flag_2
+		set_variable = {
+			MSD_M_display_1 = MSD_M
+		}
+		set_variable = {
+			MSD_zongwaizhai_display = MSD_zongwaizhai
+		}
+		add_to_variable = {
+			MSD_zongwaizhai_display = MSD_M_display_1
+		}
+		divide_variable = {
+			MSD_M_display_1 = MSD_zongwaizhai_display
+		}
+		multiply_variable = {
+			MSD_M_display_1 = 100
+		}
+		round_variable = MSD_M_display_1
+		set_variable = {
+			MSD_M_display = MSD_M_display_1
+		}
+		set_variable = {
+			MSD_huzhu_1 = 0
+		}
 	}
 }
-country_event = {#叛乱:夜雀拒绝还债
+
+country_event = {
+	#叛乱:夜雀拒绝还债
 	id = msd.17
 	title = msd.17.t
 	desc = msd.17.d
@@ -418,36 +528,37 @@ country_event = {#叛乱:夜雀拒绝还债
 			base = 100
 		}
 		name = msd.17.1
-			start_border_war = {
-				change_state_after_war = no
-				attacker = {
-					state = 547
-					num_provinces = 2
-					on_win = msd.21
-					on_lose = msd.20
-					on_cancel = msd.20
-				}
-				defender = {
-					state = 198
-					num_provinces = 3
-					
-				}
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 547
+				num_provinces = 2
+				on_win = msd.21
+				on_lose = msd.20
+				on_cancel = msd.20
 			}
-			hidden_effect = {
-			set_border_war_data = {
-			attacker = 547
-			defender = 198
-			defender_modifier = -0.3
-			attacker_modifier = 0.3
-			combat_width = 1500
+			defender = {
+				state = 198
+				num_provinces = 3
+			}
 		}
-	}
+		hidden_effect = {
+			set_border_war_data = {
+				attacker = 547
+				defender = 198
+				defender_modifier = -0.3
+				attacker_modifier = 0.3
+				combat_width = 1500
+			}
+		}
 	}
 	option = {
 		name = msd.17.2
 	}
 }
-country_event = {#99:夜雀拒绝还债
+
+country_event = {
+	#99:夜雀拒绝还债
 	id = msd.18
 	title = msd.18.t
 	desc = msd.18.d
@@ -459,26 +570,34 @@ country_event = {#99:夜雀拒绝还债
 			base = 1000
 			modifier = {
 				factor = 0
-				MSD = {before_declare_war = no}
+				MSD = {
+					before_declare_war = no
+				}
 			}
 		}
 		TKM = {
 			declare_war_on = {
-			target = MSD
-			type = take_state_focus
-			generator = { 259 }
+				target = MSD
+				type = take_state_focus
+				generator = {
+					259
+				}
+			}
 		}
-	}
 	}
 	option = {
 		name = msd.18.2
 		ai_chance = {
 			base = 100
 		}
-		MSD = {country_event = msd.22}
+		MSD = {
+			country_event = msd.22
+		}
 	}
 }
-country_event = {#湖主:夜雀拒绝还债
+
+country_event = {
+	#湖主:夜雀拒绝还债
 	id = msd.19
 	title = msd.19.t
 	desc = msd.19.d
@@ -486,11 +605,15 @@ country_event = {#湖主:夜雀拒绝还债
 	is_triggered_only = yes
 	option = {
 		name = msd.19.1
-		MSD={country_event = msd.23}
+		MSD = {
+			country_event = msd.23
+		}
 		news_event = msd.1001
 	}
 }
-country_event = {#叛乱:边境冲突输了
+
+country_event = {
+	#叛乱:边境冲突输了
 	id = msd.20
 	title = msd.20.t
 	desc = msd.20.d
@@ -501,11 +624,18 @@ country_event = {#叛乱:边境冲突输了
 			base = 100
 		}
 		name = msd.20.1
-		SEJ = {send_embargo = MSD}
-		news_event = { id = msd.1000 days = 2}
+		SEJ = {
+			send_embargo = MSD
+		}
+		news_event = {
+			id = msd.1000
+			days = 2
+		}
 	}
 }
-news_event = {#叛乱输了(新闻）
+
+news_event = {
+	#叛乱输了(新闻）
 	id = msd.1000
 	title = msd.1000.t
 	desc = msd.1000.d
@@ -515,13 +645,13 @@ news_event = {#叛乱输了(新闻）
 	option = {
 		name = msd.1000.1
 		trigger = {
-				tag = SEJ
+			tag = SEJ
 		}
 	}
 	option = {
 		name = msd.1000.2
 		trigger = {
-				tag = MSD
+			tag = MSD
 		}
 	}
 	option = {
@@ -534,7 +664,9 @@ news_event = {#叛乱输了(新闻）
 		}
 	}
 }
-country_event = {#叛乱:边境冲突赢了
+
+country_event = {
+	#叛乱:边境冲突赢了
 	id = msd.21
 	title = msd.21.t
 	desc = msd.21.d
@@ -547,14 +679,18 @@ country_event = {#叛乱:边境冲突赢了
 		name = msd.21.1
 		SEJ = {
 			declare_war_on = {
-			    target = MSD
-			    type = take_state_focus
-			    generator = { 259 }
+				target = MSD
+				type = take_state_focus
+				generator = {
+					259
+				}
 			}
 		}
 	}
 }
-country_event = {#99:报复兽道
+
+country_event = {
+	#99:报复兽道
 	id = msd.22
 	title = msd.22.t
 	desc = msd.22.d
@@ -565,14 +701,18 @@ country_event = {#99:报复兽道
 			base = 100
 		}
 		name = msd.22.1
-		add_timed_idea={
-			idea=MSD_daojudebaofu_idea
-			days=180
+		add_timed_idea = {
+			idea = MSD_daojudebaofu_idea
+			days = 180
+		}
+		TKM = {
+			send_embargo = MSD
+		}
 	}
-	TKM = {send_embargo = MSD}
 }
-}
-country_event = {#湖主:呼吁广泛禁运
+
+country_event = {
+	#湖主:呼吁广泛禁运
 	id = msd.23
 	title = msd.23.t
 	desc = msd.23.d
@@ -583,20 +723,44 @@ country_event = {#湖主:呼吁广泛禁运
 			base = 100
 		}
 		name = msd.23.1
-		WAK = {send_embargo = MSD}
-		TKM = {send_embargo = MSD}
-		ZBT = {send_embargo = MSD}
-		NMS = {send_embargo = MSD}
-		PRI = {send_embargo = MSD}
-		HUM = {send_embargo = MSD}
-		SCA = {send_embargo = MSD}
-		RNS = {send_embargo = MSD}
-		SBK = {send_embargo = MSD}
-		TEG = {send_embargo = MSD}
-		YUK = {send_embargo = MSD}
+		WAK = {
+			send_embargo = MSD
+		}
+		TKM = {
+			send_embargo = MSD
+		}
+		ZBT = {
+			send_embargo = MSD
+		}
+		NMS = {
+			send_embargo = MSD
+		}
+		PRI = {
+			send_embargo = MSD
+		}
+		HUM = {
+			send_embargo = MSD
+		}
+		SCA = {
+			send_embargo = MSD
+		}
+		RNS = {
+			send_embargo = MSD
+		}
+		SBK = {
+			send_embargo = MSD
+		}
+		TEG = {
+			send_embargo = MSD
+		}
+		YUK = {
+			send_embargo = MSD
+		}
 	}
 }
-news_event = {#不还款是吧(新闻）
+
+news_event = {
+	#不还款是吧(新闻）
 	id = msd.1001
 	title = msd.1001.t
 	desc = msd.1001.d
@@ -618,47 +782,53 @@ news_event = {#不还款是吧(新闻）
 		}
 	}
 }
-country_event = {#隐藏事件:每月加钱刷新
+
+country_event = {
+	#隐藏事件:每月加钱刷新
 	id = msd.2000
 	fire_only_once = no
 	is_triggered_only = yes
 	hidden = yes
-	immediate={
-		set_variable = {MSD_tiaobijiao = 1}
+	immediate = {
+		set_variable = {
+			MSD_tiaobijiao = 1
+		}
 	}
 	timeout_days = 1
 }
-country_event = {#叛乱'好心'给你厂
-		id = msd.24
-		title = msd.24.t
-		desc = msd.24.d
-		fire_only_once = no
-		is_triggered_only = yes
-		option = {
-			name = msd.24.1
-			from = {
-				random_owned_state={
-					add_building_construction={
-						type=industrial_complex
-						level=2
-						instant_build=yes
-					}
+
+country_event = {
+	#叛乱'好心'给你厂
+	id = msd.24
+	title = msd.24.t
+	desc = msd.24.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.24.1
+		from = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
-				ai_chance = {
-					factor = 100
-				}
-				hidden_effect={
-					country_event={
-						id=msd.25
-						days=360
-					}
+			}
+			ai_chance = {
+				factor = 100
+			}
+			hidden_effect = {
+				country_event = {
+					id = msd.25
+					days = 360
 				}
 			}
 		}
-		option = {
-			name = msd.24.2
-			from = {
-				198={
+	}
+	option = {
+		name = msd.24.2
+		from = {
+			198 = {
 				add_building_construction = {
 					type = bunker
 					level = 1
@@ -684,19 +854,21 @@ country_event = {#叛乱'好心'给你厂
 					province = 862
 				}
 			}
-				hidden_effect={
-					country_event={
-						id=msd.25
-						days=100
-					}
+			hidden_effect = {
+				country_event = {
+					id = msd.25
+					days = 100
 				}
-				ai_chance = {
-					factor = 0
-				}
+			}
+			ai_chance = {
+				factor = 0
+			}
 		}
 	}
 }
-country_event = {#意识到叛乱的阳谋
+
+country_event = {
+	#意识到叛乱的阳谋
 	id = msd.25
 	title = msd.25.t
 	desc = msd.25.d
@@ -707,8 +879,8 @@ country_event = {#意识到叛乱的阳谋
 			base = 100
 		}
 		name = msd.25.1
-		set_country_flag=juxinpoce
-		custom_effect_tooltip=MSD_zuohaozhunbei_tt
+		set_country_flag = juxinpoce
+		custom_effect_tooltip = MSD_zuohaozhunbei_tt
 	}
 	option = {
 		ai_chance = {
@@ -717,6 +889,7 @@ country_event = {#意识到叛乱的阳谋
 		name = msd.25.2
 	}
 }
+
 #country_event = {#灵梦!!!
 #	id = msd.26
 #	title = msd.26.t
@@ -737,7 +910,8 @@ country_event = {#意识到叛乱的阳谋
 #		PO_add5 = yes
 #	}
 #}
-country_event = {#大清洗
+country_event = {
+	#大清洗
 	id = msd.27
 	title = msd.27.t
 	desc = msd.27.d
@@ -751,7 +925,7 @@ country_event = {#大清洗
 		add_manpower = -100
 		add_stability = -0.05
 		PO_add10 = yes
-		hidden_effect={
+		hidden_effect = {
 			set_country_flag = MSD_shashasha_flag
 			set_country_flag = {
 				flag = MSD_shashasha_year_flag
@@ -769,7 +943,9 @@ country_event = {#大清洗
 		PO_add5 = yes
 	}
 }
-country_event = {#大清洗余波
+
+country_event = {
+	#大清洗余波
 	id = msd.28
 	title = msd.28.t
 	desc = msd.28.d
@@ -781,11 +957,11 @@ country_event = {#大清洗余波
 		}
 		name = msd.28.1
 		add_manpower = MSD_sha
-		add_timed_idea={
-			idea=MSD_qingxijijinfenzi_idea
-			days=180
+		add_timed_idea = {
+			idea = MSD_qingxijijinfenzi_idea
+			days = 180
 		}
-		hidden_effect={
+		hidden_effect = {
 			set_country_flag = {
 				flag = MSD_shashasha_year_flag
 				days = 365
@@ -794,7 +970,9 @@ country_event = {#大清洗余波
 		}
 	}
 }
-country_event = {#~!
+
+country_event = {
+	#~!
 	id = msd.300
 	title = msd.300.t
 	desc = msd.300.d
@@ -805,20 +983,25 @@ country_event = {#~!
 			base = 100
 		}
 		name = msd.300.1
-		custom_effect_tooltip = HKR_xishoubayunzideliliang_tt 
+		custom_effect_tooltip = HKR_xishoubayunzideliliang_tt
 		every_country = {
-			add_opinion_modifier = { target = ROOT modifier = set_enemy}
-			add_ai_strategy = {
-			  type = antagonize
-			  id = ROOT
-			  value = 20000
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = set_enemy
 			}
-		  }
+			add_ai_strategy = {
+				type = antagonize
+				id = ROOT
+				value = 20000
+			}
+		}
 		PO_add10 = yes
-        OL_add10 = yes
+		OL_add10 = yes
 	}
 }
-news_event = {#乡奸!
+
+news_event = {
+	#乡奸!
 	id = msd.1003
 	title = msd.1003.t
 	desc = msd.1003.d
@@ -840,6 +1023,7 @@ news_event = {#乡奸!
 		}
 	}
 }
+
 country_event = {
 	id = msd.29
 	title = msd.29.t
@@ -856,7 +1040,6 @@ country_event = {
 	mean_time_to_happen = {
 		days = 5
 	}
-
 	immediate = {
 		hidden_effect = {
 			MSD = {
@@ -864,7 +1047,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		custom_effect_tooltip = MSD_jieshukaifa_tt
 		ai_chance = {
@@ -873,7 +1055,9 @@ country_event = {
 		name = msd.29.1
 	}
 }
-country_event = {#意识到叛乱的阳谋
+
+country_event = {
+	#激进内战
 	id = msd.30
 	title = msd.30.t
 	desc = msd.30.d
@@ -890,7 +1074,57 @@ country_event = {#意识到叛乱的阳谋
 			size = 0.5
 			capital = 259
 			states = {
-				424 221 428 259
+				424
+				221
+				428
+				259
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = msd.31
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#游击队
+	id = msd.31
+	title = msd.31.t
+	desc = msd.31.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = msd.31.1
+		ROOT = {
+			229 = {
+				create_unit = {
+					division = "name = \"扫荡编制\" division_template = \"扫荡编制\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			229 = {
+				create_unit = {
+					division = "name = \"扫荡编制\" division_template = \"扫荡编制\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			229 = {
+				create_unit = {
+					division = "name = \"扫荡编制\" division_template = \"扫荡编制\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}
+			229 = {
+				create_unit = {
+					division = "name = \"扫荡编制\" division_template = \"扫荡编制\" start_experience_factor = 0.5"
+					owner = ROOT
+				}
 			}
 		}
 	}
