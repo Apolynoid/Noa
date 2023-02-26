@@ -674,6 +674,7 @@ focus_tree = {
 				ideology = fandong
 				popularity = 0.3
 			}
+			add_ideas = MSD_nei_zhan_feng_bo_idea
 			clr_country_flag = MSD_dakaifa_flag
 			custom_effect_tooltip=MSD_fandong_tt
 		}
@@ -1587,26 +1588,38 @@ focus_tree = {
 		}
 	}
 	#激进线
+	#打击顽固分子
 	focus={
 		id=da_ji_wan_gu_fen_zi
+		cost = 5
+		available = {
+			has_war = no
+			controls_state = 259
+			controls_state = 424
+			has_completed_focus = MSD_pujijibenjiaoyu
+		}
 		x=35
 		y=13
-		cost=10
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			remove_ideas = MSD_nei_zhan_feng_bo_idea
+			country_event = msd.32
 		}
 	}
 	focus={
 		id=dong_lan_huan_xiang_lian
 		x=35
 		y=14
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
 		prerequisite={focus=da_ji_wan_gu_fen_zi}
-		cost=10
 		ai_will_do={
 			factor=1
 		}

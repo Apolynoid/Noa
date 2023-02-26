@@ -1088,7 +1088,6 @@ country_event = {
 		}
 	}
 }
-
 country_event = {
 	#游击队
 	id = msd.31
@@ -1127,5 +1126,33 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+country_event = {
+	#竹林来信
+	id = msd.32
+	title = msd.32.t
+	desc = msd.32.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.32.1
+		complete_national_focus = dong_lan_huan_xiang_lian
+	}
+}
+country_event = {
+	#决议
+	id = msd.33
+	title = msd.33.t
+	desc = msd.33.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = msd.33.1
+		complete_national_focus = jie_ru_dong_lan
+	}
+	option = {
+		name = msd.33.2
+		complete_national_focus = yu_ying_lang_he_zuo
 	}
 }
