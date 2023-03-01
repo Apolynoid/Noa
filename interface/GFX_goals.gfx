@@ -124,7 +124,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_attack_SCA"
-		texturefile = "gfx/interface/goals/focus_generic_attack_SCA.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_attack_SCA.png"			
 	}
 
 	SpriteType = {
