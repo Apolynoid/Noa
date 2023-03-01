@@ -309,5 +309,14 @@ country = {
 			army_core_defence_factor = 0.2
 		}
 	}
+	#内战风波
+	MSD_nei_zhan_feng_bo_idea = {
+		modifier = {
+			training_time_army_factor = 0.5
+			army_org_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			production_factory_efficiency_gain_factor = -0.1
+		}
+	}
 }
 }
