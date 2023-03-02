@@ -1137,7 +1137,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = msd.32.1
-		complete_national_focus = dong_lan_huan_xiang_lian
+		complete_national_focus = MSD_dong_nan_huan_xiang_lian_meng
 	}
 }
 country_event = {
@@ -1149,10 +1149,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = msd.33.1
-		complete_national_focus = jie_ru_dong_lan
+		complete_national_focus = MSD_jie_ru_dong_nan
 	}
 	option = {
 		name = msd.33.2
-		complete_national_focus = yu_ying_lang_he_zuo
+		complete_national_focus = MSD_yu_ying_lang_he_zuo
 	}
 }
