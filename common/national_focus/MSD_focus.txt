@@ -76,8 +76,9 @@ focus_tree = {
 	focus = {
 		id = MSD_qing_qiu_wai_bu_yuan_zhu
 		icon = GFX_focus_generic_concessions
-		x = 16
-		y = 3
+		x = -5
+		y = 1
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		prerequisite = {
 			focus = MSD_shou_dao_bian_jing_de_chong_tu
 		}
@@ -102,8 +103,9 @@ focus_tree = {
 	focus = {
 		id = MSD_xiang_TKM_qing_qiu_yuan_zhu
 		icon = GFX_focus_befriend_TKM
-		x=13
-		y=4
+		x = -3
+		y = 1
+		relative_position_id = MSD_qing_qiu_wai_bu_yuan_zhu
 		prerequisite={focus=MSD_qing_qiu_wai_bu_yuan_zhu}
 		cost=6
 		bypass={
@@ -147,8 +149,9 @@ focus_tree = {
 	focus = {
 		id = MSD_xiang_CIR_qing_qiu_yuan_zhu
 		icon = GFX_focus_befriend_CIR
-		x = 16
-		y = 4
+		x = 0
+		y = 1
+		relative_position_id = MSD_qing_qiu_wai_bu_yuan_zhu
 		prerequisite = {
 			focus = MSD_qing_qiu_wai_bu_yuan_zhu
 		}
@@ -201,8 +204,9 @@ focus_tree = {
 	focus = {
 		id = MSD_xiang_SEJ_qing_qiu_yuan_zhu
 		icon = GFX_focus_befriend_SEJ
-		x = 19
-		y = 4
+		x = 3
+		y = 1
+		relative_position_id = MSD_qing_qiu_wai_bu_yuan_zhu
 		prerequisite = {
 			focus = MSD_qing_qiu_wai_bu_yuan_zhu
 		}
@@ -238,8 +242,9 @@ focus_tree = {
 	focus = {
 		id = MSD_wai_lai_xian_jin_lu_jun_jing_yan
 		icon = GFX_goal_generic_army_doctrines
-		x = 16
-		y = 5
+		x = 0
+		y = 2
+		relative_position_id = MSD_qing_qiu_wai_bu_yuan_zhu
 		prerequisite = {
 			focus = MSD_xiang_TKM_qing_qiu_yuan_zhu
 		}
@@ -270,8 +275,9 @@ focus_tree = {
 	focus = {
 		id = MSD_jin_kao_zi_ji
 		icon = GFX_focus_generic_manpower
-		x = 26
-		y = 3
+		x = 5
+		y = 1
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		prerequisite = {
 			focus = MSD_shou_dao_bian_jing_de_chong_tu
 		}
@@ -293,8 +299,9 @@ focus_tree = {
 	focus = {
 		id = MSD_jin_ji_zhan_zheng_dong_yuan
 		icon = GFX_focus_SOV_mobilization_plan
-		x = 23
-		y = 4
+		x = -3
+		y = 1
+		relative_position_id = MSD_jin_kao_zi_ji
 		prerequisite = {
 			focus = MSD_jin_kao_zi_ji
 		}
@@ -314,8 +321,9 @@ focus_tree = {
 	focus = {
 		id = MSD_xiu_fu_zhan_zheng_dai_lai_de_sun_shang
 		icon = GFX_goal_generic_production
-		x = 26
-		y = 4
+		x = 0
+		y = 1
+		relative_position_id = MSD_jin_kao_zi_ji
 		prerequisite = {
 			focus = MSD_jin_kao_zi_ji
 		}
@@ -330,8 +338,9 @@ focus_tree = {
 	focus = {
 		id = MSD_jin_ji_gong_chang_kuo_jian
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 29
-		y = 4
+		x = 3
+		y = 1
+		relative_position_id = MSD_jin_kao_zi_ji
 		prerequisite = {
 			focus = MSD_jin_kao_zi_ji
 		}
@@ -353,8 +362,9 @@ focus_tree = {
 	focus = {
 		id = MSD_ning_ju_ren_xin
 		icon = GFX_goal_generic_national_unity
-		x = 26
-		y = 5
+		x = 0
+		y = 2
+		relative_position_id = MSD_jin_kao_zi_ji
 		prerequisite = {
 			focus = MSD_jin_ji_zhan_zheng_dong_yuan
 		}
@@ -376,8 +386,9 @@ focus_tree = {
 	# 收复森林
 	focus = {
 		id = MSD_shou_fu_sen_lin
-		x = 19
-		y = 6
+		x = -2
+		y = 4
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		prerequisite = {
 			focus = MSD_wai_lai_xian_jin_lu_jun_jing_yan
 			focus = MSD_ning_ju_ren_xin
@@ -421,8 +432,9 @@ focus_tree = {
 	# 兽道战争的结束
 	focus = {
 		id = MSD_shou_dao_zhan_zheng_de_jie_shu
-		x = 23
-		y = 6
+		x = 2
+		y = 4
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		prerequisite = {
 			focus = MSD_wai_lai_xian_jin_lu_jun_jing_yan
 			focus = MSD_ning_ju_ren_xin
@@ -470,8 +482,9 @@ focus_tree = {
 	focus = {
 		id = MSD_mu_guang_xiang_wai
 		icon = GFX_goal_generic_political_pressure
-		x = 16
-		y = 7
+		x = -5
+		y = 5
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		available = {
 			or = {
 				has_completed_focus = MSD_ji_su_gong_ye_hua
@@ -585,8 +598,9 @@ focus_tree = {
 	# 闭关锁国
 	focus = {
 		id = MSD_bi_guan_suo_guo
-		x = 21
-		y = 7
+		x = 0
+		y = 5
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		available = {
 			always = no
 			has_completed_focus = MSD_jin_shen_gong_ye_hua
@@ -649,12 +663,13 @@ focus_tree = {
 		}
 	}
 	# TODO:
-	#权力斗争
+	# 权力斗争
 	focus = {
 		id = MSD_quan_li_dou_zheng
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = 26
-		y = 7
+		x = 5
+		y = 5
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		prerequisite = {
 			focus = MSD_shou_dao_zhan_zheng_de_jie_shu
 			focus = MSD_shou_fu_sen_lin
@@ -682,15 +697,16 @@ focus_tree = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
-	#组建游击队
+	# 组建游击队
 	focus = {
 		id = MSD_zu_jian_you_ji_dui
-		icon = GFX_goal_tfv_burn_the_royal_portraits
-		x = 25
-		y = 8
+		icon = GFX_focus_prc_infiltration
+		x = -1
+		y = 1
+		relative_position_id = MSD_quan_li_dou_zheng
 		prerequisite = {
 			focus = MSD_quan_li_dou_zheng
 		}
@@ -707,12 +723,13 @@ focus_tree = {
 			factor = 1
 		}
 	}
-	#泛草根妖怪说
+	# 泛草根妖怪说
 	focus = {
 		id = MSD_fan_cao_gen_yao_guai_shuo
 		icon = GFX_focus_focus_fra_revolution_utmost
-		x = 27
-		y = 8
+		x = 1
+		y = 1
+		relative_position_id = MSD_quan_li_dou_zheng
 		prerequisite = {
 			focus = MSD_quan_li_dou_zheng
 		}
@@ -729,13 +746,14 @@ focus_tree = {
 			factor = 1
 		}
 	}
-	#向胜利进军
+	# 向胜利进军
 	focus = {
 		id = MSD_xiang_sheng_li_jin_jun
 		icon = GFX_focus_final_push
-		x = 26
-		y = 9
+		x = 0
+		y = 2
 		cost = 6
+		relative_position_id = MSD_quan_li_dou_zheng
 		prerequisite = {
 			focus = MSD_zu_jian_you_ji_dui
 		}
@@ -753,9 +771,10 @@ focus_tree = {
 	# 北面的威胁
 	focus = {
 		id = MSD_bei_mian_de_wei_xie
-		x = 21
-		y = 10
+		x = 0
+		y = 8
 		cost = 6
+		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		completion_reward = {
 			198 = {
 				add_building_construction = {
@@ -828,8 +847,9 @@ focus_tree = {
 	# 做好战争准备
 	focus = {
 		id = MSD_zuo_hao_zhan_zheng_zhun_bei
-		x = 21
-		y = 11
+		x = 0
+		y = 1
+		relative_position_id = MSD_bei_mian_de_wei_xie
 		prerequisite = {
 			focus = MSD_bei_mian_de_wei_xie
 		}
@@ -872,9 +892,10 @@ focus_tree = {
 	focus = {
 		id = MSD_zhu_dong_chu_ji
 		icon = GFX_focus_attack_SEJ
-		x = 18
-		y = 12
+		x = -3
+		y = 1
 		cost = 10
+		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		will_lead_to_war_with = SEJ
 		prerequisite = {
 			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
@@ -896,9 +917,10 @@ focus_tree = {
 	focus = {
 		id = MSD_zhun_bei_fang_yu
 		icon = GFX_goal_generic_build_tank
-		x = 24
-		y = 12
+		x = 3
+		y = 1
 		cost = 10
+		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		prerequisite = {
 			focus = MSD_zuo_hao_zhan_zheng_zhun_bei
 		}
@@ -915,8 +937,9 @@ focus_tree = {
 	# 停战协议
 	focus = {
 		id = MSD_ting_zhan_xie_yi
-		x = 20
-		y = 13
+		x = -1
+		y = 2
+		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		available = {
 			always = no
 		}
@@ -937,8 +960,9 @@ focus_tree = {
 	# 宣告我们的胜利
 	focus = {
 		id = MSD_xuan_gao_wo_men_de_sheng_li
-		x = 22
-		y = 13
+		x = 1
+		y = 2
+		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		available = {
 			always = no
 		}
@@ -1032,8 +1056,9 @@ focus_tree = {
 	# 噪声骚扰战术
 	focus = {
 		id = MSD_zao_sheng_sao_rao_zhan_shu
-		x = 31
+		x = -4
 		y = 2
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_ye_que_zhi_sheng
 		}
@@ -1055,9 +1080,10 @@ focus_tree = {
 	focus = {
 		id = MSD_chang_shi_jian_hua_huo_pao
 		icon = GFX_goal_generic_army_artillery2
-		x = 33
+		x = -2
 		y = 2
 		cost = 7
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_ye_que_zhi_sheng
 			focus = MSD_gai_jin_yun_shu_fang_shi
@@ -1080,8 +1106,9 @@ focus_tree = {
 	focus = {
 		id = MSD_chang_shi_she_zhi_jun_dui_can_mou_chu
 		icon = GFX_focus_generic_military_mission
-		x = 35
+		x = 0
 		y = 2
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_ye_que_zhi_sheng
 			focus = MSD_gai_jin_yun_shu_fang_shi
@@ -1104,8 +1131,9 @@ focus_tree = {
 	# 加强军队夜战能力
 	focus = {
 		id = MSD_jia_qiang_jun_dui_ye_zhan_neng_li
-		x = 37
+		x = 2
 		y = 2
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_ye_que_zhi_sheng
 			focus = MSD_gai_jin_yun_shu_fang_shi
@@ -1129,8 +1157,9 @@ focus_tree = {
 	focus = {
 		id = MSD_yun_xu_xi_ji_ren_lei
 		icon = GFX_goal_generic_secret_weapon
-		x = 39
+		x = 4
 		y = 2
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_yin_jin_min_bing_zhi_du
 		}
@@ -1152,9 +1181,10 @@ focus_tree = {
 	focus = {
 		id = MSD_xue_xi_lu_jun_li_lun
 		icon = GFX_focus_generic_military_academy
-		x = 34
+		x = -1
 		y = 3
 		cost = 10
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_chang_shi_jian_hua_huo_pao
 		}
@@ -1179,8 +1209,9 @@ focus_tree = {
 	focus = {
 		id = MSD_chang_she_lu_jun_can_mou_bu
 		icon = GFX_goal_generic_position_armies
-		x = 36
+		x = 1
 		y = 3
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		available = {
 			has_army_experience > 30
 		}
@@ -1209,9 +1240,10 @@ focus_tree = {
 	focus = {
 		id = MSD_xian_dai_jun_dui
 		icon = GFX_focus_generic_license_production
-		x = 35
+		x = 0
 		y = 4
 		cost = 12
+		relative_position_id = MSD_ren_lei_cheng_fa_zhan_zheng_de_jing_yan
 		prerequisite = {
 			focus = MSD_xue_xi_lu_jun_li_lun
 		}
