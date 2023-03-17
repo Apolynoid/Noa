@@ -1642,8 +1642,8 @@ focus_tree = {
 	# 打击顽固分子
 	focus = {
 		id = MSD_da_ji_wan_gu_fen_zi
-		x = 35
-		y = 13
+		x = 45
+		y = 3
 		cost = 5
 		available = {
 			has_war = no
@@ -1677,15 +1677,30 @@ focus_tree = {
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			diplomatic_relation = {
+				country = BYA
+				relation = non_aggression_pact
+				active = yes
+			  }
+			BYA = {
+				add_opinion_modifier = {
+					target = MSD
+					modifier = MSD_jun_shi_tong_meng_op
+				}
+			}
+			MSD = {
+				add_opinion_modifier = {
+					target = BYA
+					modifier = MSD_jun_shi_tong_meng_op
+				}
+			}
 		}
 	}
 	# 介入东南
 	focus = {
 		id = MSD_jie_ru_dong_nan
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = MSD_dong_nan_huan_xiang_lian_meng
 		prerequisite={focus=MSD_dong_nan_huan_xiang_lian_meng}
@@ -1694,28 +1709,37 @@ focus_tree = {
 		ai_will_do={
 			factor=1
 		}
+		will_lead_to_war_with = KAG
+		will_lead_to_war_with = INB
 		available_if_capitulated=yes
 		search_filters={
 		}
 		completion_reward={
-		}
-	}
-	# 以战养战
-	focus = {
-		id = MSD_yi_zhan_yang_zhan
-		x = 2
-		y = 1
-		relative_position_id = MSD_jie_ru_dong_nan
-		prerequisite={focus=MSD_jie_ru_dong_nan}
-		mutually_exclusive={focus=MSD_zan_huan_jiao_bu }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
+			declare_war_on = {
+				target = KAG
+				type = dahongmoguan_wargoal
+			}
+			declare_war_on = {
+				target = INB
+				type = dahongmoguan_wargoal
+			}
+			custom_effect_tooltip = 
+			hidden_effect = {
+				if = 
+				limit = {
+					INB = {has_war = no}
+				}
+				INB = {
+					declare_war_on = {
+						target = KAG
+						type = dahongmoguan_wargoal
+					}
+					declare_war_on = {
+						target = BYA
+						type = dahongmoguan_wargoal
+					}
+				}
+			}
 		}
 	}
 	# 暂缓脚步
@@ -1725,50 +1749,30 @@ focus_tree = {
 		y = 1
 		relative_position_id = MSD_jie_ru_dong_nan
 		prerequisite={focus=MSD_jie_ru_dong_nan}
-		mutually_exclusive={focus=MSD_yi_zhan_yang_zhan }
+		mutually_exclusive={focus=MSD_qing_xi_zhan_ling_qu }
 		cost=10
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
-		}
-	}
-	# 与影狼合作
-	focus = {
-		id = MSD_yu_ying_lang_he_zuo
-		x=2
-		y=1
-		relative_position_id = MSD_dong_nan_huan_xiang_lian_meng
-		prerequisite={focus=MSD_dong_nan_huan_xiang_lian_meng}
-		mutually_exclusive={focus=MSD_jie_ru_dong_nan }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
+			add_ideas = MSD_rou_he_idea
 		}
 	}
 	# 清洗占领区
 	focus = {
 		id = MSD_qing_xi_zhan_ling_qu
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = MSD_yu_ying_lang_he_zuo
-		prerequisite={focus=MSD_yu_ying_lang_he_zuo}
+		relative_position_id = MSD_jie_ru_dong_nan
+		prerequisite={focus=MSD_jie_ru_dong_nan}
 		cost=10
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			add_ideas = MSD_zhen_ya_idea
 		}
 	}
 	# 新的革命中心
@@ -1779,7 +1783,6 @@ focus_tree = {
 		relative_position_id = MSD_da_ji_wan_gu_fen_zi
 		prerequisite = {
 			focus=MSD_zan_huan_jiao_bu 
-			focus=MSD_yi_zhan_yang_zhan 
 			focus=MSD_qing_xi_zhan_ling_qu 
 		}
 		mutually_exclusive={focus=MSD_jia_ru_xia_ke_shang_tong_meng }
@@ -1788,9 +1791,13 @@ focus_tree = {
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			add_ideas = can_create_faction_idea
+			create_faction = MSD_faction1
+			MSD = {
+				add_to_faction = BYA
+			}
+			custom_effect_tooltip = MSD_jian_she_tt
 		}
 	}
 	# 加入下克上同盟
@@ -1801,8 +1808,12 @@ focus_tree = {
 		relative_position_id = MSD_da_ji_wan_gu_fen_zi
 		prerequisite = {
 			focus=MSD_zan_huan_jiao_bu 
-			focus=MSD_yi_zhan_yang_zhan 
 			focus=MSD_qing_xi_zhan_ling_qu 
+		}
+		available = {
+			SEJ = {
+				has_completed_focus = SEJ_xinshidaixiakeshang
+			}
 		}
 		mutually_exclusive={focus=MSD_xin_de_ge_ming_zhong_xin }
 		cost=10
@@ -1813,6 +1824,10 @@ focus_tree = {
 		search_filters={
 		}
 		completion_reward={
+			SEJ = {
+				add_to_faction = MSD
+			}
+			custom_effect_tooltip = MSD_jian_she_tt
 		}
 	}
 }

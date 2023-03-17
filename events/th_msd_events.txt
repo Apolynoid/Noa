@@ -1151,8 +1151,4 @@ country_event = {
 		name = msd.33.1
 		complete_national_focus = MSD_jie_ru_dong_nan
 	}
-	option = {
-		name = msd.33.2
-		complete_national_focus = MSD_yu_ying_lang_he_zuo
-	}
 }
