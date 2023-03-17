@@ -1174,37 +1174,33 @@ country_event = {
 	mean_time_to_happen = {
 		days = 5
 	}
-	immediate = {
-		hidden_effect = {
-			MSD = {
-				set_state_owner = 347
-				set_state_owner = 271
-				set_state_owner = 348
-				set_state_owner = 267
-				set_state_owner = 268
-				set_state_owner = 284
-				set_state_owner = 510
-				set_state_owner = 289
-			}
-			BYA = {
-				set_state_owner = 283
-				set_state_owner = 285
-				set_state_owner = 511
-				set_state_owner = 288
-				set_state_owner = 293
-				set_state_owner = 531
-				set_state_owner = 297
-				set_state_owner = 295
-				set_state_owner = 513
-				set_state_owner = 290
-				set_state_owner = 294
-			}
-		}
-	}
 	option = {
 		ai_chance = {
 			base = 100
 		}
 		name = msd.33.1
+		MSD = {
+			transfer_state = 347
+			transfer_state = 271
+			transfer_state = 348
+			transfer_state = 267
+			transfer_state = 268
+			transfer_state = 284
+			transfer_state = 510
+			transfer_state = 289
+		}
+		BYA = {
+			transfer_state = 283
+			transfer_state = 285
+			transfer_state = 511
+			transfer_state = 288
+			transfer_state = 293
+			transfer_state = 531
+			transfer_state = 297
+			transfer_state = 295
+			transfer_state = 513
+			transfer_state = 290
+			transfer_state = 294
+		}
 	}
 }
