@@ -1032,7 +1032,6 @@ country_event = {
 	trigger = {
 		date > 149.12.15
 		has_global_flag = main_scenario
-		country_exists = MRS
 		country_exists = MSD
 		tag = MSD
 		has_country_flag = MSD_touzi_flag
@@ -1088,6 +1087,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	#游击队
 	id = msd.31
@@ -1128,6 +1128,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	#竹林来信
 	id = msd.32
@@ -1140,15 +1141,70 @@ country_event = {
 		complete_national_focus = MSD_dong_nan_huan_xiang_lian_meng
 	}
 }
+
 country_event = {
-	#决议
+	#MSD VS MRS(trigger)
 	id = msd.33
 	title = msd.33.t
 	desc = msd.33.d
-	fire_only_once = no
-	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		MSD = {
+			has_completed_focus = MSD_jie_ru_dong_nan
+		}
+		country_exists = BYA
+		country_exists = MSD
+		or = {
+			not = {
+				country_exists = KAG
+			}
+			KAG = {
+				is_puppet = yes
+			}
+		}
+		or = {
+			not = {
+				country_exists = INB
+			}
+			INB = {
+				is_puppet = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		hidden_effect = {
+			MSD = {
+				set_state_owner = 347
+				set_state_owner = 271
+				set_state_owner = 348
+				set_state_owner = 267
+				set_state_owner = 268
+				set_state_owner = 284
+				set_state_owner = 510
+				set_state_owner = 289
+			}
+			BYA = {
+				set_state_owner = 283
+				set_state_owner = 285
+				set_state_owner = 511
+				set_state_owner = 288
+				set_state_owner = 293
+				set_state_owner = 531
+				set_state_owner = 297
+				set_state_owner = 295
+				set_state_owner = 513
+				set_state_owner = 290
+				set_state_owner = 294
+			}
+		}
+	}
 	option = {
+		ai_chance = {
+			base = 100
+		}
 		name = msd.33.1
-		complete_national_focus = MSD_jie_ru_dong_nan
 	}
 }

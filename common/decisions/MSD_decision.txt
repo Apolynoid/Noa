@@ -1411,20 +1411,10 @@ MSD_jian_she_sej_help_category = {
 			MSD = {has_completed_focus = MSD_jia_ru_xia_ke_shang_tong_meng}
 		}
 		available = {
-			num_of_factories = 
+			num_of_factories < 40
 		}
-		cost = 20
-		days_remove = 45
-		complete_effect={
-				subtract_from_variable = {MSD_M = 300}
-				set_variable = {MSD_M_display_1 = MSD_M}
-				set_variable = {MSD_zongwaizhai_display = MSD_zongwaizhai}
-				add_to_variable = {MSD_zongwaizhai_display = MSD_M_display_1}
-				divide_variable = {MSD_M_display_1 = MSD_zongwaizhai_display}
-				multiply_variable = {MSD_M_display_1 = 100}
-				round_variable = {MSD_M_display_1}
-				set_variable = {MSD_M_display = MSD_M_display_1}
-		}
+		cost = 80
+		days_remove = 40
 		remove_effect = {
 			random_owned_state={
 				add_building_construction={
@@ -1432,6 +1422,111 @@ MSD_jian_she_sej_help_category = {
 					level=1
 					instant_build=yes
 				}
+			}
+        }
+	}
+	MSD_sej_jun_yong_ic_decision{#换军工
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_completed_focus = MSD_jia_ru_xia_ke_shang_tong_meng}
+	}
+	available = {
+		num_of_factories < 40
+	}
+	cost = 80
+	days_remove = 40
+		remove_effect = {
+			random_owned_state={
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+        }
+	}
+	MSD_sej_add_wei_zhi_decision{#加建筑物
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_completed_focus = MSD_jia_ru_xia_ke_shang_tong_meng}
+	}
+	available = {
+		num_of_factories < 45
+	}
+	cost = 20
+	days_remove = 30
+		remove_effect = {
+			random_owned_state={
+				add_extra_state_shared_building_slots=1
+			}
+        }
+	}
+}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+MSD_jian_she_myself_category = {
+	MSD_min_yong_ic_decision{#民工
+		allowed ={
+			original_tag = MSD
+		}
+		visible = {
+			MSD = {has_completed_focus = MSD_xin_de_ge_ming_zhong_xin}
+		}
+		available = {
+			num_of_factories < 50
+		}
+		cost = 80
+		days_remove = 50
+		remove_effect = {
+			random_owned_state={
+				add_building_construction={
+					type=industrial_complex
+					level=1
+					instant_build=yes
+				}
+			}
+        }
+	}
+	MSD_jun_yong_ic_decision{#换军工
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_completed_focus = MSD_xin_de_ge_ming_zhong_xin}
+	}
+	available = {
+		num_of_factories < 50
+	}
+	cost = 80
+	days_remove = 50
+		remove_effect = {
+			random_owned_state={
+				add_building_construction={
+					type=arms_factory
+					level=1
+					instant_build=yes
+				}
+			}
+        }
+	}
+	MSD_add_wei_zhi_decision{#加建筑物
+	allowed ={
+		original_tag = MSD
+	}
+	visible = {
+		MSD = {has_completed_focus = MSD_xin_de_ge_ming_zhong_xin}
+	}
+	available = {
+		num_of_factories < 50
+	}
+	cost = 20
+	days_remove = 35
+		remove_effect = {
+			random_owned_state={
+				add_extra_state_shared_building_slots=1
 			}
         }
 	}

@@ -775,6 +775,11 @@ focus_tree = {
 		y = 8
 		cost = 6
 		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
+		available = {
+			not = {
+				has_completed_focus = MSD_jia_ru_xia_ke_shang_tong_meng
+			}
+		}
 		completion_reward = {
 			198 = {
 				add_building_construction = {
@@ -1813,6 +1818,9 @@ focus_tree = {
 		available = {
 			SEJ = {
 				has_completed_focus = SEJ_xinshidaixiakeshang
+			}
+			not = {
+				has_completed_focus = MSD_bei_mian_de_wei_xie
 			}
 		}
 		mutually_exclusive={focus=MSD_xin_de_ge_ming_zhong_xin }
