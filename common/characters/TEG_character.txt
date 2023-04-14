@@ -1,0 +1,126 @@
+characters={
+	TEG_aya ={
+		name = TEG_aya
+		portraits={
+			civilian={
+				large="gfx/leaders/TEG/TEG_aya.dds"
+				small="gfx/leaders/TEG/TEG_aya_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TEG/TEG_aya.dds"
+				small="gfx/leaders/TEG/TEG_aya_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  war_hero career_officer th_trait_huolizhuanjia media_personality }
+            attack_skill = 6
+            defense_skill = 7
+            planning_skill = 9
+            logistics_skill = 8
+            skill = 8
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = TEG_aya
+			name = TEG_aya
+			cost = 200
+			modifier = {
+				operative_slot = 1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TEG_mom ={
+		name = TEG_mom
+		portraits={
+			civilian={
+				large="gfx/leaders/TEG/TEG_mom.dds"
+				small="gfx/leaders/TEG/TEG_mom_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TEG/TEG_mom.dds"
+				small="gfx/leaders/TEG/TEG_mom_small.dds"
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  war_hero career_officer harsh_leader th_trait_chongjizhuanjia }
+            attack_skill = 8
+            defense_skill = 9
+            planning_skill = 5
+            logistics_skill = 2
+            skill = 7
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = TEG_mom
+			name = TEG_mom
+			cost = 200
+			modifier = {
+				army_morale_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TEG_hatate ={
+		name = TEG_hatate
+		portraits={
+			civilian={
+				large="gfx/leaders/TEG/TEG_hatate.dds"
+				small="gfx/leaders/TEG/TEG_hatate_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TEG/TEG_hatate.dds"
+				small="gfx/leaders/TEG/TEG_hatate_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  old_guard th_trait_huoqiangzhuanjia career_officer media_personality }
+            attack_skill = 5
+            defense_skill = 8
+            planning_skill = 7
+            logistics_skill = 8
+            skill = 7
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = TEG_hatate
+			name = TEG_hatate
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_industrial_complex_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

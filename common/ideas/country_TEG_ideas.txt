@@ -1,0 +1,487 @@
+ideas = {
+	country = {
+	    TEG_neizhandejianshexiaohao_idea = {
+	    	picture = usa_great_depression_3
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				stability_factor = -0.1
+				# local_building_slots_factor = 0.5
+			}
+	    }
+	    TEG_junshiyanjiuhunluan_idea = {
+	    	picture = generic_army_problems
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.1
+				conscription_factor = -0.1
+			}
+			research_bonus = {
+				military = -0.15
+			}
+	    }
+
+		### NOA 部分
+		TEG_can_mou_zong_bu_idea = {
+	    	picture = general_staff
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				max_planning = 0.2
+				planning_speed = 0.1
+				military_leader_cost_factor = 0.15
+			}
+	    }
+
+		# 政治线
+		# 脆弱的民主制度
+		TEG_cui_ruo_de_min_zhu_zhi_du_idea = {
+			picture = TEG_fragile_democracy
+			modifier = {
+				political_power_factor = -0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				war_support_factor = -0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		# 过渡民主制度
+		TEG_guo_du_min_zhu_zhi_du_a_idea = {
+			picture = TEG_interim_democracy
+			modifier = {
+				political_power_factor = -0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				war_support_factor = -0.2
+			}
+		}
+
+		TEG_guo_du_min_zhu_zhi_du_b_idea = {
+			picture = TEG_interim_democracy
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		# 天狗志愿军
+		TEG_tian_gou_zhi_yuan_jun_idea = {
+			picture = unknown
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 4
+				send_volunteers_tension = -1.0
+				air_volunteer_cap = 200
+			}
+		}
+
+		# 扩大议会权力
+		TEG_kuo_da_yi_hui_quan_li_idea = {
+			picture = unknown
+			modifier = {
+				mobilization_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				trade_laws_cost_factor = -0.2
+				lobby_cost_factor = -0.2
+				magic_laws_cost_factor = -0.2
+				border_policy_cost_factor = -0.2
+			}
+		}
+
+		# 民主兵工厂
+		TEG_min_zhu_bing_gong_chang_idea = {
+			picture = unknown
+			modifier = {
+				industrial_capacity_factory = 0.05
+				lend_lease_tension = -1.0
+			}
+		}
+
+		# 精英民主
+		TEG_jing_ying_min_zhu_idea = {
+			picture = unknown
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+
+		# 起义后的混乱
+		TEG_qi_yi_hou_de_hun_luan_idea = {
+			picture = unknown
+			modifier = {
+				political_power_factor = -1.0
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		# 保卫共和国
+		TEG_bao_wei_gong_he_guo_idea = {
+			picture = unknown
+			modifier = {
+				drift_defence_factor = 0.3
+				supply_combat_penalties_on_core_factor = -0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		# 战时经济
+		TEG_zhan_shi_jing_ji_idea = {
+			picture = generic_license_production
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.5
+				production_speed_rail_way_factor = 0.3
+			}
+			research_bonus = {
+				military = 0.1
+			}
+		  }
+
+		# 军事线
+		# 天狗特种部队
+		TEG_tian_gou_te_zhong_bu_dui_idea = {
+	    	picture = FRA_army_of_aggression_focus	
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+		 		special_forces_cap = 0.1
+		 		send_volunteer_size = 1
+			}
+	    }
+
+		# 天狗特种部队
+		TEG_tian_gou_te_zhong_bu_dui_a_idea = {
+	    	picture = FRA_army_of_aggression_focus	
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+		 		special_forces_cap = 0.2
+		 		send_volunteer_size = 2
+				special_forces_no_supply_grace = 60
+				special_forces_out_of_supply_factor = -0.25
+				special_forces_training_time_factor = -0.1
+			}
+	    }
+
+		# 共和国国防部
+		TEG_gong_he_guo_guo_fang_bu_idea = {
+	    	picture = unknown
+			modifier = {
+				max_planning = 0.2
+				planning_speed = 0.2
+			}
+	    }
+
+		# 共和国国防部
+		TEG_gong_he_guo_guo_fang_bu_a_idea = {
+	    	picture = unknown
+			modifier = {
+				max_planning = 0.2
+				planning_speed = 0.2
+				military_leader_cost_factor = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+			}
+	    }
+
+		# 先进训练方法
+		TEG_xian_jin_xun_lian_fang_fa_idea = {
+	    	picture = unknown
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+			}
+	    }
+
+		# 先进训练方法
+		TEG_xian_jin_xun_lian_fang_fa_a_idea = {
+	    	picture = unknown
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				terrain_penalty_reduction = 0.2
+			}
+	    }
+
+		# 先进训练方法
+		TEG_xian_jin_xun_lian_fang_fa_b_idea = {
+	    	picture = unknown
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				terrain_penalty_reduction = 0.2
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.1
+			}
+	    }
+
+		# 先进训练方法
+		TEG_xian_jin_xun_lian_fang_fa_c_idea = {
+	    	picture = unknown
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				terrain_penalty_reduction = 0.2
+				army_speed_factor = 0.1
+				army_attack_speed_factor = 0.1
+				no_supply_grace = 120
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+			}
+	    }
+
+		# 广泛军事训练
+		TEG_guang_fan_jun_shi_xun_lian_idea = {
+	    	picture = unknown
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+	    }
+
+		# 广泛动员
+		TEG_guang_fan_dong_yuan_idea = {
+	    	picture = unknown
+			modifier = {
+				training_time_army_factor = -0.1
+				conscription = 0.05
+			}
+	    }
+
+		# 军备研究所
+		TEG_jun_bei_yan_jiu_suo_idea = {
+	    	picture = unknown
+			research_bonus = {
+				military = 0.05
+			}
+	    }
+
+		# 军备研究所
+		TEG_jun_bei_yan_jiu_suo_a_idea = {
+	    	picture = unknown
+			research_bonus = {
+				military = 0.05
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+				}
+			}
+	    }
+
+		# 军备研究所
+		TEG_jun_bei_yan_jiu_suo_b_idea = {
+	    	picture = unknown
+			research_bonus = {
+				military = 0.05
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+				}
+				mortar_a = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+				}
+			}
+	    }
+
+		# 军备研究所
+		TEG_jun_bei_yan_jiu_suo_c_idea = {
+	    	picture = unknown
+			research_bonus = {
+				military = 0.05
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+				}
+				mortar_a = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.1
+				}
+				special_shield_a = {
+					instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.03
+					build_cost_ic = -0.1
+				}
+				mecha_a = {
+					instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.03
+					build_cost_ic = -0.1
+				}
+			}
+	    }
+
+		# 共和国空军
+		TEG_gong_he_guo_kong_jun_idea = {
+	    	picture = unknown
+			modifier = {
+				air_accidents_factor = -0.05
+				air_mission_xp_gain_factor = 0.1
+			}
+	    }
+
+		# 共和国空军
+		TEG_gong_he_guo_kong_jun_a_idea = {
+	    	picture = unknown
+			modifier = {
+				air_accidents_factor = -0.1
+				air_mission_xp_gain_factor = 0.1
+				ace_effectiveness_factor = 0.1
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
+				air_agility_factor = 0.05
+				air_mission_efficiency = 0.05
+			}
+	    }
+
+		# 共和国空军
+		TEG_gong_he_guo_kong_jun_b_idea = {
+	    	picture = unknown
+			modifier = {
+				air_accidents_factor = -0.1
+				air_mission_xp_gain_factor = 0.15
+				air_ace_bonuses_factor = 0.1
+				ace_effectiveness_factor = 0.1
+				air_attack_factor = 0.1
+				air_defence_factor = 0.1
+				air_agility_factor = 0.1
+				air_mission_efficiency = 0.1
+				air_range_factor = 0.1
+			}
+	    }
+
+		# 工业化
+		# 被转移的人类科学家
+		TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea = {
+	    	picture = SOV_scientist_defect	
+			research_bonus = {
+				math = 0.08
+			}
+	    }
+
+		# 融入天狗社会的人类科学家
+		TEG_rong_ru_tian_gou_she_hui_de_ren_lei_ke_xue_jia_idea = {
+	    	picture = SOV_scientist_defect	
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				math = 0.15
+			}
+	    }
+
+		# 共和国铁路局
+		TEG_gong_he_guo_tie_lu_ju_idea = {
+	    	picture = unknown
+			modifier = {
+				production_speed_rail_way_factor = 0.2
+			}
+	    }
+
+		# 妖怪山资源勘探
+		TEG_yao_guai_shan_zi_yuan_kan_tan_idea = {
+	    	picture = unknown
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2
+			}
+	    }
+
+		# 现代化农业
+		TEG_xian_dai_hua_nong_ye_idea = {
+	    	picture = generic_agrarian_reform
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+	    }
+
+		# 工业建设规划
+		TEG_gong_ye_jian_she_gui_hua_idea = {
+	    	picture = unknown
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+	    }
+
+		# 工业建设规划
+		TEG_gong_ye_jian_she_gui_hua_a_idea = {
+	    	picture = unknown
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+	    }
+
+		# 新工业计划
+		TEG_xin_gong_ye_ji_hua_idea = {
+	    	picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.03
+			}
+	    }
+
+		# 援助河童
+		TEG_yuan_zhu_NTR_idea = {
+			picture = ETH_customs_barrier_ITA
+			modifier = {
+			  consumer_goods_factor = 0.01
+			}
+		}
+
+		# 与河童的科技交流
+		TEG_yu_he_tong_de_ke_ji_jiao_liu_idea = {
+			picture = unknown
+			research_bonus = {
+				heavy = 0.05
+				industrys = 0.05
+			}
+		}
+	}
+}
