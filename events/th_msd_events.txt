@@ -1143,7 +1143,6 @@ country_event = {
 }
 
 country_event = {
-	#MSD VS MRS(trigger)
 	id = msd.33
 	title = msd.33.t
 	desc = msd.33.d
