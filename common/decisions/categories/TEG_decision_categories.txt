@@ -1,0 +1,15 @@
+# 维护民主制度
+TEG_wei_hu_min_zhu_zhi_du = {
+	icon = generic_political_actions
+
+	priority = 95
+
+	allowed = {
+		original_tag = TEG
+	}
+
+	visible = {
+		original_tag = TEG
+	}
+	
+}

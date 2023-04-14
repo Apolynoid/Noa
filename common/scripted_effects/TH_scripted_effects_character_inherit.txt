@@ -849,14 +849,6 @@ initial_leader_setting = {
         recruit_character = SRB_futo
         recruit_character = SRB_yoshika
     }
-    TEG = {
-        recruit_character = TEG_hatate
-        recruit_character = TEG_hatate_leader
-        recruit_character = TEG_mom
-        recruit_character = TEG_mom_leader
-        recruit_character = TEG_aya
-        recruit_character = TEG_aya_leader
-    }
     TES = {
         recruit_character = TES_tes
         recruit_character = TES_tes_leader

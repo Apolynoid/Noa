@@ -34,7 +34,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_construction"
-		texturefile = "gfx/interface/goals/focus_generic_construction.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_construction.png"			
 	}
 
 	SpriteType = {
@@ -98,6 +98,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_election"
+		texturefile = "gfx/interface/goals/focus_generic_election.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_independence"
 		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
 	}
@@ -138,6 +143,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_OTG"
+		texturefile = "gfx/interface/goals/focus_generic_attack_OTG.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_TEG"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
 	}
@@ -165,6 +175,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_befriend_SCA"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.dds"			
+	}
+
+	#### TEG Shameimaru Aya 天狗共和国
+
+	SpriteType = {
+		name = "TEG_focus_defend_the_republic"
+		texturefile = "gfx/interface/goals/focus_TEG_defend_the_republic.png"			
 	}
 
 	#### HKR Hakurei Reimu 博丽神社

@@ -1,0 +1,95 @@
+# 维护民主制度
+TEG_wei_hu_min_zhu_zhi_du = {
+    # 民众不满
+    TEG_min_zhong_bu_man = {
+        activation = {
+            AND = {
+                OR = {
+                    has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
+                    has_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
+                    has_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
+                }
+                NOT = {
+                    has_completed_focus = TEG_momiji_zhi_zheng
+                }
+            }
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    OR = {
+                        has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
+                        has_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
+                        has_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
+                    }
+                }
+                has_completed_focus = TEG_momiji_zhi_zheng
+            }
+        }
+        icon = mission_icon
+        is_good = no
+        days_mission_timeout = 180
+        selectable_mission = no
+        timeout_effect = {
+            add_popularity = {
+                ideology = fandong
+                popularity = 0.4
+            }
+            set_politics = {
+                ruling_party = fandong
+            }
+            country_event = {
+                id = teg.102
+            }
+        }
+    }
+
+    # 成立公共安全委员会
+    TEG_cheng_li_gong_gong_an_quan_wei_yuan_hui = {
+        activation = {
+            has_completed_focus = TEG_momiji_zhi_zheng
+            NOT = {
+                has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+            }
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+        }
+        icon = mission_icon
+        is_good = yes
+        days_mission_timeout = 35
+        selectable_mission = no
+        timeout_effect = {
+            complete_national_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+        }
+    }
+
+    # 实施经济管控
+    TEG_shi_shi_jing_ji_guan_kong = {
+        activation = {
+            has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+            NOT = {
+                has_completed_focus = TEG_jing_ji_guan_kong
+            }
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            has_completed_focus = TEG_jing_ji_guan_kong
+        }
+        icon = mission_icon
+        is_good = yes
+        days_mission_timeout = 35
+        selectable_mission = no
+        timeout_effect = {
+            complete_national_focus = TEG_jing_ji_guan_kong
+        }
+    }
+}

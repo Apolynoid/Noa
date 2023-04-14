@@ -40,14 +40,14 @@ bookmarks = {
 			history = "TEG_DAWN_DESC"
 		#	ideology = gexin
 			ideas = { 
-    			TEG_otg_problem_idea
-    			TEG_minzhuzhidu_idea
-    			TEG_canmouzongbu_idea
+    			TEG_cui_ruo_de_min_zhu_zhi_du_idea
+    			TEG_can_mou_zong_bu_idea
+				TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea
 			}
 			focuses = {
-				TEG_tongyidekenengxing
-				TEG_zhuanzhuyishixingtaishuchu
-				TEG_tongyiyaoguaishan
+				TEG_da_xuan
+				TEG_jie_jue_tian_mo_wen_ti
+				TEG_bao_wei_gong_he_guo
 			}
 		}
 		

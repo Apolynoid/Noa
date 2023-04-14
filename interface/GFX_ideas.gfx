@@ -70,6 +70,17 @@ spriteTypes = {
 		name = "GFX_idea_generic_TEG_support"
 		texturefile = "gfx/interface/ideas/generic_TEG_support.dds"
 	}	
+
+	#### TEG Shameimaru Aya 天狗共和国
+	spriteType = {
+		name = "GFX_idea_TEG_fragile_democracy"
+		texturefile = "gfx/interface/ideas/teg_fragile_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_interim_democracy"
+		texturefile = "gfx/interface/ideas/teg_interim_democracy.png"
+	}
 	
 	#### MRS Kirisame Marisa 魔法之森
 	spriteType = {
