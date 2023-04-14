@@ -762,7 +762,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = msd.30
-			hidden_effect = {add_ideas = MSD_shoudaoshengli_idea}
 		}
 		ai_will_do = {
 			factor = 1
