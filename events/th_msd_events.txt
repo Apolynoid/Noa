@@ -1032,7 +1032,6 @@ country_event = {
 	trigger = {
 		date > 149.12.15
 		has_global_flag = main_scenario
-		country_exists = MRS
 		country_exists = MSD
 		tag = MSD
 		has_country_flag = MSD_touzi_flag
@@ -1088,6 +1087,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	#游击队
 	id = msd.31
@@ -1128,6 +1128,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	#竹林来信
 	id = msd.32
@@ -1140,19 +1141,65 @@ country_event = {
 		complete_national_focus = MSD_dong_nan_huan_xiang_lian_meng
 	}
 }
+
 country_event = {
-	#决议
 	id = msd.33
 	title = msd.33.t
 	desc = msd.33.d
-	fire_only_once = no
-	is_triggered_only = yes
-	option = {
-		name = msd.33.1
-		complete_national_focus = MSD_jie_ru_dong_nan
+	fire_only_once = yes
+	trigger = {
+		MSD = {
+			has_completed_focus = MSD_jie_ru_dong_nan
+		}
+		country_exists = BYA
+		country_exists = MSD
+		or = {
+			not = {
+				country_exists = KAG
+			}
+			KAG = {
+				is_puppet = yes
+			}
+		}
+		or = {
+			not = {
+				country_exists = INB
+			}
+			INB = {
+				is_puppet = yes
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
 	}
 	option = {
-		name = msd.33.2
-		complete_national_focus = MSD_yu_ying_lang_he_zuo
+		ai_chance = {
+			base = 100
+		}
+		name = msd.33.1
+		MSD = {
+			transfer_state = 347
+			transfer_state = 271
+			transfer_state = 348
+			transfer_state = 267
+			transfer_state = 268
+			transfer_state = 284
+			transfer_state = 510
+			transfer_state = 289
+		}
+		BYA = {
+			transfer_state = 283
+			transfer_state = 285
+			transfer_state = 511
+			transfer_state = 288
+			transfer_state = 293
+			transfer_state = 531
+			transfer_state = 297
+			transfer_state = 295
+			transfer_state = 513
+			transfer_state = 290
+			transfer_state = 294
+		}
 	}
 }

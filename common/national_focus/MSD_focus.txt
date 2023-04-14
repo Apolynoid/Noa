@@ -602,7 +602,6 @@ focus_tree = {
 		y = 5
 		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
 		available = {
-			always = no
 			has_completed_focus = MSD_jin_shen_gong_ye_hua
 		}
 		prerequisite = {
@@ -613,10 +612,23 @@ focus_tree = {
 			focus = MSD_mu_guang_xiang_wai
 			focus = MSD_quan_li_dou_zheng
 		}
+		cost = 6
+		completion_reward = {
+			set_politics = {
+				ruling_party = guli
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.5
+			}
+			conservativedecrease = yes
+			lobbydecrease = yes
+		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#修生养息
 	focus = {
 		id = MSD_xiushenyangxi
 		x = 20
@@ -624,10 +636,17 @@ focus_tree = {
 		prerequisite = {
 			focus = MSD_bi_guan_suo_guo
 		}
+		cost = 12
+		completion_reward = {
+			conservativedecrease = yes
+			add_manpower = 500
+			add_stability = 0.15
+		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#兽道北防线
 	focus = {
 		id = MSD_shoudaobeifangxian
 		icon = GFX_goal_generic_construct_military
@@ -636,27 +655,102 @@ focus_tree = {
 		prerequisite = {
 			focus = MSD_bi_guan_suo_guo
 		}
+		cost = 12
+		completion_reward = {
+			198 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4167
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4168
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4169
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 862
+				}
+			}
+			if = {
+				limit = {
+					or = {
+						controls_state = 346
+						HKR = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+				346 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 4170
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 2024
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 4165
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#驱逐激进份子
 	focus = {
 		id = MSD_quzhujijinfenzi
 		x = 20
 		y = 9
+		cost = 12
 		prerequisite = {
 			focus = MSD_xiushenyangxi
+		}
+		completion_reward = {
+			conservativedecrease = yes
+			lobbydecrease = yes
+			add_stability = 0.2
+			add_war_support = -0.5
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	#福利机构
 	focus = {
 		id = MSD_jianliguojiafuli
 		x = 22
 		y = 9
 		prerequisite = {
 			focus = MSD_shoudaobeifangxian
+		}
+		cost = 12
+		completion_reward = {
+			lobbydecrease = yes
+			add_political_power = -1000
+			add_stability = 0.4
+			add_manpower = 500
 		}
 		ai_will_do = {
 			factor = 1
@@ -762,6 +856,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = msd.30
+			custom_effect_tooltip = MSD_ping_xi_tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -775,6 +870,11 @@ focus_tree = {
 		y = 8
 		cost = 6
 		relative_position_id = MSD_shou_dao_bian_jing_de_chong_tu
+		available = {
+			not = {
+				has_completed_focus = MSD_jia_ru_xia_ke_shang_tong_meng
+			}
+		}
 		completion_reward = {
 			198 = {
 				add_building_construction = {
@@ -941,7 +1041,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		available = {
-			always = no
+			and={
+			date > 151.1.1
+			has_war_with = SEJ
+			}
 		}
 		prerequisite = {
 			focus = MSD_zhu_dong_chu_ji
@@ -950,13 +1053,17 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MSD_xuan_gao_wo_men_de_sheng_li
 		}
-		cost = 10
+		completion_reward = {
+			MSD = { white_peace = SEJ }
+		}
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
-		}
+		
+
 	}
+
 	# 宣告我们的胜利
 	focus = {
 		id = MSD_xuan_gao_wo_men_de_sheng_li
@@ -964,17 +1071,25 @@ focus_tree = {
 		y = 2
 		relative_position_id = MSD_zuo_hao_zhan_zheng_zhun_bei
 		available = {
-			always = no
+			and = {
+			SEJ = { surrender_progress > 0.3 }
+			has_war_with = SEJ
+			}
 		}
 		prerequisite = {
 			focus = MSD_zhu_dong_chu_ji
 			focus = MSD_zhun_bei_fang_yu
 		}
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
+			MSD = { white_peace = SEJ }
+			MSD = {
+				transfer_state = 183
+				transfer_state = 547
+			}
 		}
 	}
 	# 军事线 military
@@ -1642,8 +1757,8 @@ focus_tree = {
 	# 打击顽固分子
 	focus = {
 		id = MSD_da_ji_wan_gu_fen_zi
-		x = 35
-		y = 13
+		x = 45
+		y = 3
 		cost = 5
 		available = {
 			has_war = no
@@ -1657,10 +1772,16 @@ focus_tree = {
 		available_if_capitulated=yes
 		completion_reward={
 			remove_ideas = MSD_nei_zhan_feng_bo_idea
-			country_event = msd.32
+			hidden_effect = {
+				country_event = {
+					id = msd.32
+					days = 5
+				}
+				add_ideas = MSD_shoudaoshengli_idea
+			}
 		}
 	}
-	# 东南幻想联盟
+	# 东南军事联盟
 	focus = {
 		id = MSD_dong_nan_huan_xiang_lian_meng
 		x = 0
@@ -1677,15 +1798,31 @@ focus_tree = {
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			diplomatic_relation = {
+				country = BYA
+				relation = non_aggression_pact
+				active = yes
+			  }
+			add_manpower = 1000
+			BYA = {
+				add_opinion_modifier = {
+					target = MSD
+					modifier = MSD_jun_shi_tong_meng_op
+				}
+			}
+			MSD = {
+				add_opinion_modifier = {
+					target = BYA
+					modifier = MSD_jun_shi_tong_meng_op
+				}
+			}
 		}
 	}
 	# 介入东南
 	focus = {
 		id = MSD_jie_ru_dong_nan
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = MSD_dong_nan_huan_xiang_lian_meng
 		prerequisite={focus=MSD_dong_nan_huan_xiang_lian_meng}
@@ -1694,28 +1831,37 @@ focus_tree = {
 		ai_will_do={
 			factor=1
 		}
+		will_lead_to_war_with = KAG
+		will_lead_to_war_with = INB
 		available_if_capitulated=yes
 		search_filters={
 		}
 		completion_reward={
-		}
-	}
-	# 以战养战
-	focus = {
-		id = MSD_yi_zhan_yang_zhan
-		x = 2
-		y = 1
-		relative_position_id = MSD_jie_ru_dong_nan
-		prerequisite={focus=MSD_jie_ru_dong_nan}
-		mutually_exclusive={focus=MSD_zan_huan_jiao_bu }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
+			declare_war_on = {
+				target = KAG
+				type = dahongmoguan_wargoal
+			}
+			declare_war_on = {
+				target = INB
+				type = dahongmoguan_wargoal
+			}
+			custom_effect_tooltip = 
+			hidden_effect = {
+				if = 
+				limit = {
+					INB = {has_war = no}
+				}
+				INB = {
+					declare_war_on = {
+						target = KAG
+						type = dahongmoguan_wargoal
+					}
+					declare_war_on = {
+						target = BYA
+						type = dahongmoguan_wargoal
+					}
+				}
+			}
 		}
 	}
 	# 暂缓脚步
@@ -1725,50 +1871,38 @@ focus_tree = {
 		y = 1
 		relative_position_id = MSD_jie_ru_dong_nan
 		prerequisite={focus=MSD_jie_ru_dong_nan}
-		mutually_exclusive={focus=MSD_yi_zhan_yang_zhan }
+		mutually_exclusive={focus=MSD_qing_xi_zhan_ling_qu}
+		available = {
+			has_war = no
+		}
 		cost=10
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
-		}
-	}
-	# 与影狼合作
-	focus = {
-		id = MSD_yu_ying_lang_he_zuo
-		x=2
-		y=1
-		relative_position_id = MSD_dong_nan_huan_xiang_lian_meng
-		prerequisite={focus=MSD_dong_nan_huan_xiang_lian_meng}
-		mutually_exclusive={focus=MSD_jie_ru_dong_nan }
-		cost=10
-		ai_will_do={
-			factor=1
-		}
-		available_if_capitulated=yes
-		search_filters={
-		}
-		completion_reward={
+			add_ideas = MSD_rou_he_idea
 		}
 	}
 	# 清洗占领区
 	focus = {
 		id = MSD_qing_xi_zhan_ling_qu
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = MSD_yu_ying_lang_he_zuo
-		prerequisite={focus=MSD_yu_ying_lang_he_zuo}
+		relative_position_id = MSD_jie_ru_dong_nan
+		prerequisite={focus=MSD_jie_ru_dong_nan}
+		available = {
+			and = {
+				has_war = no
+			}
+		}
 		cost=10
 		ai_will_do={
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			add_ideas = MSD_zhen_ya_idea
 		}
 	}
 	# 新的革命中心
@@ -1779,7 +1913,6 @@ focus_tree = {
 		relative_position_id = MSD_da_ji_wan_gu_fen_zi
 		prerequisite = {
 			focus=MSD_zan_huan_jiao_bu 
-			focus=MSD_yi_zhan_yang_zhan 
 			focus=MSD_qing_xi_zhan_ling_qu 
 		}
 		mutually_exclusive={focus=MSD_jia_ru_xia_ke_shang_tong_meng }
@@ -1788,9 +1921,13 @@ focus_tree = {
 			factor=1
 		}
 		available_if_capitulated=yes
-		search_filters={
-		}
 		completion_reward={
+			add_ideas = can_create_faction_idea
+			create_faction = MSD_faction1
+			MSD = {
+				add_to_faction = BYA
+			}
+			custom_effect_tooltip = MSD_jian_she_tt
 		}
 	}
 	# 加入下克上同盟
@@ -1801,8 +1938,15 @@ focus_tree = {
 		relative_position_id = MSD_da_ji_wan_gu_fen_zi
 		prerequisite = {
 			focus=MSD_zan_huan_jiao_bu 
-			focus=MSD_yi_zhan_yang_zhan 
 			focus=MSD_qing_xi_zhan_ling_qu 
+		}
+		available = {
+			SEJ = {
+				has_completed_focus = SEJ_xinshidaixiakeshang
+			}
+			not = {
+				has_completed_focus = MSD_bei_mian_de_wei_xie
+			}
 		}
 		mutually_exclusive={focus=MSD_xin_de_ge_ming_zhong_xin }
 		cost=10
@@ -1813,6 +1957,10 @@ focus_tree = {
 		search_filters={
 		}
 		completion_reward={
+			SEJ = {
+				add_to_faction = MSD
+			}
+			custom_effect_tooltip = MSD_jian_she_tt
 		}
 	}
 }

@@ -318,5 +318,23 @@ country = {
 			production_factory_efficiency_gain_factor = -0.1
 		}
 	}
+	#东南-柔和
+	MSD_rou_he_idea = {
+		modifier = {
+			resistance_growth = 0.25
+			CO_core_resistance_required = -35
+			ST_race_penalty_all_factor = -0.2
+			compliance_growth = 0.25
+		}
+	}
+	#东南-镇压
+	MSD_zhen_ya_idea = {
+		modifier = {
+			resistance_growth = -0.25
+			CO_core_resistance_required = -15
+			ST_race_penalty_all_factor = 0.1
+			compliance_growth = 0.1
+		}
+	}
 }
 }
