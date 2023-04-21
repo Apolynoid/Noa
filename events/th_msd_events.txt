@@ -1067,6 +1067,10 @@ country_event = {
 			base = 100
 		}
 		name = msd.30.1
+		promote_character = {
+			character = MSD_revolutionary_committee
+			ideology = fandong_type
+		}
 		start_civil_war = {
 			ruling_party = fandong
 			ideology = ROOT

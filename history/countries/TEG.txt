@@ -130,7 +130,7 @@
 
     promote_character = {
         character = TEG_aya
-        ideology = qinwai
+        ideology = qinwai_type
     }
 
     set_politics = {

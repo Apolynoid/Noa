@@ -141,4 +141,11 @@
         oldorder = 0
         fandong = 15
     }
+
+    recruit_character = MSD_msd
+    recruit_character = MSD_revolutionary_committee
+    promote_character = {
+        character = MSD_msd
+        ideology = fandong_type
+    }
 }

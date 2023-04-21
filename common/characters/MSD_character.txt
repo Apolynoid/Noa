@@ -1,0 +1,72 @@
+characters={
+	MSD_msd ={
+		name = MSD_msd
+		portraits={
+			civilian={
+				large="gfx/leaders/MSD/MSD_msd.dds"
+				small="gfx/leaders/MSD/MSD_msd_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MSD/MSD_msd.dds"
+				small="gfx/leaders/MSD/MSD_msd_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  th_trait_chongjizhuanjia  }
+            attack_skill = 4
+            defense_skill = 5
+            planning_skill = 3
+            logistics_skill = 5
+            skill = 5
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = MSD_msd
+			name = MSD_msd
+			cost = 200
+			modifier = {
+				supply_node_range = 0.3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	MSD_revolutionary_committee = {
+		name = MSD_revolutionary_committee
+		portraits={
+			civilian={
+				large="gfx/leaders/MSD/MSD_revolutionary_committee.dds"
+				small="gfx/leaders/MSD/MSD_revolutionary_committee_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MSD/MSD_revolutionary_committee.dds"
+				small="gfx/leaders/MSD/MSD_revolutionary_committee_small.dds"
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+}

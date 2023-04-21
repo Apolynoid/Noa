@@ -717,10 +717,6 @@ initial_leader_setting = {
         recruit_character = MRY_mry
         recruit_character = MRY_mry_leader
     }
-    MSD = {
-        recruit_character = MSD_msd
-        recruit_character = MSD_msd_leader
-    }
     NIB = {
         recruit_character = NIB_nib
         recruit_character = NIB_nib_leader
