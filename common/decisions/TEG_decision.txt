@@ -93,3 +93,203 @@ TEG_wei_hu_min_zhu_zhi_du = {
         }
     }
 }
+
+# 民主外交
+TEG_min_zhu_wai_jiao = {
+    # 接触FROM的改革派
+    TEG_jie_chu_FROM_de_gai_ge_pai = {
+        target_root_trigger = {
+            has_completed_focus = TEG_wo_men_de_chuan_tong_meng_you
+        }
+        target_array = TEG_friends
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = qinwai
+                NOT = {
+                    has_country_flag = TEG_has_contacted_flag
+                }
+            }
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            FROM = {
+                country_event = teg.107
+            }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = TEG_has_contacted_flag
+                }
+            }
+        }
+    }
+    
+    # 尝试接触FROM的激进派
+    TEG_chang_shi_jie_chu_FROM_de_ji_jin_pai = {
+        target_root_trigger = {
+            has_completed_focus = TEG_wo_men_de_qian_zai_meng_you
+        }
+        target_array = TEG_friends
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+                NOT = {
+                    has_country_flag = TEG_has_contacted_flag
+                }
+            }
+        }
+        cost = 30
+        days_remove = 30
+        remove_effect = {
+            FROM = {
+                country_event = teg.107
+            }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = TEG_has_contacted_flag
+                }
+            }
+        }
+    }
+
+    # 强化与FROM的盟友关系
+    TEG_qiang_hua_yu_FROM_de_meng_you_guan_xi = {
+        target_root_trigger = {
+            has_completed_focus = TEG_zeng_qiang_min_zhu_tong_meng
+        }
+        target_array = allies
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                NOT = {
+                    has_idea = TEG_min_zhu_tong_meng_idea
+                }
+            }
+        }
+        available = {
+            NOT = {
+                has_country_flag = TEG_is_aiding_flag
+            }
+        }
+        cost = 50
+        days_remove = 60
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = TEG_is_aiding_flag
+            }
+        }
+        remove_effect = {
+            FROM = {
+                add_ideas = TEG_min_zhu_tong_meng_idea
+            }
+            hidden_effect = {
+                clr_country_flag = TEG_is_aiding_flag
+                FROM = {
+                    country_event = teg.112
+                }
+            }
+        }
+    }
+
+    # 支援民主同盟盟友：FROM
+    TEG_zhi_yuan_min_zhu_tong_meng_meng_you_FROM = {
+        target_root_trigger = {
+            has_completed_focus = TEG_chuan_bo_min_zhu
+        }
+        target_array = allies
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                is_subject = no
+            }
+        }
+        available = {
+            num_of_available_civilian_factories > 4
+            NOT = {
+                has_country_flag = TEG_is_aiding_flag
+            }
+        }
+        cost = 50
+        days_remove = 90
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = TEG_is_aiding_flag
+            }
+        }
+        modifier = {
+            civilian_factory_use = 4
+        }
+        remove_effect = {
+            FROM = {
+                add_offsite_building = {
+                    type = industrial_complex
+                    level = 2
+                }
+                add_offsite_building = {
+                    type = arms_factory
+                    level = 1
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = TEG_is_aiding_flag
+                FROM = {
+                    country_event = teg.110
+                }
+            }
+        }
+    }
+
+    # 与FROM的经济合作
+    TEG_yu_FROM_de_jing_ji_he_zuo = {
+        target_root_trigger = {
+            has_completed_focus = TEG_yao_guai_shan_jing_ji_he_zuo
+        }
+        target_array = TEG_friends
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_country_flag = TEG_accepted_cooperation_flag
+            }
+        }
+        available = {
+            num_of_available_civilian_factories > 3
+            NOT = {
+                has_country_flag = TEG_is_aiding_flag
+            }
+        }
+        cost = 40
+        days_remove = 60
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = TEG_is_aiding_flag
+            }
+        }
+        modifier = {
+            civilian_factory_use = 3
+        }
+        remove_effect = {
+            FROM = {
+                add_offsite_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+            hidden_effect = {
+                clr_country_flag = TEG_is_aiding_flag
+                FROM = {
+                    country_event = teg.111
+                }
+            }
+        }
+    }
+}

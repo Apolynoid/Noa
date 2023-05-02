@@ -160,6 +160,7 @@ TEG_kuo_da_yi_hui_quan_li_idea:0 "扩大议会权力"
 TEG_min_zhu_bing_gong_chang_idea:0 "民主兵工厂"
 TEG_jing_ying_min_zhu_idea:0 "精英民主"
 TEG_bao_wei_gong_he_guo_idea:0 "保卫共和国"
+TEG_min_zhu_tong_meng_idea:0 "民主同盟"
 TEG_zhan_shi_jing_ji_idea:0 "战时经济"
 # 军事线
 TEG_can_mou_zong_bu_idea:0 "参谋总部"
@@ -200,10 +201,15 @@ TEG_yu_he_tong_de_ke_ji_jiao_liu_idea:0 "与河童的科技交流"
  TEG_kaifangyaoguaishanjiaoliu_op:0 "开放妖怪山内部交流"
 
 TEG_yu_he_tong_he_zuo_op:0 "与河童合作"
+TEG_tong_yi_he_zuo_op:0 "同意合作"
 
  ###ttt
 TEG_get_OTG_cores_tt:0 "§Y获得[OTG.GetName]的全部核心§!"
 TEG_automatic_complete_tt:0 "§G随事件发展自动完成§!"
+TEG_befriend_radicalists_tt:0 "解锁§Y接触激进派§!决议"
+TEG_befriend_reformists_tt:0 "解锁§Y接触改革派§!决议"
+TEG_economic_coorporation_tt:0 "解锁§Y经济合作§!决议"
+TEG_strengthen_democracy_alliance_tt:0 "解锁§Y增强民主同盟§!决议"
 
  TEG_quanyaoguaishangeming_tt:0 "§R敌对妖怪山所有非改良、非激进意识形态的非盟友势力，并可以制造夺取所有妖怪山地块的特殊借口。§!\n"
  TEG_xindetongmeng_tt:0 "§Y你将更容易得到妖怪山外的盟友。§!\n"
@@ -226,6 +232,18 @@ TEG_wei_hu_min_zhu_zhi_du_desc:0 "共和国新生的民主制度仍然十分脆�
 TEG_min_zhong_bu_man:0 "民众不满"
 TEG_cheng_li_gong_gong_an_quan_wei_yuan_hui:0 "成立公共安全委员会"
 TEG_shi_shi_jing_ji_guan_kong:0 "实施经济管控"
+TEG_min_zhu_wai_jiao:0 "民主外交"
+TEG_jie_chu_FROM_de_gai_ge_pai:0 "接触[FROM.GetFlag][FROM.GetName]的改革派"
+TEG_chang_shi_jie_chu_FROM_de_ji_jin_pai:0 "尝试接触[FROM.GetFlag][FROM.GetName]的激进派"
+TEG_qiang_hua_yu_FROM_de_meng_you_guan_xi:0 "强化与[FROM.GetFlag][FROM.GetName]的盟友关系"
+TEG_zhi_yuan_min_zhu_tong_meng_meng_you_FROM:0 "支援民主同盟盟友：[FROM.GetFlag][FROM.GetName]"
+TEG_yu_FROM_de_jing_ji_he_zuo:0 "与[FROM.GetFlag][FROM.GetName]的经济合作"
+
 
  TEG_category:0 "天狗减少征兵"
  TEG_zantingjianshaozhengbingzhengce:0 "暂停减少征兵政策"
+
+# flag
+TEG_is_aiding_flag:0 "有正在进行的援助项目"
+TEG_has_contacted_flag:0 "已经接触过"
+TEG_accepted_cooperation_flag:0 "同意合作"

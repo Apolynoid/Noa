@@ -751,7 +751,47 @@
     }
 
     completion_reward = {
-      
+      unlock_decision_category_tooltip = TEG_min_zhu_wai_jiao
+      hidden_effect = {
+        TEG = {
+          add_to_array = {
+            array = TEG_friends
+            value = SGS
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = TKM
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = SEJ
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = CIR
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = LIL
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = MRS
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = ALI
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = NRM
+          }
+          add_to_array = {
+            array = TEG_friends
+            value = CLO
+          }
+        }
+      }
     }
 
     ai_will_do = {
@@ -763,7 +803,7 @@
   focus = {
     id = TEG_wo_men_de_qian_zai_meng_you
     icon = unknown
-    cost = 7
+    cost = 3
     x = -1
     y = 1
 
@@ -774,30 +814,7 @@
     }
 
     completion_reward = {
-      
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 与激进派合作
-  focus = {
-    id = TEG_yu_ji_jin_pai_he_zuo
-    icon = unknown
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_wo_men_de_qian_zai_meng_you
-
-    prerequisite = {
-      focus = TEG_wo_men_de_qian_zai_meng_you
-    }
-
-    completion_reward = {
-      
+      custom_effect_tooltip = TEG_befriend_radicalists_tt
     }
 
     ai_will_do = {
@@ -809,7 +826,7 @@
   focus = {
     id = TEG_wo_men_de_chuan_tong_meng_you
     icon = unknown
-    cost = 7
+    cost = 3
     x = 1
     y = 1
 
@@ -820,7 +837,7 @@
     }
 
     completion_reward = {
-      
+      custom_effect_tooltip = TEG_befriend_reformists_tt
     }
 
     ai_will_do = {
@@ -834,16 +851,17 @@
     icon = unknown
     cost = 7
     x = 0
-    y = 1
+    y = 2
 
-    relative_position_id = TEG_wo_men_de_chuan_tong_meng_you
+    relative_position_id = TEG_chuan_bo_min_zhu
 
     prerequisite = {
+      focus = TEG_wo_men_de_qian_zai_meng_you
       focus = TEG_wo_men_de_chuan_tong_meng_you
     }
 
     completion_reward = {
-      
+      custom_effect_tooltip = TEG_economic_coorporation_tt
     }
 
     ai_will_do = {
@@ -862,15 +880,11 @@
     relative_position_id = TEG_chuan_bo_min_zhu
 
     prerequisite = {
-      focus = TEG_yu_ji_jin_pai_he_zuo
-    }
-
-    prerequisite = {
       focus = TEG_yao_guai_shan_jing_ji_he_zuo
     }
 
     completion_reward = {
-      
+      custom_effect_tooltip = TEG_strengthen_democracy_alliance_tt
     }
 
     ai_will_do = {

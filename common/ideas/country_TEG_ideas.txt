@@ -151,6 +151,17 @@ ideas = {
 			}
 		}
 
+		# 民主同盟
+		TEG_min_zhu_tong_meng_idea = {
+			picture = unknown
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
 		# 战时经济
 		TEG_zhan_shi_jing_ji_idea = {
 			picture = generic_license_production

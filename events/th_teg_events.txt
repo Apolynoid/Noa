@@ -1306,3 +1306,117 @@ country_event = {
 		}
 	}
 }
+
+# 天狗共和国希望与我们合作
+country_event = {
+	id = teg.107
+	title = teg.107.t
+	desc = teg.107.d
+	is_triggered_only = yes
+
+	# 这对我们没有坏处
+	option = {
+		name = teg.107.1
+		diplomatic_relation = {
+			country = TEG
+			relation = non_aggression_pact
+			active = yes
+		}
+		add_opinion_modifier = {
+			target = TEG
+			modifier = TEG_tong_yi_he_zuo_op
+		}
+		hidden_effect = {
+			set_country_flag = TEG_accepted_cooperation_flag
+			TEG = {
+				set_variable = {
+					target = ROOT
+				}
+				country_event = teg.108
+			}
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+
+	# 我们不需要与他们合作
+	option = {
+		name = teg.107.2
+		hidden_effect = {
+			TEG = {
+				set_variable = {
+					target = ROOT
+				}
+				country_event = teg.109
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = qinwai
+				factor = 0
+			}
+		}
+	}
+}
+
+# 同意合作
+country_event = {
+	id = teg.108
+	title = teg.108.t
+	desc = teg.108.d
+	is_triggered_only = yes
+
+	option = {
+		name = teg.108.1
+	}
+}
+
+# 拒绝合作
+country_event = {
+	id = teg.109
+	title = teg.109.t
+	desc = teg.109.d
+	is_triggered_only = yes
+
+	option = {
+		name = teg.109.1
+	}
+}
+
+# 来自天狗的援助
+country_event = {
+	id = teg.110
+	title = teg.110.t
+	desc = teg.110.d
+	is_triggered_only = yes
+
+	option = {
+		name = teg.110.1
+	}
+}
+
+# 与天狗的经济合作
+country_event = {
+	id = teg.111
+	title = teg.111.t
+	desc = teg.111.d
+	is_triggered_only = yes
+
+	option = {
+		name = teg.111.1
+	}
+}
+
+# 与天狗同盟关系的强化
+country_event = {
+	id = teg.112
+	title = teg.112.t
+	desc = teg.112.d
+	is_triggered_only = yes
+
+	option = {
+		name = teg.112.1
+	}
+}

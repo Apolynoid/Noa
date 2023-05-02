@@ -11,5 +11,20 @@ TEG_wei_hu_min_zhu_zhi_du = {
 	visible = {
 		original_tag = TEG
 	}
-	
+}
+
+# 民主外交
+TEG_min_zhu_wai_jiao = {
+	icon = generic_political_actions
+
+	priority = 94
+
+	allowed = {
+		original_tag = TEG
+	}
+
+	visible = {
+		original_tag = TEG
+		has_completed_focus = TEG_chuan_bo_min_zhu
+	}
 }

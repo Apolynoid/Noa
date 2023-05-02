@@ -12,5 +12,9 @@ opinion_modifiers = {
 	TEG_yu_he_tong_he_zuo_op = {
 		value = 50
 	}
+
+	TEG_tong_yi_he_zuo_op = {
+		value = 30
+	}
 }	
 
