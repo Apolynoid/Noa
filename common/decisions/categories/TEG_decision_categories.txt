@@ -1,3 +1,25 @@
+# 天狗统一战争
+TEG_tian_gou_tong_yi_zhan_zheng = {
+	icon = generic_political_actions
+
+	scripted_gui = TEG_unification_war_ui
+
+	priority = 96
+
+	allowed = {
+		OR = {
+			original_tag = TEG
+			original_tag = OTG
+		}
+	}
+
+	visible = {
+		TEG_unification_problem_to_solve = yes
+	}
+
+	visible_when_empty = yes
+}
+
 # 维护民主制度
 TEG_wei_hu_min_zhu_zhi_du = {
 	icon = generic_political_actions

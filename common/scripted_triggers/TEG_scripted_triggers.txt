@@ -1,0 +1,15 @@
+TEG_unification_problem_to_solve = {
+	custom_trigger_tooltip = {
+		tooltip = TEG_unification_problem_to_solve_tt
+		AND = {
+			TEG = {
+				exists = yes
+				is_subject = no
+			}
+			OTG = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	}
+}

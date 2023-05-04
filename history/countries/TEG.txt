@@ -145,4 +145,10 @@
         oldorder = 0
         fandong = 35
     }
+    set_variable = {
+        TEG_war_effort = 9
+    }
+    set_variable = {
+        TEG_war_progress = 80
+    }
 }

@@ -1,0 +1,30 @@
+﻿l_english:
+tegcw.101.t:0 "天狗统一战争"
+tegcw.101.d:0 "日前，天狗共和国宣布对残存的天魔势力宣战，旨在重新统一分裂的天狗，并彻底消灭对革命抱有敌意的旧天魔势力。\n\n天狗共和国宣称这次战争“只是革命的继续”，并在国内得到了充分的舆论支持。而天魔方仍然坚持认为自己才是天狗的唯一合法政府，希望通过这次战争“平定叛乱”。\n\n持亲天魔态度的[MRY.GetName]和天界对于此次战争的态度尚不明朗。"
+tegcw.101.1:0 "粉碎旧帝国！"
+tegcw.101.2:0 "这群该死的共和派！"
+tegcw.101.3:0 "意料之中的发展"
+
+tegcw.201.t:0 "[TEG.GetName]攻克天魔宫"
+tegcw.201.d:0 "经过一系列艰苦的战斗，[TEG.GetName]的军队成功的攻下了[OTG.GetName]的首都天魔宫。这无疑会给[TEG.GetName]的军队以巨大的鼓舞。"
+tegcw.201.1:0 "继续进军！"
+
+tegcw.202.t:0 "[OTG.GetName]夺回天魔宫"
+tegcw.202.d:0 "经过一系列艰苦的战斗，[OTG.GetName]的军队成功的从[TEG.GetName]军队手中夺回了[OTG.GetName]的首都天魔宫。这无疑会给[TEG.GetName]的军队以沉重打击。"
+tegcw.202.1:0 "给这帮叛乱分子一点教训！"
+
+tegcw.203.t:0 "[TEG.GetName]攻克天狗花园"
+tegcw.203.d:0 "经过一系列艰苦的战斗，[TEG.GetName]的军队成功的攻下了[OTG.GetName]的重要城市天狗花园。这无疑会给[TEG.GetName]的军队以巨大的鼓舞。"
+tegcw.203.1:0 "继续进军！"
+
+tegcw.204.t:0 "[OTG.GetName]夺回天狗花园"
+tegcw.204.d:0 "经过一系列艰苦的战斗，[OTG.GetName]的军队成功的从[TEG.GetName]军队手中夺回了[OTG.GetName]的重要城市天狗花园。这无疑会给[TEG.GetName]的军队以沉重打击。"
+tegcw.204.1:0 "给这帮叛乱分子一点教训！"
+
+tegcw.205.t:0 "[TEG.GetName]攻克大天狗议会"
+tegcw.205.d:0 "经过一系列艰苦的战斗，[TEG.GetName]的军队成功的攻下了[OTG.GetName]的重要城市大天狗议会。这无疑会给[TEG.GetName]的军队以巨大的鼓舞。"
+tegcw.205.1:0 "继续进军！"
+
+tegcw.206.t:0 "[OTG.GetName]夺回大天狗议会"
+tegcw.206.d:0 "经过一系列艰苦的战斗，[OTG.GetName]的军队成功的从[TEG.GetName]军队手中夺回了[OTG.GetName]的重要城市大天狗议会。这无疑会给[TEG.GetName]的军队以沉重打击。"
+tegcw.206.1:0 "给这帮叛乱分子一点教训！"

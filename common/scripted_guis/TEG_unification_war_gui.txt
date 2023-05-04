@@ -1,0 +1,14 @@
+scripted_gui = {
+
+	TEG_unification_war_ui = {
+		context_type = decision_category
+		window_name = "TEG_unification_war_ui_window"
+
+		properties = {
+			paranoia_main_paranoiameter = {
+				frame = TEG.TEG_war_effort
+			}
+		}
+	}
+	
+}

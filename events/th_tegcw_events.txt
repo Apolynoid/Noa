@@ -1,0 +1,270 @@
+﻿add_namespace = tegcw
+
+# 天狗内战开始
+news_event = {
+	id = tegcw.101
+	title = tegcw.101.t
+	desc = tegcw.101.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		TEG = {
+			exists = yes
+			is_subject = no
+		}
+		OTG = {
+			exists = yes
+			is_subject = no
+		}
+		TEG = {
+			has_war_with = OTG
+		}
+		NOT = {
+			has_global_flag = TEG_civil_war_flag
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TEG_civil_war_flag
+			TEG_war_progress_add_10 = yes
+		}
+	}
+
+	# 天狗共和国
+	option = {
+		name = tegcw.101.1
+		trigger = {
+			original_tag = TEG
+		}
+	}
+
+	# 天魔帝国
+	option = {
+		name = tegcw.101.2
+		trigger = {
+			original_tag = OTG
+		}
+	}
+
+	# 其他
+	option = {
+		name = tegcw.101.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TEG
+					original_tag = OTG
+				}
+			}
+		}
+	}
+}
+
+#### 内战胜利点争夺
+# 首都 天魔宫 1387-41
+# TEG攻占
+country_event = {
+	id = tegcw.201
+	title = tegcw.201.t
+	desc = tegcw.201.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = TEG_get_1387_flag
+	}
+
+	trigger = {
+		original_tag = TEG
+		TEG = {
+			has_war_with = OTG
+			controls_province = 1387
+		}
+		OTG = {
+			owns_state = 41
+		}
+		NOT = {
+			has_global_flag = TEG_get_1387_flag
+		}
+	}
+
+	option = {
+		name = tegcw.201.1
+		TEG_war_progress_add_20 = yes
+	}
+}
+
+# OTG夺回
+country_event = {
+	id = tegcw.202
+	title = tegcw.202.t
+	desc = tegcw.202.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = OTG_get_back_1387_flag
+	}
+
+	trigger = {
+		original_tag = OTG
+		TEG = {
+			has_war_with = OTG
+		}
+		OTG = {
+			owns_state = 41
+			controls_province = 1387
+		}
+		has_global_flag = TEG_get_1387_flag
+		NOT = {
+			has_global_flag = OTG_get_back_1387_flag
+		}
+	}
+
+	option = {
+		name = tegcw.202.1
+		TEG_war_progress_minus_20 = yes
+	}
+}
+
+# 天狗花园 3415-405
+# TEG攻占
+country_event = {
+	id = tegcw.203
+	title = tegcw.203.t
+	desc = tegcw.203.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = TEG_get_3415_flag
+	}
+
+	trigger = {
+		original_tag = TEG
+		TEG = {
+			has_war_with = OTG
+			controls_province = 3415
+		}
+		OTG = {
+			owns_state = 405
+		}
+		NOT = {
+			has_global_flag = TEG_get_3415_flag
+		}
+	}
+
+	option = {
+		name = tegcw.203.1
+		TEG_war_progress_add_10 = yes
+	}
+}
+
+# OTG夺回
+country_event = {
+	id = tegcw.204
+	title = tegcw.204.t
+	desc = tegcw.204.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = OTG_get_back_3415_flag
+	}
+
+	trigger = {
+		original_tag = OTG
+		TEG = {
+			has_war_with = OTG
+		}
+		OTG = {
+			owns_state = 405
+			controls_province = 3415
+		}
+		has_global_flag = TEG_get_3415_flag
+		NOT = {
+			has_global_flag = OTG_get_back_3415_flag
+		}
+	}
+
+	option = {
+		name = tegcw.204.1
+		TEG_war_progress_minus_10 = yes
+	}
+}
+
+# 大天狗议会 5374-420
+# TEG攻占
+country_event = {
+	id = tegcw.205
+	title = tegcw.205.t
+	desc = tegcw.205.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = TEG_get_5374_flag
+	}
+
+	trigger = {
+		original_tag = TEG
+		TEG = {
+			has_war_with = OTG
+			controls_province = 5374
+		}
+		OTG = {
+			owns_state = 420
+		}
+		NOT = {
+			has_global_flag = TEG_get_5374_flag
+		}
+	}
+
+	option = {
+		name = tegcw.205.1
+		TEG_war_progress_add_10 = yes
+	}
+}
+
+# OTG夺回
+country_event = {
+	id = tegcw.206
+	title = tegcw.206.t
+	desc = tegcw.206.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	immediate = {
+		set_global_flag = OTG_get_back_5374_flag
+	}
+
+	trigger = {
+		original_tag = OTG
+		TEG = {
+			has_war_with = OTG
+		}
+		OTG = {
+			owns_state = 420
+			controls_province = 5374
+		}
+		has_global_flag = TEG_get_5374_flag
+		NOT = {
+			has_global_flag = OTG_get_back_5374_flag
+		}
+	}
+
+	option = {
+		name = tegcw.206.1
+		TEG_war_progress_minus_10 = yes
+	}
+}

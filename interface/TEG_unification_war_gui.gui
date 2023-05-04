@@ -1,0 +1,45 @@
+@PARANOIA_PARANOIAMETER_MAIN_X = 58
+@PARANOIA_PARANOIAMETER_MAIN_Y = 90
+@PARANOIA_TEXT_X = 50 #Needs to be -145(overlapping sword) / -130(evading sword) / -140(bottom) relative to MAIN
+@PARANOIA_TEXT_Y = 160 #Needs to be +80(overlapping sword) / +110(bottom) relative to MAIN
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "TEG_unification_war_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 190 }
+
+		#PARANOIAMETER
+		iconType = {
+			name ="paranoia_main_paranoiameter"
+			spriteType = "GFX_TEG_war_progress"
+			position = { x=@PARANOIA_PARANOIAMETER_MAIN_X	 y=@PARANOIA_PARANOIAMETER_MAIN_Y }
+			pdx_tooltip = "TEG_war_effort_change_tt"
+		}
+
+		#PARANOIA TEXT
+		instantTextBoxType = {
+			name ="paranoia_text"
+			position = { x = @PARANOIA_TEXT_X y = @PARANOIA_TEXT_Y }
+			font = "hoi_18mbs"
+			text = "TEG_war_effort_tt"
+			format = center
+			maxWidth = 400
+			pdx_tooltip = "TEG_war_effort_change_tt"
+		}
+
+		# Flags
+		iconType = {
+			name ="TEG_flag"
+			spriteType = "GFX_TEG_flag"
+			position = { x=40	 y=20 }
+		}
+
+		iconType = {
+			name ="OTG_flag"
+			spriteType = "GFX_OTG_flag"
+			position = { x=370	 y=20 }
+		}
+	}
+}

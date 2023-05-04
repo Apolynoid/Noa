@@ -1,0 +1,22 @@
+on_actions = {
+	on_weekly_TEG = {
+		effect = {
+			if = {
+				limit = {
+					TEG_unification_problem_to_solve = yes
+				}
+				if = {
+					limit = {
+						TEG = {
+							has_war_with = OTG
+						}
+					}
+					TEG_war_progress_minus_3 = yes
+				}
+				else = {
+					TEG_war_progress_minus_1 = yes
+				}
+			}
+		}
+	}
+}

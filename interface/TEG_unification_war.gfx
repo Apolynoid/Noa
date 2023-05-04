@@ -1,0 +1,26 @@
+
+#### Paranoia assets ####
+
+spriteTypes = {	
+
+	### Basic assets ###
+				
+	spriteType = {
+		name = "GFX_TEG_war_progress"
+		texturefile = "gfx/interface/gui/tenguUnificationWar/progressBar.png"
+		legacy_lazy_load = no
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_TEG_flag"
+		texturefile = "gfx/interface/gui/tenguUnificationWar/TEGFlag.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_OTG_flag"
+		texturefile = "gfx/interface/gui/tenguUnificationWar/OTGFlag.png"
+		legacy_lazy_load = no
+	}
+}
