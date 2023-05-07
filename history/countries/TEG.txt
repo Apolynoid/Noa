@@ -113,8 +113,8 @@
     # type3_manpowerlv2
     manpowerlv1
     TEG_cui_ruo_de_min_zhu_zhi_du_idea
-    TEG_junshiyanjiuhunluan_idea
-    TEG_neizhandejianshexiaohao_idea
+    TEG_nei_zhan_dao_zhi_de_jun_shi_hun_luan_idea
+    TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea
     TEG_can_mou_zong_bu_idea
     TEG_tian_gou_te_zhong_bu_dui_idea
     TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea

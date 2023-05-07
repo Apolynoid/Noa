@@ -60,7 +60,7 @@
     }
 
     completion_reward = {
-      remove_ideas = TEG_junshiyanjiuhunluan_idea
+      remove_ideas = TEG_nei_zhan_dao_zhi_de_jun_shi_hun_luan_idea
     }
 
     ai_will_do = {
@@ -83,7 +83,21 @@
     }
 
     completion_reward = {
-
+      add_tech_bonus = {
+        bonus = 2
+        uses = 1
+        category = math
+      }
+      add_tech_bonus = {
+        bonus = 1
+        uses = 2
+        category = race
+      }
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = secret
+      }
     }
 
     ai_will_do = {
@@ -112,7 +126,7 @@
     }
 
     completion_reward = {
-
+      remove_ideas = TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea
     }
 
     ai_will_do = {
@@ -124,7 +138,7 @@
   focus = {
     id = TEG_tian_mo_ji_tian_gou
     icon = unknown
-    cost = 12
+    cost = 7
     x = 0
     y = 1
 
@@ -135,13 +149,8 @@
     }
 
     completion_reward = {
-      custom_effect_tooltip = TEG_get_OTG_cores_tt
-      every_state = {
-        limit = {
-          is_core_of = OTG
-        }
-        add_core_of = TEG
-      }
+      add_stability = 0.1
+      add_political_power = 100
     }
 
     ai_will_do = {
@@ -168,7 +177,9 @@
     }
 
     completion_reward = {
-
+      country_event = {
+        id = teg.113
+      }
     }
 
     ai_will_do = {
@@ -190,7 +201,7 @@
     }
 
     bypass = {
-      has_idea = TEG_qi_yi_hou_de_hun_luan_idea
+      has_government = fandong
     }
 
     completion_reward = {
@@ -260,6 +271,13 @@
       focus = TEG_aya_zong_tong
     }
 
+    available = {
+      has_country_leader = {
+        character = TEG_aya
+        ruling_only = yes
+      }
+    }
+
     completion_reward = {
       if = {
         limit = {
@@ -322,6 +340,13 @@
       focus = TEG_qing_xiang_jun_shi_gong_ye
     }
 
+    available = {
+      has_country_leader = {
+        character = TEG_aya
+        ruling_only = yes
+      }
+    }
+
     completion_reward = {
       add_ideas = TEG_tian_gou_zhi_yuan_jun_idea
     }
@@ -343,6 +368,13 @@
 
     prerequisite = {
       focus = TEG_aya_zong_tong
+    }
+
+    available = {
+      has_country_leader = {
+        character = TEG_aya
+        ruling_only = yes
+      }
     }
 
     completion_reward = {
@@ -371,6 +403,13 @@
 
     prerequisite = {
       focus = TEG_gu_li_min_zhong_can_yu_zheng_zhi
+    }
+
+    available = {
+      has_country_leader = {
+        character = TEG_aya
+        ruling_only = yes
+      }
     }
 
     completion_reward = {
@@ -576,6 +615,13 @@
       focus = TEG_hatate_zong_tong
     }
 
+    available = {
+      has_country_leader = {
+        character = TEG_hatate
+        ruling_only = yes
+      }
+    }
+
     completion_reward = {
       add_days_mission_timeout = {
         mission = TEG_min_zhong_bu_man
@@ -601,6 +647,13 @@
 
     prerequisite = {
       focus = TEG_xuan_ba_zheng_zhi_jing_ying
+    }
+
+    available = {
+      has_country_leader = {
+        character = TEG_hatate
+        ruling_only = yes
+      }
     }
 
     completion_reward = {
@@ -640,6 +693,13 @@
 
     prerequisite = {
       focus = TEG_hatate_zong_tong
+    }
+
+    available = {
+      has_country_leader = {
+        character = TEG_hatate
+        ruling_only = yes
+      }
     }
 
     completion_reward = {
@@ -694,6 +754,13 @@
 
     prerequisite = {
       focus = TEG_jun_heng_gong_ye_fa_zhan
+    }
+
+    available = {
+      has_country_leader = {
+        character = TEG_hatate
+        ruling_only = yes
+      }
     }
 
     completion_reward = {
@@ -1610,9 +1677,10 @@
       every_core_state = {
         add_building_construction = {
           type = infrastructure
-          level = 5
+          level = 2
           instant_build = yes
         }
+        add_extra_state_shared_building_slots = 3
       }
     }
 

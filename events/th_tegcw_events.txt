@@ -64,6 +64,44 @@ news_event = {
 	}
 }
 
+# OTG 请求干涉
+country_event = {
+	id = tegcw.102
+	title = tegcw.102.t
+	desc = tegcw.102.d
+
+	is_triggered_only = yes
+
+	# 我们当然要干涉
+	option = {
+		name = tegcw.102.1
+		hidden_effect = {
+			set_country_flag = TEG_ready_to_interfer_flag
+		}
+	}
+
+	# 那是他们自己的事
+	option = {
+		name = tegcw.102.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# 白和
+country_event = {
+	id = tegcw.103
+	title = tegcw.103.t
+	desc = tegcw.103.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = tegcw.103.1
+	}
+}
+
 #### 内战胜利点争夺
 # 首都 天魔宫 1387-41
 # TEG攻占

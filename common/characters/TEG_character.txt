@@ -50,6 +50,9 @@ characters={
 		}
 		country_leader={
 			ideology=fandong_type
+			traits = {
+				TEG_bu_ke_fu_shi_zhe
+			}
 			id=-1
 		}
 		country_leader={

@@ -1,3 +1,239 @@
+# 天狗统一战争
+TEG_tian_gou_tong_yi_zhan_zheng = {
+    # TEG 扩大战果
+    TEG_kuo_da_zhan_guo = {
+        allowed = {
+            original_tag = TEG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_above_80_tt
+                check_variable = {
+                    TEG.TEG_war_progress > 80
+                }
+            }
+        }
+        cost = 50
+        days_re_enable = 30
+        days_remove = 30
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        targeted_modifier = {
+            tag = OTG
+            attack_bonus_against = 0.15
+            defense_bonus_against = 0.15
+            breakthrough_bonus_against = 0.15
+        }
+    }
+
+    # OTG 购买武器
+    OTG_gou_mai_wu_qi = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_70_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 70
+                }
+            }
+        }
+        cost = 30
+        days_remove = 30
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = gun_a
+                amount = 200
+                producer = MRY
+            }
+            add_equipment_to_stockpile = {
+                type = mortar_a
+                amount = 100
+                producer = MRY
+            }
+        }
+    }
+
+    # OTG 扩编军队
+    OTG_kuo_bian_jun_dui = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_60_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 60
+                }
+            }
+        }
+        cost = 60
+        days_remove = 30
+        fire_only_once = yes
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        remove_effect = {
+            custom_effect_tooltip = OTG_enlarge_army_tt
+            hidden_effect = {
+                load_oob = "OTG_enlarged_army"
+            }
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    # OTG 发起反攻
+    OTG_fa_qi_fan_gong = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_50_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 50
+                }
+            }
+        }
+        cost = 50
+        days_remove = 30
+        fire_only_once = yes
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        targeted_modifier = {
+            tag = TEG
+            attack_bonus_against = 0.1
+            breakthrough_bonus_against = 0.1
+        }
+    }
+
+    # OTG 稳定前线
+    OTG_wen_ding_qian_xian = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_50_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 50
+                }
+            }
+        }
+        cost = 50
+        days_remove = 30
+        fire_only_once = yes
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        targeted_modifier = {
+            tag = TEG
+            defense_bonus_against = 0.2
+        }
+    }
+
+    # OTG 请求MRY干涉
+    OTG_qing_qiu_MRY_gan_she = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_40_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 40
+                }
+            }
+        }
+        cost = 50
+        fire_only_once = yes
+        complete_effect = {
+            MRY = {
+                country_event = {
+                    id = tegcw.102
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    # OTG 请求TES干涉
+    OTG_qing_qiu_TES_gan_she = {
+        allowed = {
+            original_tag = OTG
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = TEG_war_progress_below_40_tt
+                check_variable = {
+                    TEG.TEG_war_progress < 40
+                }
+            }
+        }
+        cost = 50
+        fire_only_once = yes
+        complete_effect = {
+            TES = {
+                country_event = {
+                    id = tegcw.102
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+
+## MRY TES 支援OTG
+TEG_zhi_yuan_OTG = {
+    # 准备干涉
+    TEG_zhun_bei_gan_she = {
+        activation = {
+            has_country_flag = TEG_ready_to_interfer_flag
+            TEG_unification_problem_to_solve = yes
+            NOT = {
+                has_war_with = TEG
+            }
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+        icon = mission_icon
+        days_mission_timeout = 30
+        selectable_mission = no
+
+        war_with_on_timeout = TEG
+
+        cancel_trigger = {
+            TEG_unification_problem_to_solve = no
+        }
+
+        timeout_effect = {
+            declare_war_on = {
+                target = TEG
+                type = topple_government
+            }
+        }
+    }
+}
+
 # 维护民主制度
 TEG_wei_hu_min_zhu_zhi_du = {
     # 民众不满

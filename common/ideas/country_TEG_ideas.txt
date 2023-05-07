@@ -1,33 +1,15 @@
 ideas = {
 	country = {
-	    TEG_neizhandejianshexiaohao_idea = {
-	    	picture = usa_great_depression_3
-	    	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
+	    TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea = {
+	    	picture = POL_disjointed_industry
 			modifier = {
 				production_speed_buildings_factor = -0.15
 				industrial_capacity_factory = -0.15
 				stability_factor = -0.1
-				# local_building_slots_factor = 0.5
 			}
 	    }
-	    TEG_junshiyanjiuhunluan_idea = {
+	    TEG_nei_zhan_dao_zhi_de_jun_shi_hun_luan_idea = {
 	    	picture = generic_army_problems
-	    	allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
 			modifier = {
 				war_support_factor = -0.1
 				conscription_factor = -0.1
@@ -92,7 +74,6 @@ ideas = {
 			picture = unknown
 			modifier = {
 				send_volunteer_divisions_required = -0.5
-				send_volunteer_size = 4
 				send_volunteers_tension = -1.0
 				air_volunteer_cap = 200
 			}

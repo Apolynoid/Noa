@@ -1,549 +1,4 @@
 ﻿add_namespace = teg
-####正常事件####
-country_event = { #意见统一（国策）
-	id = teg.10
-	title = teg.10.t
-	desc = teg.10.d
-	picture = GFX_news_event_teg.10
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = teg.10.1
-		FROM = {
-			jiemeng = yes
-          	can_use = yes
-	        ROOT = {
-	          can_use = yes
-	        }
-		}
-		hidden_effect = {
-			TEG = {
-	        	country_event = { id = glo.2001 days = 2}
-	        }
-		}
-        
-        ai_chance = {
-        	base = 60
-        }
-	}
-
-	option = {
-		name = teg.10.2
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 0 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 30 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 50 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 90 } 
-				}
-			}
-		}
-        hidden_effect = { 
-	        TEG = {
-	        	country_event = { id = glo.2002 days = 2}
-	        }
-	    }
-	}
-}
-
-country_event = { #结盟系列国策
-	id = teg.11
-	title = teg.11.t
-	desc = teg.11.d
-	picture = GFX_news_event_teg.11
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = teg.11.1
-		FROM = {
-			jiemeng = yes
-          	can_use = yes
-	        ROOT = {
-	          can_use = yes
-	        }
-		}
-		hidden_effect = {
-			TEG = {
-	        	country_event = { id = glo.2001 days = 2}
-	        }
-		}
-        
-        ai_chance = {
-        	base = 50
-        }
-	}
-
-	option = {
-		name = teg.11.2
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 0 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 30 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 50 } 
-				}
-			}
-			modifier = {
-				factor = 0.6
-				ROOT = {
-					has_opinion = { target = FROM value > 90 } 
-				}
-			}
-		}
-        hidden_effect = { 
-	        TEG = {
-	        	country_event = { id = glo.2002 days = 2}
-	        }
-	    }
-	}
-}
-
-news_event = {#建立天狗情报局
-	id = teg.13
-	title = teg.13.t
-	desc = teg.13.d
-	picture = GFX_news_event_teg.13
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.13.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.13.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#把媒体作为意识输出手段
-	id = teg.14
-	title = teg.14.t
-	desc = teg.14.d
-	picture = GFX_news_event_teg.14
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.14.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.14.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#准备全民动员
-	id = teg.15
-	title = teg.15.t
-	desc = teg.15.d
-	picture = GFX_news_event_teg.15
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.15.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.15.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#专注意识形态输出
-	id = teg.17
-	title = teg.17.t
-	desc = teg.17.d
-	picture = GFX_news_event_teg.17
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.17.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.17.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#意见统一
-	id = teg.20
-	title = teg.20.t
-	desc = teg.20.d
-	picture = GFX_news_event_teg.20
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.20.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.20.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-			is_in_faction_with = TEG
-		}
-	}
-
-	option = {
-		name = teg.20.3
-		trigger = {
-			not = {
-				tag = TEG
-				is_in_faction_with = TEG
-			}
-		}
-	}
-}
-
-news_event = {#注重妖怪山外
-	id = teg.21
-	title = teg.21.t
-	desc = teg.21.d
-	picture = GFX_news_event_teg.21
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.21.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.21.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#新的同盟
-	id = teg.22
-	title = teg.22.t
-	desc = teg.22.d
-	picture = GFX_news_event_teg.22
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.22.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.22.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-			is_in_faction_with = TEG
-		}
-	}
-
-	option = {
-		name = teg.22.3
-		trigger = {
-			not = {
-				tag = TEG
-				is_in_faction_with = TEG
-			}
-		}
-	}
-}
-
-news_event = {#妖怪山革命基地
-	id = teg.24
-	title = teg.24.t
-	desc = teg.24.d
-	picture = GFX_news_event_teg.24
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.24.1
-		trigger = {
-			tag = TEG
-		}
-	}
-
-	option = {
-		name = teg.24.2
-		trigger = {
-			not = {
-				tag = TEG
-			}
-		}
-	}
-}
-
-news_event = {#驱逐天界势力
-	id = teg.26
-	title = teg.26.t
-	desc = teg.26.d
-	picture = GFX_news_event_teg.26
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.26.1
-		trigger = {
-			or = {
-				is_in_faction_with = TEG
-				tag = TEG
-			}
-			not = {
-				tag = EET
-				tag = UDO
-			}
-		}
-	}
-
-	option = {
-		name = teg.26.2
-		trigger = {
-			or = {
-				tag = IKU
-				tag = CCA
-				tag = TES
-			}
-		}
-	}
-
-	option = {
-		name = teg.26.3
-		trigger = {
-			or = {
-				tag = EET
-				tag = UDO
-			}
-		}
-	}
-
-	option = {
-		name = teg.26.4
-		trigger = {
-			not = {
-				is_in_faction_with = TEG
-				tag = TEG
-				tag = IKU
-				tag = CCA
-				tag = TES
-				tag = EET
-				tag = UDO
-			}
-		}
-	}
-}
-
-news_event = {#统一妖怪山
-	id = teg.27
-	title = teg.27.t
-	desc = teg.27.d
-	picture = GFX_news_event_teg.27
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.27.1
-		trigger = {
-			tag = MRY
-		}
-	}
-
-	option = {
-		name = teg.27.2
-		trigger = {
-			or = {
-				tag = TEG
-				is_in_faction_with = TEG
-			}
-		}
-	}
-
-	option = {
-		name = teg.27.3
-		trigger = {
-			not = {
-				tag = TEG
-				tag = MRY
-				is_in_faction_with = TEG
-			}
-		}
-	}
-}
-
-news_event = {#冲击幻想乡最大的封建帝国
-	id = teg.28
-	title = teg.28.t
-	desc = teg.28.d
-	picture = GFX_news_event_teg.28
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = teg.28.1
-		trigger = {
-			or = {
-				is_in_faction_with = TEG
-				tag = TEG
-			}
-		}
-	}
-
-	option = {
-		name = teg.28.2
-		trigger = {
-			or = {
-				is_in_faction_with = SCA
-				tag = SCA
-			}
-		}
-	}
-
-	option = {
-		name = teg.28.3
-		trigger = {
-			not = {
-				is_in_faction_with = SCA
-				tag = SCA
-				is_in_faction_with = TEG
-				tag = TEG
-			}
-		}
-	}
-}
-
 # 大选
 country_event = {
 	id = teg.101
@@ -842,5 +297,92 @@ country_event = {
 
 	option = {
 		name = teg.112.1
+	}
+}
+
+# 天魔领袖的命运
+country_event = {
+	id = teg.113
+	title = teg.113.t
+	desc = teg.113.d
+	is_triggered_only = yes
+
+	# 他们对共和国有用
+	option = {
+		name = teg.113.1
+		add_political_power = -50
+		OTG = {
+			every_character = {
+				set_nationality = TEG
+			}
+		}
+	}
+
+	# 共和国不需要这些人
+	option = {
+		name = teg.113.2
+		add_political_power = 100
+		hidden_effect = {
+			OTG = {
+				every_character = {
+					set_nationality = XXX
+				}
+			}
+		}
+	}
+}
+
+# 紧急事态
+country_event = {
+	id = teg.114
+	title = teg.114.t
+	desc = teg.114.d
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = TEG
+		NOT = {
+			has_government = fandong
+		}
+		surrender_progress > 0.4
+	}
+
+	option = {
+		name = teg.114.1
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.4
+		}
+		set_politics = {
+			ruling_party = fandong
+		}
+		if = {
+			limit = {
+				has_idea = TEG_tian_gou_zhi_yuan_jun_idea
+			}
+			remove_ideas = TEG_tian_gou_zhi_yuan_jun_idea
+		}
+		if = {
+			limit = {
+				has_idea = TEG_kuo_da_yi_hui_quan_li_idea
+			}
+			remove_ideas = TEG_kuo_da_yi_hui_quan_li_idea
+		}
+		if = {
+			limit = {
+				has_idea = TEG_min_zhu_bing_gong_chang_idea
+			}
+			remove_ideas = TEG_min_zhu_bing_gong_chang_idea
+		}
+		if = {
+			limit = {
+				has_idea = TEG_jing_ying_min_zhu_idea
+			}
+			remove_ideas = TEG_jing_ying_min_zhu_idea
+		}
+		hidden_effect = {
+			complete_national_focus = TEG_momiji_zhi_zheng
+		}
 	}
 }

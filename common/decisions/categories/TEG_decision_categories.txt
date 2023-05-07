@@ -20,6 +20,25 @@ TEG_tian_gou_tong_yi_zhan_zheng = {
 	visible_when_empty = yes
 }
 
+# MRY TES 支援OTG
+TEG_zhi_yuan_OTG = {
+	icon = generic_political_actions
+
+	priority = 100
+
+	allowed = {
+		OR = {
+			original_tag = MRY
+			original_tag = TES
+		}
+	}
+
+	visible = {
+		TEG_unification_problem_to_solve = yes
+		has_country_flag = TEG_ready_to_interfer_flag
+	}
+}
+
 # 维护民主制度
 TEG_wei_hu_min_zhu_zhi_du = {
 	icon = generic_political_actions
