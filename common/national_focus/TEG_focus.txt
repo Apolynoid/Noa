@@ -974,7 +974,10 @@
     }
 
     available = {
-      threat > 0.5
+      OR = {
+        threat > 0.5
+        date > 149.1.1
+      }
     }
 
     completion_reward = {

@@ -1,0 +1,14 @@
+TEG_accept_cooperation = {
+	enable = {
+		has_country_flag = TEG_accepted_cooperation_flag
+		has_non_aggression_pact_with = TEG
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = TEG
+		value = 80
+	}
+}

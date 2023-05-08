@@ -32,7 +32,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				max_planning = 0.2
+				max_planning = 0.1
 				planning_speed = 0.1
 				military_leader_cost_factor = 0.15
 			}
@@ -185,8 +185,8 @@ ideas = {
 		TEG_gong_he_guo_guo_fang_bu_idea = {
 	    	picture = unknown
 			modifier = {
-				max_planning = 0.2
-				planning_speed = 0.2
+				max_planning = 0.15
+				planning_speed = 0.15
 			}
 	    }
 
@@ -194,8 +194,8 @@ ideas = {
 		TEG_gong_he_guo_guo_fang_bu_a_idea = {
 	    	picture = unknown
 			modifier = {
-				max_planning = 0.2
-				planning_speed = 0.2
+				max_planning = 0.15
+				planning_speed = 0.15
 				military_leader_cost_factor = -0.1
 				army_leader_start_attack_level = 1
 				army_leader_start_defense_level = 1

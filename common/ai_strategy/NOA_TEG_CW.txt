@@ -1,0 +1,39 @@
+OTG_send_lend_lease = {
+	enable = {
+		check_variable = {
+			TEG.TEG_war_progress < 70
+		}
+		OR = {
+			original_tag = MRY
+			original_tag = TES
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = OTG
+		value = 100
+	}
+}
+
+OTG_send_volunteer_army = {
+	enable = {
+		check_variable = {
+			TEG.TEG_war_progress < 50
+		}
+		OR = {
+			original_tag = MRY
+			original_tag = TES
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = OTG
+		value = 100
+	}
+}
