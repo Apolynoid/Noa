@@ -144,7 +144,7 @@ focus_tree = {
   # 接触激进同情者
   focus = {
     id = NRM_jie_chu_ji_jin_tong_qing_zhe
-    icon = unknown
+    icon = GFX_goal_generic_military_deal
     cost = 3
     x = -1
     y = 2
@@ -239,7 +239,7 @@ focus_tree = {
   # 浴火重生
   focus = {
     id = NRM_yu_huo_chong_sheng
-    icon = unknown
+    icon = NRM_focus_born_from_ashes
     cost = 7
     x = 0
     y = 1
@@ -274,7 +274,7 @@ focus_tree = {
   # 生而平等
   focus = {
     id = NRM_sheng_er_ping_deng
-    icon = unknown
+    icon = GFX_focus_equality
     cost = 7
     x = -3
     y = 1
@@ -300,7 +300,7 @@ focus_tree = {
   # 社会保障
   focus = {
     id = NRM_she_hui_bao_zhang
-    icon = unknown
+    icon = GFX_focus_ETH_adopt_the_lira
     cost = 7
     x = 0
     y = 1
@@ -324,7 +324,7 @@ focus_tree = {
   # 社会化生产
   focus = {
     id = NRM_she_hui_hua_sheng_chan
-    icon = unknown
+    icon = GFX_focus_socialized_production
     cost = 7
     x = -1
     y = 1
@@ -347,7 +347,7 @@ focus_tree = {
   # 生产竞赛
   focus = {
     id = NRM_sheng_chan_jing_sai
-    icon = unknown
+    icon = GFX_focus_labor_propaganda
     cost = 7
     x = 0
     y = 1
@@ -422,7 +422,7 @@ focus_tree = {
   # 扫盲运动
   focus = {
     id = NRM_sao_mang_yun_dong
-    icon = unknown
+    icon = GFX_focus_education
     cost = 7
     x = 3
     y = 1
@@ -445,7 +445,7 @@ focus_tree = {
   # 魔法之森科学院
   focus = {
     id = NRM_mo_fa_zhi_sen_ke_xue_yuan
-    icon = unknown
+    icon = GFX_focus_science_institute
     cost = 7
     x = 0
     y = 1

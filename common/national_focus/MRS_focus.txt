@@ -1003,7 +1003,7 @@ focus_tree = {
   # 改革教育制度
   focus = {
     id = MRS_gai_ge_jiao_yu_zhi_du
-    icon = GFX_focus_improved_education
+    icon = GFX_focus_education
     cost = 7
     x = 2
     y = 2

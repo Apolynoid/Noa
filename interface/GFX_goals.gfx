@@ -23,6 +23,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_socialized_production"
+		texturefile = "gfx/interface/goals/focus_generic_socialized_production.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_production"
 		texturefile = "gfx/interface/goals/focus_generic_production.png"			
 	}
@@ -30,6 +35,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_production2"
 		texturefile = "gfx/interface/goals/focus_generic_production2.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_labor_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_labor_propaganda.png"			
 	}
 
 	SpriteType = {
@@ -78,6 +88,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_education"
+		texturefile = "gfx/interface/goals/focus_generic_education.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_improved_education"
 		texturefile = "gfx/interface/goals/focus_generic_improved_education.dds"			
 	}
@@ -88,6 +103,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_science_institute"
+		texturefile = "gfx/interface/goals/focus_generic_science_institute.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_dust_settled"
 		texturefile = "gfx/interface/goals/focus_generic_dust_settled.dds"			
 	}
@@ -95,6 +115,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_domestic_affairs"
 		texturefile = "gfx/interface/goals/focus_generic_domestic_affairs.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_equality"
+		texturefile = "gfx/interface/goals/focus_generic_equality.png"			
 	}
 
 	SpriteType = {
@@ -148,6 +173,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_MRY"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MRY.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_TES"
+		texturefile = "gfx/interface/goals/focus_generic_attack_TES.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_TEG"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
 	}
@@ -178,6 +213,21 @@ spriteTypes = {
 	}
 
 	#### TEG Shameimaru Aya 天狗共和国
+
+	SpriteType = {
+		name = "TEG_focus_president_aya"
+		texturefile = "gfx/interface/goals/focus_TEG_president_aya.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_momiji_hold_power"
+		texturefile = "gfx/interface/goals/focus_TEG_momiji_hold_power.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_president_hatate"
+		texturefile = "gfx/interface/goals/focus_TEG_president_hatate.png"			
+	}
 
 	SpriteType = {
 		name = "TEG_focus_defend_the_republic"
@@ -241,13 +291,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "MRS_focus_hakkero_production"
-	texturefile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
+		name = "MRS_focus_hakkero_production"
+		texturefile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
 	}
 
 	SpriteType = {
-	name = "MRS_focus_contact_alice"
-	texturefile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
+		name = "MRS_focus_contact_alice"
+		texturefile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
 	}
 
 	SpriteType = {
@@ -270,6 +320,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "NRM_focus_union_army"
 		texturefile = "gfx/interface/goals/focus_NRM_union_army.png"			
+	}
+
+	SpriteType = {
+		name = "NRM_focus_born_from_ashes"
+		texturefile = "gfx/interface/goals/focus_NRM_born_from_ashes.png"			
 	}
 
 	#### ALI Alice Margatroid 人偶师协会

@@ -225,7 +225,7 @@
   # 射命丸文总统
   focus = {
     id = TEG_aya_zong_tong
-    icon = unknown
+    icon = TEG_focus_president_aya
     cost = 3
     x = -4
     y = 1
@@ -440,7 +440,7 @@
   # 犬走椛执政
   focus = {
     id = TEG_momiji_zhi_zheng
-    icon = unknown
+    icon = TEG_focus_momiji_hold_power
     cost = 3
     x = 0
     y = 1
@@ -569,7 +569,7 @@
   # 姬海棠果总统
   focus = {
     id = TEG_hatate_zong_tong
-    icon = unknown
+    icon = TEG_focus_president_hatate
     cost = 3
     x = 4
     y = 1
@@ -1015,7 +1015,7 @@
   # 消除天界威胁
   focus = {
     id = TEG_xiao_chu_tian_jie_wei_xie
-    icon = unknown
+    icon = GFX_focus_attack_TES
     cost = 12
     x = -1
     y = 1
@@ -1065,7 +1065,7 @@
   # 解决守矢问题
   focus = {
     id = TEG_jie_jue_shou_shi_wen_ti
-    icon = unknown
+    icon = GFX_focus_attack_MRY
     cost = 12
     x = 1
     y = 1
@@ -1981,7 +1981,7 @@
   # 给予人类科学家公民权
   focus = {
     id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-    icon = unknown
+    icon = GFX_goal_tfv_generic_tech_sharing
     cost = 7
     x = 2
     y = 1
