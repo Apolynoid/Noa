@@ -4,7 +4,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_skillful_workers"
-		texturefile = "gfx/interface/goals/focus_generic_skillful_workers.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_skillful_workers.png"			
 	}
 
 	SpriteType = {
@@ -103,13 +103,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_open_up_education_resourses"
+		texturefile = "gfx/interface/goals/focus_generic_open_up_education_resourses.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_science_institute"
 		texturefile = "gfx/interface/goals/focus_generic_science_institute.png"			
 	}
 
 	SpriteType = {
 		name = "GFX_focus_dust_settled"
-		texturefile = "gfx/interface/goals/focus_generic_dust_settled.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_dust_settled.png"			
 	}
 
 	SpriteType = {
@@ -209,7 +214,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_befriend_SCA"
-		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.png"			
 	}
 
 	#### TEG Shameimaru Aya 天狗共和国
@@ -242,7 +247,7 @@ spriteTypes = {
 
 	SpriteType = {
 	name = "MRS_focus_convene_the_witch_meeting"
-	texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.dds"			
+	texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.png"			
 	}
 
 	SpriteType = {

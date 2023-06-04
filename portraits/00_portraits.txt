@@ -1,0 +1,526 @@
+default = {
+	male = {
+		"GFX_Portrait_Generic_1"
+		"GFX_Portrait_Generic_2"
+		"GFX_Portrait_Generic_3"
+		"GFX_Portrait_Generic_4"
+		"GFX_Portrait_Generic_5"
+		"GFX_Portrait_Generic_6"
+		"GFX_Portrait_Generic_7"
+		"GFX_Portrait_Generic_8"
+		"GFX_Portrait_Generic_9"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Generic_1"
+			"GFX_Portrait_Generic_2"
+			"GFX_Portrait_Generic_3"
+			"GFX_Portrait_Generic_4"
+			"GFX_Portrait_Generic_5"
+			"GFX_Portrait_Generic_6"
+			"GFX_Portrait_Generic_7"
+			"GFX_Portrait_Generic_8"
+			"GFX_Portrait_Generic_9"
+		}
+		female = {
+			"GFX_Portrait_Generic_1"
+			"GFX_Portrait_Generic_2"
+			"GFX_Portrait_Generic_3"
+			"GFX_Portrait_Generic_4"
+			"GFX_Portrait_Generic_5"
+			"GFX_Portrait_Generic_6"
+			"GFX_Portrait_Generic_7"
+			"GFX_Portrait_Generic_8"
+			"GFX_Portrait_Generic_9"
+		}
+	}
+}
+#kap
+KAP = {
+	male = {
+		"GFX_Portrait_Kappa_Generic_1"
+		"GFX_Portrait_Kappa_Generic_2"
+		"GFX_Portrait_Kappa_Generic_3"
+		"GFX_Portrait_Kappa_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+	}
+}
+NTR = {
+	male = {
+		"GFX_Portrait_Kappa_Generic_1"
+		"GFX_Portrait_Kappa_Generic_2"
+		"GFX_Portrait_Kappa_Generic_3"
+		"GFX_Portrait_Kappa_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+	}
+}
+YAW = {
+	male = {
+		"GFX_Portrait_Kappa_Generic_1"
+		"GFX_Portrait_Kappa_Generic_2"
+		"GFX_Portrait_Kappa_Generic_3"
+		"GFX_Portrait_Kappa_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+	}
+}
+GRS = {
+	male = {
+		"GFX_Portrait_Kappa_Generic_1"
+		"GFX_Portrait_Kappa_Generic_2"
+		"GFX_Portrait_Kappa_Generic_3"
+		"GFX_Portrait_Kappa_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Kappa_Generic_1"
+			"GFX_Portrait_Kappa_Generic_2"
+			"GFX_Portrait_Kappa_Generic_3"
+			"GFX_Portrait_Kappa_Generic_4"
+		}
+	}
+}
+#tengu
+TEG = {
+	male = {
+		"GFX_Portrait_Tengu_Generic_1"
+		"GFX_Portrait_Tengu_Generic_2"
+		"GFX_Portrait_Tengu_Generic_3"
+		"GFX_Portrait_Tengu_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Tengu_Generic_1"
+			"GFX_Portrait_Tengu_Generic_2"
+			"GFX_Portrait_Tengu_Generic_3"
+			"GFX_Portrait_Tengu_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Tengu_Generic_1"
+			"GFX_Portrait_Tengu_Generic_2"
+			"GFX_Portrait_Tengu_Generic_3"
+			"GFX_Portrait_Tengu_Generic_4"
+		}
+	}
+}
+OTG = {
+	male = {
+		"GFX_Portrait_Tengu_Generic_1"
+		"GFX_Portrait_Tengu_Generic_2"
+		"GFX_Portrait_Tengu_Generic_3"
+		"GFX_Portrait_Tengu_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Tengu_Generic_1"
+			"GFX_Portrait_Tengu_Generic_2"
+			"GFX_Portrait_Tengu_Generic_3"
+			"GFX_Portrait_Tengu_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Tengu_Generic_1"
+			"GFX_Portrait_Tengu_Generic_2"
+			"GFX_Portrait_Tengu_Generic_3"
+			"GFX_Portrait_Tengu_Generic_4"
+		}
+	}
+}
+#sca
+SCA = {
+	male = {
+		"GFX_Portrait_Scarlet_Generic_1"
+		"GFX_Portrait_Scarlet_Generic_2"
+		"GFX_Portrait_Scarlet_Generic_3"
+		"GFX_Portrait_Scarlet_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Scarlet_Generic_1"
+			"GFX_Portrait_Scarlet_Generic_2"
+			"GFX_Portrait_Scarlet_Generic_3"
+			"GFX_Portrait_Scarlet_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Scarlet_Generic_1"
+			"GFX_Portrait_Scarlet_Generic_2"
+			"GFX_Portrait_Scarlet_Generic_3"
+			"GFX_Portrait_Scarlet_Generic_4"
+		}
+	}
+}
+#rab
+INB = {
+	male = {
+		"GFX_Portrait_Rabbit_Generic_1"
+		"GFX_Portrait_Rabbit_Generic_2"
+		"GFX_Portrait_Rabbit_Generic_3"
+		"GFX_Portrait_Rabbit_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+	}
+}
+RGO = {
+	male = {
+		"GFX_Portrait_Rabbit_Generic_1"
+		"GFX_Portrait_Rabbit_Generic_2"
+		"GFX_Portrait_Rabbit_Generic_3"
+		"GFX_Portrait_Rabbit_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+	}
+}
+EET = {
+	male = {
+		"GFX_Portrait_Rabbit_Generic_1"
+		"GFX_Portrait_Rabbit_Generic_2"
+		"GFX_Portrait_Rabbit_Generic_3"
+		"GFX_Portrait_Rabbit_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+	}
+}
+UDO = {
+	male = {
+		"GFX_Portrait_Rabbit_Generic_1"
+		"GFX_Portrait_Rabbit_Generic_2"
+		"GFX_Portrait_Rabbit_Generic_3"
+		"GFX_Portrait_Rabbit_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Rabbit_Generic_1"
+			"GFX_Portrait_Rabbit_Generic_2"
+			"GFX_Portrait_Rabbit_Generic_3"
+			"GFX_Portrait_Rabbit_Generic_4"
+		}
+	}
+}
+#FAI
+CIR = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+SGS = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+CFA = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+LIL = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+MFA = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+HKM = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+YUK = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+SC2 = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+SC3 = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+CLO = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}
+UFA = {
+	male = {
+		"GFX_Portrait_Fairy_Generic_1"
+		"GFX_Portrait_Fairy_Generic_2"
+		"GFX_Portrait_Fairy_Generic_3"
+		"GFX_Portrait_Fairy_Generic_4"
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+		female = {
+			"GFX_Portrait_Fairy_Generic_1"
+			"GFX_Portrait_Fairy_Generic_2"
+			"GFX_Portrait_Fairy_Generic_3"
+			"GFX_Portrait_Fairy_Generic_4"
+		}
+	}
+}

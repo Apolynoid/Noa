@@ -201,7 +201,7 @@ focus_tree = {
   # 宣扬种族平等
   focus = {
     id = MRS_xuan_yang_zhong_zu_ping_deng
-    icon = unknown
+    icon = GFX_focus_equality
     cost = 7
     x = 0
     y = 1
@@ -435,7 +435,7 @@ focus_tree = {
   # 调和魔法使矛盾
   focus = {
     id = MRS_tiao_he_mo_fa_shi_mao_dun
-    icon = unknown
+    icon = GFX_goal_generic_improve_relations
     cost = 7
     x = 0
     y = 2
@@ -582,7 +582,7 @@ focus_tree = {
   # 支持种族融合
   focus = {
     id = MRS_zhi_chi_zhong_zu_rong_he
-    icon = unknown
+    icon = GFX_goal_generic_national_unity
     cost = 7
     x = 0
     y = 1
@@ -605,7 +605,7 @@ focus_tree = {
   # 宣扬和平共处
   focus = {
     id = MRS_xuan_yang_he_ping_gong_chu
-    icon = unknown
+    icon = GFX_focus_peace_propaganda
     cost = 7
     x = 0
     y = 1
@@ -1030,7 +1030,7 @@ focus_tree = {
   # 开放教育资源
   focus = {
     id = MRS_kai_fang_jiao_yu_zi_yuan
-    icon = unknown
+    icon = GFX_focus_open_up_education_resourses
     cost = 7
     x = 0
     y = 1

@@ -3,7 +3,8 @@ ideas = {
 	    TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea = {
 	    	picture = POL_disjointed_industry
 			modifier = {
-				production_speed_buildings_factor = -0.15
+				production_speed_buildings_factor = -0.3
+				consumer_goods_factor = 0.2
 				industrial_capacity_factory = -0.15
 				stability_factor = -0.1
 			}
@@ -111,7 +112,7 @@ ideas = {
 
 		# 起义后的混乱
 		TEG_qi_yi_hou_de_hun_luan_idea = {
-			picture = unknown
+			picture = chi_war_of_resistance3
 			modifier = {
 				political_power_factor = -1.0
 				stability_factor = -0.1
@@ -183,7 +184,7 @@ ideas = {
 
 		# 共和国国防部
 		TEG_gong_he_guo_guo_fang_bu_idea = {
-	    	picture = unknown
+	    	picture = YUG_federal_defense_council
 			modifier = {
 				max_planning = 0.15
 				planning_speed = 0.15
@@ -192,7 +193,7 @@ ideas = {
 
 		# 共和国国防部
 		TEG_gong_he_guo_guo_fang_bu_a_idea = {
-	    	picture = unknown
+	    	picture = YUG_federal_defense_council
 			modifier = {
 				max_planning = 0.15
 				planning_speed = 0.15
@@ -206,33 +207,33 @@ ideas = {
 
 		# 先进训练方法
 		TEG_xian_jin_xun_lian_fang_fa_idea = {
-	    	picture = unknown
+	    	picture = generic_war_preparation
 			modifier = {
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				breakthrough_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
 			}
 	    }
 
 		# 先进训练方法
 		TEG_xian_jin_xun_lian_fang_fa_a_idea = {
-	    	picture = unknown
+	    	picture = generic_war_preparation
 			modifier = {
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				breakthrough_factor = 0.1
-				terrain_penalty_reduction = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
+				terrain_penalty_reduction = 0.1
 			}
 	    }
 
 		# 先进训练方法
 		TEG_xian_jin_xun_lian_fang_fa_b_idea = {
-	    	picture = unknown
+	    	picture = generic_war_preparation
 			modifier = {
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				breakthrough_factor = 0.1
-				terrain_penalty_reduction = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
+				terrain_penalty_reduction = 0.1
 				army_speed_factor = 0.1
 				army_attack_speed_factor = 0.1
 			}
@@ -240,15 +241,15 @@ ideas = {
 
 		# 先进训练方法
 		TEG_xian_jin_xun_lian_fang_fa_c_idea = {
-	    	picture = unknown
+	    	picture = generic_war_preparation
 			modifier = {
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				breakthrough_factor = 0.1
-				terrain_penalty_reduction = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.05
+				terrain_penalty_reduction = 0.1
 				army_speed_factor = 0.1
 				army_attack_speed_factor = 0.1
-				no_supply_grace = 120
+				no_supply_grace = 72
 				supply_consumption_factor = -0.1
 				supply_node_range = 0.1
 			}
@@ -256,7 +257,7 @@ ideas = {
 
 		# 广泛军事训练
 		TEG_guang_fan_jun_shi_xun_lian_idea = {
-	    	picture = unknown
+	    	picture = generic_manpower_bonus
 			modifier = {
 				training_time_army_factor = -0.1
 			}
@@ -264,7 +265,7 @@ ideas = {
 
 		# 广泛动员
 		TEG_guang_fan_dong_yuan_idea = {
-	    	picture = unknown
+	    	picture = generic_reserve_divisions
 			modifier = {
 				training_time_army_factor = -0.1
 				conscription = 0.05
@@ -273,7 +274,7 @@ ideas = {
 
 		# 军备研究所
 		TEG_jun_bei_yan_jiu_suo_idea = {
-	    	picture = unknown
+	    	picture = generic_research_bonus
 			research_bonus = {
 				military = 0.05
 			}
@@ -281,7 +282,7 @@ ideas = {
 
 		# 军备研究所
 		TEG_jun_bei_yan_jiu_suo_a_idea = {
-	    	picture = unknown
+	    	picture = generic_research_bonus
 			research_bonus = {
 				military = 0.05
 			}
@@ -296,7 +297,7 @@ ideas = {
 
 		# 军备研究所
 		TEG_jun_bei_yan_jiu_suo_b_idea = {
-	    	picture = unknown
+	    	picture = generic_research_bonus
 			research_bonus = {
 				military = 0.05
 			}
@@ -316,7 +317,7 @@ ideas = {
 
 		# 军备研究所
 		TEG_jun_bei_yan_jiu_suo_c_idea = {
-	    	picture = unknown
+	    	picture = generic_research_bonus
 			research_bonus = {
 				military = 0.05
 			}
@@ -348,7 +349,7 @@ ideas = {
 
 		# 共和国空军
 		TEG_gong_he_guo_kong_jun_idea = {
-	    	picture = unknown
+	    	picture = generic_air_bonus
 			modifier = {
 				air_accidents_factor = -0.05
 				air_mission_xp_gain_factor = 0.1
@@ -357,7 +358,7 @@ ideas = {
 
 		# 共和国空军
 		TEG_gong_he_guo_kong_jun_a_idea = {
-	    	picture = unknown
+	    	picture = generic_air_bonus
 			modifier = {
 				air_accidents_factor = -0.1
 				air_mission_xp_gain_factor = 0.1
@@ -371,7 +372,7 @@ ideas = {
 
 		# 共和国空军
 		TEG_gong_he_guo_kong_jun_b_idea = {
-	    	picture = unknown
+	    	picture = generic_air_bonus
 			modifier = {
 				air_accidents_factor = -0.1
 				air_mission_xp_gain_factor = 0.15
@@ -407,7 +408,7 @@ ideas = {
 
 		# 共和国铁路局
 		TEG_gong_he_guo_tie_lu_ju_idea = {
-	    	picture = unknown
+	    	picture = generic_build_infrastructure
 			modifier = {
 				production_speed_rail_way_factor = 0.2
 			}
@@ -415,7 +416,7 @@ ideas = {
 
 		# 妖怪山资源勘探
 		TEG_yao_guai_shan_zi_yuan_kan_tan_idea = {
-	    	picture = unknown
+	    	picture = ast_all_in
 			modifier = {
 				local_resources_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.2
@@ -432,7 +433,7 @@ ideas = {
 
 		# 工业建设规划
 		TEG_gong_ye_jian_she_gui_hua_idea = {
-	    	picture = unknown
+	    	picture = man_five_year_plan_industry
 			modifier = {
 				production_speed_buildings_factor = 0.05
 			}
@@ -440,7 +441,7 @@ ideas = {
 
 		# 工业建设规划
 		TEG_gong_ye_jian_she_gui_hua_a_idea = {
-	    	picture = unknown
+	    	picture = man_five_year_plan_industry
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.2
@@ -469,7 +470,7 @@ ideas = {
 
 		# 与河童的科技交流
 		TEG_yu_he_tong_de_ke_ji_jiao_liu_idea = {
-			picture = unknown
+			picture = jap_supremacy_of_technology
 			research_bonus = {
 				heavy = 0.05
 				industrys = 0.05
