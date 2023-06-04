@@ -2,4 +2,8 @@
  ###Medal Names
  order_of_republic:0 "天狗共和勋章"
  hero_of_the_republic:0 "共和国英雄"
+
+ bronze_medal_of_gensokyo:0 "幻想乡铜质奖章"
+ silver_medal_of_gensokyo:0 "幻想乡银质奖章"
+ gold_medal_of_gensokyo:0 "幻想乡金质奖章"
  

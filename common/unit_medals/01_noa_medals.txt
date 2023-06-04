@@ -53,4 +53,45 @@ unit_medals = {
 			add_divisional_commander_xp = 100
 		}
 	}
+
+	### generic
+	bronze_medal_of_gensokyo = {
+		available = { should_have_special_medals = no }
+		frame = 1
+		icon = "GFX_medal_icon_generic"
+		cost = @cost
+		unit_modifiers = {
+			army_org_factor = 0.05
+			army_morale_factor = 0.05
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+
+	silver_medal_of_gensokyo = {
+		available = { should_have_special_medals = no }
+		frame = 2
+		icon = "GFX_medal_icon_generic"
+		cost = @cost
+		unit_modifiers = {
+			army_defence_factor = 0.075
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+
+	gold_medal_of_gensokyo = {
+		available = { should_have_special_medals = no }
+		frame = 3
+		icon = "GFX_medal_icon_generic"
+		cost = @cost
+		unit_modifiers = {
+			supply_consumption_factor = -0.125
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
 }
