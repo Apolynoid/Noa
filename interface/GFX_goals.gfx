@@ -53,6 +53,21 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_balanced_construction"
+		texturefile = "gfx/interface/goals/focus_generic_balanced_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_civilian_construction"
+		texturefile = "gfx/interface/goals/focus_generic_civilian_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_military_construction"
+		texturefile = "gfx/interface/goals/focus_generic_military_construction.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_recover_from_ruins"
 		texturefile = "gfx/interface/goals/focus_generic_recover_from_ruins.dds"			
 	}
@@ -75,6 +90,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_army_dicipline"
 		texturefile = "gfx/interface/goals/focus_army_dicipline.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_volunteer_army"
+		texturefile = "gfx/interface/goals/focus_generic_volunteer_army.png"			
 	}
 
 	SpriteType = {
@@ -113,8 +133,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_dust_settled"
-		texturefile = "gfx/interface/goals/focus_generic_dust_settled.png"			
+		name = "GFX_focus_peace"
+		texturefile = "gfx/interface/goals/focus_generic_peace.png"			
 	}
 
 	SpriteType = {
@@ -217,7 +237,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.png"			
 	}
 
+	SpriteType = {
+		name = "GFX_focus_befriend_NTR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_NTR.png"			
+	}
+
 	#### TEG Shameimaru Aya 天狗共和国
+
+	SpriteType = {
+		name = "TEG_focus_fate_of_tenmaku_leaders"
+		texturefile = "gfx/interface/goals/focus_TEG_fate_of_tenmaku_leaders.png"			
+	}
 
 	SpriteType = {
 		name = "TEG_focus_president_aya"
@@ -235,8 +265,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "TEG_focus_arsenal_of_democracy"
+		texturefile = "gfx/interface/goals/focus_TEG_arsenal_of_democracy.png"			
+	}
+
+	SpriteType = {
 		name = "TEG_focus_defend_the_republic"
 		texturefile = "gfx/interface/goals/focus_TEG_defend_the_republic.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_spread_democracy"
+		texturefile = "gfx/interface/goals/focus_TEG_spread_democracy.png"			
 	}
 
 	#### HKR Hakurei Reimu 博丽神社
@@ -261,13 +301,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "MRS_focus_archmage_narumi"
-	texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
+		name = "MRS_focus_archmage_narumi"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
 	}
 
 	SpriteType = {
-	name = "MRS_focus_alice_plan"
-	texturefile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
+		name = "MRS_focus_dawn_of_magical_forest"
+		texturefile = "gfx/interface/goals/focus_MRS_dawn_of_magical_forest.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_alice_plan"
+		texturefile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
 	}
 
 	SpriteType = {

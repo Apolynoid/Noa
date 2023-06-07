@@ -72,7 +72,7 @@ ideas = {
 
 		# 天狗志愿军
 		TEG_tian_gou_zhi_yuan_jun_idea = {
-			picture = unknown
+			picture = generic_volunteer_army
 			modifier = {
 				send_volunteer_divisions_required = -0.5
 				send_volunteers_tension = -1.0
@@ -95,7 +95,7 @@ ideas = {
 
 		# 民主兵工厂
 		TEG_min_zhu_bing_gong_chang_idea = {
-			picture = unknown
+			picture = TEG_arsenal_of_democracy
 			modifier = {
 				industrial_capacity_factory = 0.05
 				lend_lease_tension = -1.0
@@ -124,7 +124,7 @@ ideas = {
 
 		# 保卫共和国
 		TEG_bao_wei_gong_he_guo_idea = {
-			picture = unknown
+			picture = TEG_defend_the_republic
 			modifier = {
 				drift_defence_factor = 0.3
 				supply_combat_penalties_on_core_factor = -0.2
@@ -135,7 +135,7 @@ ideas = {
 
 		# 民主同盟
 		TEG_min_zhu_tong_meng_idea = {
-			picture = unknown
+			picture = TEG_democracy_alliance
 			modifier = {
 				political_power_factor = 0.05
 				stability_factor = 0.05

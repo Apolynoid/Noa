@@ -10,3 +10,11 @@ mrs、ali、nrm全国家精神图标完成
 平衡性调整
 2022/11/06  v0.0.1
 魔法森林6条线初步完成
+
+NoA制作成员：
+设计：Apolynoid，aaa
+程序：Apolynoid，aaa
+
+致谢：
+美术：绝山南犬
+测试：旗子人，冰雪幻影，StarbowBreak，Epsilon，279，奥野田美宵

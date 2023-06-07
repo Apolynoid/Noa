@@ -1,0 +1,7 @@
+spriteTypes = {
+	# TEG
+	spriteType = {
+		name = "GFX_TEG_country_event_200"
+		texturefile = "gfx/event_pictures/teg/teg_200.jpg"
+	}
+}

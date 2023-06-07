@@ -31,6 +31,12 @@ on_actions = {
 						original_tag = TEG
 					}
 				}
+				TEG = {
+					country_event = {
+						id = teg.200
+						days = 7
+					}
+				}
 				every_country = {
 					limit = {
 						has_war_with = TEG

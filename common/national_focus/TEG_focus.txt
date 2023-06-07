@@ -137,7 +137,7 @@
   # 天魔即天狗
   focus = {
     id = TEG_tian_mo_ji_tian_gou
-    icon = unknown
+    icon = GFX_goal_generic_improve_relations
     cost = 7
     x = 0
     y = 1
@@ -161,7 +161,7 @@
   # 天魔领袖的命运
   focus = {
     id = TEG_tian_mo_ling_xiu_de_ming_yun
-    icon = unknown
+    icon = TEG_focus_fate_of_tenmaku_leaders
     cost = 3
     x = 0
     y = 3
@@ -260,7 +260,7 @@
   # 倾向军事工业
   focus = {
     id = TEG_qing_xiang_jun_shi_gong_ye
-    icon = unknown
+    icon = GFX_focus_military_construction
     cost = 12
     x = -1
     y = 1
@@ -329,7 +329,7 @@
   # 天狗志愿军
   focus = {
     id = TEG_tian_gou_zhi_yuan_jun
-    icon = unknown
+    icon = GFX_focus_volunteer_army
     cost = 7
     x = 0
     y = 1
@@ -684,7 +684,7 @@
   # 均衡工业发展
   focus = {
     id = TEG_jun_heng_gong_ye_fa_zhan
-    icon = unknown
+    icon = GFX_focus_balanced_construction
     cost = 12
     x = 1
     y = 1
@@ -745,7 +745,7 @@
   # 民主兵工厂
   focus = {
     id = TEG_min_zhu_bing_gong_chang
-    icon = unknown
+    icon = TEG_focus_arsenal_of_democracy
     cost = 7
     x = 0
     y = 1
@@ -806,7 +806,7 @@
   # 传播民主
   focus = {
     id = TEG_chuan_bo_min_zhu
-    icon = GFX_goal_support_democracy
+    icon = TEG_focus_spread_democracy
     cost = 3
     x = -3
     y = 1
@@ -962,7 +962,7 @@
   # 应对威胁
   focus = {
     id = TEG_ying_dui_wei_xie
-    icon = unknown
+    icon = GFX_focus_enemy_in_all_directions
     cost = 7
     x = 3
     y = 1
@@ -1182,7 +1182,7 @@
   # 先进训练方法
   focus = {
     id = TEG_xian_jin_xun_lian_fang_fa
-    icon = unknown
+    icon = GFX_goal_generic_small_arms
     cost = 7
     x = -6
     y = 1
@@ -1358,7 +1358,7 @@
   # 公民军事训练
   focus = {
     id = TEG_gong_min_jun_shi_xun_lian
-    icon = unknown
+    icon = GFX_focus_generic_manpower
     cost = 7
     x = 0
     y = 1
@@ -1408,7 +1408,7 @@
   # 设立军备研究所
   focus = {
     id = TEG_she_li_jun_bei_yan_jiu_suo
-    icon = unknown
+    icon = GFX_focus_science_institute
     cost = 7
     x = 2
     y = 1
@@ -1525,7 +1525,7 @@
   # 共和国空军
   focus = {
     id = TEG_gong_he_guo_kong_jun
-    icon = unknown
+    icon = GFX_goal_generic_air_fighter
     cost = 3
     x = 6
     y = 1
@@ -2147,7 +2147,7 @@
   # 与河童合作
   focus = {
     id = TEG_yu_he_tong_he_zuo
-    icon = unknown
+    icon = GFX_focus_befriend_NTR
     cost = 3
     x = 6
     y = 1

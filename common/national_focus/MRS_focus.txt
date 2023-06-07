@@ -754,7 +754,7 @@ focus_tree = {
   # 尘埃落定
   focus = {
     id = MRS_chen_ai_luo_ding
-    icon = GFX_focus_dust_settled
+    icon = GFX_focus_peace
     cost = 7
     x = 0
     y = 7
@@ -1706,7 +1706,7 @@ focus_tree = {
   # 魔法之森的黎明
   focus = {
     id = MRS_mo_fa_zhi_sen_de_li_ming
-    icon = unknown
+    icon = MRS_focus_dawn_of_magical_forest
     cost = 7
     x = 0
     y = 4
