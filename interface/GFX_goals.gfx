@@ -138,8 +138,28 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_status_quo"
+		texturefile = "gfx/interface/goals/focus_generic_status_quo.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_domestic_affairs"
 		texturefile = "gfx/interface/goals/focus_generic_domestic_affairs.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_total_collectivization"
+		texturefile = "gfx/interface/goals/focus_generic_total_collectivization.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_isolationism"
+		texturefile = "gfx/interface/goals/focus_generic_isolationism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_rose_and_dove"
+		texturefile = "gfx/interface/goals/focus_generic_rose_and_dove.png"			
 	}
 
 	SpriteType = {
@@ -150,6 +170,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_election"
 		texturefile = "gfx/interface/goals/focus_generic_election.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_protest"
+		texturefile = "gfx/interface/goals/focus_generic_protest.png"			
 	}
 
 	SpriteType = {
@@ -296,13 +321,23 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-	name = "MRS_focus_archmage_marisa"
-	texturefile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
+		name = "MRS_focus_archmage_marisa"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_stabilize_the_course"
+		texturefile = "gfx/interface/goals/focus_MRS_stabilize_the_course.png"			
 	}
 
 	SpriteType = {
 		name = "MRS_focus_archmage_narumi"
 		texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_rebuild_national_identity"
+		texturefile = "gfx/interface/goals/focus_MRS_rebuild_national_identity.png"			
 	}
 
 	SpriteType = {

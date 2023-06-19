@@ -76,7 +76,7 @@ focus_tree = {
   # 支持弱者斗争
   focus = {
     id = MRS_zhi_chi_ruo_zhe_dou_zheng
-    icon = unknown
+    icon = GFX_focus_protest
     cost = 7
     x = 0
     y = 1
@@ -97,10 +97,10 @@ focus_tree = {
     }
   }
 
-  # 魔法使弱者论
+  # 基本权利保障
   focus = {
-    id = MRS_mo_fa_shi_ruo_zhe_lun
-    icon = unknown
+    id = MRS_ji_ben_quan_li_bao_zhang
+    icon = GFX_focus_spr_masters_of_our_own_fate
     cost = 7
     x = 0
     y = 1
@@ -129,7 +129,7 @@ focus_tree = {
     x = 0
     y = 1
 
-    relative_position_id = MRS_mo_fa_shi_ruo_zhe_lun
+    relative_position_id = MRS_ji_ben_quan_li_bao_zhang
 
     available = {
       has_war = no
@@ -150,7 +150,7 @@ focus_tree = {
     }
 
     prerequisite = {
-      focus = MRS_mo_fa_shi_ruo_zhe_lun
+      focus = MRS_ji_ben_quan_li_bao_zhang
     }
 
     completion_reward = {
@@ -283,7 +283,7 @@ focus_tree = {
   # 稳定航向
   focus = {
     id = MRS_wen_ding_hang_xiang
-    icon = unknown
+    icon = MRS_focus_stabilize_the_course
     cost = 7
     x = 0
     y = 1
@@ -462,7 +462,7 @@ focus_tree = {
   # 维持现状
   focus = {
     id = MRS_wei_chi_xian_zhuang
-    icon = unknown
+    icon = GFX_focus_status_quo
     cost = 7
     x = 0
     y = 1
@@ -845,7 +845,7 @@ focus_tree = {
   # 重塑集体认同
   focus = {
     id = MRS_chong_su_ji_ti_ren_tong
-    icon = unknown
+    icon = MRS_focus_rebuild_national_identity
     cost = 7
     x = 1
     y = 1
@@ -1085,7 +1085,7 @@ focus_tree = {
   # 全面合作化
   focus = {
     id = MRS_quan_mian_he_zuo_hua
-    icon = unknown
+    icon = GFX_focus_total_collectivization
     cost = 7
     x = -4
     y = 1
@@ -1290,7 +1290,7 @@ focus_tree = {
   # 魔法使孤立主义
   focus = {
     id = MRS_mo_fa_shi_gu_li_zhu_yi
-    icon = unknown
+    icon = GFX_focus_isolationism
     cost = 7
     x = 0
     y = 1
@@ -1521,7 +1521,7 @@ focus_tree = {
   # 玫瑰与和平鸽
   focus = {
     id = MRS_mei_gui_yu_he_ping_ge
-    icon = unknown
+    icon = GFX_focus_rose_and_dove
     cost = 7
     x = 4
     y = 1
