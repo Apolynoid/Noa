@@ -218,6 +218,9 @@ MSD_jingjichongjian_category = {
 				}
 			}
         }
+	ai_will_do = {
+		factor = 100
+	}
 	}
 ##############################################
 	MSD_junduicanyujianshe_decision{
@@ -245,7 +248,10 @@ MSD_jingjichongjian_category = {
 				idea=MSD_jiaji_idea
 			}
 	}
-}
+	ai_will_do = {
+		factor = 100
+	}
+	}
 ###############################################
 MSD_chongzhenggongyeshengchan_decision{
 		allowed ={
@@ -272,6 +278,9 @@ MSD_chongzhenggongyeshengchan_decision{
 				idea=MSD_jiansheyequezhisheng_idea
 			}
 	}
+	ai_will_do = {
+		factor = 100
+	}
 }
 ###############################################
 MSD_youxianbaozhangshenghuo_decision{
@@ -292,6 +301,9 @@ MSD_youxianbaozhangshenghuo_decision{
 			add_stability=0.2
 		}
 }
+	ai_will_do = {
+			factor = 100
+		}
 }
 ##################################################
 MSD_xiayijieduan1_decision{
@@ -310,6 +322,9 @@ MSD_xiayijieduan1_decision{
 	remove_effect = {
 		remove_ideas = MSD_zaogaodejingji_idea_1
 		add_ideas = MSD_zaogaodejingji_idea_2
+	}
+	ai_will_do = {
+		factor = 100
 	}
 }
 #################################################
@@ -330,6 +345,9 @@ MSD_xiayijieduan2_decision{
 		remove_ideas = MSD_zaogaodejingji_idea_2
 		add_ideas = MSD_zaogaodejingji_idea_3
 		country_event = msd.7
+	}
+	ai_will_do = {
+		factor = 100
 	}
 }
 #################################################
@@ -356,7 +374,10 @@ MSD_xiayijieduan3_decision{
 				days=20
 			}
 		}
-}
+	}
+	ai_will_do = {
+			factor = 100
+		}
 }
 }
 ##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
