@@ -127,6 +127,7 @@
     add_ideas = {
         MSD_bian_jing_dong_dang_idea
         MSD_shan_hou_idea
+        hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
     }
     
     set_politics = {

@@ -1,0 +1,95 @@
+ideas = {
+	country = {
+    # 妖怪的影响
+    hum_yao_guai_de_ying_xiang_idea = {
+      picture = unknown
+      modifier = {
+        production_speed_arms_factory_factor = -0.4
+				industrial_capacity_factory = -0.1
+				research_speed_factor = -0.5			
+				political_power_gain = -0.2
+				global_building_slots_factor = -0.1
+				justify_war_goal_time = 2
+				enemy_justify_war_goal_time = 1
+        consumer_goods_factor = 0.05
+      }
+    }
+
+    # 复权战争的阴影
+    hum_fu_quan_zhan_zheng_de_yin_ying_idea = {
+      picture = ENG_the_war_to_end_all_wars
+      modifier = {
+        conscription_factor = -0.4
+				war_support_factor = -0.3
+				ai_focus_defense_factor = 0.5
+				ai_get_ally_desire_factor = -200
+      }
+    }
+
+    # 九十九工业的“保护”
+    hum_TKM_de_bao_hu_idea = {
+      picture = HUM_protection_of_TKM
+      targeted_modifier = { 
+				tag = TKM
+				cic_to_target_factor = 0.10				
+			}
+
+			modifier = {
+			  political_power_factor = -0.15
+				generate_wargoal_tension = 0.25
+        justify_war_goal_time = 0.25
+				enemy_justify_war_goal_time = 0.5
+        consumer_goods_factor = 0.05
+			}
+
+			rule = {
+				can_join_factions = no
+			}
+    }
+
+    # 财阀
+    hum_cai_fa_idea = {
+      picture = unknown
+      modifier = {
+        political_power_gain = -0.2
+        global_building_slots_factor = -0.2
+        industrial_capacity_factory = -0.05
+        production_speed_buildings_factor = -0.2
+        consumer_goods_factor = 0.05
+      } 
+    }
+
+    # 人类惩罚战争的胜利者
+    hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea = {
+      picture = generic_victors_of_ww1
+      cancel = {
+        is_subject = yes
+      }
+      modifier = {
+        stability_factor = 0.1
+      }
+    }
+
+    # 支付战争赔款
+    hum_zhi_fu_zhan_zheng_pei_kuan_idea = {
+      picture = ETH_customs_barrier_ITA
+      modifier = {
+        consumer_goods_factor = 0.12
+      }
+    }
+
+    # 政治线
+    # 孤立
+    # 妖怪影响减弱
+    hum_yao_guai_ying_xiang_jian_ruo_idea = {
+      picture = unknown
+      modifier = {
+        production_speed_arms_factory_factor = -0.3
+				research_speed_factor = -0.2			
+				political_power_gain = -0.1
+				justify_war_goal_time = 0.5
+        consumer_goods_factor = 0.02
+      }
+    }
+	}
+}

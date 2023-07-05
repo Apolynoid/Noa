@@ -1,0 +1,115 @@
+﻿l_english:
+HUM_DAWN_DESC:0 "编写中"
+
+# 国家名
+
+# 政治线 political
+# 孤立线
+HUM_cheng_ren_shi_bai:0 "承认失败"
+HUM_cheng_ren_shi_bai_desc:0 ""
+HUM_chang_shi_bai_tuo_yao_guai_ying_xiang:0 "尝试摆脱妖怪影响"
+HUM_chang_shi_bai_tuo_yao_guai_ying_xiang_desc:0 ""
+HUM_li_yong_yao_guai_jian_de_mao_dun:0 "利用妖怪间的矛盾"
+HUM_li_yong_yao_guai_jian_de_mao_dun_desc:0 ""
+HUM_qiang_hua_zheng_fu_ying_xiang_li:0 "强化政府影响力"
+HUM_qiang_hua_zheng_fu_ying_xiang_li_desc:0 ""
+HUM_wai_jiao_xie_ding:0 "外交协定"
+HUM_wai_jiao_xie_ding_desc:0 ""
+HUM_chu_bu_bai_tuo_yao_guai_ying_xiang:0 "初步摆脱妖怪影响"
+HUM_chu_bu_bai_tuo_yao_guai_ying_xiang_desc:0 ""
+HUM_xiu_ding_yu_TKM_de_xie_ding:0 "修订与[TKM.GetName]的协定"
+HUM_xiu_ding_yu_TKM_de_xie_ding_desc:0 ""
+HUM_chu_bu_zhi_jie_cai_fa:0 "初步肢解财阀"
+HUM_chu_bu_zhi_jie_cai_fa_desc:0 ""
+HUM_ren_li_zai_ci_zi_you:0 "人里再次自由"
+HUM_ren_li_zai_ci_zi_you_desc:0 ""
+HUM_bao_hu_jie_shu:0 "“保护”结束"
+HUM_bao_hu_jie_shu_desc:0 ""
+HUM_che_di_chai_fen_cai_fa:0 "彻底拆分财阀"
+HUM_che_di_chai_fen_cai_fa_desc:0 ""
+HUM_ren_lei_zi_you_shi:0 "人类自由市"
+HUM_ren_lei_zi_you_shi_desc:0 ""
+HUM_ren_li_fang_yu_ji_hua:0 "人里防御计划"
+HUM_ren_li_fang_yu_ji_hua_desc:0 ""
+HUM_xiu_jian_fang_yu_gong_shi:0 "修建防御工事"
+HUM_xiu_jian_fang_yu_gong_shi_desc:0 ""
+HUM_zhan_zheng_tie_lu_wang:0 "战争铁路网"
+HUM_zhan_zheng_tie_lu_wang_desc:0 ""
+HUM_di_fang_bu_ji_ce_lue:0 "地方补给策略"
+HUM_di_fang_bu_ji_ce_lue_desc:0 ""
+HUM_ren_li_jing_wei_dui:0 "人里警卫队"
+HUM_ren_li_jing_wei_dui_desc:0 ""
+HUM_zhu_zhong_fang_shou:0 "注重防守"
+HUM_zhu_zhong_fang_shou_desc:0 ""
+HUM_gai_liang_xun_lian_ti_xi:0 "改良训练体系"
+HUM_gai_liang_xun_lian_ti_xi_desc:0 ""
+HUM_kuo_da_zheng_bing_gui_mo:0 "扩大征兵规模"
+HUM_kuo_da_zheng_bing_gui_mo_desc:0 ""
+HUM_gong_ye_chong_zheng:0 "工业重整"
+HUM_gong_ye_chong_zheng_desc:0 ""
+HUM_chong_jian_zhan_zheng_gong_ye:0 "重建战争工业"
+HUM_chong_jian_zhan_zheng_gong_ye_desc:0 ""
+HUM_zhan_zheng_jing_ji_dong_yuan:0 "战争经济动员"
+HUM_zhan_zheng_jing_ji_dong_yuan_desc:0 ""
+# 激进线
+HUM_chong_ran_fu_quan_zhi_huo:0 "重燃复权之火"
+HUM_chong_ran_fu_quan_zhi_huo_desc:0 ""
+# 新规线
+HUM_xuan_yang_fu_chou_zhu_yi:0 "宣扬复仇主义"
+HUM_xuan_yang_fu_chou_zhu_yi_desc:0 ""
+# 工业线 industrial
+HUM_zhan_hou_chong_jian:0 "战后重建"
+HUM_zhan_hou_chong_jian_desc:0 ""
+HUM_jian_zao_ji_shu_ge_xin:0 "建造技术革新"
+HUM_jian_zao_ji_shu_ge_xin_desc:0 ""
+HUM_ben_di_zi_yuan_kan_tan:0 "本地资源勘探"
+HUM_ben_di_zi_yuan_kan_tan_desc:0 ""
+HUM_ren_li_dao_lu_wang:0 "人里道路网"
+HUM_ren_li_dao_lu_wang_desc:0 ""
+HUM_ren_li_jian_she_ji_hua:0 "人里建设计划"
+HUM_ren_li_jian_she_ji_hua_desc:0 ""
+HUM_ju_jiao_min_yong_sheng_chan:0 "聚焦民用生产"
+HUM_ju_jiao_min_yong_sheng_chan_desc:0 ""
+HUM_min_yong_gong_chang_jian_she:0 "民用工厂建设"
+HUM_min_yong_gong_chang_jian_she_desc:0 ""
+HUM_min_yong_tou_zi_ji_hua:0 "民用投资计划"
+HUM_min_yong_tou_zi_ji_hua_desc:0 ""
+HUM_ju_jiao_jun_yong_sheng_chan:0 "聚焦军用生产"
+HUM_ju_jiao_jun_yong_sheng_chan_desc:0 ""
+HUM_jun_yong_gong_chang_jian_she:0 "军用工厂建设"
+HUM_jun_yong_gong_chang_jian_she_desc:0 ""
+HUM_wu_qi_sheng_chan_ji_hua:0 "武器生产计划"
+HUM_wu_qi_sheng_chan_ji_hua_desc:0 ""
+HUM_zheng_he_di_qu_sheng_chan:0 "整合地区生产"
+HUM_zheng_he_di_qu_sheng_chan_desc:0 ""
+HUM_tui_guang_si_zi_wu_jiao_yu:0 "推广寺子屋教育"
+HUM_tui_guang_si_zi_wu_jiao_yu_desc:0 ""
+HUM_ji_chu_ke_xue_yan_jiu:0 "基础科学研究"
+HUM_ji_chu_ke_xue_yan_jiu_desc:0 ""
+HUM_wu_qi_yan_jiu:0 "武器研究"
+HUM_wu_qi_yan_jiu_desc:0 ""
+
+#idea
+hum_yao_guai_de_ying_xiang_idea:0 "妖怪的影响"
+hum_fu_quan_zhan_zheng_de_yin_ying_idea:0 "复权战争的阴影"
+hum_TKM_de_bao_hu_idea:0 "九十九工业的“保护”"
+hum_cai_fa_idea:0 "财阀"
+hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea:0 "人类惩罚战争的胜利者"
+hum_zhi_fu_zhan_zheng_pei_kuan_idea:0 "支付战争赔款"
+# 政治线
+# 孤立
+hum_yao_guai_ying_xiang_jian_ruo_idea:0 "妖怪影响减弱"
+
+#op
+
+
+#tt
+
+
+ #decision
+
+
+# flag
+
+
+ #other

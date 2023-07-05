@@ -1,0 +1,15 @@
+﻿l_english:
+Generic_ying_xiang_HUM:0 "影响[HUM.GetName]"
+Generic_ying_xiang_HUM_desc:0 "由于[HUM.GetName]在上一次战争中的失败，人类被迫接受妖怪的影响，战胜方随即开始争夺在[HUM.GetName]的影响力。对[HUM.GetName]的§Y影响力§!可以为国家带来可观的效益。然而，每个月能够对[HUM.GetName]施加的影响是有限的，而[HUM.GetName]也会逐渐尝试减弱妖怪的影响。因此每个月所能获取的§Y影响力§!将会逐渐减少。可以通过消耗一定的资源争夺§Y影响力§!，然而，如果竞争过于激烈，也许[HUM.GetName]会从中得利，进而加快脱离影响的步伐。\n\n§Y影响保留值§!代表[HUM.GetName]摆脱妖怪影响的进程，这个值越高，说明[HUM.GetName]离完全脱离妖怪影响越近。§Y影响保留值§!超过75时，[HUM.GetName]会彻底摆脱妖怪影响。同时，§Y影响保留值§!越高，其他国家能够获取的§Y影响力§!总和就会越低。\n\n当前[HUM.GetName]的§Y影响保留值§!为：[?HUM.reserveInfluence]\n\n上一轮中各国所获取的§Y影响力§!为：\n[SCA.GetFlag][SCA.GetName]：[?SCA.lastHumanInfluence]\n[SEJ.GetFlag][SEJ.GetName]：[?SEJ.lastHumanInfluence]\n[NMS.GetFlag][NMS.GetName]：[?NMS.lastHumanInfluence]\n[TKM.GetFlag][TKM.GetName]：[?TKM.lastHumanInfluence]\n[MAM.GetFlag][MAM.GetName]：[?MAM.lastHumanInfluence]\n[MSD.GetFlag][MSD.GetName]：[?MSD.lastHumanInfluence]\n[KAG.GetFlag][KAG.GetName]：[?KAG.lastHumanInfluence]\n[HUM.GetFlag][HUM.GetName]：[?HUM.lastHumanInfluence]\n\n我国总的§Y影响力§!为：£human_influence_texticon  [?totalHumanInfluence]"
+Generic_yao_qiu_zhan_zheng_pei_chang:0 "要求战争赔偿"
+Generic_ying_yong_ke_xue_jiao_liu:0 "应用科学交流"
+Generic_ji_chu_ke_xue_jiao_liu:0 "基础科学交流"
+Generic_jun_shi_ji_shu_jiao_liu:0 "军事技术交流"
+Generic_ren_lei_ying_xiang_li_zheng_duo:0 "人类影响力争夺"
+
+Generic_10_human_influence:0 "£human_influence_texticon  §Y10§!"
+Generic_10_human_influence_blocked:0 "£human_influence_texticon  §R10§!"
+Generic_10_human_influence_tooltip:0 "需要£human_influence_texticon  §Y10§!来执行决议"
+Generic_20_human_influence:0 "£human_influence_texticon  §Y20§!"
+Generic_20_human_influence_blocked:0 "£human_influence_texticon  §R20§!"
+Generic_20_human_influence_tooltip:0 "需要£human_influence_texticon  §Y20§!来执行决议"

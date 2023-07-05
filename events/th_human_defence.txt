@@ -1,0 +1,287 @@
+﻿add_namespace = hud
+
+country_event = { #保护人类
+	id = hud.1
+	title = hud.1.t
+	desc = hud.1.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hud.1.1
+		create_faction = HUM_defence
+		add_to_faction = HUM
+		set_country_flag = HUM_defence
+		ai_chance = {
+			base = 95
+		}
+		hidden_effect = {
+			news_event = { id = hud.2 days = 2}
+		}
+	}
+
+	option = {
+		name = hud.1.2
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+news_event = {  #保护人类新闻
+	id = hud.2
+	title = hud.2.t
+	desc = hud.2.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { 
+		name = hud.2.1
+		trigger = {
+			or = {
+				tag = HUM
+				is_in_faction_with = HUM
+			}
+		}
+	}
+
+	option = { 
+		name = hud.2.2
+		trigger = {
+			not = {
+				tag = HUM
+				is_in_faction_with = HUM
+				has_war_with = HUM
+			}
+		}
+	}
+
+	option = { 
+		name = hud.2.3
+		trigger = {
+			has_war_with = HUM
+		}
+	}
+}
+
+country_event = { #保护人类
+	id = hud.3
+	title = hud.3.t
+	desc = hud.3.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		or = {
+			HUM = { is_subject = yes }
+			not = {
+				is_neighbor_of = HUM
+				any_country = {
+					and = {
+						is_subject_of = ROOT
+						is_neighbor_of = HUM
+					}
+				}
+				
+			}
+		}
+		has_global_flag = main_scenario
+		has_guaranteed = HUM
+	}
+
+	option = {
+		name = hud.3.1
+		diplomatic_relation = {
+		    country = HUM
+		    relation = guarantee
+		    active = no
+		}
+	}
+}
+
+country_event = { #一个人类流亡者被消灭
+	id = hud.4
+	title = hud.4.t
+	desc = hud.4.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		tag = HUM
+		has_global_flag = main_scenario
+		not = {
+			has_global_flag = HUV_all_extinct
+		}
+		or = {
+			not = {
+				or = {
+					has_global_flag = HU6_extinct
+					country_exists = HU6
+				}
+			}
+			not = {
+				or = {
+					has_global_flag = HU7_extinct
+					country_exists = HU7
+				}
+			}
+			not = {
+				or = {
+					has_global_flag = HU8_extinct
+					country_exists = HU8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hud.4.1
+		if = {
+			limit = {
+				not = {
+					or = {
+						has_global_flag = HU8_extinct
+						country_exists = HU8
+					}
+				}
+			}
+			set_global_flag = HU8_extinct
+			every_state = {
+				remove_core_of = HU8
+				remove_claim_by = HU8
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					or = {
+						has_global_flag = HU7_extinct
+						country_exists = HU7
+					}
+				}
+			}
+			set_global_flag = HU7_extinct
+			every_state = {
+				remove_core_of = HU7
+				remove_claim_by = HU7
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					or = {
+						has_global_flag = HU6_extinct
+						country_exists = HU6
+					}
+				}
+			}
+			set_global_flag = HU6_extinct
+			every_state = {
+				remove_core_of = HU6
+				remove_claim_by = HU6
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = HU6_extinct
+				has_global_flag = HU7_extinct
+				has_global_flag = HU8_extinct
+			}
+			hidden_effect = {
+				news_event = { id = hud.5 days = 2}
+			}
+		}
+	}
+}
+
+news_event = { #所有人类流亡者被消灭
+	id = hud.5
+	title = hud.5.t
+	desc = hud.5.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = HUV_all_extinct
+		}
+	}
+	option = {
+		name = hud.5.1
+		trigger = {
+			not = { has_idea = Human }
+		}
+	}
+	option = {
+		name = hud.5.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+}
+
+country_event = { #保护人类(阵营结束)
+	id = hud.6
+	title = hud.6.t
+	desc = hud.6.d
+
+	trigger = {
+		has_country_flag = HUM_defence
+		has_global_flag = main_scenario
+		is_in_faction = yes
+		not = {
+			has_war_together_with = HUM
+			has_country_flag = HUM_defence_not_dismantle
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = hud.6.1
+		dismantle_faction = yes
+		every_country = {
+			limit = {
+				has_country_flag = HUM_defence_not_alliance
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = ROOT
+				value = 10000
+			}
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = PREV
+					value = 10000
+				}
+			}
+			clr_country_flag = HUM_defence_not_alliance
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = hud.6.2
+		set_country_flag = HUM_defence_not_dismantle
+		ai_chance = {
+			base = 0
+		}
+	}
+}

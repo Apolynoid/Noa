@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_human_influence_texticon"
+		texturefile = "gfx/texticons/human_influence.png"
+		legacy_lazy_load = no
+	}
+
+}

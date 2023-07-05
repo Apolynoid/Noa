@@ -1,0 +1,192 @@
+﻿add_namespace = huminf
+
+# 支付战争赔款
+country_event = {
+	id = huminf.1
+	title = huminf.1.t
+	desc = huminf.1.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = huminf.1.1
+	}
+}
+
+# 新一轮人类影响力争夺
+country_event = {
+	id = huminf.2
+	title = huminf.2.t
+	desc = huminf.2.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = huminf.2.1
+		hidden_effect = {
+			add_to_array = {
+				array = HUM.level_0_selector
+				value = ROOT.id
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				original_tag = HUM
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = huminf.2.2
+		add_political_power = -10
+		hidden_effect = {
+			add_to_array = {
+				array = HUM.level_1_selector
+				value = ROOT.id
+			}
+			add_to_variable = {
+				HUM.level_1_num = 1
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				original_tag = HUM
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = huminf.2.3
+		add_political_power = -20
+		hidden_effect = {
+			add_to_array = {
+				array = HUM.level_2_selector
+				value = ROOT.id
+			}
+			add_to_variable = {
+				HUM.level_2_num = 1
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				original_tag = HUM
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = huminf.2.4
+		add_political_power = -40
+		hidden_effect = {
+			add_to_array = {
+				array = HUM.level_3_selector
+				value = ROOT.id
+			}
+			add_to_variable = {
+				HUM.level_3_num = 1
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# 人类影响力争夺结果
+country_event = {
+	id = huminf.3
+	title = huminf.3.t
+	desc = huminf.3.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = huminf.3.1
+	}
+}
+
+# 争夺结果trigger
+country_event = {
+	id = huminf.4
+
+	hidden = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		calc_human_influence = yes
+		for_each_scope_loop = {
+			array = HUM.possibleInfluContries
+			if = {
+				limit = {
+					OR = {
+						has_idea = hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+						original_tag = HUM
+					}
+				}
+				country_event = {
+					id = huminf.3
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = HUM.reserveInfluence
+					value = 75
+					compare = greater_than_or_equals
+				}
+			}
+			news_event = huminf.5
+		}
+	}
+}
+
+# 人类彻底摆脱妖怪影响
+news_event = {
+	id = huminf.5
+	title = huminf.5.t
+	desc = huminf.5.d
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = huminf.5.1
+		trigger = {
+			NOT = {
+				original_tag = HUM
+			}
+		}
+	}
+
+	option = {
+		name = huminf.5.2
+		trigger = {
+			original_tag = HUM
+		}
+		if = {
+			limit = {
+				has_idea = hum_yao_guai_de_ying_xiang_idea
+			}
+			remove_ideas = hum_yao_guai_de_ying_xiang_idea
+		}
+		if = {
+			limit = {
+				has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
+			}
+			remove_ideas = hum_yao_guai_ying_xiang_jian_ruo_idea
+		}
+	}
+
+}

@@ -1,0 +1,223 @@
+characters={
+	HUM_keine ={
+		name = HUM_keine
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_keine.dds"
+				small="gfx/leaders/HUM/HUM_keine_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_keine.dds"
+				small="gfx/leaders/HUM/HUM_keine_small.dds"
+			}
+		}
+		field_marshal = {
+            traits = {  th_original_character th_character  war_hero old_guard trait_cautious }
+            attack_skill = 4
+            defense_skill = 8
+            planning_skill = 7
+            logistics_skill = 8
+            skill = 7
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_keine
+			name = HUM_keine
+			cost = 200
+			modifier = {
+				defensive_war_stability_factor = 0.75
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+	}
+	HUM_aky ={
+		name = HUM_aky
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_aky.dds"
+				small="gfx/leaders/HUM/HUM_aky_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_aky.dds"
+				small="gfx/leaders/HUM/HUM_aky_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  war_hero  }
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            skill = 1
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_aky
+			name = HUM_aky
+			cost = 200
+			modifier = {
+				stability_factor = 0.2
+				trade_opinion_factor = 0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+	HUM_ymm ={
+		name = HUM_ymm
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_ymm.dds"
+				small="gfx/leaders/HUM/HUM_ymm_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_ymm.dds"
+				small="gfx/leaders/HUM/HUM_ymm_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_tezhongzhuanjia }
+			skill = 8
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 10
+			logistics_skill = 8
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_ymm
+			name = HUM_ymm
+			cost = 200
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+	}
+	HUM_cyr ={
+		name = HUM_cyr
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_cyr.dds"
+				small="gfx/leaders/HUM/HUM_cyr_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_cyr.dds"
+				small="gfx/leaders/HUM/HUM_cyr_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_huoqiangzhuanjia }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_cyr
+			name = HUM_cyr
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				primary_weapons = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HUM_ask ={
+		name = HUM_ask
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_ask.dds"
+				small="gfx/leaders/HUM/HUM_ask_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_ask.dds"
+				small="gfx/leaders/HUM/HUM_ask_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_yinyangshi }
+			skill = 8
+			attack_skill = 7
+			defense_skill = 7
+			planning_skill = 6
+			logistics_skill = 8
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_ask
+			name = HUM_ask
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				combined = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HUM_rika ={
+		name = HUM_rika
+		portraits={
+			civilian={
+				large="gfx/leaders/HUM/HUM_rika.dds"
+				small="gfx/leaders/HUM/HUM_rika_small.dds"
+			}
+			army = {
+				large="gfx/leaders/HUM/HUM_rika.dds"
+				small="gfx/leaders/HUM/HUM_rika_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_qianxianzhandou th_trait_jijiacaokongzhe career_officer harsh_leader }
+			skill = 7
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 13
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = HUM_rika
+			name = HUM_rika
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				heavy = 0.075
+				shield_weapons = 0.075
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

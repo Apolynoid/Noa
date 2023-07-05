@@ -1,0 +1,206 @@
+clear_before_human_influence_calc = {
+    hidden_effect = {
+        HUM = {
+            clear_array = level_3_selector
+            clear_array = level_2_selector
+            clear_array = level_1_selector
+            clear_array = level_0_selector
+            set_variable = {
+                level_3_num = 0
+            }
+            set_variable = {
+                level_2_num = 0
+            }
+            set_variable = {
+                level_1_num = 0
+            }
+            set_variable = {
+                level_3_value = 0
+            }
+            set_variable = {
+                level_2_value = 0
+            }
+            set_variable = {
+                level_1_value = 0
+            }
+        }
+    }
+}
+
+calc_human_influence = {
+    HUM = {
+        set_variable = {
+            total_influence = 100
+        }
+        subtract_from_variable = {
+            total_influence = reserveInfluence
+        }
+        set_variable = {
+            level_3_reserve = level_3_num
+        }
+        multiply_variable = {
+            level_3_reserve = 3
+        }
+        set_variable = {
+            level_2_reserve = level_2_num
+        }
+        multiply_variable = {
+            level_2_reserve = 2
+        }
+        set_variable = {
+            level_1_reserve = level_1_num
+        }
+        subtract_from_variable = {
+            total_influence = level_3_reserve
+        }
+        subtract_from_variable = {
+            total_influence = level_2_reserve
+        }
+        subtract_from_variable = {
+            total_influence = level_1_reserve
+        }
+
+        set_variable = {
+            level_3_per_country = total_influence
+        }
+        set_variable = {
+            level_2_per_country = total_influence
+        }
+        set_variable = {
+            level_1_per_country = total_influence
+        }
+        multiply_variable = {
+            level_3_per_country = 0.6
+        }
+        multiply_variable = {
+            level_2_per_country = 0.3
+        }
+        multiply_variable = {
+            level_1_per_country = 0.1
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    level_3_num > 0
+                }
+            }
+            divide_variable = {
+                level_3_per_country = level_3_num
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    level_2_num > 0
+                }
+            }
+            divide_variable = {
+                level_2_per_country = level_2_num
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    level_1_num > 0
+                }
+            }
+            divide_variable = {
+                level_1_per_country = level_1_num
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    var = level_2_per_country
+                    value = level_3_per_country
+                    compare = greater_than
+                }
+            }
+            set_variable = {
+                level_2_per_country = level_3_per_country
+            }
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    var = level_1_per_country
+                    value = level_2_per_country
+                    compare = greater_than
+                }
+            }
+            set_variable = {
+                level_1_per_country = level_2_per_country
+            }
+        }
+        # distribution
+        for_each_scope_loop = {
+            array = HUM.level_3_selector
+            set_variable = {
+                lastHumanInfluence = HUM.level_3_per_country
+            }
+            add_to_variable = {
+                lastHumanInfluence = 3
+            }
+            add_to_variable = {
+                totalHumanInfluence = lastHumanInfluence
+            }
+            subtract_from_variable = {
+                HUM.total_influence = HUM.level_3_per_country
+            }
+        }
+        for_each_scope_loop = {
+            array = HUM.level_2_selector
+            set_variable = {
+                lastHumanInfluence = HUM.level_2_per_country
+            }
+            add_to_variable = {
+                lastHumanInfluence = 2
+            }
+            add_to_variable = {
+                totalHumanInfluence = lastHumanInfluence
+            }
+            subtract_from_variable = {
+                HUM.total_influence = HUM.level_2_per_country
+            }
+        }
+        for_each_scope_loop = {
+            array = HUM.level_1_selector
+            set_variable = {
+                lastHumanInfluence = HUM.level_1_per_country
+            }
+            add_to_variable = {
+                lastHumanInfluence = 1
+            }
+            add_to_variable = {
+                totalHumanInfluence = lastHumanInfluence
+            }
+            subtract_from_variable = {
+                HUM.total_influence = HUM.level_1_per_country
+            }
+        }
+        for_each_scope_loop = {
+            array = HUM.level_0_selector
+            set_variable = {
+                lastHumanInfluence = 0
+            }
+        }
+        HUM = {
+            add_to_variable = {
+                lastHumanInfluence = total_influence
+            }
+            add_to_variable = {
+                totalHumanInfluence = total_influence
+            }
+            # reserve
+            set_variable = {
+                add_reverse = lastHumanInfluence
+            }
+            multiply_variable = {
+                add_reverse = reserverRatio
+            }
+            add_to_variable = {
+                reserveInfluence = add_reverse
+            }
+        }
+    }
+}

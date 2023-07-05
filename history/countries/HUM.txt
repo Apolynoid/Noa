@@ -1,0 +1,238 @@
+﻿capital = 246
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        gun3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
+
+        #专用辅助
+        mortar1 = 1
+        
+        wunvzhiyuan149 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145=  1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+        tongxunlilun = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+
+        #种族
+        kongjuyizhiji1 = 1
+            
+    }
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
+
+        #专用辅助
+        mortar1 = 1
+        
+        wunvzhiyuan149 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145=  1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+        tongxunlilun = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+        fangwaijieshengchan145 = 1
+
+        #种族
+        kongjuyizhiji1 = 1
+            
+    }
+    
+}
+143.7.1 = {
+    add_ideas = {
+        Human
+        Town
+        type3_manpowerlv4
+        war_economy
+         
+        hawk1
+        close2
+        forbidden_magic
+        strict_border
+    }
+    if = {
+        limit = {
+            has_start_date < 143.7.2
+        }
+        country_lock_all_division_template = yes
+    }
+    oob = "HUM_143"
+	# set_research_slots = 1
+    
+	set_politics = {
+    	ruling_party = fandong
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        fandong = 70
+        oldorder = 0
+        neworder = 30
+    } 
+
+    set_party_name = { 
+        ideology = fandong
+        long_name = HUM_neworder_party
+        name = HUM_neworder_party
+    }
+}
+
+
+
+
+146.1.1={
+    
+    oob = "HUM_146"
+    # set_research_slots = 6
+    # Starting tech
+    set_party_name = { ideology = neworder long_name = HUM_neworder_main_party name = HUM_neworder_main_party }
+    remove_ideas = {
+        renli144
+    }
+    set_truce = {target = EMB days = 1095}
+    set_truce = {target = WAK days = 1095}
+    set_truce = {target = CHE days = 1095}
+    set_truce = {target = KAG days = 1095}
+    set_truce = {target = TKM days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = SCA days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = RMI days = 1095}
+    set_truce = {target = SEJ days = 1095}
+    set_truce = {target = MSD days = 1095}
+    set_truce = {target = PRI days = 1095}
+    set_truce = {target = SBK days = 1095}
+    set_truce = {target = NIB days = 1095}
+    set_truce = {target = HKM days = 1095}
+    set_truce = {target = KYK days = 1095}
+    set_truce = {target = MAM days = 1095}
+
+    add_ideas = {
+        Human
+        Town
+
+        manpowerlv1
+         
+        isolation
+        hum_yao_guai_de_ying_xiang_idea
+        hum_fu_quan_zhan_zheng_de_yin_ying_idea
+        hum_TKM_de_bao_hu_idea
+        hum_cai_fa_idea
+        
+        dove5
+        open1
+        normal_border
+        forbidden_magic
+    }
+    #########调整
+    SRB = { give_guarantee = HUM}
+    TKM = { give_guarantee = HUM}
+
+    recruit_character = HUM_ymm
+    recruit_character = HUM_cyr
+    recruit_character = HUM_ask
+    recruit_character = HUM_rika
+    recruit_character = HUM_keine
+    recruit_character = HUM_aky
+    recruit_character = ZBT_kosuzu
+    
+    set_politics = {
+
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 8
+        guli = 89
+        neworder = 2
+        oldorder = 0
+        fandong = 1
+    }
+}

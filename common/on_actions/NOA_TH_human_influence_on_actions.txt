@@ -1,0 +1,47 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			HUM = {
+				set_variable = {
+					reserveInfluence = 0
+				}
+				set_variable = {
+					reserverRatio = 0.5
+				}
+				add_to_array = {
+					possibleInfluContries = SCA
+				}
+				add_to_array = {
+					possibleInfluContries = SEJ
+				}
+				add_to_array = {
+					possibleInfluContries = TKM
+				}
+				add_to_array = {
+					possibleInfluContries = NMS
+				}
+				add_to_array = {
+					possibleInfluContries = MSD
+				}
+				add_to_array = {
+					possibleInfluContries = MAM
+				}
+				add_to_array = {
+					possibleInfluContries = KAG
+				}
+				add_to_array = {
+					possibleInfluContries = HUM
+				}
+			}
+			for_each_scope_loop = {
+				array = HUM.possibleInfluContries
+				set_variable = {
+					lastHumanInfluence = 0
+				}
+				set_variable = {
+					totalHumanInfluence = 0
+				}
+			}
+		}
+	}
+}

@@ -25,6 +25,10 @@ TEG_tian_gou_tong_yi_zhan_zheng = {
             defense_bonus_against = 0.15
             breakthrough_bonus_against = 0.15
         }
+
+        ai_will_do = {
+            base = 100
+        }
     }
 
     # OTG 购买武器

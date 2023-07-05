@@ -1,0 +1,12 @@
+can_influence_human = {
+	OR = {
+		original_tag = SCA
+		original_tag = SEJ
+		original_tag = NMS
+		original_tag = TKM
+		original_tag = MAM
+		original_tag = KAG
+		original_tag = MSD
+		original_tag = HUM
+	}
+}

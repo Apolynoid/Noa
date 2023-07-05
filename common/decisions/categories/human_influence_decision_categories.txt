@@ -1,0 +1,26 @@
+# 影响HUM决议组
+Generic_ying_xiang_HUM = {
+	icon = generic_political_actions
+
+	priority = 89
+
+	allowed = {
+		can_influence_human = yes
+	}
+
+	visible = {
+		HUM = {
+			OR = {
+				has_idea = hum_yao_guai_de_ying_xiang_idea
+				has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
+			}
+		}
+		OR = {
+			has_idea = hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+			original_tag = HUM
+		}
+	}
+
+	visible_when_empty = yes
+	
+}

@@ -646,17 +646,6 @@ initial_leader_setting = {
         recruit_character = HKR_aunn
         recruit_character = HKR_aunn_leader
     }
-    HUM = {
-        recruit_character = HUM_ymm
-        recruit_character = HUM_cyr
-        recruit_character = HUM_ask
-        recruit_character = HUM_rika
-
-        recruit_character = HUM_keine
-        recruit_character = HUM_aky
-        recruit_character = HUM_keine_leader
-        recruit_character = HUM_aky_leader
-    }
     IKU = {
         recruit_character = IKU_iku
         recruit_character = IKU_iku_leader
@@ -923,9 +912,5 @@ initial_leader_setting = {
         recruit_character = YYK_yyk
         recruit_character = YYK_yyk_leader
         #YYK_yok 妖忌
-    }
-    ZBT = {
-        recruit_character = ZBT_kosuzu
-        recruit_character = ZBT_kosuzu_leader
     }
 }

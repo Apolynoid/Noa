@@ -1,0 +1,188 @@
+﻿
+add_dynamic_modifier = {
+  modifier = TKM_manpower
+}
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        
+        #辅助
+        mortar1 = 1
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            zhanchangzhihui145 = 1   
+            paobingzhenxian = 1
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+            jianzaojishu130 = 1
+            jianzaojishu140 = 1
+            yunshudui140 = 1
+            yunshucheliang146 = 1
+            ziyuankaifa130 = 1
+            ziyuankaifa140 = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+            fangwaijieshengchan140 = 1
+        #种族
+            
+    }
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
+        
+        #辅助
+        mortar1 = 1
+        #专用辅助
+        zhiyuanzhuangbei = 1
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            zhanchangzhihui145 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+            jianzaojishu130 = 1
+            jianzaojishu140 = 1
+            yunshudui140 = 1
+            yunshucheliang146 = 1
+            ziyuankaifa130 = 1
+            ziyuankaifa140 = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+            fangwaijieshengchan140 = 1
+            fangwaijieshengchan145 = 1
+        #种族
+            caogenchuantong1 = 1
+            
+    }
+    
+}
+143.7.1 = {
+    # capital = 165
+    oob = "TKM_143"
+    
+    #########局势修改
+    add_ideas = {
+        Pri_youkai
+        type3_manpowerlv2
+        Village
+        open1
+        dove3
+        limit_magic
+    }
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        guli = 80
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+}
+146.1.1={
+
+    HUM = { give_military_access = TKM }
+    ZBT = { give_military_access = TKM }
+    
+    set_capital = { state = 299 }
+    add_manpower = 500
+    oob = "TKM_146"
+
+    set_country_flag = TKM_gugelvse
+    
+    add_ideas = {
+    Pri_youkai
+    type3_manpowerlv2
+    Village
+    open1
+    dove1
+    normal_border
+    limit_magic
+    TKM_Fear_of_destruction_idea
+    TKM_shell_shocked_spectator_5
+    tkm_Deformed_industry_idea
+    tkm_New_forces_idea_1
+    TKM_Guardian_of_mankind_idea
+    tkm_bupaoqijiudaoju_idea
+    kog_manpower_puppet
+    hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+    }
+    #########局势修改
+    #set_stability = 0.7
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 44
+        guli = 0
+        neworder = 28
+        oldorder = 0
+        fandong = 28
+    }
+}

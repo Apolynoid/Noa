@@ -128,6 +128,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_basic_science"
+		texturefile = "gfx/interface/goals/focus_generic_basic_science.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_science_institute"
 		texturefile = "gfx/interface/goals/focus_generic_science_institute.png"			
 	}

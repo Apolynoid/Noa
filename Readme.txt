@@ -17,4 +17,4 @@ NoA制作成员：
 
 致谢：
 美术：绝山南犬
-测试：旗子人，冰雪幻影，StarbowBreak，Epsilon，279，奥野田美宵
+测试：旗子人，冰雪幻影，StarbowBreak，Epsilon，279，奥野田美宵，山海忆

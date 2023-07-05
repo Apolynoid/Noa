@@ -1,0 +1,156 @@
+﻿capital = 267
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+            tongxunlilun = 1
+            jiemi137 = 1
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            zhanchangzhihui145 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+            tongxunlilun = 1
+            jiemi137 = 1
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+}
+143.7.1={
+    oob = "KAG_143"
+    
+    add_ideas = {
+        Tribal
+        Beast
+        open0
+        hawk1
+        normal_border
+        sc_rule
+        type4_manpowerlv4
+    }
+    #########局势修改
+    
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 2
+        guli = 55
+        neworder = 25
+        oldorder = 0
+        fandong = 18
+    }
+}
+146.1.1={
+    oob = "KAG_146"
+    # set_research_slots = 4
+    # Starting tech
+    add_manpower = 350
+
+    
+    add_ideas = {
+    type4_manpowerlv2
+    Tribal
+    Beast
+    open0
+    hawk1
+    normal_border
+    sc_rule
+    hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+    }
+    #########局势修改
+    #set_stability = 0.6
+    
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 1
+        guli = 65
+        neworder = 9
+        oldorder = 0
+        fandong = 25
+    }
+}

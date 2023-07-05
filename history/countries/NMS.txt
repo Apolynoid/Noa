@@ -1,0 +1,270 @@
+﻿capital = 223
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
+
+        #专用辅助
+        lingliganying147 = 1
+        magic_energy1= 1
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        ma_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+            
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+        caogenchuantong1 = 1
+        qinlvetianxing1 = 1
+            
+    }
+    
+}
+146.1.1 = {
+    set_country_flag = bunengsuiyiqiehuanzhengti
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
+
+        #专用辅助
+        lingliganying147 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        ma_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+        jingyingxunlian = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+        caogenchuantong1 = 1
+        caogenchuantong2 = 1
+        qinlvetianxing1 = 1
+        qinlvetianxing2 = 1
+            
+    }
+    
+}
+143.7.1 = {
+    oob = "NMS_143"
+    set_politics = {
+        ruling_party = qinwai
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 80
+        guli = 10
+        neworder = 10
+        oldorder = 0
+        fandong = 0
+    }
+    
+    
+    add_ideas = {
+        Pri_youkai
+        type3_manpowerlv5
+        Shrine
+        open2
+        hawk0
+        normal_border
+        free_magic
+    }
+}
+146.1.1={
+    add_manpower = 850
+    oob = "NMS_146"
+    
+    diplomatic_relation = { 
+        country = TKM relation = non_aggression_pact 
+    }
+    ########地块情况#########
+    add_dynamic_modifier = {
+        modifier = NMS_zongse_stability
+    }
+    add_dynamic_modifier = {
+        modifier = NMS_lvse_stability
+    }
+    add_dynamic_modifier = {
+        modifier = NMS_zise_stability
+    }
+    set_variable = { NMS_lvse_r = -0.02 }
+    set_variable = { NMS_zongse_r = -0.1 }
+    set_variable = { NMS_zise_r = -0.06 }
+    set_variable = {
+        NMS_lvse_x = -0.14
+    }
+    set_variable = {
+        NMS_zongse_x = -0.5
+    }
+    set_variable = {
+        NMS_zise_x = -0.24
+    }
+    set_variable = {
+        NMS_pingxi_cost = 30
+    } 
+    set_variable = {
+        NMS_pingxi_day = 60
+    } 
+    every_owned_state = {
+        limit = {
+            region = 47
+        }
+        add_dynamic_modifier = {
+            modifier = NMS_lvse_state
+        }
+    }
+    433 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zongse_state
+        }
+    }
+    328 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zongse_state
+        }
+    }
+    168 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zongse_state
+        }
+    }
+    321 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zongse_state
+        }
+    }
+    163 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zongse_state
+        }
+    }
+    195 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zise_state
+        }
+    }
+    327 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zise_state
+        }
+    }
+    245 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zise_state
+        }
+    }
+    238 = {
+        add_dynamic_modifier = {
+            modifier = NMS_zise_state
+        }
+    }
+    #####################
+    add_ideas = {
+        nms_hepingdefojiao_idea
+        nms_shangcengzhongzuzhuyizhe_idea
+        
+        Pri_youkai
+        type3_manpowerlv4
+        Shrine
+        # anti_fairy
+        #new_sytle_buddism
+        open1
+        hawk1
+        normal_border
+        free_magic
+        hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+    }
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 30 
+        guli = 8
+        neworder = 35
+        oldorder = 25
+        fandong = 2
+    }
+}

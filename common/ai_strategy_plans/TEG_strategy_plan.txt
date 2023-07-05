@@ -1,0 +1,120 @@
+TEG_unification_war = {
+	name = "TEG unification war plan"
+	desc = "lead to early TEG unification war"
+
+	allowed = {
+		original_tag = TEG
+	}
+	enable = {
+		TEG_unification_problem_to_solve = yes
+	}
+	abort = {
+		TEG_unification_problem_to_solve = no
+	}
+
+	ai_national_focuses = {
+		TEG_jie_jue_tian_mo_wen_ti
+		TEG_gong_he_guo_guo_fang_bu
+		TEG_xian_jin_xun_lian_fang_fa
+		TEG_shi_ying_yao_guai_shan_di_xing
+		TEG_da_xuan
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = OTG
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = OTG
+		priority = 1
+		ordertype = front
+		execution_type = rush
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+TEG_defend_democracy = {
+	name = "TEG democracy plan"
+	desc = "Avoid Momiji Coup detat"
+
+	allowed = {
+		original_tag = TEG
+	}
+	enable = {
+		AND = {
+			OR = {
+				has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
+				has_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
+				has_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
+			}
+			TEG_unification_problem_to_solve = no
+		}
+	}
+	abort = {
+		NOT = {
+			OR = {
+				has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
+				has_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
+				has_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		TEG_da_xuan
+		TEG_gu_li_min_zhong_can_yu_zheng_zhi
+		TEG_xuan_ba_zheng_zhi_jing_ying
+		TEG_qing_xiang_jun_shi_gong_ye
+		TEG_jun_heng_gong_ye_fa_zhan
+		TEG_tian_gou_zhi_yuan_jun
+		TEG_min_zhu_bing_gong_chang
+		TEG_fu_yu_yi_hui_geng_da_quan_li
+		TEG_zong_tong_yu_yi_hui_fen_li
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+
+}

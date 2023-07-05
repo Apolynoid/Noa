@@ -1,0 +1,43 @@
+characters={
+	ZBT_kosuzu ={
+		name = ZBT_kosuzu
+		portraits={
+			civilian={
+				large="gfx/leaders/ZBT/ZBT_kosuzu.dds"
+				small="gfx/leaders/ZBT/ZBT_kosuzu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZBT/ZBT_kosuzu.dds"
+				small="gfx/leaders/ZBT/ZBT_kosuzu_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  media_personality  }
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            skill = 1
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = ZBT_kosuzu
+			name = ZBT_kosuzu
+			cost = 200
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+	}
+}

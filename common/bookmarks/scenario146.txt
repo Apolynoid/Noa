@@ -287,6 +287,19 @@ bookmarks = {
 				MSD_bei_mian_de_wei_xie
 			}
 		}
+
+		"HUM" = {
+			minor = yes
+			history = "HUM_DAWN_DESC"			#sat
+			ideas = {
+				hum_yao_guai_de_ying_xiang_idea
+				hum_fu_quan_zhan_zheng_de_yin_ying_idea
+				hum_cai_fa_idea
+			}
+			focuses = {
+				
+			}
+		}
     
 		
 		effect = {

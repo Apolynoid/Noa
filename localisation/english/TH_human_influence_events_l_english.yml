@@ -1,0 +1,20 @@
+﻿l_english:
+huminf.1.t:0 "妖怪要求支付战争赔偿"
+huminf.1.d:0 "上次战争的胜利者之一[?fundTarget.GetName]向我们提出支付战争赔偿的要求。"
+huminf.1.1:0 "我们别无选择"
+
+huminf.2.t:0 "新一轮人类影响力争夺"
+huminf.2.d:0 "现在开始新一轮的人类影响力争夺，我们应该投入多少资源进行争夺呢？"
+huminf.2.1:0 "不参与"
+huminf.2.2:0 "少量投入"
+huminf.2.3:0 "适量投入"
+huminf.2.4:0 "大量投入"
+
+huminf.3.t:0 "人类影响力争夺结果"
+huminf.3.d:0 "在上一轮人类影响力争夺中，我们获得了[?lastHumanInfluence]点对人类的影响力。"
+huminf.3.1:0 "知道了"
+
+huminf.5.t:0 "人类彻底摆脱妖怪影响"
+huminf.5.d:0 "结果。"
+huminf.5.1:0 "有趣"
+huminf.5.2:0 "人类重获自由！"

@@ -28,6 +28,7 @@
       will_lead_to_war_with = OTG
 
       completion_reward = {
+        add_political_power = 30
         create_wargoal = {
           type = civil_war
           target = OTG
@@ -2007,7 +2008,7 @@
   # 基础科学进步
   focus = {
     id = TEG_ji_chu_ke_xue_jin_bu
-    icon = unknown
+    icon = GFX_focus_basic_science
     cost = 7
     x = -1
     y = 1
@@ -2034,7 +2035,7 @@
   # 应用科学进步
   focus = {
     id = TEG_ying_yong_ke_xue_jin_bu
-    icon = unknown
+    icon = GFX_goal_generic_construct_civilian
     cost = 7
     x = 1
     y = 1

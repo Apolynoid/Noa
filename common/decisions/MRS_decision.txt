@@ -652,6 +652,11 @@ MRS_mo_fa_zhi_sen_chong_jian = {
     available = {
       FROM = {
         compliance > 50
+        custom_trigger_tooltip = 
+        {
+          tooltip = MRS_compliance_tt
+          always = yes
+        }
       }
     }
     on_map_mode = map_only

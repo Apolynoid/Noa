@@ -1,0 +1,151 @@
+﻿capital = 282
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        gun2 = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            lingben = 1
+            tongxunlilun = 1
+            jiemi137 = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            jianzaojishu130 = 1
+            yunshudui140 = 1
+            
+        #专用工业
+            linglishengchan130 = 1
+
+        #种族
+            yeguangzhili1 = 1 
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        gun2 = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            lingben = 1
+            tongxunlilun = 1
+            jiemi137 = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            jianzaojishu130 = 1
+            yunshudui140 = 1
+            
+        #专用工业
+            linglishengchan130 = 1
+
+        #种族
+            yeguangzhili1 = 1
+            
+    }
+    
+}
+143.7.1={
+    oob = "MAM_143"
+    add_ideas = {
+        Youkai
+        Village
+        close1
+        dove2
+        strict_border
+        sc_rule
+        type3_manpowerlv4
+    }
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 25
+        guli = 70
+        neworder = 5
+        oldorder = 0
+        fandong = 0
+    }
+    
+    set_convoys = 2
+}
+146.1.1={
+    oob = "MAM_146"
+    set_truce = {target = HKR days = 300}
+    set_truce = {target = HUM days = 300}
+    set_truce = {target = ZBT days = 300}
+    add_ideas = {
+    Youkai
+    Village
+    close1
+    hawk0
+    strict_border
+    sc_rule
+    type3_manpowerlv2
+    hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+    }
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 35
+        guli = 55
+        neworder = 10
+        oldorder = 0
+        fandong = 0
+    }
+    
+    set_convoys = 2
+}

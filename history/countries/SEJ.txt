@@ -1,0 +1,171 @@
+﻿capital = 119
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        lingliliushuixian = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        xianlieduixing = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+            
+    } 
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+            
+    } 
+}
+143.7.1 = {
+    oob = "SEJ_143"
+    add_ideas = {
+    Pri_youkai
+    low_economic_mobilisation
+    type3_manpowerlv7
+    Tribal
+    hawk3
+    close2
+    free_magic
+     
+    }
+    set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 100
+    }
+}
+146.1.1={
+    add_manpower = 100
+    set_country_flag = bunengqie_guli
+    oob = "SEJ_146"
+
+    # create_faction = xiakeshanggemingyundong
+    # add_to_faction = NIB
+    # add_to_faction = RMI
+    # add_to_faction = CIR
+    
+    add_ideas = {
+    Pri_youkai
+    low_economic_mobilisation
+    type3_manpowerlv4
+    Tribal
+    hawk2
+    close2
+    strict_border
+    free_magic
+    hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+     
+    }
+
+    add_ideas = SEJ_zhengzhiweiji_idea
+    # declare_war_on = {
+    #   target = ONS
+    #   type = take_state_focus
+    #   generator = { 121 }
+    # }
+    
+	NIB = {
+        subject_level3 = yes
+    }
+    RMI = {
+        subject_level3 = yes
+    }
+
+    # NIB = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
+    # RMI = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
+    # CIR = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
+    set_politics = {
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 15
+        guli = 0
+        neworder = 50
+        oldorder = 0
+        fandong = 35
+    }
+    set_major = no
+}

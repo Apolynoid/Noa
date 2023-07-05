@@ -101,6 +101,12 @@ spriteTypes = {
 		name = "GFX_idea_TEG_democracy_alliance"
 		texturefile = "gfx/interface/ideas/teg_democracy_alliance.png"
 	}
+
+	#### HUM Kamishirasawa Keine 人间之里
+	spriteType = {
+		name = "GFX_idea_HUM_protection_of_TKM"
+		texturefile = "gfx/interface/ideas/hum_protection_of_TKM.png"
+	}
 	
 	#### MRS Kirisame Marisa 魔法之森
 	spriteType = {
