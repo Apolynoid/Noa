@@ -1,0 +1,11 @@
+# 谈判破裂
+HUM_tan_pan_po_lie = {
+	icon = generic_political_actions
+
+	priority = 100
+
+	allowed = {
+		original_tag = TKM
+	}
+}
+

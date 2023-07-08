@@ -204,3 +204,10 @@ calc_human_influence = {
         }
     }
 }
+
+add_5_reserve = {
+    custom_effect_tooltip = add_5_reserve
+    add_to_variable = {
+        HUM.reserveInfluence = 5
+    }
+}

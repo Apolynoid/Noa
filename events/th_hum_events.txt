@@ -1,0 +1,286 @@
+﻿add_namespace = hum
+# 重新修订与TKM的协议
+country_event = {
+	id = hum.101
+	title = hum.101.t
+	desc = hum.101.d
+	is_triggered_only = yes
+	# 邀请SCA作为调解人
+	option = {
+		name = hum.101.1
+
+		trigger = {
+			SCA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		SCA = {
+			country_event = {
+				id = hum.102
+			}
+		}
+		custom_effect_tooltip = hum_if_SCA_agree_tt
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea
+				days = 365
+			}
+		}
+	}
+	# 我们自己去
+	option = {
+		name = hum.101.2
+		TKM = {
+			country_event = {
+				id = hum.106
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SCA HUM邀请我们作为调解人
+country_event = {
+	id = hum.102
+	title = hum.102.t
+	desc = hum.102.d
+	is_triggered_only = yes
+	# 我们很乐意作为调解人
+	option = {
+		name = hum.102.1
+		add_timed_idea = {
+			idea = hum_ren_lei_de_tiao_jie_fei_idea
+			days = 365
+		}
+		SCA = {
+			add_opinion_modifier = {
+				target = HUM
+				modifier = HUM_can_yu_tiao_jie_op
+			}
+		}
+		HUM = {
+			add_opinion_modifier = {
+				target = SCA
+				modifier = HUM_can_yu_tiao_jie_op
+			}
+		}
+		custom_effect_tooltip = hum_SCA_war_possibility_tt
+		HUM = {
+			country_event = {
+				id = hum.103
+			}
+		}
+	}
+	# 这是他们自己的事
+	option = {
+		name = hum.102.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SCA同意了
+country_event = {
+	id = hum.103
+	title = hum.103.t
+	desc = hum.103.d
+	is_triggered_only = yes
+	# 太好了
+	option = {
+		name = hum.103.1
+		add_timed_idea = {
+			idea = hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea
+			days = 365
+		}
+		TKM = {
+			country_event = {
+				id = hum.105
+			}
+		}
+	}
+}
+
+# SCA拒绝了
+country_event = {
+	id = hum.104
+	title = hum.104.t
+	desc = hum.104.d
+	is_triggered_only = yes
+	# 也许我们只能靠自己
+	option = {
+		name = hum.104.1
+		TKM = {
+			country_event = {
+				id = hum.106
+			}
+		}
+	}
+}
+
+# TKM HUM希望重新修订协议 SCA
+country_event = {
+	id = hum.105
+	title = hum.105.t
+	desc = hum.105.d
+	is_triggered_only = yes
+	# 我们最好不要冒险
+	option = {
+		name = hum.105.1
+		HUM = {
+			country_event = {
+				id = hum.107
+			}
+		}
+	}
+	# 准备开战
+	option = {
+		name = hum.105.2
+		HUM = {
+			country_event = {
+				id = hum.108
+			}
+		}
+		custom_effect_tooltip = hum_war_against_HUM_and_SCA_tt
+		activate_mission = TKM_tan_pan_po_lie_hou_de_zhan_zheng_1
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# TKM HUM希望重新修订协议
+country_event = {
+	id = hum.106
+	title = hum.106.t
+	desc = hum.106.d
+	is_triggered_only = yes
+	# 我们同意这份协议
+	option = {
+		name = hum.106.1
+		HUM = {
+			country_event = {
+				id = hum.107
+			}
+		}
+		if = {
+			limit = {
+				HUM = {
+					is_guaranteed_by = TKM
+				}
+			}
+			diplomatic_relation = {
+				country = HUM
+				relation = guarantee
+				active = no
+			}
+		}
+	}
+	# 准备开战
+	option = {
+		name = hum.106.2
+		HUM = {
+			country_event = {
+				id = hum.108
+			}
+		}
+		if = {
+			limit = {
+				HUM = {
+					is_guaranteed_by = TKM
+				}
+			}
+			diplomatic_relation = {
+				country = HUM
+				relation = guarantee
+				active = no
+			}
+		}
+		custom_effect_tooltip = hum_war_against_HUM_tt
+		activate_mission = TKM_tan_pan_po_lie_hou_de_zhan_zheng_2
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_leader = {
+						character = TKM_kog_leader
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = TKM_kog
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# TKM同意重新修订协议
+country_event = {
+	id = hum.107
+	title = hum.107.t
+	desc = hum.107.d
+	is_triggered_only = yes
+	# 太好了
+	option = {
+		name = hum.107.1
+		swap_ideas = {
+			remove_idea = hum_TKM_de_bao_hu_idea
+			add_idea = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+		}
+	}
+}
+
+# TKM拒绝重新修订协议
+country_event = {
+	id = hum.108
+	title = hum.108.t
+	desc = hum.108.d
+	is_triggered_only = yes
+	# 我们必须为战争做准备
+	option = {
+		name = hum.108.1
+		remove_ideas = hum_TKM_de_bao_hu_idea
+		if = {
+			limit = {
+				has_idea = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+			}
+			remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+		}
+		else = {
+			remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_a_idea
+		}
+	}
+}
+
+# 人类自由市成立
+news_event = {
+	id = hum.109
+	title = hum.109.t
+	desc = hum.109.d
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = hum.109.1
+		trigger = {
+			NOT = {
+				original_tag = HUM
+			}
+		}
+	}
+
+	option = {
+		name = hum.109.2
+		trigger = {
+			original_tag = HUM
+		}
+	}
+}

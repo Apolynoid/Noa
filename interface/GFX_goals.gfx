@@ -49,7 +49,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_reconstruction"
-		texturefile = "gfx/interface/goals/focus_generic_reconstruction.dds"			
+		texturefile = "gfx/interface/goals/focus_generic_reconstruction.png"			
 	}
 
 	SpriteType = {
@@ -311,18 +311,30 @@ spriteTypes = {
 
 	#### HKR Hakurei Reimu 博丽神社
 
-	
 
-	#### MRS Kirisame Marisa 魔法之森
+
+	#### HUM Kamishirasawa Keine 人间之里
 
 	SpriteType = {
-	name = "MRS_focus_convene_the_witch_meeting"
-	texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.png"			
+		name = "HUM_focus_totally_crash_the_plutocrat"
+		texturefile = "gfx/interface/goals/focus_HUM_totally_crash_the_plutocrat.png"			
 	}
 
 	SpriteType = {
-	name = "MRS_focus_archmage_alice"
-	texturefile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
+		name = "HUM_focus_human_free_city"
+		texturefile = "gfx/interface/goals/focus_HUM_human_free_city.png"			
+	}
+	
+	#### MRS Kirisame Marisa 魔法之森
+
+	SpriteType = {
+		name = "MRS_focus_convene_the_witch_meeting"
+		texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_archmage_alice"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
 	}
 
 	SpriteType = {

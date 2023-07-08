@@ -10,3 +10,25 @@ can_influence_human = {
 		original_tag = HUM
 	}
 }
+
+hum_reserve_over_10 = {
+	custom_trigger_tooltip = {
+		tooltip = reserve_over_10
+		check_variable = {
+			var = HUM.reserveInfluence
+			value = 10
+			compare = greater_than_or_equals
+		}
+	}
+}
+
+hum_reserve_over_35 = {
+	custom_trigger_tooltip = {
+		tooltip = reserve_over_35
+		check_variable = {
+			var = HUM.reserveInfluence
+			value = 35
+			compare = greater_than_or_equals
+		}
+	}
+}

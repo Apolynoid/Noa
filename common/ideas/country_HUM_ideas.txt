@@ -21,6 +21,7 @@ ideas = {
       modifier = {
         conscription_factor = -0.4
 				war_support_factor = -0.3
+        consumer_goods_factor = 0.05
 				ai_focus_defense_factor = 0.5
 				ai_get_ally_desire_factor = -200
       }
@@ -29,6 +30,19 @@ ideas = {
     # 九十九工业的“保护”
     hum_TKM_de_bao_hu_idea = {
       picture = HUM_protection_of_TKM
+
+      cancel = {
+        OR = {
+          TKM = {
+            OR = {
+              exists = no
+              is_subject = yes
+            }
+          }
+          has_war_with = TKM
+        }
+      }
+
       targeted_modifier = { 
 				tag = TKM
 				cic_to_target_factor = 0.10				
@@ -39,7 +53,6 @@ ideas = {
 				generate_wargoal_tension = 0.25
         justify_war_goal_time = 0.25
 				enemy_justify_war_goal_time = 0.5
-        consumer_goods_factor = 0.05
 			}
 
 			rule = {
@@ -49,7 +62,7 @@ ideas = {
 
     # 财阀
     hum_cai_fa_idea = {
-      picture = unknown
+      picture = HUM_plutocrat
       modifier = {
         political_power_gain = -0.2
         global_building_slots_factor = -0.2
@@ -74,12 +87,23 @@ ideas = {
     hum_zhi_fu_zhan_zheng_pei_kuan_idea = {
       picture = ETH_customs_barrier_ITA
       modifier = {
-        consumer_goods_factor = 0.12
+        consumer_goods_factor = 0.15
       }
     }
 
     # 政治线
     # 孤立
+    # 复权战争的阴影
+    hum_fu_quan_zhan_zheng_de_yin_ying_a_idea = {
+      picture = ENG_the_war_to_end_all_wars
+      modifier = {
+        conscription_factor = -0.3
+				war_support_factor = -0.2
+				ai_focus_defense_factor = 0.5
+				ai_get_ally_desire_factor = -200
+      }
+    }
+
     # 妖怪影响减弱
     hum_yao_guai_ying_xiang_jian_ruo_idea = {
       picture = unknown
@@ -88,6 +112,66 @@ ideas = {
 				research_speed_factor = -0.2			
 				political_power_gain = -0.1
 				justify_war_goal_time = 0.5
+        consumer_goods_factor = 0.02
+      }
+    }
+
+    # 向SCA支付调解费
+    hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea = {
+      picture = unknown
+      modifier = {
+        consumer_goods_factor = 0.15
+      }
+    }
+
+    # 人类的调解费
+    hum_ren_lei_de_tiao_jie_fei_idea = {
+      picture = unknown
+      modifier = {
+        consumer_goods_factor = 0.08
+      }
+    }
+
+    # 修订后的与TKM协议
+    hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea = {
+      picture = HUM_agreement_with_TKM
+
+      cancel = {
+        OR = {
+          TKM = {
+            OR = {
+              exists = no
+              is_subject = yes
+            }
+          }
+          has_war_with = TKM
+        }
+      }
+      
+      targeted_modifier = { 
+				tag = TKM
+				cic_to_target_factor = 0.05				
+			}
+
+			modifier = {
+			  political_power_factor = -0.05
+				generate_wargoal_tension = 0.1
+        justify_war_goal_time = 0.1
+				enemy_justify_war_goal_time = 0.2
+			}
+
+			rule = {
+				can_join_factions = no
+			}
+    }
+
+    # 受制约的财阀
+    hum_shou_zhi_yue_de_cai_fa_idea = {
+      picture = HUM_fractured_plutocrat
+      modifier = {
+        political_power_gain = -0.05
+        global_building_slots_factor = -0.1
+        production_speed_buildings_factor = -0.1
         consumer_goods_factor = 0.02
       }
     }

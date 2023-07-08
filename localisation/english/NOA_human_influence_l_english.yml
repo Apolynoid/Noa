@@ -13,3 +13,8 @@ Generic_10_human_influence_tooltip:0 "需要£human_influence_texticon  §Y10§!
 Generic_20_human_influence:0 "£human_influence_texticon  §Y20§!"
 Generic_20_human_influence_blocked:0 "£human_influence_texticon  §R20§!"
 Generic_20_human_influence_tooltip:0 "需要£human_influence_texticon  §Y20§!来执行决议"
+
+reserve_over_10:0 "影响力保留值不低于§Y10§!"
+reserve_over_35:0 "影响力保留值不低于§Y35§!"
+
+add_5_reserve:0 "增加§Y5§!点影响力保留值"

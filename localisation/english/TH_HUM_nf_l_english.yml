@@ -13,8 +13,8 @@ HUM_li_yong_yao_guai_jian_de_mao_dun:0 "利用妖怪间的矛盾"
 HUM_li_yong_yao_guai_jian_de_mao_dun_desc:0 ""
 HUM_qiang_hua_zheng_fu_ying_xiang_li:0 "强化政府影响力"
 HUM_qiang_hua_zheng_fu_ying_xiang_li_desc:0 ""
-HUM_wai_jiao_xie_ding:0 "外交协定"
-HUM_wai_jiao_xie_ding_desc:0 ""
+HUM_hui_fu_jing_ji:0 "恢复经济"
+HUM_hui_fu_jing_ji_desc:0 ""
 HUM_chu_bu_bai_tuo_yao_guai_ying_xiang:0 "初步摆脱妖怪影响"
 HUM_chu_bu_bai_tuo_yao_guai_ying_xiang_desc:0 ""
 HUM_xiu_ding_yu_TKM_de_xie_ding:0 "修订与[TKM.GetName]的协定"
@@ -98,15 +98,29 @@ hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea:0 "人类惩罚战争的胜
 hum_zhi_fu_zhan_zheng_pei_kuan_idea:0 "支付战争赔款"
 # 政治线
 # 孤立
+hum_fu_quan_zhan_zheng_de_yin_ying_a_idea:0 "复权战争的阴影"
 hum_yao_guai_ying_xiang_jian_ruo_idea:0 "妖怪影响减弱"
+hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea:0 "向斯卡蕾特帝国支付调解费"
+hum_ren_lei_de_tiao_jie_fei_idea:0 "人类的调解费"
+hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea:0 "修订后的与九十九工业协议"
+hum_shou_zhi_yue_de_cai_fa_idea:0 "受制约的财阀"
 
 #op
-
+HUM_can_yu_tiao_jie_op:0 "参与调解"
 
 #tt
+hum_improve_reserve_tt:0 "增加从每回合的§Y影响力§!中获得§Y保留值§!的比例"
+hum_if_TKM_agree_tt:0 "如果[TKM.GetFlag][TKM.GetName]同意，则："
+hum_if_SCA_agree_tt:0 "如果[SCA.GetFlag][SCA.GetName]同意，则[TKM.GetFlag][TKM.GetName]同意的概率大幅提升，同时若[TKM.GetFlag][TKM.GetName]拒绝修订并向我们宣战时，[SCA.GetFlag][SCA.GetName]将作为我们的盟友参战！\n此外，我们需要支付调解费："
+hum_SCA_war_possibility_tt:0 "§R如果谈判破裂，我们必须参与[HUM.GetFlag][HUM.GetName]对[TKM.GetFlag][TKM.GetName]的战争！§!"
+hum_war_against_HUM_and_SCA_tt:0 "§R这意味着与[HUM.GetFlag][HUM.GetName]和[SCA.GetFlag][SCA.GetName]的战争§!"
+hum_war_against_HUM_tt:0 "§R这意味着与[HUM.GetFlag][HUM.GetName]的战争§!"
 
 
  #decision
+HUM_tan_pan_po_lie:0 "谈判破裂"
+TKM_tan_pan_po_lie_hou_de_zhan_zheng_1:0 "谈判破裂后的战争"
+TKM_tan_pan_po_lie_hou_de_zhan_zheng_2:0 "谈判破裂后的战争"
 
 
 # flag

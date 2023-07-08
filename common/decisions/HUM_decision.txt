@@ -1,0 +1,56 @@
+## 谈判破裂
+HUM_tan_pan_po_lie = {
+    # 准备干涉
+    TKM_tan_pan_po_lie_hou_de_zhan_zheng_1 = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            always = no
+        }
+        icon = mission_icon
+        days_mission_timeout = 30
+        selectable_mission = no
+
+        war_with_on_timeout = HUM
+        war_with_on_timeout = SCA
+
+        timeout_effect = {
+            declare_war_on = {
+                target = HUM
+                type = topple_government
+            }
+            declare_war_on = {
+                target = SCA
+                type = topple_government
+            }
+        }
+    }
+
+    TKM_tan_pan_po_lie_hou_de_zhan_zheng_2 = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            always = no
+        }
+        icon = mission_icon
+        days_mission_timeout = 30
+        selectable_mission = no
+
+        war_with_on_timeout = HUM
+
+        timeout_effect = {
+            declare_war_on = {
+                target = HUM
+                type = topple_government
+            }
+        }
+    }
+}

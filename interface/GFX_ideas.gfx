@@ -107,6 +107,21 @@ spriteTypes = {
 		name = "GFX_idea_HUM_protection_of_TKM"
 		texturefile = "gfx/interface/ideas/hum_protection_of_TKM.png"
 	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_plutocrat"
+		texturefile = "gfx/interface/ideas/hum_plutocrat.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_agreement_with_TKM"
+		texturefile = "gfx/interface/ideas/hum_agreement_with_TKM.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_fractured_plutocrat"
+		texturefile = "gfx/interface/ideas/hum_fractured_plutocrat.png"
+	}
 	
 	#### MRS Kirisame Marisa 魔法之森
 	spriteType = {

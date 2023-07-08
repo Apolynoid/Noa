@@ -33,7 +33,11 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      add_political_power = 50
+      add_popularity = {
+        ideology = guli
+        popularity = 0.05
+      }
     }
 
     ai_will_do = {
@@ -56,7 +60,7 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      add_5_reserve = yes
     }
 
     ai_will_do = {
@@ -78,8 +82,12 @@ focus_tree = {
       focus = HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
     }
 
+    available = {
+      hum_reserve_over_10 = yes
+    }
+
     completion_reward = {
-      
+      add_5_reserve = yes
     }
 
     ai_will_do = {
@@ -101,8 +109,15 @@ focus_tree = {
       focus = HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
     }
 
+    available = {
+      hum_reserve_over_10 = yes
+    }
+
     completion_reward = {
-      
+      custom_effect_tooltip = hum_improve_reserve_tt
+      set_variable = {
+        HUM.reserverRatio = 0.75
+      }
     }
 
     ai_will_do = {
@@ -110,11 +125,11 @@ focus_tree = {
     }
   }
 
-  # 外交协定
+  # 恢复经济
   focus = {
-    id = HUM_wai_jiao_xie_ding
-    icon = GFX_focus_generic_treaty
-    cost = 7
+    id = HUM_hui_fu_jing_ji
+    icon = unknown
+    cost = 12
     x = 3
     y = 1
 
@@ -124,8 +139,24 @@ focus_tree = {
       focus = HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
     }
 
+    available = {
+      hum_reserve_over_10 = yes
+    }
+
     completion_reward = {
-      
+      if = {
+        limit = {
+          has_idea = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+        }
+        swap_ideas = {
+          remove_idea = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+          add_idea = hum_fu_quan_zhan_zheng_de_yin_ying_a_idea
+        }
+      }
+      add_offsite_building = {
+        type = industrial_complex
+        level = 2
+      }
     }
 
     ai_will_do = {
@@ -146,7 +177,17 @@ focus_tree = {
     prerequisite = {
       focus = HUM_li_yong_yao_guai_jian_de_mao_dun
       focus = HUM_qiang_hua_zheng_fu_ying_xiang_li
-      focus = HUM_wai_jiao_xie_ding
+      focus = HUM_hui_fu_jing_ji
+    }
+
+    bypass = {
+      NOT = {
+        has_idea = hum_yao_guai_de_ying_xiang_idea
+      }
+    }
+
+    available = {
+      hum_reserve_over_35 = yes
     }
 
     completion_reward = {
@@ -164,7 +205,7 @@ focus_tree = {
   # 修订与TKM的协定
   focus = {
     id = HUM_xiu_ding_yu_TKM_de_xie_ding
-    icon = unknown
+    icon = GFX_focus_generic_treaty
     cost = 7
     x = -2
     y = 1
@@ -175,8 +216,25 @@ focus_tree = {
       focus = HUM_chu_bu_bai_tuo_yao_guai_ying_xiang
     }
 
+    bypass = {
+      NOT = {
+        has_idea = hum_TKM_de_bao_hu_idea
+      }
+    }
+
     completion_reward = {
-      
+      custom_effect_tooltip = hum_if_TKM_agree_tt
+      effect_tooltip = {
+        swap_ideas = {
+          remove_idea = hum_TKM_de_bao_hu_idea
+          add_idea = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+        }
+      }
+      hidden_effect = {
+        country_event = {
+          id = hum.101
+        }
+      }
     }
 
     ai_will_do = {
@@ -187,7 +245,7 @@ focus_tree = {
   # 初步肢解财阀
   focus = {
     id = HUM_chu_bu_zhi_jie_cai_fa
-    icon = unknown
+    icon = GFX_focus_rom_parties_end
     cost = 7
     x = 2
     y = 1
@@ -199,7 +257,10 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      swap_ideas = {
+        remove_idea = hum_cai_fa_idea
+        add_idea = hum_shou_zhi_yue_de_cai_fa_idea
+      }
     }
 
     ai_will_do = {
@@ -221,8 +282,18 @@ focus_tree = {
       focus = HUM_chu_bu_bai_tuo_yao_guai_ying_xiang
     }
 
+    available = {
+      NOT = {
+        OR = {
+          has_idea = hum_yao_guai_de_ying_xiang_idea
+          has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
+        }
+      }
+    }
+
     completion_reward = {
-      
+      add_stability = 0.05
+      add_political_power = 150
     }
 
     ai_will_do = {
@@ -248,8 +319,17 @@ focus_tree = {
       focus = HUM_xiu_ding_yu_TKM_de_xie_ding
     }
 
+    bypass = {
+      NOT = {
+        OR = {
+          has_idea = hum_TKM_de_bao_hu_idea
+          has_idea = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+        }
+      }
+    }
+
     completion_reward = {
-      
+      remove_ideas = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
     }
 
     ai_will_do = {
@@ -260,7 +340,7 @@ focus_tree = {
   # 彻底拆分财阀
   focus = {
     id = HUM_che_di_chai_fen_cai_fa
-    icon = GFX_focus_rom_parties_end
+    icon = HUM_focus_totally_crash_the_plutocrat
     cost = 7
     x = 2
     y = 1
@@ -276,7 +356,7 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      remove_ideas = hum_shou_zhi_yue_de_cai_fa_idea
     }
 
     ai_will_do = {
@@ -287,7 +367,7 @@ focus_tree = {
   # 人类自由市
   focus = {
     id = HUM_ren_lei_zi_you_shi
-    icon = unknown
+    icon = HUM_focus_human_free_city
     cost = 7
     x = 0
     y = 2
@@ -303,7 +383,20 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      set_cosmetic_tag = HUM_f
+      add_stability = 0.1
+      if = {
+        limit = {
+          has_idea = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+        }
+        remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+      }
+      else = {
+        remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_a_idea
+      }
+      hidden_effect = {
+        news_event = hum.109
+      }
     }
 
     ai_will_do = {
@@ -486,6 +579,10 @@ focus_tree = {
       focus = HUM_gai_liang_xun_lian_ti_xi
     }
 
+    available = {
+      threat > 0.5
+    }
+
     completion_reward = {
       
     }
@@ -553,6 +650,10 @@ focus_tree = {
 
     prerequisite = {
       focus = HUM_chong_jian_zhan_zheng_gong_ye
+    }
+
+    available = {
+      threat > 0.5
     }
 
     completion_reward = {
@@ -624,6 +725,64 @@ focus_tree = {
     }
   }
 
+  # 暗中发展
+
+  # 转移武器
+
+  # 地下工坊
+
+  # 传播复仇思想
+
+  # 秘密结社
+
+  # 招募武装力量
+
+  # 实验性装甲部队
+
+  # 推翻通敌者
+
+  # 修改复权思想
+
+  # 清洗通敌者
+
+  # 紧急授权法案
+
+  # 帝国重生
+
+  # 宣扬军国主义
+
+  # 战争宣传
+
+  # 义务兵役制
+
+  # 选拔战争精英
+
+  # 人类兵器研究所
+
+  # 先进装甲研究
+
+  # 装甲战术研究
+
+  # 优越的人类种族
+
+  # 复仇之路
+
+  # 夺回工业区
+
+  # 对命莲寺复仇
+
+  # 消灭狸猫长老会
+
+  # 斯卡蕾特的命运
+
+  # 处理兽道妖怪
+
+  # 解决竹林妖怪
+
+  # 真正的下克上
+
+  # 粉碎幕后主使
+
   # 工业线
   # 战后重建
   focus = {
@@ -638,7 +797,30 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      random_owned_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+      random_owned_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+      random_owned_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
     }
 
     ai_will_do = {
@@ -696,7 +878,7 @@ focus_tree = {
   focus = {
     id = HUM_ren_li_dao_lu_wang
     icon = GFX_goal_generic_construct_infrastructure
-    cost = 12
+    cost = 7
     x = 0
     y = 1
 
@@ -707,7 +889,13 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      every_owned_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
     }
 
     ai_will_do = {
@@ -776,7 +964,30 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
     }
 
     ai_will_do = {
@@ -821,6 +1032,18 @@ focus_tree = {
       focus = HUM_ren_li_jian_she_ji_hua
     }
 
+    available = {
+      OR = {
+        hum_reserve_over_35 = yes
+        NOT = {
+          OR = {
+            has_idea = hum_yao_guai_de_ying_xiang_idea
+            has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
+          }
+        }
+      }
+    }
+
     completion_reward = {
       
     }
@@ -845,7 +1068,38 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_owned_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
     }
 
     ai_will_do = {
@@ -938,7 +1192,12 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      add_tech_bonus = {
+        bonus = 2
+        uses = 2
+        ahead_reduction = 2
+        category = math
+      }
     }
 
     ai_will_do = {
@@ -961,7 +1220,11 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      add_tech_bonus = {
+        bonus = 1
+        uses = 2
+        category = military
+      }
     }
 
     ai_will_do = {

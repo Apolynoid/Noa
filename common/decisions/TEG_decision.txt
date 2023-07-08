@@ -225,10 +225,6 @@ TEG_zhi_yuan_OTG = {
 
         war_with_on_timeout = TEG
 
-        cancel_trigger = {
-            TEG_unification_problem_to_solve = no
-        }
-
         timeout_effect = {
             declare_war_on = {
                 target = TEG

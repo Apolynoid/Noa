@@ -297,7 +297,9 @@ bookmarks = {
 				hum_cai_fa_idea
 			}
 			focuses = {
-				
+				HUM_chu_bu_bai_tuo_yao_guai_ying_xiang
+				HUM_zhan_hou_chong_jian
+				HUM_ren_lei_zi_you_shi
 			}
 		}
     
