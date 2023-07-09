@@ -130,6 +130,19 @@ leader_traits = {
 	}
 
 	#TEG
+	# 媒体人士
+	TEG_mei_ti_ren_shi = {
+		random = no
+
+		decryption_factor = 0.2
+		intel_from_operatives_factor = 0.2
+		civilian_intel_factor = 0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	# 不可腐蚀者
 	TEG_bu_ke_fu_shi_zhe = {
 		random = no
@@ -139,6 +152,21 @@ leader_traits = {
 		army_morale_factor = 0.1
 		stability_factor = 0.1
 		surrender_limit = 0.5
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#HUM
+	# 妥协者
+	HUM_tuo_xie_zhe = {
+		random = no
+
+		stability_factor = 0.1
+		defensive_war_stability_factor = 0.2
+		war_support_factor = -0.1
+		ai_focus_defense_factor = 0.5
 
 		ai_will_do = {
 			factor = -5

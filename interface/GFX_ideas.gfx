@@ -114,6 +114,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_HUM_human_mediation_fee"
+		texturefile = "gfx/interface/ideas/hum_human_mediation_fee.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_mediation_fee_to_SCA"
+		texturefile = "gfx/interface/ideas/hum_mediation_fee_to_SCA.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_HUM_agreement_with_TKM"
 		texturefile = "gfx/interface/ideas/hum_agreement_with_TKM.png"
 	}

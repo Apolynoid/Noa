@@ -118,7 +118,17 @@ ideas = {
 
     # 向SCA支付调解费
     hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea = {
-      picture = unknown
+      picture = HUM_mediation_fee_to_SCA
+
+      cancel = {
+        SCA = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+
       modifier = {
         consumer_goods_factor = 0.15
       }
@@ -126,7 +136,7 @@ ideas = {
 
     # 人类的调解费
     hum_ren_lei_de_tiao_jie_fei_idea = {
-      picture = unknown
+      picture = HUM_human_mediation_fee
       modifier = {
         consumer_goods_factor = 0.08
       }
@@ -173,6 +183,177 @@ ideas = {
         global_building_slots_factor = -0.1
         production_speed_buildings_factor = -0.1
         consumer_goods_factor = 0.02
+      }
+    }
+
+    # 人里防御计划
+    hum_ren_li_fang_yu_ji_hua_idea = {
+      picture = YUG_federal_defense_council
+      modifier = {
+        max_planning_factor = 0.1
+      }
+    }
+
+    hum_ren_li_fang_yu_ji_hua_a_idea = {
+      picture = YUG_federal_defense_council
+      modifier = {
+        max_planning_factor = 0.1
+        production_speed_bunker_factor = 0.25
+      }
+    }
+
+    hum_ren_li_fang_yu_ji_hua_b_idea = {
+      picture = YUG_federal_defense_council
+      modifier = {
+        max_planning_factor = 0.1
+        production_speed_bunker_factor = 0.25
+        production_speed_railroad_factor = 0.1
+      }
+    }
+
+    hum_ren_li_fang_yu_ji_hua_c_idea = {
+      picture = YUG_federal_defense_council
+      modifier = {
+        max_planning_factor = 0.1
+        production_speed_bunker_factor = 0.25
+        production_speed_railroad_factor = 0.1
+        supply_combat_penalties_on_core_factor = -0.3
+      }
+    }
+
+    # 人里警卫队
+    hum_ren_li_jing_wei_dui_idea = {
+      picture = chi_army_corruption3
+      modifier = {
+        army_morale_factor = 0.1
+        army_org_factor = 0.05
+      }
+    }
+
+    hum_ren_li_jing_wei_dui_a_idea = {
+      picture = chi_army_corruption3
+      modifier = {
+        max_planning_factor = 0.1
+        army_defence_factor = 0.1
+        army_morale_factor = 0.1
+        army_org_factor = 0.05
+      }
+    }
+
+    hum_ren_li_jing_wei_dui_b_idea = {
+      picture = chi_army_corruption3
+      modifier = {
+        max_planning_factor = 0.1
+        army_attack_factor = 0.1
+        army_defence_factor = 0.2
+        army_morale_factor = 0.1
+        army_org_factor = 0.05
+      }
+    }
+
+    hum_ren_li_jing_wei_dui_c_idea = {
+      picture = chi_army_corruption3
+      modifier = {
+        max_planning_factor = 0.1
+        army_attack_factor = 0.1
+        army_defence_factor = 0.2
+        army_morale_factor = 0.1
+        army_org_factor = 0.05
+        conscription_factor = 0.03
+      }
+    }
+
+    # 战争工业
+    hum_zhan_zheng_gong_ye_idea = {
+      picture = man_five_year_plan_tank
+      modifier = {
+        production_speed_arms_factory_factor = 0.05
+        industrial_capacity_factory = 0.05
+      }
+    }
+
+    hum_zhan_zheng_gong_ye_a_idea = {
+      picture = man_five_year_plan_tank
+      modifier = {
+        production_speed_arms_factory_factor = 0.05
+        industrial_capacity_factory = 0.05
+        conversion_cost_civ_to_mil_factor = -0.75
+      }
+    }
+
+    # 工业线
+    # 资源勘探
+    hum_zi_yuan_kan_tan_idea = {
+      picture = ast_all_in 
+      modifier = {
+        local_resources_factor = 0.1
+      }
+    }
+
+    # 人里建设计划
+    hum_ren_li_jian_she_ji_hua_idea = {
+      picture = SOV_third_five_year_plan
+      modifier = {
+        production_speed_buildings_factor = 0.05
+      }
+    }
+
+    hum_ren_li_jian_she_ji_hua_a_idea = {
+      picture = SOV_third_five_year_plan
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        production_speed_industrial_complex_factor = 0.08
+      }
+    }
+
+    hum_ren_li_jian_she_ji_hua_b_idea = {
+      picture = SOV_third_five_year_plan
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        production_speed_arms_factory_factor = 0.08
+      }
+    }
+
+    hum_ren_li_jian_she_ji_hua_c_idea = {
+      picture = SOV_third_five_year_plan
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        production_speed_industrial_complex_factor = 0.08
+        production_speed_arms_factory_factor = 0.08
+      }
+    }
+
+    hum_ren_li_jian_she_ji_hua_d_idea = {
+      picture = SOV_third_five_year_plan
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        production_speed_industrial_complex_factor = 0.08
+        production_speed_arms_factory_factor = 0.08
+        consumer_goods_factor = -0.05
+      }
+    }
+
+    # 民用投资计划
+    hum_min_yong_sheng_chan_ji_hua_idea = {
+      picture = SOV_third_five_year_plan_civilian
+      modifier = {
+        production_speed_buildings_factor = 0.1
+      }
+    }
+
+    # 武器生产计划
+    hum_wu_qi_sheng_chan_ji_hua_idea = {
+      picture = SOV_third_five_year_plan_military
+      modifier = {
+        industrial_capacity_factory = 0.1
+      }
+    }
+
+    # 寺子屋教育
+    hum_si_zi_wu_jiao_yu_idea = {
+      picture = generic_research_bonus
+      modifier = {
+        research_speed_factor = 0.1
       }
     }
 	}

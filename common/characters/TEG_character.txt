@@ -13,6 +13,9 @@ characters={
 		}
 		country_leader={
 			ideology=qinwai_type
+			traits = {
+				TEG_mei_ti_ren_shi
+			}
 			id=-1
 		}
 		corps_commander = {
