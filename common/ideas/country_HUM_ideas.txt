@@ -4,14 +4,14 @@ ideas = {
     hum_yao_guai_de_ying_xiang_idea = {
       picture = unknown
       modifier = {
-        production_speed_arms_factory_factor = -0.4
+        production_speed_arms_factory_factor = -0.8
 				industrial_capacity_factory = -0.1
 				research_speed_factor = -0.5			
 				political_power_gain = -0.2
 				global_building_slots_factor = -0.1
 				justify_war_goal_time = 2
 				enemy_justify_war_goal_time = 1
-        consumer_goods_factor = 0.05
+        consumer_goods_factor = 0.1
       }
     }
 
@@ -21,7 +21,7 @@ ideas = {
       modifier = {
         conscription_factor = -0.4
 				war_support_factor = -0.3
-        consumer_goods_factor = 0.05
+        consumer_goods_factor = 0.1
 				ai_focus_defense_factor = 0.5
 				ai_get_ally_desire_factor = -200
       }
@@ -68,7 +68,7 @@ ideas = {
         global_building_slots_factor = -0.2
         industrial_capacity_factory = -0.05
         production_speed_buildings_factor = -0.2
-        consumer_goods_factor = 0.05
+        consumer_goods_factor = 0.1
       } 
     }
 
@@ -108,11 +108,11 @@ ideas = {
     hum_yao_guai_ying_xiang_jian_ruo_idea = {
       picture = unknown
       modifier = {
-        production_speed_arms_factory_factor = -0.3
+        production_speed_arms_factory_factor = -0.4
 				research_speed_factor = -0.2			
 				political_power_gain = -0.1
 				justify_war_goal_time = 0.5
-        consumer_goods_factor = 0.02
+        consumer_goods_factor = 0.05
       }
     }
 
@@ -182,7 +182,7 @@ ideas = {
         political_power_gain = -0.05
         global_building_slots_factor = -0.1
         production_speed_buildings_factor = -0.1
-        consumer_goods_factor = 0.02
+        consumer_goods_factor = 0.05
       }
     }
 

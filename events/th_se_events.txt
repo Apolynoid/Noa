@@ -1,0 +1,858 @@
+﻿add_namespace = see
+country_event = { #INB VS KAG(trigger)
+	id = see.1
+	title = see.1.t
+	desc = see.1.d
+	fire_only_once = yes
+	trigger = {
+		date > 147.2.20
+		has_global_flag = main_scenario
+		country_exists = INB
+		country_exists = KAG
+		tag = INB
+		is_subject = no
+		KAG = {
+			any_owned_state = {
+				or = {
+					is_claimed_by = INB
+					is_core_of = INB
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = see.1.1
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = 100
+				KAG = {
+					has_war = yes
+				}
+			}
+		}
+
+		set_country_flag = INB_war_with_KAG
+
+		army_experience = 10
+
+		declare_war_on = {
+		    target = KAG
+		    type = take_claimed_state
+		    generator = {
+		    	268 271 284 289
+		    }
+		}
+
+		hidden_effect = {
+			news_event = { days = 2 id = see.2}
+		}
+	}
+
+	option = {
+		name = see.1.2
+		ai_chance = {
+			base = 20
+		}
+	}
+	
+}
+
+news_event = { #INB VS KAG
+	id = see.2
+	title = see.2.t
+	desc = see.2.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = see.2.1
+		trigger = {
+			not = {
+				tag = EET
+				tag = KAG
+				tag = UDO
+				tag = INB
+			}
+		}
+	}
+
+	option = {
+		name = see.2.2
+		trigger = {
+			or = {
+				tag = EET
+				tag = UDO
+				tag = INB
+			}
+			
+		}
+	}
+
+	option = {
+		name = see.2.3
+		trigger = {
+			tag = KAG
+		}
+	}
+
+}
+
+news_event = { #YKR VS HKR
+	id = see.3
+	title = see.3.t
+	desc = see.3.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = see.3.1
+		trigger = {
+
+		}
+	}
+}
+
+
+country_event = {  #msd peace kag
+	id = see.4
+	title = see.4.t
+	desc = see.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = see.4.1
+		white_peace = KAG
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = see.4.2
+		EXHC_exhaustion_add10 = yes
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #BYA VS INB
+	id = see.5
+	title = see.5.t
+	desc = see.5.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		has_global_flag = main_scenario
+		date > 147.8.1
+		tag = BYA
+		is_subject = no
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		declare_war_on = {
+			target = INB
+			type = take_state_focus
+			generator ={
+				283 513 294
+			}
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = 100
+				INB = { has_war = yes}
+			}
+		}
+		name = see.5.1
+	}
+
+	option = {
+		name = see.5.2
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = { #BYA VS HU8
+	id = see.6
+	title = see.6.t
+	desc = see.6.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		has_global_flag = main_scenario
+		date > 149.6.1
+		tag = BYA
+		has_war = no
+		is_subject = no
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		declare_war_on = {
+			target = HU8
+			type = take_state_focus
+			generator ={
+				518
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		name = see.5.1
+	}
+
+	option = {
+		name = see.5.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { ####取消保独联合使馆
+	id = see.9
+	title = see.9.t
+	desc = see.9.d
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_idea = EMB_guarantee_idea
+		not = {
+			has_country_flag = EMB_clear_guarantee
+			has_country_flag = EMB_asked
+		}
+		threat > 0.7
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = EMB_asked
+		}
+	}
+
+	option = {
+		name = see.9.1
+		set_country_flag = EMB_clear_guarantee
+		
+		add_political_power = -50
+		add_war_support = -0.05
+		swap_ideas = {
+			remove_idea = EMB_guarantee_idea
+			add_idea = EMB_guarantee_idea2
+		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				not = {
+					is_neighbor_of = EMB
+				}
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = see.9.2
+		remove_ideas = EMB_guarantee_idea
+		diplomatic_relation = {
+		    country = EMB
+		    relation = guarantee
+		    active = no
+		}
+		ai_chance = {
+			base = 90
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					not = { has_global_flag = EMB_first_revoke}
+				}
+				set_global_flag = EMB_first_revoke
+				news_event = { days = 2 id = see.10}
+			}
+		}
+	}
+}
+
+news_event = { ####取消保独联合使馆 新闻
+	id = see.10
+	title = see.10.t
+	desc = see.10.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = see.10.1
+		trigger = {
+			has_country_flag = EMB_clear_guarantee
+		}
+	}
+
+	option = {
+		name = see.10.2
+		trigger = {
+			has_guaranteed = EMB
+		}
+	}
+
+	option = {
+		name = see.10.3
+		trigger = {
+			not = {
+				has_country_flag = EMB_clear_guarantee
+				has_guaranteed = EMB
+			}
+		}
+	}
+}
+
+country_event = { ####保独使馆的正面效果
+	id = see.11
+	title = see.11.t
+	desc = see.11.d
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_guaranteed = EMB
+		not = {
+			has_idea = EMB_guarantee_idea
+			has_idea = EMB_guarantee_idea2
+		}
+		date > 146.1.10
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = see.11.1
+		add_ideas = EMB_guarantee_idea
+	}
+}
+
+country_event = { ####不再保独时
+	id = see.12
+	title = see.12.t
+	desc = see.12.d
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+			has_idea = EMB_guarantee_idea
+			has_idea = EMB_guarantee_idea2
+		}
+		not = {
+			has_guaranteed = EMB
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = see.12.1
+		remove_ideas = EMB_guarantee_idea
+		remove_ideas = EMB_guarantee_idea2
+	}
+}
+
+country_event = { ####因幡帝附庸
+	id = see.13
+	title = see.13.t
+	desc = see.13.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+			and = {
+				date > 150.6.1
+				INB = { has_country_flag = white_peace_with_KAG}
+			}
+			and = {
+				date > 149.6.1
+				INB = { 
+					not = {
+						owns_state = 288
+						owns_state = 293
+					}
+				}
+			}
+		}
+		tag = EET
+		country_exists = INB
+		is_subject = no
+		has_war = no
+		not = {
+			has_government = neworder
+		}
+		INB = { 
+			is_subject = no
+			is_ai = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = see.13.1
+		INB = {
+			set_cosmetic_tag = INB_EET
+			subject_level4 = yes
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = see.14}
+		}
+	}
+
+	option = {
+		name = see.13.2
+		give_guarantee = INB
+	}
+}
+
+news_event = { ####因幡帝附庸(新闻)
+	id = see.14
+	title = see.14.t
+	desc = see.14.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = see.14.1
+		trigger  ={
+			not = {
+				tag = EET
+				is_subject_of = EET
+			}
+		}
+	}
+
+	option = {
+		name = see.14.2
+		trigger  ={
+			or = {
+				tag = EET
+				is_subject_of = EET
+			}
+		}
+	}
+}
+
+country_event = { #INB VS KAG(peace)
+	id = see.15
+	title = see.15.t
+	desc = see.15.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		INB = {
+			has_country_flag = INB_war_with_KAG
+			has_war_with = KAG
+		}
+		tag = KAG
+		is_subject = no
+		or = {
+			and = {
+				controls_state = 288
+				controls_state = 293
+				controls_state = 531
+				date > 148.1.1
+			}
+			date > 149.3.1
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = see.15.1
+		ai_chance = {
+			base = 100
+		}
+
+		EXHC_exhaustion_minus5 = yes
+
+		if = {
+			limit = {
+				KAG = {
+					controls_state = 288
+					controls_state = 293
+				}
+			}
+			KAG = {
+				transfer_state = 288
+				transfer_state = 293
+			}
+			else = {
+				INB = {
+					set_country_flag = white_peace_with_KAG
+				}
+			}
+		}
+		
+		white_peace = INB
+	}
+
+	option = {
+		name = see.15.2
+		EXHC_exhaustion_add20 = yes
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #MOK HU8 VS BYA
+	id = see.16
+	title = see.16.t
+	desc = see.16.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		BYA = {
+			has_war_with = INB
+		}
+		date < 149.1.1
+		is_subject = no
+		or = {
+			and = {
+				tag = MOK
+				is_ai = no
+			}
+			and = {
+				tag = HU8
+				is_ai = no
+			}
+			and = {
+				tag = MOK
+				is_ai = yes
+				HU8 = {
+					is_ai = yes
+				}
+			}
+			and = {
+				tag = MOK
+				is_ai = no
+				HU8 = {
+					is_ai = no
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 55
+	}
+
+	option = {
+		name = see.16.1
+		set_country_flag = MOK_HU8_united
+		ai_chance = {
+			base = 100
+		}
+		HU8 = {
+			declare_war_on = {
+				target = BYA
+				type = annex_everything
+			}
+		}
+		MOK = {
+			declare_war_on = {
+				target = BYA
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = see.16.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #MOK subject HU8 or vice versa
+	id = see.17
+	title = see.17.t
+	desc = see.17.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_war = no
+		has_country_flag = MOK_HU8_united
+		or = {
+			BYA = {
+				exists = no
+				is_subject_of = HU8
+				is_subject_of = MOK
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 75
+	}
+
+	option = {
+		name = see.17.1
+		if = {
+			limit = {
+				tag = HU8
+			}
+			every_country = {
+				limit = {
+					is_subject_of = MOK
+				}
+				subject_level2 = yes
+				can_core = yes
+			}	
+			MOK = {
+				subject_level2 = yes
+				can_core = yes
+			}
+		}
+		if = {
+			limit = {
+				tag = MOK
+			}
+			every_country = {
+				limit = {
+					is_subject_of = HU8
+				}
+				subject_level2 = yes
+				can_core = yes
+			}	
+			HU8 = {
+				subject_level2 = yes
+				can_core = yes
+			}
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = see.18 }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = see.17.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+news_event = { #MOK subject HU8 or vice versa news
+	id = see.18
+	title = see.18.t
+	desc = see.18.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = see.18.1
+		trigger = {
+			or = {
+				tag = MOK
+				tag = HU8
+				is_subject_of = MOK
+				is_subject_of = HU8
+			}
+		}
+	}
+
+	option = {
+		name = see.18.2
+		trigger = {
+			or = {
+				tag = EET
+				tag = INB
+				tag = KAG
+				tag = RGO
+				tag = UDO
+			}
+		}
+	}
+
+	option = {
+		name = see.18.3
+		trigger = {
+			not = {
+				tag = EET
+				tag = INB
+				tag = KAG
+				tag = RGO
+				tag = UDO
+				tag = MOK
+				tag = HU8
+				is_subject_of = MOK
+				is_subject_of = HU8
+			}
+		}
+	}
+}
+
+country_event = { #竹林兔子叛亂
+	id = see.19
+	title = see.19.t
+	desc = see.19.d
+	fire_only_once = yes
+	trigger = {
+		tag = EET
+		or = {
+			# has_government = fandong
+			has_government = neworder
+			neworder > 0.39
+			# fandong > 0.39
+		}
+		date < 150.1.1
+	}
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				set_country_flag = EET_subject
+				ROOT = {
+					end_puppet = PREV
+				}
+				add_timed_idea = {
+					idea = panluantouxiang_idea
+					days = 90
+				}
+				declare_war_on = {
+					target = ROOT
+					type = duli_wargoal
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = see.19.1
+		set_country_flag = {
+			flag = EET_subject_rebel
+			value = 1
+			days = 180
+		}
+		set_country_flag = EET_subject_has_rebelled
+		hidden_effect = {
+			news_event = { id = see.20 days = 2 }
+		}
+	}
+}
+
+news_event = { #竹林兔子叛乱 新闻
+	id = see.20
+	title = see.20.t
+	desc = see.20.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = see.20.1
+		trigger = {
+			tag = EET
+		}
+	}
+
+	option = {
+		name = see.20.2
+		trigger = {
+			has_war_with = EET
+		}
+	}
+
+	option = {
+		name = see.20.3
+		trigger = {
+			not = {
+				has_war_with = EET
+				tag = EET
+			}
+		}
+	}
+}
+
+country_event = { #竹林兔子叛亂 结束
+	id = see.21
+	title = see.21.t
+	desc = see.21.d
+	fire_only_once = yes
+	trigger = {
+		tag = EET
+		has_country_flag = EET_subject_has_rebelled
+		or = {
+			any_country = {
+				is_subject_of = ROOT
+				has_country_flag = EET_subject
+			}
+			not = {
+				has_country_flag = EET_subject_rebel
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = see.21.1
+		ROOT = {
+			every_country = {
+				limit = {
+					has_country_flag = EET_subject
+				}
+				white_peace = ROOT
+				subject_level4 = yes
+			}
+		}
+	}
+	option = {
+		name = see.21.2
+	}
+}

@@ -143,7 +143,7 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = hum_improve_reserve_tt
       set_variable = {
-        HUM.reserverRatio = 0.75
+        HUM.reserverRatio = 0.5
       }
     }
 
@@ -1118,13 +1118,10 @@ focus_tree = {
     }
 
     available = {
-      OR = {
-        hum_reserve_over_35 = yes
-        NOT = {
-          OR = {
-            has_idea = hum_yao_guai_de_ying_xiang_idea
-            has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
-          }
+      NOT = {
+        OR = {
+          has_idea = hum_yao_guai_de_ying_xiang_idea
+          has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
         }
       }
     }
