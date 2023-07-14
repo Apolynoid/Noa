@@ -1,0 +1,56 @@
+characters={
+	EMB_may ={
+		name = EMB_may
+		portraits={
+			civilian={
+				large="gfx/leaders/EMB/EMB_may.dds"
+				small="gfx/leaders/EMB/EMB_may_small.dds"
+			}
+			army = {
+				large="gfx/leaders/EMB/EMB_may.dds"
+				small="gfx/leaders/EMB/EMB_may_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character media_personality   }
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 4
+            skill = 4
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = EMB_may
+			name = EMB_may
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.02
+				compliance_growth = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

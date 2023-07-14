@@ -1,0 +1,272 @@
+characters={
+	TKM_kog ={
+		name = TKM_kog
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero old_guard }
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 7
+			# id = 29            
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_kog
+			name = TKM_kog
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				trade_opinion_factor = 0.3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_benben ={
+		name = TKM_benben
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_huolizhuanjia trait_cautious }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 3
+			# id = 30            
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_benben
+			name = TKM_benben
+			cost = 200
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_yatsuhashi ={
+		name = TKM_yatsuhashi
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_reckless th_trait_tezhongzhuanjia  }
+			attack_skill = 7
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			# id = 31              
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_yatsuhashi
+			name = TKM_yatsuhashi
+			cost = 200
+			modifier = {
+				equipment_conversion_speed = 0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_raiko ={
+		name = TKM_raiko
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero th_trait_tezhongzhuanjia }
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 8
+			logistics_skill = 7
+			# id = 32 
+			skill = 7
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_raiko
+			name = TKM_raiko
+			cost = 200
+			modifier = {
+				equipment_capture_factor = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_kokoro ={
+		name = TKM_kokoro
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_chongjizhuanjia  }
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 4
+			# id = 33            
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_kokoro
+			name = TKM_kokoro
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_kog_leader ={
+		name = TKM_kog_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+		}
+	}
+	TKM_benben_leader ={
+		name = TKM_benben_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+	}
+	TKM_yatsuhashi_leader ={
+		name = TKM_yatsuhashi_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+	TKM_raiko_leader ={
+		name = TKM_raiko_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+	}
+	TKM_kokoro_leader ={
+		name = TKM_kokoro_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+	}
+	TKM_council_leader = {
+		name = TKM_council_leader #妖怪管理委员会
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+	}
+}
