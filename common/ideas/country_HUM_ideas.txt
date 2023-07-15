@@ -7,11 +7,12 @@ ideas = {
         production_speed_arms_factory_factor = -0.8
 				industrial_capacity_factory = -0.1
 				research_speed_factor = -0.5			
-				political_power_gain = -0.2
+				political_power_gain = -1
 				global_building_slots_factor = -0.1
 				justify_war_goal_time = 2
 				enemy_justify_war_goal_time = 1
         consumer_goods_factor = 0.1
+        stability_factor = -0.2
       }
     }
 
@@ -110,9 +111,10 @@ ideas = {
       modifier = {
         production_speed_arms_factory_factor = -0.4
 				research_speed_factor = -0.2			
-				political_power_gain = -0.1
+				political_power_gain = -0.5
 				justify_war_goal_time = 0.5
         consumer_goods_factor = 0.05
+        stability_factor = -0.1
       }
     }
 
@@ -138,7 +140,7 @@ ideas = {
     hum_ren_lei_de_tiao_jie_fei_idea = {
       picture = HUM_human_mediation_fee
       modifier = {
-        consumer_goods_factor = 0.08
+        consumer_goods_factor = -0.08
       }
     }
 
@@ -186,6 +188,23 @@ ideas = {
       }
     }
 
+    # 人类自由市
+    hum_ren_lei_zi_you_shi_idea = {
+      picture = HUM_human_free_city
+
+      cancel = {
+        NOT = {
+          has_government = guli
+        }
+      }
+
+      modifier = {
+        enemy_justify_war_goal_time = 1
+        stability_factor = 0.05
+        justify_war_goal_time = 1
+      }
+    }
+
     # 人里防御计划
     hum_ren_li_fang_yu_ji_hua_idea = {
       picture = YUG_federal_defense_council
@@ -207,7 +226,7 @@ ideas = {
       modifier = {
         max_planning_factor = 0.1
         production_speed_bunker_factor = 0.25
-        production_speed_railroad_factor = 0.1
+        production_speed_rail_way_factor = 0.1
       }
     }
 
@@ -216,7 +235,7 @@ ideas = {
       modifier = {
         max_planning_factor = 0.1
         production_speed_bunker_factor = 0.25
-        production_speed_railroad_factor = 0.1
+        production_speed_rail_way_factor = 0.1
         supply_combat_penalties_on_core_factor = -0.3
       }
     }

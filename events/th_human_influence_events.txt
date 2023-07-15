@@ -34,7 +34,21 @@ country_event = {
 		ai_chance = {
 			base = 1
 			modifier = {
-				original_tag = HUM
+				OR = {
+					original_tag = HUM
+					original_tag = TKM
+				}
+				factor = 0
+			}
+			modifier = {
+				AND = {
+					OR = {
+						original_tag = SCA
+						original_tag = SEJ
+						original_tag = NMS
+					}
+					has_political_power > 40
+				}
 				factor = 0
 			}
 		}
@@ -58,6 +72,17 @@ country_event = {
 				original_tag = HUM
 				factor = 0
 			}
+			modifier = {
+				AND = {
+					OR = {
+						original_tag = KAG
+						original_tag = MAM
+						original_tag = MSD
+					}
+					has_political_power > 50
+				}
+				add = 10
+			}
 		}
 	}
 
@@ -79,6 +104,17 @@ country_event = {
 				original_tag = HUM
 				factor = 0
 			}
+			modifier = {
+				AND = {
+					OR = {
+						original_tag = KAG
+						original_tag = MAM
+						original_tag = MSD
+					}
+					has_political_power > 50
+				}
+				add = 5
+			}
 		}
 	}
 
@@ -96,6 +132,21 @@ country_event = {
 		}
 		ai_chance = {
 			base = 1
+			modifier = {
+				OR = {
+					original_tag = KAG
+					original_tag = MAM
+					original_tag = MSD
+				}
+				factor = 0
+			}
+			modifier = {
+				AND = {
+					original_tag = TKM
+					has_political_power > 60
+				}
+				add = 5
+			}
 		}
 	}
 }

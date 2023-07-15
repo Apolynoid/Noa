@@ -628,7 +628,6 @@ initial_leader_setting = {
     }
     EMB = {
         recruit_character = EMB_may
-        recruit_character = EMB_may_leader
     }
     GYK = {
         recruit_character = GYK_yuma

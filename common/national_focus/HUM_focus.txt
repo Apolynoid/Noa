@@ -143,7 +143,7 @@ focus_tree = {
     completion_reward = {
       custom_effect_tooltip = hum_improve_reserve_tt
       set_variable = {
-        HUM.reserverRatio = 0.5
+        HUM.reserverRatio = 0.3
       }
     }
 
@@ -421,6 +421,7 @@ focus_tree = {
       else = {
         remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_a_idea
       }
+      add_ideas = hum_ren_lei_zi_you_shi_idea
       hidden_effect = {
         news_event = hum.109
       }

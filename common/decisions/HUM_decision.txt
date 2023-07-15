@@ -54,3 +54,42 @@ HUM_tan_pan_po_lie = {
         }
     }
 }
+
+HUM_lian_he_shi_guan_wen_ti = {
+    # 要求EMB回归
+    HUM_yao_qiu_EMB_hui_gui = {
+        allowed = {
+            original_tag = HUM
+        }
+
+        visible = {
+            EMB = {
+                exists = yes
+                is_subject = no
+            }
+        }
+
+        available = {
+            EMB = {
+                is_in_faction = no
+            }
+            NOT = {
+                any_country = {
+                    has_guaranteed = EMB
+                }
+            }
+        }
+
+        days_remove = 30
+
+        remove_effect = {
+            EMB = {
+                country_event = {
+                    id = hum.110
+                }
+            }
+        }
+
+        war_with_on_remove = EMB
+    }
+}

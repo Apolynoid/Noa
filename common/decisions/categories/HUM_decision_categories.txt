@@ -9,3 +9,21 @@ HUM_tan_pan_po_lie = {
 	}
 }
 
+# 联合使馆问题
+HUM_lian_he_shi_guan_wen_ti = {
+	icon = generic_political_actions
+
+	priority = 87
+
+	allowed = {
+		original_tag = HUM
+	}
+
+	visible = {
+		EMB = {
+			exists = yes
+			is_subject = no
+		}
+	}
+}
+

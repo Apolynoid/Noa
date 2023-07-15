@@ -284,3 +284,103 @@ news_event = {
 		}
 	}
 }
+
+# EMB HUM要求我们回归
+country_event = {
+	id = hum.110
+	title = hum.110.t
+	desc = hum.110.d
+	is_triggered_only = yes
+	# 也许EMB没有独立存在的必要了
+	option = {
+		name = hum.110.1
+		ai_chance = {
+			base = 1
+		}
+		if = {
+			limit = {
+				HUM = {
+					is_ai = yes
+				}
+			}
+			custom_effect_tooltip = hum_emb_switch_to_hum_tt
+			hidden_effect = {
+				HUM = {
+					change_tag_from = ROOT
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = hum_emb_gameove_tt
+		}
+		hidden_effect = {
+			HUM = {
+				country_event = hum.111
+			}
+			# 将领移交
+			EMB = {
+				every_character = {
+					set_nationality = HUM
+				}
+			}
+			# 装备移交
+			EMB = {
+				transfer_units_fraction= {
+					target = HUM
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					air_ratio = 1
+				}
+			}
+			# 地块吞并
+			EMB = {
+				every_owned_state = {
+					transfer_state_to = HUM
+				}
+			}
+		}
+	}
+
+	# 我们不会屈服
+	option = {
+		name = hum.110.2
+		ai_chance = {
+			base = 0
+		}
+		custom_effect_tooltip = hum_emb_war_against_hum_tt
+		hidden_effect = {
+			HUM = {
+				country_event = {
+					id = hum.112
+				}
+			}
+		}
+	}
+}
+
+# EMB同意回归
+country_event = {
+	id = hum.111
+	title = hum.111.t
+	desc = hum.111.d
+	is_triggered_only = yes
+	option = {
+		name = hum.111.1
+	}
+}
+
+# EMB拒绝回归
+country_event = {
+	id = hum.112
+	title = hum.112.t
+	desc = hum.112.d
+	is_triggered_only = yes
+	option = {
+		name = hum.112.1
+		create_wargoal = {
+			target = EMB
+			type = annex_everything
+		}
+	}
+}

@@ -104,6 +104,7 @@ hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea:0 "向斯卡蕾特帝国支付调解费"
 hum_ren_lei_de_tiao_jie_fei_idea:0 "人类的调解费"
 hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea:0 "修订后的与九十九工业协议"
 hum_shou_zhi_yue_de_cai_fa_idea:0 "受制约的财阀"
+hum_ren_lei_zi_you_shi_idea:0 "人类自由市"
 hum_ren_li_fang_yu_ji_hua_idea:0 "人里防御计划"
 hum_ren_li_fang_yu_ji_hua_a_idea:0 "人里防御计划"
 hum_ren_li_fang_yu_ji_hua_b_idea:0 "人里防御计划"
@@ -135,12 +136,17 @@ hum_if_SCA_agree_tt:0 "如果[SCA.GetFlag][SCA.GetName]同意，则[TKM.GetFlag]
 hum_SCA_war_possibility_tt:0 "§R如果谈判破裂，我们必须参与[HUM.GetFlag][HUM.GetName]对[TKM.GetFlag][TKM.GetName]的战争！§!"
 hum_war_against_HUM_and_SCA_tt:0 "§R这意味着与[HUM.GetFlag][HUM.GetName]和[SCA.GetFlag][SCA.GetName]的战争§!"
 hum_war_against_HUM_tt:0 "§R这意味着与[HUM.GetFlag][HUM.GetName]的战争§!"
+hum_emb_switch_to_hum_tt:0 "§Y作为[HUM.GetFlag][HUM.GetName]继续游戏§!"
+hum_emb_gameove_tt:0 "§R游戏结束§!"
+hum_emb_war_against_hum_tt:0 "§R这意味着与[HUM.GetFlag][HUM.GetName]的战争§!"
 
 
  #decision
 HUM_tan_pan_po_lie:0 "谈判破裂"
 TKM_tan_pan_po_lie_hou_de_zhan_zheng_1:0 "谈判破裂后的战争"
 TKM_tan_pan_po_lie_hou_de_zhan_zheng_2:0 "谈判破裂后的战争"
+HUM_lian_he_shi_guan_wen_ti:0 "联合使馆问题"
+HUM_yao_qiu_EMB_hui_gui:0 "要求[EMB.GetFlag][EMB.GetName]回归"
 
 
 # flag
