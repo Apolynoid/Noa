@@ -183,6 +183,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_revenge"
+		texturefile = "gfx/interface/goals/focus_generic_revenge.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_revanchism"
+		texturefile = "gfx/interface/goals/focus_generic_revanchism.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_independence"
 		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
 	}
@@ -213,6 +223,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_TKM.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_hegemonist_TKM"
 		texturefile = "gfx/interface/goals/focus_generic_attack_hegemonist_TKM.dds"			
 	}
@@ -223,6 +238,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_NMS"
+		texturefile = "gfx/interface/goals/focus_generic_attack_NMS.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_YKR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_YKR.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_OTG"
 		texturefile = "gfx/interface/goals/focus_generic_attack_OTG.png"			
 	}
@@ -230,6 +255,21 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_attack_MRY"
 		texturefile = "gfx/interface/goals/focus_generic_attack_MRY.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_MSD"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MSD.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_KAG"
+		texturefile = "gfx/interface/goals/focus_generic_attack_KAG.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_MAM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MAM.png"			
 	}
 
 	SpriteType = {
@@ -316,6 +356,11 @@ spriteTypes = {
 	#### HUM Kamishirasawa Keine 人间之里
 
 	SpriteType = {
+		name = "HUM_focus_end_of_protection"
+		texturefile = "gfx/interface/goals/focus_HUM_end_of_protection.png"			
+	}
+
+	SpriteType = {
 		name = "HUM_focus_totally_crash_the_plutocrat"
 		texturefile = "gfx/interface/goals/focus_HUM_totally_crash_the_plutocrat.png"			
 	}
@@ -323,6 +368,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "HUM_focus_human_free_city"
 		texturefile = "gfx/interface/goals/focus_HUM_human_free_city.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_empire_reborn"
+		texturefile = "gfx/interface/goals/focus_HUM_empire_reborn.png"			
 	}
 	
 	#### MRS Kirisame Marisa 魔法之森

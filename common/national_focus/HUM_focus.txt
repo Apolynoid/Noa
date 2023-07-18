@@ -20,7 +20,7 @@ focus_tree = {
     id = HUM_cheng_ren_shi_bai
     icon = GFX_focus_CZE_german_puppet
     cost = 3
-    x = 10
+    x = 24
     y = 1
 
     available ={
@@ -331,7 +331,7 @@ focus_tree = {
   # “保护”结束
   focus = {
     id = HUM_bao_hu_jie_shu
-    icon = unknown
+    icon = HUM_focus_end_of_protection
     cost = 7
     x = -2
     y = 1
@@ -743,7 +743,7 @@ focus_tree = {
     id = HUM_chong_ran_fu_quan_zhi_huo
     icon = unknown
     cost = 7
-    x = -10
+    x = -16
     y = 0
 
     relative_position_id = HUM_cheng_ren_shi_bai
@@ -771,9 +771,9 @@ focus_tree = {
   # 宣扬复仇主义
   focus = {
     id = HUM_xuan_yang_fu_chou_zhu_yi
-    icon = unknown
+    icon = GFX_focus_revanchism
     cost = 7
-    x = 10
+    x = 16
     y = 0
 
     relative_position_id = HUM_cheng_ren_shi_bai
@@ -798,62 +798,706 @@ focus_tree = {
   }
 
   # 暗中发展
+  focus = {
+    id = HUM_an_zhong_fa_zhan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_xuan_yang_fu_chou_zhu_yi
+
+    prerequisite = {
+      focus = HUM_xuan_yang_fu_chou_zhu_yi
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 转移武器
+  focus = {
+    id = HUM_zhuan_yi_wu_qi
+    icon = unknown
+    cost = 7
+    x = -3
+    y = 1
+
+    relative_position_id = HUM_an_zhong_fa_zhan
+
+    prerequisite = {
+      focus = HUM_an_zhong_fa_zhan
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 地下工坊
+  focus = {
+    id = HUM_di_xia_gong_fang
+    icon = unknown
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_zhuan_yi_wu_qi
+
+    prerequisite = {
+      focus = HUM_zhuan_yi_wu_qi
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 传播复仇思想
+  focus = {
+    id = HUM_chuan_bo_fu_chou_si_xiang
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_an_zhong_fa_zhan
+
+    prerequisite = {
+      focus = HUM_an_zhong_fa_zhan
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 秘密结社
+  focus = {
+    id = HUM_mi_mi_jie_she
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_chuan_bo_fu_chou_si_xiang
+
+    prerequisite = {
+      focus = HUM_chuan_bo_fu_chou_si_xiang
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 招募武装力量
+  focus = {
+    id = HUM_zhao_mu_wu_zhuang_li_liang
+    icon = unknown
+    cost = 7
+    x = 3
+    y = 1
+
+    relative_position_id = HUM_an_zhong_fa_zhan
+
+    prerequisite = {
+      focus = HUM_an_zhong_fa_zhan
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 实验性装甲部队
+  focus = {
+    id = HUM_shi_yan_xing_zhuang_jia_bu_dui
+    icon = unknown
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_zhao_mu_wu_zhuang_li_liang
+
+    prerequisite = {
+      focus = HUM_zhao_mu_wu_zhuang_li_liang
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 推翻通敌者
+  focus = {
+    id = HUM_tui_fan_tong_di_zhe
+    icon = unknown
+    cost = 12
+    x = 0
+    y = 3
+
+    relative_position_id = HUM_an_zhong_fa_zhan
+
+    prerequisite = {
+      focus = HUM_di_xia_gong_fang
+    }
+
+    prerequisite = {
+      focus = HUM_mi_mi_jie_she
+    }
+
+    prerequisite = {
+      focus = HUM_shi_yan_xing_zhuang_jia_bu_dui
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 修改复权思想
+  focus = {
+    id = HUM_xiu_gai_fu_quan_si_xiang
+    icon = unknown
+    cost = 7
+    x = -3
+    y = 1
+
+    relative_position_id = HUM_tui_fan_tong_di_zhe
+
+    prerequisite = {
+      focus = HUM_tui_fan_tong_di_zhe
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 清洗通敌者
+  focus = {
+    id = HUM_qing_xi_tong_di_zhe
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_tui_fan_tong_di_zhe
+
+    prerequisite = {
+      focus = HUM_tui_fan_tong_di_zhe
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 紧急授权法案
+  focus = {
+    id = HUM_jin_ji_shou_quan_fa_an
+    icon = unknown
+    cost = 7
+    x = 3
+    y = 1
+
+    relative_position_id = HUM_tui_fan_tong_di_zhe
+
+    prerequisite = {
+      focus = HUM_tui_fan_tong_di_zhe
+    }
+
+    completion_reward = {
+      
+    }
+  }
 
   # 帝国重生
+  focus = {
+    id = HUM_di_guo_chong_sheng
+    icon = HUM_focus_empire_reborn
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = HUM_tui_fan_tong_di_zhe
+
+    prerequisite = {
+      focus = HUM_xiu_gai_fu_quan_si_xiang
+    }
+
+    prerequisite = {
+      focus = HUM_qing_xi_tong_di_zhe
+    }
+
+    prerequisite = {
+      focus = HUM_jin_ji_shou_quan_fa_an
+    }
+
+    completion_reward = {
+      set_cosmetic_tag = HUM_empire
+      remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+    }
+  }
 
   # 宣扬军国主义
+  focus = {
+    id = HUM_xuan_yang_jun_guo_zhu_yi
+    icon = unknown
+    cost = 7
+    x = -4
+    y = 1
+
+    relative_position_id = HUM_di_guo_chong_sheng
+
+    prerequisite = {
+      focus = HUM_di_guo_chong_sheng
+    }
+
+    completion_reward = {
+      add_ideas = hum_ren_lei_jun_guo_zhu_yi_idea
+    }
+  }
 
   # 战争宣传
+  focus = {
+    id = HUM_zhan_zheng_xuan_chuan
+    icon = GFX_focus_war_propaganda
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = HUM_xuan_yang_jun_guo_zhu_yi
+
+    prerequisite = {
+      focus = HUM_xuan_yang_jun_guo_zhu_yi
+    }
+
+    completion_reward = {
+      add_war_support = 0.1
+    }
+  }
 
   # 义务兵役制
+  focus = {
+    id = HUM_yi_wu_bing_yi_zhi
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_zhan_zheng_xuan_chuan
+
+    prerequisite = {
+      focus = HUM_zhan_zheng_xuan_chuan
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = hum_ren_lei_jun_guo_zhu_yi_idea
+        add_idea = hum_ren_lei_jun_guo_zhu_yi_a_idea
+      }
+    }
+  }
 
   # 选拔战争精英
+  focus = {
+    id = HUM_xuan_ba_zhan_zheng_jing_ying
+    icon = GFX_focus_generic_military_mission
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_yi_wu_bing_yi_zhi
+
+    prerequisite = {
+      focus = HUM_yi_wu_bing_yi_zhi
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = hum_ren_lei_jun_guo_zhu_yi_a_idea
+        add_idea = hum_ren_lei_jun_guo_zhu_yi_b_idea
+      }
+    }
+  }
 
   # 人类兵器研究所
+  focus = {
+    id = HUM_ren_lei_bing_qi_yan_jiu_suo
+    icon = GFX_focus_science_institute
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = HUM_xuan_yang_jun_guo_zhu_yi
+
+    prerequisite = {
+      focus = HUM_xuan_yang_jun_guo_zhu_yi
+    }
+
+    completion_reward = {
+      add_ideas = hum_bing_qi_yan_jiu_suo_idea
+    }
+  }
 
   # 先进装甲研究
+  focus = {
+    id = HUM_xian_jin_zhuang_jia_yan_jiu
+    icon = GFX_goal_generic_build_tank
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_ren_lei_bing_qi_yan_jiu_suo
+
+    prerequisite = {
+      focus = HUM_ren_lei_bing_qi_yan_jiu_suo
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 2
+        ahead_reduction = 1
+        category = shield
+      }
+    }
+  }
 
   # 装甲战术研究
+  focus = {
+    id = HUM_zhuang_jia_zhan_shu_yan_jiu
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_xian_jin_zhuang_jia_yan_jiu
+
+    prerequisite = {
+      focus = HUM_xian_jin_zhuang_jia_yan_jiu
+    }
+
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 2
+        category = yingxiongzhuyi
+      }
+    }
+  }
 
   # 优越的人类种族
+  focus = {
+    id = HUM_you_yue_de_ren_lei_zhong_zu
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = HUM_xuan_yang_jun_guo_zhu_yi
+
+    prerequisite = {
+      focus = HUM_xuan_ba_zhan_zheng_jing_ying
+    }
+
+    prerequisite = {
+      focus = HUM_zhuang_jia_zhan_shu_yan_jiu
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = hum_ren_lei_jun_guo_zhu_yi_b_idea
+        add_idea = hum_ren_lei_jun_guo_zhu_yi_c_idea
+      }
+    }
+  }
 
   # 复仇之路
+  focus = {
+    id = HUM_fu_chou_zhi_lu
+    icon = GFX_focus_revenge
+    cost = 7
+    x = 4
+    y = 1
+
+    relative_position_id = HUM_di_guo_chong_sheng
+
+    prerequisite = {
+      focus = HUM_di_guo_chong_sheng
+    }
+
+    completion_reward = {
+      add_ideas = hum_fu_chou_zhi_lu_idea
+    }
+  }
 
   # 夺回工业区
+  focus = {
+    id = HUM_duo_hui_gong_ye_qu
+    icon = GFX_focus_attack_TKM
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = HUM_fu_chou_zhi_lu
+
+    prerequisite = {
+      focus = HUM_fu_chou_zhi_lu
+    }
+
+    bypass = {
+      TKM = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = TKM
+
+    completion_reward = {
+      create_wargoal = {
+        target = TKM
+        type = annex_everything
+      }
+    }
+  }
 
   # 对命莲寺复仇
+  focus = {
+    id = HUM_dui_ming_lian_si_fu_chou
+    icon = GFX_focus_attack_NMS
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_duo_hui_gong_ye_qu
+
+    prerequisite = {
+      focus = HUM_duo_hui_gong_ye_qu
+    }
+
+    bypass = {
+      NMS = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = NMS
+
+    completion_reward = {
+      create_wargoal = {
+        target = NMS
+        type = annex_everything
+      }
+    }
+  }
 
   # 消灭狸猫长老会
+  focus = {
+    id = HUM_xiao_mie_li_mao_zhang_lao_hui
+    icon = GFX_focus_attack_MAM
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_dui_ming_lian_si_fu_chou
+
+    prerequisite = {
+      focus = HUM_dui_ming_lian_si_fu_chou
+    }
+
+    bypass = {
+      MAM = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = MAM
+
+    completion_reward = {
+      create_wargoal = {
+        target = MAM
+        type = annex_everything
+      }
+    }
+  }
 
   # 斯卡蕾特的命运
+  focus = {
+    id = HUM_si_ka_lei_te_de_ming_yun
+    icon = GFX_focus_attack_SCA
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_xiao_mie_li_mao_zhang_lao_hui
+
+    prerequisite = {
+      focus = HUM_xiao_mie_li_mao_zhang_lao_hui
+    }
+
+    bypass = {
+      SCA = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = SCA
+
+    completion_reward = {
+      create_wargoal = {
+        target = SCA
+        type = annex_everything
+      }
+    }
+  }
 
   # 处理兽道妖怪
+  focus = {
+    id = HUM_chu_li_shou_dao_yao_guai
+    icon = GFX_focus_attack_MSD
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = HUM_fu_chou_zhi_lu
+
+    prerequisite = {
+      focus = HUM_fu_chou_zhi_lu
+    }
+
+    bypass = {
+      MSD = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = MSD
+
+    completion_reward = {
+      create_wargoal = {
+        target = MSD
+        type = annex_everything
+      }
+    }
+  }
 
   # 解决竹林妖怪
+  focus = {
+    id = HUM_jie_jue_zhu_lin_yao_guai
+    icon = GFX_focus_attack_KAG
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_chu_li_shou_dao_yao_guai
+
+    prerequisite = {
+      focus = HUM_chu_li_shou_dao_yao_guai
+    }
+
+    bypass = {
+      KAG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = KAG
+
+    completion_reward = {
+      create_wargoal = {
+        target = KAG
+        type = annex_everything
+      }
+    }
+  }
 
   # 真正的下克上
+  focus = {
+    id = HUM_zhen_zheng_de_xia_ke_shang
+    icon = GFX_focus_attack_SEJ
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_jie_jue_zhu_lin_yao_guai
+
+    prerequisite = {
+      focus = HUM_jie_jue_zhu_lin_yao_guai
+    }
+
+    bypass = {
+      SEJ = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = SEJ
+
+    completion_reward = {
+      create_wargoal = {
+        target = SEJ
+        type = annex_everything
+      }
+    }
+  }
 
   # 粉碎幕后主使
+  focus = {
+    id = HUM_fen_sui_mu_hou_zhu_shi
+    icon = GFX_focus_attack_YKR
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = HUM_zhen_zheng_de_xia_ke_shang
+
+    prerequisite = {
+      focus = HUM_zhen_zheng_de_xia_ke_shang
+    }
+
+    bypass = {
+      YKR = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    will_lead_to_war_with = YKR
+
+    completion_reward = {
+      create_wargoal = {
+        target = YKR
+        type = annex_everything
+      }
+    }
+  }
 
   # 工业线
   # 战后重建
@@ -861,7 +1505,7 @@ focus_tree = {
     id = HUM_zhan_hou_chong_jian
     icon = GFX_focus_reconstruction
     cost = 7
-    x = 30
+    x = 58
     y = 1
 
     available ={
@@ -1225,7 +1869,7 @@ focus_tree = {
   # 整合地区生产
   focus = {
     id = HUM_zheng_he_di_qu_sheng_chan
-    icon = unknown
+    icon = GFX_focus_SOV_merge_plants
     cost = 12
     x = 0
     y = 4

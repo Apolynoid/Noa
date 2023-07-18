@@ -172,6 +172,7 @@
     # set_research_slots = 6
     # Starting tech
     set_party_name = { ideology = neworder long_name = HUM_neworder_main_party name = HUM_neworder_main_party }
+    set_country_flag = bunengsuiyiqiehuanzhengti
     remove_ideas = {
         renli144
     }

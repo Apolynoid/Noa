@@ -300,6 +300,112 @@ ideas = {
       }
     }
 
+    # 新规
+    # 人类军国主义
+    hum_ren_lei_jun_guo_zhu_yi_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.05
+        army_morale_factor = 0.05
+      }
+    }
+
+    hum_ren_lei_jun_guo_zhu_yi_a_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.05
+        army_morale_factor = 0.05
+        army_org_factor = 0.05
+        conscription = 0.05
+      }
+    }
+
+    hum_ren_lei_jun_guo_zhu_yi_b_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        breakthrough_factor = 0.05
+        experience_gain_army_factor = 0.1
+        army_morale_factor = 0.05
+        army_org_factor = 0.05
+        conscription = 0.05
+      }
+    }
+
+    hum_ren_lei_jun_guo_zhu_yi_c_idea = {
+      picture = unknown
+      modifier = {
+        army_attack_factor = 0.1
+        army_defence_factor = 0.05
+        breakthrough_factor = 0.1
+        experience_gain_army_factor = 0.1
+        army_morale_factor = 0.1
+        army_org_factor = 0.1
+        conscription = 0.05
+      }
+    }
+
+    # 兵器研究所
+    hum_bing_qi_yan_jiu_suo_idea = {
+      picture = unknown
+      research_bonus = {
+        military = 0.1
+      }
+    }
+
+    # 复仇之路
+    hum_fu_chou_zhi_lu_idea = {
+      picture = unknown
+      targeted_modifier = {
+        tag = TKM
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = NMS
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = MAM
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = SCA
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = MSD
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = KAG
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = SEJ
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = YKR
+        attack_bonus_against = 0.05
+        defense_bonus_against = 0.05
+        breakthrough_bonus_against = 0.05
+      }
+    }
+
     # 工业线
     # 资源勘探
     hum_zi_yuan_kan_tan_idea = {
