@@ -48,7 +48,7 @@ focus_tree = {
   # 尝试摆脱妖怪影响
   focus = {
     id = HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
-    icon = unknown
+    icon = GFX_focus_get_key
     cost = 7
     x = 0
     y = 1
@@ -194,7 +194,7 @@ focus_tree = {
   # 初步摆脱妖怪影响
   focus = {
     id = HUM_chu_bu_bai_tuo_yao_guai_ying_xiang
-    icon = unknown
+    icon = GFX_focus_rid_of_controll
     cost = 7
     x = 0
     y = 2
@@ -298,7 +298,7 @@ focus_tree = {
   # 人里再次自由
   focus = {
     id = HUM_ren_li_zai_ci_zi_you
-    icon = unknown
+    icon = GFX_focus_freedom
     cost = 7
     x = 0
     y = 2
@@ -789,7 +789,7 @@ focus_tree = {
     }
 
     completion_reward = {
-      
+      add_political_power = 50
     }
 
     ai_will_do = {
@@ -809,10 +809,22 @@ focus_tree = {
 
     prerequisite = {
       focus = HUM_xuan_yang_fu_chou_zhu_yi
+      set_variable = {
+        HUM.InfiltrationRate = 0
+      }
+      set_variable = {
+        HUM.ArmySupport = 10
+      }
+      set_variable = {
+        HUM.WeaponRatio = 0
+      }
+      set_variable = {
+        HUM.ArmyNum = 0
+      }
     }
 
     completion_reward = {
-      
+      unlock_decision_category_tooltip = HUM_di_xia_fu_chou_zu_zhi
     }
   }
 
@@ -830,8 +842,12 @@ focus_tree = {
       focus = HUM_an_zhong_fa_zhan
     }
 
+    bypass = {
+      has_completed_focus = HUM_tui_fan_tong_di_zhe
+    }
+
     completion_reward = {
-      
+      unlock_decision_tooltip = HUM_mi_mi_zhuan_yi_wu_qi
     }
   }
 
@@ -854,10 +870,10 @@ focus_tree = {
     }
   }
 
-  # 传播复仇思想
+  # 接触军队
   focus = {
-    id = HUM_chuan_bo_fu_chou_si_xiang
-    icon = unknown
+    id = HUM_jie_chu_jun_dui
+    icon = GFX_goal_generic_military_deal
     cost = 7
     x = 0
     y = 1
@@ -868,8 +884,12 @@ focus_tree = {
       focus = HUM_an_zhong_fa_zhan
     }
 
+    bypass = {
+      has_completed_focus = HUM_tui_fan_tong_di_zhe
+    }
+
     completion_reward = {
-      
+      unlock_decision_tooltip = HUM_zheng_qu_jun_dui_zhi_chi
     }
   }
 
@@ -881,14 +901,18 @@ focus_tree = {
     x = 0
     y = 1
 
-    relative_position_id = HUM_chuan_bo_fu_chou_si_xiang
+    relative_position_id = HUM_jie_chu_jun_dui
 
     prerequisite = {
-      focus = HUM_chuan_bo_fu_chou_si_xiang
+      focus = HUM_jie_chu_jun_dui
+    }
+
+    bypass = {
+      has_completed_focus = HUM_tui_fan_tong_di_zhe
     }
 
     completion_reward = {
-      
+      HUM_infiltration_add_15 = yes
     }
   }
 
@@ -906,8 +930,12 @@ focus_tree = {
       focus = HUM_an_zhong_fa_zhan
     }
 
+    bypass = {
+      has_completed_focus = HUM_tui_fan_tong_di_zhe
+    }
+
     completion_reward = {
-      
+      unlock_decision_tooltip = HUM_zhao_mu_wu_zhuang_bu_dui
     }
   }
 
@@ -938,18 +966,18 @@ focus_tree = {
     x = 0
     y = 3
 
+    continue_if_invalid = yes
+
     relative_position_id = HUM_an_zhong_fa_zhan
 
     prerequisite = {
       focus = HUM_di_xia_gong_fang
-    }
-
-    prerequisite = {
       focus = HUM_mi_mi_jie_she
+      focus = HUM_shi_yan_xing_zhuang_jia_bu_dui
     }
 
-    prerequisite = {
-      focus = HUM_shi_yan_xing_zhuang_jia_bu_dui
+    select_effect = {
+      
     }
 
     completion_reward = {
@@ -1045,7 +1073,7 @@ focus_tree = {
   # 宣扬军国主义
   focus = {
     id = HUM_xuan_yang_jun_guo_zhu_yi
-    icon = unknown
+    icon = HUM_focus_human_militarism
     cost = 7
     x = -4
     y = 1

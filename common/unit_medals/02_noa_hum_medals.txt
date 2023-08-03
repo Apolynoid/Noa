@@ -21,3 +21,27 @@
 # army_defence_factor
 # max_dig_in
 # max_dig_in_factor
+
+@cost = 30
+
+unit_medals = {
+	
+	### HUM
+	
+	order_of_imperial_knight = {
+		available = {
+			original_tag = HUM
+			has_government = neworder 
+		}
+		frame = 6
+		icon = "GFX_medal_icon_hum"
+		cost = @cost
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+			army_attack_factor = 0.05
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+}

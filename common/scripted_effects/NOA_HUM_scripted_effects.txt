@@ -1,0 +1,129 @@
+HUM_clamp_infiltration = {
+    HUM = {
+        clamp_variable = {
+            var = InfiltrationRate
+            min = 0
+            max = 100
+        }
+    }
+}
+
+HUM_infiltration_add_5 = {
+    custom_effect_tooltip = hum_infiltration_add_5_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                InfiltrationRate = 5
+            }
+        }
+        HUM_clamp_infiltration = yes
+    }
+}
+
+HUM_infiltration_add_8 = {
+    custom_effect_tooltip = hum_infiltration_add_8_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                InfiltrationRate = 8
+            }
+        }
+        HUM_clamp_infiltration = yes
+    }
+}
+
+HUM_infiltration_add_15 = {
+    custom_effect_tooltip = hum_infiltration_add_15_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                InfiltrationRate = 15
+            }
+        }
+        HUM_clamp_infiltration = yes
+    }
+}
+
+HUM_infiltration_minus_5 = {
+    custom_effect_tooltip = hum_infiltration_minus_5_tt
+    hidden_effect = {
+        HUM = {
+            subtract_from_variable = {
+                InfiltrationRate = 5
+            }
+        }
+        HUM_clamp_infiltration = yes
+    }
+}
+
+HUM_infiltration_minus_20 = {
+    custom_effect_tooltip = hum_infiltration_minus_20_tt
+    hidden_effect = {
+        HUM = {
+            subtract_from_variable = {
+                InfiltrationRate = 20
+            }
+        }
+        HUM_clamp_infiltration = yes
+    }
+}
+
+HUM_army_support_add_10 = {
+    custom_effect_tooltip = hum_army_support_add_10_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                ArmySupport = 10
+            }
+            clamp_variable = {
+                var = ArmySupport
+                min = 0
+                max = 100
+            }
+        }
+    }
+}
+
+HUM_army_num_add_3 = {
+    custom_effect_tooltip = hum_army_num_add_3_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                ArmyNum = 3
+            }
+            clamp_variable = {
+                var = ArmyNum
+                min = 0
+                max = 10
+            }
+        }
+    }
+}
+
+HUM_weapon_ratio_add_10 = {
+    custom_effect_tooltip = hum_weapon_ratio_add_10_tt
+    hidden_effect = {
+        HUM = {
+            add_to_variable = {
+                WeaponRatio = 10
+            }
+            clamp_variable = {
+                var = WeaponRatio
+                min = 0
+                max = 100
+            }
+        }
+    }
+}
+
+HUM_army_loss = {
+    hidden_effect = {
+
+    }
+}
+
+HUM_army_gain = {
+    hidden_effect = {
+        
+    }
+}

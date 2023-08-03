@@ -39,6 +39,11 @@ spriteTypes = {
 		name = "GFX_generic_medal_3"
 		texturefile = "gfx/interface/medals/generic_medal_3.png"
 	}
+
+	spriteType = {
+		name = "GFX_generic_medal_4"
+		texturefile = "gfx/interface/medals/generic_medal_4.png"
+	}
 	
 	spriteType = {
 		name = "GFX_medal_icon_generic"
@@ -50,5 +55,17 @@ spriteTypes = {
 		name = "GFX_medal_icon_generic_large"
 		texturefile = "gfx/interface/medals/generic_medal_strip_large.png"
 		noOfFrames = 4
+    }
+
+	spriteType = {
+		name = "GFX_medal_icon_hum"
+		texturefile = "gfx/interface/medals/hum_medal_strip.png"
+		noOfFrames = 6
+    }
+	
+	spriteType = {
+		name = "GFX_medal_icon_hum_large"
+		texturefile = "gfx/interface/medals/hum_medal_strip_large.png"
+		noOfFrames = 6
     }
 }

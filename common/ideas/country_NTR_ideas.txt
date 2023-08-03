@@ -1,0 +1,114 @@
+ideas = {
+	country = {
+		# 河童的研究能力
+	    NTR_he_tong_de_yan_jiu_neng_li_idea = {
+	    	picture = jap_duplicate_research
+			modifier = {
+				research_speed_factor = 0.05
+			}
+	    }
+
+		# 不稳定的共和国
+		NTR_bu_wen_ding_de_gong_he_guo_idea = {
+			picture = NTR_unstable_republic
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		# 民兵
+		NTR_min_bing_idea = {
+			picture = chi_army_corruption2
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				breakthrough_factor = -0.05
+				army_org_factor = -0.1
+				army_morale_factor = 0.1
+			}
+		}
+
+		# 政治线
+		# 不稳定的共和国
+		NTR_bu_wen_ding_de_gong_he_guo_a_idea = {
+			picture = NTR_unstable_republic
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		NTR_bu_wen_ding_de_gong_he_guo_b_idea = {
+			picture = NTR_unstable_republic
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		# 学习天狗政治制度
+		NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_a_idea = {
+			picture = unknown
+			modifier = {
+				mobilization_laws_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				trade_laws_cost_factor = -0.1
+				lobby_cost_factor = -0.1
+				magic_laws_cost_factor = -0.1
+				border_policy_cost_factor = -0.1
+			}
+		}
+
+		NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_b_idea = {
+			picture = unknown
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_c_idea = {
+			picture = unknown
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		# 军事线
+		# 与天狗的军事合作
+		NTR_yu_tian_gou_de_jun_shi_he_zuo_idea = {
+			picture = unknown
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		# 共和国陆军
+		NTR_gong_he_guo_lu_jun_idea = {
+			picture = chi_army_corruption3
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+
+		# 工业线
+		# 共和国工业
+		NTR_gong_he_guo_gong_ye_idea = {
+			picture = unknown
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# 与天狗的经济合作
+		NTR_yu_tian_gou_de_jing_ji_he_zuo_idea = {
+			picture = unknown
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+	}
+}

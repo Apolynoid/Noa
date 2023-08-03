@@ -384,3 +384,15 @@ country_event = {
 		}
 	}
 }
+
+# 渗透行动被发现
+country_event = {
+	id = hum.113
+	title = hum.113.t
+	desc = hum.113.d
+	is_triggered_only = yes
+	option = {
+		name = hum.113.1
+		HUM_infiltration_minus_5 = yes
+	}
+}

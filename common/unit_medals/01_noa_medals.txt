@@ -94,4 +94,17 @@ unit_medals = {
 			add_divisional_commander_xp = 100
 		}
 	}
+
+	great_order_of_gensokyo = {
+		available = { should_have_special_medals = no }
+		frame = 4
+		icon = "GFX_medal_icon_generic"
+		cost = @cost
+		unit_modifiers = {
+			army_attack_factor = 0.075
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
 }

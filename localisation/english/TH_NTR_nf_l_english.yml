@@ -1,0 +1,53 @@
+﻿l_english:
+NTR_DAWN_DESC:0 "编写中"
+# 国策 national focus
+NTR_jia_qiang_yu_tian_gou_de_he_zuo:0 "加强与天狗的合作"
+NTR_jia_qiang_yu_tian_gou_de_he_zuo_desc:0 "我们新生的共和国受到了妖怪山其他国家的敌视，我们必须与同样采取共和制度的[TEG.GetName]加强合作，才能保证共和国的生存。"
+NTR_qiang_hua_gong_he_zheng_fu:0 "强化共和政府"
+NTR_qiang_hua_gong_he_zheng_fu_desc:0 ""
+NTR_wen_ding_min_zhu_zhi_du:0 "稳定民主制度"
+NTR_wen_ding_min_zhu_zhi_du_desc:0 ""
+NTR_xue_xi_tian_gou_zheng_zhi_zhi_du:0 "学习天狗政治制度"
+NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_desc:0 ""
+NTR_gong_he_guo_jun_shi_jian_she:0 "共和国军事建设"
+NTR_gong_he_guo_jun_shi_jian_she_desc:0 ""
+NTR_yu_tian_gou_de_jun_shi_he_zuo:0 "与天狗的军事合作"
+NTR_yu_tian_gou_de_jun_shi_he_zuo_desc:0 ""
+NTR_lu_jun_zheng_gui_hua:0 "陆军正规化"
+NTR_lu_jun_zheng_gui_hua_desc:0 ""
+NTR_gong_he_guo_gong_ye_jian_she:0 "共和国工业建设"
+NTR_gong_he_guo_gong_ye_jian_she_desc:0 ""
+NTR_yu_tian_gou_de_jing_ji_he_zuo:0 "与天狗的经济合作"
+NTR_yu_tian_gou_de_jing_ji_he_zuo_desc:0 ""
+
+####idea
+NTR_he_tong_de_yan_jiu_neng_li_idea:0 "河童的研究能力"
+NTR_he_tong_de_yan_jiu_neng_li_idea_desc:0 "河童在幻想乡一直以机械方面的研究能力著称，在幻想乡陷入纷争后，我们仍可从我们的技术能力中获得优势。"
+NTR_bu_wen_ding_de_gong_he_guo_idea:0 "不稳定的共和国"
+NTR_bu_wen_ding_de_gong_he_guo_idea_desc:0 "同天狗一样，我们的共和制度对于幻想乡来讲也是完全的外来物，这无疑会给我们的行政管理带来暂时的困难。"
+NTR_bu_wen_ding_de_gong_he_guo_a_idea:0 "不稳定的共和国"
+NTR_bu_wen_ding_de_gong_he_guo_a_idea_desc:0 "同天狗一样，我们的共和制度对于幻想乡来讲也是完全的外来物，这无疑会给我们的行政管理带来暂时的困难。"
+NTR_bu_wen_ding_de_gong_he_guo_b_idea:0 "不稳定的共和国"
+NTR_bu_wen_ding_de_gong_he_guo_b_idea_desc:0 "同天狗一样，我们的共和制度对于幻想乡来讲也是完全的外来物，这无疑会给我们的行政管理带来暂时的困难。"
+NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_a_idea:0 "学习天狗政治制度"
+NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_b_idea:0 "学习天狗政治制度"
+NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_c_idea:0 "学习天狗政治制度"
+NTR_min_bing_idea:0 "民兵"
+NTR_min_bing_idea_desc:0 "我们的军队大多是革命中各地志愿者组成的民兵部队，尽管他们拥有极高的革命热情，缺乏训练与有能力的基层士官使得这支军队的战斗力有较高的提升空间。"
+NTR_yu_tian_gou_de_jun_shi_he_zuo_idea:0 "与天狗的军事合作"
+NTR_gong_he_guo_lu_jun_idea:0 "共和国陆军"
+NTR_gong_he_guo_gong_ye_idea:0 "共和国工业"
+NTR_yu_tian_gou_de_jing_ji_he_zuo_idea:0 "与天狗的经济合作"
+
+ ####op
+NTR_jia_qiang_he_zuo_op:0 "加强合作"
+
+ ###ttt
+
+ ###faction
+
+
+ #TEG_decision
+
+
+# flag

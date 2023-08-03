@@ -52,8 +52,28 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_revanchism"
+		texturefile = "gfx/interface/ideas/generic_revanchism.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_militarism"
+		texturefile = "gfx/interface/ideas/generic_militarism.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_cooperation"
 		texturefile = "gfx/interface/ideas/generic_cooperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_controlled"
+		texturefile = "gfx/interface/ideas/generic_controlled.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_controll_weakened"
+		texturefile = "gfx/interface/ideas/generic_controll_weakened.png"
 	}
 
 	spriteType = {
@@ -136,6 +156,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_HUM_human_free_city"
 		texturefile = "gfx/interface/ideas/hum_human_free_city.png"
+	}
+
+	#### NTR 河童共和国
+	spriteType = {
+		name = "GFX_idea_NTR_unstable_republic"
+		texturefile = "gfx/interface/ideas/ntr_unstable_republic.png"
 	}
 	
 	#### MRS Kirisame Marisa 魔法之森

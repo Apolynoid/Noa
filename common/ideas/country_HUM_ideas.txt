@@ -2,7 +2,7 @@ ideas = {
 	country = {
     # 妖怪的影响
     hum_yao_guai_de_ying_xiang_idea = {
-      picture = unknown
+      picture = generic_controlled
       modifier = {
         production_speed_arms_factory_factor = -0.8
 				industrial_capacity_factory = -0.1
@@ -107,7 +107,7 @@ ideas = {
 
     # 妖怪影响减弱
     hum_yao_guai_ying_xiang_jian_ruo_idea = {
-      picture = unknown
+      picture = generic_controll_weakened
       modifier = {
         production_speed_arms_factory_factor = -0.4
 				research_speed_factor = -0.2			
@@ -303,7 +303,7 @@ ideas = {
     # 新规
     # 人类军国主义
     hum_ren_lei_jun_guo_zhu_yi_idea = {
-      picture = unknown
+      picture = generic_militarism
       modifier = {
         army_attack_factor = 0.05
         army_morale_factor = 0.05
@@ -311,7 +311,7 @@ ideas = {
     }
 
     hum_ren_lei_jun_guo_zhu_yi_a_idea = {
-      picture = unknown
+      picture = generic_militarism
       modifier = {
         army_attack_factor = 0.05
         army_morale_factor = 0.05
@@ -321,7 +321,7 @@ ideas = {
     }
 
     hum_ren_lei_jun_guo_zhu_yi_b_idea = {
-      picture = unknown
+      picture = generic_militarism
       modifier = {
         army_attack_factor = 0.1
         breakthrough_factor = 0.05
@@ -333,7 +333,7 @@ ideas = {
     }
 
     hum_ren_lei_jun_guo_zhu_yi_c_idea = {
-      picture = unknown
+      picture = generic_militarism
       modifier = {
         army_attack_factor = 0.1
         army_defence_factor = 0.05
@@ -347,7 +347,7 @@ ideas = {
 
     # 兵器研究所
     hum_bing_qi_yan_jiu_suo_idea = {
-      picture = unknown
+      picture = generic_research_bonus
       research_bonus = {
         military = 0.1
       }
@@ -355,7 +355,7 @@ ideas = {
 
     # 复仇之路
     hum_fu_chou_zhi_lu_idea = {
-      picture = unknown
+      picture = generic_revanchism
       targeted_modifier = {
         tag = TKM
         attack_bonus_against = 0.05
@@ -476,7 +476,7 @@ ideas = {
 
     # 寺子屋教育
     hum_si_zi_wu_jiao_yu_idea = {
-      picture = generic_research_bonus
+      picture = jap_duplicate_research
       modifier = {
         research_speed_factor = 0.1
       }

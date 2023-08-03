@@ -193,6 +193,21 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_get_key"
+		texturefile = "gfx/interface/goals/focus_generic_get_key.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_rid_of_controll"
+		texturefile = "gfx/interface/goals/focus_generic_rid_of_controll.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_freedom"
+		texturefile = "gfx/interface/goals/focus_generic_freedom.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_independence"
 		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
 	}
@@ -373,6 +388,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "HUM_focus_empire_reborn"
 		texturefile = "gfx/interface/goals/focus_HUM_empire_reborn.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_human_militarism"
+		texturefile = "gfx/interface/goals/focus_HUM_human_militarism.png"			
 	}
 	
 	#### MRS Kirisame Marisa 魔法之森

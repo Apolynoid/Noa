@@ -1,0 +1,316 @@
+focus_tree = {
+  id = NTR_focus
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = NTR
+    }
+  }
+
+  shared_focus = ty_medium_main 
+
+  continuous_focus_position = { x = 20 y = 2200 }
+  default = no
+
+  # 加强与天狗的合作
+  focus = {
+    id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    icon = GFX_focus_befriend_TEG
+    cost = 7
+    x = 20
+    y = 2
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    completion_reward = {
+      add_political_power = 30
+      TEG = {
+        add_opinion_modifier = {
+          target = NTR
+          modifier = NTR_jia_qiang_he_zuo_op
+        }
+      }
+      NTR = {
+        add_opinion_modifier = {
+          target = TEG
+          modifier = NTR_jia_qiang_he_zuo_op
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 强化共和政府
+  focus = {
+    id = NTR_qiang_hua_gong_he_zheng_fu
+    icon = unknown
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_bu_wen_ding_de_gong_he_guo_a_idea
+        remove_idea = NTR_bu_wen_ding_de_gong_he_guo_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 稳定民主制度
+  focus = {
+    id = NTR_wen_ding_min_zhu_zhi_du
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_qiang_hua_gong_he_zheng_fu
+
+    prerequisite = {
+      focus = NTR_qiang_hua_gong_he_zheng_fu
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_bu_wen_ding_de_gong_he_guo_b_idea
+        remove_idea = NTR_bu_wen_ding_de_gong_he_guo_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 学习天狗政治制度
+  focus = {
+    id = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_wen_ding_min_zhu_zhi_du
+
+    available ={
+      TEG = {
+        OR = {
+          has_completed_focus = TEG_fu_yu_yi_hui_geng_da_quan_li
+          has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+          has_completed_focus = TEG_zong_tong_yu_yi_hui_fen_li
+        }
+      }
+    }
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    completion_reward = {
+      remove_ideas = NTR_bu_wen_ding_de_gong_he_guo_b_idea
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_fu_yu_yi_hui_geng_da_quan_li
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_a_idea
+      }
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_b_idea
+      }
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_zong_tong_yu_yi_hui_fen_li
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_c_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 共和国军事建设
+  focus = {
+    id = NTR_gong_he_guo_jun_shi_jian_she
+    icon = unknown
+    cost = 7
+    x = -10
+    y = 0
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    completion_reward = {
+      army_experience = 10
+      add_war_support = 0.05
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗的军事合作
+  focus = {
+    id = NTR_yu_tian_gou_de_jun_shi_he_zuo
+    icon = unknown
+    cost = 7
+    x = -6
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_jun_shi_jian_she
+    }
+
+    completion_reward = {
+      add_ideas = NTR_yu_tian_gou_de_jun_shi_he_zuo_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 陆军正规化
+  focus = {
+    id = NTR_lu_jun_zheng_gui_hua
+    icon = unknown
+    cost = 12
+    x = -2
+    y = 1
+
+    relative_position_id = NTR_gong_he_guo_jun_shi_jian_she
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_jun_shi_jian_she
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_gong_he_guo_lu_jun_idea
+        remove_idea = NTR_min_bing_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 共和国工业建设
+  focus = {
+    id = NTR_gong_he_guo_gong_ye_jian_she
+    icon = unknown
+    cost = 7
+    x = 10
+    y = 0
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    completion_reward = {
+      add_ideas = NTR_gong_he_guo_gong_ye_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗的经济合作
+  focus = {
+    id = NTR_yu_tian_gou_de_jing_ji_he_zuo
+    icon = unknown
+    cost = 7
+    x = 6
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_gong_ye_jian_she
+    }
+
+    completion_reward = {
+      add_ideas = NTR_yu_tian_gou_de_jing_ji_he_zuo_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+}

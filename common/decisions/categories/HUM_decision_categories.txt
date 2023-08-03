@@ -27,3 +27,23 @@ HUM_lian_he_shi_guan_wen_ti = {
 	}
 }
 
+# 地下复仇组织
+HUM_di_xia_fu_chou_zu_zhi = {
+	icon = generic_political_actions
+
+	priority = 90
+
+	allowed = {
+		original_tag = HUM
+	}
+
+	visible = {
+		has_completed_focus = HUM_an_zhong_fa_zhan
+		NOT = {
+			has_completed_focus = HUM_tui_fan_tong_di_zhe
+		}
+	}
+
+	visible_when_empty = yes
+}
+

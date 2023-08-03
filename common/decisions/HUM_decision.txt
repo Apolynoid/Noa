@@ -93,3 +93,175 @@ HUM_lian_he_shi_guan_wen_ti = {
         war_with_on_remove = EMB
     }
 }
+
+HUM_di_xia_fu_chou_zu_zhi = {
+    # 定期渗透任务
+    HUM_ding_qi_shen_tou_ren_wu = {
+        activation = {
+            has_completed_focus = HUM_an_zhong_fa_zhan
+            NOT = {
+                has_completed_focus = HUM_tui_fan_tong_di_zhe
+            }
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            always = no
+        }
+        icon = mission_icon
+        days_mission_timeout = 30
+        selectable_mission = no
+        is_good = yes
+
+        timeout_effect = {
+            HUM_infiltration_add_8 = yes
+        }
+    }
+
+    # 躲避搜查
+    HUM_duo_bi_sou_cha = {
+        activation = {
+            has_completed_focus = HUM_an_zhong_fa_zhan
+            NOT = {
+                has_completed_focus = HUM_tui_fan_tong_di_zhe
+            }
+            check_variable = {
+                InfiltrationRate > 30
+            }
+        }
+        available = {
+            has_political_power > 50
+        }
+        cancel_trigger = {
+            always = no
+        }
+
+        cost = 50
+
+        icon = mission_icon
+        days_mission_timeout = 60
+        selectable_mission = yes
+        is_good = no
+
+        days_re_enable = 30
+
+        timeout_effect = {
+            HUM_infiltration_minus_20 = yes
+        }
+    }
+
+    # 争取军队支持
+    HUM_zheng_qu_jun_dui_zhi_chi = {
+        allowed = {
+            original_tag = HUM
+        }
+        visible = {
+            has_completed_focus = HUM_jie_chu_jun_dui
+        }
+        available = {
+            NOT = {
+                has_country_flag = HUM_other_infiltration_actions_flag
+            }
+            custom_trigger_tooltip = {
+                tooltip = hum_infiltrarion_over_10_tt
+                check_variable = {
+                    HUM.InfiltrationRate > 10
+                }
+            }
+        }
+        cost = 10
+        days_remove = 15
+        complete_effect = {
+            set_country_flag = HUM_other_infiltration_actions_flag
+        }
+        remove_effect = {
+            clr_country_flag = HUM_other_infiltration_actions_flag
+            HUM_army_support_add_10 = yes
+            random = {
+                chance = 10
+                country_event = {
+                    id = hum.113
+                }
+            }
+        }
+    }
+
+    # 招募武装部队
+    HUM_zhao_mu_wu_zhuang_bu_dui = {
+        allowed = {
+            original_tag = HUM
+        }
+        visible = {
+            has_completed_focus = HUM_zhao_mu_wu_zhuang_li_liang
+        }
+        available = {
+            NOT = {
+                has_country_flag = HUM_other_infiltration_actions_flag
+            }
+            custom_trigger_tooltip = {
+                tooltip = hum_infiltrarion_over_10_tt
+                check_variable = {
+                    HUM.InfiltrationRate > 10
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = hum_army_num_below_10_tt
+                check_variable = {
+                    HUM.ArmyNum < 10
+                }
+            }
+        }
+        cost = 10
+        days_remove = 15
+        complete_effect = {
+            set_country_flag = HUM_other_infiltration_actions_flag
+        }
+        remove_effect = {
+            clr_country_flag = HUM_other_infiltration_actions_flag
+            HUM_army_num_add_3 = yes
+            random = {
+                chance = 5
+                country_event = {
+                    id = hum.113
+                }
+            }
+        }
+    }
+
+    # 秘密转移武器
+    HUM_mi_mi_zhuan_yi_wu_qi = {
+        allowed = {
+            original_tag = HUM
+        }
+        visible = {
+            has_completed_focus = HUM_zhuan_yi_wu_qi
+        }
+        available = {
+            NOT = {
+                has_country_flag = HUM_other_infiltration_actions_flag
+            }
+            custom_trigger_tooltip = {
+                tooltip = hum_infiltrarion_over_10_tt
+                check_variable = {
+                    HUM.InfiltrationRate > 10
+                }
+            }
+        }
+        cost = 10
+        days_remove = 15
+        complete_effect = {
+            set_country_flag = HUM_other_infiltration_actions_flag
+        }
+        remove_effect = {
+            clr_country_flag = HUM_other_infiltration_actions_flag
+            HUM_weapon_ratio_add_10 = yes
+            random = {
+                chance = 5
+                country_event = {
+                    id = hum.113
+                }
+            }
+        }
+    }
+}

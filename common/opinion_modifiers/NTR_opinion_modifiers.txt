@@ -1,0 +1,16 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	NTR_jia_qiang_he_zuo_op = {
+		value = 50
+	}
+}	
+

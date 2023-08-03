@@ -297,9 +297,22 @@ bookmarks = {
 				hum_cai_fa_idea
 			}
 			focuses = {
-				HUM_chu_bu_bai_tuo_yao_guai_ying_xiang
+				HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
 				HUM_zhan_hou_chong_jian
 				HUM_ren_lei_zi_you_shi
+			}
+		}
+
+		"NTR" = {
+			minor = yes
+			history = "NTR_DAWN_DESC"			#sat
+			ideas = {
+				NTR_bu_wen_ding_de_gong_he_guo_idea
+				NTR_he_tong_de_yan_jiu_neng_li_idea
+				NTR_min_bing_idea
+			}
+			focuses = {
+				NTR_jia_qiang_yu_tian_gou_de_he_zuo
 			}
 		}
     
