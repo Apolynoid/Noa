@@ -1,0 +1,58 @@
+SRB_emp ={
+    color = rgb { 230 230 230 }
+    color_ui = rgb { 230 230 230 }
+}
+
+SRB_emp2 ={
+    color = RGB { 0 160 220 }
+    color_ui = RGB { 0 160 220 }
+}
+
+AKI_WHUM = {
+    color = RGB { 40 255 20 }
+    color_ui = RGB { 40 255 20 }
+}
+TKM_great ={
+    color = rgb { 54 54 54 }
+    color_ui = rgb { 115 115 115 }
+}
+TKM_gongtuan = {
+    color = rgb { 204 0 0 }
+    color_ui = rgb { 35 35 35 }
+}
+
+TKM_reb = {
+    color = RGB { 255 191 191 }
+    color_ui = RGB { 255 191 191 }
+}
+
+HU3_Great = {
+    color = RGB { 215 200 0 }
+    color_ui = RGB { 215 200 0 }
+}
+
+CLO_heca = {
+    color = RGB { 200 60 60 }
+    color_ui = RGB { 200 60 60 }
+}
+TBA_new = {
+	color = rgb { 230  223  50 }
+	color_ui = rgb { 230  223  50 }
+}
+
+
+
+YYK_revolutionary = {
+	color = rgb { 204 0 0 }
+    color_ui = rgb { 204 0 0 }
+}
+
+KNA_republic = {
+	color = rgb { 204 0 0 }
+    color_ui = rgb { 204 0 0 }
+}
+
+YYK_loyalist = {
+	color = rgb { 205 145 235 }
+    color_ui = rgb { 205 145 235 }
+}

@@ -1,0 +1,1623 @@
+# 编号	地块种族	比例
+# 7	幽灵	0.2
+# 6	妖精	1
+# 4	人类	4
+# 5	法师	8
+# 8	河童	12.5
+# 3	神明	16
+# 0	妖兽	14
+# 1	草根妖怪	20
+# 9	天狗	25
+# 2	妖怪	25
+ST_race_defines = {
+	set_variable = { global.ST_compliance_growth = -0.2}
+	set_variable = { global.ST_recruitable_population_factor = -0.5}
+	set_variable = { global.ST_local_supplies_for_controller = -0.4}
+	set_variable = { global.ST_resistance_growth = 0.2}
+	set_variable = { global.ST_state_production_speed_buildings_factor = -0.5}
+	set_variable = { global.ST_state_resources_factor = -0.5}
+}
+ST_race_setting = {
+	Ce_race_setting = yes
+	Ne_race_setting = yes
+	Un_race_setting = yes
+	He_race_setting = yes
+	Ge_race_setting = yes
+
+	History_race_setting = yes
+}
+Ce_race_setting = {
+	#CFA
+	12 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	357 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	15 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	48 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	24 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	#TES
+	68 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	95 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	358 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	359 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	62 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	360 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	#CCA
+	14 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	361 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	49 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	36 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	362 = {
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	#IKU
+	57 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	491 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	13 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	363 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	38 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	66 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	35 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	1 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	364 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+
+}
+Ne_race_setting = {
+	#all
+	every_state = {
+		limit = {
+			is_on_continent = Netherworld
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+}
+Un_race_setting = {
+	#UTH
+	every_state = {
+		limit = {
+			region = 21
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	#YUG
+	every_state = {
+		limit = {
+			or = {
+				region = 22
+				region = 23
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#SAT
+	every_state = {
+		limit = {
+			or = {
+				region = 20
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	#PRS
+	every_state = {
+		limit = {
+			or = {
+				region = 16
+				region = 76
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#ACE UNL UUG overwriting
+	every_state = {
+		limit = {
+			or = {
+				region = 17
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 18
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	92 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	560 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	559 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	71 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	39 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 19
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	#oil CJK
+	every_state = {
+		limit = {
+			or = {
+				region = 85
+				region = 86
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+}
+# 7	幽灵	0.2
+# 6	妖精	1
+# 4	人类	4
+# 5	法师	8
+# 8	河童	12.5
+# 3	神明	16
+# 0	妖兽	14
+# 1	草根妖怪	20
+# 9	天狗	25
+# 2	妖怪	25
+He_race_setting = {
+	#river
+	every_state = {
+		limit = {
+			or = {
+				region = 7
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	447 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	184 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#彼岸 共和国
+	every_state = {
+		limit = {
+			region = 77
+		}
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	469 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	485 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	470 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#SKI
+	every_state = {
+		limit = {
+			region = 8
+		}
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	#畜生界
+	every_state = {
+		limit = {
+			or = {
+				region = 82
+				region = 78
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	#两个接口
+	every_state = {
+		limit = {
+			or = {
+				region = 5
+				region = 81
+				region = 84
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	448 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	111 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	451 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	459 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	152 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	#CLO AOO
+	every_state = {
+		limit = {
+			or = {
+				region = 79
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	178 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	181 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	466 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	461 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	462 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	#HCT
+	every_state = {
+		limit = {
+			or = {
+				region = 80
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	#AKO AOO
+	every_state = {
+		limit = {
+			or = {
+				region = 6
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	534 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	551 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	#HGH AOO
+	every_state = {
+		limit = {
+			or = {
+				region = 83
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	622 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+}
+Ge_race_setting = {
+	#EET UDO INB KAG
+	every_state = {
+		limit = {
+			or = {
+				region = 52
+				region = 53
+				region = 54
+				region = 74
+				region = 75
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+
+	#HKR MSD overwriting
+	every_state = {
+		limit = {
+			or = {
+				region = 60
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	192 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	210 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 61
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+
+	#YKR
+	every_state = {
+		limit = {
+			or = {
+				region = 10
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#WHR
+	every_state = {
+		limit = {
+			or = {
+				region = 62
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#ONS SEJ RMI
+	every_state = {
+		limit = {
+			or = {
+				region = 67
+				region = 63
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	349 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 2 }
+	}
+	672 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 2 }
+	}
+	682 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 2 }
+	}
+	#NIB
+	every_state = {
+		limit = {
+			or = {
+				region = 66
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	#CIR MFA
+	every_state = {
+		limit = {
+			or = {
+				region = 65
+				region = 64
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	153 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+
+	#RMI MYK ALI
+	every_state = {
+		limit = {
+			or = {
+				region = 59
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	354 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	355 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	169 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	162 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	154 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	151 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	182 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	#RNS MSD ALI
+	every_state = {
+		limit = {
+			or = {
+				region = 57
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	191 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	206 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	213 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 1 }
+	}
+	430 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	225 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	#MRS MTM
+	every_state = {
+		limit = {
+			or = {
+				region = 58
+			}
+		}
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	185 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	465 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	#TKM
+	every_state = {
+		limit = {
+			or = {
+				region = 56
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	427 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 1 }
+	}
+	426 = {
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 1 }
+	}
+	187 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	if = {
+		limit = {
+			date < 143.7.2
+			date > 143.6.30
+		}
+		426 = {
+			set_variable = { ST_present_race = 5 }
+		}
+		427 = {
+			set_variable = { ST_present_race = 5 }
+		}
+	}
+	#SBK EMB HUM
+	every_state = {
+		limit = {
+			or = {
+				region = 55
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	253 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 4 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 51
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 4 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 50
+			}
+		}
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 4 }
+	}
+
+	#SRB MAM
+	every_state = {
+		limit = {
+			or = {
+				region = 49
+			}
+		}
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 48
+			}
+		}
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+	322 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	282 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	277 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	323 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	263 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+
+	#KYK WAK
+	every_state = {
+		limit = {
+			or = {
+				region = 47
+				region = 40
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	227 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
+	203 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
+	241 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
+
+	#NMS
+	every_state = {
+		limit = {
+			or = {
+				region = 46
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+		238 = {
+			set_variable = { ST_present_race = 2 }
+		}
+	}
+
+	#PRI
+	every_state = {
+		limit = {
+			or = {
+				region = 39
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	163 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+	321 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+	168 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+
+	#YUK GH2
+	every_state = {
+		limit = {
+			or = {
+				region = 44
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	394 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 7 }
+	}
+
+	#OKI
+	every_state = {
+		limit = {
+			or = {
+				region = 9
+			}
+		}
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+
+	#GH3
+	every_state = {
+		limit = {
+			or = {
+				region = 42
+			}
+		}
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	233 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 7 }
+	}
+	219 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 7 }
+	}
+
+	#ZYD GH1	
+	every_state = {
+		limit = {
+			or = {
+				region = 41
+			}
+		}
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
+	}
+
+	#MEL GH2
+	every_state = {
+		limit = {
+			or = {
+				region = 43
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	179 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 7 }
+	}
+	393 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 7 }
+	}
+	279 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 6 }
+	}
+
+
+	#SGS HU4
+	every_state = {
+		limit = {
+			or = {
+				region = 45
+			}
+		}
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 6 }
+	}
+	384 = {
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 7 }
+	}
+	167 = {
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 4 }
+	}
+	157 = {
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 4 }
+	}
+
+	#MEL HU3
+	every_state = {
+		limit = {
+			or = {
+				region = 37
+			}
+		}
+		set_variable = { ST_origin_race = 4 }
+		set_variable = { ST_present_race = 4 }
+	}
+	148 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 4 }
+	}
+	160 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	171 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+
+	#AKI
+	every_state = {
+		limit = {
+			or = {
+				region = 38
+			}
+		}
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
+	}
+	120 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 4 }
+	}
+	377 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 4 }
+	}
+	133 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 4 }
+	}
+	100 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 4 }
+	}
+	376 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 4 }
+	}
+
+	#ZYD NMN
+	every_state = {
+		limit = {
+			or = {
+				region = 36
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	336 = {
+		set_variable = { ST_origin_race = 5	 }
+		set_variable = { ST_present_race = 5 }
+	}
+
+	#KAS
+	every_state = {
+		limit = {
+			or = {
+				region = 25
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+
+	#CHE & TBA
+	every_state = {
+		limit = {
+			or = {
+				region = 89
+			}
+		}
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 91
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	579 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	577 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+	580 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
+	}
+
+	#TEG OTG NMN
+	every_state = {
+		limit = {
+			or = {
+				region = 24
+				region = 72
+				region = 73
+				region = 71
+				region = 93
+				region = 90
+			}
+		}
+		set_variable = { ST_origin_race = 9 }
+		set_variable = { ST_present_race = 9 }
+	}
+	583 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+
+	#KRD YAW
+	every_state = {
+		limit = {
+			or = {
+				region = 26
+			}
+		}
+		set_variable = { ST_origin_race = 8 }
+		set_variable = { ST_present_race = 8 }
+	}
+	every_state = {
+		limit = {
+			or = {
+				region = 92
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+
+	#KAP GRS NTR
+	every_state = {
+		limit = {
+			or = {
+				region = 34
+				region = 35
+			}
+		}
+		set_variable = { ST_origin_race = 8 }
+		set_variable = { ST_present_race = 8 }
+	}
+
+	#KAP TEG
+	every_state = {
+		limit = {
+			region = 87
+		}
+		set_variable = { ST_origin_race = 8 }
+		set_variable = { ST_present_race = 8 }
+	}
+	606 = {
+		set_variable = { ST_origin_race = 9 }
+		set_variable = { ST_present_race = 9 }
+	}
+	590 = {
+		set_variable = { ST_origin_race = 9 }
+		set_variable = { ST_present_race = 9 }
+	}
+
+	#MRY
+	every_state = {
+		limit = {
+			or = {
+				region = 27
+				region = 28
+				region = 88
+			}
+		}
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 2 }
+	}
+	93 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	659 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+
+	#LIL NUC
+	every_state = {
+		limit = {
+			or = {
+				region = 29
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+
+	#SCA
+	every_state = {
+		limit = {
+			or = {
+				region = 31
+				region = 30
+				region = 69
+			}
+		}
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	59 = {
+		set_variable = { ST_origin_race = 0	 }
+		set_variable = { ST_present_race = 0 }
+	}
+	312 = {
+		set_variable = { ST_origin_race = 0	 }
+		set_variable = { ST_present_race = 0 }
+	}
+
+	every_state = {
+		limit = {
+			or = {
+				region = 32
+				region = 33
+			}
+		}
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 1 }
+	}
+	663 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	665 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+	664 = {
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
+	}
+} 
+
+History_race_setting = {
+	# if = {
+	# 	limit = {
+	# 		has_start_date > 143.6.30
+	# 		has_start_date < 143.7.2
+	# 	}
+	# 	204 = {
+	# 		set_variable = { ST_origin_race = 0	 }
+	# 		set_variable = { ST_present_race = 1 }
+	# 	}
+	# }	
+}
+
+
+
+controller_race_manpower = {
+	if = {
+		limit = {
+			has_idea = Beast
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 14 }
+	}
+	if = {
+		limit = {
+			has_idea = Pri_youkai
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 20 }
+	}
+	if = {
+		limit = {
+			has_idea = Youkai
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 25 }
+	}
+	if = {
+		limit = {
+			has_idea = God
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 16 }
+	}
+	if = {
+		limit = {
+			has_idea = Human
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 4 }
+	}
+	if = {
+		limit = {
+			has_idea = Magician
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 8 }
+	}
+	if = {
+		limit = {
+			has_idea = Fairy
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 1 }
+	}
+	if = {
+		limit = {
+			has_idea = Ghost
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 0.2 }
+	}
+	if = {
+		limit = {
+			has_idea = Kappa
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 12.5 }
+	}
+	if = {
+		limit = {
+			has_idea = Tenggu
+		}
+		set_variable = { ST_controller_race_conscription_ratio = 25 }
+	}
+}
+
+
+state_race_manpower = {
+	hidden_effect = {
+		every_controlled_state = {
+			#present
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 0}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 14 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 1}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 20 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 2}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 25 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 3}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 16 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 4}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 4 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 5}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 8 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 6}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 1 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 7}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 0.2 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 8}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 12.5 }
+			}
+			if = {
+				limit = {
+					check_variable = { ST_present_race = 9}
+				}
+				set_variable = { ST_present_race_conscription_ratio = 25 }
+			}
+
+			if = {
+				limit = {
+					or = {
+						and = {
+							check_variable = { ST_present_race = 7}
+							not = { PREV = { has_idea = Ghost } }
+						}
+						and = {
+							not = { check_variable = { ST_present_race = 7} }
+							PREV = { has_idea = Ghost }
+						}
+					}
+				}
+				set_variable = { ST_current_race_conscription_ratio = -1 }
+				else = {
+					set_variable = { ST_current_race_conscription_ratio = ST_present_race_conscription_ratio }
+					divide_variable = { ST_current_race_conscription_ratio = PREV.ST_controller_race_conscription_ratio }
+					add_to_variable = { ST_current_race_conscription_ratio = -1 }
+				}
+			}
+
+			if = {
+				limit = {
+					not = { ST_present_same_race = yes }
+				}
+				add_dynamic_modifier = {
+					modifier = state_different_race
+				}
+				else = {
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = state_different_race }
+						}
+						remove_dynamic_modifier = {
+							modifier = state_different_race
+						}
+						remove_dynamic_modifier = {
+							modifier = different_race_rebel
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ST_race_penalty_daily = {
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = { modifier = state_different_race }
+		}
+		add_dynamic_modifier = { modifier = different_race_rebel }
+		if = {
+			limit = {
+				or = {
+					has_state_flag = ST_no_penalty_@PREV
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Beast 
+								check_variable = { modifier@ST_race_no_penalty_on_Beast = 1 }
+							}
+						}
+						ST_race_is_Beast = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Tengu
+								check_variable = { modifier@ST_race_no_penalty_on_Tengu = 1 }
+							}
+						}
+						ST_race_is_Tengu = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Ghost
+								check_variable = { modifier@ST_race_no_penalty_on_Ghost = 1 }
+							}
+						}
+						ST_race_is_Ghost = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Fairy
+								check_variable = { modifier@ST_race_no_penalty_on_Fairy = 1 }
+							}
+						}
+						ST_race_is_Fairy = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Human
+								check_variable = { modifier@ST_race_no_penalty_on_Human = 1 }
+							}
+						}
+						ST_race_is_Human = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Magician
+								check_variable = { modifier@ST_race_no_penalty_on_Magician = 1 }
+							}
+						}
+						ST_race_is_Magician = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_God
+								check_variable = { modifier@ST_race_no_penalty_on_God = 1 }
+							}
+						}
+						ST_race_is_God = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Youkai
+								check_variable = { modifier@ST_race_no_penalty_on_Youkai = 1 }
+							}
+						}
+						ST_race_is_Youkai = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Pri_youkai
+								check_variable = { modifier@ST_race_no_penalty_on_Pri_youkai = 1 }
+							}
+						}
+						ST_race_is_Pri_youkai = yes
+					}
+					and = {
+						controller = { 
+							or = {
+								has_country_flag = ST_hexie_Kappa
+								check_variable = { modifier@ST_race_no_penalty_on_Kappa = 1 }
+							}
+						}
+						ST_race_is_Kappa = yes
+					}
+				}
+				
+			}
+			remove_dynamic_modifier = {
+				modifier = different_race_rebel
+			}
+		}
+
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = different_race_rebel
+				}
+			}
+			set_variable = { ST_current_recruitable_population_factor = global.ST_recruitable_population_factor}
+			set_variable = { ST_current_local_supplies_for_controller = global.ST_local_supplies_for_controller}
+			set_variable = { ST_current_compliance_growth = global.ST_compliance_growth}
+			set_variable = { ST_current_resistance_growth = global.ST_resistance_growth}
+			set_variable = { ST_current_state_production_speed_buildings_factor = global.ST_state_production_speed_buildings_factor}
+			set_variable = { ST_current_state_resources_factor = global.ST_state_resources_factor}
+
+			set_temp_variable = { percentage = 1}
+			####全局不合作种族惩罚
+			add_to_temp_variable = { percentage = PREV.modifier@ST_race_penalty_all_factor } 
+
+
+			###各种族的不合作惩罚
+			set_temp_variable = { percentage2 = 1}
+			if = {
+				limit = {
+					ST_race_is_Fairy = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Fairy_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Ghost = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Ghost_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Human = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Human_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Beast = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Beast_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Kappa = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Kappa_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Tengu = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Tengu_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Pri_youkai = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Pri_youkai_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_God = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_God_factor }
+			}
+			if = {
+				limit = {
+					ST_race_is_Magician = yes
+				}
+				add_to_temp_variable = { percentage2 = PREV.modifier@ST_race_penalty_Magician_factor }
+			}
+			multiply_temp_variable = {
+				percentage = percentage2
+			}
+			clamp_temp_variable = {
+				var = percentage
+				min = 0
+			}
+
+			multiply_variable = { ST_current_recruitable_population_factor = percentage }
+			multiply_variable = { ST_current_local_supplies_for_controller = percentage }
+			multiply_variable = { ST_current_compliance_growth = percentage }
+			multiply_variable = { ST_current_resistance_growth = percentage }
+			multiply_variable = { ST_current_state_production_speed_buildings_factor = percentage }
+			multiply_variable = { ST_current_state_resources_factor = percentage }
+		}
+	}
+}
+
+ST_race_penalty_remove = {
+	set_state_flag = ST_no_penalty_@ROOT
+	custom_effect_tooltip = ST_race_penalty_remove_tt
+}
+
+ST_race_to_Beast = {
+	set_variable = { ST_present_race = 0 }
+	custom_effect_tooltip = CONV_directconvert_0_tt
+}
+ST_race_to_Pri_youkai = {
+	set_variable = { ST_present_race = 1 }
+	custom_effect_tooltip = CONV_directconvert_1_tt
+}
+ST_race_to_Youkai = {
+	set_variable = { ST_present_race = 2 }
+	custom_effect_tooltip = CONV_directconvert_2_tt
+}
+ST_race_to_God = {
+	set_variable = { ST_present_race = 3 }
+	custom_effect_tooltip = CONV_directconvert_3_tt
+}
+ST_race_to_Human = {
+	set_variable = { ST_present_race = 4 }
+	custom_effect_tooltip = CONV_directconvert_4_tt
+}
+ST_race_to_Magician = {
+	set_variable = { ST_present_race = 5 }
+	custom_effect_tooltip = CONV_directconvert_5_tt
+}
+ST_race_to_Fairy = {
+	set_variable = { ST_present_race = 6 }
+	custom_effect_tooltip = CONV_directconvert_6_tt
+}
+ST_race_to_Ghost = {
+	set_variable = { ST_present_race = 7 }
+	custom_effect_tooltip = CONV_directconvert_7_tt
+}
+ST_race_to_Kappa = {
+	set_variable = { ST_present_race = 8 }
+	custom_effect_tooltip = CONV_directconvert_8_tt
+}
+ST_race_to_Tengu = {
+	set_variable = { ST_present_race = 9 }
+	custom_effect_tooltip = CONV_directconvert_9_tt
+}
+
+ST_hexie_Beast = {
+	set_country_flag = ST_hexie_Beast
+	custom_effect_tooltip = ST_hexie_Beast_tt
+}
+ST_hexie_Pri_youkai = {
+	set_country_flag = ST_hexie_Pri_youkai
+	custom_effect_tooltip = ST_hexie_Pri_youkai_tt
+}
+ST_hexie_Youkai = {
+	set_country_flag = ST_hexie_Youkai
+	custom_effect_tooltip = ST_hexie_Youkai_tt
+}
+ST_hexie_Human = {
+	set_country_flag = ST_hexie_Human
+	custom_effect_tooltip = ST_hexie_Human_tt
+}
+ST_hexie_God = {
+	set_country_flag = ST_hexie_God
+	custom_effect_tooltip = ST_hexie_God_tt
+}
+ST_hexie_Kappa = {
+	set_country_flag = ST_hexie_Kappa
+	custom_effect_tooltip = ST_hexie_Kappa_tt
+}
+ST_hexie_Fairy = {
+	set_country_flag = ST_hexie_Fairy
+	custom_effect_tooltip = ST_hexie_Fairy_tt
+}
+ST_hexie_Tengu = {
+	set_country_flag = ST_hexie_Tengu
+	custom_effect_tooltip = ST_hexie_Tengu_tt
+}
+ST_hexie_Ghost = {
+	set_country_flag = ST_hexie_Ghost
+	custom_effect_tooltip = ST_hexie_Ghost_tt
+}
+ST_hexie_Magician = {
+	set_country_flag = ST_hexie_Magician
+	custom_effect_tooltip = ST_hexie_Magician_tt
+}

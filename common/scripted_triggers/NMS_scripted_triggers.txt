@@ -1,0 +1,81 @@
+NMS_can_complete_reformists_trigger = {
+	NOT = {
+		has_completed_focus = NMS_yao_guai_jun_guo_zhu_yi
+	}
+	NOT = {
+		has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+	}
+	NOT = {
+		has_country_flag = NMS_reformists_lost_power_flag
+	}
+}
+
+NMS_can_complete_racists_trigger = {
+	NOT = {
+		has_completed_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+	}
+	NOT = {
+		has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+	}
+	NOT = {
+		has_country_flag = NMS_racists_lost_power_flag
+	}
+}
+
+NMS_reformists_totally_lost_power = {
+	custom_trigger_tooltip = {
+		tooltip = NMS_reformists_totally_lose_power_tt
+		AND = {
+			has_country_flag = NMS_reformists_lost_power_flag
+			check_variable = {
+				var = NMS_faction_res
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_st
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_bs
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_ic
+				value = 0
+				compare = greater_than_or_equals
+			}
+        }
+	}
+}
+
+NMS_racists_totally_lost_power = {
+	custom_trigger_tooltip = {
+		tooltip = NMS_racists_totally_lose_power_tt
+		AND = {
+			has_country_flag = NMS_racists_lost_power_flag
+			check_variable = {
+				var = NMS_faction_ws
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_eg
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_atk
+				value = 0
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = NMS_faction_def
+				value = 0
+				compare = greater_than_or_equals
+			}
+		}
+	}
+}

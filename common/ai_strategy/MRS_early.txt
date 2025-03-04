@@ -1,0 +1,79 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+# 0 [12545] conquer
+#  1 [12552] colonize
+#  2 [12546] explore
+#  3 [11199] antagonize
+#  4 [11200] befriend
+#  5 [11198] protect
+#  6 [14731] consider_weak
+#  7 [10878] influence
+#  8 [10457] alliance
+#  9 [12547] build_ship
+# 10 [14291] build_airplane
+# 11 [12548] build_army
+# 12 [12550] build_building
+# 13 [12551] research_tech
+# 15 [10536] garrison
+# 17 [13331] contain
+# 18 [13903] invade
+# 19 [13808] unit_ratio
+# 20 [14277] role_ratio
+# 21 [14321] land_xp_spend_priority
+# 22 [14322] pp_spend_priority
+# 23 [14186] template_prio
+# 24 [14222] template_xp_reserve
+# 25 [14236] equipment_stockpile_surplus_ratio
+# 27 [13988] air_factory_balance
+# 28 [13990] equipment_production_factor
+# 29 [14920] equipment_variant_production_factor
+# 30 [14919] equipment_production_min_factories
+# 31 [11736] ignore
+# 32 [14143] area_priority
+# 33 [14171] send_volunteers_desire
+# 34 [12569] occupation_policy
+# 35 [12188] support
+# 36 [14353] naval_avoid_region
+# 38 [14879] save_equipment
+# 39 [14916] pp_spend_amount
+# 40 [10111] declare_war
+# 41 [14900] ignore_army_incompetence
+# 42 [14968] spare_unit_factor
+# 43 [14902] dont_join_wars_with
+# 44 [14904] added_military_to_civilian_factory_ratio
+# 45 [14903] factory_build_score_factor
+# 46 [14905] ignore_claim
+# 47 [14907] dockyard_to_military_factory_ratio
+# 48 [14983] dont_defend_ally_borders
+# 49 [14984] force_defend_ally_borders
+
+###new
+MRS_defend_at_war_with_MSD = {
+	allowed = {
+		original_tag = MRS
+	}
+
+	enable = {
+		has_global_flag = MSD_kemonomichi_war_begun_flag
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_ended_flag
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = MSD
+		value = 70
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = MSD
+		priority = 1
+		ordertype = front
+		execution_type = careful
+	}
+}

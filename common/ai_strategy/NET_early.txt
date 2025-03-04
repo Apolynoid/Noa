@@ -1,0 +1,197 @@
+# netherworld civil war ai
+KNA_civil_war_no_rush_without_buff = {
+	allowed = {
+		original_tag = YYK
+	}
+	
+	enable = {
+		has_country_flag = YYK_KNA_flag
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+		NOT = {
+			has_idea = KNA_zui_zhong_gong_shi_idea
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		
+		tag = YKO
+
+		ratio = 0.1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+}
+
+KNA_civil_war_rush_with_buff = {
+	allowed = {
+		original_tag = YYK
+	}
+	
+	enable = {
+		has_country_flag = YYK_KNA_flag
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+		OR = {
+			has_idea = KNA_zui_zhong_gong_shi_idea
+			YKO = {
+				has_idea = YKO_jun_dui_bei_qing_xi_idea
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		
+		tag = YKO
+
+		ratio = 0.1
+
+		priority = 10
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+}
+
+YKO_civil_war_no_rush = {
+	allowed = {
+		original_tag = YYK
+	}
+	
+	enable = {
+		has_country_flag = YYK_YKO_flag
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		
+		tag = KNA
+
+		ratio = 0.1
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+	}
+}
+
+# special countries bid for netherworld civil war
+NET_support_KNA = {
+	allowed = {
+		YYK_should_support_KNA = yes
+	}
+
+	enable = {
+		is_subject = no
+		has_war = no
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = KNA		
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = KNA			
+		value = 60
+	}
+	ai_strategy = {
+		type = befriend
+		id = KNA
+		value = 40
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = KNA
+		value = 40
+		target = incoming_lend_lease
+	}
+}
+
+NET_support_YKO = {
+	allowed = {
+		YYK_should_support_YKO = yes
+	}
+
+	enable = {
+		is_subject = no
+		has_war = no
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = YKO			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = YKO			
+		value = 60
+	}
+	ai_strategy = {
+		type = befriend
+		id = YKO
+		value = 40
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = YKO
+		value = 40
+		target = incoming_lend_lease
+	}
+}
+
+# YKR shouldn't sign no-aggression before war
+YKR_no_no-aggression_before_civil_war = {
+	allowed = {
+		original_tag = YKR
+	}
+
+	enable = {
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire 
+		id = YYK			
+		value = -200
+		target = non_aggression_pact
+	}
+}

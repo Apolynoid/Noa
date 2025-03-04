@@ -1,0 +1,240 @@
+# krd yaw grs mrs ali nar zyd mel sgs hum kas sbk
+defined_text = { 
+	name = TKM_get_KRD_trade_limit
+	text = {
+		trigger = {
+			KRD = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_KRD_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_YAW_trade_limit
+	text = {
+		trigger = {
+			YAW = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_YAW_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_GRS_trade_limit
+	text = {
+		trigger = {
+			GRS = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_GRS_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_MRS_trade_limit
+	text = {
+		trigger = {
+			MRS = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_MRS_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_ALI_trade_limit
+	text = {
+		trigger = {
+			ALI = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_ALI_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_NAR_trade_limit
+	text = {
+		trigger = {
+			NAR = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_NAR_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_ZYD_trade_limit
+	text = {
+		trigger = {
+			ZYD = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_ZYD_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_MEL_trade_limit
+	text = {
+		trigger = {
+			MEL = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_MEL_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_SGS_trade_limit
+	text = {
+		trigger = {
+			SGS = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_SGS_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_HUM_trade_limit
+	text = {
+		trigger = {
+			HUM = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_HUM_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_KAS_trade_limit
+	text = {
+		trigger = {
+			KAS = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_KAS_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_SBK_trade_limit
+	text = {
+		trigger = {
+			SBK = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_SBK_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_SEJ_trade_limit
+	text = {
+		trigger = {
+			SEJ = {
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_get_SEJ_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = TKM_get_limit_list
+	text = {
+		trigger = {
+			any_of_scopes = {
+				array = TKM.TKM_trade_limit_list
+				tooltip = "tt"
+				TKM_has_trade_limit = yes
+			}
+		}
+		localization_key = TKM_list_trade_limits_tt
+	}
+	text = {
+		localization_key = TKM_no_trade_limits_tt
+	}
+}
+
+defined_text = { 
+	name = TKM_get_magic_forest_cooperator
+	text = {
+		trigger = {
+			check_variable = {
+				TKM.TKM_magic_forest_cooperator = TKM
+			}
+		}
+		localization_key = TKM_no_magic_forest_cooperator_tt
+	}
+	text = {
+		localization_key = TKM_magic_forest_cooperator_tt
+	}
+}
+
+defined_text = { 
+	name = TKM_is_auto_sp_bead_conversion_on
+	text = {
+		trigger = {
+			has_country_flag = TKM_auto_sp_bead_conversion_flag
+		}
+		localization_key = TKM_auto_sp_bead_conversion_on_tt
+	}
+	text = {
+		localization_key = TKM_auto_sp_bead_conversion_off_tt
+	}
+}

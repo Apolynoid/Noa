@@ -1,0 +1,964 @@
+# 介入魔法之森内战
+TKM_jie_ru_mo_fa_zhi_sen_nei_zhan = {
+	# 尝试与FROM谈判合作事项
+	TKM_chang_shi_yu_FROM_tan_pan_he_zuo_shi_xiang = {
+		target_root_trigger = {
+            has_completed_focus = TKM_gan_she_mo_fa_zhi_sen_nei_zhan
+			has_global_flag = MRS_civil_war_prepare_flag
+			NOT = {
+				has_global_flag = MRS_civil_war_end_flag
+			}
+        }
+		targets = { MRS ALI NAR }
+		targets_dynamic = yes
+		target_trigger = {
+            FROM = {
+				OR = {
+					original_tag = MRS
+					original_tag = ALI
+					original_tag = NAR
+				}
+                exists = yes
+                is_subject = no
+            }
+        }
+		visible = {
+			check_variable = {
+				TKM.TKM_magic_forest_cooperator = TKM
+			}
+			FROM = {
+				NOT = {
+					has_country_flag = TKM_refuse_to_cooperate_flag
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = TKM_is_negotiating_flag
+			}
+		}
+
+		icon = hol_exchange_intelligence_data
+		cost = 10
+        days_remove = 15
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = TKM_is_negotiating_flag
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				country_event = tkm.105
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 10
+				FROM = {
+					tag = ALI
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					tag = NAR
+				}
+			}
+		}
+	}
+
+	# 武器转换
+	TKM_wu_qi_zhuan_huan = {
+        allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				check_variable = {
+					TKM.TKM_magic_forest_cooperator = TKM
+				}
+			}
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = TKM_aiding_magic_forest_flag
+			}
+			has_equipment = {
+				gun_a > 200
+			}
+			has_equipment = {
+				mortar_a > 100
+			}
+		}
+
+        cost = 30
+        days_remove = 30
+		icon = ger_military_buildup
+		fire_only_once = no
+
+        cancel_trigger = {
+            has_global_flag = MRS_civil_war_end_flag
+        }
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = TKM_aiding_magic_forest_flag
+			}
+			add_equipment_to_stockpile = {
+                type = gun_a
+                amount = -200
+            }
+            add_equipment_to_stockpile = {
+                type = mortar_a
+                amount = -100
+            }
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+			add_equipment_to_stockpile = {
+                type = gun_a
+                amount = 200
+            }
+            add_equipment_to_stockpile = {
+                type = mortar_a
+                amount = 100
+            }
+		}
+
+        remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+            var:TKM_magic_forest_cooperator = {
+				hidden_effect = {
+					country_event = tkm.108
+				}
+				add_equipment_to_stockpile = {
+					type = magic_core_a
+					amount = 200
+					producer = TKM
+				}
+				add_equipment_to_stockpile = {
+					type = magic_energy_a
+					amount = 100
+					producer = TKM
+				}
+			}
+        }
+    }
+
+	# 派遣军事顾问
+	TKM_pai_qian_jun_shi_gu_wen = {
+        allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				check_variable = {
+					TKM.TKM_magic_forest_cooperator = TKM
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = TKM_jian_li_dao_ju_can_mou_bu
+			NOT = {
+				has_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+        cost = 30
+        days_remove = 30
+		icon = generic_army_support
+		fire_only_once = yes
+
+        cancel_trigger = {
+            has_global_flag = MRS_civil_war_end_flag
+        }
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+        remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+            var:TKM_magic_forest_cooperator = {
+				hidden_effect = {
+					country_event = tkm.109
+				}
+				add_ideas = TKM_TKM_jun_shi_gu_wen_idea
+			}
+        }
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	# 工业援助
+	TKM_gong_ye_yuan_zhu = {
+        allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				check_variable = {
+					TKM.TKM_magic_forest_cooperator = TKM
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = TKM_jun_shi_gong_ye_jian_she
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = {
+				has_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+        cost = 30
+        days_remove = 30
+		icon = generic_factory
+		fire_only_once = yes
+
+        cancel_trigger = {
+            has_global_flag = MRS_civil_war_end_flag
+        }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+		}
+
+        remove_effect = {
+			hidden_effect = {
+				clr_country_flag = TKM_aiding_magic_forest_flag
+			}
+            var:TKM_magic_forest_cooperator = {
+				hidden_effect = {
+					country_event = tkm.110
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+        }
+
+		ai_will_do = {
+			base = 500
+		}
+	}
+}
+
+# 付丧神高能灵气特性
+TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
+	# 增加工业灵气投入
+	TKM_zeng_jia_gong_ye_ling_qi_tou_ru = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				has_country_flag = TKM_energy_change_already_set_flag
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TKM_industrial_not_reach_upper_bound_tt
+				check_variable = {
+					TKM_industrial_feature_level < TKM_industrial_feature_upper_bound
+				}
+			}
+		}
+
+        cost = 30
+		icon = generic_industrial_increase
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_on_next_settlement_tt
+			TKM_industrial_level_increase_tooltip = yes
+			hidden_effect = {
+				set_country_flag = TKM_energy_change_already_set_flag
+				set_country_flag = TKM_industrial_increase_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	# 减少工业灵气投入
+	TKM_jian_shao_gong_ye_ling_qi_tou_ru = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				has_country_flag = TKM_energy_change_already_set_flag
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TKM_industrial_not_reach_lower_bound_tt
+				check_variable = {
+					TKM_industrial_feature_level > 0
+				}
+			}
+		}
+
+        cost = 30
+		icon = generic_industrial_decrease
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_on_next_settlement_tt
+			TKM_industrial_level_decrease_tooltip = yes
+			hidden_effect = {
+				set_country_flag = TKM_energy_change_already_set_flag
+				set_country_flag = TKM_industrial_decrease_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# 增加军事灵气投入
+	TKM_zeng_jia_jun_shi_ling_qi_tou_ru = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				has_country_flag = TKM_energy_change_already_set_flag
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TKM_military_not_reach_upper_bound_tt
+				check_variable = {
+					TKM_military_feature_level < TKM_military_feature_upper_bound
+				}
+			}
+		}
+
+        cost = 30
+		icon = generic_military_increase
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_on_next_settlement_tt
+			TKM_military_level_increase_tooltip = yes
+			hidden_effect = {
+				set_country_flag = TKM_energy_change_already_set_flag
+				set_country_flag = TKM_military_increase_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+	# 减少军事灵气投入
+	TKM_jian_shao_jun_shi_ling_qi_tou_ru = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				has_country_flag = TKM_energy_change_already_set_flag
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TKM_military_not_reach_lower_bound_tt
+				check_variable = {
+					TKM_military_feature_level > 0
+				}
+			}
+		}
+
+        cost = 30
+		icon = generic_military_decrease
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_on_next_settlement_tt
+			TKM_military_level_decrease_tooltip = yes
+			hidden_effect = {
+				set_country_flag = TKM_energy_change_already_set_flag
+				set_country_flag = TKM_military_decrease_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# 开启灵力珠自动转换
+	TKM_kai_qi_ling_li_zhu_zi_dong_zhuan_huan = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			NOT = {
+				has_country_flag = TKM_auto_sp_bead_conversion_flag
+			}
+		}
+
+        cost = 0
+		icon = tkm_turn_on_sp_bead_auto_conversion
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_turn_on_auto_sp_bead_conversion_tt
+			hidden_effect = {
+				set_country_flag = TKM_auto_sp_bead_conversion_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	# 关闭灵力珠自动转换
+	TKM_guan_bi_ling_li_zhu_zi_dong_zhuan_huan = {
+		allowed = {
+            original_tag = TKM
+        }
+		visible = {
+			has_country_flag = TKM_auto_sp_bead_conversion_flag
+		}
+
+        cost = 0
+		icon = tkm_turn_off_sp_bead_auto_conversion
+		fire_only_once = no
+
+		complete_effect = {
+			custom_effect_tooltip = TKM_turn_off_auto_sp_bead_conversion_tt
+			hidden_effect = {
+				clr_country_flag = TKM_auto_sp_bead_conversion_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	# 灵力珠转换
+	TKM_ling_li_zhu_zhuan_huan = {
+		allowed = {
+            original_tag = TKM
+        }
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TKM_has_storage_space_tt
+				check_variable = {
+					TKM_sp_bead_num < TKM_sp_bead_storage
+				}
+			}
+			has_fuel > TKM_energy_per_sp_bead
+		}
+
+        cost = 0
+		icon = tkm_sp_bead_conversion
+		fire_only_once = no
+
+		complete_effect = {
+			set_temp_variable = {
+				t = TKM_energy_per_sp_bead
+			}
+			multiply_temp_variable = {
+				t = -1
+			}
+			add_fuel = t
+			custom_effect_tooltip = TKM_sp_bead_add_1_tt
+			hidden_effect = {
+				add_to_variable = {
+					TKM_sp_bead_num = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	# 灵气特性结算
+	TKM_ling_li_te_xing_jie_suan = {
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			always = no
+		}
+
+		icon = tkm_energy_feature_settlement
+		is_good = yes
+		days_mission_timeout = 30
+		selectable_mission = no
+
+		timeout_effect = {
+			# change apply
+			hidden_effect = {
+				set_temp_variable = {
+					t_i_l = TKM_industrial_feature_level
+				}
+				set_temp_variable = {
+					t_m_l = TKM_military_feature_level
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = TKM_industrial_increase_flag
+				}
+				hidden_effect = {
+					add_to_temp_variable = {
+						t_i_l = 1
+					}
+					add_to_variable = {
+						TKM_industrial_feature_level = 1
+					}
+				}
+				TKM_industrial_level_increase_tooltip = yes
+			} else_if = {
+				limit = { 
+					has_country_flag = TKM_industrial_decrease_flag
+				}
+				hidden_effect = {
+					add_to_temp_variable = {
+						t_i_l = -1
+					}
+					add_to_variable = {
+						TKM_industrial_feature_level = -1
+					}
+				}
+				TKM_industrial_level_decrease_tooltip = yes
+			} else_if = {
+				limit = { 
+					has_country_flag = TKM_military_increase_flag
+				}
+				hidden_effect = {
+					add_to_temp_variable = {
+						t_m_l = 1
+					}
+					add_to_variable = {
+						TKM_military_feature_level = 1
+					}
+				}
+				TKM_military_level_increase_tooltip = yes
+			} else_if = {
+				limit = {
+					has_country_flag = TKM_military_decrease_flag
+				}
+				hidden_effect = {
+					add_to_temp_variable = {
+						t_m_l = -1
+					}
+					add_to_variable = {
+						TKM_military_feature_level = -1
+					}
+				}
+				TKM_military_level_decrease_tooltip = yes
+			} else = {
+				custom_effect_tooltip = TKM_no_feature_change_tt
+			}
+			hidden_effect = {
+				TKM_do_calc_feature = yes
+			}
+			# cost
+			hidden_effect = {
+				multiply_temp_variable = {
+					t_i_l = t_i_l
+				}
+				multiply_temp_variable = {
+					t_m_l = t_m_l
+				}
+				set_temp_variable = {
+					t_expected_cost = t_i_l
+				}
+				add_to_temp_variable = {
+					t_expected_cost = t_m_l
+				}
+			}
+			custom_effect_tooltip = TKM_sp_bead_cost__t_expected_cost___tt
+			# sp bead calc
+			hidden_effect = {
+				set_temp_variable = {
+					t_extra_sp_bead_num = 0
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = TKM_gao_neng_ling_qi_te_bie_kai_fa_qu
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							OR = {
+								is_fully_controlled_by = TKM
+								has_resources_rights = {
+									receiver = TKM
+									resources = { energy }
+								}
+							}
+							energy > 0
+						}
+						add_to_temp_variable = {
+							t_extra_sp_bead_num = 1
+						}
+					}	
+				}
+				custom_effect_tooltip = TKM_energy_development_zone_production_tt
+			}
+			hidden_effect = {
+				set_temp_variable = {
+					t_max_possible_bead = 0
+				}
+				if = {
+					limit = {
+						has_country_flag = TKM_auto_sp_bead_conversion_flag
+					}
+					set_temp_variable = {
+						t_max_possible_bead = fuel_k
+					}
+					multiply_temp_variable = {
+						t_max_possible_bead = 1000
+					}
+					set_temp_variable = {
+						t_max_possible_bead_mod = t_max_possible_bead
+					}
+					modulo_temp_variable = {
+						t_max_possible_bead_mod = TKM_energy_per_sp_bead
+					}
+					subtract_from_temp_variable = {
+						t_max_possible_bead = t_max_possible_bead_mod
+					}
+					divide_temp_variable = {
+						t_max_possible_bead = TKM_energy_per_sp_bead
+					}
+				}
+				set_temp_variable = {
+					t_bead_total_gap = TKM_sp_bead_storage
+				}
+				subtract_from_temp_variable = {
+					t_bead_total_gap = TKM_sp_bead_num
+				}
+				add_to_temp_variable = {
+					t_bead_total_gap = t_expected_cost
+				}
+				# judgement
+				set_temp_variable = {
+					t_final_conversion_num = 0
+				}
+				set_temp_variable = {
+					t_crush_flag = 0
+				}
+				if = {
+					limit = {
+						check_variable = {
+							t_extra_sp_bead_num < t_bead_total_gap
+						}
+					}
+					# we need conversion
+					set_temp_variable = {
+						t_sp_bead_desired = t_bead_total_gap
+					}
+					subtract_from_temp_variable = {
+						t_sp_bead_desired = t_extra_sp_bead_num
+					}
+					if = {
+						limit = {
+							check_variable = {
+								t_sp_bead_desired > t_max_possible_bead
+							}
+						}
+						# gap is so huge that we want to convert as much as we can
+						set_temp_variable = {
+							t_count = t_expected_cost
+						}
+						subtract_from_temp_variable = {
+							t_count = t_extra_sp_bead_num
+						}
+						subtract_from_temp_variable = {
+							t_count = t_max_possible_bead
+						}
+						if = {
+							limit = {
+								check_variable = {
+									t_count > TKM_sp_bead_num
+								}
+							}
+							# now it crushes
+							set_temp_variable = {
+								t_crush_flag = 1
+							}
+							
+						} else = {
+							set_temp_variable = {
+								t_final_conversion_num = t_max_possible_bead
+							}
+						}
+					} else = {
+						# gap is fillable, just fill it
+						set_temp_variable = {
+							t_final_conversion_num = t_sp_bead_desired
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						t_crush_flag = 1
+					}
+				}
+				custom_effect_tooltip = TKM_not_enough_sp_bead_tt
+				hidden_effect = {
+					country_event = tkm.141
+				}
+			} else = {
+				if = {
+					limit = {
+						has_country_flag = TKM_auto_sp_bead_conversion_flag
+					}
+					custom_effect_tooltip = TKM_auto_conversion_num_tt
+					if = {
+						limit = {
+							check_variable = {
+								t_final_conversion_num > 0
+							}
+						}
+						hidden_effect = {
+							set_temp_variable = {
+								t_energy_cost = t_final_conversion_num
+							}
+							multiply_temp_variable = {
+								t_energy_cost = TKM_energy_per_sp_bead
+							}
+							multiply_temp_variable = {
+								t_energy_cost = -1
+							}
+						}
+						add_fuel = t_energy_cost
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_debug = yes
+				}
+				custom_effect_tooltip = TKM_energy_debug_line_tt
+			}
+			# storage management
+			hidden_effect = {
+				add_to_variable = {
+					TKM_sp_bead_num = t_final_conversion_num
+				}
+				add_to_variable = {
+					TKM_sp_bead_num = t_extra_sp_bead_num
+				}
+				subtract_from_variable = {
+					TKM_sp_bead_num = t_expected_cost
+				}
+				clamp_variable = {
+					var = TKM_sp_bead_num
+					min = 0
+					max = TKM_sp_bead_storage
+				}
+			}
+			# flag clear
+			hidden_effect = {
+				clr_country_flag = TKM_energy_change_already_set_flag
+				clr_country_flag = TKM_industrial_increase_flag
+				clr_country_flag = TKM_industrial_decrease_flag
+				clr_country_flag = TKM_military_increase_flag
+				clr_country_flag = TKM_military_decrease_flag
+				activate_mission = TKM_ling_li_te_xing_jie_suan
+			}
+		}
+	}
+
+}
+
+# 政治状况管理
+domestic_affair_management = {
+	# 偿还战争债券
+	TKM_chang_huan_zhan_zheng_zhai_quan = {
+		allowed = {
+            original_tag = TKM
+        }
+
+        icon = hol_attract_foreign_investors
+
+        fire_only_once = no
+
+        cost = 0
+
+		visible = {
+			has_dynamic_modifier = {
+				modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+			}
+		}
+
+        available = {
+            has_dynamic_modifier = {
+				modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+			}
+        }
+
+        complete_effect = {
+            remove_dynamic_modifier = {
+				modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+			}
+			TKM_pay_off_war_bonds = yes
+        }
+
+        ai_will_do = {
+            base = -1
+        }
+	}
+
+	# 战争债券延期
+	TKM_zhan_zheng_zhai_quan_yan_qi = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            NOT = {
+				has_dynamic_modifier = {
+					modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+				}
+			}
+        }
+        icon = generic_bills
+        days_mission_timeout = 180
+        selectable_mission = no
+		is_good = no
+        timeout_effect = {
+			hidden_effect = {
+				add_to_variable = {
+					TKM_property_war_bond_pp = 0.15
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_zhan_zheng_zhai_quan_tt_idea
+					add_idea = TKM_dao_ju_zhan_zheng_zhai_quan_a_tt_idea
+				}
+			}
+            activate_mission = TKM_zhan_zheng_zhai_quan_yan_qi
+        }
+    }
+
+	# 启动与FROM的贸易限制谈判
+	TKM_qi_dong_yu_FROM_de_mao_yi_xian_zhi_tan_pan = {
+        target_root_trigger = {
+            has_dynamic_modifier = {
+				modifier = TKM_shou_xian_zhi_de_gao_neng_ling_qi_mao_yi_idea
+			}
+        }
+        target_array = TKM_trade_limit_list
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                TKM_has_trade_limit = yes
+				OR = {
+					AND = {
+						TKM_THIS_no_need_to_worry_about_SCA = yes
+						TKM_THIS_no_need_to_worry_about_NMS = yes
+					}
+					AND = {
+						TKM = {
+							has_completed_focus = TKM_gao_neng_ling_qi_mao_yi_tan_pan
+						}
+						is_changemaker = yes
+						has_opinion = {
+							target = TKM
+							value > 0
+						}
+					}
+				}
+				NOT = {
+					is_ally_with = SCA
+				}
+				NOT = {
+					is_ally_with = NMS
+				}
+				OR = {
+					NOT = {
+						original_tag = HUM
+					}
+					NOT = {
+						OR = {
+							has_idea = hum_yao_guai_de_ying_xiang_idea
+							has_idea = hum_yao_guai_ying_xiang_jian_ruo_idea
+							has_idea = hum_xiang_SCA_zhi_fu_tiao_jie_fei_idea
+						}
+					}
+				}
+            }
+        }
+		allowed = {
+			original_tag = TKM
+		}
+		icon = generic_trade
+        cost = 50
+        days_remove = 15
+
+        remove_effect = {
+            FROM = {
+                country_event = tkm.135
+            }
+        }
+    }
+}

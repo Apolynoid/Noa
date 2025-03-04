@@ -1,0 +1,52 @@
+on_actions = {
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = MSD
+					}
+					FROM = {
+						original_tag = MRS
+					}
+					has_global_flag = MSD_kemonomichi_war_escalated_flag
+					NOT = {
+						has_global_flag = MSD_kemonomichi_war_ended_flag
+					}
+				}
+				# MSD total victory
+				set_global_flag = MSD_kemonomichi_war_ended_flag
+				MSD = {
+					set_country_flag = MSD_victory_in_kemonomichi_war_flag
+				}
+				news_event = {
+					id = kem_war.109
+					days = 7
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = MRS
+					}
+					FROM = {
+						original_tag = MSD
+					}
+					has_global_flag = MSD_kemonomichi_war_escalated_flag
+					NOT = {
+						has_global_flag = MSD_kemonomichi_war_ended_flag
+					}
+				}
+				# MRS total victory
+				set_global_flag = MSD_kemonomichi_war_ended_flag
+				MRS = {
+					set_country_flag = MRS_victory_in_kemonomichi_war_flag
+				}
+				news_event = {
+					id = kem_war.109
+					days = 7
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,328 @@
+﻿capital = 638
+XXX = { #same in initial_leader_setting(scripted_effects) only to decrease errors
+    recruit_character = CLO_juk
+
+    recruit_character = ALI_yumeko
+    recruit_character = ALI_ski
+
+    recruit_character = HKR_suika
+    recruit_character = HKR_jyo
+    recruit_character = HKR_son
+
+    recruit_character = SCA_yuugenmagan
+
+    recruit_character = TES_singyoku
+
+    recruit_character = HKR_genjii
+    recruit_character = HKR_mima
+    recruit_character = HKR_ruukoto
+
+    recruit_character = YUK_elly
+    recruit_character = YUK_gengetsu
+    recruit_character = YUK_kurumi
+    recruit_character = YUK_mugetsu
+    recruit_character = YUK_orange
+
+    recruit_character = UND_sts
+    recruit_character = UND_sara
+    recruit_character = UND_kotohime
+    recruit_character = UND_luize
+
+}
+AKI = {
+    recruit_character = AKI_hin
+    recruit_character = AKI_szh
+    recruit_character = AKI_sizuha
+    recruit_character = AKI_hin_leader
+    recruit_character = AKI_szh_leader
+    recruit_character = AKI_sizuha_leader
+}
+CHE = {
+    recruit_character = CHE_che
+    recruit_character = CHE_che_leader
+}
+CLO = {
+    recruit_character = CLO_clown
+    recruit_character = CLO_clown_leader
+    recruit_character = CLO_hct
+    recruit_character = CLO_hct_leader
+}
+EET = {
+    recruit_character = EET_eri
+    recruit_character = EET_eri_leader
+    recruit_character = EET_kaguya
+    recruit_character = EET_kaguya_leader
+}
+EMB = {
+    recruit_character = EMB_may
+    recruit_character = EMB_may_leader
+}
+GYK = {
+    recruit_character = GYK_yuma
+    recruit_character = GYK_yuma_leader
+}
+HGH = {
+    recruit_character = HGH_esh
+    recruit_character = HGH_esh_leader
+}
+HKR = {
+    recruit_character = HKR_meira
+    
+    recruit_character = HKR_hkr
+    recruit_character = HKR_hkr_leader
+    recruit_character = HKR_aunn
+    recruit_character = HKR_aunn_leader
+}
+HUM = {
+    recruit_character = HUM_ymm
+    recruit_character = HUM_cyr
+    recruit_character = HUM_ask
+    recruit_character = HUM_rika
+
+    recruit_character = HUM_keine
+    recruit_character = HUM_aky
+    recruit_character = HUM_keine_leader
+    recruit_character = HUM_aky_leader
+
+    recruit_character = ZBT_kosuzu
+    recruit_character = ZBT_kosuzu_leader
+}
+IKU = {
+    recruit_character = IKU_iku
+    recruit_character = IKU_iku_leader
+}
+INB = {
+    recruit_character = INB_inb
+    recruit_character = INB_inb_leader
+}
+KAG = {
+    recruit_character = KAG_kag
+    recruit_character = KAG_kag_leader
+}
+KAS = {
+    recruit_character = KAS_kas
+    recruit_character = KAS_kas_leader
+}
+KEK = {
+    recruit_character = KEK_jtg
+    recruit_character = KEK_jtg_leader
+    recruit_character = KEK_kek
+    recruit_character = KEK_kek_leader
+}
+KMC = {
+    recruit_character = KMC_elis
+    recruit_character = KMC_sariel
+    recruit_character = KMC_kmc
+    recruit_character = KMC_kmc_leader
+    recruit_character = KMC_elis_leader
+    recruit_character = KMC_sariel_leader
+}
+KRD = {
+    recruit_character = KRD_misumaru
+    recruit_character = KRD_momoyo
+    recruit_character = KRD_misumaru_leader
+    recruit_character = KRD_momoyo_leader
+}
+LIL = {
+    recruit_character = LIL_lil
+    recruit_character = LIL_lil_leader
+}
+MAM = {
+    recruit_character = MAM_mam
+    recruit_character = MAM_mam_leader
+}
+MEL = {
+    recruit_character = MEL_mel
+    recruit_character = MEL_mel_leader
+}
+MOK = {
+    recruit_character = MOK_mokou
+    recruit_character = MOK_mokou_leader
+}
+MRY = {
+    recruit_character = MRY_ysk
+    recruit_character = MRY_ysk_leader
+    recruit_character = MRY_sanae
+    recruit_character = MRY_sanae_leader
+    recruit_character = MRY_mry
+    recruit_character = MRY_mry_leader
+}
+MSD = {
+    recruit_character = MSD_msd
+    recruit_character = MSD_msd_leader
+}
+NMN = {
+    recruit_character = NMN_nmn
+    recruit_character = NMN_nmn_leader
+}
+OKI = {
+    recruit_character = OKI_kikuri
+
+    recruit_character = OKI_oki
+    recruit_character = OKI_mai
+    recruit_character = OKI_satono
+    recruit_character = OKI_oki_leader
+}
+OTG = {
+    recruit_character = OTG_tsukasa
+    recruit_character = OTG_megumu
+    recruit_character = OTG_megumu_leader
+    recruit_character = OTG_council_leader
+}
+PRI = {
+    recruit_character = PRI_luna
+    recruit_character = PRI_luna_leader
+    recruit_character = PRI_lyrica
+    recruit_character = PRI_lyrica_leader
+    recruit_character = PRI_merlin
+    recruit_character = PRI_merlin_leader
+}
+PRS = {
+    recruit_character = PRS_prs
+    recruit_character = PRS_prs_leader
+}
+RGO = {
+    recruit_character = RGO_rgo
+    recruit_character = RGO_rgo_leader
+    recruit_character = RGO_ser
+    recruit_character = RGO_ser_leader
+}
+SAK = {
+    recruit_character = SAK_sak
+    recruit_character = SAK_sak_leader
+}
+SAT = {
+    recruit_character = SAT_sat
+    recruit_character = SAT_sat_leader
+    recruit_character = SAT_koishi
+    recruit_character = SAT_koishi_leader
+}
+SBK = {
+    recruit_character = SBK_sek
+    recruit_character = SBK_sek_leader
+}
+SGS = {
+    recruit_character = SGS_lunar
+    recruit_character = SGS_lunar_leader
+    recruit_character = SGS_sun
+    recruit_character = SGS_sun_leader
+    recruit_character = SGS_star
+    recruit_character = SGS_star_leader
+}
+SKI = {
+    recruit_character = SKI_ski
+    recruit_character = SKI_ski_leader
+    recruit_character = SKI_nwt
+    recruit_character = SKI_nwt_leader
+}
+SRB = {
+    recruit_character = SRB_mik
+    recruit_character = SRB_mik_leader
+    recruit_character = SRB_seiga
+    recruit_character = SRB_seiga_leader
+    recruit_character = SRB_toziko
+    recruit_character = SRB_futo
+    recruit_character = SRB_yoshika
+}
+TBA = {
+    recruit_character = TBA_mike
+    recruit_character = TBA_sannyo
+    recruit_character = TBA_chimata
+    recruit_character = TBA_mike_leader
+    recruit_character = TBA_sannyo_leader
+    recruit_character = TBA_chimata_leader
+}
+TES = {
+    recruit_character = TES_tes
+    recruit_character = TES_tes_leader
+    recruit_character = TES_iku_leader
+    recruit_character = TES_mai
+    recruit_character = TES_yuki
+}
+UDO = {
+    recruit_character = UDO_reisen
+    recruit_character = UDO_reisen_leader
+}
+URM = {
+    recruit_character = URM_ebs
+    recruit_character = URM_ebs_leader
+    recruit_character = URM_urm
+    recruit_character = URM_urm_leader
+}
+UTH = {
+    recruit_character = UTH_uth
+    recruit_character = UTH_uth_leader
+    recruit_character = UTH_rin
+    recruit_character = UTH_rin_leader
+}
+WAK = {
+    recruit_character = WAK_wak
+    recruit_character = WAK_wak_leader
+    recruit_character = WAK_flan_leader
+    recruit_character = WAK_rem_leader
+}
+WHR = {
+    recruit_character = WHR_whr
+    recruit_character = WHR_whr_leader
+}
+YAW = {
+    recruit_character = YAW_takane
+    recruit_character = YAW_takane_leader
+}
+YCE = {
+    recruit_character = YCE_yce
+    recruit_character = YCE_yce_leader
+}
+YKR = {
+    recruit_character = YKR_ykr
+    recruit_character = YKR_ykr_leader
+    recruit_character = YKR_ykm
+}
+YMM = {
+    recruit_character = YMM_yamame
+    recruit_character = YMM_yamame_leader
+    recruit_character = YMM_kisume
+    recruit_character = YMM_kisume_leader
+}
+YUG = {
+    recruit_character = YUG_konngara
+
+    recruit_character = YUG_yug
+    recruit_character = YUG_yug_leader
+}
+YUK = {
+    recruit_character = YUK_yuk
+    recruit_character = YUK_yuk_leader
+    recruit_character = YUK_larva
+    recruit_character = YUK_larva_leader
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+    }
+    
+}
+146.1.1={
+    oob = "TEST"
+    add_ideas = {
+        Ghost
+        Tribal
+        hawk0
+        open0
+        free_magic
+    }
+    add_ideas = ZON_idea
+    set_politics = {
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 100
+    }
+}

@@ -1,0 +1,65 @@
+﻿capital = 402
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+        
+        linglicunchu = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+146.1.1={
+    add_manpower = 100
+    oob = "NMN_146"
+    
+    diplomatic_relation = { 
+        country = OTG relation = non_aggression_pact active = yes
+    }
+    
+    add_ideas = {
+    Youkai
+    Village
+    close5
+    dove2
+    limit_magic
+    manpowerlv1
+    isolation
+     
+    }
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 100
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+}

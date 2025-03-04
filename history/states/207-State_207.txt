@@ -1,0 +1,39 @@
+
+state={
+	id=207
+	name="STATE_207"
+
+	history={
+		143.7.1 = {
+			owner = HKR
+			add_core_of = HKR
+			add_claim_by = MSD
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+		146.1.1 = {
+			owner = HKR
+			add_core_of = HKR
+			add_claim_by = MSD
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+
+	}
+
+	provinces={
+		384 1728 3317 3822 3823 4155 4159 4162 5931 
+	}
+	manpower=302.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

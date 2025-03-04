@@ -1,0 +1,306 @@
+ma_weapons = {
+    if = {
+        limit = {
+            has_tech = spell_card3
+        }
+        ma_p147 = yes
+    }
+    if = {
+        limit = {
+            has_tech = spell_card4
+        }
+        ma_p153 = yes
+    }
+}
+ma_p_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { ma_p_r = 0}
+                    check_variable = { ma_p_s = 0}
+                    check_variable = { ma_p_h = 0}
+                    check_variable = { ma_p_a = 0}
+                    check_variable = { ma_p_d = 0}
+                    check_variable = { ma_p_b = 0}
+                    check_variable = { ma_p_i = 0}
+                    check_variable = { ma_p_ir = 0}
+                    check_variable = { ma_p_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+ma_p147 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Beelzebub Mark VII" 
+                    type = magic_core147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冷冻洒水器" 
+                    type = magic_core147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEJ
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "逆击弹幕" 
+                    type = magic_core147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "问答无用拳套" 
+                    type = magic_core147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p153 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Leviathan Mark V" 
+                    type = magic_core153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冰柱机枪" 
+                    type = magic_core153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEJ
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "镜国弹幕" 
+                    type = magic_core153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "碎击拳套" 
+                    type = magic_core153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}

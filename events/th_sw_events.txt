@@ -1,0 +1,286 @@
+﻿add_namespace = swe
+news_event = { #GH1 2 3 VS MEL
+	id = swe.1
+	title = swe.1.t
+	desc = swe.1.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = swe.1.1
+		trigger = {
+			not = { tag = MEL}
+		}
+	}
+	option = {
+		name = swe.1.2
+		trigger = {
+			tag = MEL
+		}
+	}
+}
+
+news_event = { #SGS VS YUK
+	id = swe.2
+	title = swe.2.t
+	desc = swe.2.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = swe.2.1
+		trigger = {
+
+		}
+	}
+}
+
+country_event = { #NMS puppet MAM(trigger)
+	id = swe.3
+	title = swe.3.t
+	desc = swe.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = swe.3.1
+		ai_chance = {
+			base = 100
+		}
+
+		NMS = {
+			MAM = {
+				subject_level3 = yes
+			}
+		}
+		
+		
+	    hidden_effect = {
+			news_event = { days = 2 id = swe.4}	
+		}
+	}
+
+	option = {
+		name = swe.3.2
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+}
+
+news_event = { #NMS puppet MAM
+	id = swe.4
+	title = swe.4.t
+	desc = swe.4.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = swe.4.1
+		trigger = {
+
+		}
+	}
+}
+
+country_event = { 
+	id = swe.5
+	title = swe.5.t
+	desc = swe.5.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		date > 151.3.5
+		tag = OKI
+		is_subject = no
+		not = {
+			# owns_state = 334
+			# owns_state = 337
+			# owns_state = 371
+			# owns_state = 342
+			owns_state = 654
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = swe.5.1
+		ai_chance = {
+			base = 99
+		}
+
+
+		add_state_claim = 342
+		add_state_claim = 334
+		add_state_claim = 233
+		add_state_claim = 219
+		add_state_claim = 371
+		add_state_claim = 337
+		add_state_claim = 654
+
+		342 = { state_owner_get = yes }
+        event_target:trigger_target = { country_event = {id = swe.6 days = 2} }
+	}
+
+	option = {
+		name = swe.5.2
+
+		ai_chance = {
+			base = 1
+		}
+
+	}
+}
+
+country_event = { 
+	id = swe.6
+	title = swe.6.t
+	desc = swe.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 55
+		}
+
+		name = swe.6.1
+		
+		OKI = {
+			country_event = { id = swe.7 days = 2}
+		}
+		
+	}
+
+	option = {
+		name = swe.6.2
+
+		OKI = {
+			transfer_state = 342
+			transfer_state = 334
+			transfer_state = 233
+			transfer_state = 219
+			transfer_state = 371
+			transfer_state = 337
+			transfer_state = 654
+			hidden_effect = {
+				country_event = { id = glo.2001 days = 2}
+				news_event = { id = swe.8 days = 2 }
+			}
+		}
+
+		ai_chance = {
+			base = 45
+		}
+
+	}
+}
+
+country_event = { 
+	id = swe.7
+	title = swe.7.t
+	desc = swe.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 99
+		}
+
+		name = swe.7.1
+		
+		army_experience = 10
+
+		OKI = {
+			declare_war_on = {
+	          target = FROM
+	          type = take_state_focus
+	          generator = { 654 }
+	        }
+		}
+
+		hidden_effect = {
+			news_event = { id = swe.8 days = 2 }
+		}
+	}
+
+	option = {
+		name = swe.7.2
+
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+news_event = {
+	id = swe.8
+	title = swe.8.t
+	desc = swe.8.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = swe.8.1
+		trigger = {
+			has_war_with = OKI
+		}
+	}
+
+	option = {
+		name = swe.8.2
+		trigger = {
+			or = {
+				has_idea = gensoukyo_creator_idea
+			}
+		}
+	}
+
+	option = {
+		name = swe.8.3
+		trigger = {
+			not = {
+				has_war_with = OKI
+				has_idea = gensoukyo_creator_idea
+			}
+		}
+	}
+}
+
+news_event = { #称霸西南
+	id = swe.19
+	title = swe.19.t
+	desc = swe.19.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = swe.19.1
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = {
+		name = swe.19.2
+		trigger = {
+			not = {
+				tag = FROM
+			}
+		}
+	}
+}

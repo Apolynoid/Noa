@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	TKM_jie_chu_mao_yi_xian_zhi_op = {
+		value = -30
+	}
+}

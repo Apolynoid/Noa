@@ -1,0 +1,44 @@
+SCA_yao_jing_bao_dong_idea = {
+	icon = GFX_idea_chi_war_of_resistance3
+	remove_trigger = {
+		always = no
+	}
+
+	political_power_factor = SCA_fairy_rebellion_pp
+	stability_factor = SCA_fairy_rebellion_st
+	war_support_factor = SCA_fairy_rebellion_ws
+	consumer_goods_factor = SCA_fairy_rebellion_cf
+}
+
+SCA_bu_zhong_cheng_de_jun_dui_idea = {
+	icon = GFX_idea_generic_army_problems
+	remove_trigger = {
+		always = no
+	}
+	
+	command_power_gain_mult = SCA_army_loyalty_cp
+	experience_gain_army_factor = SCA_army_loyalty_eg
+	land_doctrine_cost_factor = SCA_army_loyalty_ld
+	army_attack_factor = -0.05
+	army_defence_factor = -0.05
+	army_morale_factor = -0.05
+	army_org_factor = -0.05
+	breakthrough_factor = -0.05
+	initiative_factor = -0.05
+}
+
+SCA_bu_chong_fen_de_zhan_zheng_zhun_bei_idea = {
+	icon = GFX_idea_tfv_can_conscription_crisis
+	remove_trigger = {
+		check_variable = {
+			var = SCA_insufficient_war_preparation
+			value = 0
+			compare = greater_than_or_equals
+		}
+	}
+
+	army_attack_factor = SCA_insufficient_war_preparation
+	army_defence_factor = SCA_insufficient_war_preparation
+	ai_focus_aggressive_factor = -0.6
+	ai_focus_defense_factor = 0.6
+}

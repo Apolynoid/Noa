@@ -1,0 +1,31 @@
+state={
+	id=443
+	name="STATE_443"
+	provinces={
+		6049 6054 6055 6059 6062 6069 6075 6082 6087 6092 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=3.000
+	}
+	history={
+		146.1.1 = {
+			owner = KMC
+			add_core_of = KMC	
+			add_claim_by = URM
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+	}
+	manpower=331633.0
+	state_category=s0
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,31 @@
+state={
+	id=231
+	name="STATE_231"
+
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas = 5.0
+		crystal = 10.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =4
+				industrial_complex = 3
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		651 1343 2192 2860 
+	}
+	state_category=s12
+	local_supplies=2.5
+	manpower=1468967.0
+	buildings_max_level_factor=1.000
+}

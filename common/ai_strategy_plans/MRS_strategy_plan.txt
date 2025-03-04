@@ -1,0 +1,169 @@
+MRS_focus_before_civil_war_ends = {
+	name = "MRS focus before civil war ends"
+	desc = "rush for military and politics"
+
+	allowed = {
+		tag = MRS
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		OR = {
+			has_global_flag = MRS_civil_war_end_flag
+			has_global_flag = MRS_civil_war_avoided_flag
+		}
+	}
+
+	ai_national_focuses = {
+		# politics first
+		MRS_zhao_kai_mo_nv_da_hui
+		MRS_zhi_chi_ruo_zhe_dou_zheng
+		MRS_wen_ding_hang_xiang
+		MRS_xuan_yang_he_ping_gong_chu
+		MRS_chang_shi_jie_chu_ai_li_si
+		MRS_zheng_qu_cheng_mei_zhi_chi
+		MRS_zheng_qu_ai_li_si_zhi_chi
+		MRS_chang_shi_jie_chu_cheng_mei
+		MRS_gu_li_ruo_zhe_lian_he
+		MRS_tiao_he_mo_fa_shi_mao_dun
+		MRS_bao_hu_zi_zhi_qu
+		MRS_xuan_yang_zhong_zu_ping_deng
+		MRS_ya_zhi_pan_luan_fen_zi
+		MRS_qu_di_ji_jin_si_xiang
+		# military then
+		MRS_jun_shi_dong_yuan
+		MRS_xian_jin_mo_fa_shi_wu_zhuang
+		MRS_mo_fa_zhi_sen_di_tu_ce_hui
+		MRS_jun_bei_shen_cha
+		MRS_qiang_hua_jun_dui_jian_she
+		MRS_mo_li_sha_de_fang_an
+		MRS_ren_ou_jun_tuan
+		MRS_gai_jin_jun_yong_ren_ou
+		MRS_ben_tu_fang_yu
+		MRS_shi_ying_di_xing
+		MRS_pao_bing_ge_xin
+		MRS_liang_chan_ba_gua_lu
+		MRS_fang_yu_gong_cheng_jian_she
+		MRS_gai_shan_hou_qin_ti_xi
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+MRS_focus_after_civil_war_ends = {
+	name = "MRS focus after civil war ends"
+	desc = "politics and industrial"
+
+	allowed = {
+		tag = MRS
+	}
+	enable = {
+		OR = {
+			has_global_flag = MRS_civil_war_end_flag
+			has_global_flag = MRS_civil_war_avoided_flag
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# politics first
+		MRS_zhao_kai_mo_nv_da_hui
+		MRS_zhi_chi_ruo_zhe_dou_zheng
+		MRS_wen_ding_hang_xiang
+		MRS_xuan_yang_he_ping_gong_chu
+		MRS_chang_shi_jie_chu_ai_li_si
+		MRS_zheng_qu_cheng_mei_zhi_chi
+		MRS_zheng_qu_ai_li_si_zhi_chi
+		MRS_chang_shi_jie_chu_cheng_mei
+		MRS_gu_li_ruo_zhe_lian_he
+		MRS_tiao_he_mo_fa_shi_mao_dun
+		MRS_bao_hu_zi_zhi_qu
+		MRS_xuan_yang_zhong_zu_ping_deng
+		MRS_ya_zhi_pan_luan_fen_zi
+		MRS_qu_di_ji_jin_si_xiang
+		# second-stage politics
+		MRS_chen_ai_luo_ding
+		MRS_fen_hua_fan_dui_pai
+		MRS_chong_su_ji_ti_ren_tong
+		# go and fetch some factories
+		MRS_jian_she_mo_fa_zhi_sen
+		MRS_gai_zao_da_zi_ran
+		MRS_yin_ru_mo_dao_ji_xie
+		MRS_xian_dai_hua_sheng_chan_fang_shi
+		MRS_quan_mian_gong_ye_hua
+		MRS_kuo_da_sheng_chan_xian
+		MRS_gong_ye_ji_shu_jin_bu
+		MRS_you_hua_sheng_chan_jie_gou
+		MRS_jian_zhu_ji_shu_ge_xin
+		# back to politics
+		MRS_hui_fu_sheng_chan
+		MRS_kai_fang_jiao_yu_zi_yuan
+		MRS_jia_qiang_bian_jie_fang_yu
+		# fetch military factories
+		MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
+		MRS_jun_shi_gong_ye_jian_she
+		# military then
+		MRS_jun_shi_dong_yuan
+		MRS_xian_jin_mo_fa_shi_wu_zhuang
+		MRS_mo_fa_zhi_sen_di_tu_ce_hui
+		MRS_jun_bei_shen_cha
+		MRS_qiang_hua_jun_dui_jian_she
+		MRS_mo_li_sha_de_fang_an
+		MRS_ren_ou_jun_tuan
+		MRS_gai_jin_jun_yong_ren_ou
+		MRS_ben_tu_fang_yu
+		MRS_shi_ying_di_xing
+		# finally to factions
+		MRS_mo_fa_zhi_sen_de_li_ming
+		MRS_zhan_zheng_zhun_bei
+		MRS_xin_shi_jun_shi_si_xiang
+		MRS_jia_ru_ge_ming_yun_dong
+		MRS_jia_ru_fei_hong_ti_xi
+		MRS_yu_fu_sang_shen_he_zuo
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}

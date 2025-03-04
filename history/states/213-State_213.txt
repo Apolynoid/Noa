@@ -1,0 +1,34 @@
+
+state={
+	id=213
+	name="STATE_213"
+	resources={
+		powder=2.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TKM
+			add_core_of = TKM
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		498 1977 3198 4283 4288 4293 4296 
+	}
+	manpower=695
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

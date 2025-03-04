@@ -1,0 +1,173 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	#########通用#######
+	science
+	magic
+	combined
+	
+	civil
+	military
+	
+	########战斗相关
+	#武器系
+	scientific_weapons
+	magical_weapons
+	combined_weapons
+
+	infantry
+	primary_weapons
+	melee
+
+	support_tech
+
+	artillery_tech
+	mortar
+	anti_shield
+
+	shield
+	sf_force
+	heavy
+
+	shield_weapons
+
+	air_equipment
+	fighter
+	bomber
+	st_bomber
+	scout
+	
+	basic_doctrine
+	land_doctrine
+	special_operations_doctrine
+	fire_support_doctrine
+	mass_assault_doctrine
+
+	##########
+	#工业类	
+	industrys
+	jiegou
+	build
+
+	main
+	fuzhu
+
+	resource
+	resource_mining
+	resource_building
+	oil_res
+	metal_res
+	powder_res
+	gas_res
+	crystal_res
+
+	transportation
+	###########
+	#电子
+	math
+	radio
+	jiemi
+	jiami
+	
+	##############
+	#种族科技
+	race
+
+	##############
+	#科技树科技
+	techtree_tech
+
+	###########
+	#秘密武器
+	secret
+}
+
+technology_folders = {
+	land_doctrine_folder = {
+		ledger = army
+		doctrine = yes
+		available = {
+			always = yes
+		}
+	}
+	support_folder = {
+		ledger = army
+		available = {
+			always = yes
+		}
+	}
+	industry_folder = {
+		ledger = civilian
+		available = {
+			always = yes
+		}
+	}
+	electronics_folder = {
+		ledger = civilian
+		available = {
+			always = yes
+		}
+	}
+	industry_sc_folder = {
+		ledger = civilian
+		available = {
+			has_tech = waike
+		}
+	}
+	industry_ma_folder = {
+		ledger = civilian
+		available = {
+			has_tech = lingben
+		}
+	}
+
+	secret_folder = {
+		ledger = civilian
+		available = {
+			# always = no
+		}
+	}
+
+	infantry_general_folder = {
+		ledger = army
+	}	
+	infantry_sc_support_folder = {
+		ledger = army
+		available = {
+			has_tech = waike
+		}
+	}
+	infantry_sc_advanced_folder = {
+		ledger = air
+		available = {
+			has_tech = waike
+		}
+	}
+	infantry_ma_support_folder = {
+		ledger = army
+		available = {
+			has_tech = lingben
+		}
+	}
+	infantry_ma_advanced_folder = {
+		ledger = air
+		available = {
+			has_tech = lingben
+		}
+	}
+	infantry_ma_combined_folder = {
+		ledger = army
+		available = {
+			has_tech = lingben
+		}
+	}
+	infantry_sc_combined_folder = {
+		ledger = army
+		available = {
+			has_tech = waike
+		}
+	}
+}
+
+ 

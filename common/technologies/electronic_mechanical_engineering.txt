@@ -1,0 +1,688 @@
+technologies = {
+#######qianzhi########
+ #    tongxunlilunqianzhi = {
+	#    allow = {
+	# 	    always = no		
+	# 	}
+	# }
+    ####################基础数学线####################
+    jichushuxue = {
+
+		research_speed_factor = 0.005
+
+		path = {
+			leads_to_tech = shuxuegongju
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 0.75
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		
+		categories = {
+			civil
+			math
+			combined
+		}
+	}
+	shuxuegongju = {
+
+		research_speed_factor = 0.015
+		
+		path = {
+			leads_to_tech = lingben
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = waike
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				has_tech = lingben
+				factor = -1
+			}
+		}
+		
+		categories = {	
+			civil
+			math
+			combined
+		}
+	}
+	lingben = {
+
+		research_speed_factor = 0.03
+
+		path = {
+			leads_to_tech = jisuangongju144
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = lingliganying147
+			research_cost_coeff = 1
+		}
+
+		XOR = {
+			waike
+		}
+
+		on_research_complete = {
+		    hidden_effect = {
+		        set_technology = {
+		       		tech_changed = 0
+		        }
+		    }   
+		}
+		dependencies = {
+            tech_changed = 1
+        }
+		
+		research_cost = 1.5
+		folder = {
+			name = electronics_folder
+			position = { x = 5 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2000
+			modifier = {
+				has_tech = waike
+				factor = -1
+			}
+			modifier = {
+				has_country_flag = TECH_go_waike
+				factor = 0
+			}
+		}
+		
+		categories = {
+			civil
+			math
+			magic
+		}
+	}
+
+	waike = {
+
+		research_speed_factor = 0.03
+
+		path = {
+			leads_to_tech = jisuangongju144
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = wuxiandian147
+			research_cost_coeff = 1
+		}
+		
+		XOR = {
+			lingben
+		}
+		dependencies = {
+            tech_changed = 1
+        }
+		
+		on_research_complete = {
+		    hidden_effect = {
+		        set_technology = {
+		       		tech_changed = 0
+		        }
+		    }   
+		}
+
+		research_cost = 1.5
+		folder = {
+			name = electronics_folder
+			position = { x = 13 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 500
+			modifier = {
+				has_tech = lingben
+				factor = -1
+			}
+			modifier = {
+				or = {
+					tag = YCE
+					tag = GYK
+					tag = SAK
+				}
+				factor = 10
+			}
+			modifier = {
+				has_country_flag = TECH_go_lingben
+				factor = 0
+			}
+		}
+		
+		categories = {
+			civil
+			math
+			science
+		}
+	}
+	jisuangongju144 = {
+
+		
+		path = {
+			leads_to_tech = jisuangongju149
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = lingganleida142
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = jiami137
+			research_cost_coeff = 1
+		}
+		
+
+		research_speed_factor = 0.04
+		
+		research_cost = 3
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 6 }
+		}
+
+		start_year = 144
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			math
+			combined
+		}
+	}
+	jisuangongju149 = {
+
+		
+		path = {
+			leads_to_tech = jisuangongju154
+			research_cost_coeff = 1
+		}
+		
+
+		research_speed_factor = 0.05
+		
+		research_cost = 3
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 8 }
+		}
+
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			math
+			combined
+		}
+	}
+	jisuangongju154 = {
+
+		path = {
+			leads_to_tech = jisuangongju159
+			research_cost_coeff = 1
+		}
+
+		research_speed_factor = 0.06
+		
+		research_cost = 3
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 10 }
+		}
+
+		start_year = 151
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			math
+			combined
+		}
+	}
+	jisuangongju159 = {
+	
+		research_cost = 3.3
+		folder = {
+			name = electronics_folder
+			position = { x = 9 y = 12 }
+		}
+		
+		research_speed_factor = 0.08
+
+		start_year = 155
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			math
+			combined
+		}
+	}
+
+	jiami137 = {
+	   research_cost = 1.8
+	    folder = {
+			name = electronics_folder
+			position = { x = 5 y = 8 }
+		}
+		path = {
+			leads_to_tech = jiami147
+			research_cost_coeff = 1
+		}
+
+		encryption = 2
+		decryption = 2
+		
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			civil
+		}
+	}
+	
+	jiami147 = {
+	   research_cost = 1.8
+	    folder = {
+			name = electronics_folder
+			position = { x = 5 y = 10 }
+		}
+		path = {
+			leads_to_tech = jiami157
+			research_cost_coeff = 1
+		}
+
+		encryption = 2
+		decryption = 2
+		
+		start_year = 151
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			civil
+		}
+	}
+	
+	jiami157 = {
+	   research_cost = 2.1
+	    folder = {
+			name = electronics_folder
+			position = { x = 5 y = 12 }
+		}
+		path = {
+			leads_to_tech = jiami167
+			research_cost_coeff = 1
+		}
+
+		encryption = 2
+		decryption = 2
+		
+		start_year = 155
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			civil
+		}
+	}
+	
+	lingganleida142 = {
+	    research_cost = 2.5
+	    folder = {
+			name = electronics_folder
+			position = { x = 13 y = 8 }
+		}
+
+		path = {
+			leads_to_tech = dimianjiance
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = radar_station
+		    level = 1
+		}
+
+		
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			civil
+		}
+
+
+	}
+
+	dimianjiance = {
+	    research_cost = 3
+	    folder = {
+			name = electronics_folder
+			position = { x = 13 y = 10 }
+		}
+		path = {
+			leads_to_tech = lingganleida162
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.05
+		LAND_NIGHT_ATTACK = 0.1
+		ARMY_MORALE_factor = 0.1
+		
+		start_year = 151
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			civil
+		}
+
+	}
+	
+	lingganleida162 = {
+	    research_cost = 2.8
+	    folder = {
+			name = electronics_folder
+			position = { x = 13 y = 12 }
+		}
+
+		enable_building = {
+			building = radar_station
+		    level = 3
+		}
+
+		production_speed_radar_station_factor = 1.1
+		
+		start_year = 155
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			civil
+		}
+
+	}
+
+	wuxiandian147 = {
+	    research_cost = 2
+	    folder = {
+			name = electronics_folder
+			position = { x = 17 y = 6 }
+		}
+		path = {
+			leads_to_tech = wuxiandian152
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		encryption_factor = 0.05
+
+		start_year = 144
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+	wuxiandian152 = {
+	    research_cost = 2
+	    folder = {
+			name = electronics_folder
+			position = { x = 17 y = 8 }
+		}
+		path = {
+			leads_to_tech = wuxiandian157
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		encryption_factor = 0.05
+		
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+	wuxiandian157 = {
+	    research_cost = 2.3
+
+	    path = {
+			leads_to_tech = wuxiandian162
+			research_cost_coeff = 1
+		}
+	    folder = {
+			name = electronics_folder
+			position = { x = 17 y = 10 }
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		encryption_factor = 0.05
+		
+		start_year = 151
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+
+	wuxiandian162 = {
+	    research_cost = 2.3
+	    folder = {
+			name = electronics_folder
+			position = { x = 17 y = 12 }
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		encryption_factor = 0.05
+		
+		start_year = 155
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+	}
+
+	lingliganying147 = {
+	    research_cost = 1.8
+	    folder = {
+			name = electronics_folder
+			position = { x = 1 y = 6 }
+		}
+		path = {
+			leads_to_tech = lingliganying152
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		decryption_factor = 0.05
+
+		start_year = 144
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			magic
+			civil
+		}
+
+	}
+	lingliganying152 = {
+	    research_cost = 1.8
+	    folder = {
+			name = electronics_folder
+			position = { x = 1 y = 8 }
+		}
+		path = {
+			leads_to_tech = lingliganying157
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		decryption_factor = 0.05
+		
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			magic
+			civil
+		}
+
+	}
+	lingliganying157 = {
+	    research_cost = 2.1
+
+	    path = {
+			leads_to_tech = lingliganying162
+			research_cost_coeff = 1
+		}
+	    folder = {
+			name = electronics_folder
+			position = { x = 1 y = 10 }
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		decryption_factor = 0.05
+		
+		start_year = 151
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			magic
+			civil
+		}
+
+	}
+
+	lingliganying162 = {
+	    research_cost = 2.1
+	    folder = {
+			name = electronics_folder
+			position = { x = 1 y = 12 }
+		}
+		path = {
+			leads_to_tech = lingliganying167
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		decryption_factor = 0.05
+		
+		start_year = 155
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			magic
+			civil
+		}
+	}
+}

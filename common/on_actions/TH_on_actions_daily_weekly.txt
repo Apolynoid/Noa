@@ -1,0 +1,201 @@
+on_actions = {
+	on_daily_SRB = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SRB_huanxiangxiangjiangshihua
+				}
+				every_owned_state = {
+					limit = {
+						not = { check_variable = { ST_present_race = 4 } }
+					}
+					CONV_convert = yes
+					add_core_of = ROOT
+					# start_resistance = yes
+				}
+			}
+		}
+	}
+  	### MEL effect
+  	on_weekly_MEL = {
+		effect = {
+			if = {
+				limit = {
+					has_idea = MEL_Shared_military_refuse_center_idea
+				}
+				add_equipment_to_stockpile = {
+		            type = gun147
+		            amount = 50
+		            producer = MEL
+		        }
+		        add_equipment_to_stockpile = {
+		            type = mortar143
+		            amount = 2
+		            producer = MEL
+		        }
+			}
+      		if = {
+				limit = {
+			          OR = {
+			            has_idea = MEL_Shared_military_refuse_center_idea_2
+			            has_idea = MEL_Shared_military_refuse_center_idea_3
+			          }
+					
+				}
+				add_equipment_to_stockpile = {
+		            type = gun147
+		            amount = 75
+		            producer = MEL
+		        }
+		        add_equipment_to_stockpile = {
+		            type = mortar143
+		            amount = 3
+		            producer = MEL
+		        }
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			##################only one country check
+			if = {
+				limit = {
+					has_country_flag = start_country
+				}
+				every_state = {
+			       	state_value_calculator = yes
+			    }
+			    power_global_value_generator = yes
+			    set_variable = { global.z5 = 0}
+			    every_country = {
+			    	set_variable = {z1 = casualties_k }
+					if = {
+						limit = {
+							check_variable = { z1 > z2 }
+						}
+						set_temp_variable = { z4 = z1}
+						subtract_from_temp_variable = { z4 = z2}
+						add_to_variable = { z3 = z4}
+					}
+					set_variable = { z2 = z1}
+					add_to_variable = {global.z5 = z3}
+			    }
+			    if = {
+			    	limit = {
+			    		check_variable = { global.z5 > global.z6}
+			    	}
+			    	set_temp_variable = { global.z8 = global.z5}
+			    	subtract_from_temp_variable = { global.z8 = global.z6}
+			    	add_to_variable = { global.z7 = global.z8}
+			    }
+			    set_variable = { global.z6= global.z5 }
+			    set_global_flag = {
+			    	flag = is_checking
+			    	days = 2
+			    	value = 1
+			    }
+			}
+			if = {
+				limit = {
+					not = {
+						has_global_flag = is_checking
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = no
+					}
+					set_country_flag = start_country
+				}
+				if = {
+					limit = {
+						all_country = {
+							not = {
+								has_country_flag = start_country
+							}
+						}
+					}
+					random_country = {
+						set_country_flag = start_country
+					}
+				}
+			}
+			#################
+			if = {
+		    	limit = {
+		    		has_idea = Fairy
+		    	}
+		    	FAPO_calculator = yes
+		    }
+		    if = {
+		    	limit = {
+		    		not = { has_idea = Human }
+		    	}
+		    	HMIF_daily_changer = yes
+		    }
+
+			SS_power_calculator = yes
+
+		    
+
+		    # AC_daily_check = yes
+
+		    country_value_calculator_and_manpower_gainer = yes
+
+		    outlook_daily_change = yes
+		    
+		    LS_daily = yes
+
+		    exhuastion_daily_change = yes
+		    
+		    power_daily_changer = yes
+
+		    CO_coring_daily = yes
+
+			CONV_daily = yes
+			
+			state_race_manpower = yes
+			
+			ST_race_penalty_daily = yes
+
+		    region_daily_check = yes
+
+		    FT_daily = yes
+
+			POPU_pp_gain = yes
+
+			POconvert_daily = yes
+			
+			if = {
+				limit = {
+					has_idea = Ghost
+				}
+				GO_set_daily = yes
+			}
+		    if = {
+		    	limit = {
+		    		tag = HUM
+		    	}
+		    	HMIF_influenced = yes
+		    }
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { 
+					has_intelligence_agency = yes
+					is_ai = yes
+				}
+				update_operation_ai = yes
+			}
+			set_variable = { ai_randomlize = random }
+		}
+	}
+	on_monthly = {
+		effect = {
+			# region_daily_check = yes
+		}
+	}
+}

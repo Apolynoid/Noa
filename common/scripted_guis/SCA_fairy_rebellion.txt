@@ -1,0 +1,18 @@
+scripted_gui = {
+
+	SCA_fairy_rebellion_ui = {
+		context_type = decision_category
+		window_name = "SCA_fairy_rebellion_ui_window"
+
+		properties = {
+			SCA_rebellion_bar = {
+				frame = SCA.SCA_rebellion_progress
+			}
+
+			SCA_loyalty_bar = {
+				frame = SCA.SCA_loyalty_progress
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,18 @@
+# 兽道战争
+MSD_shou_dao_zhan_zheng = {
+	icon = border_conflicts
+
+	priority = 96
+
+	allowed = {
+		original_tag = MSD
+	}
+
+	visible = {
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_ended_flag
+		}
+	}
+
+	visible_when_empty = yes
+}

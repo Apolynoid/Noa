@@ -1,0 +1,13 @@
+technologies = {
+    NMS_fang_zhi_sheng_nian_chuan = {
+      allow = {
+        always = no   
+      }
+      enable_subunits = {
+        sp_palanquin_ship
+      }
+      ai_will_do = {
+        base = 0
+      }
+    }
+}

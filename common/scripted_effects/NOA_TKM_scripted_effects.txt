@@ -1,0 +1,693 @@
+TKM_set_industrial_feature_0 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfegf = -0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfbf = -0.15
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_icf = -0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_irf = -0.2
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgev = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_snr = 0
+    }
+}
+
+TKM_set_industrial_feature_1 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfegf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfbf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgev = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_icf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_irf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_snr = 0
+    }
+}
+
+TKM_set_industrial_feature_2 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfegf = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfbf = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgf = -0.15
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgev = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_icf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_irf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_snr = 0
+    }
+}
+
+TKM_set_industrial_feature_3 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfegf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfbf = 0.15
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgf = -0.3
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_icf = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_irf = 0.1
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgev = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_snr = 0
+    }
+}
+
+TKM_set_industrial_feature_4 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfegf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pfbf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgf = -0.3
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cgev = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_icf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_irf = 0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_snr = 0.1
+    }
+}
+
+TKM_set_military_feature_0 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cpgm = -0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egaf = -0.2
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_lrr = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_atk = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olalof = 0.15
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egauf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_def = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_mor = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_wm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_ttaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pocp = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olwm = 0
+    }
+}
+
+TKM_set_military_feature_1 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cpgm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egauf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_lrr = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_atk = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_def = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_mor = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olalof = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_wm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_ttaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pocp = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olwm = 0
+    }
+}
+
+TKM_set_military_feature_2 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_wm = 1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_ttaf = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_mor = 0.1
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cpgm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egauf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_lrr = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_atk = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_def = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olalof = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pocp = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olwm = 0
+    }
+}
+
+TKM_set_military_feature_3 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_wm = 3
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_ttaf = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_def = 0.05
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_mor = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olwm = -0.1
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cpgm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egauf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_lrr = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_atk = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olalof = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pocp = 0
+    }
+}
+
+TKM_set_military_feature_4 = {
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egauf = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_wm = 5
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_ttaf = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_atk = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_def = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_mor = 0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_pocp = -0.1
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olwm = -0.1
+    }
+
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_cpgm = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_egaf = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_lrr = 0
+    }
+    set_variable = {
+        TKM_tsukumogami_spirutual_power_feature_olalof = 0
+    }
+}
+
+TKM_do_calc_feature = {
+    # industrial
+    if = {
+        limit = {
+            check_variable = {
+                TKM_industrial_feature_level = 0
+            }
+        }
+        TKM_set_industrial_feature_0 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_industrial_feature_level = 1
+            }
+        }
+        TKM_set_industrial_feature_1 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_industrial_feature_level = 2
+            }
+        }
+        TKM_set_industrial_feature_2 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_industrial_feature_level = 3
+            }
+        }
+        TKM_set_industrial_feature_3 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_industrial_feature_level = 4
+            }
+        }
+        TKM_set_industrial_feature_4 = yes
+    } else = {
+        log = "TKM Unknown industrial Level"
+    }
+    # military
+    if = {
+        limit = {
+            check_variable = {
+                TKM_military_feature_level = 0
+            }
+        }
+        TKM_set_military_feature_0 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_military_feature_level = 1
+            }
+        }
+        TKM_set_military_feature_1 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_military_feature_level = 2
+            }
+        }
+        TKM_set_military_feature_2 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_military_feature_level = 3
+            }
+        }
+        TKM_set_military_feature_3 = yes
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_military_feature_level = 4
+            }
+        }
+        TKM_set_military_feature_4 = yes
+    } else = {
+        log = "TKM Unknown Military Level"
+    }
+    # calc cost
+    set_variable = {
+        TKM_monthly_sp_bead_cost = 0
+    }
+    set_temp_variable = {
+        t = TKM_military_feature_level
+    }
+    multiply_temp_variable = {
+        t = TKM_military_feature_level
+    }
+    add_to_variable = {
+        TKM_monthly_sp_bead_cost = t
+    }
+    set_temp_variable = {
+        t = TKM_industrial_feature_level
+    }
+    multiply_temp_variable = {
+        t = TKM_industrial_feature_level
+    }
+    add_to_variable = {
+        TKM_monthly_sp_bead_cost = t
+    }
+}
+
+TKM_industrial_level_increase_tooltip = {
+    custom_effect_tooltip = TKM_industrial_level_increase_tt
+    effect_tooltip = {
+        if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 0
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_0_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_1_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 1
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_1_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_2_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 2
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_2_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_3_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 3
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_3_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_4_idea
+            }
+        } else = {
+            custom_effect_tooltip = already_highest_tt
+        }
+    }
+}
+
+TKM_industrial_level_decrease_tooltip = {
+    custom_effect_tooltip = TKM_industrial_level_decrease_tt
+    effect_tooltip = {
+        if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 4
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_4_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_3_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 3
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_3_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_2_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 2
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_2_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_1_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_industrial_feature_level = 1
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_1_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_industrial_0_idea
+            }
+        } else = {
+            custom_effect_tooltip = already_lowest_tt
+        }
+    }
+}
+
+TKM_military_level_increase_tooltip = {
+    custom_effect_tooltip = TKM_military_level_increase_tt
+    effect_tooltip = {
+        if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 0
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_0_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_1_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 1
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_1_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_2_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 2
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_2_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_3_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 3
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_3_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_4_idea
+            }
+        } else = {
+            custom_effect_tooltip = already_highest_tt
+        }
+    }
+}
+
+TKM_military_level_decrease_tooltip = {
+    custom_effect_tooltip = TKM_military_level_decrease_tt
+    effect_tooltip = {
+        if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 4
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_4_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_3_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 3
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_3_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_2_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 2
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_2_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_1_idea
+            }
+        } else_if = {
+            limit = {
+                check_variable = {
+                    TKM_military_feature_level = 1
+                }
+            }
+            swap_ideas = {
+                remove_idea = TKM_fu_sang_shen_ling_li_te_dian_military_1_idea
+                add_idea = TKM_fu_sang_shen_ling_li_te_dian_military_0_idea
+            }
+        } else = {
+            custom_effect_tooltip = already_lowest_tt
+        }
+    }
+}
+
+TKM_try_adding_trade_limit = {
+    if = {
+        limit = {
+            NOT = {
+                has_idea = TKM_dui_dao_ju_de_mao_yi_xian_zhi_idea
+            }
+            NOT = {
+                has_country_flag = TKM_cancel_reade_limit_flag
+            }
+        }
+        add_ideas = TKM_dui_dao_ju_de_mao_yi_xian_zhi_idea
+    }
+}
+
+TKM_cancel_trade_limit = {
+    custom_effect_tooltip = TKM_cancel_trade_limit_tt
+    hidden_effect = {
+        set_country_flag = TKM_cancel_reade_limit_flag
+        remove_ideas = TKM_dui_dao_ju_de_mao_yi_xian_zhi_idea
+    }
+}
+
+TKM_production_promote = {
+    if = {
+        limit = {
+            has_idea = TKM_bo_ruo_de_gong_ye_idea
+        }
+        swap_ideas = {
+            remove_idea = TKM_bo_ruo_de_gong_ye_idea
+            add_idea = TKM_bo_ruo_de_gong_ye_c_idea
+        }
+    }
+    else_if = {
+        limit = { 
+            has_idea = TKM_bo_ruo_de_gong_ye_a_idea
+        }
+        swap_ideas = {
+            remove_idea = TKM_bo_ruo_de_gong_ye_a_idea
+            add_idea = TKM_bo_ruo_de_gong_ye_d_idea
+        }
+    }
+    else = {
+        remove_ideas = TKM_bo_ruo_de_gong_ye_b_idea
+    }
+}
+
+TKM_pay_off_war_bonds = {
+    hidden_effect = {
+        clr_country_flag = TKM_war_bond_to_pay_flag
+        set_temp_variable = {
+            pay_off_days = TKM_property_war_bond_pp
+        }
+        multiply_temp_variable = {
+            pay_off_days = 500
+        }
+    }
+    add_timed_idea = {
+        idea = TKM_zhan_zheng_zhai_quan_chang_fu_idea
+        days = pay_off_days
+    }
+}
+
+TKM_SBK_begin_to_be_influenced = {
+    add_popularity = {
+        ideology = fandong
+        popularity = 0.1
+    }
+    add_timed_idea = {
+        idea = TKM_fan_yao_guai_ji_jin_pai_idea
+        days = 540
+    }
+}

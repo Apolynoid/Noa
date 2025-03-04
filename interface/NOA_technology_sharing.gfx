@@ -1,0 +1,19 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_youkai_mountain_tech_sharing"
+		texturefile = "gfx/interface/technology_sharing/youkai_mountain_tech_sharing.png"
+	}
+
+	spriteType = {
+		name = "GFX_scarlet_imperial_academy"
+		texturefile = "gfx/interface/technology_sharing/scarlet_imperial_academy.png"
+	}
+
+	spriteType = {
+		name = "GFX_gekokujyo_tech_mutual_aid_committee"
+		texturefile = "gfx/interface/technology_sharing/gekokujyo_tech_mutual_aid_committee.png"
+	}
+
+}
+

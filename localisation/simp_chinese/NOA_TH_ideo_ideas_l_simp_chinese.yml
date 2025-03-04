@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ gekokujyo_spirit:0 "下克上精神"
+
+ political_power_focus:0 "重视权力"
+ war_propaganda_focus:0 "重视宣传"
+ intel_focus:0 "重视情报"
+
+ army_exp_focus:0 "重视经验"
+ logistic_focus:0 "重视后勤"
+ military_planning_focus:0 "重视计划"
+ army_mobilisation_focus:0 "重视机动"
+
+ consumer_goods_focus:0 "重视民生"
+ factory_output_focus:0 "重视产出"
+ factory_focus:0 "重视工厂"
+
+ gain_1_civ_and_2_mil_tt:0 "§G获得§!1个民用工厂和2个军用工厂"

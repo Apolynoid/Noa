@@ -1,0 +1,282 @@
+characters={
+	NMS_bkr ={
+		name = NMS_bkr
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_bkr.dds"
+				small="gfx/leaders/NMS/NMS_bkr_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_bkr.dds"
+				small="gfx/leaders/NMS/NMS_bkr_small.dds"
+			}
+		}
+		field_marshal = {
+			traits = {  th_original_character th_character war_hero trait_cautious }
+			attack_skill = 10
+			defense_skill = 14
+			planning_skill = 10
+			logistics_skill = 7
+
+			# id = 4
+			
+			skill = 11
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_bkr
+			name = NMS_bkr
+			cost = 200
+			modifier = {
+				compliance_growth = 0.4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldgenso_type
+			traits = {
+				NMS_da_a_she_li
+			}
+			id=-1
+		}
+	}
+	NMS_syou ={
+		name = NMS_syou
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_syou.dds"
+				small="gfx/leaders/NMS/NMS_syou_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_syou.dds"
+				small="gfx/leaders/NMS/NMS_syou_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character old_guard  }
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 9
+			# id = 5
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_syou
+			name = NMS_syou
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.06
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+	}
+	NMS_mouse ={
+		name = NMS_mouse
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_mouse.dds"
+				small="gfx/leaders/NMS/NMS_mouse_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_mouse.dds"
+				small="gfx/leaders/NMS/NMS_mouse_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character th_trait_tezhongzhuanjia  }
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 4
+			# id = 6
+			skill = 4
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_mouse
+			name = NMS_mouse
+			cost = 200
+			modifier = {
+				local_resources_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	NMS_kumoi ={
+		name = NMS_kumoi
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_kumoi.dds"
+				small="gfx/leaders/NMS/NMS_kumoi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_kumoi.dds"
+				small="gfx/leaders/NMS/NMS_kumoi_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character th_trait_chongjizhuanjia war_hero }
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 2
+			
+			# id = 8
+
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_kumoi
+			name = NMS_kumoi
+			cost = 200
+			modifier = {
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.2
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	NMS_kyouko ={
+		name = NMS_kyouko
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_kyouko.dds"
+				small="gfx/leaders/NMS/NMS_kyouko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_kyouko.dds"
+				small="gfx/leaders/NMS/NMS_kyouko_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character trait_cautious th_trait_huoqiangzhuanjia  }
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+			# id = 7
+			skill = 4
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_kyouko
+			name = NMS_kyouko
+			cost = 200
+			modifier = {
+				ST_race_penalty_all_factor = -0.4
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+	}
+	NMS_murasa ={
+		name = NMS_murasa
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_murasa.dds"
+				small="gfx/leaders/NMS/NMS_murasa_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_murasa.dds"
+				small="gfx/leaders/NMS/NMS_murasa_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+			attack_skill = 7
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 4
+			# id = 9
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_murasa
+			name = NMS_murasa
+			cost = 200
+			modifier = {
+				army_infantry_attack_factor = 0.075
+				army_infantry_defence_factor = 0.075
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			traits = {
+				NMS_chuan_zhang
+			}
+			id=-1
+		}
+	}
+	NMS_nue ={
+		name = NMS_nue
+		portraits={
+			civilian={
+				large="gfx/leaders/NMS/NMS_nue.dds"
+				small="gfx/leaders/NMS/NMS_nue_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NMS/NMS_nue.dds"
+				small="gfx/leaders/NMS/NMS_nue_small.dds"
+			}
+		}
+		field_marshal = {
+			traits = {  th_original_character th_character th_trait_dayaoguai  }
+			attack_skill = 1
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = -1
+			# id = 36
+			skill = 8
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NMS_nue
+			name = NMS_nue
+			cost = 200
+			modifier = {
+				encryption = 2
+				modifier_army_sub_unit_ma_shield_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_ma_shield_infantry_defence_factor = 0.05
+				modifier_army_sub_unit_sc_shield_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_sc_shield_infantry_defence_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+	}
+}

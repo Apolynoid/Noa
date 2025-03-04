@@ -1,0 +1,21 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_focus_mass_production_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_mass_production_NOA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_TKM_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_TKM_NOA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_HUM_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_HUM_NOA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_energy_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_energy_NOA.png"			
+	}
+}

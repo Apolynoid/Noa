@@ -1,0 +1,16 @@
+NMS_pai_xi_dou_zheng_idea = {
+	icon = GFX_idea_generic_disjointed_gov
+	remove_trigger = {
+		always = no
+	}
+	research_speed_factor = NMS_faction_res
+	stability_factor = NMS_faction_st
+	production_speed_buildings_factor = NMS_faction_bs
+	industrial_capacity_factory = NMS_faction_ic
+	war_support_factor = NMS_faction_ws
+	experience_gain_army_factor = NMS_faction_eg
+	army_attack_factor = NMS_faction_atk
+	army_defence_factor = NMS_faction_def
+	custom_modifier_tooltip = NMS_reformists_dissatisfaction_level_tt
+	custom_modifier_tooltip = NMS_racists_dissatisfaction_level_tt
+}

@@ -1,0 +1,225 @@
+ma_infantry_generic = {
+
+	blocked_for = {
+		SEJ
+		TEG
+	}
+
+	role = main_force
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			has_tech = waike
+		}
+	}
+
+	ma_infantry145 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 7
+				ma_magic_energy_brigade = 3
+				ma_magic_focus_brigade = 1
+				ma_shield_infantry = 1
+				melee_cavalry = 2
+			}
+		}
+
+		replace_at_match = 1.5
+		replace_with = ma_infantry150
+		target_min_match = 0.5
+	}
+
+	ma_infantry150 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 7
+				ma_magic_energy_brigade = 3
+				ma_magic_focus_brigade = 1
+				ma_shield_infantry = 2
+				melee_cavalry = 3
+			}
+		}
+
+		replace_at_match = 0.4
+		replace_with = ma_infantry155
+		target_min_match = 0.5
+	}
+
+	ma_infantry155 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 9
+				ma_magic_energy_brigade = 4
+				ma_magic_focus_brigade = 1
+				ma_shield_infantry = 2
+				melee_cavalry = 3
+			}
+		}
+	}
+}
+sc_infantry_generic = {
+
+	blocked_for = {
+		SEJ
+		TEG
+	}
+
+	role = main_force
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			not = { has_tech = waike }
+		}
+	}
+
+	sc_infantry145 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 7
+				sc_mortar_brigade = 3
+				sc_anti_shield_brigade = 1
+				sc_shield_infantry = 1
+				melee_cavalry = 2
+			}
+		}
+		
+		replace_at_match = 1.5
+		replace_with = sc_infantry150
+		target_min_match = 0.5
+	}
+
+	sc_infantry150 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 7
+				sc_mortar_brigade = 3
+				sc_anti_shield_brigade = 1
+				sc_shield_infantry = 2
+				melee_cavalry = 3
+			}
+		}
+		
+		replace_at_match = 0.4
+		replace_with = sc_infantry155
+		target_min_match = 0.5
+	}
+
+	sc_infantry155 = {
+	
+		upgrade_prio = {
+			factor = 2
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 9
+				sc_mortar_brigade = 4
+				sc_anti_shield_brigade = 1
+				sc_shield_infantry = 2
+				melee_cavalry = 3
+			}
+		}
+	}
+}

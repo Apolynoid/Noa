@@ -1,0 +1,240 @@
+sc_weapons = {
+    if = {
+        limit = {
+            has_tech = gun3
+        }
+        sc_p147 = yes
+    }
+    if = {
+        limit = {
+            has_tech = gun4
+        }
+        sc_p153 = yes
+    }
+}
+sc_p_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { sc_p_r = 0}
+                    check_variable = { sc_p_s = 0}
+                    check_variable = { sc_p_h = 0}
+                    check_variable = { sc_p_a = 0}
+                    check_variable = { sc_p_d = 0}
+                    check_variable = { sc_p_b = 0}
+                    check_variable = { sc_p_i = 0}
+                    check_variable = { sc_p_ir = 0}
+                    check_variable = { sc_p_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+sc_p147 = {
+    sc_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = MRY
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "御神签步枪" 
+                    type = gun147
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TKM
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "音爆步枪" 
+                    type = gun147
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "风弹"
+                    type = gun147
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+}
+
+sc_p153 = {
+    sc_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = MRY
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "神樱步枪" 
+                    type = gun153
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TKM
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "晚钟步枪" 
+                    type = gun153
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "强风弹" 
+                    type = gun153
+                    upgrades = {
+                      upgrade_reliability = [sc_p_r]
+                      upgrade_softattack = [sc_p_s]
+                      upgrade_hardattack = [sc_p_h]
+                      upgrade_aaattack = [sc_p_a]
+                      upgrade_defense = [sc_p_d]
+                      upgrade_breakthrough = [sc_p_b]
+                      upgrade_ic = [sc_p_i]
+                      upgrade_ic_reverse = [sc_p_ir]
+                      upgrade_reliability_reverse = [sc_p_rr]
+                   }
+                }
+            }
+            sc_p_r = "[?THIS.sc_p_r]"
+            sc_p_s = "[?THIS.sc_p_s]"
+            sc_p_h = "[?THIS.sc_p_h]"
+            sc_p_a = "[?THIS.sc_p_a]"
+            sc_p_d = "[?THIS.sc_p_d]"
+            sc_p_b = "[?THIS.sc_p_b]"
+            sc_p_i = "[?THIS.sc_p_i]"
+            sc_p_ir = "[?THIS.sc_p_ir]"
+            sc_p_rr = "[?THIS.sc_p_rr]"
+        }
+    }
+}

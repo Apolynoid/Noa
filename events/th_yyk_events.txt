@@ -1,0 +1,679 @@
+﻿add_namespace = yyk
+# 冥界的命运
+country_event = {
+	id = yyk.101
+	title = yyk.101.t
+	desc = yyk.101.d
+	is_triggered_only = yes
+
+	# $YYK_yyk$的统治必须结束
+	option = {
+		name = yyk.101.1
+		custom_effect_tooltip = YYK_play_as_KNA_tt
+		hidden_effect = {
+			set_country_flag = YYK_KNA_selected_flag
+			complete_national_focus = KNA_fan_dui_you_you_zi
+			activate_mission = YYK_nei_zhan_bao_fa
+			activate_mission = YYK_que_bao_shou_du_wei_dui_zhi_chi
+			YYK_random_state_seize_choose = yes
+			swap_ideas = {
+				remove_idea = YYK_you_ling_ji_jin_pai_xi_idea
+				add_idea = YYK_you_ling_ji_jin_pai_xi_a_idea
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+		
+	}
+
+	# $YYK_yyk$的统治将会继续
+	option = {
+		name = yyk.101.2
+		custom_effect_tooltip = YYK_play_as_YKO_tt
+		hidden_effect = {
+			set_country_flag = YYK_YKO_selected_flag
+			complete_national_focus = YKO_zhi_chi_you_you_zi
+			activate_mission = YYK_nei_zhan_bao_fa
+			activate_mission = YYK_jian_li_di_xia_fan_kang_zhong_xin
+			YYK_random_state_seize_choose = yes
+		}
+		ai_chance = {
+			base = 1000
+		}
+	}
+}
+
+# 冥界革命阵线对军队的渗透行为
+country_event = {
+	id = yyk.102
+	title = yyk.102.t
+	desc = yyk.102.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.102.1
+		unlock_decision_tooltip = YKO_qiang_hua_jun_dui_zhong_cheng		
+	}
+}
+
+# 冥界革命阵线针对武器库的袭击
+country_event = {
+	id = yyk.103
+	title = yyk.103.t
+	desc = yyk.103.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.103.1
+		unlock_decision_tooltip = YKO_que_bao_wu_qi_ku_an_quan
+	}
+}
+
+# 西行寺家加强了对军队的控制
+country_event = {
+	id = yyk.104
+	title = yyk.104.t
+	desc = yyk.104.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.104.1
+		custom_effect_tooltip = KNA_no_seek_army_support_tt
+	}
+}
+
+# 冥界内战爆发
+news_event = {
+	id = yyk.105
+	title = yyk.105.t
+	desc = yyk.105.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = yyk.105.1
+		trigger = {
+			original_tag = YYK
+			has_country_flag = YYK_KNA_flag
+		}
+	}
+
+	option = {
+		name = yyk.105.2
+		trigger = {
+			original_tag = YYK
+			has_country_flag = YYK_YKO_flag
+		}
+	}
+
+	option = {
+		name = yyk.105.3
+		custom_effect_tooltip = YYK_extra_reward_support_KNA_tt
+		trigger = {
+			YYK_should_support_KNA = yes
+		}
+	}
+
+	option = {
+		name = yyk.105.4
+		custom_effect_tooltip = YYK_extra_reward_support_YKO_tt
+		trigger = {
+			YYK_should_support_YKO = yes
+		}
+	}
+
+	option = {
+		name = yyk.105.5
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = YYK
+					YYK_should_support_KNA = yes
+					YYK_should_support_YKO = yes
+				}
+			}
+		}
+	}
+}
+
+# 冥界内战结束
+country_event = {
+	id = yyk.106
+	title = yyk.106.t
+	desc = yyk.106.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.106.1
+		# disband militia
+		custom_effect_tooltip = disband_militia_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = YYK_KNA_flag
+				}
+				set_division_template_lock = {
+					division_template = "革命民兵"
+					is_locked = no
+				}
+				delete_unit_template_and_units = {
+					division_template = "革命民兵"
+					disband = no
+				}
+			}
+			else = {
+				set_division_template_lock = {
+					division_template = "效忠派民兵"
+					is_locked = no
+				}
+				delete_unit_template_and_units = {
+					division_template = "效忠派民兵"
+					disband = no
+				}
+			}
+		}
+		# add state modifier & count
+		hidden_effect = {
+			set_variable = {
+				YYK_opposition_num = 0
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = YYK_KNA_flag
+			}
+			every_owned_state = {
+				limit = {
+					has_state_flag = YYK_support_YKO_in_civil_war_flag
+				}
+				add_dynamic_modifier = {
+					modifier = YYK_fan_dui_zhe_di_kang_state_idea
+				}
+				hidden_effect = {
+					ROOT = {
+						add_to_variable = {
+							YYK_opposition_num = 1
+						}
+					}
+				}
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					has_state_flag = YYK_support_KNA_in_civil_war_flag
+				}
+				add_dynamic_modifier = {
+					modifier = YYK_fan_dui_zhe_di_kang_state_idea
+				}
+				hidden_effect = {
+					ROOT = {
+						add_to_variable = {
+							YYK_opposition_num = 1
+						}
+					}
+				}
+			}
+		}
+		# calculation
+		hidden_effect = {
+			YYK_opposition_resistance_calculation = yes
+		}
+		# add ideas
+		add_ideas = {
+			YYK_nei_zhan_shang_hen_idea
+			YYK_nei_zhan_hou_de_sheng_chan_wen_ti_idea
+		}
+		if = {
+			limit = {
+				has_country_flag = YYK_YKO_flag
+			}
+			add_ideas = YKO_si_ji_de_zhi_cai_idea
+		}
+		add_dynamic_modifier = {
+			modifier = YYK_fan_dui_zhe_di_kang_idea
+		}
+	}
+}
+
+# news 冥界内战结束
+news_event = {
+	id = yyk.107
+	title = yyk.107.t
+	desc = {
+		text = yyk.107.d_kna_victory
+		trigger = {
+			has_global_flag = YYK_KNA_civil_war_victory_flag
+		}
+	}
+	desc = {
+		text = yyk.107.d_yko_victory
+		trigger = {
+			has_global_flag = YYK_YKO_civil_war_victory_flag
+		}
+	}
+	desc = {
+		text = yyk.107.d_default
+	}
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YYK
+	option = {
+		name = yyk.107.1
+		trigger = {
+			original_tag = YYK
+		}
+	}
+
+	# radicalists - KNA victory
+	option = {
+		name = yyk.107.2
+		trigger = {
+			NOT = {
+				original_tag = YYK
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+			YYK = {
+				has_country_flag = YYK_KNA_flag
+			}
+		}
+	}
+
+	# others - KNA victory
+	option = {
+		name = yyk.107.3
+		trigger = {
+			NOT = {
+				original_tag = YYK
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+			YYK = {
+				has_country_flag = YYK_KNA_flag
+			}
+		}
+	}
+
+	# radicalists - YKO victory
+	option = {
+		name = yyk.107.4
+		trigger = {
+			NOT = {
+				original_tag = YYK
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+			YYK = {
+				has_country_flag = YYK_YKO_flag
+			}
+		}
+	}
+
+	# others - YKO victory
+	option = {
+		name = yyk.107.5
+		trigger = {
+			NOT = {
+				original_tag = YYK
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+			YYK = {
+				has_country_flag = YYK_YKO_flag
+			}
+		}
+	}
+}
+
+# 内战支持方胜利奖励
+country_event = {
+	id = yyk.108
+	title = yyk.108.t
+	desc = yyk.108.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.108.1
+		add_stability = 0.03
+		army_experience = 30
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.4
+			uses = 1
+			category = land_doctrine
+		}
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = military
+		}
+	}
+}
+
+# 内战支持方胜利奖励 特殊
+country_event = {
+	id = yyk.109
+	title = yyk.109.t
+	desc = yyk.109.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.109.1
+		add_stability = 0.05
+		army_experience = 50
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.7
+			uses = 1
+			category = land_doctrine
+		}
+		add_tech_bonus = {
+			bonus = 1
+			ahead_reduction = 1
+			uses = 2
+			category = military
+		}
+	}
+}
+
+# 反对者抵抗被消灭
+country_event = {
+	id = yyk.110
+	title = yyk.110.t
+	desc = yyk.110.d
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.110.1
+		custom_effect_tooltip = YYK_clr_world_limit_tt
+		hidden_effect = {
+			clr_country_flag = world_limit
+		}
+	}
+}
+
+# news 冥界内战结束 radicalists victory
+news_event = {
+	id = yyk.111
+	title = yyk.111.t
+	desc = yyk.111.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YYK
+	option = {
+		name = yyk.111.1
+		trigger = {
+			original_tag = YYK
+		}
+	}
+
+	# radicalists
+	option = {
+		name = yyk.111.2
+		trigger = {
+			is_changemaker = yes
+		}
+	}
+
+	# others
+	option = {
+		name = yyk.111.3
+		trigger = {
+			is_changemaker = no
+		}
+	}
+}
+
+# news 冥界内战结束 loyalists victory
+news_event = {
+	id = yyk.112
+	title = yyk.112.t
+	desc = yyk.112.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YYK
+	option = {
+		name = yyk.112.1
+		trigger = {
+			original_tag = YYK
+		}
+	}
+
+	# radicalists
+	option = {
+		name = yyk.112.2
+		trigger = {
+			is_changemaker = yes
+		}
+	}
+
+	# others
+	option = {
+		name = yyk.112.3
+		trigger = {
+			is_changemaker = no
+		}
+	}
+}
+
+add_namespace = kna
+# YKO 激进支持者发动叛乱
+country_event = {
+	id = kna.101
+	title = kna.101.t
+	desc = kna.101.d
+	is_triggered_only = yes
+
+	option = {
+		name = kna.101.1
+		YKO = {
+			for_loop_effect = {
+				end = 3
+				random_controlled_state = {
+					create_unit = {
+						division = "name = \"激进同情者\" division_template = \"革命民兵\" start_experience_factor = 0.2"
+						owner = KNA
+						count = 2
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# 西行寺家领导人的处置
+country_event = {
+	id = kna.102
+	title = kna.102.t
+	desc = kna.102.d
+	is_triggered_only = yes
+
+	# 也许她们能帮助我们
+	option = {
+		name = kna.102.1
+		add_political_power = -100
+		custom_effect_tooltip = YYK_former_generals_join_tt
+		hidden_effect = {
+			XXX = {
+				set_nationality = {
+					target_country = ROOT
+					character = YYK_yyk
+				}
+				set_nationality = {
+					target_country = ROOT
+					character = YYK_youmu
+				}
+				set_nationality = {
+					target_country = ROOT
+					character = YYK_yok
+				}
+			}
+			promote_character = {
+				character = YYK_yyk
+				ideology = oldorder_type
+			}
+			promote_character = {
+				character = YYK_yyk
+				ideology = oldgenso_type
+			}
+			promote_character = {
+				character = YYK_youmu
+				ideology = neworder_type
+			}
+			promote_character = {
+				character = YYK_yok
+				ideology = guli_type
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 新冥界没有给她们的位置！
+	option = {
+		name = kna.102.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# GEK KNA请求加入同盟
+country_event = {
+	id = kna.103
+	title = kna.103.t
+	desc = kna.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = kna.103.1
+		ai_chance = {
+			base = 10
+		}
+		GEK = {
+			add_to_faction = KNA
+		}
+		KNA = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = kna.103.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			KNA = {
+				country_event = kna.104
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = kna.104
+	title = kna.104.t
+	desc = kna.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = kna.104.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = KNA_jia_ru_xia_ke_shang_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = KNA_ming_jie_bu_jie_meng
+		}
+	}
+}
+
+add_namespace = yko
+# 对军队的清洗
+country_event = {
+	id = yko.101
+	title = yko.101.t
+	desc = yko.101.d
+	is_triggered_only = yes
+
+	option = {
+		name = yko.101.1
+		YKO_purge_army = yes	
+	}
+}
+
+# 叛乱领导人的处置
+country_event = {
+	id = yko.102
+	title = yko.102.t
+	desc = yko.102.d
+	is_triggered_only = yes
+
+	# 我们可以再给她一个机会
+	option = {
+		name = kna.102.1
+		add_political_power = -100
+		custom_effect_tooltip = YYK_rebellion_generals_join_tt
+		hidden_effect = {
+			XXX = {
+				set_nationality = {
+					target_country = ROOT
+					character = UND_kana
+				}
+			}
+			promote_character = {
+				character = UND_kana
+				ideology = fandong_type
+			}
+			promote_character = {
+				character = UND_kana
+				ideology = qinwai_type
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 我们不需要叛乱分子！
+	option = {
+		name = kna.102.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}

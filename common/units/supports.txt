@@ -1,0 +1,525 @@
+sub_units = {
+	sp_zhihuidui = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 180
+		default_morale = 0.1
+		manpower = 3
+		training_time = 180
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		
+		# Support nerfs to combat abilities
+		soft_attack = -0.75
+		hard_attack = -0.75
+		ap_attack = -0.75
+		air_attack = -0.75
+
+		essential = {
+			support_equipment
+		}
+
+		initiative = 0.15
+
+		need = {
+			magic_core_a = 10
+			gun_a = 10
+			support_equipment = 30
+		}
+
+		can_be_parachuted = yes
+	}
+
+	sp_duzhanxiaodui = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 5
+		default_morale = 1.5
+		manpower = 3
+		training_time = 180
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		
+		# Support nerfs to combat abilities
+		soft_attack = -0.75
+		hard_attack = -0.75
+		ap_attack = -0.75
+		air_attack = -0.75
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			magic_core_a = 10
+			gun_a = 10
+			support_equipment = 30
+		}
+
+		can_be_parachuted = yes
+	}
+
+	sp_houqinbaoyang = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 2
+		default_morale = 0.1
+		manpower = 3
+		training_time = 180
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.05
+		reliability_factor = 0.03
+		equipment_capture_factor = 0.03
+		
+		# Support nerfs to combat abilities
+		soft_attack = -0.75
+		hard_attack = -0.75
+		ap_attack = -0.75
+		air_attack = -0.75
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			magic_core_a = 10
+			gun_a = 10
+			support_equipment = 30
+		}
+
+		can_be_parachuted = yes
+	}
+
+	sp_zhanchanggongbing = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 5
+		default_morale = 0.1
+		manpower = 3
+		training_time = 180
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.02
+		
+		entrenchment  = 2
+
+		battalion_mult = {
+			category = category_light_infantry
+			entrenchment = 0.20
+			add = yes
+		}
+				
+		defense = 0.1
+		breakthrough = 0.5
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.5
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			support_equipment = 30
+		}
+
+		can_be_parachuted = yes
+
+		forest = {
+			defence = 0.05
+			movement = 0.05
+		}
+
+		hills = {
+			defence = 0.05
+		}
+
+		jungle = {
+			defence = 0.05
+		}
+
+		marsh = {
+			defence = 0.05
+			movement = 0.2
+		}
+
+		fort = {
+			attack = 0.1
+			defence = 0.05
+		}
+
+		river = {
+			defence = 0.05
+			movement = 0.25
+		}
+
+		amphibious = {
+			attack = 0.1
+		}
+	}
+	sp_houfangyiliao = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 5
+		default_morale = 0.1
+		manpower = 3
+		training_time = 180
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.05
+		can_be_parachuted = yes
+
+		# Important Ability
+		casualty_trickleback = 0.20
+		experience_loss_factor = -0.10
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.75
+		hard_attack = -0.75
+		ap_attack = -0.75
+		air_attack = -0.75
+
+		essential = {
+			support_equipment
+			# motorized_equipment
+		}
+		
+		need = {
+			support_equipment = 30
+			magic_core_a = 10
+			gun_a = 10
+			# motorized_equipment = 20
+		}
+	}
+	sp_wunv = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 45
+		max_organisation = 80
+		default_morale = 0.2
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		# supply_consumption = 0.1
+		can_be_parachuted = yes
+
+		###
+		breakthrough = 1.4
+		defense = 1.4
+		air_attack = 0.5
+
+		reliability_factor = 0.05
+		equipment_capture_factor = 0.05
+		supply_consumption_factor = -0.1
+		# hardness = 1
+
+		essential = {
+			support_equipment
+			magic_core_a
+			# motorized_equipment
+		}
+		
+		need = {
+			support_equipment = 50
+			magic_core_a = 20
+			gun_a = 10
+			# motorized_equipment = 20
+		}
+	}
+	sp_gongjianpao = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 0.5
+		max_organisation = -40
+		default_morale = 0.1
+		manpower = 3
+		maximum_speed = -0.1
+		training_time = 200
+
+		maximum_speed = -0.1
+
+		affects_speed = yes
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.1
+		can_be_parachuted = yes
+
+
+		hills = {
+			attack = 0.4
+		}
+		mountain = {
+			attack = 0.4
+		}
+		urban = {
+			attack = 0.4
+		}
+		fort = {
+			attack = 0.4
+		}
+
+	###
+		hard_attack = 0.05
+		soft_attack = 0.05
+
+		essential = {
+			support_equipment
+			mortar_a
+			# motorized_equipment
+		}
+		
+		need = {
+			support_equipment = 50
+			mortar_a = 5
+			# motorized_equipment = 20
+		}
+	}
+	
+	sp_feixingzhencha = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 30
+		default_morale = 0.2
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.1
+		recon = 3
+		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.25
+		hard_attack = -0.25
+		ap_attack = -0.25
+		air_attack = -0.25
+		
+		essential = {
+			magic_core_a
+			# infantry_equipment
+			support_equipment
+		}
+
+		need = {
+			magic_core_a = 20
+			support_equipment = 50
+		}
+
+		forest = {
+			movement = 0.1
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		jungle = {
+			movement = 0.1
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.1
+		}
+		bamboo = {
+			movement = 0.1
+		}
+		river = {
+			movement = 0.1
+		}
+	}
+}

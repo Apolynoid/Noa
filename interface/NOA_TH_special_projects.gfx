@@ -1,0 +1,32 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_sp_race_norcturnal_intuition"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_norcturnal_intuition.png"
+	}
+
+	spriteType = {
+		name = "GFX_sp_race_aggressive_nature"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_aggressive_nature.png"
+	}	
+
+	spriteType = {
+		name = "GFX_sp_race_deification"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_deification.png"
+	}
+
+	spriteType = {
+		name = "GFX_sp_race_nature_intergration"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_nature_intergration.png"
+	}
+
+	spriteType = {
+		name = "GFX_specialization_race"
+		texturefile = "gfx/interface/special_project/specialization_race.png"
+	}	
+
+	spriteType = {
+		name = "GFX_mapicon_facility_specialization_race"
+		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_nuclear.dds"
+		noOfFrames = 3
+	}
+}

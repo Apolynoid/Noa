@@ -1,0 +1,45 @@
+
+state={
+	id=119
+	name="STATE_119"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=15.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = SEJ
+			add_core_of = SEJ
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 2
+				arms_factory = 2
+
+			}
+
+		}
+		146.1.1 = {
+			owner = SEJ
+			add_core_of = SEJ
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 3
+				arms_factory = 3
+				7 = {
+					nuclear_facility = 1
+				}
+			}
+		}
+	}
+
+	provinces={
+		7 736 3881 5778 
+	}
+	manpower=3395
+	buildings_max_level_factor=1.000
+	state_category=s10
+	local_supplies=2.500
+}

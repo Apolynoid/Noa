@@ -1,0 +1,31 @@
+state={
+	id=228
+	name="STATE_228"
+
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas = 0.0
+		crystal = 15.0
+	}
+
+	provinces={
+		238 783 787 864 897 1073 1130 1561 1654 1735 1990 2206 2249 2322 2849 2876 
+	}
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=81135.0
+	buildings_max_level_factor=1.000
+}

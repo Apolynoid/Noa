@@ -1,0 +1,37 @@
+TKM_has_trade_limit = {
+	exists = yes
+	has_idea = TKM_dui_dao_ju_de_mao_yi_xian_zhi_idea
+	energy > 0
+}
+
+TKM_THIS_no_need_to_worry_about_SCA = {
+	SCA = {
+		OR = {
+			exists = no
+			is_subject = yes
+			has_war_with = PREV
+			PREV = {
+				has_opinion = {
+					target = SCA
+					value < -100
+				}
+			}
+		}
+	}
+}
+
+TKM_THIS_no_need_to_worry_about_NMS = {
+	NMS = {
+		OR = {
+			exists = no
+			is_subject = yes
+			has_war_with = PREV
+			PREV = {
+				has_opinion = {
+					target = NMS
+					value < -100
+				}
+			}
+		}
+	}
+}

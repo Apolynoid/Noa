@@ -1,0 +1,49 @@
+guiTypes = {
+	#country view
+	containerWindowType = {
+		name = "th_view_type"
+		position = { x = 140 y = 305 }
+		
+		iconType ={
+			name ="th_view_bad_type_icon"
+			spriteType = "GFX_view_fanling"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "th_view_type_tt"
+			pdx_tooltip_delayed = "th_view_type_delayed_tt"
+		}
+
+		iconType ={
+			name ="th_view_normal_type_icon"
+			spriteType = "GFX_view_pingheng"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "th_view_type_tt"
+			pdx_tooltip_delayed = "th_view_type_delayed_tt"
+		}
+
+		iconType ={
+			name ="th_view_good_type_icon"
+			spriteType = "GFX_view_weiwu"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "th_view_type_tt"
+			pdx_tooltip_delayed = "th_view_type_delayed_tt"
+		}
+		
+		instantTextBoxType = {
+			name ="th_view_type_text"
+			position = { x= 77 y = 20 }
+			font = "hoi_18mbs"
+			# text = "[?value_test]"
+			text = "[view_type_text]"
+			format = left
+			maxWidth = 155
+			maxHeight = 24
+			fixedsize = yes
+			
+			pdx_tooltip = "th_view_type_tt"
+			pdx_tooltip_delayed = "th_view_type_delayed_tt"
+		}
+	}
+}

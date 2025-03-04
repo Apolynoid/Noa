@@ -1,0 +1,140 @@
+ma_tank_generic = {
+
+	role = tank_force
+	
+	upgrade_prio = {
+		factor = 25
+
+		modifier = {
+			factor = 0
+			has_tech = waike
+		}
+	}
+
+	ma_tank150 = {
+	
+		upgrade_prio = {
+			factor = 10
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 12
+				# ma_magic_energy_brigade = 1
+				# ma_magic_focus_brigade = 4
+				ma_shield_tank = 4
+			}
+		}
+
+		replace_at_match = 1.5
+		replace_with = ma_tank155
+		target_min_match = 0.5
+	}
+
+	ma_tank155 = {
+	
+		upgrade_prio = {
+			factor = 10
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 14
+				ma_shield_tank = 5
+			}
+		}
+	}
+}
+sc_tank_generic = {
+
+	role = tank_force
+	
+	upgrade_prio = {
+		factor = 25
+
+		modifier = {
+			factor = 0
+			not = { has_tech = waike }
+		}
+	}
+
+	sc_tank150 = {
+	
+		upgrade_prio = {
+			factor = 10
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 12
+				sc_shield_tank = 4
+			}
+		}
+		
+		replace_at_match = 0.4
+		replace_with = sc_tank155
+		target_min_match = 0.5
+	}
+
+	sc_tank155 = {
+	
+		upgrade_prio = {
+			factor = 10
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+				sp_houqinbaoyang = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 14
+				sc_shield_tank = 5
+			}
+		}
+	}
+}

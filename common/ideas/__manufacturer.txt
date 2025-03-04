@@ -1,0 +1,2375 @@
+ideas = {
+############
+#请自建新文件新文件新文件命名
+#为了方便衔接
+#请将区域 国家tag打出来
+#地底UD 天界CE 彼岸DE 冥界NE
+#幻想乡区域
+#西北NW 东北NE 西南SW 东南SE
+############
+
+	manufacturer = { 
+		TES_manu = {
+		    picture = manufacturer_TES
+			visible = {
+				TES = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	TES = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }					
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# stability_factor = 0.05
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    military = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		IKU_manu = {
+		    picture = manufacturer_IKU
+			visible = {
+				IKU = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	IKU = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				offensive_war_stability_factor = 0.25
+				defensive_war_stability_factor = 0.25
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YMM_manu = {
+		    picture = manufacturer_YMM
+			visible = {
+				YMM = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YMM = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		PRS_manu = {
+		    picture = manufacturer_PRS
+			visible = {
+				PRS = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	PRS = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				experience_gain_army = 0.01
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YUG_manu = {
+		    picture = manufacturer_YUG
+			visible = {
+				YUG = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YUG = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		UTH_manu = {
+		    picture = manufacturer_UTH
+			visible = {
+				UTH = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	UTH = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				local_resources_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SAT_manu = {
+		    picture = manufacturer_SAT
+			visible = {
+				SAT = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SAT = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				decryption_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YYK_manu = {
+		    picture = manufacturer_YYK
+			visible = {
+				YYK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YYK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				experience_loss_factor = -0.25
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		URM_manu = {
+		    picture = manufacturer_URM
+			visible = {
+				URM = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	URM = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	decryption_factor = 0.3
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    civil = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KMC_manu = {
+		    picture = manufacturer_KMC
+			visible = {
+				KMC = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	KMC = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				consumer_goods_factor = -0.02
+				army_speed_factor = 0.04
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SKI_manu = {
+		    picture = manufacturer_SKI
+			visible = {
+				SKI = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SKI = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				decryption_factor = 0.075
+				political_power_factor = 0.05
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HGH_manu = {
+		    picture = manufacturer_HGH
+			visible = {
+				HGH = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	HGH = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				attrition = -0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HCT_manu = {
+		    picture = manufacturer_HCT
+			visible = {
+				HCT = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	HCT = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_sc_shield_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_sc_shield_infantry_defence_factor = 0.075
+				modifier_army_sub_unit_ma_shield_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_ma_shield_infantry_defence_factor = 0.075
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CLO_manu = {
+		    picture = manufacturer_CLO
+			visible = {
+				CLO = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	CLO = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_sc_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_sc_infantry_defence_factor = 0.075
+				modifier_army_sub_unit_ma_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_ma_infantry_defence_factor = 0.075
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KEK_manu = {
+		    picture = manufacturer_KEK
+			visible = {
+				KEK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	KEK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_core_defence_factor = 0.075
+				research_speed_factor = 0.04
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YCE_manu = {
+		    picture = manufacturer_YCE
+			visible = {
+				YCE = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YCE = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				compliance_gain = 0.05
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SAK_manu = {
+		    picture = manufacturer_SAK
+			visible = {
+				SAK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SAK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.15
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		TEG_manu = {
+		    picture = manufacturer_TEG
+			visible = {
+				TEG = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	TEG = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_speed_factor = 0.05
+				operative_slot = 1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MRY_manu = {
+		    picture = manufacturer_MRY
+			visible = {
+				MRY = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MRY = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				research_speed_factor = 0.075
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NTR_manu = {
+		    picture = manufacturer_NTR
+			visible = {
+				NTR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	NTR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	research_speed_factor = 0.15
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    heavy = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KAS_manu = {
+		    picture = manufacturer_KAS
+			visible = {
+				KAS = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	KAS = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				compliance_gain = 0.025
+				training_time_factor = -0.075
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NMN_manu = {
+		    picture = manufacturer_NMN
+			visible = {
+				NMN = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	NMN = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				production_speed_bunker_factor = 0.125
+				army_core_defence_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		AKI_manu = {
+		    picture = manufacturer_AKI
+			visible = {
+				AKI = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	AKI = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		LIL_manu = {
+		    picture = manufacturer_LIL
+			visible = {
+				LIL = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	LIL = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				supply_consumption_factor = -0.125
+				resistance_growth_on_our_occupied_states = 0.25
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SCA_manu = {
+		    picture = manufacturer_SCA
+			visible = {
+				SCA = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SCA = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	supply_consumption_factor = -0.25
+			# 	resistance_growth_on_our_occupied_states = 0.5
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    air_equipment = 0.125
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CIR_manu = {
+		    picture = manufacturer_CIR
+			visible = {
+				CIR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	CIR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SEJ_manu = {
+		    picture = manufacturer_SEJ
+			visible = {
+				SEJ = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SEJ = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.25
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CHE_manu = {
+		    picture = manufacturer_CHE
+			visible = {
+				CHE = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	CHE = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				conscription_factor = 0.05
+				modifier_army_sub_unit_ma_infantry_speed_factor = 0.07
+				modifier_army_sub_unit_sc_infantry_speed_factor = 0.07
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HKR_manu = {
+		    picture = manufacturer_HKR
+			visible = {
+				HKR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	HKR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				political_power_gain = 0.2
+				resistance_growth = -0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MSD_manu = {
+		    picture = manufacturer_MSD
+			visible = {
+				MSD = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MSD = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		ALI_manu = {
+		    picture = manufacturer_ALI
+			visible = {
+				ALI = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	ALI = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.05
+				modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.05
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    heavy = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		GYK_manu = {
+		    picture = manufacturer_GYK
+			visible = {
+				GYK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	GYK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				min_export = -0.075
+				max_fuel_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.1
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KRD_manu = {
+		    picture = manufacturer_KRD
+			visible = {
+				KRD = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	KRD = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				PO_good_influence_factor = 0.2
+				fuel_gain_factor = 0.5
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.1
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MRS_manu = {
+		    picture = manufacturer_MRS
+			visible = {
+				MRS = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MRS = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    magic = 0.2
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YKR_manu = {
+		    picture = manufacturer_YKR
+			visible = {
+				YKR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YKR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				gun_a = {
+					breakthrough = 0.1
+					defense = 0.1
+					instant = yes
+				}
+				magic_core_a = {
+					breakthrough = 0.1
+					defense = 0.1
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HUM_manu = {
+		    picture = manufacturer_HUM
+			visible = {
+				HUM = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	HUM = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				mortar_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				magic_energy_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		TKM_manu = {
+		    picture = manufacturer_TKM
+			visible = {
+				TKM = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	TKM = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				gun_a = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					instant = yes
+				}
+				magic_core_a = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SBK_manu = {
+		    picture = manufacturer_SBK
+			visible = {
+				SBK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SBK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KAG_manu = {
+		    picture = manufacturer_KAG
+			visible = {
+				KAG = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	KAG = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				land_night_attack = 0.25
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    combined = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		INB_manu = {
+		    picture = manufacturer_INB
+			visible = {
+				INB = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	INB = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MOK_manu = {
+		    picture = manufacturer_MOK
+			visible = {
+				MOK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MOK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_attack_factor = 0.025
+				army_defence_factor = 0.025
+				army_morale_factor = 0.05
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		UDO_manu = {
+		    picture = manufacturer_UDO
+			visible = {
+				UDO = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	UDO = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	army_attack_factor = 0.05
+			# 	army_defence_factor = 0.05
+			# 	army_morale_factor = 0.1
+			# }
+			research_bonus = {
+				primary_weapons = 0.125
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		EET_manu = {
+		    picture = manufacturer_EET
+			visible = {
+				EET = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	EET = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	consumer_goods_factor = -0.1
+			# }
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    combined = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		RGO_manu = {
+		    picture = manufacturer_RGO
+			visible = {
+				RGO = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	RGO = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_sc_sf_infantry_speed_factor = 0.1
+				modifier_army_sub_unit_ma_sf_infantry_speed_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SRB_manu = {
+		    picture = manufacturer_SRB
+			visible = {
+				SRB = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SRB = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_sf_infantry_speed_factor = 0.2
+			# 	modifier_army_sub_unit_ma_sf_infantry_speed_factor = 0.2
+			# }
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    science = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NMS_manu = {
+		    picture = manufacturer_NMS
+			visible = {
+				NMS = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	NMS = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_org_factor = 0.075
+				compliance_gain = 0.03
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MAM_manu = {
+		    picture = manufacturer_MAM
+			visible = {
+				MAM = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MAM = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				encryption_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YUK_manu = {
+		    picture = manufacturer_YUK
+			visible = {
+				YUK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YUK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				political_power_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SGS_manu = {
+		    picture = manufacturer_SGS
+			visible = {
+				SGS = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	SGS = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_ma_light_infantry_speed_factor = 0.1
+				modifier_army_sub_unit_sc_light_infantry_speed_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MEL_manu = {
+		    picture = manufacturer_MEL
+			visible = {
+				MEL = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	MEL = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				modifier_army_sub_unit_ma_light_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_ma_light_infantry_defence_factor = 0.075
+				modifier_army_sub_unit_sc_light_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_sc_light_infantry_defence_factor = 0.075
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		OKI_manu = {
+		    picture = manufacturer_OKI
+			visible = {
+				OKI = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	OKI = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+
+			# }
+			equipment_bonus = {
+				mortar_a = {
+					breakthrough = 0.25
+					defense = 0.25
+					instant = yes
+				}
+				magic_energy_a = {
+					breakthrough = 0.25
+					defense = 0.25
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		PRI_manu = {
+		    picture = manufacturer_PRI
+			visible = {
+				PRI = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	PRI = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				army_org_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		WAK_manu = {
+		    picture = manufacturer_WAK
+			visible = {
+				WAK = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	WAK = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			# modifier = {
+			# 	army_org_factor = 0.3
+			# }
+			equipment_bonus = {
+				smg_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				special_core_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		TBA_manu = {
+		    picture = manufacturer_TBA
+			visible = {
+				TBA = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	TBA = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				intel_network_gain_factor = 0.35
+			}
+			# equipment_bonus = {
+			# 	smg_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	special_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YAW_manu = {
+		    picture = manufacturer_YAW
+			visible = {
+				YAW = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	YAW = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				trade_opinion_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	smg_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	special_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		WHR_manu = {
+		    picture = manufacturer_WHR
+			visible = {
+				WHR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	WHR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				winter_attrition_factor = -0.4
+				max_dig_in = 2
+			}
+			# equipment_bonus = {
+			# 	smg_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	special_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NAR_manu = {
+		    picture = manufacturer_NAR
+			visible = {
+				NAR = {
+					manufacture_visible_conditions = yes
+				}
+			}
+		    available = {   
+		    	NAR = {
+		    		manufacture_conditions = yes
+		    	}           	    
+		    }
+		    # allowed = {
+		    # 	always = no
+		    # }						
+			on_add = {
+			}
+			cancel_if_invalid = yes
+			removal_cost = 0
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.15
+				CO_core_resistance_required = -5
+			}
+			# equipment_bonus = {
+			# 	smg_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	special_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+}

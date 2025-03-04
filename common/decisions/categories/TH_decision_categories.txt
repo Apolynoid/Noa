@@ -1,0 +1,294 @@
+setup_introductions = { #介绍
+	priority = 0
+}
+scenario_introduction = { #小剧本介绍
+	priority = 1
+}
+ideo_change = { #理念切换
+	priority = 2
+}
+government_change = { #政治状态切换
+	priority = 3
+}
+view_change = { #世界观切换
+	priority = 4
+}
+warexhaustion = { #厌战系统
+	priority = 5
+}
+luanzhan_decision = { #乱战决议（菜单）
+	priority = 999
+}
+region_category = { ###地区宣称决议
+	priority = 6
+}
+common_category = { #通用决议
+	priority = 8
+}
+fuyongguanxichuli = { #附庸关系处理
+	priority = 8
+}
+scale_change = { #规模转化转移
+	priority = 9
+	visible = {
+		NOT = {
+		#	tag = LIL
+			has_completed_focus = LIL_44
+		}
+		NOT = {
+			check_variable = {
+				modifier@NOA_ban_scale_change > 0
+			}
+		}
+	}
+}
+human_influ = { #人类村落影响系统
+	priority = 10
+}
+scenario_decision = { #小剧本决议
+	priority = 19
+}
+SS_situation = {
+	priority = 11
+}
+FT_situation = {
+	visible_when_empty = yes
+	visible = {
+		is_faction_leader = yes
+	}
+	priority = 12
+}
+FAPO_situation = {
+	visible_when_empty = yes
+	visible = {
+		has_idea = Fairy
+	}
+	priority = 12
+}
+#20以上为国家特有
+SW_battle = { #
+	priority = 20
+}
+TH_bamboo = { #
+	priority = 20
+}
+YUK_dikanglinianchuanbo_category = {
+	priority = 20
+}
+SGS_jiefangyaojingtongbao_category = {
+	priority = 20
+}
+SGS_kaicaiziyaun_category = {
+	priority = 20
+}
+SGS_xinanhuanxiangxianggongyehua_category = {
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = SGS_xinanhuanxiangxianggongyehua
+		tag = SGS
+	}
+	priority = 70
+}
+SGS_jiquandu_category = {
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = SGS_qingzhuerxiadexingguang
+		tag = SGS
+	}
+	priority = 99
+}
+SGS_zhongzhinongzuowu_category = {
+	priority = 20
+}
+SGS_anliuyongdong_category = {
+	priority = 20
+}
+SGS_lingshifaan_category = {
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = SGS_wanshanjingjiyufalv
+		tag = SGS
+	}
+	priority = 99
+}
+SGS_jianlixinanyihuidasha_category = {
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = SGS_jianlixinanyihuidasha
+		tag = SGS
+	}
+	priority = 99
+}
+SGS_zhongzulianhe_category = {
+	visible_when_empty = yes
+	visible = {
+		has_completed_focus = SGS_jingmideyueguang
+		tag = SGS
+	}
+	priority = 99
+}
+SGS_zaitaiyanghuatianhuodong_category = {
+	priority = 20
+}
+SGS_xinaoyizu_category = {
+	priority = 20
+}
+SGS_kaifatudi_category = {
+    priority = 20
+}
+SGS_jieshouyaojingnanmin_category = {
+    priority = 20
+}
+MRY_kejigexin = {
+	priority = 20
+}
+HKR_category = { #灵梦二手工业
+	priority = 20
+}
+SRB_category = {
+	priority = 20
+}
+th_beasts_category = {
+	priority = 20
+}
+AKI_bingtongyiti_category = {
+	priority = 20
+}
+AKI_tongyiwuyuanzhong_category = {
+	priority = 20
+}
+AKI_kaifawuyuanzhong_category = {
+	priority = 20
+}
+HU3_category = {
+	priority = 20
+}
+CLO_gongye_category = {
+	priority = 20
+}
+CLO_battle = { #
+	priority = 20
+}
+CLO_sixiang = {
+	priority = 20
+}
+CLO_diyujianshe = {
+	priority = 20
+}
+CLO_xuanshang = {
+	priority = 20
+}
+CLO_shentan = {
+	priority = 20
+}
+CLO_qiandu = {
+	priority = 20
+}
+CLO_zhongzuyoushi = {
+	priority = 20
+}
+CLO_lveduo = {
+	priority = 20
+}
+SAGE_invite_category = {
+	priority = 20
+}
+bianshen_category = { ###变身国家决议
+	priority = 25
+}
+HUM_qianzhai = {
+	priority = 30
+}
+portal_hint = {
+	priority = 35
+}
+portal_control = {
+	priority = 35
+}
+portal_training = {
+	priority = 35
+}
+fuel_decision = {
+	priority = 35
+}
+peace_decision = {
+	priority = 50
+}
+on_going_war_decision = {
+	priority = 100
+}
+
+
+
+lar_local_recruitment = {
+	allowed = { has_dlc = "La Resistance" }
+
+	visible = { has_done_agency_upgrade = upgrade_training_centers }
+
+	visibility_type = map_and_decisions_view
+	
+	on_map_area = {
+		state = 122
+		name = LAR_TH_recruitment_Gensokyo
+		zoom = 850
+		
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Gensokyo_recruitment_unlocked
+				capital_scope = { is_on_continent = Gensokyo }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 58
+		name = LAR_recruitment_Underground
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Underground_recruitment_unlocked
+				capital_scope = { is_on_continent = Underground }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 49
+		name = LAR_recruitment_Celestial
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Celestial_recruitment_unlocked
+				capital_scope = { is_on_continent = Celestial }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 231
+		name = LAR_recruitment_Netherworld
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Netherworld_recruitment_unlocked
+				capital_scope = { is_on_continent = Netherworld }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 200
+		name = LAR_recruitment_Hell
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Hell_recruitment_unlocked
+				capital_scope = { is_on_continent = Hell }
+			}
+		}
+	}
+}

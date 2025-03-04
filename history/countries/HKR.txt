@@ -1,0 +1,113 @@
+﻿capital = 192
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
+            
+        #辅助
+
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+146.1.1={
+    set_country_flag = bunengsuiyiqiehuanzhengti
+    add_manpower = 800
+    oob = "HKR_146"
+    # set_research_slots = 3
+    # Starting tech
+    add_ideas = {
+    Magician
+    sub_Youkai
+    Shrine
+    civilian_economy
+    type2_manpowerlv2
+    hawk0
+    open0
+    sc_rule
+    }
+    add_ideas = {
+        hkr_treaty
+        hkr_huaping
+        hkr_bolifendui
+        hkr_chisesharenmo
+        hkr_yaoguaiwunv
+        hkr_bayunzi
+    }
+   
+
+    set_truce = {target = EMB days = 365}
+    set_truce = {target = WAK days = 365}
+    set_truce = {target = KAG days = 365}
+    set_truce = {target = TKM days = 365}
+    set_truce = {target = NMS days = 365}
+    set_truce = {target = SCA days = 365}
+    set_truce = {target = NMS days = 365}
+    set_truce = {target = SEJ days = 365}
+    set_truce = {target = MSD days = 365}
+    set_truce = {target = PRI days = 365}
+    set_truce = {target = SBK days = 365}
+    set_truce = {target = MAM days = 365}
+    set_truce = {target = YKR days = 365}
+    set_truce = {target = YYK days = 365}
+    set_truce = {target = SAT days = 365}
+    #########局势修改
+    
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 65
+        neworder = 12
+        oldorder = 22
+        fandong = 1
+    }
+
+    create_equipment_variant = {
+       name = "夢符「封魔陣」"
+       type = magic_core141
+       upgrades = {
+          upgrade_reliability = 3
+          upgrade_softattack = 3
+          # upgrade_hardattack = 1
+          upgrade_aaattack = 3
+          upgrade_defense = 3
+          upgrade_breakthrough = 3
+          upgrade_ic = 2
+          # upgrade_ic_reverse = 1
+          # upgrade_reliability_reverse = 1
+       }
+    }
+}
+
+####
+

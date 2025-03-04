@@ -1,0 +1,25 @@
+state={
+	id=684
+	name="STATE_684"
+	provinces={
+		7692 7693 7694 7695 7696 7697 7698 7699 7700 7701 
+	}
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=452292
+	state_category=s7
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

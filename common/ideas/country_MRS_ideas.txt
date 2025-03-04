@@ -1,0 +1,566 @@
+ideas = {
+	country = {
+		#mrs
+
+    # 分裂的魔法使
+    mrs_fen_lie_de_mo_fa_shi_idea = {
+      picture = MRS_divided_MRS
+      allowed = {
+        always = no
+      }
+      
+      removal_cost = -1
+
+      modifier = {
+        war_support_factor = -0.2
+        research_speed_factor = -0.05
+      }
+    }
+
+    # 混乱的指挥系统
+    mrs_hun_luan_de_zhi_hui_xi_tong_idea = {
+      picture = generic_army_problems
+      allowed = {
+        always = no
+      }
+      
+      removal_cost = -1
+
+      modifier = {
+        army_attack_factor = -0.05
+        army_defence_factor = -0.05
+        breakthrough_factor = -0.05
+        army_speed_factor = -0.05
+        army_morale_factor = -0.05
+        army_org_factor = -0.05
+        org_loss_when_moving = 0.05
+        org_loss_at_low_org_factor = 0.2
+        custom_modifier_tooltip = MRS_army_locked_tt
+      }
+    }
+
+    # 混乱的指挥系统
+    mrs_hun_luan_de_zhi_hui_xi_tong_a_idea = {
+      picture = generic_army_problems
+      allowed = {
+        always = no
+      }
+      
+      removal_cost = -1
+
+      modifier = {
+        army_attack_factor = -0.05
+        army_defence_factor = -0.05
+        breakthrough_factor = -0.05
+        army_speed_factor = -0.05
+        army_morale_factor = -0.05
+        army_org_factor = -0.05
+        org_loss_when_moving = 0.05
+        org_loss_at_low_org_factor = 0.2
+      }
+    }
+
+    # 魔法之森内战 Civil War
+    # 魔法之森内战
+    mrs_mo_fa_zhi_sen_nei_zhan_idea = {
+      picture = tfv_can_conscription_crisis
+      cancel = {
+        has_global_flag = MRS_civil_war_end_flag
+      }
+      modifier = {
+        army_org_factor = 0.1
+        military_factory_donations = 4
+        custom_modifier_tooltip = MRS_civil_war_faction_rule_tt
+      }
+      rule = {
+        can_join_factions = no
+      }
+    }
+
+    # 失败的最终攻势
+    mrs_shi_bai_de_zui_zhong_gong_shi_idea = {
+      picture = tur_disorganised_armed_forces
+      cancel = {
+        has_global_flag = MRS_civil_war_end_flag
+      }
+      modifier = {
+        monthly_population = -0.1
+        stability_factor = -0.1
+        war_support_factor = -0.1
+        army_attack_factor = -0.3
+        army_defence_factor = -0.5
+        army_speed_factor = -0.1
+        army_strength_factor = -0.1
+        army_morale_factor = -0.1
+        army_org_factor = -0.1
+        max_dig_in_factor = -0.1
+        pocket_penalty = 0.2
+        org_loss_at_low_org_factor = 0.2
+      }
+    }
+
+    # 反对者抵抗运动
+    mrs_fan_dui_zhe_di_kang_yun_dong_idea = {
+      picture = chi_war_of_resistance3
+      modifier = {
+        monthly_population = -0.1
+        research_speed_factor = -0.1
+        party_popularity_stability_factor = -0.3
+        political_power_factor = -0.2
+        stability_factor = -0.1
+        war_support_factor = -0.2
+        production_speed_buildings_factor = -0.1
+        required_garrison_factor = 0.1
+      }
+    }
+
+    # 被削弱的反对者
+    mrs_bei_xue_ruo_de_fan_dui_zhe_idea = {
+      picture = chi_war_of_resistance
+      modifier = {
+        monthly_population = -0.05
+        party_popularity_stability_factor = -0.1
+        political_power_factor = -0.05
+      }
+    }
+
+    # 政治线 political
+    # 政治混乱 爱丽丝
+    mrs_zheng_zhi_hun_luan_a_idea = {
+      picture = generic_disjointed_gov
+      modifier = {
+        political_power_gain = -0.5
+      }
+    }
+
+    # 政治混乱 成美
+    mrs_zheng_zhi_hun_luan_b_idea = {
+      picture = generic_disjointed_gov
+      modifier = {
+        political_power_gain = -1.0
+      }
+    }
+
+    # 与爱丽丝妥协
+    mrs_yu_ai_li_si_tuo_xie_idea = {
+      picture = MRS_compromise_with_alice
+      modifier = {
+        political_power_cost = 0.2
+        stability_factor = -0.1
+        drift_defence_factor = -0.1
+        consumer_goods_factor = 0.3
+        industrial_capacity_factory = -0.1
+      }
+    }
+
+    # 魔法之森的平等
+    mrs_mo_fa_zhi_sen_de_ping_deng_idea = {
+      picture = neutrality_idea
+      modifier = {
+        political_power_cost = 0.05
+        ST_race_penalty_all_factor = -0.2
+      }
+    }
+
+    # 与成美妥协
+    mrs_yu_cheng_mei_tuo_xie_idea = {
+      picture = MRS_compromise_with_narumi
+      modifier = {
+        political_power_cost = 0.3
+        stability_factor = -0.1
+        drift_defence_factor = -0.1
+        consumer_goods_factor = 0.2
+        army_attack_factor = -0.05
+      }
+    }
+
+    # 内战后 after civil war
+    # 魔法之森的黎明
+    mrs_mo_fa_zhi_sen_de_li_ming_idea = {
+      picture = MRS_dawn_of_the_magical_forest
+      modifier = {
+        stability_factor = 0.1
+        political_power_gain = 0.1
+        drift_defence_factor = 0.2
+      }
+    }
+	    
+    # 通用国策 shared focus
+
+    # 军事线 military
+    # 落后的武器生产
+    mrs_luo_hou_de_wu_qi_sheng_chan_idea = {
+      picture = backward_production
+      equipment_bonus = {
+        melee_a = {
+          instant = yes
+          breakthrough = -0.1
+          soft_attack = -0.1
+		      hard_attack = -0.1
+          reliability = -0.1
+          build_cost_ic = 0.1
+        }
+        gun_a = {
+          instant = yes
+          breakthrough = -0.1
+          soft_attack = -0.1
+		      hard_attack = -0.1
+          reliability = -0.1
+          build_cost_ic = 0.1
+        }
+        magic_core_a = {
+          instant = yes
+          breakthrough = -0.1
+          soft_attack = -0.1
+		      hard_attack = -0.1
+          reliability = -0.1
+          build_cost_ic = 0.1
+        }
+        magic_energy_a = {
+          instant = yes
+          breakthrough = -0.1
+          soft_attack = -0.1
+		      hard_attack = -0.1
+          reliability = -0.1
+          build_cost_ic = 0.1
+        }
+      }
+    }
+    
+    # 先进武装
+    mrs_xian_jin_wu_zhuang_idea = {
+      picture = chi_army_corruption3
+      modifier = {
+        army_org_factor = 0.05
+				army_morale_factor = 0.05
+      }
+    }
+
+    # 先进军事体系
+    mrs_xian_jin_jun_shi_ti_xi_idea = {
+      picture = ETH_conservative_high_command
+      modifier = {
+        army_org_factor = 0.05
+				army_morale_factor = 0.05
+        production_speed_bunker_factor = 0.1
+      }
+    }
+
+    # 先进军事体系 改善后勤体系
+    mrs_xian_jin_jun_shi_ti_xi_a_idea = {
+      picture = ETH_conservative_high_command
+      modifier = {
+        army_org_factor = 0.05
+				army_morale_factor = 0.05
+        production_speed_bunker_factor = 0.1
+        supply_node_range = 0.1
+        supply_factor = 0.1
+      }
+    }
+
+    # 先进军事体系 军民结合
+    mrs_xian_jin_jun_shi_ti_xi_b_idea = {
+      picture = ETH_conservative_high_command
+      modifier = {
+        army_org_factor = 0.05
+				army_morale_factor = 0.05
+        production_speed_bunker_factor = 0.1
+        supply_node_range = 0.1
+        supply_factor = 0.1
+        conversion_cost_civ_to_mil_factor = -0.4
+        conversion_cost_mil_to_civ_factor = -0.4
+        production_factory_efficiency_gain_factor = 0.05
+        production_factory_max_efficiency_factor = 0.05
+      }
+    }
+
+    # 军事学院
+    mrs_jun_shi_xue_yuan_idea = {
+      picture = generic_army_war_college
+      modifier = {
+        army_leader_cost_factor = -0.1
+        army_leader_start_defense_level = 1
+        army_leader_start_planning_level = 1
+        max_planning_factor = 0.1
+      }
+    }
+
+    # 魔法之森地图
+    mrs_mo_fa_zhi_sen_di_tu_idea = {
+      picture = MRS_magical_forest_map
+      modifier = {
+        army_core_attack_factor = 0.07
+        army_core_defence_factor = 0.07
+      }
+    }
+
+    # 军队建设
+    mrs_jun_dui_jian_she_idea = {
+      picture = generic_infantry_bonus
+      modifier = {
+        army_speed_factor = 0.05
+        army_morale_factor = 0.05
+        experience_gain_army_factor = 0.05
+        command_power_gain_mult = 0.05
+      }
+    }
+
+    # 成美改革方案
+    mrs_cheng_mei_gai_ge_fang_an_idea = {
+      picture = narumi_plan
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+      }
+    }
+
+    # 成美改革方案 适应地形
+    mrs_cheng_mei_gai_ge_fang_an_a_idea = {
+      picture = narumi_plan
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+        terrain_penalty_reduction = 0.1
+      }
+    }
+
+    # 成美改革方案 激发抵抗意志
+    mrs_cheng_mei_gai_ge_fang_an_b_idea = {
+      picture = narumi_plan
+      modifier = {
+        army_core_attack_factor = 0.1
+        army_core_defence_factor = 0.1
+        terrain_penalty_reduction = 0.1
+        compliance_growth_on_our_occupied_states = -0.1
+        resistance_damage_to_garrison_on_our_occupied_states = 0.05
+        resistance_growth_on_our_occupied_states = 0.1
+      }
+    }
+
+    # 魔理沙改革方案
+    mrs_mo_li_sha_gai_ge_fang_an_idea = {
+      picture = marisa_plan
+      equipment_bonus = {
+        magic_energy_a = {
+          instant = yes
+          breakthrough = 0.05
+          soft_attack = 0.05
+          hard_attack = 0.1
+          ap_attack = 0.05
+        }
+      }
+    } 
+
+    # 爱丽丝改革方案
+    mrs_ai_li_si_gai_ge_fang_an_idea = {
+      picture = alice_plan
+      modifier = {
+        supply_consumption_factor = -0.1
+				weekly_manpower = 1
+      }
+    }   
+
+    # 爱丽丝改革方案 改进军用人偶
+    mrs_ai_li_si_gai_ge_fang_an_a_idea = {
+      picture = alice_plan
+      modifier = {
+        supply_consumption_factor = -0.1
+				weekly_manpower = 1
+        army_attack_factor = 0.05
+      }
+    } 
+
+    # 工业线 industrial
+    # 资源丰富的魔法之森
+    mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_idea = {
+      picture = ast_all_in 
+      modifier = {
+        local_resources_factor = 0.25
+      }
+      research_bonus = {
+        resource = 0.15
+      }
+    }
+
+    # 资源丰富的魔法之森 资源勘探
+    mrs_zi_yuan_feng_fu_de_mo_fa_zhi_sen_a_idea = {
+      picture = ast_all_in 
+      modifier = {
+        local_resources_factor = 0.3
+        production_lack_of_resource_penalty_factor = -0.3
+      }
+      research_bonus = {
+        resource = 0.2
+      }
+    }
+
+    # 优化生产结构
+    mrs_you_hua_sheng_chan_jie_gou_idea = {
+      picture = SOV_fourth_five_year_plan
+      modifier = {
+        industrial_capacity_factory = 0.06
+      }
+    }
+
+    # 改造魔法之森
+    mrs_gai_zao_mo_fa_zhi_sen_idea = {
+      picture = generic_production_bonus
+      modifier = {
+        production_speed_buildings_factor = 0.08
+      }
+    }
+
+    # 现代生产方式
+    mrs_xian_dai_sheng_chan_fang_shi_idea = {
+      picture = generic_improved_industries
+      modifier = {
+        industrial_capacity_factory = 0.06
+        production_factory_max_efficiency_factor = 0.06
+        production_speed_buildings_factor = 0.05
+      }
+    }
+
+    # 传统生产方式
+    mrs_chuan_tong_sheng_chan_fang_shi_idea = {
+      picture = ARG_construction_guilds
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.15
+      }
+    }
+
+    # 传统生产方式 谨慎机械化
+    mrs_chuan_tong_sheng_chan_fang_shi_a_idea = {
+      picture = ARG_construction_guilds
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.15
+        industrial_capacity_factory = 0.1
+      }
+    }
+
+    # 传统生产方式 村社主义
+    mrs_chuan_tong_sheng_chan_fang_shi_b_idea = {
+      picture = ARG_construction_guilds
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.15
+        production_factory_start_efficiency_factor = 0.2
+        production_lack_of_resource_penalty_factor = -0.1
+        industrial_capacity_factory = 0.1
+      }
+    }
+
+    # 传统生产方式 合作生产
+    mrs_chuan_tong_sheng_chan_fang_shi_c_idea = {
+      picture = ARG_construction_guilds
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.2
+        production_factory_start_efficiency_factor = 0.2
+        production_factory_max_efficiency_factor = 0.05
+        production_lack_of_resource_penalty_factor = -0.1
+        industrial_capacity_factory = 0.1
+      }
+    }
+
+    # 扩大生产线
+    mrs_kuo_da_sheng_chan_xian_idea = {
+      picture = generic_mass_production
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.1
+      }
+    }
+
+    # 简化生产线
+    mrs_jian_hua_sheng_chan_xian_idea = {
+      picture = generic_production
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.3
+        production_factory_max_efficiency_factor = 0.05
+        production_factory_start_efficiency_factor = 0.2
+        line_change_production_efficiency_factor = 0.3
+      }
+    }
+
+    # 魔法文献馆
+    mrs_mo_fa_wen_xian_guan_idea = {
+      picture = generic_book
+      research_bonus = {
+        magic = 0.06
+      }
+    }
+
+    # 魔法文献馆 平等教育机会
+    mrs_mo_fa_wen_xian_guan_a_idea = {
+      picture = generic_book
+      research_bonus = {
+        magic = 0.1
+        race = 0.1
+        math = 0.1
+      }
+    }
+
+        mrs_bushimofashi = {
+	    	picture = FRA_matignon_agreements
+	    	allowed = {
+          always = no
+        }
+
+        available = {
+        
+        }
+
+        allowed_civil_war = {
+        }
+			
+			  removal_cost = -1
+	
+			  modifier = {
+          stability_factor = -0.2
+          political_power_factor = -0.15
+				
+			  }
+	    }
+
+		MSD_shou_dao_zhan_zheng_idea = {
+			picture = MSD_war
+
+			cancel = {
+        NOT = {
+          has_war_with = MRS
+        }
+      }
+
+			targeted_modifier = {
+				tag = MRS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+        breakthrough_bonus_against = 0.1
+			}
+
+			modifier = {
+				army_morale_factor = 0.1
+				land_reinforce_rate = 0.03
+				war_support_factor = 0.1
+        max_planning_factor = 0.1
+        custom_modifier_tooltip = MSD_quick_war_tt
+			}
+
+		}
+
+		mrs_shou_dao_zhan_zheng_idea = {
+			picture = MSD_war
+
+			cancel = {
+        NOT = {
+          has_war_with = MSD
+        }
+      }
+
+			modifier = {
+				war_support_factor = 0.1
+	    	army_core_defence_factor = 0.1
+				max_dig_in_factor = 0.2
+        custom_modifier_tooltip = MRS_hold_on_long_enough_tt
+			}
+		}
+	}
+}

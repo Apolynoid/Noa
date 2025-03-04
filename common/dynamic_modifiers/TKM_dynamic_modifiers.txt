@@ -1,0 +1,68 @@
+# 付丧神灵力特点
+TKM_fu_sang_shen_ling_li_te_dian_idea = {
+	icon = GFX_idea_TKM_tsukumogami_spirutual_power_feature
+
+	# industrial
+	production_factory_efficiency_gain_factor = TKM_tsukumogami_spirutual_power_feature_pfegf
+	production_speed_buildings_factor = TKM_tsukumogami_spirutual_power_feature_pfbf
+	consumer_goods_factor = TKM_tsukumogami_spirutual_power_feature_cgf
+	consumer_goods_expected_value = TKM_tsukumogami_spirutual_power_feature_cgev
+	industrial_capacity_factory = TKM_tsukumogami_spirutual_power_feature_icf
+	industry_repair_factor = TKM_tsukumogami_spirutual_power_feature_irf
+	supply_node_range = TKM_tsukumogami_spirutual_power_feature_snr
+	# military
+	command_power_gain_mult = TKM_tsukumogami_spirutual_power_feature_cpgm
+	experience_gain_army_factor = TKM_tsukumogami_spirutual_power_feature_egaf
+	experience_gain_army_unit_factor = TKM_tsukumogami_spirutual_power_feature_egauf
+	land_reinforce_rate = TKM_tsukumogami_spirutual_power_feature_lrr
+	army_attack_factor = TKM_tsukumogami_spirutual_power_feature_atk
+	army_defence_factor = TKM_tsukumogami_spirutual_power_feature_def
+	army_morale_factor = TKM_tsukumogami_spirutual_power_feature_mor
+	org_loss_at_low_org_factor = TKM_tsukumogami_spirutual_power_feature_olalof
+	weekly_manpower = TKM_tsukumogami_spirutual_power_feature_wm
+	training_time_army_factor = TKM_tsukumogami_spirutual_power_feature_ttaf
+	pocket_penalty = TKM_tsukumogami_spirutual_power_feature_pocp
+	org_loss_when_moving = TKM_tsukumogami_spirutual_power_feature_olwm
+	# cost
+	NOA_TKM_monthly_sp_bead_cost = TKM_monthly_sp_bead_cost
+}
+
+# 受限制的高能灵气贸易
+TKM_shou_xian_zhi_de_gao_neng_ling_qi_mao_yi_idea = {
+	icon = GFX_idea_TKM_limited_energy_trade
+	remove_trigger = {
+		SCA = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+		NMS = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+	min_export = -0.4
+	research_speed_factor = -0.03
+	custom_modifier_tooltip = TKM_limited_energy_trade_tt
+}
+
+# 道具战争债券
+TKM_dao_ju_zhan_zheng_zhai_quan_idea = {
+	icon = GFX_idea_generic_bills
+	remove_trigger = {
+		has_war_with_major = yes
+	}
+	political_power_cost = TKM_property_war_bond_pp
+	consumer_goods_factor = -0.1
+	production_speed_arms_factory_factor = 0.25
+	production_speed_air_base_factor = 0.25
+	production_speed_bunker_factor = 0.25
+	production_speed_anti_air_building_factor = 0.25
+	production_speed_energy_factory_factor = 0.15
+	production_speed_fuel_silo_factor = 0.25
+	production_speed_radar_station_factor = 0.25
+	custom_modifier_tooltip = TKM_property_war_bond_tt
+}

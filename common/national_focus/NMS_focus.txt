@@ -1,0 +1,2189 @@
+#!gfx:interface\TH_focus.gfx
+focus_tree = {
+	id = NMS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NMS
+		}
+	}
+	shared_focus = ty_medium_main 
+	continuous_focus_position = { x = 2000 y = 1800 }
+	default = no
+	# 应对宗教危机
+	focus = {
+		id = NMS_ying_dui_zong_jiao_wei_ji
+		icon = NMS_focus_handle_religious_crisis
+		cost = 7
+		x = 14
+		y = 1
+	
+		cancelable = no
+
+		dynamic = yes
+	
+		completion_reward = {
+			remove_ideas = NMS_zong_jiao_wei_ji_idea
+			add_stability = -0.1
+			add_war_support = -0.1
+			NMS_faction_system_setup = yes
+			hidden_effect = {
+				country_event = nms.101
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 改良派
+	focus = {
+		id = NMS_gai_liang_pai
+		icon = NMS_focus_reformists
+		cost = 3
+		x = -3
+		y = 1
+
+		relative_position_id = NMS_ying_dui_zong_jiao_wei_ji
+	
+		prerequisite = {
+			focus = NMS_ying_dui_zong_jiao_wei_ji
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+	
+		completion_reward = {
+			NMS_decrease_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 争取信众支持
+	focus = {
+		id = NMS_zheng_qu_xin_zhong_zhi_chi
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_gai_liang_pai
+	
+		prerequisite = {
+			focus = NMS_gai_liang_pai
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 工业发展计划
+	focus = {
+		id = NMS_gong_ye_fa_zhan_ji_hua
+		icon = GFX_focus_generic_industry_2
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = NMS_zheng_qu_xin_zhong_zhi_chi
+	
+		prerequisite = {
+			focus = NMS_zheng_qu_xin_zhong_zhi_chi
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea
+					add_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_b_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_b_idea
+					add_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_e_idea
+				}
+			}
+			else = {
+				add_ideas = NMS_gai_liang_pai_zheng_zhi_xing_dong_c_idea
+			}
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 学习人类生产技术
+	focus = {
+		id = NMS_xue_xi_ren_lei_sheng_chan_ji_shu
+		icon = GFX_focus_production
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_gong_ye_fa_zhan_ji_hua
+	
+		prerequisite = {
+			focus = NMS_gong_ye_fa_zhan_ji_hua
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+
+		mutually_exclusive = {
+			focus = NMS_shi_fang_yao_guai_tian_xing
+		}
+	
+		completion_reward = {
+			add_ideas = NMS_ren_lei_sheng_chan_ji_shu_idea
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 社会救济方案
+	focus = {
+		id = NMS_she_hui_jiu_ji_fang_an
+		icon = GFX_focus_ETH_adopt_the_lira
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = NMS_zheng_qu_xin_zhong_zhi_chi
+	
+		prerequisite = {
+			focus = NMS_zheng_qu_xin_zhong_zhi_chi
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_c_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_c_idea
+					add_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea
+				}
+			}
+			else = {
+				add_ideas = NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea
+			}
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 公共事业建设
+	focus = {
+		id = NMS_gong_gong_shi_ye_jian_she
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_she_hui_jiu_ji_fang_an
+	
+		prerequisite = {
+			focus = NMS_she_hui_jiu_ji_fang_an
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 重拾人妖平等理想
+	focus = {
+		id = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = NMS_gong_gong_shi_ye_jian_she
+	
+		prerequisite = {
+			focus = NMS_gong_gong_shi_ye_jian_she
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+
+		mutually_exclusive = {
+			focus = NMS_yao_guai_jun_guo_zhu_yi
+		}
+
+		cancelable = no
+	
+		completion_reward = {
+			custom_effect_tooltip = NMS_reformists_goal_fulfilled_tt
+			custom_effect_tooltip = NMS_racists_focus_lock_tt
+			if = {
+				limit = {
+					has_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea
+					add_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_e_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea
+					add_idea = NMS_gai_liang_pai_zheng_zhi_xing_dong_b_idea
+				}
+			}
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.3
+			}
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 边缘化种族派
+	focus = {
+		id = NMS_bian_yuan_hua_zhong_zu_pai
+		icon = GFX_focus_down_with_hawks
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+	
+		prerequisite = {
+			focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+		}
+
+		available = {
+			NMS_can_complete_reformists_trigger = yes
+		}
+
+		bypass = {
+			has_country_flag = NMS_racists_lost_power_flag
+		}
+
+		cancelable = no
+	
+		completion_reward = {
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+			NMS_racists_lose_power = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_civil_war = no
+					}
+					news_event = {
+						id = nms.118
+						days = 5
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 种族派
+	focus = {
+		id = NMS_zhong_zu_pai
+		icon = NMS_focus_racists
+		cost = 3
+		x = 3
+		y = 1
+
+		relative_position_id = NMS_ying_dui_zong_jiao_wei_ji
+	
+		prerequisite = {
+			focus = NMS_ying_dui_zong_jiao_wei_ji
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+	
+		completion_reward = {
+			NMS_decrease_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战争动员
+	focus = {
+		id = NMS_zhan_zheng_dong_yuan
+		icon = GFX_focus_war_propaganda
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_zhong_zu_pai
+	
+		prerequisite = {
+			focus = NMS_zhong_zu_pai
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+	
+		completion_reward = {
+			add_war_support = 0.1
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 强化军事等级制
+	focus = {
+		id = NMS_qiang_hua_jun_shi_deng_ji_zhi
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = NMS_zhan_zheng_dong_yuan
+	
+		prerequisite = {
+			focus = NMS_zhan_zheng_dong_yuan
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_c_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_c_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_g_idea
+				}
+			}
+			else = {
+				add_ideas = NMS_zhong_zu_pai_jun_shi_gai_ge_d_idea
+			}
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 释放妖怪天性
+	focus = {
+		id = NMS_shi_fang_yao_guai_tian_xing
+		icon = GFX_goal_generic_wolf_pack
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_qiang_hua_jun_shi_deng_ji_zhi
+	
+		prerequisite = {
+			focus = NMS_qiang_hua_jun_shi_deng_ji_zhi
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+
+		mutually_exclusive = {
+			focus = NMS_xue_xi_ren_lei_sheng_chan_ji_shu
+		}
+	
+		completion_reward = {
+			add_ideas = NMS_yao_guai_tian_xing_idea
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 提高军事预算
+	focus = {
+		id = NMS_ti_gao_jun_shi_yu_suan
+		icon = GFX_focus_generic_reorient_production
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = NMS_zhan_zheng_dong_yuan
+	
+		prerequisite = {
+			focus = NMS_zhan_zheng_dong_yuan
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_d_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_d_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea
+				}
+			}
+			else = {
+				add_ideas = NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea
+			}
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 义务兵役制
+	focus = {
+		id = NMS_yi_wu_bing_yi_zhi
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_ti_gao_jun_shi_yu_suan
+	
+		prerequisite = {
+			focus = NMS_ti_gao_jun_shi_yu_suan
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea
+				}
+			}
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 妖怪军国主义
+	focus = {
+		id = NMS_yao_guai_jun_guo_zhu_yi
+		icon = NMS_focus_youkai_militarism
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = NMS_yi_wu_bing_yi_zhi
+	
+		prerequisite = {
+			focus = NMS_yi_wu_bing_yi_zhi
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+
+		mutually_exclusive = {
+			focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+		}
+
+		cancelable = no
+	
+		completion_reward = {
+			custom_effect_tooltip = NMS_racists_goal_fulfilled_tt
+			custom_effect_tooltip = NMS_reformists_focus_lock_tt
+			if = {
+				limit = {
+					has_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_g_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea
+					add_idea = NMS_zhong_zu_pai_jun_shi_gai_ge_c_idea
+				}
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = neworder
+			}
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 排挤改良派
+	focus = {
+		id = NMS_pai_ji_gai_liang_pai
+		icon = GFX_focus_down_with_doves
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_yao_guai_jun_guo_zhu_yi
+	
+		prerequisite = {
+			focus = NMS_yao_guai_jun_guo_zhu_yi
+		}
+
+		available = {
+			NMS_can_complete_racists_trigger = yes
+		}
+
+		bypass = {
+			has_country_flag = NMS_reformists_lost_power_flag
+		}
+
+		cancelable = no
+	
+		completion_reward = {
+			NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+			NMS_reformists_lose_power = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_civil_war = no
+					}
+					news_event = {
+						id = nms.119
+						days = 5
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 强化行政事务处
+	focus = {
+		id = NMS_qiang_hua_xing_zheng_shi_wu_chu
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ying_dui_zong_jiao_wei_ji
+	
+		prerequisite = {
+			focus = NMS_gai_liang_pai
+			focus = NMS_zhong_zu_pai
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_decrease_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 行政改革
+	focus = {
+		id = NMS_xing_zheng_gai_ge
+		icon = GFX_focus_generic_treaty
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_qiang_hua_xing_zheng_shi_wu_chu
+	
+		prerequisite = {
+			focus = NMS_qiang_hua_xing_zheng_shi_wu_chu
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			NMS_decrease_reformists_dissatisfaction = yes
+			NMS_decrease_racists_dissatisfaction = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 派系斗争的终结
+	focus = {
+		id = NMS_pai_xi_dou_zheng_de_zhong_jie
+		icon = NMS_focus_end_of_faction
+		cost = 3
+		x = 0
+		y = 7
+
+		relative_position_id = NMS_ying_dui_zong_jiao_wei_ji
+	
+		prerequisite = {
+			focus = NMS_bian_yuan_hua_zhong_zu_pai
+			focus = NMS_pai_ji_gai_liang_pai
+		}
+
+		available = {
+			OR = {
+				NMS_reformists_totally_lost_power = yes
+				NMS_racists_totally_lost_power = yes
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 15
+			NMS_faction_system_end = yes
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 命莲寺外交政策
+	focus = {
+		id = NMS_ming_lian_si_wai_jiao_zheng_ce
+		icon = GFX_goal_generic_improve_relations
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_pai_xi_dou_zheng_de_zhong_jie
+	
+		prerequisite = {
+			focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+		}
+
+		available = {
+			has_civil_war = no
+		}
+	
+		completion_reward = {
+			add_political_power = 75
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 加入绯红体系
+	focus = {
+		id = NMS_jia_ru_fei_hong_ti_xi
+		icon = GFX_focus_befriend_SCA
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = NMS_ming_lian_si_wai_jiao_zheng_ce
+	
+		prerequisite = {
+			focus = NMS_ming_lian_si_wai_jiao_zheng_ce
+		}
+
+		mutually_exclusive = {
+			focus = NMS_huan_xiang_xiang_he_xie_tiao_yue
+		}
+
+		available = {
+			is_subject = no
+			SCA = {
+				AND = {
+					exists = yes
+					is_puppet = no
+				}
+			}
+		}
+	
+		completion_reward = {
+			SCA = {
+				country_event = nms.105
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 绯红体系军事援助
+	focus = {
+		id = NMS_fei_hong_ti_xi_jun_shi_yuan_zhu
+		icon = SCA_focus_imperial_military_aid
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_jia_ru_fei_hong_ti_xi
+	
+		prerequisite = {
+			focus = NMS_jia_ru_fei_hong_ti_xi
+		}
+	
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 幻想乡和谐条约
+	focus = {
+		id = NMS_huan_xiang_xiang_he_xie_tiao_yue
+		icon = NMS_focus_gensokyo_treaty_of_harmony
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = NMS_ming_lian_si_wai_jiao_zheng_ce
+	
+		prerequisite = {
+			focus = NMS_ming_lian_si_wai_jiao_zheng_ce
+		}
+
+		mutually_exclusive = {
+			focus = NMS_jia_ru_fei_hong_ti_xi
+		}
+
+		available = {
+			is_subject = no
+		}
+	
+		completion_reward = {
+			create_faction = NMS_gensokyo_treaty_of_harmony
+			hidden_effect = {
+				news_event = {
+					id = nms.123
+					days = 5
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 与恶魔的条约
+	focus = {
+		id = NMS_yu_e_mo_de_tiao_yue
+		icon = GFX_focus_deal_with_SCA
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_huan_xiang_xiang_he_xie_tiao_yue
+	
+		prerequisite = {
+			focus = NMS_huan_xiang_xiang_he_xie_tiao_yue
+		}
+	
+		completion_reward = {
+			SCA = {
+				country_event = nms.107
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = nms.107.1
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 主动防御政策
+	focus = {
+		id = NMS_zhu_dong_fang_yu_zheng_ce
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = NMS_ming_lian_si_wai_jiao_zheng_ce
+	
+		prerequisite = {
+			focus = NMS_fei_hong_ti_xi_jun_shi_yuan_zhu
+			focus = NMS_yu_e_mo_de_tiao_yue
+		}
+
+		available = {
+			OR = {
+				threat > 0.8
+				AND = {
+					date > 149.1.1
+					threat > 0.5
+				}
+				date > 150.1.1
+			}
+		}
+	
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 解决神灵庙问题
+	focus = {
+		id = NMS_jie_jue_shen_ling_miao_wen_ti
+		icon = GFX_focus_attack_SRB
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = NMS_zhu_dong_fang_yu_zheng_ce
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_completed_focus = NMS_yu_e_mo_de_tiao_yue
+			}
+		}
+
+		available = {
+			is_subject = no
+			SEJ = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			CIR = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			TKM = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	  
+		bypass = {
+			OR = {
+				SRB = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SRB
+			}
+		}
+	  
+		will_lead_to_war_with = SRB
+	
+		prerequisite = {
+			focus = NMS_zhu_dong_fang_yu_zheng_ce
+		}
+	
+		completion_reward = {
+			country_event = nms.110
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 消除道具威胁
+	focus = {
+		id = NMS_xiao_chu_dao_ju_wei_xie
+		icon = GFX_focus_attack_TKM
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = NMS_zhu_dong_fang_yu_zheng_ce
+
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = NMS_yu_e_mo_de_tiao_yue
+			}
+		}
+	
+		prerequisite = {
+			focus = NMS_zhu_dong_fang_yu_zheng_ce
+		}
+
+		available = {
+			is_subject = no
+		}
+	  
+		bypass = {
+			OR = {
+				TKM = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = TKM
+			}
+		}
+	  
+		will_lead_to_war_with = TKM
+	
+		completion_reward = {
+			create_wargoal = {
+				target = TKM
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 撕毁与恶魔的条约
+	focus = {
+		id = NMS_si_hui_yu_e_mo_de_tiao_yue
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = 3
+		y = 1
+
+		dynamic = yes
+
+		relative_position_id = NMS_zhu_dong_fang_yu_zheng_ce
+
+		allow_branch = {
+			has_completed_focus = NMS_yu_e_mo_de_tiao_yue
+		}
+	
+		prerequisite = {
+			focus = NMS_zhu_dong_fang_yu_zheng_ce
+		}
+
+		available = {
+			is_subject = no
+			SEJ = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			CIR = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			TKM = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	  
+		bypass = {
+			OR = {
+				SCA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SCA
+			}
+		}
+	  
+		will_lead_to_war_with = SCA
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_non_aggression_pact_with = SCA
+				}
+				diplomatic_relation = {
+					country = SCA
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+			create_wargoal = {
+				target = SCA
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# 工业-军事
+	# 准备下一场战争
+	focus = {
+		id = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = 29
+		y = 1
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = civil
+			}
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = military
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 科研投资
+	focus = {
+		id = NMS_ke_yan_tou_zi
+		icon = GFX_focus_research
+		cost = 7
+		x = -4
+		y = 1
+
+		relative_position_id = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+
+		prerequisite = {
+			focus = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = NMS_ke_yan_tou_zi_idea
+				days = 365
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 教育改革
+	focus = {
+		id = NMS_jiao_yu_gai_ge
+		icon = GFX_focus_education
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ke_yan_tou_zi
+
+		prerequisite = {
+			focus = NMS_ke_yan_tou_zi
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_ting_zhi_de_yan_jiu_shui_ping_idea
+			}
+		}
+	
+		completion_reward = {
+			remove_ideas = NMS_ting_zhi_de_yan_jiu_shui_ping_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础科学研究
+	focus = {
+		id = NMS_ji_chu_ke_xue_yan_jiu
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_jiao_yu_gai_ge
+
+		prerequisite = {
+			focus = NMS_jiao_yu_gai_ge
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = NMS_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = NMS_ji_chu_ke_xue_yan_jiu
+
+		prerequisite = {
+			focus = NMS_ji_chu_ke_xue_yan_jiu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 命莲寺研究院
+	focus = {
+		id = NMS_ming_lian_si_yan_jiu_yuan
+		icon = GFX_focus_science_institute
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ji_chu_ke_xue_yan_jiu
+
+		prerequisite = {
+			focus = NMS_ji_chu_ke_xue_yan_jiu
+		}
+
+		available = {
+			has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 应用科学研究
+	focus = {
+		id = NMS_ying_yong_ke_xue_yan_jiu
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ming_lian_si_yan_jiu_yuan
+
+		prerequisite = {
+			focus = NMS_ming_lian_si_yan_jiu_yuan
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 2
+				category = industrys
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事改革
+	focus = {
+		id = NMS_jun_shi_gai_ge
+		icon = GFX_focus_chi_army_reform
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+
+		prerequisite = {
+			focus = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_luo_hou_de_jun_shi_neng_li_idea
+			}
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_luo_hou_de_jun_shi_neng_li_idea
+				add_idea = NMS_luo_hou_de_jun_shi_neng_li_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 圣白莲的计划
+	focus = {
+		id = NMS_sheng_bai_lian_de_ji_hua
+		icon = NMS_focus_byakuren_plan
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = NMS_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = NMS_jun_shi_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = NMS_cun_sha_shui_mi_de_ji_hua
+		}
+
+		available = {
+			has_country_flag = NMS_racists_lost_power_flag
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = special_operations_doctrine
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整编摩托俱乐部
+	focus = {
+		id = NMS_zheng_bian_mo_tuo_ju_le_bu
+		icon = GFX_focus_generic_motor_cycle
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_sheng_bai_lian_de_ji_hua
+
+		prerequisite = {
+			focus = NMS_sheng_bai_lian_de_ji_hua
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+				  	has_tech = tezhonglinglidanyuan1
+				}
+				add_tech_bonus = {
+					bonus = 2
+					uses = 1
+					category = sf_force
+				}
+			}
+			else = {
+				custom_effect_tooltip = NMS_special_force_146_tt
+				hidden_effect = {
+					set_technology = {
+						tezhonglinglidanyuan1 = 1
+					}
+				}
+			}
+			create_equipment_variant = {
+				name = "摩托"
+				type = special_core146
+				upgrades = {
+					upgrade_softattack = 2
+					upgrade_breakthrough = 3
+					up_sc_attack = 2
+					up_speed = 5
+					upgrade_ic_reverse = 2
+				}
+				icon = "GFX_special_force_146_motorcycle"
+			}
+			add_equipment_to_stockpile = {
+				type = special_core146
+				amount = 30
+				variant_name = "摩托"
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 大妖怪的力量
+	focus = {
+		id = NMS_da_yao_guai_de_li_liang
+		icon = GFX_goal_generic_build_tank
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_zheng_bian_mo_tuo_ju_le_bu
+
+		prerequisite = {
+			focus = NMS_zheng_bian_mo_tuo_ju_le_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = shield_weapons
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 村纱水蜜的计划
+	focus = {
+		id = NMS_cun_sha_shui_mi_de_ji_hua
+		icon = NMS_focus_murasa_plan
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = NMS_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = NMS_jun_shi_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = NMS_sheng_bai_lian_de_ji_hua
+		}
+
+		available = {
+			has_country_flag = NMS_reformists_lost_power_flag
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = fire_support_doctrine
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 学习圣辇船构造
+	focus = {
+		id = NMS_xue_xi_sheng_nian_chuan_gou_zao
+		icon = NMS_focus_learn_from_palanquin_ship
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_cun_sha_shui_mi_de_ji_hua
+
+		prerequisite = {
+			focus = NMS_cun_sha_shui_mi_de_ji_hua
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				category = support_tech
+				bonus = 0.8
+				uses = 1
+			}
+			custom_effect_tooltip = NMS_allow_palanquin_ship_tt
+			hidden_effect = {
+				set_technology = {
+					NMS_fang_zhi_sheng_nian_chuan = 1
+					popup = no
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 火力优先
+	focus = {
+		id = NMS_huo_li_you_xian
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_xue_xi_sheng_nian_chuan_gou_zao
+
+		prerequisite = {
+			focus = NMS_xue_xi_sheng_nian_chuan_gou_zao
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 0.8
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 利用人类赔款
+	focus = {
+		id = NMS_li_yong_ren_lei_pei_kuan
+		icon = GFX_focus_mex_privatisation
+		cost = 7
+		x = 4
+		y = 1
+
+		relative_position_id = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+
+		prerequisite = {
+			focus = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = NMS_ren_lei_pei_kuan_idea
+				days = 365
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础设施建设
+	focus = {
+		id = NMS_ji_chu_she_shi_jian_she
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_li_yong_ren_lei_pei_kuan
+
+		prerequisite = {
+			focus = NMS_li_yong_ren_lei_pei_kuan
+		}
+	
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 现代化工业
+	focus = {
+		id = NMS_xian_dai_hua_gong_ye
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ji_chu_she_shi_jian_she
+
+		prerequisite = {
+			focus = NMS_ji_chu_she_shi_jian_she
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_di_xiao_de_gong_ye_ti_xi_idea
+			}
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_di_xiao_de_gong_ye_ti_xi_idea
+				add_idea = NMS_di_xiao_de_gong_ye_ti_xi_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 纳兹琳资源勘探组
+	focus = {
+		id = NMS_na_zi_lin_zi_yuan_kan_tan_zu
+		icon = GFX_goal_generic_construction2
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = NMS_xian_dai_hua_gong_ye
+
+		prerequisite = {
+			focus = NMS_xian_dai_hua_gong_ye
+		}
+
+		available = {
+			has_character = NMS_mouse
+		}
+	
+		completion_reward = {
+			add_ideas = NMS_na_zi_lin_zi_yuan_kan_tan_zu_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 命莲城建设
+	focus = {
+		id = NMS_ming_lian_cheng_jian_she
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_xian_dai_hua_gong_ye
+
+		prerequisite = {
+			focus = NMS_xian_dai_hua_gong_ye
+		}
+
+		available = {
+			owns_state = 215
+			has_full_control_of_state = 215
+			has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+		}
+	
+		completion_reward = {
+			215 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 命莲寺工业投资
+	focus = {
+		id = NMS_ming_lian_si_gong_ye_tou_zi
+		icon = GFX_goal_generic_construction
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_ming_lian_cheng_jian_she
+
+		prerequisite = {
+			focus = NMS_ming_lian_cheng_jian_she
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_di_xiao_de_gong_ye_ti_xi_a_idea
+			}
+		}
+	
+		completion_reward = {
+			remove_ideas = NMS_di_xiao_de_gong_ye_ti_xi_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事组织调整
+	focus = {
+		id = NMS_jun_shi_zu_zhi_tiao_zheng
+		icon = GFX_goal_generic_small_arms
+		cost = 7
+		x = 0
+		y = 4
+
+		relative_position_id = NMS_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = NMS_da_yao_guai_de_li_liang
+			focus = NMS_huo_li_you_xian
+		}
+
+		available = {
+			has_completed_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_luo_hou_de_jun_shi_neng_li_a_idea
+			}
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_luo_hou_de_jun_shi_neng_li_a_idea
+				add_idea = NMS_luo_hou_de_jun_shi_neng_li_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事学院
+	focus = {
+		id = NMS_jun_shi_xue_yuan
+		icon = GFX_focus_generic_military_academy
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_jun_shi_zu_zhi_tiao_zheng
+
+		prerequisite = {
+			focus = NMS_jun_shi_zu_zhi_tiao_zheng
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = NMS_luo_hou_de_jun_shi_neng_li_b_idea
+			}
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_luo_hou_de_jun_shi_neng_li_b_idea
+				add_idea = NMS_luo_hou_de_jun_shi_neng_li_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 武器研究
+	focus = {
+		id = NMS_wu_qi_yan_jiu
+		icon = GFX_focus_focus_fra_maquis
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = NMS_jun_shi_zu_zhi_tiao_zheng
+
+		prerequisite = {
+			focus = NMS_jun_shi_zu_zhi_tiao_zheng
+		}
+
+		prerequisite = {
+			focus = NMS_ji_chu_ke_xue_yan_jiu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 1.0
+				bonus = 1
+				uses = 2
+				category = military
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事经验分析
+	focus = {
+		id = NMS_jun_shi_jing_yan_fen_xi
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_wu_qi_yan_jiu
+
+		prerequisite = {
+			focus = NMS_wu_qi_yan_jiu
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 新军事理论
+	focus = {
+		id = NMS_xin_jun_shi_li_lun
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_jun_shi_jing_yan_fen_xi
+
+		prerequisite = {
+			focus = NMS_jun_shi_jing_yan_fen_xi
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事工业建设
+	focus = {
+		id = NMS_jun_shi_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = NMS_jun_shi_zu_zhi_tiao_zheng
+
+		prerequisite = {
+			focus = NMS_jun_shi_zu_zhi_tiao_zheng
+		}
+
+		prerequisite = {
+			focus = NMS_xian_dai_hua_gong_ye
+		}
+	
+		completion_reward = {
+			add_ideas = NMS_jun_shi_gong_ye_jian_she_idea
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 铁路建设
+	focus = {
+		id = NMS_tie_lu_jian_she
+		icon = GFX_focus_generic_railroad
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_jun_shi_gong_ye_jian_she
+
+		prerequisite = {
+			focus = NMS_jun_shi_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_jun_shi_gong_ye_jian_she_idea
+				add_idea = NMS_jun_shi_gong_ye_jian_she_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 建设激光宝塔
+	focus = {
+		id = NMS_jian_she_ji_guang_bao_ta
+		icon = GFX_goal_generic_construct_military
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = NMS_tie_lu_jian_she
+
+		prerequisite = {
+			focus = NMS_tie_lu_jian_she
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMS_jun_shi_gong_ye_jian_she_a_idea
+				add_idea = NMS_jun_shi_gong_ye_jian_she_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 现代化军队
+	focus = {
+		id = NMS_xian_dai_hua_jun_dui
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = NMS_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = NMS_jun_shi_xue_yuan
+		}
+
+		prerequisite = {
+			focus = NMS_xin_jun_shi_li_lun
+			focus = NMS_jian_she_ji_guang_bao_ta
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_luo_hou_de_jun_shi_neng_li_c_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_luo_hou_de_jun_shi_neng_li_c_idea
+					add_idea = NMS_xian_dai_hua_jun_dui_idea
+				}
+			}
+			else = {
+				add_ideas = NMS_xian_dai_hua_jun_dui_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 后勤改良
+	focus = {
+		id = NMS_hou_qin_gai_liang
+		icon = GFX_focus_generic_truck
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = NMS_xian_dai_hua_jun_dui
+
+		prerequisite = {
+			focus = NMS_xian_dai_hua_jun_dui
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_xian_dai_hua_jun_dui_b_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_xian_dai_hua_jun_dui_b_idea
+					add_idea = NMS_xian_dai_hua_jun_dui_c_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = NMS_xian_dai_hua_jun_dui_idea
+					add_idea = NMS_xian_dai_hua_jun_dui_a_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 改良指挥体系
+	focus = {
+		id = NMS_gai_liang_zhi_hui_ti_xi
+		icon = GFX_focus_staff
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = NMS_xian_dai_hua_jun_dui
+
+		prerequisite = {
+			focus = NMS_xian_dai_hua_jun_dui
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NMS_xian_dai_hua_jun_dui_a_idea
+				}
+				swap_ideas = {
+					remove_idea = NMS_xian_dai_hua_jun_dui_a_idea
+					add_idea = NMS_xian_dai_hua_jun_dui_c_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = NMS_xian_dai_hua_jun_dui_idea
+					add_idea = NMS_xian_dai_hua_jun_dui_b_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+}

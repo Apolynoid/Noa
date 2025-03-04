@@ -1,0 +1,393 @@
+add_namespace = kem_war
+##########事件###########
+# MRS MSD正在准备针对我们的军事行动
+country_event = {
+	id = kem_war.101
+	title = kem_war.101.t
+	desc = kem_war.101.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = kem_war.101.1
+	}
+}
+
+# news 兽道战争
+news_event = {
+	id = kem_war.102
+	title = kem_war.102.t
+	desc = kem_war.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 兽道部落
+	option = {
+		name = kem_war.102.1
+		trigger = {
+			original_tag = MSD
+		}
+	}
+
+	# 魔女联盟
+	option = {
+		name = kem_war.102.2
+		trigger = {
+			original_tag = MRS
+		}
+	}
+
+	# 其他
+	option = {
+		name = kem_war.102.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MSD
+					original_tag = MRS
+				}
+			}
+		}
+	}
+}
+
+# MSD在战争中失败
+country_event = {
+	id = kem_war.103
+	title = kem_war.103.t
+	desc = kem_war.103.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = kem_war.103.1
+	}
+}
+
+# MRS在战争中失败
+country_event = {
+	id = kem_war.104
+	title = kem_war.104.t
+	desc = kem_war.104.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = kem_war.104.1
+	}
+}
+
+# MSD在战争中获胜
+country_event = {
+	id = kem_war.105
+	title = kem_war.105.t
+	desc = kem_war.105.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		# generic triggers
+		has_global_flag = MSD_kemonomichi_war_begun_flag
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_ended_flag
+		}
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+		}
+		# check
+		original_tag = MSD
+		OR = {
+			206 = {
+				is_fully_controlled_by = MSD
+			}
+			MRS = {
+				surrender_progress > 0.2
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+			set_global_flag = MSD_kemonomichi_war_ended_flag
+			MSD = {
+				white_peace = MRS
+				transfer_state = 206
+				set_country_flag = MSD_victory_in_kemonomichi_war_flag
+			}
+			MRS = {
+				country_event = kem_war.104
+			}
+			news_event = {
+				id = kem_war.109
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = kem_war.105.1
+	}
+}
+
+# MRS防御胜利
+country_event = {
+	id = kem_war.106
+	title = kem_war.106.t
+	desc = kem_war.106.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		# generic triggers
+		has_global_flag = MSD_kemonomichi_war_begun_flag
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_ended_flag
+		}
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+		}
+		# check
+		original_tag = MRS
+		date > 147.6.1
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+			set_global_flag = MSD_kemonomichi_war_ended_flag
+			MSD = {
+				country_event = kem_war.103
+			}
+			MRS = {
+				white_peace = MSD
+				set_country_flag = MRS_victory_in_kemonomichi_war_flag
+			}
+			news_event = {
+				id = kem_war.109
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = kem_war.106.1
+	}
+}
+
+# MRS进攻胜利
+country_event = {
+	id = kem_war.107
+	title = kem_war.107.t
+	desc = kem_war.107.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		# generic triggers
+		has_global_flag = MSD_kemonomichi_war_begun_flag
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_ended_flag
+		}
+		NOT = {
+			has_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+		}
+		# check
+		original_tag = MRS
+		MSD = {
+			surrender_progress > 0.2
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MSD_kemonomichi_war_fate_chosen_flag
+		}
+	}
+
+	# 我们接受这份和平协定
+	option = {
+		name = kem_war.107.1
+		MRS = {
+			white_peace = MSD
+		}
+		hidden_effect = {
+			set_global_flag = MSD_kemonomichi_war_ended_flag
+			MSD = {
+				country_event = kem_war.103
+			}
+			MRS = {
+				set_country_flag = MRS_victory_in_kemonomichi_war_flag
+			}
+			news_event = {
+				id = kem_war.109
+				days = 7
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -200
+				any_other_country = {
+					has_war_with = MSD
+				}
+			}
+		}
+	}
+
+	# 必须彻底清除MSD威胁
+	option = {
+		name = kem_war.107.2
+		remove_ideas = mrs_shou_dao_zhan_zheng_idea
+		add_war_support = 0.1
+		hidden_effect = {
+			set_global_flag = MSD_kemonomichi_war_escalated_flag
+			MSD = {
+				country_event = kem_war.108
+			}
+		}
+		ai_chance = {
+			base = -100
+			modifier = {
+				add = 200
+				any_other_country = {
+					has_war_with = MSD
+				}
+			}
+		}
+	}
+}
+
+# MRS继续进攻
+country_event = {
+	id = kem_war.108
+	title = kem_war.108.t
+	desc = kem_war.108.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = kem_war.108.1
+	}
+}
+
+# news 兽道战争的结束
+news_event = {
+	id = kem_war.109
+	title = kem_war.109.t
+	desc = {
+		text = kem_war.109.d_msd_total_victory
+		trigger = {
+			MSD = {
+				has_country_flag = MSD_victory_in_kemonomichi_war_flag
+			}
+			has_global_flag = MSD_kemonomichi_war_escalated_flag
+		}
+	}
+	desc = {
+		text = kem_war.109.d_msd_victory
+		trigger = {
+			MSD = {
+				has_country_flag = MSD_victory_in_kemonomichi_war_flag
+			}
+		}
+	}
+	desc = {
+		text = kem_war.109.d_mrs_total_victory
+		trigger = {
+			MRS = {
+				has_country_flag = MRS_victory_in_kemonomichi_war_flag
+			}
+			has_global_flag = MSD_kemonomichi_war_escalated_flag
+		}
+	}
+	desc = {
+		text = kem_war.109.d_mrs_victory
+		trigger = {
+			MRS = {
+				has_country_flag = MRS_victory_in_kemonomichi_war_flag
+			}
+		}
+	}
+	desc = {
+		text = kem_war.109.d_default
+	}
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 兽道部落
+	option = {
+		name = kem_war.109.1_victory
+		trigger = {
+			original_tag = MSD
+			has_country_flag = MSD_victory_in_kemonomichi_war_flag
+			NOT = {
+				has_global_flag = MSD_kemonomichi_war_escalated_flag
+			}
+		}
+	}
+	option = {
+		name = kem_war.109.1_phyrric_victory
+		trigger = {
+			original_tag = MSD
+			has_country_flag = MSD_victory_in_kemonomichi_war_flag
+			has_global_flag = MSD_kemonomichi_war_escalated_flag
+		}
+	}
+	option = {
+		name = kem_war.109.1_defeat
+		trigger = {
+			original_tag = MSD
+			NOT = {
+				has_country_flag = MSD_victory_in_kemonomichi_war_flag
+			}
+		}
+	}
+
+	# 魔女联盟
+	option = {
+		name = kem_war.109.2_victory
+		trigger = {
+			original_tag = MRS
+			has_country_flag = MRS_victory_in_kemonomichi_war_flag
+		}
+	}
+	option = {
+		name = kem_war.109.2_defeat
+		trigger = {
+			original_tag = MRS
+			NOT = {
+				has_country_flag = MRS_victory_in_kemonomichi_war_flag
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = kem_war.109.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MSD
+					original_tag = MRS
+				}
+			}
+		}
+	}
+}

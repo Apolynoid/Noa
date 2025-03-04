@@ -1,0 +1,9 @@
+spriteTypes = {
+	#------------------- AGENCY LOGOS -------------------------------
+		
+	spriteType = {
+		name = "GFX_gekokujyo_movement_faction"
+		textureFile = "gfx/interface/factions/gekokujyo_movement_faction.png"
+	}
+
+}

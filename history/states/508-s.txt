@@ -1,0 +1,33 @@
+state={
+	id=508
+	name="STATE_508"
+	provinces={
+		690 979 1347 1398 1454 2215 2692 2698 2710 6632 6633 6634 6635 6636 6637 6639 6640 6641 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas = 5.0
+		crystal = 30.0
+	}
+	history={
+		146.1.1 = {
+			owner = ACE
+			add_core_of = ACE
+			add_claim_by = PRS
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=33289
+	state_category=s2
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

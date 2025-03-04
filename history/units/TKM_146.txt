@@ -1,0 +1,148 @@
+﻿division_template = {
+	name = "工具纠察编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "道具防卫编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		sc_mortar_brigade = {x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "后备编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "道具防卫编制"
+		location = 2473
+		division_template = "道具防卫编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "道具防卫编制"
+		location = 2473
+		division_template = "道具防卫编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "道具防卫编制"
+		location = 615
+		division_template = "道具防卫编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "道具防卫编制"
+		location = 615
+		division_template = "道具防卫编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 2496
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 3207
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 3207
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 193
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 2831
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "工具纠察编制"
+		location = 2841
+		division_template = "工具纠察编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 2496
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 2496
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 2496
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 615
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 4292
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "后备编制"
+		location = 4307
+		division_template = "后备编制"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}
+
+focus = {
+	current = "TKM_146_ji_dao_ju_zheng_zhi_hui_yi"
+	progress = 0
+}

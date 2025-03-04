@@ -1,0 +1,73 @@
+﻿capital = 194
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spear2 = 1
+        gun2 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        wuxiandian147 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+146.1.1={
+    oob = "MEL_146"
+    give_guarantee = SGS
+    give_military_access = SGS
+    add_ideas = {
+        type3_manpowerlv2
+        Pri_youkai
+        Tribal
+        close1
+        hawk1
+        sc_rule
+        SGS_tuanjiexieding_idea
+        
+        MEL_messy_economy_idea
+        MEL_unorganized_militia_idea
+    }
+    
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 87
+        neworder = 8
+        oldorder = 0
+        fandong = 5
+    }
+}

@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+NOA_distribute_weapons:0 "分发武器"
+NOA_distribute_weapons_desc:0 "我方特工将会组织并协调一系列的武器投放。随后这批武器将会被交给当地组织中值得信任的成员。"
+NOA_distribute_weapons_desc_outcome:0 "小组将会将武器分发支援给各组织，并指导其中的成员如何使用。"

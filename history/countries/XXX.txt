@@ -1,0 +1,177 @@
+﻿capital = 129
+138.1.1={
+    oob = "TEST"
+    # set_research_slots = 0
+    add_ideas = cannot_build_idea
+    add_ideas = hawk0
+    add_ideas = open0
+    add_ideas = Fairy
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 100
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+    set_major = no
+
+    every_country = {
+        limit = {
+            random_leader = yes
+        }
+        retire_country_leader = yes 
+    }
+    startup_manu = yes
+    startup_weapon_pro = yes
+    every_country = {
+        ma_weapons = yes
+        sc_weapons = yes
+        ma_weapons_art = yes
+        sc_weapons_art = yes
+    }
+
+    # for display
+    every_country = { #####就是这个导致error
+        custom_situation_initialize = yes
+    }
+    # techtree only can be changed for one time 以及ai无科技国家
+    every_country = {
+        set_technology = {
+            tech_changed = 1 #0在onaction里
+        }
+    }
+    
+
+    #focus
+    every_country = {
+        limit = {
+            date > 145.12.31
+            not = { tag = XXX }
+        }
+        complete_national_focus = ty_early_main 
+    }
+
+    ST_race_setting = yes
+
+    #idea
+    every_country = {
+        limit = {
+            has_start_date > 145.12.31
+            or = {
+                tag = SCA
+                tag = GRS
+                tag = PRI
+                tag = WAK
+
+                tag = MEL
+
+                tag = TKM
+                tag = NMS
+                tag = MAM
+
+                tag = SBK
+                tag = KAG
+                tag = MSD
+                
+                tag = SEJ
+            }
+            
+        }
+        add_ideas = gensokyo_primary_idea
+    }
+
+    every_country = {
+        limit = {
+            capital_scope = {
+                not = { is_on_continent = Gensokyo }
+            }
+        }
+        add_ideas = not_gensoukyo_idea
+    }
+
+    every_state = {
+        limit = {
+            not = {
+                is_owned_by = XXX
+                is_owned_by = ZON
+            }
+        }
+        add_building_construction = {
+            type = air_base
+            level = 1
+            instant_build = yes
+        }
+    }
+
+    #others#
+    set_research_slots = 0
+
+    #jiaqiang
+    KAS = {
+        add_ideas = great_presige_idea
+    }
+    YKR = {
+        add_ideas = great_presige_idea
+    }
+    OKI = {
+        add_ideas = great_presige_idea
+    }
+    YUK = {
+        add_ideas = great_presige_idea
+    }
+    EET = {
+        add_ideas = great_presige_idea
+    }
+    MOK = {
+        add_ideas = great_presige_idea
+    }
+    YUG = {
+        add_ideas = great_presige_idea
+    }
+    HCT = {
+        add_ideas = great_presige_idea
+    }
+    SKI = {
+        add_ideas = great_presige_idea
+    }
+    KEK = {
+        add_ideas = great_presige_idea
+    }
+
+    ##### Pact of Geyser
+    SCA = {
+        add_ideas = SAT_Pact_of_Geyser_Gensokyo
+    }
+    SEJ = {
+        add_ideas = SAT_Pact_of_Geyser_Gensokyo
+    }
+    MRY = {
+        add_ideas = SAT_Pact_of_Geyser_Gensokyo
+    }
+    YMM = {
+        add_ideas = SAT_Pact_of_Geyser
+    }
+    PRS = {
+        add_ideas = SAT_Pact_of_Geyser
+    }
+    UNL = {
+        add_ideas = SAT_Pact_of_Geyser
+    }
+    YUG = {
+        add_ideas = SAT_Pact_of_Geyser
+    }
+}
+
+create_country_leader = {
+    name = "Unknown"
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}

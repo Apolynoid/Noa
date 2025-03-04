@@ -1,0 +1,55 @@
+on_actions = {
+	on_weekly_TEG = {
+		effect = {
+			if = {
+				limit = {
+					TEG_unification_problem_to_solve = yes
+				}
+				if = {
+					limit = {
+						TEG = {
+							has_war_with = OTG
+						}
+					}
+					TEG_war_progress_minus_3 = yes
+				}
+				else = {
+					TEG_war_progress_minus_1 = yes
+				}
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = OTG
+					}
+					FROM = {
+						original_tag = TEG
+					}
+				}
+				TEG = {
+					country_event = {
+						id = teg.200
+						days = 7
+					}
+				}
+				every_country = {
+					limit = {
+						has_war_with = TEG
+						NOT = {
+							original_tag = OTG
+						}
+					}
+					white_peace = TEG
+					country_event = {
+						id = tegcw.103
+					}
+				}
+			}
+		}
+	}
+}

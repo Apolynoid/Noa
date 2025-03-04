@@ -1,0 +1,89 @@
+NMS_focus = {
+	name = "NMS focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = NMS
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# politics first
+		NMS_ying_dui_zong_jiao_wei_ji
+		NMS_gai_liang_pai
+		NMS_zhong_zu_pai
+		NMS_zheng_qu_xin_zhong_zhi_chi
+		NMS_zhan_zheng_dong_yuan
+		NMS_she_hui_jiu_ji_fang_an
+		NMS_qiang_hua_xing_zheng_shi_wu_chu
+		NMS_qiang_hua_jun_shi_deng_ji_zhi
+		NMS_gong_gong_shi_ye_jian_she
+		NMS_shi_fang_yao_guai_tian_xing
+		NMS_chong_shi_ren_yao_ping_deng_li_xiang
+		NMS_xing_zheng_gai_ge
+		NMS_bian_yuan_hua_zhong_zu_pai
+		NMS_pai_xi_dou_zheng_de_zhong_jie
+		# some basic military-industry
+		NMS_zhun_bei_xia_yi_chang_zhan_zheng
+		NMS_li_yong_ren_lei_pei_kuan
+		NMS_ke_yan_tou_zi
+		NMS_ji_chu_she_shi_jian_she
+		NMS_xian_dai_hua_gong_ye
+		NMS_jiao_yu_gai_ge
+		NMS_ji_chu_ke_xue_yan_jiu
+		NMS_ming_lian_si_yan_jiu_yuan
+		NMS_jun_shi_gai_ge
+		NMS_sheng_bai_lian_de_ji_hua
+		NMS_cun_sha_shui_mi_de_ji_hua
+		NMS_zheng_bian_mo_tuo_ju_le_bu
+		NMS_xue_xi_sheng_nian_chuan_gou_zao
+		NMS_da_yao_guai_de_li_liang
+		NMS_huo_li_you_xian
+		NMS_jun_shi_zu_zhi_tiao_zheng
+		# back to politics
+		NMS_ming_lian_si_wai_jiao_zheng_ce
+		NMS_jia_ru_fei_hong_ti_xi
+		NMS_fei_hong_ti_xi_jun_shi_yuan_zhu
+		NMS_huan_xiang_xiang_he_xie_tiao_yue
+		NMS_yu_e_mo_de_tiao_yue
+		NMS_zhu_dong_fang_yu_zheng_ce
+		# continuing the military
+		NMS_jun_shi_gong_ye_jian_she
+		NMS_jun_shi_xue_yuan
+		NMS_tie_lu_jian_she
+		NMS_jian_she_ji_guang_bao_ta
+		NMS_xian_dai_hua_jun_dui
+		NMS_gai_liang_zhi_hui_ti_xi
+		NMS_hou_qin_gai_liang
+		NMS_ming_lian_cheng_jian_she
+		NMS_ming_lian_si_gong_ye_tou_zi
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

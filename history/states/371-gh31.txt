@@ -1,0 +1,33 @@
+state={
+	id=371
+	name="STATE_371"
+	provinces={
+		449 1560 2061 2887 4633 4635 4644 4648 4658 4683 
+	}
+	resources={
+		energy = 5
+		powder = 0.0
+		metal = 0.0
+		gas=5.000
+		crystal=25.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MEL
+			add_core_of = MEL
+			buildings = {
+				infrastructure =0
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=1903530.0
+	buildings_max_level_factor=1.000
+}

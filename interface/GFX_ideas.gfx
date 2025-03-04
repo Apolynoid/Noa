@@ -1,0 +1,508 @@
+spriteTypes = {	
+
+	### generic 通用
+	spriteType = {
+		name = "GFX_idea_backward_production"
+		texturefile = "gfx/interface/ideas/generic_backward_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_low_research_level"
+		texturefile = "gfx/interface/ideas/generic_low_research_level.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_improved_education"
+		texturefile = "gfx/interface/ideas/generic_improved_education.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_book"
+		texturefile = "gfx/interface/ideas/generic_book.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_generic_mass_production"
+		texturefile = "gfx/interface/ideas/generic_mass_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_production"
+		texturefile = "gfx/interface/ideas/generic_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_production_upgrade"
+		texturefile = "gfx/interface/ideas/generic_production_upgrade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_road"
+		texturefile = "gfx/interface/ideas/generic_road.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_skillful_workers"
+		texturefile = "gfx/interface/ideas/generic_skillful_workers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_bills"
+		texturefile = "gfx/interface/ideas/generic_bills.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_war_bond_payment"
+		texturefile = "gfx/interface/ideas/generic_war_bond_payment.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_reunited"
+		texturefile = "gfx/interface/ideas/generic_reunited.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_propaganda_campaign"
+		texturefile = "gfx/interface/ideas/generic_propaganda_campaign.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_revolution_propaganda"
+		texturefile = "gfx/interface/ideas/generic_revolution_propaganda.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_revanchism"
+		texturefile = "gfx/interface/ideas/generic_revanchism.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_militarism"
+		texturefile = "gfx/interface/ideas/generic_militarism.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_youkai_nature"
+		texturefile = "gfx/interface/ideas/generic_youkai_nature.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_cooperation"
+		texturefile = "gfx/interface/ideas/generic_cooperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_controlled"
+		texturefile = "gfx/interface/ideas/generic_controlled.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_controll_weakened"
+		texturefile = "gfx/interface/ideas/generic_controll_weakened.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_placation"
+		texturefile = "gfx/interface/ideas/generic_placation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_politics"
+		texturefile = "gfx/interface/ideas/generic_politics.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_political_problem"
+		texturefile = "gfx/interface/ideas/generic_political_problem.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_controlled_administration"
+		texturefile = "gfx/interface/ideas/generic_controlled_administration.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_parliament"
+		texturefile = "gfx/interface/ideas/generic_parliament.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_political_engagement"
+		texturefile = "gfx/interface/ideas/generic_political_engagement.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_elite_politics"
+		texturefile = "gfx/interface/ideas/generic_elite_politics.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_volunteer_army"
+		texturefile = "gfx/interface/ideas/generic_volunteer_army.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_army_doctrine"
+		texturefile = "gfx/interface/ideas/generic_army_doctrine.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_radicalism"
+		texturefile = "gfx/interface/ideas/generic_radicalism.png"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_generic_hegemonism"
+		texturefile = "gfx/interface/ideas/generic_hegemonism.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_generic_TEG_support"
+		texturefile = "gfx/interface/ideas/generic_TEG_support.dds"
+	}	
+
+	#### SCA Remilia Scarlet 斯卡蕾特帝国
+
+	spriteType = {
+		name = "GFX_idea_SCA_new_era_of_the_empire"
+		texturefile = "gfx/interface/ideas/sca_new_era_of_the_empire.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SCA_protected_by_scarlet"
+		texturefile = "gfx/interface/ideas/sca_protected_by_scarlet.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SCA_second_red_mist_incident"
+		texturefile = "gfx/interface/ideas/sca_second_red_mist_incident.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SCA_imperial_hegemony"
+		texturefile = "gfx/interface/ideas/sca_imperial_hegemony.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SCA_sphere_of_influence"
+		texturefile = "gfx/interface/ideas/sca_sphere_of_influence.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SCA_large_area_economy"
+		texturefile = "gfx/interface/ideas/sca_large_area_economy.png"
+	}	
+
+	#### TEG Shameimaru Aya 天狗共和国
+	spriteType = {
+		name = "GFX_idea_TEG_fragile_democracy"
+		texturefile = "gfx/interface/ideas/teg_fragile_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_interim_democracy"
+		texturefile = "gfx/interface/ideas/teg_interim_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_cross_river"
+		texturefile = "gfx/interface/ideas/teg_cross_river.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_arsenal_of_democracy"
+		texturefile = "gfx/interface/ideas/teg_arsenal_of_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_defend_the_republic"
+		texturefile = "gfx/interface/ideas/teg_defend_the_republic.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_democracy_alliance"
+		texturefile = "gfx/interface/ideas/teg_democracy_alliance.png"
+	}
+
+	#### SEJ Kijin Seija 叛乱同盟
+	spriteType = {
+		name = "GFX_idea_SEJ_home_of_the_gekokujyo_revolution"
+		texturefile = "gfx/interface/ideas/sej_home_of_the_gekokujyo_revolution.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_youkai_racists"
+		texturefile = "gfx/interface/ideas/sej_youkai_racists.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_whr_threat"
+		texturefile = "gfx/interface/ideas/sej_whr_threat.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_revolutionary_army"
+		texturefile = "gfx/interface/ideas/sej_revolutionary_army.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_racial_revolutionary_army"
+		texturefile = "gfx/interface/ideas/sej_racial_revolutionary_army.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_gekokujyo_social_education"
+		texturefile = "gfx/interface/ideas/sej_gekokujyo_social_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_gekokujyo_alliance"
+		texturefile = "gfx/interface/ideas/sej_gekokujyo_alliance.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SEJ_glory_of_youkais"
+		texturefile = "gfx/interface/ideas/sej_glory_of_youkais.png"
+	}
+
+	#### CIR Cirno 雾之湖妖精联合体
+	spriteType = {
+		name = "GFX_idea_CIR_union_political_status"
+		texturefile = "gfx/interface/ideas/cir_union_political_status.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CIR_anti_scarlet_pact"
+		texturefile = "gfx/interface/ideas/cir_anti_scarlet_pact.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CIR_war_plan_against_sca"
+		texturefile = "gfx/interface/ideas/cir_war_plan_against_sca.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CIR_fairy_union_military"
+		texturefile = "gfx/interface/ideas/cir_fairy_union_military.png"
+	}
+
+	#### NMS Hijiri Byakuren 命莲寺
+	spriteType = {
+		name = "GFX_idea_NMS_religious_crisis"
+		texturefile = "gfx/interface/ideas/nms_religious_crisis.png"
+	}
+
+	#### TKM Horikawa Raiko 九十九工业
+	spriteType = {
+		name = "GFX_idea_TKM_unstable_new_regime"
+		texturefile = "gfx/interface/ideas/tkm_unstable_new_regime.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_protector_of_human"
+		texturefile = "gfx/interface/ideas/tkm_protector_of_human.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_TKM_military_advisor"
+		texturefile = "gfx/interface/ideas/tkm_TKM_military_advisor.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_protection_of_tsukumo"
+		texturefile = "gfx/interface/ideas/tkm_protection_of_tsukumo.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_tsukumogami_spirutual_power_feature"
+		texturefile = "gfx/interface/ideas/tkm_tsukumogami_spirutual_power_feature.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_energy_autarky_plan"
+		texturefile = "gfx/interface/ideas/tkm_energy_autarky_plan.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_limited_energy_trade"
+		texturefile = "gfx/interface/ideas/tkm_limited_energy_trade.png"
+	}
+
+
+	#### HUM Kamishirasawa Keine 人间之里
+	spriteType = {
+		name = "GFX_idea_HUM_protection_of_TKM"
+		texturefile = "gfx/interface/ideas/hum_protection_of_TKM.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_plutocrat"
+		texturefile = "gfx/interface/ideas/hum_plutocrat.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_human_mediation_fee"
+		texturefile = "gfx/interface/ideas/hum_human_mediation_fee.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_mediation_fee_to_SCA"
+		texturefile = "gfx/interface/ideas/hum_mediation_fee_to_SCA.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_agreement_with_TKM"
+		texturefile = "gfx/interface/ideas/hum_agreement_with_TKM.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_fractured_plutocrat"
+		texturefile = "gfx/interface/ideas/hum_fractured_plutocrat.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUM_human_free_city"
+		texturefile = "gfx/interface/ideas/hum_human_free_city.png"
+	}
+
+	#### NTR 河童共和国
+	spriteType = {
+		name = "GFX_idea_NTR_unstable_republic"
+		texturefile = "gfx/interface/ideas/ntr_unstable_republic.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NTR_military_cooperation_with_TEG"
+		texturefile = "gfx/interface/ideas/ntr_military_cooperation_with_TEG.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NTR_economic_cooperation_with_TEG"
+		texturefile = "gfx/interface/ideas/ntr_economic_cooperation_with_TEG.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NTR_study_political_system_of_TEG"
+		texturefile = "gfx/interface/ideas/ntr_study_political_system_of_TEG.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NTR_enthusiasm_of_unification"
+		texturefile = "gfx/interface/ideas/ntr_enthusiasm_of_unification.png"
+	}
+
+	#### SCA Puppet 斯卡蕾特傀儡
+	spriteType = {
+		name = "GFX_idea_SCA_Puppet_scarlet_sphere"
+		texturefile = "gfx/interface/ideas/sca_puppet_scarlet_sphere.png"
+	}
+	
+	#### MRS Kirisame Marisa 魔法之森
+	spriteType = {
+		name = "GFX_idea_MRS_divided_MRS"
+		texturefile = "gfx/interface/ideas/mrs_divided_MRS.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MSD_war"
+		texturefile = "gfx/interface/ideas/mrs_MSD_war.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_magical_forest_map"
+		texturefile = "gfx/interface/ideas/mrs_magical_forest_map.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_compromise_with_alice"
+		texturefile = "gfx/interface/ideas/mrs_compromise_with_alice.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_compromise_with_narumi"
+		texturefile = "gfx/interface/ideas/mrs_compromise_with_narumi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRS_dawn_of_the_magical_forest"
+		texturefile = "gfx/interface/ideas/mrs_dawn_of_the_magical_forest.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_alice_plan"
+		texturefile = "gfx/interface/ideas/mrs_alice_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_marisa_plan"
+		texturefile = "gfx/interface/ideas/mrs_marisa_plan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_narumi_plan"
+		texturefile = "gfx/interface/ideas/mrs_narumi_plan.dds"
+	}
+
+	#### ALI Alice Margatroid 人偶师协会
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo"
+		texturefile = "gfx/interface/ideas/ali_ningyo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo_propaganda"
+		texturefile = "gfx/interface/ideas/ali_ningyo_propaganda.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_ningyo_workshop"
+		texturefile = "gfx/interface/ideas/ali_ningyo_workshop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_magical_forest_new_look"
+		texturefile = "gfx/interface/ideas/ali_magical_forest_new_look.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_construction"
+		texturefile = "gfx/interface/ideas/ali_makai_construction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_power"
+		texturefile = "gfx/interface/ideas/ali_makai_power.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_immigrant"
+		texturefile = "gfx/interface/ideas/ali_makai_immigrant.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ALI_makai_production"
+		texturefile = "gfx/interface/ideas/ali_makai_production.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ALI_the_only_hegemony_in_gensokyo"
+		texturefile = "gfx/interface/ideas/ali_the_only_hegemony_in_gensokyo.png"
+	}
+
+	#### YYK Saigyouji Yuyuko 白玉楼
+	spriteType = {
+		name = "GFX_idea_YYK_ghost_radical_faction"
+		texturefile = "gfx/interface/ideas/yyk_ghost_radical_faction.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KNA_revolution_fervour"
+		texturefile = "gfx/interface/ideas/kna_revolution_fervour.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YKO_sanction_of_shikieiki"
+		texturefile = "gfx/interface/ideas/yko_sanction_of_shikieiki.png"
+	}
+}

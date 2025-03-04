@@ -1,0 +1,58 @@
+
+
+########    ###    ##    ## ##    ##     ######   ########   #######  ##     ## ########   ######  
+   ##      ## ##   ###   ## ##   ##     ##    ##  ##     ## ##     ## ##     ## ##     ## ##    ## 
+   ##     ##   ##  ####  ## ##  ##      ##        ##     ## ##     ## ##     ## ##     ## ##       
+   ##    ##     ## ## ## ## #####       ##   #### ########  ##     ## ##     ## ########   ######  
+   ##    ######### ##  #### ##  ##      ##    ##  ##   ##   ##     ## ##     ## ##              ## 
+   ##    ##     ## ##   ### ##   ##     ##    ##  ##    ##  ##     ## ##     ## ##        ##    ## 
+   ##    ##     ## ##    ## ##    ##     ######   ##     ##  #######   #######  ##         ######  
+
+mio_cat_eq_all_infantry_weapons = {
+	equipment_type = {
+		gun_a
+		magic_core_a
+		melee_a
+		support_equipment
+	}
+}
+
+mio_cat_eq_all_artillery = {
+	equipment_type = {
+		mortar_a
+		anti_shield_a
+		magic_energy_a
+		magic_focus_a
+	}
+}
+
+mio_cat_eq_all_armor = {
+	equipment_type = {
+		smg_a
+		special_shield_a
+		mecha_a
+		special_core_a
+		core_shield_a
+		tactical_core_a
+	}
+}
+
+mio_cat_eq_all_aircraft = {
+	equipment_type = {
+		sc_scout_equipment
+		sc_fighter_equipment
+		sc_bomber_equipment
+		sc_st_bomber_equipment
+		ma_scout_equipment
+		ma_fighter_equipment
+		ma_bomber_equipment
+		ma_st_bomber_equipment
+	}
+}
+
+mio_cat_eq_all_st_bombers = {
+	equipment_type = {
+		sc_st_bomber_equipment
+		ma_st_bomber_equipment
+	}
+}

@@ -1,0 +1,103 @@
+﻿capital = 557
+146.1.1={
+    oob = "TEST"
+    add_ideas = {
+        Ghost
+        open2
+        dove1
+
+    }
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 75
+        guli = 10
+        neworder = 5
+        oldorder = 0
+        fandong = 10
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+        
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+
+        #专用工程学
+
+        #工业
+            
+        #专用工业
+
+        #种族 
+    }
+    
+}
+
+create_country_leader = {
+    # name = "Council"
+    name = "地灵殿幽灵管理委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = guli_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "地灵殿幽灵管理委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = fandong_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "地灵殿幽灵管理委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = neworder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "地灵殿幽灵管理委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = qinwai_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "地灵殿幽灵管理委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}

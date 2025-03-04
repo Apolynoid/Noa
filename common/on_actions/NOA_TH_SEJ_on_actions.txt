@@ -1,0 +1,127 @@
+on_actions = {
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SEJ
+					}
+					FROM = {
+						OR = {
+							original_tag = YKR
+							is_major = yes
+						}
+						# civil war won't do
+						NOT = {
+							original_tag = SEJ
+						}
+					}
+				}
+				SEJ = {
+					set_country_flag = SEJ_has_defeated_a_major_or_YKR_flag
+				}
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SEJ
+					}
+				}
+				SEJ = {
+					set_country_flag = SEJ_civil_war_ended_flag
+					# delete all militia templates
+					delete_unit_template_and_units = {
+						division_template = "妖怪复兴民兵"
+						disband = no
+					}
+					delete_unit_template_and_units = {
+						division_template = "下克上民兵卫队"
+						disband = no
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = neworder
+						}
+					}
+					# hegemonists win
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = SEJ_sej
+						}
+						set_nationality = {
+							target_country = XXX
+							character = SEJ_smm
+						}
+					}
+					# trigger news
+					news_event = {
+						id = sej.132
+					}
+					# news about radicalist leaders
+					ROOT = {
+						country_event = {
+							id = sej.133
+							days = 5
+						}
+					}
+					# radicalist leaders escape
+					CIR = {
+						country_event = {
+							id = sej.119
+							days = 7
+						}
+					}
+					EET = {
+						country_event = {
+							id = sej.103
+							days = 7
+						}
+					}
+				}
+				else = {
+					# radicalists win
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = RMI_rmi
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NIB_nib
+						}
+					}
+					# trigger news
+					news_event = {
+						id = sej.134
+					}
+					# fate of rebellion leaders
+					ROOT = {
+						country_event = {
+							id = sej.135
+							days = 5
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_weekly_SEJ = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+				}
+				SEJ_calc_buff = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+characters={
+	YYK_yyk ={
+		name = YYK_yyk
+		portraits={
+			civilian={
+				large="gfx/leaders/YYK/YYK_yyk.dds"
+				small="gfx/leaders/YYK/YYK_yyk_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YYK/YYK_yyk.dds"
+				small="gfx/leaders/YYK/YYK_yyk_small.dds"
+			}
+		}
+		field_marshal = {
+			traits = {  th_original_character th_character  th_trait_dayaoguai th_trait_moulvedashi th_trait_huoqiangzhuanjia }
+			attack_skill = 2
+			defense_skill = 0
+			planning_skill = 3
+			logistics_skill = 6
+			# id = 43
+			skill = 10
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = YYK_yyk
+			name = YYK_yyk
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				primary_weapons = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldorder_type
+			traits = {
+				YKO_wang_ling_gong_zhu
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			traits = {
+				YKO_wang_ling_gong_zhu
+			}
+			id=-1
+		}
+	}
+	YYK_youmu ={
+		name = YYK_youmu
+		portraits={
+			civilian={
+				large="gfx/leaders/YYK/YYK_youmu.dds"
+				small="gfx/leaders/YYK/YYK_youmu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YYK/YYK_youmu.dds"
+				small="gfx/leaders/YYK/YYK_youmu_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou  }
+			attack_skill = 10
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 7
+			# id = 42
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = YYK_youmu
+			name = YYK_youmu
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				melee = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+	}
+	YYK_yok ={
+		name = YYK_yok
+		portraits = { 
+			civilian={
+				large="gfx/leaders/YYK/YYK_yok.dds"
+				small="gfx/leaders/YYK/YYK_yok_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YYK/YYK_yok.dds"
+				small="gfx/leaders/YYK/YYK_yok_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou trait_cautious }
+			skill = 8
+			attack_skill = 11
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 10
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+	}
+	UND_kana ={
+		name = UND_kana
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_kana.dds"
+				small="gfx/leaders/UND/UND_kana_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_kana.dds"
+				small="gfx/leaders/UND/UND_kana_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_huoqiangzhuanjia }
+			visible = {
+				NOT = {
+					has_country_flag = YYK_no_kana_flag
+				}
+			}
+			skill = 7
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 7
+			logistics_skill = 7
+		}
+		advisor = {
+		 	slot = character_coop
+		 	idea_token = UND_kana
+		 	name = UND_kana
+		 	cost = 200
+			visible = {
+				NOT = {
+					has_country_flag = YYK_no_kana_flag
+				}
+			}
+		 	modifier = {
+				army_morale_factor = 0.2
+		 	}
+		 	ai_will_do = {
+		 		factor = 1
+		 	}
+		}
+		country_leader={
+			ideology=fandong_type
+			traits = {
+				KNA_li_xiang_zhu_yi_sao_ling_ge_ming_zhe
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+	}
+}

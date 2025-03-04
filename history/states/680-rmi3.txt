@@ -1,0 +1,32 @@
+state={
+	id=680
+	name="STATE_680"
+	provinces={
+		751 1353 2343 5761 5766 5768 5769 5772 5773 
+	}
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=6.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SEJ
+			add_core_of = SEJ
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=372
+	state_category=s2
+	buildings_max_level_factor=1.000
+	local_supplies=2.50
+}

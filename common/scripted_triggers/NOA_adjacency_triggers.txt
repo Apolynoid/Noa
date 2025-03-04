@@ -1,0 +1,45 @@
+can_pass_sukima = {
+	OR = {
+		has_tech = kongjianmonijishu
+		any_allied_country = {
+			has_tech = kongjianmonijishu
+		}
+		any_subject_country = {
+			has_tech = kongjianmonijishu
+		}
+		any_country = {
+			gives_military_access_to = ROOT
+			OR = {
+				any_allied_country = {
+					has_tech = kongjianmonijishu
+				}
+				any_subject_country = {
+					has_tech = kongjianmonijishu
+				}
+			}
+		}
+	}
+}
+
+can_pass_back_door = {
+	OR = {
+		has_tech = back_door_simulation_tech
+		any_allied_country = {
+			has_tech = back_door_simulation_tech
+		}
+		any_subject_country = {
+			has_tech = back_door_simulation_tech
+		}
+		any_country = {
+			gives_military_access_to = ROOT
+			OR = {
+				any_allied_country = {
+					has_tech = back_door_simulation_tech
+				}
+				any_subject_country = {
+					has_tech = back_door_simulation_tech
+				}
+			}
+		}
+	}
+}

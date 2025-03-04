@@ -1,0 +1,1874 @@
+shared_focus = {
+		id = ty_medium_main
+		icon = GFX_goal_unknown
+		x = 18
+		y = 17
+		offset = {
+			x = 0
+			y = 4
+			trigger = {
+				tag = LIL
+			}
+		}
+		offset = {
+			x = 0
+			y = 8
+			trigger = {
+				has_country_flag = medium_focus_8_lower_flag
+			}
+		}
+
+	cost = 0
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	   always = no
+	#   date > 145.12.31
+	}
+
+	bypass = {
+	   date > 152.12.31
+	   NOT = {tag = XXX}
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		
+	#	add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+shared_focus = {
+		id = ty_kejichuangxin
+		icon = GFX_focus_research2
+		cost = 14.00
+		prerequisite = {
+			focus = ty_medium_main
+		}
+		x = 0
+		y = 1
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+	    add_tech_bonus = {
+	        uses = 1
+	        bonus = 0.8
+	        category = math
+	    }
+	    add_tech_bonus = {
+	        uses = 1
+	        bonus = 0.8
+	        category = radio
+	    }
+		#GER = {
+		#	add_ai_strategy = {
+		#		type = alliance
+		#		id = "ROOT"
+		#		value = 100
+		#	}
+		#}
+	}
+}
+shared_focus = {
+		id = ty_tourukaifa
+		icon = GFX_goal_generic_construction2
+		cost = 14
+		prerequisite = {
+			focus = ty_kejichuangxin
+		}
+		x = 0
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = yanjiuziyuan
+	}
+}
+shared_focus = {
+		id = ty_tourububing
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 14
+		prerequisite = {
+			focus = ty_kejichuangxin
+		}
+		mutually_exclusive = {
+			focus = ty_touruhuopao
+		}
+		x = 1
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = yanjiububing
+	}
+}
+shared_focus = {
+		id = ty_touruhuopao
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 14
+		prerequisite = {
+			focus = ty_kejichuangxin
+		}
+		mutually_exclusive = {
+			focus = ty_tourububing
+		}
+		x = 3
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = yanjiuhuopao
+	}
+}
+shared_focus = {
+		id = ty_wuqigexin
+		icon = GFX_goal_generic_build_tank
+		cost = 14
+		prerequisite = {
+			focus = ty_tourububing
+			focus = ty_touruhuopao
+		}
+		x = 2
+		y = 3
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+	        uses = 3
+	        bonus = 1
+	        category = infantry
+	        category = artillery_tech
+	        ahead_reduction = 1.5
+	    }
+	}
+}
+shared_focus = {
+		id = ty_toutushengchan
+		icon = GFX_goal_continuous_repairments
+		cost = 14.00
+		prerequisite = {
+			focus = ty_kejichuangxin
+		}
+		mutually_exclusive = {
+			focus = ty_tourujianzao
+		}
+		x = -3
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = yanjiushengchan
+	}
+}
+shared_focus = {
+		id = ty_tourujianzao
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 14.00
+		prerequisite = {
+			focus = ty_kejichuangxin
+		}
+		mutually_exclusive = {
+			focus = ty_toutushengchan
+		}
+		x = -1
+		y = 2
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = yanjiujianzao
+	}
+}
+shared_focus = {
+		id = ty_gongyechuangxin
+		icon = GFX_goal_generic_construct_civilian
+		cost = 14
+		prerequisite = {
+			focus = ty_toutushengchan
+			focus = ty_tourujianzao
+		}
+		x = -2
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+	        uses = 3
+	        bonus = 1
+	        category = industrys
+	        category = build
+	        category = resource
+	        ahead_reduction = 1.5
+	    }
+	}
+}
+shared_focus = {
+		id = ty_kejichengguo2
+		icon = GFX_focus_research
+		cost = 14
+		prerequisite = {
+			focus = ty_gongyechuangxin
+		}
+		prerequisite = {
+			focus = ty_tourukaifa
+		}
+		prerequisite = {
+			focus = ty_wuqigexin
+		}
+		x = 0
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+		id = ty_kuozhanshengchan
+		icon = GFX_goal_generic_production2
+		cost = 12.00
+		prerequisite = {
+			focus = ty_medium_main
+		}
+		x = -7
+		y = 1
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+	        uses = 1
+	        bonus = 0.7
+	        category = industrys
+	        category = build
+	        category = resource
+	    }
+	}
+}
+shared_focus = {
+		id = ty_shoudukuojian
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12.00
+		prerequisite = {
+			focus = ty_kuozhanshengchan
+		}
+		mutually_exclusive = {
+			focus = ty_guangfankuojian
+		}
+		x = -10
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		capital_scope = {
+		   add_extra_state_shared_building_slots = 3
+		}
+	}
+}
+shared_focus = {
+		id = ty_guangfankuojian
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12.00
+		prerequisite = {
+			focus = ty_kuozhanshengchan
+		}
+		mutually_exclusive = {
+			focus = ty_shoudukuojian
+		}
+		x = -8
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		every_owned_state = {
+		   add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+shared_focus = {
+		id = ty_kuojianmingong
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12.00
+		prerequisite = {
+			focus = ty_shoudukuojian
+			focus = ty_guangfankuojian
+		}
+		x = -10
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+		}
+	}
+}
+shared_focus = {
+		id = ty_kuojianjungong
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12.00
+		prerequisite = {
+			focus = ty_guangfankuojian
+			focus = ty_shoudukuojian
+		}
+		x = -8
+		y = 3
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+		}
+	}
+}
+shared_focus = {
+		id = ty_mingonggailiang
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12.00
+		prerequisite = {
+			focus = ty_kuojianmingong
+		}
+		prerequisite = {
+			focus = ty_kuojianjungong
+		}
+		mutually_exclusive = {
+			focus = ty_jungonggailiang
+		}
+		x = -10
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = mingonggailiang
+	}
+}
+shared_focus = {
+		id = ty_jungonggailiang
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12.00
+		prerequisite = {
+			focus = ty_kuojianmingong
+		}
+		prerequisite = {
+			focus = ty_kuojianjungong
+		}
+		mutually_exclusive = {
+			focus = ty_mingonggailiang
+		}
+		x = -8
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = jungonggailiang
+	}
+}
+shared_focus = {
+		id = ty_ziyuangailiang
+		icon = GFX_goal_generic_construction2
+		cost = 12.00
+		prerequisite = {
+			focus = ty_mingonggailiang
+			focus = ty_jungonggailiang
+		}
+		mutually_exclusive = {
+			focus = ty_ziyuanyouhua
+		}
+		x = -9
+		y = 5
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+	    modify_building_resources = { building = metal_factory resource = metal amount = 10 }
+		modify_building_resources = { building = gas_factory resource = gas amount = 12 }
+		modify_building_resources = { building = powder_factory resource = powder amount = 8 }
+		modify_building_resources = { building = rock_factory resource = crystal amount = 6 }
+		add_tech_bonus = {
+		    uses = 2
+		    category = metal_res
+		    category = gas_res
+		    category = powder_res
+		    category = crystal_res
+		    category = oil_res
+		    bonus = 0.7
+		}
+	}
+}
+shared_focus = {
+		id = ty_shenchanmubiao_m
+		icon = GFX_goal_generic_production2
+		cost = 12.00
+		prerequisite = {
+			focus = ty_kuozhanshengchan
+		}
+		x = -5
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.8
+		    category = industrys
+		}
+	}
+}
+shared_focus = {
+		id = ty_shebeihunhe
+		icon = GFX_goal_generic_production
+		cost = 12.00
+		prerequisite = {
+			focus = ty_shenchanmubiao_m
+		}
+		mutually_exclusive = {
+			focus = ty_shebeifenli
+		}
+		x = -6
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = shebeihunhe
+	}
+}
+shared_focus = {
+		id = ty_shebeifenli
+		icon = GFX_goal_generic_production
+		cost = 12.00
+		prerequisite = {
+			focus = ty_shenchanmubiao_m
+		}
+		mutually_exclusive = {
+			focus = ty_shebeihunhe
+		}
+		x = -4
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = shebeifenli
+	}
+}
+shared_focus = {
+		id = ty_jiegouzaiyouhua
+		icon = GFX_goal_generic_production2
+		cost = 12.00
+		prerequisite = {
+			focus = ty_shebeihunhe
+			focus = ty_shebeifenli
+		}
+		x = -5
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.8
+		    category = jiegou
+		}
+	}
+}
+shared_focus = {
+		id = ty_ziyuanyouhua
+		icon = GFX_goal_generic_construction2
+		cost = 12.00
+		prerequisite = {
+			focus = ty_jiegouzaiyouhua
+		}
+		mutually_exclusive = {
+			focus = ty_ziyuangailiang
+		}
+		x = -5
+		y = 5
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = ziyuantance
+	}
+}
+shared_focus = {
+		id = ty_gongyelilun
+		icon = GFX_goal_generic_construct_civilian
+		cost = 12.00
+		prerequisite = {
+			focus = ty_ziyuangailiang
+			focus = ty_ziyuanyouhua
+		}
+		x = -7
+		y = 6
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = gongyelilun
+	}
+}
+shared_focus = {
+		id = ty_junshigeming
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 14.00
+		prerequisite = {
+			focus = ty_medium_main
+		}
+		x = 8
+		y = 1
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		army_experience = 30
+	}
+}
+shared_focus = {
+		id = ty_zhiyuanwuqi
+		icon = GFX_goal_generic_army_artillery
+		cost = 14.00
+		prerequisite = {
+			focus = ty_junshigeming
+		}
+		x = 3
+		y = 1
+		relative_position_id = ty_junshigeming
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.8
+		    category = support_tech
+		}
+	}
+}
+shared_focus = {
+		id = ty_bubingwuqi2
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 14.00
+		prerequisite = {
+			focus = ty_junshigeming
+		}
+		x = 5
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.8
+		    category = primary_weapons
+		}
+	}
+}
+shared_focus = {
+		id = ty_huopaowuqi
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 14.00
+		prerequisite = {
+			focus = ty_junshigeming
+		}
+		x = 7
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.8
+		    category = artillery_tech
+		}
+	}
+}
+shared_focus = {
+		id = ty_wuqigailiang
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 14.00
+		prerequisite = {
+			focus = ty_bubingwuqi2
+		}
+		prerequisite = {
+			focus = ty_huopaowuqi
+		}
+		x = 6
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = wuqigailiang
+	}
+}
+shared_focus = {
+		id = ty_huopaogaizhuang
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 14.00
+		prerequisite = {
+			focus = ty_wuqigailiang
+		}
+		x = 5
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 2
+		    bonus = 0.8
+		    category = mortar
+		}
+	}
+}
+shared_focus = {
+		id = ty_jiaqiangxunlian
+		icon = GFX_focus_secret_rearmament
+		cost = 14.00
+		prerequisite = {
+			focus = ty_wuqigailiang
+		}
+		x = 7
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = jiaqiangxunlian
+	}
+}
+shared_focus = {
+		id = ty_luzhanlilun2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 14.00
+		prerequisite = {
+			focus = ty_junshigeming
+		}
+		x = 9
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.4
+			uses = 1
+			category = land_doctrine
+        }
+	}
+}
+shared_focus = {
+		id = ty_xinshiwuqi
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 14.00
+		prerequisite = {
+			focus = ty_luzhanlilun2
+		}
+		prerequisite = {
+			focus = ty_zhiyuanwuqi
+		}
+		x = 10
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.6
+		    category = shield_weapons
+		}
+	}
+}
+shared_focus = {
+		id = ty_kongjunzhuangbei
+		icon = GFX_goal_generic_air_fighter
+		cost = 14.00
+		prerequisite = {
+			focus = ty_xinshiwuqi
+		}
+		x = 9
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 1
+		    bonus = 0.6
+		    category = air_equipment
+		}
+	}
+}
+shared_focus = {
+		id = ty_jiadazhengbing
+		icon = GFX_focus_generic_little_entente
+		cost = 14.00
+		prerequisite = {
+			focus = ty_huopaogaizhuang
+		}
+		prerequisite = {
+			focus = ty_jiaqiangxunlian
+		}
+		prerequisite = {
+			focus = ty_kongjunzhuangbei
+		}
+		prerequisite = {
+			focus = ty_xunliandayaoguai
+		}
+		x = 8
+		y = 5
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = jiadazhengbing
+	}
+}
+shared_focus = {
+		id = ty_xunliandayaoguai
+		icon = GFX_focus_generic_tank_production
+		cost = 14.00
+		prerequisite = {
+			focus = ty_xinshiwuqi
+		}
+		x = 11
+		y = 4
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+		    uses = 2
+		    bonus = 0.7
+		    category = heavy
+		}
+	}
+}
+shared_focus = {
+		id = ty_gsk_crisis
+		icon = GFX_goal_generic_propaganda
+		cost = 14.00
+		prerequisite = {
+			focus = ty_medium_main
+		}
+		x = 16
+		y = 1
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+shared_focus = {
+		id = ty_kuansongzhanling
+		icon = GFX_goal_generic_improve_relations
+		cost = 14.00
+		prerequisite = {
+			focus = ty_gsk_crisis
+		}
+		mutually_exclusive = {
+			focus = ty_zhaquzhanling
+		}
+		x = 13
+		y = 2
+		relative_position_id = ty_medium_main
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = kuansongzhanling
+	}
+}
+shared_focus = {
+		id = ty_zhaquzhanling
+		icon = GFX_goal_generic_political_pressure
+		cost = 14.00
+		prerequisite = {
+			focus = ty_gsk_crisis
+		}
+		mutually_exclusive = {
+			focus = ty_kuansongzhanling
+		}
+		x = 15
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = zhaquzhanling
+	}
+}
+shared_focus = {
+		id = ty_waidixuanchuan
+		icon = GFX_goal_generic_propaganda
+		cost = 14.00
+		prerequisite = {
+			focus = ty_gsk_crisis
+		}
+		x = 17
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_war_support = 0.15
+	}
+}
+shared_focus = {
+		id = ty_tonghuaxinquyu
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 14.00
+		prerequisite = {
+			focus = ty_kuansongzhanling
+		}
+		mutually_exclusive = {
+			focus = ty_lveduozhanlingqu
+			focus = ty_jiangminzhong
+		}
+		x = 13
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = ty_tonghuaxinquyu_idea
+	}
+}
+shared_focus = {
+		id = ty_lveduozhanlingqu
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 14.00
+		prerequisite = {
+			focus = ty_zhaquzhanling
+		}
+		mutually_exclusive = {
+			focus = ty_tonghuaxinquyu
+			focus = ty_jiangminzhong
+		}
+		x = 15
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = ty_lveduozhanlingqu_idea
+	}
+}
+shared_focus = {
+		id = ty_neibugonggu
+		icon = GFX_goal_generic_national_unity
+		cost = 14.00
+		prerequisite = {
+			focus = ty_gsk_crisis
+		}
+		x = 19
+		y = 2
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_stability = 0.15
+	}
+}
+shared_focus = {
+		id = ty_jiangminzhong
+		icon = GFX_focus_generic_military_academy
+		cost = 14.00
+		prerequisite = {
+			focus = ty_waidixuanchuan
+		}
+		prerequisite = {
+			focus = ty_neibugonggu
+		}
+		mutually_exclusive = {
+			focus = ty_lveduozhanlingqu
+			focus = ty_tonghuaxinquyu
+		}
+		x = 18
+		y = 3
+		relative_position_id = ty_medium_main
+
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	    
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = ty_jiangminzhong_idea
+	}
+}

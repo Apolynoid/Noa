@@ -1,0 +1,81 @@
+mio_policy_general_ruthless_contracts = {
+	icon = GFX_mio_policy_ruthless_contracts
+	allowed = { always = yes  }
+	available = { has_mio_size > 5}
+	organization_modifier = {
+		military_industrial_organization_funds_gain = 0.1
+	}
+}
+
+mio_policy_general_assembly_line_optimisers = {
+	icon = GFX_mio_policy_assembly_line_optimisers
+	allowed = { 
+		OR = {
+			has_mio_equipment_type = ma_bomber_equipment
+			has_mio_equipment_type = ma_fighter_equipment
+			has_mio_equipment_type = ma_scout_equipment
+			has_mio_equipment_type = ma_st_bomber_equipment
+			has_mio_equipment_type = sc_fighter_equipment
+			has_mio_equipment_type = sc_bomber_equipment
+			has_mio_equipment_type = sc_scout_equipment
+			has_mio_equipment_type = sc_st_bomber_equipment
+			has_mio_equipment_type = melee_a
+			has_mio_equipment_type = shield_a
+			has_mio_equipment_type = support_equipment
+			has_mio_equipment_type = yunshudui_a
+			has_mio_equipment_type = truck_a
+			has_mio_equipment_type = magic_core_a
+			has_mio_equipment_type = magic_focus_a
+			has_mio_equipment_type = magic_energy_a
+			has_mio_equipment_type = core_shield_a
+			has_mio_equipment_type = special_core_a
+			has_mio_equipment_type = tactical_core_a
+			has_mio_equipment_type = gun_a
+			has_mio_equipment_type = anti_shield_a
+			has_mio_equipment_type = mortar_a
+			has_mio_equipment_type = special_shield_a
+			has_mio_equipment_type = smg_a
+			has_mio_equipment_type = mecha_a
+		} 
+	}
+	available = { has_mio_size > 5}
+	production_bonus = {
+		same_as_mio = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+}
+
+mio_policy_general_vertical_integration = {
+	icon = GFX_mio_policy_vertical_integration
+	allowed = { always = yes }
+	available = { has_mio_size > 5}
+	production_bonus = {
+		same_as_mio = {
+			production_resource_need_factor = -0.1
+			production_resource_penalty_factor = 0.1
+		}
+	}
+}
+
+mio_policy_general_mechanical_genius  = {
+	icon = GFX_mio_policy_mechanical_genius
+	allowed = { always = yes }
+	available = { has_mio_size > 5}
+	equipment_bonus = {
+		same_as_mio = {
+			reliability = 0.1
+		}
+	}
+}
+
+mio_policy_general_experimental_development_teams = {
+	icon = GFX_mio_policy_experimental_development_teams
+	allowed = { always = yes }
+	available = { has_mio_size > 5}
+	organization_modifier = {
+		military_industrial_organization_research_bonus = 0.2
+	}
+}
+

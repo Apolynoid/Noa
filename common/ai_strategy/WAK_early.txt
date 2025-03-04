@@ -1,0 +1,40 @@
+default_WAK_more = {
+	enable = {
+		has_global_flag = main_scenario
+		tag = WAK
+		OR = {
+			is_subject = no
+			compare_autonomy_state > autonomy_puppet_guli_neworder
+		}
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 90
+	}
+}
+
+Attack_NMS = {
+	enable = {
+		has_country_flag = guafenmingliansi
+		is_subject = no
+	}
+	abort = {
+		NMS = {
+			is_subject_of = ROOT
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "NMS"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NMS"			
+		value = 100
+	}	
+}

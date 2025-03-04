@@ -1,0 +1,21 @@
+
+state={
+	id=281
+	name="STATE_281"
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =2
+			}
+       	}
+	}
+	provinces={
+		317 635 1021 1143 1164 1177 1545 1632 1667 3049 
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=69517.0
+	buildings_max_level_factor=1.000
+}

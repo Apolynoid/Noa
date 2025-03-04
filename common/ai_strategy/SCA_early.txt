@@ -1,0 +1,537 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+
+default_SCA_more = {
+	 enable = {
+		 has_global_flag = main_scenario
+		 tag = SCA
+		 is_subject = no
+	 }
+	 abort = {
+	 	always = no
+	 }
+	 ai_strategy = {
+		 type = force_build_armies
+		 # id = magic_infantry
+		 value = 500
+	 }
+
+	#  ai_strategy = {
+	# 	type = added_military_to_civilian_factory_ratio			
+	# 	value = 500
+	# }
+}
+
+default_SCA_more1 = {
+	 enable = {
+		 has_global_flag = main_scenario
+		 
+		 not = {
+		 	tag = SCA
+		 }
+	 }
+	 abort = {
+	 	always = no
+	 }
+	 ai_strategy = {
+		 type = consider_weak
+		 id = "SCA"
+		 value = 300
+	 }
+
+	#  ai_strategy = {
+	# 	type = added_military_to_civilian_factory_ratio			
+	# 	value = 500
+	# }
+}
+
+SCA_generic_zhichi = {
+
+	enable = {
+		has_opinion_modifier = zhichiweiquan
+		SCA = { 
+			is_subject = no 
+			num_subjects < 5
+			check_variable = {
+				all_value_plus_manpower < 2400
+			}
+		}
+		
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support
+		id = "SCA"			
+		value = 50
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SCA"			
+		value = 250
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SCA"			
+		value = 25
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SCA"			
+		value = 10
+	}
+}
+
+SCA_generic_zhichi2 = {
+	
+	reversed = yes
+
+	enable = {
+		or = {
+			has_opinion_modifier = zhichiweiquan
+			has_opinion_modifier = NMS_hongmoguanyouhao_op
+		}
+		SCA = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support
+		id = "SCA"			
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SCA"			
+		value = 25
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SCA"			
+		value = 10
+	}
+}
+
+SCA_generic_zhichi3 = {
+
+	enable = {
+		has_opinion_modifier = zhichiweiquan
+		PRI = { is_subject_of = SCA}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PRI"			
+		value = 30
+	}
+}
+
+SCA_generic_zhichi4 = {
+
+	enable = {
+		has_opinion_modifier = zhichiweiquan
+		WAK = { is_subject_of = SCA}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "WAK"			
+		value = 30
+	}
+}
+
+SCA_generic_zhichi5 = {
+
+	enable = {
+		has_opinion_modifier = zhichiweiquan
+		GRS = { is_subject_of = SCA}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GRS"			
+		value = 30
+	}
+}
+
+SCA_generic_fandui = {
+
+	enable = {
+		has_opinion_modifier = fanduiweiquan
+		SCA = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SCA"			
+		value = 30
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 200
+	}
+}
+
+SCA_concentrate_fire_on_CIR = {
+	allowed = {
+		original_tag = SCA
+	}
+
+	enable = {
+    	has_war_with = CIR
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = WAK
+     		WAK = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = PRI
+     		PRI = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NMS
+    	 	NMS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = TKM
+     		TKM = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     		MRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = HUM
+     		HUM = { is_subject_of = SCA }
+		 	}
+		}
+	}
+	abort = {
+		OR = {
+	    	CIR = { has_capitulated = yes }
+			NOT = { country_exists = CIR }
+	    	CIR = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "WAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "PRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NMS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HUM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUK"
+		value = 100
+	}
+}
+
+SCA_concentrate_fire_on_TEG = {
+	allowed = {
+		original_tag = SCA
+	}
+	
+	enable = {
+    	has_war_with = TEG
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = WAK
+     		WAK = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = PRI
+     		PRI = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NMS
+    	 	NMS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = TKM
+     		TKM = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     		MRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = HUM
+     		HUM = { is_subject_of = SCA }
+		 	}
+		}
+	}
+	abort = {
+		OR = {
+	    	TEG = { has_capitulated = yes }
+			NOT = { country_exists = TEG }
+	    	TEG = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "WAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "PRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NMS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HUM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUK"
+		value = 100
+	}
+}
+
+PRI_concentrate_fire_on_NMS = {
+	enable = {
+		tag = PRI
+    	has_war_with = CIR
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = GRS
+     		GRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = SCA
+     		PRI = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = WAK
+     		WAK = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NMS
+    	 	NMS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = TKM
+     		TKM = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     		MRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = HUM
+     		HUM = { is_subject_of = SCA }
+		 	}
+		}
+	}
+	abort = {
+		OR = {
+	    	CIR = { has_capitulated = yes }
+			NOT = { country_exists = CIR }
+	    	CIR = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "GRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SCA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "WAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NMS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ALI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HUM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUK"
+		value = 100
+	}
+}
+
+WAK_concentrate_fire_on_TKM = {
+	enable = {
+		tag = WAK
+   		has_war_with = CIR
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = GRS
+     		GRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = PRI
+     		PRI = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = SCA
+     		WAK = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NMS
+    	 	NMS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = TKM
+     		TKM = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     		MRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = HUM
+     		HUM = { is_subject_of = SCA }
+		 	}
+		}
+	}
+	abort = {
+		OR = {
+	    	CIR = { has_capitulated = yes }
+			NOT = { country_exists = CIR }
+	    	CIR = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "GRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SCA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "PRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NMS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ALI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HUM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUK"
+		value = 100
+	}
+}
+
+#### NOA part

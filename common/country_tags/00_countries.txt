@@ -1,0 +1,105 @@
+
+#-----------妖怪山--------------
+MRY = "countries/mry.txt"        #####守矢神社
+KAP = "countries/kap.txt"     #####河童长老会
+TEG = "countries/teg.txt"        #####狗花
+AKI = "countries/aki.txt"			#####秋姐妹
+NMN = "countries/nmn.txt"		#####欢姐 //待定
+KAS = "countries/kas.txt"         #####华扇
+ZYD = "countries/zyd.txt"     ####中有之道
+UNA = "countries/una.txt"			#####风洞
+HU7 = "countries/hu7.txt"	####村落#new
+NTR = "countries/ntr.txt"  ####河童
+YAW = "countries/yaw.txt"  ####山童
+KRD = "countries/krd.txt"  ####虹龙洞
+TBA = "countries/tba.txt"  ####赌场
+CHE = "countries/che.txt"       #####迷途之家   
+#-----------妖怪平原------------
+SCA = "countries/sca.txt" #####斯卡雷特帝国
+CIR = "countries/cir.txt"			#####9
+PRI = "countries/pri.txt"         #####骚灵
+GRS = "countries/grs.txt"     #####玄武湖
+#-----------东部区域------------
+HKR = "countries/hkr.txt"		#####红白
+MSD = "countries/msd.txt"       #####兽道   
+YKR = "countries/ykr.txt"        #####八云
+MRS = "countries/mrs.txt"        #####魔法使协会
+SEJ = "countries/sej.txt"			#####鬼人
+ALI = "countries/ali.txt"			###爱丽丝
+WHR = "countries/whr.txt"			###蕾蒂		
+NAR = "countries/nar.txt"	###成美
+#-----------东南------------
+HUM = "countries/hum.txt"  #####人类村落
+SBK = "countries/sbk.txt"  #####赤蛮奇
+TKM = "countries/tkm.txt"        #####付丧神
+KAG = "countries/kag.txt"       #####狼
+INB = "countries/inb.txt"       #####tu
+UDO = "countries/udo.txt"       #####tu
+EMB = "countries/emb.txt"
+MOK = "countries/mok.txt"	###妹红#new
+HU8 = "countries/hu8.txt"	#new
+RGO = "countries/rgo.txt"	#月兔部落	#new
+BYA = "countries/bya.txt"	#new	竹林妖怪联盟
+EET = "countries/eet.txt"       #####永远亭
+#-----------雾之湖南------------
+MAM = "countries/mam.txt"       #####多啦A梦
+WAK = "countries/wak.txt"      #####美人鱼
+YUK = "countries/yuk.txt"         #####幽香
+SGS = "countries/sgs.txt"         #####USA
+NMS = "countries/nms.txt"		#####南无三
+SRB = "countries/srb.txt"	#####神灵庙
+#----------西南----------
+MEL = "countries/mel.txt"     #毒人偶
+LIL = "countries/lil.txt"         #春
+HU1 = "countries/hu1.txt"          #村落
+HU2 = "countries/hu2.txt"          #村落
+HU3 = "countries/hu3.txt"          #村落
+HU4 = "countries/hu4.txt"          #村落
+OKI = "countries/oki.txt"           #Okina
+#----------旧地狱地域----------
+YMM = "countries/ymm.txt"		#山女#new
+YUG = "countries/yug.txt"     #####旧都联合政府
+UTH = "countries/uth.txt"        #####6
+PRS = "countries/prs.txt" #####桥姬
+UUG = "countries/uug.txt"     #####怨灵1
+ACE = "countries/ace.txt"     #####怨灵2
+SAT = "countries/sat.txt"     #####地灵殿
+GOL = "countries/gol.txt"     #####地狱炼制厂
+UFA = "countries/ufa.txt"	#妖精部落#new
+UNL = "countries/unl.txt"     #####无法地带
+CJK = "countries/cjk.txt"     #####血池地狱
+OIL = "countries/oil.txt"     #####石油之海
+#---------天界-------------
+CCA = "countries/cca.txt"    #####天宫
+TES = "countries/tes.txt"    #####天子
+CFA = "countries/cfa.txt" #####天界妖精
+IKU = "countries/iku.txt"		#####19
+OTG = "countries/otg.txt"       #####大天魔
+#--------冥界---------
+YYK = "countries/yyk.txt"#UUZ
+#-------彼岸------- 
+SKI = "countries/ski.txt" #四季
+KMC = "countries/kmc.txt" #等待区
+HUB = "countries/hub.txt"#中转枢纽
+HB1 = "countries/hb1.txt"#北枢纽
+URM = "countries/urm.txt"#三途he共和国
+YCE = "countries/yce.txt"#吉弔
+KEK = "countries/kek.txt"#袿姬
+SAK = "countries/sak.txt"#早鬼
+GYK = "countries/gyk.txt"#刚欲同盟
+CLO = "countries/clo.txt"#皮丝
+HCT = "countries/hct.txt"#赫卡
+AOO = "countries/aoo.txt"#青鬼
+AKO = "countries/ako.txt"#赤鬼
+HGH = "countries/hgh.txt"#地狱幽灵
+#####其他
+YYH = "countries/yyh.txt"#幽幽子在地獄的殖民地
+YYG = "countries/yyg.txt"#幽幽子在幻想乡——旧地狱的殖民地
+UDG = "countries/udg.txt"#地灵殿释放的幽灵聚居区
+#ob
+XXX = "countries/xxx.txt"#ob
+ZON = "countries/zon.txt"#zone
+#######花妈内战国
+YS1 = "countries/ys1.txt"#妖精革命军
+
+

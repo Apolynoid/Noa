@@ -1,0 +1,118 @@
+YYK_still_equipment_left_to_seize = {
+	custom_trigger_tooltip = {
+		tooltip = YYK_still_equipment_left_to_seize_tt
+		set_temp_variable = {
+			YYK_total_seized_equipment = KNA_equipment
+		}
+		add_to_temp_variable = {
+			YYK_total_seized_equipment = YKO_secured_equipment
+		}
+		check_variable = {
+			YYK_total_seized_equipment < 100
+		}
+	}
+}
+
+YYK_is_neighboring_core_state = {
+	custom_trigger_tooltip = {
+		tooltip = YYK_is_neighboring_core_state_tt
+		OR = {
+			AND = {
+				ROOT = {
+					has_country_flag = YYK_KNA_selected_flag
+				}
+				any_neighbor_state = {
+					check_variable = {
+						yko_control_level = 1
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					has_country_flag = YYK_YKO_selected_flag
+				}
+				any_neighbor_state = {
+					check_variable = {
+						yko_control_level = 4
+					}
+				}
+			}
+		}
+	}
+}
+
+YYK_is_neighboring_enemy_core_state = {
+	custom_trigger_tooltip = {
+		tooltip = YYK_is_neighboring_core_state_tt
+		OR = {
+			AND = {
+				ROOT = {
+					has_country_flag = YYK_KNA_selected_flag
+				}
+				any_neighbor_state = {
+					check_variable = {
+						yko_control_level = 4
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					has_country_flag = YYK_YKO_selected_flag
+				}
+				any_neighbor_state = {
+					check_variable = {
+						yko_control_level = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+YYK_state_totally_controlled = {
+	custom_trigger_tooltip = {
+		tooltip = YYK_state_totally_controlled_tt
+		OR = {
+			check_variable = {
+				yko_control_level = 1
+			}
+			check_variable = {
+				yko_control_level = 4
+			}
+		}
+	}
+}
+
+YYK_can_seize_weapon = {
+	has_country_flag = KNA_seize_weapon_flag
+	YYK_still_equipment_left_to_seize = yes
+}
+
+YYK_can_seek_army_support = {
+	has_country_flag = KNA_seek_army_support_flag
+}
+
+YYK_can_KNA_seek_army_support = {
+	YYK_can_seek_army_support = yes
+	NOT = {
+		has_country_flag = YKO_army_purge_flag
+	}
+}
+
+YYK_should_support_KNA = {
+	OR = {
+		original_tag = SEJ
+		original_tag = CIR
+		original_tag = TKM
+		original_tag = TEG
+	}
+}
+
+YYK_should_support_YKO = {
+	OR = {
+		original_tag = SCA
+		original_tag = NMS
+		original_tag = MRY
+		original_tag = YKR
+	}
+}

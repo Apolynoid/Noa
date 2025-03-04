@@ -1,0 +1,25 @@
+
+state={
+	id=161
+	name="STATE_161"
+
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 3
+			}
+
+		}
+
+	}
+
+	provinces={
+		418 465 500 740 749 868 899 1017 1370 1422 1740 1761 1802 1819 2144 2149 2329 2787 2799 2830 7110 
+	}
+	manpower=96952
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5.000
+}

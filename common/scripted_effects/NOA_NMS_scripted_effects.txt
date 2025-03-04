@@ -1,0 +1,501 @@
+NMS_faction_system_setup = {
+    custom_effect_tooltip = NMS_faction_system_setup_tt
+    hidden_effect = {
+        # dissatifaction level
+        set_variable = {
+            NMS_reformists_dissatisfaction_level = 1
+        }
+        set_variable = {
+            NMS_racists_dissatisfaction_level = 1
+        }
+        # debuff
+        set_variable = {
+            NMS_faction_res = -0.07
+        }
+        set_variable = {
+            NMS_faction_st = -0.07
+        }
+        set_variable = {
+            NMS_faction_bs = -0.07
+        }
+        set_variable = {
+            NMS_faction_ic = -0.1
+        }
+        set_variable = {
+            NMS_faction_ws = -0.07
+        }
+        set_variable = {
+            NMS_faction_eg = -0.1
+        }
+        set_variable = {
+            NMS_faction_atk = -0.07
+        }
+        set_variable = {
+            NMS_faction_def = -0.07
+        }
+        add_dynamic_modifier = {
+            modifier = NMS_pai_xi_dou_zheng_idea
+        }
+    }
+}
+
+NMS_faction_system_end = {
+    custom_effect_tooltip = NMS_faction_system_end_tt
+    hidden_effect = {
+        remove_dynamic_modifier = {
+            modifier = NMS_pai_xi_dou_zheng_idea
+        }
+    }
+}
+
+NMS_decrease_reformists_dissatisfaction = {
+    custom_effect_tooltip = NMS_reformists_satisfied_tt
+    if = {
+        limit = {
+            check_variable = {
+                NMS_reformists_dissatisfaction_level < 1
+            }
+        }
+        # can no more decrease
+        custom_effect_tooltip = NMS_cannot_be_more_satisfied_tt
+        add_political_power = 100
+    }
+    else_if = {
+        limit = { 
+            check_variable = {
+                NMS_reformists_dissatisfaction_level = 9
+            }
+        }
+        # do absolutly nothing
+        custom_effect_tooltip = NMS_already_lost_power_tt
+    }
+    else = {
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = NMS_pai_xi_dou_zheng_tt_idea
+                add_idea = NMS_pai_xi_dou_zheng_tt_a_idea
+            }
+        }
+        hidden_effect = {
+            subtract_from_variable = {
+                NMS_reformists_dissatisfaction_level = 1
+            }
+            add_to_variable = {
+                NMS_faction_res = 0.07
+            }
+            add_to_variable = {
+                NMS_faction_st = 0.07
+            }
+            add_to_variable = {
+                NMS_faction_bs = 0.07
+            }
+            add_to_variable = {
+                NMS_faction_ic = 0.1
+            }
+        }
+    }
+}
+
+NMS_increase_reformists_dissatisfaction = {
+    custom_effect_tooltip = NMS_reformists_dissatisfied_tt
+    if = {
+        limit = {
+            check_variable = {
+                NMS_reformists_dissatisfaction_level = 9
+            }
+        }
+        # do absolutly nothing
+        custom_effect_tooltip = NMS_already_lost_power_tt
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                NMS_reformists_dissatisfaction_level > 2
+            }
+        }
+        # can no more increase
+        if = {
+            limit = {
+                has_country_flag = NMS_racists_lost_power_flag
+            }
+            # already lost power, pp penalty instead
+            custom_effect_tooltip = NMS_enemy_already_lost_power_tt
+            add_political_power = -100
+        }
+        else_if = {
+            limit = {
+                has_completed_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+            }
+            # already lost power, pp penalty instead
+            custom_effect_tooltip = NMS_already_satisfied_tt
+            add_political_power = -100
+        }
+        else = {
+            # civil war
+            NMS_reformists_civil_war = yes
+        }
+    }
+    else = {
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = NMS_pai_xi_dou_zheng_tt_idea
+                add_idea = NMS_pai_xi_dou_zheng_tt_b_idea
+            }
+        }
+        hidden_effect = {
+            add_to_variable = {
+                NMS_reformists_dissatisfaction_level = 1
+            }
+            subtract_from_variable = {
+                NMS_faction_res = 0.07
+            }
+            subtract_from_variable = {
+                NMS_faction_st = 0.07
+            }
+            subtract_from_variable = {
+                NMS_faction_bs = 0.07
+            }
+            subtract_from_variable = {
+                NMS_faction_ic = 0.1
+            }
+        }
+    }
+}
+
+NMS_decrease_racists_dissatisfaction = {
+    custom_effect_tooltip = NMS_racists_satisfied_tt
+    if = {
+        limit = {
+            check_variable = {
+                NMS_racists_dissatisfaction_level < 1
+            }
+        }
+        # can no more decrease
+        custom_effect_tooltip = NMS_cannot_be_more_satisfied_tt
+        add_political_power = 100
+    }
+    else_if = {
+        limit = { 
+            check_variable = {
+                NMS_racists_dissatisfaction_level = 9
+            }
+        }
+        # do absolutly nothing
+        custom_effect_tooltip = NMS_already_lost_power_tt
+    }
+    else = {
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = NMS_pai_xi_dou_zheng_tt_idea
+                add_idea = NMS_pai_xi_dou_zheng_tt_c_idea
+            }
+        }
+        hidden_effect = {
+            subtract_from_variable = {
+                NMS_racists_dissatisfaction_level = 1
+            }
+            add_to_variable = {
+                NMS_faction_ws = 0.07
+            }
+            add_to_variable = {
+                NMS_faction_eg = 0.1
+            }
+            add_to_variable = {
+                NMS_faction_atk = 0.07
+            }
+            add_to_variable = {
+                NMS_faction_def = 0.07
+            }
+        }
+    }
+}
+
+NMS_increase_racists_dissatisfaction = {
+    custom_effect_tooltip = NMS_racists_dissatisfied_tt
+    if = {
+        limit = {
+            check_variable = {
+                NMS_racists_dissatisfaction_level = 9
+            }
+        }
+        # do absolutly nothing
+        custom_effect_tooltip = NMS_already_lost_power_tt
+    }
+    else_if = {
+        limit = {
+            check_variable = {
+                NMS_racists_dissatisfaction_level > 2
+            }
+        }
+        # can no more increase
+        if = {
+            limit = {
+                has_country_flag = NMS_reformists_lost_power_flag
+            }
+            # already lost power, pp penalty instead
+            custom_effect_tooltip = NMS_enemy_already_lost_power_tt
+            add_political_power = -100
+        }
+        else_if = {
+            limit = {
+                has_completed_focus = NMS_yao_guai_jun_guo_zhu_yi
+            }
+            # already lost power, pp penalty instead
+            custom_effect_tooltip = NMS_already_satisfied_tt
+            add_political_power = -100
+        }
+        else = {
+            # civil war
+            NMS_racists_civil_war = yes
+        }
+    }
+    else = {
+        effect_tooltip = {
+            swap_ideas = {
+                remove_idea = NMS_pai_xi_dou_zheng_tt_idea
+                add_idea = NMS_pai_xi_dou_zheng_tt_d_idea
+            }
+        }
+        hidden_effect = {
+            add_to_variable = {
+                NMS_racists_dissatisfaction_level = 1
+            }
+            subtract_from_variable = {
+                NMS_faction_ws = 0.07
+            }
+            subtract_from_variable = {
+                NMS_faction_eg = 0.1
+            }
+            subtract_from_variable = {
+                NMS_faction_atk = 0.07
+            }
+            subtract_from_variable = {
+                NMS_faction_def = 0.07
+            }
+        }
+    }
+}
+
+NMS_reformists_lose_power = {
+    custom_effect_tooltip = NMS_reformists_lose_power_tt
+    hidden_effect = {
+        set_country_flag = NMS_reformists_lost_power_flag
+        set_variable = {
+            NMS_reformists_dissatisfaction_level = 9
+        }
+    }
+}
+
+NMS_racists_lose_power = {
+    custom_effect_tooltip = NMS_racists_lose_power_tt
+    hidden_effect = {
+        set_country_flag = NMS_racists_lost_power_flag
+        set_variable = {
+            NMS_racists_dissatisfaction_level = 9
+        }
+    }
+}
+
+NMS_reformists_civil_war = {
+    custom_effect_tooltip = NMS_reformists_civil_war_tt
+    NMS_reformists_lose_power = yes
+    hidden_effect = {
+        NMS_remove_reformists_ideas = yes
+        start_civil_war = {
+            ruling_party = neworder
+            ideology = oldgenso
+            size = 0.5
+            keep_all_characters = yes
+            # remove ideas
+            NMS_remove_reformists_ideas = yes
+            NMS_remove_racists_ideas = yes
+            # change focus tree
+            load_focus_tree = NMS_focus
+            # focus
+            complete_national_focus = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+            unlock_national_focus = NMS_ying_dui_zong_jiao_wei_ji
+            unlock_national_focus = NMS_gai_liang_pai
+            unlock_national_focus = NMS_zheng_qu_xin_zhong_zhi_chi
+            unlock_national_focus = NMS_gong_ye_fa_zhan_ji_hua
+            unlock_national_focus = NMS_xue_xi_ren_lei_sheng_chan_ji_shu
+            unlock_national_focus = NMS_she_hui_jiu_ji_fang_an
+            unlock_national_focus = NMS_gong_gong_shi_ye_jian_she
+            unlock_national_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+            unlock_national_focus = NMS_bian_yuan_hua_zhong_zu_pai
+            unlock_national_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+            # ideas
+            add_ideas = NMS_gai_liang_pai_zheng_zhi_xing_dong_e_idea
+            add_ideas = NMS_ren_lei_sheng_chan_ji_shu_idea
+            # support
+            add_popularity = {
+                ideology = fandong
+                popularity = 0.05
+            }
+            add_popularity = {
+                ideology = qinwai
+                popularity = 0.1
+            }
+            # flag
+            set_country_flag = NMS_civil_war_flag
+            # tag
+            set_cosmetic_tag = NMS_KYK
+        }
+        add_popularity = {
+            ideology = fandong
+            popularity = -1
+        }
+        add_popularity = {
+            ideology = qinwai
+            popularity = -1
+        }
+        add_popularity = {
+            ideology = oldgenso
+            popularity = -1
+        }
+        # character move
+        random_country = {
+            limit = {
+                original_tag = NMS
+                has_country_flag = NMS_civil_war_flag
+            }
+            NMS = {
+                set_nationality = {
+                    target_country = PREV
+                    character = NMS_bkr
+                }
+                set_nationality = {
+                    target_country = PREV
+                    character = NMS_kyouko
+                }
+            }
+            promote_character = {
+                character = NMS_bkr
+                ideology = oldgenso_type
+            }
+            promote_character = {
+                character = NMS_kyouko
+                ideology = qinwai_type
+            }
+            promote_character = {
+                character = NMS_kyouko
+                ideology = fandong_type
+            }
+        }
+        NMS = {
+            country_event = nms.102
+        }
+        # news
+        news_event = {
+            id = nms.116
+            days = 5
+        }
+    }
+}
+
+NMS_racists_civil_war = {
+    custom_effect_tooltip = NMS_racists_civil_war_tt
+    NMS_racists_lose_power = yes
+    hidden_effect = {
+        NMS_remove_racists_ideas = yes
+        start_civil_war = {
+            ruling_party = oldgenso
+            ideology = neworder
+            size = 0.4
+            keep_all_characters = yes
+            # remove ideas
+            NMS_remove_reformists_ideas = yes
+            NMS_remove_racists_ideas = yes
+            # change focus tree
+            load_focus_tree = NMS_focus
+            # focus
+            complete_national_focus = NMS_zhun_bei_xia_yi_chang_zhan_zheng
+            unlock_national_focus = NMS_ying_dui_zong_jiao_wei_ji
+            unlock_national_focus = NMS_zhong_zu_pai
+            unlock_national_focus = NMS_zhan_zheng_dong_yuan
+            unlock_national_focus = NMS_qiang_hua_jun_shi_deng_ji_zhi
+            unlock_national_focus = NMS_shi_fang_yao_guai_tian_xing
+            unlock_national_focus = NMS_ti_gao_jun_shi_yu_suan
+            unlock_national_focus = NMS_yi_wu_bing_yi_zhi
+            unlock_national_focus = NMS_yao_guai_jun_guo_zhu_yi
+            unlock_national_focus = NMS_pai_ji_gai_liang_pai
+            unlock_national_focus = NMS_pai_xi_dou_zheng_de_zhong_jie
+            # ideas
+            add_ideas = NMS_zhong_zu_pai_jun_shi_gai_ge_g_idea
+            add_ideas = NMS_yao_guai_tian_xing_idea
+            # support
+            add_popularity = {
+                ideology = oldorder
+                popularity = 0.1
+            }
+            # flag
+            set_country_flag = NMS_civil_war_flag
+            # tag
+            set_cosmetic_tag = NMS_MNM
+        }
+        add_popularity = {
+            ideology = oldorder
+            popularity = -1
+        }
+        add_popularity = {
+            ideology = neworder
+            popularity = -1
+        }
+        # character move
+        random_country = {
+            limit = {
+                original_tag = NMS
+                has_country_flag = NMS_civil_war_flag
+            }
+            NMS = {
+                set_nationality = {
+                    target_country = PREV
+                    character = NMS_murasa
+                }
+                set_nationality = {
+                    target_country = PREV
+                    character = NMS_nue
+                }
+            }
+            promote_character = {
+                character = NMS_murasa
+                ideology = neworder_type
+            }
+            promote_character = {
+                character = NMS_nue
+                ideology = oldorder_type
+            }
+        }
+        NMS = {
+            country_event = nms.103
+        }
+        # news
+        news_event = {
+            id = nms.117
+            days = 5
+        }
+    }
+}
+
+NMS_remove_reformists_ideas = {
+    remove_ideas = {
+        NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea
+        NMS_gai_liang_pai_zheng_zhi_xing_dong_b_idea
+        NMS_gai_liang_pai_zheng_zhi_xing_dong_c_idea
+        NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea
+        NMS_gai_liang_pai_zheng_zhi_xing_dong_e_idea
+        NMS_ren_lei_sheng_chan_ji_shu_idea
+    }
+}
+
+NMS_remove_racists_ideas = {
+    remove_ideas = {
+        NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_c_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_d_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea
+        NMS_zhong_zu_pai_jun_shi_gai_ge_g_idea
+        NMS_yao_guai_tian_xing_idea
+    }
+}

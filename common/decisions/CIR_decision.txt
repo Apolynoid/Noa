@@ -1,0 +1,38 @@
+# 反斯卡蕾特协约成员
+CIR_fan_si_ka_lei_te_xie_yue_cheng_yuan = {
+    # 准备对SCA作战
+    CIR_zhun_bei_dui_SCA_zuo_zhan = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    has_idea = CIR_fan_scarlet_xie_yue_idea
+                }
+                SCA = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+                exists = no
+                is_subject = yes
+                has_war_with = SCA
+            }
+        }
+        war_with_on_timeout = SCA
+        icon = generic_protection
+        days_mission_timeout = 30
+        selectable_mission = no
+        timeout_effect = {
+            declare_war_on = {
+                target = SCA
+                type = topple_government
+            }
+        }
+    }
+}

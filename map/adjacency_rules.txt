@@ -1,0 +1,444 @@
+# # Adjacency rules determine if an army, navy or trade can pass through the adjacency (e.g. a canal or strait).
+# #
+# # If two countries at war control provinces in the adjacency it is considered contested.
+# # The optional triggers is_enemy, is_friend and is_neutral are evaluated in order and if one evaluates to true the corresponding rule is used.
+# # If is_enemy and is_friend evaluates to false the neutral rule is used. In this case the is_neutral trigger will not be evaluated at all.
+# # If is_friend and is_neutral evaluates to false the enemy rule is used.
+# # If is_enemy and is_neutral evaluates to false the friend rule is used.
+# # If any adjacency province controller is at war with the country the enemy rule is used, unless is_enemy evaluates to false, then the neutral rule is used.
+# # If any adjacency province controller is an ally of is giving military access to the country the friend rule is used, unless is_friend evaluates to false, then the neutral rule is used.
+# # Otherwise the neutral rule is used, unless is_neutral evaluates to false, then the enemy rule is used.
+# #
+# # The 'name' property is how you refer to the rule in adjacencies.csv
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_HKR"
+	icon = 2961
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7149 7153 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_EMB"
+	icon = 7146
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7146 7148 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_KAG"
+	icon = 7134
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7134 7141 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_NET"
+	icon = 7180
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7180 7216 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_CHE"
+	icon = 7204
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7204 7321 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_YKR_SCA"
+	icon = 7195
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7195 7513 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_sukima = no
+		tooltip = sukima_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_HEL"
+	icon = 7135
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7135 7483 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_SCA"
+	icon = 7144
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7144 7192 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_GEN"
+	icon = 7143
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7143 7145 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_HUM"
+	icon = 7137
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7137 7154 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_BYA"
+	icon = 7125
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7125 7132 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}
+
+adjacency_rule = {
+	name = "SUKIMA_RULE_OKI_HEL2"
+	icon = 7133
+	contested = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	enemy = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	friend = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	neutral = { 
+		army = yes
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	required_provinces = { 7133 7630 }
+	offset = { 0.0 0.0 0.0 }
+
+	is_disabled = {
+		can_pass_back_door = no
+		tooltip = back_door_blocked_tt
+	}
+}

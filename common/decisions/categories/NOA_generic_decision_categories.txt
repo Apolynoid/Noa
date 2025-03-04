@@ -1,0 +1,6 @@
+# 政治状况管理
+domestic_affair_management = {
+	icon = generic_domestic_affair
+
+	priority = 89
+}

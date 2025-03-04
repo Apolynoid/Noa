@@ -1,0 +1,26 @@
+#check resistance_modifiers.txt for example
+
+
+compliance_50_integration = {
+	type = state_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:5"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:5"
+	threshold = 50
+	margin = 2
+
+	visible = {
+		occupation_law = integration_law
+		is_claimed_by = FROM
+		is_fully_controlled_by = FROM
+	}
+
+	enabled = {
+		occupation_law = integration_law
+		is_claimed_by = FROM
+		is_fully_controlled_by = FROM
+	}
+
+	on_enable = {
+		add_core_of = FROM
+	}
+}

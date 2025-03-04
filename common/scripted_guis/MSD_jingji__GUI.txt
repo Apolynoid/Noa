@@ -1,0 +1,23 @@
+scripted_gui = {
+	# LOTT-QUADROS
+	MSD_jingji_decisions = {
+		context_type = decision_category
+		window_name = "经济"
+		parent_window_token = decision_tab
+		visible = { always = yes }
+
+		properties = {
+			jingji_qinxiang_Meter = {
+				frame = MSD_M_display
+			}
+		}
+
+		effects = {
+			
+		}
+
+		triggers = {
+			
+		}
+	}
+}

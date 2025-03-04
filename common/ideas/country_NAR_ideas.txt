@@ -1,0 +1,70 @@
+ideas = {
+	country = {
+		#mrs
+    # 社会化生产
+    nar_she_hui_hua_sheng_chan_idea = {
+      picture = generic_production_bonus
+      modifier = {
+        production_factory_start_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        consumer_goods_factor = -0.15
+      }
+    }
+
+    # 民兵
+    nar_min_bing_idea = {
+      picture = ETH_peacekeeping_forces
+      modifier = {
+        conscription = 0.02
+        training_time_army_factor = -0.1
+        army_morale_factor = 0.1
+      }
+    }
+
+    # 联合体议会
+    nar_lian_he_ti_yi_hui_idea = {
+      picture = generic_parliament
+      modifier = {
+        political_power_gain = 0.2
+        stability_factor = 0.1
+      }
+    }
+
+    # 联合体议会 革命宣传
+    nar_lian_he_ti_yi_hui_a_idea = {
+      picture = generic_parliament
+      modifier = {
+        political_power_gain = 0.2
+        stability_factor = 0.1
+        surrender_limit = 0.1
+        drift_defence_factor = 0.1
+      }
+    }
+
+    # 联合体议会 武装群众
+    nar_lian_he_ti_yi_hui_b_idea = {
+      picture = generic_parliament
+      modifier = {
+        political_power_gain = 0.2
+        stability_factor = 0.1
+        compliance_growth_on_our_occupied_states = -0.2
+        resistance_growth_on_our_occupied_states = 0.2
+        intelligence_agency_defense = 0.1
+      }
+    }
+
+    # 联合体议会
+    nar_lian_he_ti_yi_hui_c_idea = {
+      picture = generic_parliament
+      modifier = {
+        political_power_gain = 0.2
+        stability_factor = 0.1
+        surrender_limit = 0.1
+        drift_defence_factor = 0.1
+        compliance_growth_on_our_occupied_states = -0.2
+        resistance_growth_on_our_occupied_states = 0.2
+        intelligence_agency_defense = 0.1
+      }
+    }
+	}
+}

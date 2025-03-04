@@ -1,0 +1,33 @@
+
+#### Paranoia assets ####
+
+spriteTypes = {	
+
+	### Basic assets ###
+				
+	spriteType = {
+		name = "GFX_SCA_red_bar"
+		texturefile = "gfx/interface/gui/SCAFairyRebellion/RedBar.png"
+		legacy_lazy_load = no
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_SCA_green_bar"
+		texturefile = "gfx/interface/gui/SCAFairyRebellion/GreenBar.png"
+		legacy_lazy_load = no
+		noOfFrames = 11
+	}
+
+	spriteType = {
+		name = "GFX_SCA_rebellion"
+		texturefile = "gfx/interface/gui/SCAFairyRebellion/Rebellion.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_SCA_army_loyalty"
+		texturefile = "gfx/interface/gui/SCAFairyRebellion/ArmyLoyalty.png"
+		legacy_lazy_load = no
+	}
+}

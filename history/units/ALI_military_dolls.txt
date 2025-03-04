@@ -1,0 +1,52 @@
+﻿division_template = {
+	name = "歌莉娅人偶兵团"
+	regiments = {
+		ma_shield_tank = { x = 0 y = 0 }
+		ma_shield_tank = { x = 0 y = 1 }
+		ma_light_infantry = { x = 1 y = 0 }
+		ma_light_infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "媞泰妮亚人偶兵团"
+	regiments = {
+		ma_shield_infantry = { x = 0 y = 0 }
+		ma_shield_infantry = { x = 0 y = 1 }
+		ma_shield_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 1 y = 0 }
+		ma_light_infantry = { x = 1 y = 1 }
+		ma_light_infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "歌莉娅人偶兵团"
+		location = 2455
+		division_template = "歌莉娅人偶兵团"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "媞泰妮亚人偶兵团"
+		location = 2455
+		division_template = "媞泰妮亚人偶兵团"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "媞泰妮亚人偶兵团"
+		location = 2455
+		division_template = "媞泰妮亚人偶兵团"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "媞泰妮亚人偶兵团"
+		location = 2455
+		division_template = "媞泰妮亚人偶兵团"
+		start_experience_factor = 0.35
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,231 @@
+﻿capital = 231
+146.1.1 = {
+    set_country_flag = bunengsuiyiqiehuanzhengti
+    # set_cosmetic_tag = YYK_B
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        
+        linglizhufu = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+    }
+    
+}
+
+146.1.1={
+    country_lock_all_division_template = yes
+    oob = "YYK_146"
+    
+    set_country_flag = world_limit
+    set_country_flag = YYK_no_kana_flag
+    set_country_flag = medium_focus_8_lower_flag
+    add_ideas = {
+        Ghost
+        Village
+        close2
+        hawk1
+        free_magic
+        type0_manpowerlv2
+    }
+    add_ideas = {
+        YYK_you_ling_ji_jin_pai_xi_idea
+        YYK_bu_zhong_cheng_de_jun_dui_idea
+        YKO_que_fa_zu_zhi_de_sheng_chan_idea
+    }
+
+    recruit_character = YYK_youmu
+    recruit_character = YYK_yyk
+    recruit_character = YYK_yok
+    recruit_character = UND_kana
+    
+    set_politics = {
+    	ruling_party = oldorder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 5
+        guli = 5
+        neworder = 5
+        oldorder = 40
+        fandong = 35
+        oldgenso = 10
+    }
+
+    # control level init
+    add_to_array = {
+        yko_level_4_states = 231
+    }
+    add_to_array = {
+        yko_level_4_states = 264
+    }
+    for_each_scope_loop = {
+        array = yko_level_4_states
+        set_variable = {
+            yko_control_level = 4
+        }
+    }
+
+    add_to_array = {
+        yko_level_3_states = 129
+    }
+    add_to_array = {
+        yko_level_3_states = 136
+    }
+    add_to_array = {
+        yko_level_3_states = 145
+    }
+    add_to_array = {
+        yko_level_3_states = 159
+    }
+    add_to_array = {
+        yko_level_3_states = 205
+    }
+    add_to_array = {
+        yko_level_3_states = 217
+    }
+    add_to_array = {
+        yko_level_3_states = 218
+    }
+    add_to_array = {
+        yko_level_3_states = 236
+    }
+    add_to_array = {
+        yko_level_3_states = 247
+    }
+    add_to_array = {
+        yko_level_3_states = 251
+    }
+    add_to_array = {
+        yko_level_3_states = 254
+    }
+    add_to_array = {
+        yko_level_3_states = 265
+    }
+    add_to_array = {
+        yko_level_3_states = 281
+    }
+    add_to_array = {
+        yko_level_3_states = 564
+    }
+    add_to_array = {
+        yko_level_3_states = 565
+    }
+    add_to_array = {
+        yko_level_3_states = 566
+    }
+    add_to_array = {
+        yko_level_3_states = 567
+    }
+    add_to_array = {
+        yko_level_3_states = 570
+    }
+    add_to_array = {
+        yko_level_3_states = 573
+    }
+    add_to_array = {
+        yko_level_3_states = 568
+    }
+    add_to_array = {
+        yko_level_3_states = 658
+    }
+    add_to_array = {
+        yko_level_3_states = 684
+    }
+    for_each_scope_loop = {
+        array = yko_level_3_states
+        set_variable = {
+            yko_control_level = 3
+        }
+    }
+
+    add_to_array = {
+        yko_level_2_states = 161
+    }
+    add_to_array = {
+        yko_level_2_states = 190
+    }
+    add_to_array = {
+        yko_level_2_states = 228
+    }
+    add_to_array = {
+        yko_level_2_states = 304
+    }
+    add_to_array = {
+        yko_level_2_states = 562
+    }
+    add_to_array = {
+        yko_level_2_states = 563
+    }
+    add_to_array = {
+        yko_level_2_states = 569
+    }
+    for_each_scope_loop = {
+        array = yko_level_2_states
+        set_variable = {
+            yko_control_level = 2
+        }
+    }
+
+    add_to_array = {
+        yko_level_1_states = 141
+    }
+    add_to_array = {
+        yko_level_1_states = 156
+    }
+    add_to_array = {
+        yko_level_1_states = 222
+    }
+    for_each_scope_loop = {
+        array = yko_level_1_states
+        set_variable = {
+            yko_control_level = 1
+        }
+    }
+
+    # useful array
+    add_to_array = {
+        hakugyokurou_states = 205
+    }
+    add_to_array = {
+        hakugyokurou_states = 217
+    }
+    add_to_array = {
+        hakugyokurou_states = 231
+    }
+    add_to_array = {
+        hakugyokurou_states = 236
+    }
+    add_to_array = {
+        hakugyokurou_states = 247
+    }
+
+    for_each_scope_loop = {
+        array = hakugyokurou_states
+        set_state_flag = YYK_is_hakugyokurou_states_flag
+    }
+}

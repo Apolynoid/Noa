@@ -1,0 +1,196 @@
+﻿add_namespace = ntr
+# NTR希望与我们进行科技合作
+country_event = {
+	id = ntr.101
+	title = ntr.101.t
+	desc = ntr.101.d
+	is_triggered_only = yes
+	# 这对我们都有好处
+	option = {
+		name = ntr.101.1
+		TEG = {
+			add_to_tech_sharing_group = youkai_mountain_tech_sharing
+		}
+		NTR = {
+			add_to_tech_sharing_group = youkai_mountain_tech_sharing
+		}
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.102
+				}
+			}
+		}
+	}
+	# 这没有必要
+	option = {
+		name = ntr.101.2
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.103
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# TEG同意了
+country_event = {
+	id = ntr.102
+	title = ntr.102.t
+	desc = ntr.102.d
+	is_triggered_only = yes
+	option = {
+		name = ntr.102.1
+	}
+}
+
+# TEG拒绝了
+country_event = {
+	id = ntr.103
+	title = ntr.103.t
+	desc = ntr.103.d
+	is_triggered_only = yes
+	option = {
+		name = ntr.103.1
+	}
+}
+
+# NTR希望与我们共同进行战争模拟
+country_event = {
+	id = ntr.104
+	title = ntr.104.t
+	desc = ntr.104.d
+	is_triggered_only = yes
+	# 这对我们都有好处
+	option = {
+		name = ntr.104.1
+		TEG = {
+			add_political_power = -30
+			add_ideas = NTR_zhan_zheng_mo_ni_idea
+		}
+		NTR = {
+			add_ideas = NTR_zhan_zheng_mo_ni_idea
+		}
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.102
+				}
+				set_country_flag = NTR_wargaming_accepted_flag
+			}
+		}
+	}
+	# 这没有必要
+	option = {
+		name = ntr.104.2
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.103
+				}
+				set_country_flag = NTR_wargaming_refused_flag
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# NTR希望与我们举行联合演习
+country_event = {
+	id = ntr.105
+	title = ntr.105.t
+	desc = ntr.105.d
+	is_triggered_only = yes
+	# 这对我们都有好处
+	option = {
+		name = ntr.105.1
+		TEG = {
+			add_political_power = -30
+			army_experience = 30
+			add_equipment_to_stockpile = {
+				type = gun_a
+				amount = -100
+			}
+		}
+		NTR = {
+			army_experience = 30
+			add_equipment_to_stockpile = {
+				type = gun_a
+				amount = -100
+			}
+		}
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.102
+				}
+			}
+		}
+	}
+	# 这没有必要
+	option = {
+		name = ntr.105.2
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.103
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# NTR请求经济援助
+country_event = {
+	id = ntr.106
+	title = ntr.106.t
+	desc = ntr.106.d
+	is_triggered_only = yes
+	# 我们当然要援助我们的盟友
+	option = {
+		name = ntr.106.1
+		TEG = {
+			add_timed_idea = {
+				idea = TEG_yuan_zhu_NTR_idea
+				days = 180
+			}
+		}
+		NTR = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+		}
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.102
+				}
+			}
+		}
+	}
+	# 我们恐怕不能援助她们
+	option = {
+		name = ntr.106.2
+		hidden_effect = {
+			NTR = {
+				country_event = {
+					id = ntr.103
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

@@ -1,0 +1,681 @@
+ideas = {
+    country = {
+		# 幽灵激进派系
+		YYK_you_ling_ji_jin_pai_xi_idea = {
+			picture = YYK_ghost_radical_faction
+			modifier = {
+				fandong_drift = 0.02
+				stability_factor = -0.2
+				political_power_factor = -0.1
+				lend_lease_tension = 1.0
+				custom_modifier_tooltip = army_locked_tt
+				custom_modifier_tooltip = YYK_civil_war_unavoidable_tt
+			}
+			rule = {
+				can_send_volunteers = no
+				can_access_market = no
+			}
+		}
+
+		YYK_you_ling_ji_jin_pai_xi_a_idea = {
+			picture = YYK_ghost_radical_faction
+			modifier = {
+				fandong_drift = 0.02
+				stability_factor = -0.2
+				lend_lease_tension = 1.0
+				custom_modifier_tooltip = army_locked_tt
+				custom_modifier_tooltip = YYK_civil_war_unavoidable_tt
+			}
+			rule = {
+				can_send_volunteers = no
+				can_access_market = no
+			}
+		}
+
+		# 不忠诚的军队
+		YYK_bu_zhong_cheng_de_jun_dui_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_org_factor = -0.2
+				army_morale_factor = -0.3
+				
+			}
+			allowed_civil_war = {
+				has_government = oldorder
+			}
+		}
+
+		# 军队被清洗
+		YKO_jun_dui_bei_qing_xi_idea = {
+			picture = generic_purge
+			modifier = {
+				experience_gain_army_factor = -0.2
+				army_attack_factor = -0.2
+				army_defence_factor = -0.05
+				army_org_factor = -0.05
+				army_morale_factor = -0.15
+			}
+			allowed_civil_war = {
+				has_government = oldorder
+			}
+		}
+
+		# 冥界内战
+		YYK_ming_jie_nei_zhan_idea = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				custom_modifier_tooltip = YYK_civil_war_defense_tt
+				dig_in_speed_factor = 0.2
+				max_dig_in_factor = 0.1
+				surrender_limit = 1
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+
+			on_add = {
+				hidden_effect = {
+					set_technology = {
+						YYK_ming_jie_nei_zhan_tech = 1
+						popup = no
+					}
+				}
+			}
+
+			on_remove = {
+				hidden_effect = {
+					set_technology = {
+						YYK_ming_jie_nei_zhan_tech = 0
+						popup = no
+					}
+				}
+			}
+		}
+
+		# 内战伤痕
+		YYK_nei_zhan_shang_hen_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				conscription_factor = -0.4
+			}
+		}
+
+		YYK_nei_zhan_shang_hen_a_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				conscription_factor = -0.2
+			}
+		}
+
+		YYK_nei_zhan_shang_hen_b_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+			}
+		}
+
+		YYK_nei_zhan_shang_hen_c_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				war_support_factor = -0.2
+				conscription_factor = -0.2
+			}
+		}
+
+		# 内战后的生产问题
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.3
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_a_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.2
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_b_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_c_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_d_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_e_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		YYK_nei_zhan_hou_de_sheng_chan_wen_ti_f_idea = {
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		# 缺乏组织的生产
+		YKO_que_fa_zu_zhi_de_sheng_chan_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.2
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+			}
+			allowed_civil_war = {
+				has_government = oldorder
+			}
+		}
+
+		YKO_que_fa_zu_zhi_de_sheng_chan_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+			}
+			allowed_civil_war = {
+				has_government = oldorder
+			}
+		}
+
+		# 四季的制裁
+		YKO_si_ji_de_zhi_cai_idea = {
+			picture = YKO_sanction_of_shikieiki
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.4
+			}
+			cancel = {
+				SKI = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+
+		# ----KNA----
+		# 混乱的革命阵线
+		KNA_hun_luan_de_ge_ming_zhen_xian_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		KNA_hun_luan_de_ge_ming_zhen_xian_a_idea = {
+			picture = generic_political_problem
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		# 冥界革命军
+		KNA_ming_jie_ge_ming_jun_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+				army_attack_factor = -0.2
+				army_attack_speed_factor = -0.2
+				breakthrough_factor = -0.2
+				army_morale_factor = 0.05
+				army_org_factor = -0.1
+				max_planning_factor = -0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_a_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_attack_factor = -0.2
+				army_attack_speed_factor = -0.2
+				breakthrough_factor = -0.2
+				army_morale_factor = 0.05
+				army_org_factor = -0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_b_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_attack_factor = -0.2
+				army_attack_speed_factor = -0.1
+				breakthrough_factor = -0.2
+				army_morale_factor = 0.1
+				army_org_factor = -0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_c_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_attack_factor = -0.1
+				army_attack_speed_factor = -0.1
+				breakthrough_factor = -0.1
+				army_morale_factor = 0.1
+				army_org_factor = -0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_d_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_morale_factor = 0.2
+				conscription_factor = 0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_e_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_attack_speed_factor = -0.1
+				breakthrough_factor = -0.1
+				army_morale_factor = 0.05
+				army_org_factor = -0.1
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_f_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				experience_gain_army_factor = -0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		KNA_ming_jie_ge_ming_jun_g_idea = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_factor = 0.1
+				land_doctrine_cost_factor = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		# 工业混乱
+		KNA_gong_ye_hun_luan_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
+		KNA_gong_ye_hun_luan_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
+		KNA_gong_ye_hun_luan_b_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+
+		# 外界志愿者部队
+		KNA_wai_ji_zhi_yuan_zhe_bu_dui_idea = {
+			picture = SPR_international_brigades
+			modifier = {
+				stability_factor = 0.05
+				weekly_manpower = 5
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		# 革命军事委员会
+		KNA_ge_ming_jun_shi_wei_yuan_hui_idea = {
+			picture = NOR_sivog
+			modifier = {
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+			}
+		}
+
+		KNA_ge_ming_jun_shi_wei_yuan_hui_a_idea = {
+			picture = NOR_sivog
+			modifier = {
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				conscription = 0.002
+				training_time_army_factor = -0.1
+			}
+		}
+
+		KNA_ge_ming_jun_shi_wei_yuan_hui_b_idea = {
+			picture = NOR_sivog
+			modifier = {
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				conscription = 0.002
+				training_time_army_factor = -0.1
+				land_reinforce_rate = 0.03
+				initiative_factor = 0.05
+			}
+		}
+
+		KNA_ge_ming_jun_shi_wei_yuan_hui_c_idea = {
+			picture = NOR_sivog
+			modifier = {
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				conscription = 0.002
+				training_time_army_factor = -0.1
+				land_reinforce_rate = 0.03
+				initiative_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		# 最终攻势
+		KNA_zui_zhong_gong_shi_idea = {
+			picture = generic_intel_bonus
+			modifier = {
+				army_org_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = YKO
+				attack_bonus_against = 0.2
+				breakthrough_bonus_against = 0.2
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		# 国家重建计划
+		KNA_guo_jia_chong_jian_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		# ----YKO----
+		# 与企业家合作
+		YKO_yu_qi_ye_jia_he_zuo_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+
+		# 冥界陆军
+		YKO_ming_jie_lu_jun_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				breakthrough_factor = -0.1
+				army_org_factor = -0.05
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_core_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_energy_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		YKO_ming_jie_lu_jun_a_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+				army_attack_factor = -0.1
+				breakthrough_factor = -0.1
+				army_org_factor = -0.05
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_core_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_energy_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		YKO_ming_jie_lu_jun_b_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_core_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_energy_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		YKO_ming_jie_lu_jun_c_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				max_dig_in_factor = 0.1
+			}
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_core_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+				magic_energy_a = {
+					instant = yes
+					reliability = -0.1
+					build_cost_ic = 0.1
+				}
+			}
+		}
+
+		YKO_ming_jie_lu_jun_d_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+			}
+		}
+
+		YKO_ming_jie_lu_jun_e_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				max_dig_in_factor = 0.1
+			}
+		}
+
+		# 低效的行政系统
+		YKO_di_xiao_de_xing_zheng_xi_tong_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				research_speed_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_a_idea = {
+			picture = generic_political_problem
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				research_speed_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_b_idea = {
+			picture = generic_political_problem
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				research_speed_factor = -0.15
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_c_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				research_speed_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_d_idea = {
+			picture = generic_political_problem
+			modifier = {
+				stability_factor = -0.1
+				research_speed_factor = -0.15
+				consumer_goods_factor = 0.15
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_e_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.05
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+
+		YKO_di_xiao_de_xing_zheng_xi_tong_f_idea = {
+			picture = generic_political_problem
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+			cancel = {
+				has_global_flag = YYK_netherworld_civil_war_ended_flag
+			}
+		}
+	}
+}

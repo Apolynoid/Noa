@@ -1,0 +1,97 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_category_generic_domestic_affair"
+		texturefile = "gfx/interface/decisions/decision_category_generic_domestic_affair.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_generic_gekokujyoism"
+		texturefile = "gfx/interface/decisions/decision_category_generic_gekokujyoism.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_generic_political_discourse"
+		texturefile = "gfx/interface/decisions/decision_category_generic_political_discourse.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_tkm_tskumogami_spiritual_power_feature"
+		texturefile = "gfx/interface/decisions/decision_category_tkm_tskumogami_spiritual_power_feature.png"
+	}
+
+	#############New Ideo
+	spriteType = {
+		name = "GFX_decision_sej_against_sukuna"
+		texturefile = "gfx/interface/decisions/decision_sej_against_sukuna.png"
+	}	
+
+	spriteType = {
+		name = "GFX_decision_generic_bills"
+		texturefile = "gfx/interface/decisions/decision_generic_bills.png"
+	}	
+
+	spriteType = {
+		name = "GFX_decision_generic_trade"
+		texturefile = "gfx/interface/decisions/decision_trade.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_industrial_increase"
+		texturefile = "gfx/interface/decisions/decision_generic_industrial_increase.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_industrial_decrease"
+		texturefile = "gfx/interface/decisions/decision_generic_industrial_decrease.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_military_increase"
+		texturefile = "gfx/interface/decisions/decision_generic_military_increase.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_military_decrease"
+		texturefile = "gfx/interface/decisions/decision_generic_military_decrease.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_tkm_turn_on_sp_bead_auto_conversion"
+		texturefile = "gfx/interface/decisions/decision_tkm_turn_on_sp_bead_auto_conversion.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_tkm_turn_off_sp_bead_auto_conversion"
+		texturefile = "gfx/interface/decisions/decision_tkm_turn_off_sp_bead_auto_conversion.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_tkm_sp_bead_conversion"
+		texturefile = "gfx/interface/decisions/decision_tkm_sp_bead_conversion.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_tkm_energy_feature_settlement"
+		texturefile = "gfx/interface/decisions/decision_tkm_energy_feature_settlement.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_kna_control_strong"
+		texturefile = "gfx/interface/decisions/decision_kna_control_strong.png"
+	}	
+
+	spriteType = {
+		name = "GFX_decision_kna_control_weak"
+		texturefile = "gfx/interface/decisions/decision_kna_control_weak.png"
+	}	
+
+	spriteType = {
+		name = "GFX_decision_yko_control_strong"
+		texturefile = "gfx/interface/decisions/decision_yko_control_strong.png"
+	}	
+
+	spriteType = {
+		name = "GFX_decision_yko_control_weak"
+		texturefile = "gfx/interface/decisions/decision_yko_control_weak.png"
+	}	
+}

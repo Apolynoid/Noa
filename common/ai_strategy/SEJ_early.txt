@@ -1,0 +1,132 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+CIR_SEJ_help= {
+	allowed = {
+		original_tag = SEJ
+	}
+
+	enable = {
+		has_government = fandong
+		NOT = {
+			has_completed_focus = SEJ_jie_san_ge_ming_tong_meng
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = support 
+		id = "CIR"			
+		value = 10
+	}	
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "CIR"			
+		value = 100
+	}	
+}
+
+CIR_do_not_help_SEJ_traitor = {
+	allowed = {
+		original_tag = SEJ
+	}
+	
+	enable = {
+		OR = {
+			has_completed_focus = SEJ_jie_san_ge_ming_tong_meng
+			NOT = {
+				has_government = fandong
+			}
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = support 
+		id = "CIR"			
+		value = -1000
+	}	
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "CIR"			
+		value = -1000
+	}	
+}
+
+#### NOA part
+SEJ_help_defend_CIR_line = {
+	allowed = {
+		original_tag = SEJ
+	}
+	
+	enable = {
+		CIR = {
+			has_war_with = SCA
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CIR
+		value = 100
+	}
+}
+
+SEJ_do_not_join_war_in_SEJ_sphere = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = SEJ
+		
+		SEJ = {
+			# SEJ at war with sphere members
+			OR = {
+				AND = {
+					has_war_with = WHR
+					WHR = {
+						is_in_faction = no
+					}
+				}
+				AND = {
+					has_war_with = HKR
+					HKR = {
+						is_in_faction = no
+					}
+				}
+			}
+			# nothing special
+			NOT = {
+				surrender_progress > 0.1
+			}
+		}		
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SEJ
+		value = 100
+		target_country = WHR
+	}
+
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SEJ
+		value = 100
+		target_country = HKR
+	}
+}

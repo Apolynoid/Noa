@@ -1,0 +1,282 @@
+MRS_NAR_land_split = {
+    every_state = {
+        limit = {
+            is_owned_by = MRS
+            OR = {
+                is_core_of = MRS
+                is_claimed_by = MRS
+            }
+        }
+        if = {
+            limit = {
+                is_claimed_by = NAR
+            }
+            add_core_of = NAR
+            remove_core_of = MRS
+            add_claim_by = MRS
+            teleport_armies = {
+                limit = {
+                    tag = MRS
+                }
+            }
+            transfer_state_to = NAR
+        }
+        else = {
+            add_claim_by = NAR
+        }
+    }
+    every_state = {
+        limit = {
+            is_owned_by = ALI
+            OR = {
+                is_core_of = ALI
+                is_claimed_by = ALI
+            }
+        }
+        add_claim_by = NAR
+    }
+}
+
+MRS_ALI_land_split = {
+    every_state = {
+        limit = {
+            is_owned_by = MRS
+            OR = {
+                is_core_of = MRS
+                is_claimed_by = MRS
+            }
+        }
+        if = {
+            limit = {
+                is_claimed_by = ALI
+            }
+            add_core_of = ALI
+            remove_core_of = MRS
+            add_claim_by = MRS
+            teleport_armies = {
+                limit = {
+                    tag = MRS
+                }
+            }
+            transfer_state_to = ALI
+        }
+        else = {
+            add_claim_by = ALI
+        }
+    }
+    every_state = {
+        limit = {
+            is_owned_by = NAR
+            OR = {
+                is_core_of = NAR
+                is_claimed_by = NAR
+            }
+        }
+        add_claim_by = ALI
+    }
+}
+
+MRS_NAR_split = {
+    # 移除部队
+    country_lock_all_division_template = no
+    delete_unit_template_and_units = {
+        division_template = "游民妖精"
+        disband = no
+    }
+    delete_unit_template_and_units = {
+        division_template = "游民妖怪"
+        disband = no
+    }
+    delete_unit_template_and_units = {
+        division_template = "初等付丧神"
+        disband = no
+    }
+    delete_unit_template_and_units = {
+        division_template = "人形付丧神"
+        disband = no
+    }
+    delete_unit_template_and_units = {
+        division_template = "魔法地藏"
+        disband = no
+    }
+    country_lock_all_division_template = yes
+    # 划分地块
+    MRS_NAR_land_split = yes
+    # 删除继承模板
+    NAR = {
+        MRS_remove_all_templates = yes
+        load_oob = "NAR_146"
+    }
+    # 移交枪械
+    send_equipment_fraction = {
+        value = 0.3
+        target = NAR
+    }
+    # 继承科技
+    NAR = {
+        inherit_technology = MRS
+    }
+    # 领导人变动
+    NAR_narumi = {
+        set_nationality = NAR
+        set_character_flag = nationality_NAR
+        clr_character_flag = nationality_MRS
+    }
+    RNS_tokiko = {
+        set_nationality = NAR
+        set_character_flag = nationality_NAR
+        clr_character_flag = nationality_MRS
+    }
+    NAR = {
+        promote_character = {
+            character = NAR_narumi
+            ideology = fandong_type
+        }
+    }
+    # pp补充
+    NAR = {
+        add_political_power = 100
+    }
+}
+
+MRS_ALI_split = {
+    # 移除部队
+    country_lock_all_division_template = no
+    delete_unit_template_and_units = {
+        division_template = "初始魔法编制"
+        disband = no
+    }
+    delete_unit_template_and_units = {
+        division_template = "人偶突击兵团"
+        disband = no
+    }
+    country_lock_all_division_template = yes
+    # 划分地块
+    MRS_ALI_land_split = yes
+    # 删除继承模板
+    ALI = {
+        MRS_remove_all_templates = yes
+        load_oob = "ALI_146"
+    }
+    # 移交枪械
+    send_equipment_fraction = {
+        value = 0.3
+        target = ALI
+    }
+    # 继承科技
+    ALI = {
+        inherit_technology = MRS
+    }
+    # 领导人变动
+    ALI_ali = {
+        set_nationality = ALI
+        set_character_flag = nationality_ALI
+        clr_character_flag = nationality_MRS
+    }
+    ALI_shh = {
+        set_nationality = ALI
+        set_character_flag = nationality_ALI
+        clr_character_flag = nationality_MRS
+    }
+    ALI_hor = {
+        set_nationality = ALI
+        set_character_flag = nationality_ALI
+        clr_character_flag = nationality_MRS
+    }
+    ALI = {
+        promote_character = {
+            character = ALI_ali
+            ideology = qinwai_type
+        }
+        promote_character = {
+            character = ALI_ali
+            ideology = neworder_type
+        }
+        promote_character = {
+            character = ALI_ali
+            ideology = oldorder_type
+        }
+    }
+    # pp补充
+    ALI = {
+        add_political_power = 100
+    }
+}
+
+MRS_military_focus_inherit = {
+    if = {
+        limit = {
+            MRS = {
+                has_completed_focus = MRS_jun_shi_dong_yuan
+            }
+        }
+        complete_national_focus = MRS_jun_shi_dong_yuan
+    }
+    if = {
+        limit = {
+            MRS = {
+                has_completed_focus = MRS_xian_jin_mo_fa_shi_wu_zhuang
+            }
+        }
+        complete_national_focus = MRS_xian_jin_mo_fa_shi_wu_zhuang
+    }
+    if = {
+        limit = {
+            MRS = {
+                has_completed_focus = MRS_jun_bei_shen_cha
+            }
+        }
+        complete_national_focus = MRS_jun_bei_shen_cha
+    }
+    if = {
+        limit = {
+            MRS = {
+                has_completed_focus = MRS_mo_fa_zhi_sen_di_tu_ce_hui
+            }
+        }
+        complete_national_focus = MRS_mo_fa_zhi_sen_di_tu_ce_hui
+    }
+}
+
+MRS_remove_all_templates = {
+    delete_unit_template_and_units = {
+        division_template = "扫荡编制"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "武装魔法使"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人类散兵"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "游民妖精"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "游民妖怪"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "初等付丧神"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人形付丧神"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "初始魔法编制"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "人偶突击兵团"
+        disband = yes
+    }
+    delete_unit_template_and_units = {
+        division_template = "魔法地藏"
+        disband = yes
+    }
+}

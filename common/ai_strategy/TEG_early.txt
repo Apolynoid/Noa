@@ -1,0 +1,91 @@
+# # unit_base is the base value used for evaluating how important it is to deploy the various categories
+# # Written by Henrik "Groogy" Hansson
+# #AI 倾向
+TEG_Our_industry_is_already_strong = {
+	enable = {
+		tag = TEG
+		has_war = no
+	}
+	abort = {
+		or = {
+			has_war = yes
+		  	date > 147.10.1
+      		has_government = fandong
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}
+
+TEG_Our_industry_is_already_strong_1 = {
+	enable = {
+		tag = TEG
+		date < 148.4.1
+		date > 147.10.1
+		has_war = no
+	}
+	abort = {
+		or = {
+			has_war = yes
+		  	date > 148.4.1
+      		has_government = fandong
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
+	}
+}
+
+TEG_Our_industry_is_already_strong_3 = {
+	enable = {
+		tag = TEG
+		date < 148.4.1
+    	has_government = fandong
+		has_war = no
+	}
+	abort = {
+		or = {
+			has_war = yes
+		  	date > 148.4.1
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
+	}
+}
+
+### NOA Part
+TEG_rush_against_OTG = {
+	allowed = {
+		original_tag = TEG
+	}
+	
+	enable = {
+		TEG_unification_problem_to_solve = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		
+		tag = OTG
+
+		ratio = 0.1
+
+		priority = 10
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+}

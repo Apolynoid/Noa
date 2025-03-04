@@ -1,0 +1,27 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_human_influence_texticon"
+		texturefile = "gfx/texticons/human_influence.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_spiritual_power_bead_texticon"
+		texturefile = "gfx/texticons/spiritual_power_bead.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_KNA_flag_texticon"
+		texturefile = "gfx/texticons/KNA.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_YKO_flag_texticon"
+		texturefile = "gfx/texticons/YKO.png"
+		legacy_lazy_load = no
+	}
+
+}

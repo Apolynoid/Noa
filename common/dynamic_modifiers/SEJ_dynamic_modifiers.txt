@@ -1,0 +1,68 @@
+SEJ_ge_ming_jun_idea = {
+	icon = GFX_idea_SEJ_revolutionary_army
+	remove_trigger = {
+		always = no
+	}
+	army_attack_factor = SEJ_revolutionary_army_atk
+	army_defence_factor = SEJ_revolutionary_army_def
+	army_morale_factor = SEJ_revolutionary_army_mo
+	army_org_factor = SEJ_revolutionary_army_org
+	conscription = SEJ_revolutionary_army_con
+	command_power_gain_mult = SEJ_revolutionary_army_cop
+	max_command_power_mult = SEJ_revolutionary_army_mcp
+	max_planning_factor = SEJ_revolutionary_army_mpf
+	planning_speed = SEJ_revolutionary_army_psp
+	training_time_army_factor = SEJ_revolutionary_army_tta
+}
+
+SEJ_yao_guai_zhong_zu_ge_ming_jun_idea = {
+	icon = GFX_idea_SEJ_racial_revolutionary_army
+	remove_trigger = {
+		always = no
+	}
+	army_attack_factor = SEJ_revolutionary_army_atk
+	army_defence_factor = SEJ_revolutionary_army_def
+	army_morale_factor = SEJ_revolutionary_army_mo
+	army_org_factor = SEJ_revolutionary_army_org
+	conscription = SEJ_revolutionary_army_con
+	command_power_gain_mult = SEJ_revolutionary_army_cop
+	max_command_power_mult = SEJ_revolutionary_army_mcp
+	max_planning_factor = SEJ_revolutionary_army_mpf
+	planning_speed = SEJ_revolutionary_army_psp
+	training_time_army_factor = SEJ_revolutionary_army_tta
+}
+
+SEJ_gekokujyo_movement_buff_leader_idea = {
+	remove_trigger = {
+		SEJ_still_hold_gekokujyo_movement = no
+	}
+
+	production_speed_buildings_factor = SEJ_leader_buff_building
+	consumer_goods_factor = SEJ_leader_buff_consumer
+	industrial_capacity_factory = SEJ_leader_buff_factory
+	experience_gain_army_factor = SEJ_leader_buff_exp
+	training_time_army_factor = SEJ_leader_buff_training
+	army_core_attack_factor = SEJ_leader_buff_core_atk
+	army_core_defence_factor = SEJ_leader_buff_core_def
+	army_morale_factor = SEJ_leader_buff_morale
+}
+
+SEJ_gekokujyo_movement_buff_member_idea = {
+	remove_trigger = {
+		OR = {
+			SEJ_still_hold_gekokujyo_movement = no
+			NOT = {
+				is_in_faction_with = SEJ
+			}
+		}
+	}
+
+	production_speed_buildings_factor = SEJ.SEJ_member_buff_building
+	consumer_goods_factor = SEJ.SEJ_member_buff_consumer
+	industrial_capacity_factory = SEJ.SEJ_member_buff_factory
+	experience_gain_army_factor = SEJ.SEJ_member_buff_exp
+	training_time_army_factor = SEJ.SEJ_member_buff_training
+	army_core_attack_factor = SEJ.SEJ_member_buff_core_atk
+	army_core_defence_factor = SEJ.SEJ_member_buff_core_def
+	army_morale_factor = SEJ.SEJ_member_buff_morale
+}

@@ -1,0 +1,25 @@
+state={
+	id=573
+	name="STATE_573"
+	provinces={
+		103 131 342 374 448 822 1669 2029 2879 2892 3053 
+	}
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s5
+	manpower=105789
+	buildings_max_level_factor=1.000
+	local_supplies=2.5.000
+}

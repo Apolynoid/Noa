@@ -1,0 +1,555 @@
+focus_tree = {
+  id = SCA_puppet_focus
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      OR = {
+        tag = WAK
+        tag = PRI
+        tag = GRS
+      }
+    }
+  }
+
+  shared_focus = SCA_puppet_jun_shi_xian_zhuang
+  shared_focus = SCA_puppet_jing_ji_xian_zhuang
+  shared_focus = ty_medium_main 
+
+  continuous_focus_position = { x = 1500 y = 1800 }
+  default = no
+
+  # 审视局势
+  focus = {
+    id = SCA_puppet_shen_shi_ju_shi
+    icon = GFX_focus_domestic_affairs
+    cost = 7
+    x = 24
+    y = 1
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    completion_reward = {
+      add_political_power = 50
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重视生产
+  focus = {
+    id = SCA_puppet_zhong_shi_sheng_chan
+    icon = GFX_goal_generic_production
+    cost = 7
+    x = -3
+    y = 1
+
+    relative_position_id = SCA_puppet_shen_shi_ju_shi
+
+    prerequisite = {
+      focus = SCA_puppet_shen_shi_ju_shi
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1.0
+        uses = 1
+        category = jiegou
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 建筑技术进步
+  focus = {
+    id = SCA_puppet_jian_zhu_ji_shu_jin_bu
+    icon = GFX_goal_generic_construction
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_zhong_shi_sheng_chan
+
+    prerequisite = {
+      focus = SCA_puppet_zhong_shi_sheng_chan
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1.0
+        uses = 1
+        category = build
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 地区工业开发
+  focus = {
+    id = SCA_puppet_di_qu_gong_ye_kai_fa
+    icon = GFX_focus_production
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_jian_zhu_ji_shu_jin_bu
+
+    prerequisite = {
+      focus = SCA_puppet_jian_zhu_ji_shu_jin_bu
+    }
+
+    completion_reward = {
+      random_owned_controlled_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+      random_owned_controlled_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+      random_owned_controlled_state = {
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 尝试稳定政局
+  focus = {
+    id = SCA_puppet_chang_shi_wen_ding_zheng_ju
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_shen_shi_ju_shi
+
+    prerequisite = {
+      focus = SCA_puppet_shen_shi_ju_shi
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 强化政府威望
+  focus = {
+    id = SCA_puppet_qiang_hua_zheng_fu_wei_wang
+    icon = GFX_focus_generic_improve_the_administration
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_chang_shi_wen_ding_zheng_ju
+
+    prerequisite = {
+      focus = SCA_puppet_chang_shi_wen_ding_zheng_ju
+    }
+
+    completion_reward = {
+      add_ideas = SCA_puppet_xing_zheng_qiang_hua_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加强基层组织建设
+  focus = {
+    id = SCA_puppet_jia_qiang_ji_ceng_zu_zhi_jian_she
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_qiang_hua_zheng_fu_wei_wang
+
+    prerequisite = {
+      focus = SCA_puppet_qiang_hua_zheng_fu_wei_wang
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = SCA_puppet_xing_zheng_qiang_hua_idea
+        add_idea = SCA_puppet_xing_zheng_qiang_hua_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 发放战争抚恤金
+  focus = {
+    id = SCA_puppet_fa_fang_zhan_zheng_fu_xu_jin
+    icon = GFX_focus_mex_privatisation
+    cost = 7
+    x = 3
+    y = 1
+
+    relative_position_id = SCA_puppet_shen_shi_ju_shi
+
+    prerequisite = {
+      focus = SCA_puppet_shen_shi_ju_shi
+    }
+
+    completion_reward = {
+      add_war_support = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 请求帝国武器支援
+  focus = {
+    id = SCA_puppet_qing_qiu_di_guo_wu_qi_zhi_yuan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_fa_fang_zhan_zheng_fu_xu_jin
+
+    prerequisite = {
+      focus = SCA_puppet_fa_fang_zhan_zheng_fu_xu_jin
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+            has_tech = waike
+        }
+        add_equipment_to_stockpile = {
+          type = gun_a
+          amount = 1000
+        }
+      }
+      else = {
+        add_equipment_to_stockpile = {
+          type = magic_core_a
+          amount = 1000
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 本地武器生产
+  focus = {
+    id = SCA_puppet_ben_di_wu_qi_sheng_chan
+    icon = GFX_goal_generic_construct_mil_factory
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_qing_qiu_di_guo_wu_qi_zhi_yuan
+
+    prerequisite = {
+      focus = SCA_puppet_qing_qiu_di_guo_wu_qi_zhi_yuan
+    }
+
+    completion_reward = {
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+      }
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+      }
+      random_owned_controlled_state = {
+        add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+            type = arms_factory
+            level = 1
+            instant_build = yes
+          }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重新审视帝国纽带
+  focus = {
+    id = SCA_puppet_chong_xin_shen_shi_di_guo_niu_dai
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 4
+
+    relative_position_id = SCA_puppet_shen_shi_ju_shi
+
+    prerequisite = {
+      focus = SCA_puppet_di_qu_gong_ye_kai_fa
+      focus = SCA_puppet_jia_qiang_ji_ceng_zu_zhi_jian_she
+      focus = SCA_puppet_ben_di_wu_qi_sheng_chan
+    }
+
+    completion_reward = {
+      add_political_power = 75
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 接受帝国领导
+  focus = {
+    id = SCA_puppet_jie_shou_di_guo_ling_dao
+    icon = GFX_focus_befriend_SCA
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = SCA_puppet_chong_xin_shen_shi_di_guo_niu_dai
+
+    prerequisite = {
+      focus = SCA_puppet_chong_xin_shen_shi_di_guo_niu_dai
+    }
+
+    completion_reward = {
+      add_opinion_modifier = {
+        target = SCA
+        modifier = SCA_puppet_jie_shou_di_guo_ling_dao_op
+      }
+      SCA = {
+        add_opinion_modifier = {
+          target = THIS
+          modifier = SCA_puppet_jie_shou_di_guo_ling_dao_op
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 帝国军事指导
+  focus = {
+    id = SCA_puppet_di_guo_jun_shi_ling_dao
+    icon = SCA_focus_imperial_military_aid
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = SCA_puppet_jie_shou_di_guo_ling_dao
+
+    prerequisite = {
+      focus = SCA_puppet_jie_shou_di_guo_ling_dao
+    }
+
+    completion_reward = {
+      army_experience = 30
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 派遣军校生使团
+  focus = {
+    id = SCA_puppet_pai_qian_jun_xiao_sheng_shi_tuan
+    icon = GFX_focus_generic_military_academy
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = SCA_puppet_di_guo_jun_shi_ling_dao
+
+    prerequisite = {
+      focus = SCA_puppet_di_guo_jun_shi_ling_dao
+    }
+
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 帝国训练操典
+  focus = {
+    id = SCA_puppet_di_guo_xun_lian_cao_dian
+    icon = GFX_goal_generic_small_arms
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = SCA_puppet_di_guo_jun_shi_ling_dao
+
+    prerequisite = {
+      focus = SCA_puppet_di_guo_jun_shi_ling_dao
+    }
+
+    completion_reward = {
+      add_ideas = SCA_puppet_di_guo_xun_lian_cao_dian_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 接受帝国工业体系
+  focus = {
+    id = SCA_puppet_jie_shou_di_guo_gong_ye_ti_xi
+    icon = SCA_focus_imperial_industrial_aid
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = SCA_puppet_jie_shou_di_guo_ling_dao
+
+    prerequisite = {
+      focus = SCA_puppet_jie_shou_di_guo_ling_dao
+    }
+
+    completion_reward = {
+      add_ideas = SCA_puppet_di_guo_gong_ye_ti_xi_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 帝国工业援助
+  focus = {
+    id = SCA_puppet_di_guo_gong_ye_yuan_zhu
+    icon = GFX_focus_generic_concessions
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = SCA_puppet_jie_shou_di_guo_gong_ye_ti_xi
+
+    prerequisite = {
+      focus = SCA_puppet_jie_shou_di_guo_gong_ye_ti_xi
+    }
+
+    completion_reward = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = 1
+      }
+      add_offsite_building = {
+        type = arms_factory
+        level = 1
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 吸引帝国投资者
+  focus = {
+    id = SCA_puppet_xi_yin_di_guo_tou_zi_zhe
+    icon = GFX_goal_generic_positive_trade_relations
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = SCA_puppet_jie_shou_di_guo_gong_ye_ti_xi
+
+    prerequisite = {
+      focus = SCA_puppet_jie_shou_di_guo_gong_ye_ti_xi
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = SCA_puppet_di_guo_gong_ye_ti_xi_idea
+        add_idea = SCA_puppet_di_guo_gong_ye_ti_xi_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 要求更高自治权
+  focus = {
+    id = SCA_puppet_yao_qiu_geng_gao_zi_zhi_quan
+    icon = unknown
+    cost = 7
+    x = 0
+    y = 3
+
+    relative_position_id = SCA_puppet_jie_shou_di_guo_ling_dao
+
+    prerequisite = {
+      focus = SCA_puppet_pai_qian_jun_xiao_sheng_shi_tuan
+      focus = SCA_puppet_di_guo_xun_lian_cao_dian
+      focus = SCA_puppet_di_guo_gong_ye_yuan_zhu
+      focus = SCA_puppet_xi_yin_di_guo_tou_zi_zhe
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = SCA_puppet_SCA_shi_li_quan_idea
+        add_idea = SCA_puppet_SCA_shi_li_quan_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+}

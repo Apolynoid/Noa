@@ -1,0 +1,48 @@
+
+state={
+	id=312
+	name="STATE_312"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			ADD_CORE_OF = SEJ
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+				radar_station = 0
+
+			}
+
+		}
+		146.1.1 = {
+			owner = SCA
+			ADD_CORE_OF = SEJ
+			ADD_CORE_OF = SCA
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		145 536 606 1451 1844 2085 2370 3075 3077 5820 5822 5824 5826 5829 5831 5844 5845 
+	}
+	manpower=1218
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

@@ -1,0 +1,96 @@
+TEG_calculate_war_effort = {
+    TEG = {
+        set_variable = {
+            TEG_war_effort = TEG_war_progress
+        }
+        divide_variable = {
+            TEG_war_effort = 10
+        }
+        round_variable = TEG_war_effort
+        add_to_variable = {
+            TEG_war_effort = 1
+        }
+    }
+}
+
+TEG_war_effort_overrange_check = {
+    TEG = {
+        clamp_variable = {
+            var = TEG_war_progress
+            min = 0
+            max = 100
+        }
+    }
+}
+
+TEG_war_progress_minus_1 = {
+    TEG = {
+        subtract_from_variable = {
+            TEG_war_progress = 1
+        }
+    }
+    TEG_war_effort_overrange_check = yes
+    TEG_calculate_war_effort = yes
+}
+
+TEG_war_progress_minus_3 = {
+    TEG = {
+        subtract_from_variable = {
+            TEG_war_progress = 3
+        }
+    }
+    TEG_war_effort_overrange_check = yes
+    TEG_calculate_war_effort = yes
+}
+
+TEG_war_progress_minus_10 = {
+    custom_effect_tooltip = TEG_war_progress_minus_10_tt
+    hidden_effect = {
+        TEG = {
+            subtract_from_variable = {
+                TEG_war_progress = 10
+            }
+        }
+        TEG_war_effort_overrange_check = yes
+        TEG_calculate_war_effort = yes
+    }
+}
+
+TEG_war_progress_minus_20 = {
+    custom_effect_tooltip = TEG_war_progress_minus_20_tt
+    hidden_effect = {
+        TEG = {
+            subtract_from_variable = {
+                TEG_war_progress = 20
+            }
+        }
+        TEG_war_effort_overrange_check = yes
+        TEG_calculate_war_effort = yes
+    }
+}
+
+TEG_war_progress_add_10 = {
+    custom_effect_tooltip = TEG_war_progress_add_10_tt
+    hidden_effect = {
+        TEG = {
+            add_to_variable = {
+                TEG_war_progress = 10
+            }
+        }
+        TEG_war_effort_overrange_check = yes
+        TEG_calculate_war_effort = yes
+    }
+}
+
+TEG_war_progress_add_20 = {
+    custom_effect_tooltip = TEG_war_progress_add_20_tt
+    hidden_effect = {
+        TEG = {
+            add_to_variable = {
+                TEG_war_progress = 20
+            }
+        }
+        TEG_war_effort_overrange_check = yes
+        TEG_calculate_war_effort = yes
+    }
+}

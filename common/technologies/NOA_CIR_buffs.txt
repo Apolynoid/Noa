@@ -1,0 +1,16 @@
+technologies = {
+    CIR_yao_jing_shu_liang_you_shi_tech = {
+        allow = {
+          	always = no   
+        }
+        category_army = {
+			combat_width = -5
+		}
+		category_support_battalions = {
+			combat_width = 5
+		}
+      	ai_will_do = {
+        	base = 0
+      	}
+    }
+}

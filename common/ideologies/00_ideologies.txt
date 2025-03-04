@@ -1,0 +1,252 @@
+ideologies = {
+	fandong = { #反动
+	
+		types = {
+		
+			fandong_type = {
+			
+			}
+
+			gekokujyoism = {
+				can_be_randomly_selected = no
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 100 10 10 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			join_faction_tension = 0.35
+			generate_wargoal_tension = 0.35
+
+			ARMY_CORE_ATTACK_FACTOR = 0.1
+			ARMY_CORE_DEFENCE_FACTOR = 0.1
+			supply_consumption_factor = -0.1
+			resistance_growth_on_our_occupied_states = 0.25
+
+			OL_change_cost_factor = -0.5
+		}
+
+		war_impact_on_world_tension = 1
+		
+
+		ai_communist = yes	
+		can_be_boosted = no
+	}
+
+	qinwai = { #改良
+	
+		types = {
+		
+			qinwai_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 5 80 5 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+
+		can_host_government_in_exile = yes
+
+		modifiers = {
+			join_faction_tension = 0.65
+			generate_wargoal_tension = 0.65
+
+			send_volunteer_factor = 0.5
+			conscription_factor = 0.05
+			political_power_gain = 0.15
+
+			FT_power_factor = 1 
+
+			OL_change_cost_factor = -0.5
+
+			PO_good_humanism_influence_factor = 0.25
+		}
+
+		war_impact_on_world_tension = 0.6
+		
+		
+		ai_communist = yes	
+		ai_democratic = yes	
+		can_be_boosted = no
+	}
+
+	neworder = { #新规
+	
+		types = {
+		
+			neworder_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 50 25 0 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			join_faction_tension = 0.5
+			generate_wargoal_tension = 0.5
+
+			ARMY_ORG_FACTOR = 0.1
+			offensive_war_stability_factor = 0.1
+
+			PO_battle_influence_factor = 0.25
+		}
+
+		war_impact_on_world_tension = 0.6
+		
+
+		# ai_communist = yes
+		ai_fascist = yes		
+		ai_communist = yes	
+		can_be_boosted = no
+	}
+	
+	guli = { #孤立
+	
+		types = {
+		
+			guli_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 75 75 75 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		modifiers = {
+			join_faction_tension = 0.8
+			generate_wargoal_tension = 0.8
+
+			justify_war_goal_time = 0.5
+			
+			defensive_war_stability_factor = 0.25
+
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = -0.15
+		}
+
+		war_impact_on_world_tension = 0.1
+		
+		ai_communist = yes	
+		ai_neutral = yes	
+		can_be_boosted = no
+	}
+	
+	oldorder = { #旧秩序
+	
+		types = {
+		
+			oldorder_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 100 15 75 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+
+		can_collaborate = yes
+
+		modifiers = {
+			join_faction_tension = 0.65
+			generate_wargoal_tension = 0.65
+			justify_war_goal_time = -0.25
+
+			drift_defence_factor = 0.3
+			conscription_factor = 0.05
+			supply_consumption_factor = -0.1
+
+			PO_battle_influence_factor = 0.5
+		}
+
+		war_impact_on_world_tension = 0.5
+		
+		ai_fascist = yes
+		ai_communist = yes	
+		ai_democratic = yes	
+		# ai_communist = yes		
+		can_be_boosted = no
+	}
+
+	oldgenso = { #幻想
+	
+		types = {
+		
+			oldgenso_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 255 120 120 }
+		rules = {
+			can_puppet = no
+			can_force_government = no
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		modifiers = {
+			join_faction_tension = 0.8
+			generate_wargoal_tension = 0.8
+
+			justify_war_goal_time = 0.35
+
+			drift_defence_factor = 0.3
+
+			consumer_goods_factor = -0.15
+			FT_power_factor = 1
+			PO_bad_influence_factor = -0.5
+			offensive_war_stability_factor = 0.25
+		}
+
+		war_impact_on_world_tension = 0.05
+		
+		ai_communist = yes	
+		ai_neutral = yes	
+		can_be_boosted = no
+	}
+
+
+}

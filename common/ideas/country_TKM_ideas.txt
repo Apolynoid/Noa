@@ -1,0 +1,533 @@
+ideas = {
+	hidden_ideas = {
+		# 对道具的贸易限制
+		TKM_dui_dao_ju_de_mao_yi_xian_zhi_idea = {
+			targeted_modifier = {
+				tag = TKM
+				trade_cost_for_target_factor = 4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+	}
+
+	country = {
+		# 不稳定的新生政权
+		TKM_bu_wen_ding_de_xin_sheng_zheng_quan_idea = {
+			picture = TKM_unstable_new_regime
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.3
+				war_support_factor = -0.3
+			}
+		}
+
+		TKM_bu_wen_ding_de_xin_sheng_zheng_quan_a_idea = {
+			picture = TKM_unstable_new_regime
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.2
+			}
+		}
+
+		# 人类的保护者
+		TKM_ren_lei_de_bao_hu_zhe_idea = {
+			picture = TKM_protector_of_human
+
+			cancel = {
+				HUM = {
+					NOT = {
+						has_idea = hum_TKM_de_bao_hu_idea
+					}
+					NOT = {
+						has_idea = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+					}
+				}
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				industrial_factory_donations = 1
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+			}
+		}
+		
+		# 薄弱的工业
+		TKM_bo_ruo_de_gong_ye_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_speed_industrial_complex_factor = -0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		TKM_bo_ruo_de_gong_ye_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		TKM_bo_ruo_de_gong_ye_b_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		TKM_bo_ruo_de_gong_ye_c_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+
+		TKM_bo_ruo_de_gong_ye_d_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		# 九十九工业军事顾问
+		TKM_TKM_jun_shi_gu_wen_idea = {
+			picture = TKM_TKM_military_advisor
+			modifier = {
+				experience_gain_army_factor = 0.1
+				training_time_army_factor = -0.1
+				max_dig_in_factor = 0.1
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+			}
+
+			cancel = {
+				has_global_flag = MRS_civil_war_end_flag
+			}
+		}
+
+		# 九十九扩军计划
+		TKM_jiu_shi_jiu_kuo_jun_ji_hua_idea = {
+			picture = SWE_varnplikt
+			modifier = {
+				weekly_manpower = 3
+				minimum_training_level = -0.2
+				training_time_army_factor = -0.2
+				mobilization_speed = 0.2
+			}
+		}
+
+		# 道具战争债券 tt
+		TKM_dao_ju_zhan_zheng_zhai_quan_tt_idea = {
+			picture = generic_bills
+			modifier = {
+				
+			}
+		}
+
+		TKM_dao_ju_zhan_zheng_zhai_quan_a_tt_idea = {
+			picture = generic_bills
+			modifier = {
+				political_power_cost = 0.15
+			}
+		}
+
+		# 战争债券偿付
+		TKM_zhan_zheng_zhai_quan_chang_fu_idea = {
+			picture = generic_war_bond_payment
+			modifier = {
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				training_time_army_factor = 0.2
+			}
+		}
+
+		# 道具生产运动
+		TKM_dao_ju_sheng_chan_yun_dong_idea = {
+			picture = ARG_construction_guilds
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		# 泛妖怪激进派
+		TKM_fan_yao_guai_ji_jin_pai_idea = {
+			picture = generic_radicalism
+			modifier = {
+				fandong_drift = 0.05
+				custom_modifier_tooltip = TKM_pan_youkai_radicalist_tt
+			}
+
+			cancel = {
+				OR = {
+					fandong < 0.05
+					is_subject = yes
+					has_capitulated = yes
+					TKM = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+					has_war_with = TKM
+				}
+			}
+
+			on_remove = {
+				hidden_effect = {
+					if = {
+						limit = {
+							exists = yes
+							has_capitulated = no
+							NOT = {
+								has_war_with = TKM
+							}
+							NOT = {
+								is_subject_of = TKM
+							}
+							TKM = {
+								exists = yes
+								is_subject = no
+							}
+						}
+					}
+					TKM = {
+						country_event = tkm.128
+					}
+				}
+			}
+		}
+
+		# 九十九经济保护
+		TKM_jiu_shi_jiu_jing_ji_bao_hu_idea = {
+			picture = TKM_protection_of_tsukumo
+			cancel = {
+				NOT = {
+					is_puppet_of = TKM
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.3
+				production_speed_buildings_factor = 0.1
+				surrender_limit = 0.5
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+		}
+
+		# 道具生产管理
+		TKM_dao_ju_sheng_chan_guan_li_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		TKM_dao_ju_sheng_chan_guan_li_a_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				no_supply_grace = 72
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+
+		# 国家建设计划
+		TKM_guo_jia_jian_she_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TKM_guo_jia_jian_she_ji_hua_a_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_rail_way_factor = 0.2
+			}
+		}
+
+		TKM_guo_jia_jian_she_ji_hua_b_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_rail_way_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		# 付丧神灵力特点
+		TKM_fu_sang_shen_ling_li_te_dian_industrial_0_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.2
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				industry_repair_factor = -0.2
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_industrial_1_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				NOA_TKM_monthly_sp_bead_cost = 1
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_industrial_2_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.15
+				NOA_TKM_monthly_sp_bead_cost = 4
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_industrial_3_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.1
+				industry_repair_factor = 0.1
+				NOA_TKM_monthly_sp_bead_cost = 9
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_industrial_4_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.3
+				consumer_goods_expected_value = -0.1
+				industrial_capacity_factory = 0.2
+				industry_repair_factor = 0.2
+				supply_node_range = 0.1
+				NOA_TKM_monthly_sp_bead_cost = 16
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_military_0_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				command_power_gain_mult = -0.2
+				experience_gain_army_factor = -0.2
+				land_reinforce_rate = -0.1
+				army_attack_factor = -0.1
+				org_loss_at_low_org_factor = 0.15
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_military_1_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				NOA_TKM_monthly_sp_bead_cost = 1
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_military_2_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				weekly_manpower = 1
+				training_time_army_factor = -0.1
+				army_morale_factor = 0.1
+				NOA_TKM_monthly_sp_bead_cost = 4
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_military_3_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				weekly_manpower = 3
+				training_time_army_factor = -0.1
+				army_defence_factor = 0.05
+				army_morale_factor = 0.1
+				org_loss_when_moving = -0.1
+				NOA_TKM_monthly_sp_bead_cost = 9
+			}
+		}
+
+		TKM_fu_sang_shen_ling_li_te_dian_military_4_idea = {
+			picture = TKM_tsukumogami_spirutual_power_feature
+			modifier = {
+				experience_gain_army_unit_factor = 0.1
+				weekly_manpower = 5
+				training_time_army_factor = -0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				pocket_penalty = -0.1
+				org_loss_when_moving = -0.1
+				NOA_TKM_monthly_sp_bead_cost = 16
+			}
+		}
+
+		# 高能灵气自给计划
+		TKM_gao_neng_ling_qi_zi_ji_ji_hua_idea = {
+			picture = TKM_energy_autarky_plan
+			modifier = {
+				hidden_modifier = {
+					base_fuel_gain = 0.7
+				}
+				custom_modifier_tooltip = TKM_fuel_gain_tt
+			}
+		}
+
+		TKM_gao_neng_ling_qi_zi_ji_ji_hua_a_idea = {
+			picture = TKM_energy_autarky_plan
+			modifier = {
+				hidden_modifier = {
+					base_fuel_gain = 0.7
+				}
+				custom_modifier_tooltip = TKM_fuel_gain_tt
+				local_resources_factor = 0.1
+			}
+		}
+
+
+		# 国家动员计划
+		TKM_guo_jia_dong_yuan_ji_hua_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		# 道具参谋部
+		TKM_dao_ju_can_mou_bu_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.1
+				planning_speed = 0.05
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_a_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.1
+				planning_speed = 0.05
+				command_power_gain_mult = 0.2
+				army_org_factor = 0.05
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_b_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.2
+				planning_speed = 0.05
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_c_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.2
+				planning_speed = 0.05
+				command_power_gain_mult = 0.2
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_d_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+				command_power_gain_mult = 0.2
+				army_org_factor = 0.1
+				army_morale_factor = 0.05
+				max_dig_in_factor = 0.1
+				pocket_penalty = -0.1
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_e_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.2
+				planning_speed = 0.15
+				command_power_gain_mult = 0.3
+				army_org_factor = 0.05
+				breakthrough_factor = 0.1
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				land_reinforce_rate = 0.1
+				command_abilities_cost_factor = -0.2
+				initiative_factor = 0.1
+				recon_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		TKM_dao_ju_can_mou_bu_f_idea = {
+			picture = general_staff
+			modifier = {
+				conscription = 0.04
+				max_planning_factor = 0.1
+				planning_speed = 0.2
+				command_power_gain_mult = 0.3
+				army_org_factor = 0.1
+				army_morale_factor = 0.05
+				breakthrough_factor = 0.1
+				max_dig_in_factor = 0.1
+				pocket_penalty = -0.1
+				land_reinforce_rate = 0.1
+				command_abilities_cost_factor = -0.2
+				initiative_factor = 0.1
+				recon_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		# 九十九军事改革
+		TKM_jiu_shi_jiu_jun_shi_gai_ge_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				max_command_power_mult = 0.1
+				land_reinforce_rate = 0.1
+				org_loss_when_moving = -0.1
+				max_dig_in_factor = 0.05
+			}
+		}
+
+		TKM_jiu_shi_jiu_jun_shi_gai_ge_a_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				max_command_power_mult = 0.1
+				land_reinforce_rate = 0.1
+				org_loss_when_moving = -0.1
+				max_dig_in_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+	}
+}

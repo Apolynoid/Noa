@@ -1,0 +1,155 @@
+﻿capital = 119
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        gun3 = 1
+            
+        #辅助
+
+        #专用辅助
+        magic_energy1 = 1
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+        mass_assault = 1   
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        jijianjianzao140 = 1
+            
+        #专用工业
+
+        #种族
+            
+    } 
+}
+143.7.1 = {
+    oob = "SEJ_143"
+    add_ideas = {
+    Pri_youkai
+    sub_Beast
+    low_economic_mobilisation
+    type3_manpowerlv7
+    Village
+    hawk2
+    close2
+    free_magic
+     
+    }
+    set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 100
+    }
+}
+146.1.1={
+    add_manpower = 100
+    set_country_flag = bunengqie_guli
+    set_country_flag = bunengqie_oldorder
+    set_country_flag = bunengqie_oldgenso
+    oob = "SEJ_146"
+    set_major = yes
+    add_ideas = {
+    Pri_youkai
+    civilian_economy
+    type3_manpowerlv2
+    Town
+    hawk1
+    open0
+    free_magic
+     
+    }
+
+    add_ideas = {
+        SEJ_xia_ke_shang_ge_ming_shi_yuan_di_idea
+        SEJ_yao_guai_zhong_zu_zhu_yi_pai_xi_idea
+        SEJ_di_yi_ge_wu_nian_ji_hua_idea
+        hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+        SEJ_dong_zhi_yao_guai_de_wei_xie_idea
+    }
+
+    set_variable = { SEJ_revolutionary_army_atk = -0.05 }
+    set_variable = { SEJ_revolutionary_army_def = -0.05 }
+    set_variable = { SEJ_revolutionary_army_mo = 0.1 }
+    set_variable = { SEJ_revolutionary_army_org = -0.1 }
+    set_variable = { SEJ_revolutionary_army_con = 0 }
+    set_variable = { SEJ_revolutionary_army_cop = 0 }
+    set_variable = { SEJ_revolutionary_army_mcp = 0 }
+    set_variable = { SEJ_revolutionary_army_mpf = 0 }
+    set_variable = { SEJ_revolutionary_army_psp = 0 }
+    set_variable = { SEJ_revolutionary_army_tta = 0 }
+
+    add_dynamic_modifier = {
+        modifier = SEJ_ge_ming_jun_idea
+    }
+
+    every_owned_state = {
+        limit = {
+            ST_race_is_Beast = yes
+        }
+        ST_race_penalty_remove = yes
+    }
+
+    create_faction = SEJ_gekokujyo_revolutionary_movement
+    add_to_faction = CIR
+
+    recruit_character = SEJ_smm
+    recruit_character = SEJ_sej
+    recruit_character = RMI_rmi
+    recruit_character = NIB_nib
+
+    promote_character = {
+        character = SEJ_sej
+        ideology = gekokujyoism
+    }
+
+    set_politics = {
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 5
+        neworder = 20
+        oldorder = 0
+        fandong = 65
+    }
+
+    country_event = {
+        id = sej.128
+        days = 30
+    }
+}

@@ -1,0 +1,819 @@
+technologies = {
+	zhiyuanzhuangbei = {
+
+		enable_equipments = {
+			support_equipment_1
+			support_equipment_2
+		}
+		dependencies = {
+		   gun1 = 1
+		   
+		}
+		
+		
+		path = {
+			leads_to_tech = zhihuixiaodui146
+			research_cost_coeff = 1
+		}	
+		
+		path = {
+			leads_to_tech = duzhanxiaodui146
+			research_cost_coeff = 1
+		}	
+		path = {
+			leads_to_tech = houqinbaoyang146
+			research_cost_coeff = 1
+		}	
+		path = {
+			leads_to_tech = zhanchanggongbing146
+			research_cost_coeff = 1
+		}					
+
+		path = {
+			leads_to_tech = houfangyiliao146
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 142
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 0 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhihuixiaodui146 = {
+
+		enable_subunits = {
+			sp_zhihuidui
+		}
+		
+		
+		path = {
+			leads_to_tech = zhihuixiaodui151
+			research_cost_coeff = 1
+		}	
+
+
+		research_cost = 2
+		start_year = 146
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhihuixiaodui151 = {
+		
+		path = {
+			leads_to_tech = zhihuixiaodui156
+			research_cost_coeff = 1
+		}	
+
+		sp_zhihuidui = {
+			initiative = 0.1
+			max_organisation = 50
+		}
+
+
+		research_cost = 2
+		start_year = 149
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhihuixiaodui156 = {
+		
+		path = {
+			leads_to_tech = zhihuixiaodui161
+			research_cost_coeff = 1
+		}	
+
+		sp_zhihuidui = {
+			initiative = 0.1
+			max_organisation = 50
+		}
+
+
+		research_cost = 2.3
+		start_year = 152
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhihuixiaodui161 = {
+		
+		path = {
+			leads_to_tech = zhihuixiaodui166
+			research_cost_coeff = 1
+		}	
+
+		sp_zhihuidui = {
+			initiative = 0.1
+			max_organisation = 50
+		}
+		
+
+
+		research_cost = 2.3
+		start_year = 155
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhihuixiaodui166 = {
+		
+		# path = {
+		# 	leads_to_tech = zhihuixiaodui156
+		# 	research_cost_coeff = 1
+		# }	
+
+		sp_zhihuidui = {
+			initiative = 0.1
+			max_organisation = 50
+		}
+
+		research_cost = 2.3
+		start_year = 158
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui146 = {
+
+		enable_subunits = {
+			sp_duzhanxiaodui
+		}
+		
+		path = {
+			leads_to_tech = duzhanxiaodui151
+			research_cost_coeff = 1
+		}	
+
+
+		research_cost = 2
+		start_year = 146
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui151 = {
+		
+		path = {
+			leads_to_tech = duzhanxiaodui156
+			research_cost_coeff = 1
+		}	
+
+		sp_duzhanxiaodui = {
+			default_morale = 0.6
+		}
+
+
+
+
+		research_cost = 2
+		start_year = 149
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui156 = {
+		
+		path = {
+			leads_to_tech = duzhanxiaodui161
+			research_cost_coeff = 1
+		}	
+
+		sp_duzhanxiaodui = {
+			default_morale = 0.6
+		}
+
+
+		research_cost = 2.3
+		start_year = 152
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui161 = {
+		
+		path = {
+			leads_to_tech = duzhanxiaodui166
+			research_cost_coeff = 1
+		}	
+
+		sp_duzhanxiaodui = {
+			default_morale = 0.6
+		}
+
+
+		research_cost = 2.3
+		start_year = 155
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui166 = {
+
+		sp_duzhanxiaodui = {
+			default_morale = 0.6
+		}
+
+
+		research_cost = 2.3
+		start_year = 158
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houqinbaoyang146 = {
+
+		enable_subunits = {
+			sp_houqinbaoyang
+		}
+		
+		path = {
+			leads_to_tech = houqinbaoyang151
+			research_cost_coeff = 1
+		}	
+
+
+		research_cost = 2
+		start_year = 146
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 2 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houqinbaoyang151 = {
+		
+		path = {
+			leads_to_tech = houqinbaoyang156
+			research_cost_coeff = 1
+		}	
+
+		sp_houqinbaoyang = {
+			reliability_factor = 0.03
+			equipment_capture_factor = 0.03
+		}
+
+
+
+
+		research_cost = 2
+		start_year = 149
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 4 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houqinbaoyang156 = {
+		
+		path = {
+			leads_to_tech = houqinbaoyang161
+			research_cost_coeff = 1
+		}	
+
+		sp_houqinbaoyang = {
+			reliability_factor = 0.03
+			equipment_capture_factor = 0.03
+		}
+
+
+		research_cost = 2.3
+		start_year = 152
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 6 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houqinbaoyang161 = {
+		
+		path = {
+			leads_to_tech = houqinbaoyang166
+			research_cost_coeff = 1
+		}	
+
+		sp_houqinbaoyang = {
+			reliability_factor = 0.03
+			equipment_capture_factor = 0.03
+		}
+
+
+		research_cost = 2.3
+		start_year = 155
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houqinbaoyang166 = {
+
+		sp_houqinbaoyang = {
+			reliability_factor = 0.03
+			equipment_capture_factor = 0.03
+		}
+
+
+		research_cost = 2.3
+		start_year = 158
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing146 = {
+
+		enable_subunits = {
+			sp_zhanchanggongbing
+		}
+		
+		
+		path = {
+			leads_to_tech = zhanchanggongbing151
+			research_cost_coeff = 1
+		}	
+
+
+		research_cost = 2
+		start_year = 146
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 2 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing151 = {
+		
+		path = {
+			leads_to_tech = zhanchanggongbing156
+			research_cost_coeff = 1
+		}	
+
+		sp_zhanchanggongbing = {
+			entrenchment = 2
+
+			forest = {
+				defence = 0.05
+			}
+
+			hills = {
+				attack = 0.05
+			}
+
+			jungle = {
+				defence = 0.05
+			}
+
+			marsh = {
+				attack = 0.05
+			}
+
+			fort = {
+				defence = 0.05
+				attack = 0.10
+			}
+
+			river = {
+				defence = 0.05
+			}
+		}
+
+
+		research_cost = 2
+		start_year = 149
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 4 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing156 = {
+		
+		path = {
+			leads_to_tech = zhanchanggongbing161
+			research_cost_coeff = 1
+		}	
+
+		sp_zhanchanggongbing = {
+			entrenchment = 2
+
+			fort = {
+				attack = 0.1
+			}
+
+			river = {
+				attack = 0.1
+			}
+		}
+
+
+		research_cost = 2.3
+		start_year = 152
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 6 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing161 = {
+		
+		path = {
+			leads_to_tech = zhanchanggongbing166
+			research_cost_coeff = 1
+		}	
+
+		sp_zhanchanggongbing = {
+			entrenchment = 2
+			bamboo = {
+				defence = 0.05
+				attack = 0.1
+			}
+
+			volcano = {
+				attack = 0.2
+			}
+		}
+
+		research_cost = 2.3
+		start_year = 155
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing166 = {
+
+		sp_zhanchanggongbing = {
+			entrenchment = 2
+			urban = {
+				attack = 0.2
+			}
+		}
+
+		research_cost = 2.3
+		start_year = 158
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao146 = {
+
+		enable_subunits = {
+			sp_houfangyiliao
+		}
+		
+		
+		path = {
+			leads_to_tech = houfangyiliao151
+			research_cost_coeff = 1
+		}	
+
+
+		research_cost = 2
+		start_year = 146
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao151 = {
+		
+		path = {
+			leads_to_tech = houfangyiliao156
+			research_cost_coeff = 1
+		}	
+
+		sp_houfangyiliao = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+
+		research_cost = 2
+		start_year = 149
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao156 = {
+		
+		path = {
+			leads_to_tech = houfangyiliao161
+			research_cost_coeff = 1
+		}	
+
+		sp_houfangyiliao = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+
+		research_cost = 2.3
+		start_year = 152
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao161 = {
+		
+		path = {
+			leads_to_tech = houfangyiliao166
+			research_cost_coeff = 1
+		}	
+
+		sp_houfangyiliao = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+
+		research_cost = 2.3
+		start_year = 155
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao166 = {
+		
+		sp_houfangyiliao = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+
+		research_cost = 2.3
+		start_year = 158
+		folder = {
+			name = support_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

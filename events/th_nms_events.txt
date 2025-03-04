@@ -1,0 +1,984 @@
+add_namespace = nms
+# 命莲寺的派系斗争
+country_event = {
+	id = nms.101
+	title = nms.101.t
+	desc = nms.101.d
+	is_triggered_only = yes
+
+	option = {
+		name = nms.101.1
+	}
+}
+
+# 改良派发起内战
+country_event = {
+	id = nms.102
+	title = nms.102.t
+	desc = nms.102.d
+	is_triggered_only = yes
+
+	option = {
+		name = nms.102.1
+	}
+}
+
+# 种族派发起内战
+country_event = {
+	id = nms.103
+	title = nms.103.t
+	desc = nms.103.d
+	is_triggered_only = yes
+
+	option = {
+		name = nms.103.1
+	}
+}
+
+# 内战后将领处置
+country_event = {
+	id = nms.104
+	title = nms.104.t
+	desc = nms.104.d
+	is_triggered_only = yes
+
+	# 我们仍然欢迎她们
+	option = {
+		name = nms.104.1
+		add_political_power = -100
+		custom_effect_tooltip = NMS_get_civil_war_generals_tt
+		hidden_effect = {
+			XXX = {
+				if = {
+					limit = {
+						has_character = NMS_bkr
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_bkr
+					}
+					promote_character = {
+						character = NMS_bkr
+            			ideology = oldgenso_type
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_mouse
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_mouse
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_murasa
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_murasa
+					}
+					promote_character = {
+						character = NMS_bkr
+            			ideology = neworder_type
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_kyouko
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_kyouko
+					}
+					promote_character = {
+						character = NMS_kyouko
+            			ideology = fandong_type
+					}
+					promote_character = {
+						character = NMS_kyouko
+            			ideology = qinwai_type
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_syou
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_syou
+					}
+					promote_character = {
+						character = NMS_syou
+            			ideology = guli_type
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_nue
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_nue
+					}
+					promote_character = {
+						character = NMS_nue
+            			ideology = oldorder_type
+					}
+				}
+				if = {
+					limit = {
+						has_character = NMS_kumoi
+					}
+					set_nationality = {
+						target_country = ROOT
+						character = NMS_kumoi
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 新的NMS不需要她们
+	option = {
+		name = nms.104.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SCA NMS请求加入Faction
+country_event = {
+	id = nms.105
+	title = nms.105.t
+	desc = nms.105.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.105.1
+		ai_chance = {
+			base = 10
+		}
+		SCA = {
+			add_to_faction = NMS
+		}
+		NMS = {
+			country_event = noa_gen.101
+		}
+		hidden_effect = {
+			news_event = {
+				id = nms.122
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = nms.105.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.106
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = nms.106
+	title = nms.106.t
+	desc = nms.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.106.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = NMS_jia_ru_fei_hong_ti_xi
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = NMS_huan_xiang_xiang_he_xie_tiao_yue
+		}
+	}
+}
+
+# SCA NMS希望与我国展开合作
+country_event = {
+	id = nms.107
+	title = nms.107.t
+	desc = nms.107.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.107.1
+		ai_chance = {
+			base = 10
+		}
+		NMS = {
+			diplomatic_relation = {
+				country = SCA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		SCA = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				category = shield_weapons
+			}
+		}
+		NMS = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = infantry
+				category = artillery_tech
+			}
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.108
+			}
+		}
+	}
+
+	option = {
+		name = nms.107.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.109
+			}
+		}
+	}
+}
+
+# SCA同意
+country_event = {
+	id = nms.108
+	title = nms.108.t
+	desc = nms.108.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.108.1
+		effect_tooltip = {
+			NMS = {
+				diplomatic_relation = {
+					country = SCA
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			NMS = {
+				add_tech_bonus = {
+					bonus = 0.8
+					uses = 2
+					category = infantry
+					category = artillery_tech
+				}
+			}
+		}
+	}
+}
+
+# SCA拒绝
+country_event = {
+	id = nms.109
+	title = nms.109.t
+	desc = nms.109.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.109.1
+	}
+}
+
+# SRB问题的解决方案
+country_event = {
+	id = nms.110
+	title = nms.110.t
+	desc = nms.110.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 重新请求组建联邦
+	option = {
+		name = nms.110.1
+		trigger = {
+			is_neighbor_of = SRB
+		}
+		SRB = {
+			country_event = nms.111
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 1000
+				strength_ratio = {
+					tag = SRB
+					ratio > 2
+				}
+			}
+		}
+	}
+
+	# 要求她们臣服
+	option = {
+		name = nms.110.2
+		SRB = {
+			country_event = nms.112
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+
+	# 武力是唯一的解决方案
+	option = {
+		name = nms.110.3
+		create_wargoal = {
+			target = SRB
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# SRB NMS希望与我们重新组建联邦
+country_event = {
+	id = nms.111
+	title = nms.111.t
+	desc = nms.111.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.111.1
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 1000
+				strength_ratio = {
+					tag = NMS
+					ratio < 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				NMS = {
+					is_ai = yes
+				}
+			}
+			custom_effect_tooltip = NMS_SRB_transfer_to_NMS_tt
+			hidden_effect = {
+				NMS = {
+					change_tag_from = ROOT
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = NMS_SRB_game_over_warning_tt
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.114
+				set_cosmetic_tag = NMS_SRB
+				# news
+				news_event = {
+					id = nms.124
+					days = 5
+				}
+			}
+			# 将领移交
+			SRB = {
+				every_character = {
+					set_nationality = NMS
+					clr_character_flag = nationality_SRB
+            		set_character_flag = nationality_NMS
+				}
+			}
+			# 造核
+			SRB = {
+				every_core_state = {
+					add_core_of = NMS
+				}
+			}
+			# 吞并
+			NMS = {
+				annex_country = {
+					target = SRB
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nms.111.2
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = NMS
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				add = 100
+				strength_ratio = {
+					tag = NMS
+					ratio > 1
+				}
+			}
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.113
+			}
+		}
+	}
+}
+
+# SRB NMS要求我们臣服
+country_event = {
+	id = nms.112
+	title = nms.112.t
+	desc = nms.112.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.112.1
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 1000
+				strength_ratio = {
+					tag = NMS
+					ratio < 0.5
+				}
+			}
+		}
+		NMS = {
+			puppet = SRB
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.115
+			}
+		}
+	}
+
+	option = {
+		name = nms.112.2
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = NMS
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				add = 100
+				strength_ratio = {
+					tag = NMS
+					ratio > 1
+				}
+			}
+		}
+		hidden_effect = {
+			NMS = {
+				country_event = nms.113
+			}
+		}
+	}
+}
+
+# SRB拒绝了我们的要求
+country_event = {
+	id = nms.113
+	title = nms.113.t
+	desc = nms.113.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.113.1
+		create_wargoal = {
+			target = SRB
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+# SRB同意组建联邦
+country_event = {
+	id = nms.114
+	title = nms.114.t
+	desc = nms.114.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.114.1
+	}
+}
+
+# SRB同意接受我们的保护
+country_event = {
+	id = nms.115
+	title = nms.115.t
+	desc = nms.115.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nms.115.1
+	}
+}
+
+# 命莲寺改良派发起内战
+news_event = {
+	id = nms.116
+	title = nms.116.t
+	desc = nms.116.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.116.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.116.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# 命莲寺种族派发起内战
+news_event = {
+	id = nms.117
+	title = nms.117.t
+	desc = nms.117.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.117.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.117.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# 改良派最终在命莲寺取得权力
+news_event = {
+	id = nms.118
+	title = nms.118.t
+	desc = nms.118.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.118.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = nms.118.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.118.3
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# 种族派最终在命莲寺取得权力
+news_event = {
+	id = nms.119
+	title = nms.119.t
+	desc = nms.119.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.119.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = nms.119.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.119.3
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# 命莲寺改良派赢得内战
+news_event = {
+	id = nms.120
+	title = nms.120.t
+	desc = nms.120.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.120.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.120.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# 命莲寺种族派赢得内战
+news_event = {
+	id = nms.121
+	title = nms.121.t
+	desc = nms.121.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.121.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.121.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# NMS加入SCA.Faction
+news_event = {
+	id = nms.122
+	title = nms.122.t
+	desc = nms.122.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS/SCA
+	option = {
+		name = nms.122.1
+		trigger = {
+			OR = {
+				original_tag = NMS
+				original_tag = SCA
+			}
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = nms.122.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = NMS
+					original_tag = SCA
+				}
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.122.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = NMS
+					original_tag = SCA
+				}
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# NMS建立NMS.Faction
+news_event = {
+	id = nms.123
+	title = nms.123.t
+	desc = nms.123.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.123.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = nms.123.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.123.3
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# NMS_SRB的建立
+news_event = {
+	id = nms.124
+	title = nms.124.t
+	desc = nms.124.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# NMS
+	option = {
+		name = nms.124.1
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.124.2
+		trigger = {
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# NMS挑战SCA霸权
+news_event = {
+	id = nms.125
+	title = nms.125.t
+	desc = nms.125.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = NMS_war_against_SCA_tt
+		}
+		NMS = {
+			is_subject = no
+			has_offensive_war_with = SCA
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = NMS_war_against_SCA_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = nms.125.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# NMS
+	option = {
+		name = nms.125.2
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = nms.125.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = NMS
+				}
+			}
+		}
+	}
+}

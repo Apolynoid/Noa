@@ -1,0 +1,17 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	SCA_puppet_jie_shou_di_guo_ling_dao_op = {
+		value = 200
+		trade = yes
+	}
+}	
+

@@ -1,0 +1,47 @@
+﻿l_simp_chinese:
+kem_war.101.t:0 "[MSD.GetName]正在准备针对我们的军事行动"
+kem_war.101.d:0 "我们与[MSD.GetName]的边界传来消息称，[MSD.GetName]正在向边界进行大量军事人员调动，她们的目标很有可能是夺取我国的[206.GetName]领土。"
+kem_war.101.1:0 "我们必须做好准备"
+
+kem_war.102.t:0 "兽道战争"
+kem_war.102.d:0 "近日，[MSD.GetName]向[206.owner.GetName]宣战，两国已经进入战争状态。\n\n随着[MRS.GetName]在上一次战争中的失败，[MRS.GetName]在战后被迫割让了一部分领土作为战争赔偿。然而，[MSD.GetName]不满于作为战争胜利者没有获得宣称的[206.GetName]，决定通过武力手段来获得这块领土。[MSD.GetName]国内对这次战争普遍持有乐观态度，认为能够在较短时间内结束这场局部战争，而[MRS.GetName]不得不在国内紧急动员以满足战争需求。\n\n幻想乡的主要势力均未对这场冲突发表看法。"
+kem_war.102.1:0 "夺回我们的土地！"
+kem_war.102.2:0 "绝不能让她们得逞"
+kem_war.102.3:0 "上一次大战的余波仍在影响幻想乡"
+
+kem_war.103.t:0 "在[206.GetName]地区的军事行动失败"
+kem_war.103.d:0 "我们在[206.GetName]地区的军事行动未能取得预料之中的成效，由于国内外形势的变化，我们不得不撤出该地区。"
+kem_war.103.1:0 "一次惨痛的失败"
+
+kem_war.104.t:0 "在兽道战争中失败"
+kem_war.104.d:0 "由于我们在与[MSD.GetName]的战争中的劣势，我们不得不承认既定事实，将[206.GetName]割让给[MSD.GetName]。"
+kem_war.104.1:0 "糟糕"
+
+kem_war.105.t:0 "在[206.GetName]地区的军事胜利"
+kem_war.105.d:0 "我们在[206.GetName]地区的军事行动卓有成效，[MRS.GetName]被迫向我们割让[206.GetName]。"
+kem_war.105.1:0 "伟大的胜利！"
+
+kem_war.106.t:0 "兽道战争的胜利"
+kem_war.106.d:0 "我们在与[MSD.GetName]的战争中坚持的足够久的时间，[MSD.GetName]被迫与我们谈和。"
+kem_war.106.1:0 "太好了！"
+
+kem_war.107.t:0 "[MSD.GetName]希望与我们签署一份和平协定"
+kem_war.107.d:0 "随着战争进程越发对[MSD.GetName]不利，[MSD.GetName]希望与我们签署一份和平协定，双方退回战前边界并结束战争。"
+kem_war.107.1:0 "我们接受这份和平协定"
+kem_war.107.2:0 "必须彻底清除[MSD.GetName]威胁！"
+
+kem_war.108.t:0 "[MRS.GetName]拒绝和平协定"
+kem_war.108.d:0 "[MRS.GetName]拒绝与我们签署和平协定，这场战争已经升级为全面战争。"
+kem_war.108.1:0 "她们会为她们的狂妄付出代价"
+
+kem_war.109.t:0 "兽道战争的结束"
+kem_war.109.d_msd_total_victory:0 "令人震惊的事情发生了：[MRS.GetName]近日向[MSD.GetName]无条件投降，这场由[MSD.GetName]发起，由[MRS.GetName]扩大的战争最终仍以[MSD.GetName]的全面胜利而告终。\n\n[MSD.GetName]为了获取[206.GetName]地区而向[MRS.GetName]发起了战争，但战火最终蔓延到了[MSD.GetName]本土。[MRS.GetName]似乎被暂时的军事胜利所迷惑，拒绝了[MSD.GetName]提出的议和条件，将这场局部冲突升级成了全面战争。然而，最终[MSD.GetName]仍然取得了胜利，而[MRS.GetName]不得不承受比局部冲突严厉得多的结果。\n\n[MSD.GetName]虽然赢得了战争胜利，但国内似乎并没有庆祝胜利的氛围，也许是这次胜利的代价远远出乎了她们的想象。"
+kem_war.109.d_msd_victory:0 "随着[MSD.GetName]与[MRS.GetName]之间停战条约的签订，兽道战争最终以[MSD.GetName]的胜利告终，[MRS.GetName]被迫向[MSD.GetName]割让[206.GetName]。\n\n为了获取[206.GetName]地区，[MSD.GetName]向[MRS.GetName]发起了战争。最终，这场战争正如[MSD.GetName]所预料的，[MSD.GetName]的军队在短时间内击溃了[MRS.GetName]并给予了足够的压力，迫使[MRS.GetName]割让[206.GetName]以换取停火。\n\n[MRS.GetName]的失败无疑进一步加剧了魔法森林的分裂，而[MSD.GetName]正在庆祝她们的胜利。"
+kem_war.109.d_mrs_total_victory:0 "出乎幻想乡许多人意料的事情发生了：[MSD.GetName]发起的兽道战争最终以[MSD.GetName]的无条件投降告终，[MRS.GetName]在这场战争中取得了完全胜利。\n\n[MSD.GetName]为了获取[206.GetName]地区而向[MRS.GetName]发起了战争，但战火最终蔓延到了[MSD.GetName]本土。[MRS.GetName]拒绝了[MSD.GetName]提出的议和条件，将这场局部冲突升级成了全面战争，并最终逼迫[MSD.GetName]无条件投降。\n\n[MRS.GetName]举国欢庆这场不可思议的胜利，而幻想乡其他势力纷纷对此表示震惊。"
+kem_war.109.d_mrs_victory:0 "随着[MRS.GetName]与[MSD.GetName]之间停战条约的签订，兽道战争最终以[MRS.GetName]的胜利告终，[MRS.GetName]得以继续保留[206.GetName]的所有权。\n\n为了获取[206.GetName]地区，[MSD.GetName]向[MRS.GetName]发起了战争。然而，这场战争并不像[MSD.GetName]所想象的那么顺利，在战场上遭受挫折后，[MSD.GetName]无法承受进一步的战争投入，不得不撤军并与[MRS.GetName]议和。\n\n[MRS.GetName]国内正在庆祝这场来之不易的胜利，而[MSD.GetName]的失败在国内显然造成了严重不满。"
+kem_war.109.1_victory:0 "[MSD.GetName]的伟大胜利！"
+kem_war.109.1_phyrric_victory:0 "胜利的代价未免太大了些"
+kem_war.109.1_defeat:0 "一场灾难"
+kem_war.109.2_victory:0 "我们胜利了！"
+kem_war.109.2_defeat:0 "沉痛的打击"
+kem_war.109.3:0 "有趣"

@@ -1,0 +1,18 @@
+spriteTypes = {	
+	spriteType = { 
+		name = "GFX_unit_sp_palanquin_ship_icon_medium"								
+		textureFile = "gfx/interface/counters/divisions_large/support_unit_palanquin_ship_icon.png" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_palanquin_ship_icon_medium_white"							
+		textureFile = "gfx/interface/counters/divisions_small/support_unit_palanquin_ship_icon.png" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_palanquin_ship_icon_small"
+		texturefile = "gfx/interface/counters/divisions_small/support_unit_palanquin_ship_icon.png" 
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=545
+	name="STATE_545"
+	resources={
+		energy=0.000
+		powder = 6.0
+		metal = 5.0
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = HUM
+			add_core_of = HUM
+			buildings = {
+				infrastructure = 7
+				industrial_complex = 5
+				arms_factory = 3
+
+			}
+
+		}
+	}
+
+	provinces={
+		1217 1804 3472 3474 
+	}
+	manpower=10823
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

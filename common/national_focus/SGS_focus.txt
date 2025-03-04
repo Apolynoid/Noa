@@ -1,0 +1,3990 @@
+focus_tree = {
+	id = SGS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SGS
+		}
+	}
+	default = no
+	shared_focus = ty_medium_main 
+	############经济线#############
+	focus = {
+		id = SGS_xiyingwaizi
+		icon = GFX_focus_mex_privatisation
+		cost = 10
+		prerequisite = {
+			focus = SGS_guihuagongyefazhan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_waizi_idea 
+		}
+		x = 1
+		y = 2
+
+	}
+	focus = {
+		id = SGS_fanrongdemaoyi
+		icon = GFX_focus_generic_royal_wedding
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojinglingxiudeyuanzhu
+		}
+		prerequisite = {
+			focus = SGS_yuhuatiandexieyi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SGS_fanrongdemaoyi_idea
+				remove_idea = SGS_waizi_idea
+			} 
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = SGS_jianligongyejichu
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = SGS_guihuagongyefazhan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = SGS_yaojingbinggongchang
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = SGS_jieshouyaojingnanmin
+		}
+		prerequisite = {
+			focus = SGS_riguangfadianchang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = SGS_gaishanxinanjiaotong
+		icon = GFX_focus_SOV_the_road_of_life
+		cost = 6
+		prerequisite = {
+			focus = SGS_guihuagongyefazhan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = SGS_gaishanjiaotong_idea
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = SGS_xingxingyunshuzaiju
+		icon = GFX_focus_SGS_gaishanjiaotong
+		cost = 6
+		prerequisite = {
+			focus = SGS_gaishanxinanjiaotong
+		}
+		available = {
+			num_of_factories > 15
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			set_technology = { yunshucheliang146 = 1 }
+			add_equipment_to_stockpile = {
+				type = truck_a
+				amount = 30
+				producer = SGS
+			}
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = SGS_jidongchegongchang
+		icon = GFX_focus_POL_warsaw_main_station
+		cost = 10
+		prerequisite = {
+			focus = SGS_xingxingyunshuzaiju
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = SGS_saomangyundong
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = SGS_kaizhanjiaoyu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas  = SGS_saomangyundong_idea
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = SGS_jiadajiaoyukaizhi
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 6
+		prerequisite = {
+			focus = SGS_kaizhanjiaoyu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_jiaoyukaizhi_idea
+				days = 120
+			}
+			add_ideas = SGS_fuyudejiaoyuzijing_idea
+		}
+		x = 12
+		y = 2
+
+	}
+
+	focus = {
+		id = SGS_xinanhuanxiangxiangzhiguang
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 6
+		prerequisite = {
+			focus = SGS_yaojingbinggongchang
+		}
+		prerequisite = {
+			focus = SGS_jidongchegongchang
+		}
+		prerequisite = {
+			focus = SGS_yueguangyanjiusuo
+		}
+		prerequisite = {
+			focus = SGS_fanrongdemaoyi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_xinanhuanxiangxiangzhiguang_idea 
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = SGS_jujiaoneibu
+		icon = GFX_focus_SGS_jujiaoneibu
+		cost = 6
+		x = 5
+		y = 0
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SGS_guihuagongyefazhan
+		icon = GFX_focus_SGS_guihuagongyefazhan
+		cost = 10
+		prerequisite = {
+			focus = SGS_jujiaoneibu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = build
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = jiegou
+				add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industrys
+				}
+			}
+		}
+	}
+	focus = {
+		id = SGS_riguangfadianchang
+		icon = GFX_focus_SGS_riguangfadianchang
+		cost = 10
+		prerequisite = {
+			focus = SGS_jianligongyejichu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SGS
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 6
+		y = 3
+	}
+	focus = {
+		id = SGS_kaifahuangdi
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = SGS_guihuagongyefazhan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+			completion_reward = {
+				swap_ideas = {
+				add_idea = SGS_zhengzaikaifadetudi_idea
+				remove_idea = SGS_yuanshidetudi_idea
+				}
+			custom_effect_tooltip = SGS_kaifatudi_tt
+			set_country_flag = SGS_kaifatudi
+			}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = SGS_jieshouyaojingnanmin
+		icon = GFX_focus_SGS_jieshouyaojingnanmin
+		cost = 10
+		prerequisite = {
+			focus = SGS_kaifahuangdi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_jieshouyaojingnanmin_tt
+			set_country_flag = SGS_jieshouyaojingnanmin
+		}
+		x = 4
+		y = 3
+
+	}
+
+	focus = {
+		id = SGS_yuhuatiandexieyi
+		icon = GFX_focus_SGS_yutaiyanghuatiandexieyi
+		cost = 10
+		prerequisite = {
+			focus = SGS_xiyingwaizi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	    available = {
+			YUK = {
+				has_opinion = { 
+					target = SGS
+					value > -50
+				}
+			}
+			country_exists = YUK
+			YUK = {is_subject = no}
+			NOT = {has_war_with = YUK}
+        }
+		bypass = {
+			or = {
+				has_war_with = YUK
+				not = {country_exists = YUK}
+				YUK = {is_subject = yes}
+			}
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			YUK = {
+			country_event = {
+			id = sgs.1 
+			days = 3
+			}
+		}
+			custom_effect_tooltip = SGS_yuhuatiandexieyi2_tt
+			custom_effect_tooltip = SGS_yuhuatiandexieyi_tt
+		}
+	}
+	focus = {
+		id = SGS_yaojinglingxiudeyuanzhu
+		icon = GFX_focus_SGS_yaojinglingxiudeyuanzhu
+		cost = 10
+		prerequisite = {
+			focus = SGS_xiyingwaizi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		bypass = {
+			or = {
+				has_country_flag = SGS_womencaishilingxiu_flag
+				NOT = {country_exists = CIR}
+				CIR = {
+					has_war = yes
+				}
+				CIR = {
+					is_subject = yes
+				}
+				has_war_with = CIR
+			}
+		}
+		available = {
+			NOT = {has_completed_focus = SGS_womencaishilingxiu}
+			country_exists = CIR
+			CIR = {
+				has_war = no
+				is_subject = no
+			}
+			NOT = {has_war_with = CIR}
+			
+		}
+		completion_reward = {
+			CIR = {
+				country_event = {
+					id = sgs.5
+					days = 1
+				}
+			}
+		custom_effect_tooltip = SGS_yaojinglingxiudeyuanzhu_tt
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = SGS_kaizhanjiaoyu
+		icon = GFX_focus_SGS_kaizhangjiaoyu
+		cost = 10
+		prerequisite = {
+			focus = SGS_jujiaoneibu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_jichujiaoyu_idea
+			add_stability = 0.05
+		}
+		x = 11
+		y = 1
+		
+
+	}
+	focus = {
+		id = SGS_zhuanzhugaodengjiaoyu
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10
+		prerequisite = {
+			focus = SGS_jiadajiaoyukaizhi
+		}
+		mutually_exclusive = {
+			focus = SGS_zhuanzhuzhiyejiaoyu
+		}
+		available = {
+			num_of_factories > 20
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SGS_gaodengjiaoyu_idea
+				remove_idea = SGS_jichujiaoyu_idea
+			}
+		}
+		x = 12
+		y = 3
+
+	
+	}
+	focus = {
+		id = SGS_zhuanzhuzhiyejiaoyu
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = SGS_saomangyundong
+		}
+		mutually_exclusive = {
+			focus = SGS_zhuanzhugaodengjiaoyu
+		}
+		available = {
+			num_of_factories > 15
+		} 
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_zhiyejiaoyu_idea
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = SGS_yueguangyanjiusuo
+		icon = GFX_focus_SGS_yueguangyanjiusuo
+		cost = 10
+		prerequisite = {
+			focus = SGS_zhuanzhugaodengjiaoyu
+			focus = SGS_zhuanzhuzhiyejiaoyu
+		}
+		available = {
+			num_of_factories > 30
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		x = 11
+		y = 4
+
+	}
+###政治线斯塔
+	focus = {
+		id = SGS_sanyuejingneibuhuiyi
+		icon = GFX_focus_SGS_sanyuejingneibuhuiyi
+		cost = 10
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_political_power = 200
+			country_event = sgs.16
+		}
+		x = 29
+		y = 0
+
+	}
+	focus = {
+		id = SGS_qingzhuerxiadexingguang
+		icon = GFX_focus_SGS_qingzhuerxiadexingguang
+		cost = 10
+		prerequisite = {
+			focus = SGS_sanyuejingneibuhuiyi
+		}
+		mutually_exclusive = {
+			focus = SGS_shanyaoderiguang
+			focus = SGS_jingmideyueguang
+		}
+		available = {
+			has_government = neworder
+			custom_trigger_tooltip = {
+				tooltip = SGS_jiudingduizhang_tt
+				has_country_flag = SGS_jiudingduizhang_flag
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.1
+			}
+			lobbyincrease = yes
+			custom_effect_tooltip = SGS_qingzhuerxiadexingguang_tt
+			SGS = {
+				add_to_variable = {
+					SGS_jiquandu = 20
+				}
+				add_to_variable = {
+					SGS_yaojingzhishangdang = 60
+				}
+				add_to_variable = {
+					SGS_yaojingshiyetuan = 40
+				}			
+				set_variable = {
+					SGS_yaojingshiyetuanyingxiang = 1
+				}
+				set_variable = {
+					SGS_jiquandu_meizhou = 0.1
+				}
+			}
+		}
+		x = 19
+		y = 1
+
+	}
+	focus = {
+		id = SGS_yaojingwansui
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = SGS_qingzhuerxiadexingguang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 19
+		y = 2
+		completion_reward = {
+			every_country = {
+				limit = {
+					NOT = { has_idea = Fairy }
+					NOT = { is_in_faction_with = CIR }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SGS_zhongzuzhuyizhe_op
+				}
+			}
+			add_ideas = SGS_yaojingwansui_idea 
+			conservativedecrease = yes
+		}
+	}
+	focus = {
+		id = SGS_yaojingweidui
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = SGS_qingzhuerxiadexingguang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = SGS_yaojingweidui_idea
+		}
+		x = 16
+		y = 2
+
+	}
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = SGS_womencaishilingxiu
+		icon = GFX_focus_fra_le_deluge
+		cost = 10
+		prerequisite = {
+			focus = SGS_xuanchuangongshi
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {	
+				custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+					and = {
+						or = {
+							SGS = { owns_state = 194 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 194
+							}
+						}
+						or = {
+							SGS = { owns_state = 144 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 144
+							}
+						}
+						or = {
+							SGS = { owns_state = 179 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 179
+							}
+						}
+						or = {
+							SGS = { owns_state = 194 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 194
+							}
+						}
+					
+						or = {
+							SGS = { owns_state = 157 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 157
+							}
+						}
+						or = {
+							SGS = { owns_state = 120 }
+							any_other_country = {
+							is_subject_of = SGS
+								owns_state = 120
+							}
+						}
+						or = {
+							SGS = { owns_state = 100 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 100
+							}
+						}
+						or = {
+							SGS = { owns_state = 125 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 125
+							}
+						}
+						or = {
+							SGS = { owns_state = 142 }
+							any_other_country = {
+								is_subject_of = SGS
+								owns_state = 142
+							}
+						}
+					}
+				
+			}
+		}
+		completion_reward = {
+			set_rule = { can_create_factions= yes }
+			set_country_flag = SGS_womencaishilingxiu_flag
+			add_ideas = SGS_yaojinglingxiu_idea
+		}
+		x = 17
+		y = 4
+	}
+	
+	
+	
+	focus = {
+		id = SGS_xuanchuangongshi
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojingweidui
+		}
+		prerequisite = {
+			focus = SGS_yaojingwansui
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_xuanchuangongshi_idea
+				days = 365 
+			}
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = SGS_xiangtaiyanghuatian
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = SGS_xuanchuangongshi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories > 50
+			is_subject = no
+			YUK = {
+				is_subject = no
+			}
+		}
+		completion_reward = {
+			YUK = {
+				country_event = sgs.26
+			}
+			custom_effect_tooltip = SGS_xiangtaiyanghuatian_tt
+			set_country_flag = SGS_weikaizhan_flag
+			SGS = {
+				add_opinion_modifier = {
+					target = YUK
+					modifier = SGS_gansheneizheng_op
+				}
+			}
+			lobbyincrease = yes
+		}
+		
+		x = 15
+		y = 4
+
+	}
+	
+	focus = {
+		id = SGS_jiejishehui
+		icon = GFX_focus_SGS_jiejishehui 
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojingwansui
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_jiejishehui_idea 
+			conservativedecrease = yes
+		}
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = SGS_xinaoyizu
+		icon = GFX_focus_SGS_xinaoyizu 
+		cost = 10
+		prerequisite = {
+			focus = SGS_jiejishehui
+		}
+		prerequisite = {
+			focus = SGS_xuanchuangongshi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_xinaoyizu_idea
+			custom_effect_tooltip = SGS_xinaoyizu_tt
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = SGS_qianyimohua
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10
+		prerequisite = {
+			focus = SGS_xinaoyizu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_qianyimohua_idea
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = SGS_chulizhanlingqu
+		icon = GFX_focus_SGS_chulizhanlingqu
+		cost = 4
+		prerequisite = {
+			focus = SGS_qingzhuerxiadexingguang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {	
+			custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+				and = {
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					or = {
+						SGS = { owns_state = 144 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 144
+						}
+					}
+					or = {
+						SGS = { owns_state = 179 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 179
+						}
+					}
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					
+					or = {
+						SGS = { owns_state = 157 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 157
+						}
+					}
+					or = {
+						SGS = { owns_state = 120 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 120
+						}
+					}
+					or = {
+						SGS = { owns_state = 100 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 100
+						}
+					}
+					or = {
+						SGS = { owns_state = 125 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 125
+						}
+					}
+					or = {
+						SGS = { owns_state = 142 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 142
+						}
+					}
+				}
+				
+			}
+		}
+		
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = SGS_lianxizhanlingquyaojing
+		icon = GFX_focus_SGS_lianxizhanlingquyaojing
+		cost = 6
+		prerequisite = {
+			focus = SGS_chulizhanlingqu
+		}
+		prerequisite = {
+			focus = SGS_yaojingwansui
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_lianxizhanlingquyaojing_idea
+				days = 30
+			}
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = SGS_paiqiangongzuodui
+		icon = GFX_focus_POL_sanation_right
+		cost = 6
+		prerequisite = {
+			focus = SGS_chulizhanlingqu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_gongzuodui_idea
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = SGS_jieguanshengchanziliao
+		icon = GFX_focus_SGS_jieguanshengchanziliao 
+		cost = 10
+		prerequisite = {
+			focus = SGS_lianxizhanlingquyaojing
+		}
+		prerequisite = {
+			focus = SGS_paiqiangongzuodui
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_kongzhishengchanziliao_idea
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = SGS_yunxuchixie
+		icon = GFX_focus_SGS_pingmingchixie
+		cost = 10
+		prerequisite = {
+			focus = SGS_lianxizhanlingquyaojing
+		}
+		prerequisite = {
+			focus = SGS_paiqiangongzuodui
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_yaojingpingmingchixie_idea
+		}
+		x = 23
+		y = 4
+
+	}
+	focus = { 
+		id = SGS_yaoqiuwanquankongzhi
+		icon = GFX_focus_SGS_yaoqiuwanquankongzhi
+		cost = 8
+		prerequisite = {
+			focus = SGS_yunxuchixie
+		}
+		prerequisite = {
+			focus = SGS_jieguanshengchanziliao
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_zhenghekongzhiqu_idea
+				days = 180
+			}
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = SGS_tiaodonghuatian
+		icon = GFX_focus_SGS_tiaodonghuatian 
+		cost = 6
+		prerequisite = {
+			focus = SGS_xiangtaiyanghuatian
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_tiaodongyaojingbaodong2_tt
+				not = {
+					has_country_flag = SGS_chuanbolinian_flag
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SGS_tiaodongyaojingbaodong3_tt
+				check_variable = {
+					SGS_linianshengfen > 2.99
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_tiaodongyaojingbaodong_tt
+			custom_effect_tooltip = SGS_tiaodongyaojingbaodong3_tt
+			YUK = {
+				country_event = sgs.27
+			}
+			clr_country_flag = SGS_weikaizhan_flag
+			set_country_flag = SGS_weikaizhan2_flag 
+		}
+			
+		x = 15
+		y = 5
+		cancel_if_invalid = no
+	}
+	focus = {
+		id = SGS_jiefangyaojing
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 6
+		prerequisite = {
+			focus = SGS_womencaishilingxiu
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				num_of_factories < 100
+				has_army_manpower = { size < 5000 }
+				factor = 0
+			}
+		}
+		available ={
+			SCA = {
+				before_declare_war = yes
+			}
+			
+			is_subject = no
+		}
+		bypass = {
+			SCA = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = SCA
+
+		completion_reward = {
+			declare_war_on = {
+				target = SCA
+				type = puppet_wargoal_focus 
+			}
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = SGS_duoqugeminglingdaoquan
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 6
+		prerequisite = {
+			focus = SGS_jiefangyaojing
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				num_of_factories < 100
+				has_army_manpower = { size < 5000 }
+				factor = 0
+			}
+		}
+		available ={
+			CIR = {
+				before_declare_war = yes
+			}
+			
+			is_subject = no
+		}
+		bypass = {
+			CIR = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = CIR
+
+		completion_reward = {
+			declare_war_on = {
+				target = CIR
+				type = puppet_wargoal_focus 
+			}
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = SGS_chonghuiyaojingjushu
+		icon = GFX_focus_SGS_chonghuiyaojingjushu
+		cost = 4
+		prerequisite = {
+			focus = SGS_jiefangyaojing
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_state_claim = 210
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = SGS_chonghuidianbota
+		icon = GFX_focus_SGS_chongfandianbota
+		cost = 4
+		prerequisite = {
+			focus = SGS_jiefangyaojing
+		} 
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_state_claim = 138
+		}
+		x = 19
+		y = 6
+
+	}
+##########政治线露娜###########
+	focus = {
+		id = SGS_jingmideyueguang
+		icon = GFX_focus_SGS_jingmideyueguan
+		cost = 10
+		prerequisite = {
+			focus = SGS_sanyuejingneibuhuiyi
+		}
+		mutually_exclusive = {
+			focus = SGS_shanyaoderiguang
+			focus = SGS_qingzhuerxiadexingguang
+		}
+		ai_will_do = {
+			factor = 1000 
+		}
+		available = {
+			has_government = qinwai
+			custom_trigger_tooltip = {
+				tooltip = SGS_jiudingduizhang_tt
+				has_country_flag = SGS_jiudingduizhang_flag
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_qiyongzhongzhulianhe_tt
+			add_ideas = SGS_zhongzhulianhe_idea
+			lobbydecrease = yes
+			add_stability = 0.1
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.1
+			}
+			
+			
+			SGS = {
+				set_variable = {SGS_caogenyaoguai = 10}
+				set_variable = {SGS_shenming = 0}
+				set_variable = {SGS_tiangou = 10}
+				set_variable = {SGS_hetong = 10}
+				set_variable = {SGS_yaoguai = 10}
+				set_variable = {SGS_yaojing = 50}
+				set_variable = {SGS_youling = 0}
+				set_variable = {SGS_fashi = 10}
+				set_variable = {SGS_renlei = 0}
+				set_variable = {SGS_yaoshou = 10}
+				set_country_flag = {
+					flag = SGS_lianhedushijian1_flag 
+					value = 1 
+					days = 200
+				}
+				set_country_flag = {
+					flag = SGS_lianhedushijian2_flag 
+					value = 1 
+					days = 400
+				}
+			}
+			
+			
+		}
+		x = 37
+		y = 1
+
+	}
+	focus = {
+		id = SGS_lianmingjun
+		icon = GFX_focus_hol_liberation
+		cost = 10
+		prerequisite = {
+			focus = SGS_jingmideyueguang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_lianmengjun_idea
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = SGS_tiaojiemaodun
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = SGS_lianmingjun
+		}
+		prerequisite = {
+			focus = SGS_zujianxinantongyizhanxie
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			AKI = {
+				before_declare_war = yes
+			}
+			is_subject = no
+			has_idea = SGS_tuanjiexieding_idea
+		}
+		bypass = {
+			AKI = {
+				bypass_declare_war = yes
+			}
+			not = {has_idea = SGS_tuanjiexieding_idea}
+		}
+		will_lead_to_war_with = AKI
+		completion_reward = {
+			custom_effect_tooltip = SGS_tiaojiemaodun_tt
+			country_event = sgs.43
+		}
+		x = 36
+		y = 3
+
+	}
+	focus = {
+		id = SGS_zujianxinantongyizhanxie
+		icon = GFX_goal_generic_improve_relations
+		cost = 4
+		prerequisite = {
+			focus = SGS_jingmideyueguang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			create_faction = SGS_xinantongyizhanxian		
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = SGS_jiejuexinandongluan
+		icon = GFX_focus_POL_reassert_silesian_claims
+		cost = 3
+		prerequisite = {
+			focus = SGS_tiaojiemaodun
+		}
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_war_with = MEL
+			}
+		}
+		available ={
+			AKI = {
+				before_declare_war = yes
+			}
+			is_subject = no
+		}
+		bypass = {
+			AKI = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = AKI
+
+		completion_reward = {
+			declare_war_on = {
+				target = AKI
+				type = puppet_wargoal_focus 
+			}
+		}
+		x = 36
+		y = 4
+
+	}
+	focus = {
+		id = SGS_zujianlianhebumen
+		icon = GFX_focus_chi_examination_yuan
+		cost = 10
+		prerequisite = {
+			focus = SGS_jingmideyueguang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_zujianlianhebumen_tt
+		}
+		x = 40
+		y = 2
+
+	}
+	focus = { 
+		id = SGS_tuanjieniebugezu
+		icon = GFX_focus_generic_royal_wedding
+		cost = 10
+		prerequisite = {
+			focus = SGS_zujianlianhebumen
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_xinagezhouzujingrubumen_tt
+			add_political_power = 100
+			SGS = {
+				add_to_variable = {SGS_caogenyaoguai = 5}
+				add_to_variable = {SGS_shenming = 5}
+				add_to_variable = {SGS_tiangou = 5}
+				add_to_variable = {SGS_hetong = 5}
+				add_to_variable = {SGS_yaoguai = 5}
+				add_to_variable = {SGS_yaojing = 5}
+				add_to_variable = {SGS_youling = 5}
+				add_to_variable = {SGS_fashi = 5}
+				add_to_variable = {SGS_renlei =5}
+				add_to_variable = {SGS_yaoshou = 5}
+			}
+			SGS = {
+				clamp_variable = {
+					var = SGS_caogenyaoguai 
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_shenming
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_tiangou
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_hetong
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_yaoguai
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_yaojing
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_youling
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_fashi
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_renlei
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = SGS_yaoshou
+					min = 0
+					max = 100
+				}
+			}
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = SGS_fahuigezutechang
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = SGS_tuanjieniebugezu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_fahuigezutechang_tt 
+		}
+		x = 39
+		y = 4
+
+	}
+	focus = {
+		id = SGS_zhongzupingdengfaan
+		icon = GFX_focus_generic_treaty
+		cost = 4
+		prerequisite = {
+			focus = SGS_zujianlianhebumen
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_zujianlianhebumen_tt
+		}
+		x = 41
+		y = 3
+
+	}
+	focus = {
+		id = SGS_guojiabaoshe
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		cost = 10
+		prerequisite = {
+			focus = SGS_zhongzupingdengfaan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_zujianlianhebumen_tt
+			add_ideas = SGS_yueguangbaoshe_idea
+		}
+		x = 41
+		y = 4
+
+	}
+	focus = {
+		id = SGS_shenhuapingdenglinian
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = SGS_guojiabaoshe
+		}
+		prerequisite = {
+			focus = SGS_fahuigezutechang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_shenhuapingdenglinian_idea
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = SGS_dazaoguojiarentong
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = SGS_fahuigezutechang
+		}
+		prerequisite = {
+			focus = SGS_guojiabaoshe
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_guojiarentong_idea
+		}
+		x = 39
+		y = 5
+
+	}
+	focus = {
+		id = SGS_duiwaikuozhang
+		icon = GFX_focus_hol_gateway_to_europe
+		cost = 10
+		prerequisite = {
+			focus = SGS_jiejuexinandongluan
+		}
+		mutually_exclusive = {
+			focus = SGS_anxingfazhan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_duiwaikuozhang_idea
+		}
+		x = 35
+		y = 5
+
+	}
+	focus = {
+		id = SGS_jiejuexianzhe 
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = SGS_duiwaikuozhang
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				or = {
+					has_army_manpower = { size < 10000 }
+					has_war = yes
+				}
+				factor = 0
+			}
+		}
+		available ={
+			OKI = {
+				before_declare_war = yes
+			}
+			is_subject = no
+		}
+		bypass = {
+			OKI = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = AKI
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_dajixianzhe_idea
+				days = 300
+			} 
+			declare_war_on = {
+				target = OKI
+				type = puppet_wargoal_focus 
+			}
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = SGS_anxingfazhan
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 10
+		prerequisite = {
+			focus = SGS_jiejuexinandongluan
+		}
+		mutually_exclusive = {
+			focus = SGS_duiwaikuozhang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_anxingfazhan_idea
+		}
+		x = 37
+		y = 5
+
+	}
+	focus = {
+		id = SGS_suoguo
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = SGS_anxingfazhan
+		} 
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_suoguo_idea
+		}
+		x = 37
+		y = 6
+
+	}
+	focus = {
+		id = SGS_yigemingzu
+		icon = GFX_focus_SOV_my_brothers_keeper
+		cost = 10
+		prerequisite = {
+			focus = SGS_dazaoguojiarentong
+		}
+		prerequisite = {
+			focus = SGS_shenhuapingdenglinian
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_yigemingzu_tt
+		}
+		x = 40
+		y = 6
+
+	}
+################政治线桑尼###########
+	focus = {
+		id = SGS_shanyaoderiguang
+		icon = GFX_focus_SGS_xiaiezuojuderiguang
+		cost = 10
+		prerequisite = {
+			focus = SGS_sanyuejingneibuhuiyi
+		}
+		mutually_exclusive = {
+			focus = SGS_qingzhuerxiadexingguang
+			focus = SGS_jingmideyueguang
+		}
+		available = {
+			has_government = fandong
+			custom_trigger_tooltip = {
+				tooltip = SGS_jiudingduizhang_tt
+				has_country_flag = SGS_jiudingduizhang_flag
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			lobbyincrease = yes
+			add_stability = 0.1
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.1
+			}
+		}
+		x = 29
+		y = 1
+
+	}
+	focus = {
+		id = SGS_zenjiayaojinjueyiceng
+		icon = GFX_focus_SGS_zengjiayaojingjueyiceng
+		cost = 10
+		prerequisite = {
+			focus = SGS_shanyaoderiguang
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_zenjiayaojinjueyiceng_idea
+			add_political_power = 50
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = SGS_jiefangyaojingtongbao
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = SGS_zenjiayaojinjueyiceng
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+				and = {
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					or = {
+						SGS = { owns_state = 144 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 144
+						}
+					}
+					or = {
+						SGS = { owns_state = 179 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 179
+						}
+					}
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					
+					or = {
+						SGS = { owns_state = 157 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 157
+						}
+					}
+					or = {
+						SGS = { owns_state = 120 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 120
+						}
+					}
+					or = {
+						SGS = { owns_state = 100 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 100
+						}
+					}
+					or = {
+						SGS = { owns_state = 125 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 125
+						}
+					}
+					or = {
+						SGS = { owns_state = 142 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 142
+						}
+					}
+				}
+				
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_jiefangyaojingtongbao_tt
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = SGS_yangguangxianfa
+		icon = GFX_focus_SGS_yangguangxianfa
+		cost = 5
+		prerequisite = {
+			focus = SGS_zenjiayaojinjueyiceng
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_zhengzaiyanjiuxianfa_idea
+				days = 180
+			}
+			custom_effect_tooltip = SGS_yangguangxianfa_tt
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = SGS_xiuxishijianbaozhangfa
+		icon = GFX_focus_SGS_shuimianshijian
+		cost = 10
+		prerequisite = {
+			focus = SGS_yangguangxianfa
+		}
+		available = {
+			not = {has_idea = SGS_zhengzaiyanjiuxianfa_idea}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_to_variable = {
+				sgs_yangguang_9 = 0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_1 = -0.05
+			}
+			add_to_variable = {
+				sgs_yangguang_2 = 0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_3 = 0.03
+			}
+			custom_effect_tooltip = SGS_xiuxishijianbaozhangfa_tt
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = SGS_shehuizhianfaan
+		icon = GFX_focus_SGS_xinanzhian
+		cost = 10
+		prerequisite = {
+			focus = SGS_yangguangxianfa
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			not = {has_idea = SGS_zhengzaiyanjiuxianfa_idea}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_shehuizhianfaan_tt
+			add_timed_idea = {
+				idea = SGS_qingweikangju_idea
+				days = 180
+			}
+			add_to_variable = {
+				sgs_yangguang_10 = -0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_11 = -0.05
+			}
+		}
+		x = 28
+		y = 4
+
+	}
+	focus = {
+		id = SGS_xinanzhizhifaan
+		icon = GFX_focus_SGS_zizhifaan
+		cost = 10
+		prerequisite = {
+			focus = SGS_shehuizhianfaan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_xinanzhizhifaan_tt
+			add_to_variable = {
+				sgs_yangguang_5 = -0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_12 = -20
+			}
+			add_to_variable = {
+				sgs_yangguang_11 = -0.15
+			}
+			add_to_variable = {
+				sgs_yangguang_13 = 0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_14 = 0.2
+			}
+		}
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = SGS_yaojingtesejingjifaan
+		icon = GFX_focus_SGS_yaojingjingji
+		cost = 10
+		prerequisite = {
+			focus = SGS_zenjiayaojinjueyiceng
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_yaojingjingjifaan_idea
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = SGS_jitihezuojingji
+		icon = GFX_focus_SOV_the_last_purge
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojingtesejingjifaan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_yaojingjingjifaan_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_yaojingjingjifaan2_idea
+					remove_idea = SGS_yaojingjingjifaan_idea
+				}
+			}
+			else = {
+				add_ideas = SGS_yaojingjingjifaan2_idea
+			}
+		}
+		x = 30
+		y = 4
+
+	}
+	focus = {
+		id = SGS_yaojingdewuqi
+		icon = GFX_focus_SGS_yaojingdewuqi
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojingtesejingjifaan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_yaojingdewuqi_idea
+			 add_tech_bonus = {
+              category = primary_weapons
+              uses = 2
+              bonus = 0.6
+          }
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = SGS_sikaodefangshi
+		icon = GFX_focus_SGS_yaojingdesikao
+		cost = 5
+		prerequisite = {
+			focus = SGS_jitihezuojingji
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_yaojingsixiangyanjiu_idea
+				days = 200
+			}
+			custom_effect_tooltip = SGS_sikaodefangshi_tt
+			
+		}
+		x = 30
+		y = 5
+
+	}
+	focus = {
+		id = SGS_yaojingdewenhua
+		icon = GFX_focus_SGS_yaojingdewenhua
+		cost = 6
+		prerequisite = {
+			focus = SGS_yaojingdewuqi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_yaojingdewenhua_idea
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 3
+				category = race
+			}
+		}
+		x = 32
+		y = 5
+
+	}
+	focus = {
+		id = SGS_yaojinggeminghuiyi
+		icon = GFX_focus_SOV_the_supreme_soviet 
+		cost = 10
+		prerequisite = {
+			focus = SGS_sikaodefangshi
+		}
+		prerequisite = {
+			focus = SGS_yaojingdewenhua
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_popularity = { 
+				ideology = fandong 
+				popularity = 0.1
+			}
+			add_ideas = SGS_yaojinggeminghuiyi_idea
+		}
+		x = 31
+		y = 6
+
+	}
+	focus = {
+		id = SGS_gemingdelingdaoquan
+		icon = GFX_focus_SOV_support_spanish_poum
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojinggeminghuiyi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+				and = {
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					or = {
+						SGS = { owns_state = 144 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 144
+						}
+					}
+					or = {
+						SGS = { owns_state = 179 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 179
+						}
+					}
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					
+					or = {
+						SGS = { owns_state = 157 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 157
+						}
+					}
+					or = {
+						SGS = { owns_state = 120 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 120
+						}
+					}
+					or = {
+						SGS = { owns_state = 100 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 100
+						}
+					}
+					or = {
+						SGS = { owns_state = 125 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 125
+						}
+					}
+					or = {
+						SGS = { owns_state = 142 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 142
+						}
+					}
+				}
+				
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					CIR = {
+						is_faction_leader = yes
+					}
+				}
+				country_event = sgs.59
+			}
+			else_if = {
+				limit = {
+					CIR = {
+						is_faction_leader = no
+						is_subject = no
+					}
+					country_exists = CIR
+				}
+				create_faction = SGS_gemingyaojingtongmeng
+				set_rule = { can_create_factions = yes }
+				CIR = {country_event = sgs.63}
+			}
+			else_if = {
+				create_faction = SGS_gemingyaojingtongmeng
+				set_rule = { can_create_factions = yes }
+			}
+		}
+		x = 32
+		y = 7
+
+	}
+	focus = {
+		id = SGS_gemingdeyaojing
+		icon = GFX_focus_SGS_gemingdeyaojing
+		cost = 10
+		prerequisite = {
+			focus = SGS_yaojinggeminghuiyi
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = fandongjiaqiang
+		}
+		x = 30
+		y = 7
+
+	}
+	focus = {
+		id = SGS_wanshanjingjiyufalv
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = SGS_jianlixinanyihuidasha
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_wanshanjingjiyufalv_tt
+			SGS = {
+				set_variable = {
+					SGS_lingshifaan = 0
+				}
+			}
+		}
+		x = 28
+		y = 7
+
+	}
+	focus = {
+		id = SGS_weilegengmeihaodeweilai
+		icon = GFX_focus_SGS_weilegengmeihaodeweilai 
+		cost = 10
+		prerequisite = {
+			focus = SGS_jianlixinanyihuidasha
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_weilegengmeihaodeweilai_idea
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+			custom_effect_tooltip  = SGS_weilegengmeihaodeweilai_tt
+				hidden_effect = {
+				SGS = {
+					add_ideas = SGS_yimingdeyaojing_idea
+					country_event ={
+						days = 200
+						id = sgs.62
+					}
+				}
+			}
+		}
+		
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = SGS_jianlixinanyihuidasha
+		icon = GFX_focus_generic_improve_the_administration 
+		cost = 10 
+		prerequisite = {
+			focus = SGS_xinanzhizhifaan
+		}
+		prerequisite = {
+			focus = SGS_yaojingzhinengfeipeifa
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			SGS = {
+				set_variable = {
+					SGS_jiandasha = 0
+				}
+				set_variable = {
+					SGS_jiandasha_meizhou = 0.8
+				}
+				set_country_flag = SGS_jianlixinanyihuidasha
+			}
+			custom_effect_tooltip = SGS_jianlixinanyihuidasha_tt
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = SGS_yaojingzhinengfeipeifa
+		icon = GFX_focus_SGS_zhinengfenpeifaan
+		cost = 10
+		prerequisite = {
+			focus = SGS_xiuxishijianbaozhangfa
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_yaojingzhinengfeipeifa_tt
+			add_to_variable = {
+				sgs_yangguang_4 = -0.15
+			}
+			add_to_variable = {
+				sgs_yangguang_5 = -0.05
+			}
+			add_to_variable = {
+				sgs_yangguang_6 = 0.1
+			}
+			add_to_variable = {
+				sgs_yangguang_7 = 0.1
+			}
+		}
+		x = 26
+		y = 5
+
+	}
+############西南动乱线#####
+	focus = {
+		id = SGS_xinanzhanluan
+		icon = GFX_focus_POL_riot_of_37
+		cost = 0.00 
+		bypass = {
+			has_country_flag = SW_xinanluanzhan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_xinanzhanluan_tt
+				has_country_flag = SW_xinanluanzhan
+			}
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = SGS_zhanzhengdongyuan
+		icon = GFX_focus_generic_industry_1
+		cost = 6
+		prerequisite  {
+			focus = SGS_xinanzhanluan
+		}
+		available = {
+			num_of_factories < 40
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_zhanzhengdongyuan_tt
+			add_ideas = SGS_zhanzhengdongyuan_idea
+		}
+		x = 9
+		y = 9
+		
+	}
+	focus = {
+		id = SGS_jingjidaolupushe
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 6
+		prerequisite = {
+			focus = SGS_xinanzhanluan
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_pushedaolu_idea
+				days = 60
+			}
+			build_railway = {
+				level = 1			
+					path = { 
+						4835 4825 583 4832
+					}
+			}
+			build_railway = {
+				level = 1			
+					path = { 
+						4832 4848 70 4849 4840
+					}
+			}
+			build_railway = {
+				level = 1			
+					path = { 
+						4832 4854 4872 4891
+					}
+			}
+			build_railway = {
+				level = 1			
+					path = { 
+						4891 4896 877 4882 4897
+					}
+			}
+		}
+		x = 11
+		y = 9
+
+	}
+	focus = {
+		id = SGS_dongyuanpingming
+		icon = GFX_focus_SOV_penal_battalions
+		cost = 3
+		prerequisite = {
+			focus = SGS_xinanzhanluan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 1000
+			279 = {
+				add_manpower = -200
+			}
+			272 = {
+				add_manpower = -200
+			}
+			248 = {
+				add_manpower = -200
+			}
+			385 = {
+				add_manpower = -200
+			}
+			386 = {
+				add_manpower = -200
+			}
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = SGS_shelizhanzhenguihuaju
+		icon = GFX_goal_generic_position_armies
+		cost = 3
+		prerequisite = {
+			focus = SGS_xinanzhanluan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_zhanzhengguihuaju_idea
+		}
+		x = 15
+		y = 9
+
+	}
+	focus = {
+		id = SGS_jianlilingshicanmoubu
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 3
+		prerequisite = {
+			focus = SGS_xinanzhanluan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip  = SGS_lingshicanmoubu_tt
+				not = {has_country_flag = SGS_canmoubu_flag}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_lingshicanmoubu_idea
+		}
+		x = 18
+		y = 9
+
+	}
+	focus = {
+		id = SGS_mingbingxunlianfaan
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 3
+		prerequisite = {
+			focus = SGS_dongyuanpingming
+		}
+		prerequisite = {
+			focus = SGS_shelizhanzhenguihuaju
+		}
+		available = {
+			num_of_factories < 50
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_mingbingxunlianfaan_idea
+			custom_effect_tooltip = SGS_mingbingxunlianfaan_tt
+		}
+		x = 14
+		y = 10
+
+	}
+	focus = {
+		id = SGS_jianhuafukashengchan
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 3
+		prerequisite = {
+			focus = SGS_shelizhanzhenguihuaju
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_jianhuafukashengchan_idea
+		}
+		x = 16
+		y = 10
+
+	}
+	focus = {
+		id = SGS_pingmingyunshudui
+		icon = GFX_focus_prc_infiltration
+		cost = 3
+		prerequisite = {
+			focus = SGS_dongyuanpingming
+		}
+		prerequisite = {
+			focus = SGS_jingjidaolupushe
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories < 40
+			custom_trigger_tooltip = {
+				tooltip = SGS_pingmingyunshudui2_tt
+				not = {has_country_flag = SGS_yunshudui_flag}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_pingmingyunshudui_tt
+			add_ideas = SGS_pingmingyunshudui_idea
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = SGS_zhengyongmingjianyunshuzaiju
+		icon = GFX_focus_generic_treaty
+		cost = 3
+		prerequisite = {
+			focus = SGS_jingjidaolupushe
+		}
+		completion_reward ={
+			add_war_support = -0.05
+			add_equipment_to_stockpile = {
+				type = yunshudui_a
+				amount = 150
+				producer = SGS
+			}
+		}
+		x = 10
+		y = 10
+
+	}
+	focus = {
+		id = SGS_yihaozuozhan
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 3
+		prerequisite = {
+			focus = SGS_jianlilingshicanmoubu
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				or = {
+					has_war_with = MEL
+					has_war_with = AKI
+					has_war_with = HU3
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = SGS_yihaozuozhan_idea
+				days = 600
+			}
+		}
+		x = 18
+		y = 10
+
+	}
+	focus = {
+		id = SGS_beicilinglan
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 3
+		prerequisite = {
+			focus = SGS_yihaozuozhan
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 147.5.1
+			}
+			modifier = {
+				factor = 1000
+				not = {has_war_with = AKI}
+				not = {has_war_with = HU3}
+			}
+			modifier = {
+				factor = 1000
+				not = {has_war_with = AKI}
+				MEL = {has_war_with = HU3}
+			}
+			modifier = {
+				factor = 1000
+				has_army_manpower = { size > 4000 }
+			}
+		}
+		available ={
+			MEL = {
+				before_declare_war = yes
+			}
+			is_subject = no
+			not = {has_government = qinwai}
+		}
+		bypass = {
+			MEL = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = MEL
+
+		completion_reward = {
+			declare_war_on = {
+				target = MEL
+				type = puppet_wargoal_focus 
+			}
+
+			if = {
+				limit = {
+					has_idea = SGS_tuanjiexieding_idea
+				}
+				remove_ideas = SGS_tuanjiexieding_idea
+				
+				MEL = {
+					country_event = sgs.22
+					country_event = {
+						id = sgs.23
+						days = 2
+					}
+				}
+			}
+			else_if = {
+				
+			}
+			
+		}
+		x = 18
+		y = 11
+	}
+	focus = {
+		id = SGS_zhongjieqiutian
+		icon = GFX_focus_SGS_zhongjieqiutian
+		cost = 3
+		prerequisite = {
+			focus = SGS_yihaozuozhan
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				or = {
+					has_army_manpower = { size < 2000 }
+					has_war = yes
+				}
+				factor = 0
+			}
+		}
+		available ={
+			AKI = {
+				before_declare_war = yes
+			}
+			is_subject = no
+			not = {has_government = qinwai}
+		}
+		bypass = {
+			AKI = {
+				bypass_declare_war = yes
+			}
+		}
+
+		will_lead_to_war_with = AKI
+
+		completion_reward = {
+			declare_war_on = {
+				target = AKI
+				type = puppet_wargoal_focus 
+			}
+		}
+		x = 16
+		y = 11
+	}
+##########统一西南线#######
+	focus = {
+		id = SGS_jianlixinantongyizhengquan
+		icon = GFX_focus_generic_the_suez
+		cost = 0
+		x = 29
+		y = 8
+		ai_will_do = {
+			factor = 100
+		}
+		available = {	
+			custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+				and = {
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					or = {
+						SGS = { owns_state = 144 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 144
+						}
+					}
+					or = {
+						SGS = { owns_state = 179 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 179
+						}
+					}
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					
+					or = {
+						SGS = { owns_state = 157 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 157
+						}
+					}
+					or = {
+						SGS = { owns_state = 120 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 120
+						}
+					}
+					or = {
+						SGS = { owns_state = 100 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 100
+						}
+					}
+					or = {
+						SGS = { owns_state = 125 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 125
+						}
+					}
+					or = {
+						SGS = { owns_state = 142 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 142
+						}
+					}
+				}
+				
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_kongzhixinanhuanxiangxiang_tt
+				and = {
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					or = {
+						SGS = { owns_state = 144 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 144
+						}
+					}
+					or = {
+						SGS = { owns_state = 179 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 179
+						}
+					}
+					or = {
+						SGS = { owns_state = 194 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 194
+						}
+					}
+					
+					or = {
+						SGS = { owns_state = 157 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 157
+						}
+					}
+					or = {
+						SGS = { owns_state = 120 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 120
+						}
+					}
+					or = {
+						SGS = { owns_state = 100 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 100
+						}
+					}
+					or = {
+						SGS = { owns_state = 125 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 125
+						}
+					}
+					or = {
+						SGS = { owns_state = 142 }
+						any_other_country = {
+							is_subject_of = SGS
+							owns_state = 142
+						}
+					}
+				}
+				
+			}	
+		}
+	}
+	focus = {
+		id = SGS_kuodaguanliaojigou
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = SGS_jianlixinantongyizhengquan
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_pangdadeguanliaoxitong_idea
+		}
+		x = 27
+		y = 9
+
+	}
+	focus = {
+		id = SGS_guihuaxinanhanxiangxiang
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = SGS_jianlixinantongyizhengquan
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_timed_idea = {
+				 idea = SGS_zhanhouguihua_idea
+				 days = 300
+			}
+		}
+		x = 31
+		y = 9
+	}
+
+	
+	focus = {
+		id = SGS_guangkuodetiandi
+		icon = GFX_focus_EST_estonia_is_scandinavia
+		cost = 2
+		prerequisite = {
+			focus = SGS_guihuaxinanhanxiangxiang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 33
+		y = 10
+
+	}
+	focus = {
+		id = SGS_yuqiushenxieshang
+		icon = GFX_focus_SGS_yuqiushenxieshang
+		cost = 6
+		prerequisite = {
+			focus = SGS_guangkuodetiandi
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			or = {
+				and = {
+					not = {country_exists = AKI}
+					SGS = {has_full_control_of_state = 125}
+				}
+				AKI = {is_subject_of = SGS}
+			}
+		}
+		completion_reward = {
+			country_event = sgs.40
+		}
+		x = 32
+		y = 11
+
+	}
+	focus = {
+		id = SGS_shiyongyaojingliliang
+		icon = GFX_focus_SGS_shiyongyaojingliliang  
+		cost = 5
+		prerequisite = {
+			focus = SGS_guangkuodetiandi
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_shiyongyaojingliliang_idea 
+		}
+		x = 34
+		y = 11
+
+	}
+	focus = {
+		id = SGS_zhongzhinongzuowo
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = SGS_shiyongyaojingliliang
+		}
+		prerequisite = {
+			focus = SGS_yuqiushenxieshang
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_zhongzhinongzuowo_tt
+		}
+		x = 33
+		y = 12
+
+	}
+	focus = {
+		id = SGS_nongyeqiji
+		icon = GFX_focus_spa_the_spanish_miracle
+		cost = 10
+		prerequisite = {
+			focus = SGS_zhongzhinongzuowo
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_jixingdejingji_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji2_idea
+					remove_idea = SGS_jixingdejingji_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji2_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji3_idea
+					remove_idea = SGS_jixingdejingji2_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji3_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji4_idea
+					remove_idea = SGS_jixingdejingji3_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji4_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_fadadejingji_idea
+					remove_idea = SGS_jixingdejingji4_idea
+				}
+			}
+			add_ideas = SGS_nongyeqiji_idea
+			custom_effect_tooltip = SGS_nongyeqiji_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = SGS_zhongzhinongzuowu_flag
+					}
+					add_manpower = 2000
+				}
+			}
+		}
+		x = 33
+		y = 13
+
+	}
+
+	focus = {
+		id = SGS_yaojingzhicheng
+		icon = GFX_focus_SGS_yaojingzhicheng
+		cost = 10
+		prerequisite = {
+			focus = SGS_shengchandianli
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_yaojingzhicheng_tt
+				SGS = {
+					check_variable = {
+						SGS_gongyehua = 4
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = SGS_yaojingzhicheng_idea
+			279 = {
+				add_dynamic_modifier = {modifier = SGS_yaojingzhicheng_modifier}
+			}
+			272 = {
+				add_dynamic_modifier = {modifier = SGS_yaojingzhicheng_modifier}
+			}
+			248 = {
+				add_dynamic_modifier = {modifier = SGS_yaojingzhicheng_modifier}
+			} 
+		}
+		x = 28
+		y = 13
+	}
+	focus = {
+		id = SGS_tiaozhenggongye
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = SGS_guihuaxinanhanxiangxiang
+		}
+		prerequisite = {
+			focus = SGS_kuodaguanliaojigou
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_jixingdejingji_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji2_idea
+					remove_idea = SGS_jixingdejingji_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji2_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji3_idea
+					remove_idea = SGS_jixingdejingji2_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji3_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji4_idea
+					remove_idea = SGS_jixingdejingji3_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji4_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_fadadejingji_idea
+					remove_idea = SGS_jixingdejingji4_idea
+				}
+			}
+			add_timed_idea = {
+				idea = SGS_tiaozhenggongyezhong_idea 
+				days = 120
+			}
+		}
+		x = 30
+		y = 10
+	}
+	focus = {
+		id = SGS_xinanhuanxiangxianggongyehua 
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = SGS_guihuaxinanhanxiangxiang
+		}
+		prerequisite = {
+			focus = SGS_kuodaguanliaojigou
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_jixingdejingji_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji2_idea
+					remove_idea = SGS_jixingdejingji_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji2_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji3_idea
+					remove_idea = SGS_jixingdejingji2_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji3_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji4_idea
+					remove_idea = SGS_jixingdejingji3_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji4_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_fadadejingji_idea
+					remove_idea = SGS_jixingdejingji4_idea
+				}
+			}
+			custom_effect_tooltip = SGS_xinanhuanxiangxianggongyehua_tt
+			SGS = {
+				add_to_variable = {
+					SGS_feipingliang = 10
+				}
+				add_to_variable = {
+					SGS_gongyejixie = 5
+				}
+				add_to_variable = {
+					SGS_gongyehua = 1
+				}
+				set_country_flag = SGS_xinanhuanxiangxianggongyehua_flag
+			}
+			248 = {set_state_flag = SGS_xinangongyehua_flag}
+			371 = {set_state_flag = SGS_xinangongyehua_flag}
+			272 = {set_state_flag = SGS_xinangongyehua_flag}
+			279 = {set_state_flag = SGS_xinangongyehua_flag}
+			385 = {set_state_flag = SGS_xinangongyehua_flag}
+			179 = {set_state_flag = SGS_xinangongyehua_flag}
+			393 = {set_state_flag = SGS_xinangongyehua_flag}
+			386 = {set_state_flag = SGS_xinangongyehua_flag}
+			194 = {set_state_flag = SGS_xinangongyehua_flag}
+			171 = {set_state_flag = SGS_xinangongyehua_flag}
+			150 = {set_state_flag = SGS_xinangongyehua_flag}
+			144 = {set_state_flag = SGS_xinangongyehua_flag}
+			124 = {set_state_flag = SGS_xinangongyehua_flag}
+			157 = {set_state_flag = SGS_xinangongyehua_flag}
+			167 = {set_state_flag = SGS_xinangongyehua_flag}
+			125 = {set_state_flag = SGS_xinangongyehua_flag}
+			108 = {set_state_flag = SGS_xinangongyehua_flag}
+			107 = {set_state_flag = SGS_xinangongyehua_flag}
+			126 = {set_state_flag = SGS_xinangongyehua_flag}
+			100 = {set_state_flag = SGS_xinangongyehua_flag}
+			120 = {set_state_flag = SGS_xinangongyehua_flag}
+		}
+		x = 28
+		y = 10
+	}
+	focus = {
+		id = SGS_zujiantanxiandui
+		icon = GFX_focus_ETH_boots_on_the_shore
+		cost = 10
+		prerequisite = {
+			focus = SGS_kuodaguanliaojigou
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			add_ideas = SGS_tianxiandui_idea
+		}
+		x = 26
+		y = 10
+	}
+	focus = {
+		id = SGS_souxunhuanrufeiping
+		icon = GFX_focus_eng_global_defense
+		cost = 5
+		prerequisite = {
+			focus = SGS_zujiantanxiandui
+		}
+		prerequisite = {
+			focus = SGS_xinanhuanxiangxianggongyehua
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_souxunhuanrufeiping_tt
+		}
+		x = 27
+		y = 11
+	}
+	focus = {
+		id = SGS_feipingweixiubumen 
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 5
+		prerequisite = {
+			focus = SGS_xinanhuanxiangxianggongyehua
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_feipingweixiubumen_tt
+		}
+		x = 29
+		y = 11
+	}
+	focus = {
+		id = SGS_shengchandianli 
+		icon = GFX_focus_generic_hydroelectric_energy
+		cost = 5
+		prerequisite = {
+			focus = SGS_feipingweixiubumen
+		}
+		prerequisite = {
+			focus = SGS_souxunhuanrufeiping
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_shengchandianli1_tt
+				SGS = {
+					check_variable = {
+						SGS_gongyehua > 1.99
+					}
+				}
+			}
+		}
+		completion_reward = {
+			279 = {set_state_flag = SGS_shuiba_flag}
+			393 = {set_state_flag = SGS_shuiba_flag}
+			394 = {set_state_flag = SGS_shuiba_flag}
+			120 = {set_state_flag = SGS_shuiba_flag}
+			233 = {set_state_flag = SGS_shuiba_flag}
+			custom_effect_tooltip = SGS_shengchandianli2_tt
+			if = {
+				limit = {
+					has_completed_focus = SGS_riguangfadianchang
+				}
+				SGS = {
+					add_to_variable = {
+						SGS_dianliang = 3
+					}
+				}
+			}
+			else = {
+			
+			}
+		}
+		x = 28
+		y = 12
+	}
+	focus = {
+		id = SGS_tanxian
+		icon = GFX_goal_generic_position_armies
+		cost = 12
+		prerequisite = {
+			focus = SGS_zujiantanxiandui
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_tanxian_tt
+			386 = {set_state_flag = SGS_yaoshi_flag}
+			385 = {set_state_flag = SGS_yaoshi_flag}
+			160 = {set_state_flag = SGS_yaoshi_flag}
+			148 = {set_state_flag = SGS_yaoshi_flag}
+			179 = {set_state_flag = SGS_yaoshi_flag}
+			233 = {set_state_flag = SGS_yaoshi_flag}
+			144 = {set_state_flag = SGS_lingqi_flag}
+			157 = {set_state_flag = SGS_lingqi_flag}
+			125 = {set_state_flag = SGS_lingqi_flag}
+			108 = {set_state_flag = SGS_lingqi_flag}
+		}
+		x = 25
+		y = 11
+	}
+	focus = {
+		id = SGS_kaicaiziyuan 
+		icon = GFX_goal_generic_construction2
+		cost = 6
+		prerequisite = {
+			focus = SGS_tanxian
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_kaicaiziyuan_tt
+			add_ideas = SGS_kaicaiziyuan_idea
+			if = {
+				limit = {
+					has_idea = SGS_jixingdejingji_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji2_idea
+					remove_idea = SGS_jixingdejingji_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji2_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji3_idea
+					remove_idea = SGS_jixingdejingji2_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji3_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_jixingdejingji4_idea
+					remove_idea = SGS_jixingdejingji3_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SGS_jixingdejingji4_idea
+				}
+				swap_ideas = {
+					add_idea = SGS_fadadejingji_idea
+					remove_idea = SGS_jixingdejingji4_idea
+				}
+			}
+		}
+		x = 25
+		y = 12
+	}
+################军事
+	focus = {
+		id = SGS_junshigexing
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				SGS = {num_of_factories < 100}
+			}
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+		x = 46
+		y = 0
+
+	}
+	focus = {
+		id = SGS_zongjiezhanzhengjingyan
+		icon = GFX_goal_rhineland
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_zongjiezhanzhengjingyan_tt
+				has_country_flag = SGS_jingxingguozhanzheng_flag
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+		
+		x = 53
+		y = 1
+
+	}
+	focus = {
+		id = SGS_huolizhiyuan
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 6
+		prerequisite = {
+			focus = SGS_junshigexing
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			bonus = 1.0
+			uses = 1
+			category = artillery_tech
+			}
+    
+		}
+		x = 44
+		y = 1
+
+	}
+	focus = {
+		id = SGS_liangchanhuopao
+		icon = GFX_focus_SOV_organize_wreckers
+		cost = 10
+		prerequisite = {
+			focus = SGS_huolizhiyuan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_liangchanhuopao_idea
+			
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = SGS_lingliyingyongyanjiu
+		icon = GFX_focus_generic_spirit_power_research
+		cost = 6
+		prerequisite = {
+			focus = SGS_junshigexing
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			OL_add10 = yes
+			PO_add5 = yes
+		}
+		x = 46
+		y = 1
+
+	}
+	focus = {
+		id = SGS_linglizhiyuanbudui
+		icon = GFX_focus_generic_promotion_of_spiritual_power
+		cost = 6
+		prerequisite = {
+			focus = SGS_lingliyingyongyanjiu
+		}
+		prerequisite = {
+			focus = SGS_huolizhiyuan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				ahead_reduction = 1
+				bonus = 0.5
+				technology = linglijiejie149 
+				technology = linglijiejie155
+			}
+		}
+		
+		x = 45
+		y = 2
+
+	}
+	focus = {
+		id = SGS_zhiyuanzhuangbei2
+		icon = GFX_focus_generic_combined_arms	
+		cost = 6
+		prerequisite = {
+			focus = SGS_junshigexing
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			uses = 1
+			bonus = 1
+			category = support_tech
+			}
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = { 
+		id = SGS_linglitongxunxitong
+		icon = GFX_focus_SGS_linglitongxunxitong
+		cost = 10
+		prerequisite = {
+			focus = SGS_lingliyingyongyanjiu
+		}
+		prerequisite = {
+			focus = SGS_zhiyuanzhuangbei2
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_linglitongxunxitong_idea
+		}
+		x = 47
+		y = 2
+
+	}
+	focus = {
+		id = SGS_xingshijingruibudui
+		icon = GFX_focus_generic_Special_Gohei
+		cost = 10
+		prerequisite = {
+			focus = SGS_linglizhiyuanbudui
+		}
+		prerequisite = {
+			focus = SGS_linglitongxunxitong
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = heavy
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = shield_weapons
+				uses = 1
+				ahead_reduction = 2
+				bonus = 1
+			}
+		}
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = SGS_zhiyuanbudui
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = SGS_zhiyuanzhuangbei2
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			uses = 2
+			bonus = 1
+			category = support_tech
+			}
+		}
+		x = 49
+		y = 2
+
+	}
+	focus = {
+		id = SGS_changshecanmoubu
+		icon = GFX_goal_generic_army_doctrines
+		cost = 6
+		prerequisite = {
+			focus = SGS_zongjiezhanzhengjingyan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_lingshicanmoubu_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_lingshicanmoubu_idea
+					add_idea = SGS_canmoubu_idea
+				}
+			}
+			else_if = {
+				add_ideas = SGS_canmoubu_idea
+				set_country_flag = SGS_canmoubu_flag
+			}
+		}
+		x = 52
+		y = 2
+
+	}
+	focus = {
+		id = SGS_changsheyunshudui
+		icon = GFX_goal_generic_army_motorized
+		cost = 6
+		prerequisite = {
+			focus = SGS_zongjiezhanzhengjingyan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_pingmingyunshudui_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_pingmingyunshudui_idea
+					add_idea = SGS_yunshudui_idea
+				}
+			}
+			else_if = {
+				add_ideas = SGS_yunshudui_idea
+				set_country_flag = SGS_yunshudui_flag
+			}
+		}
+		x = 54
+		y = 2
+
+	}
+	focus = {
+		id = SGS_yanxuyoujizhanshu
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = SGS_changsheyunshudui
+		}
+		prerequisite = {
+			focus = SGS_changshecanmoubu
+		}
+		mutually_exclusive = {
+			focus = SGS_zhuanxiangzhengkuijun
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SGS_yaojingyoujidui_idea
+				remove_idea = SGS_fa_guerrillas_idea
+			}
+		}
+		x = 52
+		y = 3
+
+	}
+	focus = {
+		id = SGS_zhuanxiangzhengkuijun
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 6
+		prerequisite = {
+			focus = SGS_changsheyunshudui
+		}
+		prerequisite = {
+			focus = SGS_changshecanmoubu
+		}
+		mutually_exclusive = {
+			focus = SGS_yanxuyoujizhanshu
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SGS_zhengguijun_idea
+				remove_idea = SGS_fa_guerrillas_idea
+			}
+		}
+		x = 54
+		y = 3
+
+	}
+	focus = {
+		id = SGS_xingguangjunshixueyuan
+		icon = GFX_focus_SGS_xingguangjunshixueyuan
+		cost = 10
+		prerequisite = {
+			focus = SGS_zhuanxiangzhengkuijun
+			focus = SGS_yanxuyoujizhanshu
+			focus = SGS_xingshijingruibudui
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				SGS = {num_of_factories < 100}
+				not = {has_completed_focus = SGS_xinanhuanxiangxianggongyehua}
+			}
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = basic_doctrine
+				category = land_doctrine
+			}
+			army_experience =  30
+		}
+		x = 49
+		y = 4
+
+	}
+	focus = {
+		id = SGS_qianghuasanyuejingnengli
+		icon = GFX_focus_generic_promotion_of_spiritual_power
+		cost = 10
+		prerequisite = {
+			focus = SGS_xingguangjunshixueyuan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			SGS_lunar = {
+				add_defense = 1
+				add_attack = 1
+			}
+			SGS_sun = {
+				add_defense = 1
+				add_attack = 1
+			}
+			SGS_star = {
+				add_defense = 1
+				add_attack = 1
+			}
+		}
+		x = 52
+		y = 5
+
+	}
+	focus = {
+		id = SGS_qianghuasita
+		icon = GFX_focus_SGS_qianghuasita
+		cost = 9
+		prerequisite = {
+			focus = SGS_qianghuasanyuejingnengli
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			SGS_star = {
+				add_skill_level = 3
+				add_attack = 2
+				add_logistics = 1
+				add_planning = 2
+			}
+		}
+		x = 50
+		y = 6
+
+	}
+	focus = {
+		id = SGS_qianghuasangni
+		icon = GFX_focus_SGS_qianghuasangni
+		cost = 9
+		prerequisite = {
+			focus = SGS_qianghuasanyuejingnengli
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			SGS_sun = {
+				add_skill_level = 3
+				add_attack = 1
+				add_logistics = 2
+				add_planning = 2
+			}
+		}
+		x = 52
+		y = 6
+		
+	}
+	focus = {
+		id = SGS_qianghualuna
+		icon = GFX_focus_SGS_qianghualuna 
+		cost = 9
+		prerequisite = {
+			focus = SGS_qianghuasanyuejingnengli
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			SGS_lunar = {
+				add_skill_level = 3
+				add_defense = 3
+				add_logistics = 2
+			}
+		}
+		x = 54
+		y = 6
+
+	}
+	focus = {
+		id = SGS_xingguangzhenchawangluo
+		icon = GFX_focus_SGS_xingguangzhenchawangluo
+		cost = 10
+		prerequisite = {
+			focus = SGS_qianghuasita
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_xingguangzhenchawangluo_idea
+		}
+		x = 50
+		y = 7
+
+	}
+	focus = {
+		id = SGS_yingshenzhanshu
+		icon = GFX_focus_SGS_yingshenzhanshu
+		cost = 10
+		prerequisite = {
+			focus = SGS_qianghuasangni
+		}
+		prerequisite = {
+			focus = SGS_qianghualuna
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_yingshenzhanshu_idea
+		}
+		x = 53
+		y = 7
+
+	}
+	focus = {
+		id = SGS_fenjianhuanruwuping
+		icon = GFX_focus_generic_africa_factory
+		cost = 6
+		prerequisite = {
+			focus = SGS_xingguangjunshixueyuan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_timed_idea = {
+			idea = SGS_fenjianhuanruwupingzhong_idea
+			days = 60
+			}
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = SGS_xuexiwaijiejunshishuji
+		icon = GFX_goal_generic_position_armies
+		cost = 9
+		prerequisite = {
+			focus = SGS_fenjianhuanruwuping
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			army_experience =  50
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = SGS_yingyongwaijiejunshizhishi
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		prerequisite = {
+			focus = SGS_xuexiwaijiejunshishuji
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_waijiejunshisixiang_idea
+		}
+		x = 47
+		y = 7
+
+	}
+	focus = {
+		id = SGS_gaijingjunshililun
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = SGS_xingguangjunshixueyuan
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.6
+				uses = 2
+				category = basic_doctrine
+				category = land_doctrine
+			}
+		}
+		x = 44
+		y = 5
+
+	}
+	focus = {
+		id = SGS_ezuojushizhanhua
+		icon = GFX_focus_SGS_ezuojushizhanhua
+		cost = 10
+		prerequisite = {
+			focus = SGS_gaijingjunshililun
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_shizhanhuaezuoju_idea
+		}
+		x = 44
+		y = 6
+
+	}
+	focus = {
+		id = SGS_liyongziranliliang
+		icon = GFX_focus_generic_power_of_nature
+		cost = 10
+		prerequisite = {
+			focus = SGS_ezuojushizhanhua
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = SGS_dazirandejundui_idea
+		}
+		x = 44
+		y = 7
+
+	}
+}

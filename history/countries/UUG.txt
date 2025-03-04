@@ -1,0 +1,55 @@
+﻿capital = 58
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+        
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+
+        #专用工程学
+
+        #工业
+            
+        #专用工业
+
+        #种族 
+    }
+    
+}
+146.1.1={
+    oob = "UUG_146"
+    
+    add_ideas = {
+    Ghost
+    Tribal
+    close2
+    hawk0
+    free_magic
+    }
+    set_politics = {
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 90
+    }
+    
+}

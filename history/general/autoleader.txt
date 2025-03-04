@@ -1,0 +1,708 @@
+﻿every_possible_country = { #未知幽灵
+	limit = {
+		or = {
+			tag = YYG
+			tag = YYH
+		}
+	}
+	generate_character = {
+		token_base = ghost_leader
+		name = ghost_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+				small="gfx/leaders/leader_unknown.dds"
+			}
+			army = {
+				large="gfx/leaders/leader_unknown.dds"
+				small="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+	generate_character = {
+		token_base = NET_youmu_leader
+		name = NET_youmu_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/YYK/YYK_youmu.dds"
+				small="gfx/leaders/YYK/YYK_youmu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YYK/YYK_youmu.dds"
+				small="gfx/leaders/YYK/YYK_youmu_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #未知怨灵
+	limit = {
+		or = {
+			tag = UUG
+			tag = ACE
+		}
+	}
+	generate_character = {
+		token_base = unghost_leader
+		name = unghost_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+				small="gfx/leaders/leader_unknown.dds"
+			}
+			army = {
+				large="gfx/leaders/leader_unknown.dds"
+				small="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #random leader
+	limit = {
+		or = {
+			tag = BYA #BAMBOO
+			tag = CFA #天界妖精
+			tag = UFA #地底妖精
+			tag = GRS #GRS
+		}
+	}
+	generate_character = {
+		token_base = random_leader
+		name = random_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #村委会
+	limit = {
+		or = {
+			tag = HU1
+			tag = HU2
+			tag = HU3
+			tag = HU4
+			tag = UNA
+		}
+	}
+	generate_character = {
+		token_base = village_leader
+		name = village_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #流亡委员会
+	limit = {
+		or = {
+			tag = HU7
+			tag = HU8
+		}
+	}
+	generate_character = {
+		token_base = HUM_leader
+		name = HUM_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #UNL 地底妖怪部落
+	limit = {
+		or = {
+			tag = UNL
+		}
+	}
+	generate_character = {
+		token_base = UNL_leader
+		name = UNL_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #TES 天庭
+	limit = {
+		tag = CCA
+	}
+	generate_character = {
+		token_base = CCA_leader
+		name = CCA_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/OTG/OTG_council.dds"
+				small="gfx/leaders/OTG/OTG_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/OTG/OTG_council.dds"
+				small="gfx/leaders/OTG/OTG_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #KAP 长老会
+	limit = {
+		tag = KAP
+	}
+	generate_character = {
+		token_base = KAP_leader
+		name = KAP_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/KAP/KAP_council.dds"
+				small="gfx/leaders/KAP/KAP_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/KAP/KAP_council.dds"
+				small="gfx/leaders/KAP/KAP_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #ZYD 商业委员会
+	limit = {
+		tag = ZYD
+	}
+	generate_character = {
+		token_base = ZYD_leader
+		name = ZYD_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #GOL 工厂监督班
+	limit = {
+		tag = GOL
+	}
+	generate_character = {
+		token_base = GOL_leader
+		name = GOL_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #站委会
+	limit = {
+		or = {
+			tag = HUB
+			tag = HB1
+		}
+	}
+	generate_character = {
+		token_base = HUB_leader
+		name = HUB_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #青鬼部落
+	limit = {
+		tag = AOO
+	}
+	generate_character = {
+		token_base = AOO_leader
+		name = AOO_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #赤鬼部落
+	limit = {
+		tag = AKO
+	}
+	generate_character = {
+		token_base = AKO_leader
+		name = AKO_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #OIL 石油管理会
+	limit = {
+		tag = OIL
+	}
+	generate_character = {
+		token_base = OIL_leader
+		name = OIL_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}
+every_possible_country = { #CJK 血池地狱管理会"
+	limit = {
+		tag = CJK
+	}
+	generate_character = {
+		token_base = CJK_leader
+		name = CJK_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_council.dds"
+				small="gfx/leaders/ZYD/ZYD_council_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,158 @@
+# 派系斗争
+NMS_pai_xi_dou_zheng = {
+    # 派系斗争不满升级
+    NMS_pai_xi_dou_zheng_bu_man_sheng_ji = {
+        allowed = {
+            original_tag = NMS
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            has_dynamic_modifier = {
+                modifier = NMS_pai_xi_dou_zheng_idea
+            }
+            NOT = {
+                OR = {
+                    has_country_flag = NMS_reformists_lost_power_flag
+                    has_completed_focus = NMS_yao_guai_jun_guo_zhu_yi
+                }
+            }
+            NOT = {
+                OR = {
+                    has_country_flag = NMS_racists_lost_power_flag
+                    has_completed_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+                }
+            }
+        }
+
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = NMS_pai_xi_dou_zheng_idea
+                    }
+                }
+                AND = {
+                    has_country_flag = NMS_reformists_lost_power_flag
+                    has_completed_focus = NMS_yao_guai_jun_guo_zhu_yi
+                }
+                AND = {
+                    has_country_flag = NMS_racists_lost_power_flag
+                    has_completed_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+                }
+            }
+        }
+
+        icon = generic_political_discourse
+
+        selectable_mission = no
+
+        days_mission_timeout = 120
+
+        is_good = no
+
+        timeout_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_completed_focus = NMS_yao_guai_jun_guo_zhu_yi
+                    }
+                }
+                NMS_increase_racists_dissatisfaction = yes
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_completed_focus = NMS_chong_shi_ren_yao_ping_deng_li_xiang
+                    }
+                }
+                NMS_increase_reformists_dissatisfaction = yes
+            }
+        }
+    }
+
+    # 安抚改良派
+    NMS_an_fu_gai_liang_pai = {
+        allowed = {
+            original_tag = NMS
+        }
+
+        icon = generic_civil_support
+
+        days_remove = 30
+
+        cost = 20
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = NMS_reformists_lost_power_flag
+                    has_country_flag = NMS_racists_lost_power_flag
+                }
+            }
+            has_dynamic_modifier = {
+                modifier = NMS_pai_xi_dou_zheng_idea
+            }
+        }
+
+        cancel_trigger = {
+            OR = {
+                has_country_flag = NMS_reformists_lost_power_flag
+                has_country_flag = NMS_racists_lost_power_flag
+            }
+        }
+
+        remove_effect = {
+            NMS_decrease_reformists_dissatisfaction = yes
+			NMS_increase_racists_dissatisfaction = yes
+        }
+
+        ai_will_do = {
+            base = -10
+        }
+    }
+
+    # 安抚种族派
+    NMS_an_fu_zhong_zu_pai = {
+        allowed = {
+            original_tag = NMS
+        }
+
+        icon = generic_civil_support
+
+        days_remove = 30
+
+        cost = 20
+
+        visible = {
+            NOT = {
+                OR = {
+                    has_country_flag = NMS_reformists_lost_power_flag
+                    has_country_flag = NMS_racists_lost_power_flag
+                }
+            }
+            has_dynamic_modifier = {
+                modifier = NMS_pai_xi_dou_zheng_idea
+            }
+        }
+
+        cancel_trigger = {
+            OR = {
+                has_country_flag = NMS_reformists_lost_power_flag
+                has_country_flag = NMS_racists_lost_power_flag
+            }
+        }
+
+        remove_effect = {
+            NMS_decrease_racists_dissatisfaction = yes
+			NMS_increase_reformists_dissatisfaction = yes
+        }
+
+        ai_will_do = {
+            base = -10
+        }
+    }
+}

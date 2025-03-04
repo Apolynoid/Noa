@@ -1,0 +1,51 @@
+# 内战决议组
+MRS_mo_fa_zhi_sen_nei_zhan = {
+	icon = border_conflicts
+
+	priority = 96
+
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+	}
+
+	visible = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+		has_global_flag = MRS_civil_war_prepare_flag
+		NOT = {
+			has_global_flag = MRS_civil_war_end_flag
+		}
+	}
+	
+}
+
+# 内战后决议组
+MRS_mo_fa_zhi_sen_chong_jian = {
+	icon = generic_political_actions
+
+	priority = 97
+
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+	}
+
+	visible = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+		has_global_flag = MRS_civil_war_end_flag
+	}
+}

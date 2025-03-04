@@ -1,0 +1,59 @@
+﻿add_namespace = nar
+##########事件###########
+
+# SEJ NAR请求加入同盟
+country_event = {
+	id = nar.101
+	title = nar.101.t
+	desc = nar.101.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nar.101.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = NAR
+		}
+		NAR = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = nar.101.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			NAR = {
+				country_event = nar.104
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = nar.104
+	title = nar.104.t
+	desc = nar.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nar.104.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = NAR_jia_ru_ge_ming_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = NAR_du_li_zi_zhu
+		}
+	}
+}

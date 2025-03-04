@@ -1,0 +1,109 @@
+sub_units = {
+	sp_jiaqiangban = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = -40
+		max_organisation = -25
+		default_morale = -0.15
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.1
+		can_be_parachuted = yes
+
+		###
+		soft_attack = 10
+		hard_attack = 10
+
+		essential = {
+			support_equipment
+		}
+		
+		need = {
+			support_equipment = 50
+			magic_core_a = 20
+		}
+
+		same_support_type = sp_jiaqiangban
+	}
+
+	sp_palanquin_ship = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = -10
+		max_organisation = -10
+		default_morale = 0
+		manpower = 3
+		training_time = 250
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.2
+		can_be_parachuted = no
+
+		###
+		soft_attack = 10
+		hard_attack = 10
+		breakthrough = 1
+
+		battalion_mult = {
+			category = category_artillery
+			soft_attack = 0.1
+		}
+
+		essential = {
+			support_equipment
+		}
+		
+		need = {
+			support_equipment = 70
+			magic_core_a = 30
+		}
+
+		same_support_type = sp_jiaqiangban
+	}
+}

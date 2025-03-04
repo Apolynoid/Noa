@@ -1,0 +1,399 @@
+﻿add_namespace = cir
+# CIR邀请我们签订反斯卡蕾特协约
+country_event = {
+	id = cir.101
+	title = cir.101.t
+	desc = cir.101.d
+	is_triggered_only = yes
+	# 我们将共同应对帝国的威胁
+	option = {
+		name = cir.101.1
+		add_political_power = -30
+		diplomatic_relation = {
+			country = CIR
+			relation = non_aggression_pact
+			active = yes
+		}
+		hidden_effect = {
+			add_ideas = CIR_fan_scarlet_xie_yue_idea
+			CIR = {
+				country_event = cir.102
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = -1
+				AND = {
+					original_tag = SEJ
+					OR = {
+						has_completed_focus = SEJ_xian_shi_zhu_yi_xia_ke_shang
+						has_completed_focus = SEJ_yao_guai_zhong_zu_fu_xing
+					}
+				}
+			}
+		}
+	}
+
+	# 我们没必要加入她们
+	option = {
+		name = cir.101.2
+		hidden_effect = {
+			CIR = {
+				country_event = cir.103
+			}
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				AND = {
+					original_tag = SEJ
+					OR = {
+						has_completed_focus = SEJ_xian_shi_zhu_yi_xia_ke_shang
+						has_completed_focus = SEJ_yao_guai_zhong_zu_fu_xing
+					}
+				}
+			}
+		}
+	}
+}
+
+# FROM同意签订协约
+country_event = {
+	id = cir.102
+	title = cir.102.t
+	desc = cir.102.d
+	is_triggered_only = yes
+	option = {
+		name = cir.102.1
+	}
+}
+
+# FROM拒绝签订协约
+country_event = {
+	id = cir.103
+	title = cir.103.t
+	desc = cir.103.d
+	is_triggered_only = yes
+	option = {
+		name = cir.103.1
+	}
+}
+
+# 履行反斯卡蕾特协约
+country_event = {
+	id = cir.104
+	title = cir.104.t
+	desc = cir.104.d
+	is_triggered_only = yes
+	option = {
+		name = cir.104.1
+		activate_mission = CIR_zhun_bei_dui_SCA_zuo_zhan
+	}
+}
+
+# CIR邀请我们参与对SCA的进攻
+country_event = {
+	id = cir.105
+	title = cir.105.t
+	desc = cir.105.d
+	is_triggered_only = yes
+	# 我们参加
+	option = {
+		name = cir.105.1
+		custom_effect_tooltip = CIR_join_attack_on_SCA_tt
+		hidden_effect = {
+			set_country_flag = CIR_join_attack_on_SCA_flag
+			CIR = {
+				country_event = cir.106
+			}
+		}
+	}
+
+	# 我们最好不要参与
+	option = {
+		name = cir.105.2
+		hidden_effect = {
+			CIR = {
+				country_event = cir.107
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# LIL同意参与进攻
+country_event = {
+	id = cir.106
+	title = cir.106.t
+	desc = cir.106.d
+	is_triggered_only = yes
+	option = {
+		name = cir.106.1
+	}
+}
+
+# LIL拒绝参与进攻
+country_event = {
+	id = cir.107
+	title = cir.107.t
+	desc = cir.107.d
+	is_triggered_only = yes
+	option = {
+		name = cir.107.1
+	}
+}
+
+# 履行进攻承诺
+country_event = {
+	id = cir.108
+	title = cir.108.t
+	desc = cir.108.d
+	is_triggered_only = yes
+	option = {
+		name = cir.108.1
+		activate_mission = CIR_zhun_bei_dui_SCA_zuo_zhan
+	}
+}
+
+# 幻想乡大战
+news_event = {
+	id = cir.109
+	title = cir.109.t
+	desc = cir.109.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = CIR_gensokyo_great_war_tt
+		}
+		CIR = {
+			has_war_with = SCA
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = CIR_gensokyo_great_war_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = cir.109.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# CIR
+	option = {
+		name = cir.109.2
+		trigger = {
+			original_tag = CIR
+		}
+	}
+
+	# 其他
+	option = {
+		name = cir.109.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+				}
+			}
+		}
+	}
+}
+
+# SCA CIR的宣传影响
+country_event = {
+	id = cir.110
+	title = cir.110.t
+	desc = cir.110.d
+	is_triggered_only = yes
+	option = {
+		name = cir.110.1
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = CIR_shou_dao_pan_jun_xuan_chuan_ying_xiang_idea
+				days = 180
+			}
+		}
+	}
+}
+
+# SCA 反对者的破坏行动
+country_event = {
+	id = cir.111
+	title = cir.111.t
+	desc = cir.111.d
+	is_triggered_only = yes
+	option = {
+		name = cir.111.1
+		if = {
+			limit = {
+				SCA = {
+					NOT = {
+						has_country_flag = SCA_rebellion_system_flag
+					}
+					NOT = {
+						has_completed_focus = SCA_zhen_ya_fan_dui_zhe
+					}
+				}
+			}
+			# less damage
+			SCA = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = SCA
+						non_damaged_building_level = {
+							building = industrial_complex
+							level > 0
+						}
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+				}
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = SCA
+						non_damaged_building_level = {
+							building = industrial_complex
+							level > 0
+						}
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+				}
+			}
+		}
+		else = {
+			# more damage with militias
+			hidden_effect = {
+				CIR = {
+					delete_unit_template_and_units = {
+						division_template = "妖精起义者"
+						disband = yes
+					}
+					division_template = {
+						name = "妖精起义者"
+						is_locked = no
+						priority = 0
+						regiments = {
+							ma_infantry = { x = 0 y = 0 }
+							ma_light_infantry = { x = 0 y = 1 }
+							ma_light_infantry = { x = 0 y = 2 }
+						}
+					}
+				}
+			}
+			SCA = {
+				for_loop_effect = {
+					end = 3
+					random_core_state = {
+						limit = {
+							is_fully_controlled_by = SCA
+							non_damaged_building_level = {
+								building = industrial_complex
+								level > 0
+							}
+						}
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
+						custom_effect_tooltip = CIR_CIR_create_fairy_rebellion_tt
+						hidden_effect = {
+							create_unit = {
+								division = "name = \"妖精起义者\" division_template = \"妖精起义者\" start_manpower_factor = 1"
+								owner = CIR
+								allow_spawning_on_enemy_provs = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = SCA_rebellion_system_flag
+			}
+			SCA_fairy_rebellion_minus_10 = yes
+			SCA_fairy_rebellion_minus_10 = yes
+		}
+	}
+}
+
+news_event = {
+	id = cir.112
+	title = cir.112.t
+	desc = cir.112.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SCA
+	option = {
+		name = cir.112.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# CIR
+	option = {
+		name = cir.112.2
+		trigger = {
+			original_tag = CIR
+		}
+		add_state_claim = 64
+		add_state_claim = 660
+		add_state_claim = 85
+		add_state_claim = 310
+		add_state_claim = 91
+		add_state_claim = 311
+		add_state_claim = 61
+		add_state_claim = 70
+		add_state_claim = 76
+		add_state_claim = 115
+		add_state_claim = 104
+		add_state_claim = 309
+		custom_effect_tooltip = CIR_allow_integration_of_SCA_tt
+		custom_effect_tooltip = occupation_law_introduce_tt
+		hidden_effect = {
+			set_country_flag = can_integrate_flag_SCA
+		}
+	}
+
+	# 其他
+	option = {
+		name = cir.112.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+				}
+			}
+		}
+	}
+}

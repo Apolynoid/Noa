@@ -1,0 +1,30 @@
+state={
+	id=658
+	name="STATE_658"
+	provinces={
+		7180 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas = 0.0
+		crystal = 25.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	state_category=s0
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=2.500
+}

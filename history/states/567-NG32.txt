@@ -1,0 +1,32 @@
+state={
+	id=567
+	name="STATE_567"
+	provinces={
+		16 62 288 423 713 1087 1252 1444 2036 
+	}
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=12.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+	state_category=s5
+	manpower=46970
+	buildings_max_level_factor=1.000
+	local_supplies=2.5.000
+}

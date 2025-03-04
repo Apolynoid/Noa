@@ -1,0 +1,34 @@
+state={
+	id=384
+	name="STATE_384"
+	provinces={
+		943 1094 1397 2032 2333 2842 4749 4750 4751 4752 4761 4763 4764 4767 4771 4772 4776 4777 4778 4779 4782 4785 4786 4791 4793 4796 4797 4800 4804 4805 4806 4809 5420 
+	}
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SGS
+			add_core_of = SGS
+			add_claim_by = YUK
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=112077.0
+	buildings_max_level_factor=1.000
+}

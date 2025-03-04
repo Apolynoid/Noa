@@ -1,0 +1,34 @@
+state={
+	id=425
+	name="STATE_425"
+	provinces={
+		551 4811 4824 4833 4836 
+	}
+	resources={
+		energy = 1
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			add_core_of = MEL
+			add_core_of = ZYD
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=243.0
+	buildings_max_level_factor=1.000
+}

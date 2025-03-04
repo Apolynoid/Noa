@@ -1,0 +1,7 @@
+spriteTypes = {
+	#############New Ideo
+	spriteType = {
+		name = "GFX_ideology_gekokujyoism"
+		texturefile = "gfx/interface/ideologies/gekokujyoism.png"
+	}	
+}

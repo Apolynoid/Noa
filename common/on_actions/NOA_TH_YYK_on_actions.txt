@@ -1,0 +1,163 @@
+on_actions = {
+	on_weekly_YYK = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = YYK_netherworld_civil_war_begun_flag
+				}
+				if = {
+					limit = {
+						KNA = {
+							has_dynamic_modifier = {
+								modifier = YYK_ge_ming_re_qing_idea
+							}
+						}
+					}
+					KNA = {
+						set_temp_variable = {
+							YYK_fervour_increase_num = KNA.KNA_fervour_change
+						}
+						YYK_fervour__YYK_fervour_increase_num__increase = yes
+						YYK_fervour_change_calculation = yes
+					}
+				}
+			}
+		}
+	}
+
+	on_send_volunteers = {
+		# ROOT is sender, FROM is receiver.
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = YYK_netherworld_civil_war_begun_flag
+					NOT = {
+						has_global_flag = YYK_netherworld_civil_war_ended_flag
+					}
+					FROM = {
+						original_tag = YYK
+					}
+				}
+				# sending volunteer to either side of netherworld civil war
+				if = {
+					limit = {
+						NOT = {
+							is_in_array = {
+								array = KNA.volunteer_senders_array
+								value = ROOT
+							}
+						}
+						NOT = {
+							is_in_array = {
+								array = YKO.volunteer_senders_array
+								value = ROOT
+							}
+						}
+					}
+					add_to_array = {
+						array = FROM.volunteer_senders_array
+						value = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = YYK
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_country_flag = YYK_KNA_flag
+						}
+					}
+					# radicalists win
+					set_global_flag = YYK_KNA_civil_war_victory_flag
+					log = "YYK set_global_flag: YYK_KNA_civil_war_victory_flag"
+					news_event = {
+						id = yyk.111
+						days = 5
+					}
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = YYK_yok
+						}
+						set_nationality = {
+							target_country = XXX
+							character = YYK_youmu
+						}
+						set_nationality = {
+							target_country = XXX
+							character = YYK_yyk
+						}
+					}
+				}
+				else = {
+					# loyalists win
+					set_global_flag = YYK_YKO_civil_war_victory_flag
+					log = "YYK set_global_flag: YYK_YKO_civil_war_victory_flag"
+					news_event = {
+						id = yyk.112
+						days = 5
+					}
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = UND_kana
+						}
+					}
+				}
+				# trigger events
+				ROOT = {
+					set_global_flag = YYK_netherworld_civil_war_ended_flag
+					# events
+					country_event = {
+						id = yyk.106
+						days = 3
+					}
+				}
+				# send awards to supporters
+				for_each_scope_loop = {
+					array = ROOT.volunteer_senders_array
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									YYK_should_support_KNA = yes
+									ROOT = {
+										has_country_flag = YYK_KNA_flag
+									}
+								}
+								AND = {
+									YYK_should_support_YKO = yes
+									ROOT = {
+										has_country_flag = YYK_YKO_flag
+									}
+								}
+							}
+						}
+						# special award
+						country_event = {
+							id = yyk.109
+							days = 7
+						}
+					}
+					else = {
+						# normal award
+						country_event = {
+							id = yyk.108
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}

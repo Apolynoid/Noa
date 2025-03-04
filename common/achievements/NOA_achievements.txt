@@ -1,0 +1,18 @@
+unique_id = noa_roa_achievements
+
+### Any achievement ID starting with 0 denotes a global achievement. They are tagged as such so that they appear first in the order. All other achievements are named after their respective tags.
+
+cirnos_perfect_maths_classroom = {
+	possible = {
+		original_tag = CIR
+	}
+
+	happened = {
+		has_country_leader = {
+			character = CIR_cir
+			ruling_only = yes
+		}
+		has_tech = jisuangongju159
+	}
+}
+

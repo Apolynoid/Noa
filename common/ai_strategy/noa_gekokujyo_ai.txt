@@ -1,0 +1,62 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+GEK_support_radicalist_MRS = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = GEK	
+		# special triggers
+		MRS = {
+			has_government = fandong
+		}	
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = MRS
+		value = 100
+	}
+}
+
+GEK_support_NAR = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = GEK		
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = NAR
+		value = 100
+	}
+}
+
+GEK_support_KNA = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = GEK		
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = KNA
+		value = 100
+	}
+}

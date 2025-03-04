@@ -1,0 +1,10 @@
+NOA_distribute_weapons = {
+	name = NOA_distribute_weapons
+	desc = NOA_distribute_weapons_desc
+	outcome = NOA_distribute_weapons_desc_outcome
+	picture = "GFX_phase_resistance_support_distribute_weapons"
+	icon = "GFX_phase_resistance_support_distribute_weapons_small"
+	equipment = {
+		support_equipment = 5
+	}
+}

@@ -1,0 +1,1161 @@
+﻿add_namespace = sys
+
+country_event = {
+	#拉鹰
+	id = sys.1
+	title = sys.1.t
+	desc = sys.1.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				fandong < 0.5
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = fandong
+					popularity = 0.01
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				not = { has_government = fandong}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.1.a
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_fandong = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = fandong_drift1
+			}
+			modify_timed_idea = {
+				idea = fandong_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = fandong_drift1 days = 92}
+			}
+		}
+		
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = fandong
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_fandong
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = fandong
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				neworder < 0.5
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = neworder
+					popularity = 0.01
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { has_government = neworder}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.1.b
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_neworder = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = neworder_drift1
+			}
+			modify_timed_idea = {
+				idea = neworder_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = neworder_drift1 days = 92}
+			}
+		}
+		
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = neworder
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_neworder
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = neworder
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sys.1.c
+
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.01
+		}
+
+		trigger = {
+			has_government = oldorder
+		}
+
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = oldorder
+				factor = 100
+			}
+		}
+	}
+
+}
+
+country_event = {
+	#鸽派
+	id = sys.2
+	title = sys.2.t
+	desc = sys.2.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				guli < 0.5
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = guli
+					popularity = 0.01
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = { has_government = guli}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.2.a
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_guli = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = guli_drift1
+			}
+			modify_timed_idea = {
+				idea = guli_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = guli_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = guli
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_guli
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = guli
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				qinwai < 0.5
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = qinwai
+					popularity = 0.01
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { has_government = qinwai}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.2.b
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_qinwai = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = qinwai_drift1
+			}
+			modify_timed_idea = {
+				idea = qinwai_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = qinwai_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = qinwai
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_qinwai
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = qinwai
+				factor = 100
+			}
+		}
+	}
+
+}
+
+country_event = {
+	#保守
+	id = sys.3
+	title = sys.3.t
+	desc = sys.3.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				guli < 0.5
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = guli
+					popularity = 0.01
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = { has_government = guli}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.3.a
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_guli = yes
+		}
+		if = {
+			limit = {
+				has_idea = guli_drift1
+			}
+			modify_timed_idea = {
+				idea = guli_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = guli_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = guli
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_guli
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = guli
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				neworder < 0.5
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = neworder
+					popularity = 0.01
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { has_government = neworder}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.3.b
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_neworder = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = neworder_drift1
+			}
+			modify_timed_idea = {
+				idea = neworder_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = neworder_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = neworder
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_neworder
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = neworder
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		name = sys.3.c
+
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.01
+		}
+
+		trigger = {
+			has_government = oldorder
+		}
+
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = oldorder
+				factor = 100
+			}
+		}
+	}
+
+}
+
+country_event = {
+	#开放
+	id = sys.4
+	title = sys.4.t
+	desc = sys.4.desc
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				qinwai < 0.5
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = qinwai
+					popularity = 0.01
+				}
+			}
+		}
+		if = {
+			limit = {
+				not = { has_government = qinwai}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.4.a
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_qinwai = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = qinwai_drift1
+			}
+			modify_timed_idea = {
+				idea = qinwai_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = qinwai_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = qinwai
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_qinwai
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = qinwai
+				factor = 100
+			}
+		}
+	}
+
+	option = {
+		if = {
+			limit = {
+				fandong < 0.5
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = fandong
+					popularity = 0.01
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { has_government = fandong}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.4.b
+
+		if = {
+			limit = {
+				not = { has_government = oldorder }
+			}
+			go_fandong = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = fandong_drift1
+			}
+			modify_timed_idea = {
+				idea = fandong_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = fandong_drift1 days = 92}
+			}
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = fandong
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_fandong
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = fandong
+				factor = 1000
+			}
+		}
+	}
+
+}
+country_event = {
+	#厌战上涨开始
+	id = sys.5
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = no
+	option = {}
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		has_war = yes
+		or = {
+			not = { has_country_flag = exhuastion_level }
+			has_country_flag = {
+				flag = exhuastion_level
+				value = 0
+			}
+		}
+	}
+	immediate = {
+		exhuastion_increase_level_up = yes
+	}
+}
+
+country_event = {
+	#科研
+	id = sys.6
+	title = sys.6.t
+	desc = sys.6.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	trigger = {
+		has_global_flag = main_scenario
+		or = {
+			and = {
+				check_variable = { factory_num > 0}
+				check_variable = { ic_level < 1}
+			}
+			and = {
+				check_variable = { factory_num > 29}
+				check_variable = { ic_level < 2}
+			}
+			and = {
+				check_variable = { factory_num > 79}
+				check_variable = { ic_level < 3}
+			}
+			and = {
+				check_variable = { factory_num > 129}
+				check_variable = { ic_level < 4}
+			}
+		}
+	}
+
+	option = {
+		name = sys.6.1
+		research_slot_generator = yes
+	}
+}
+
+country_event = {
+	#判断有没有核心
+	id = sys.7
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = no
+	option = {}
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		any_other_country = {
+			ROOT = {
+				any_owned_state = {
+					is_core_of = PREV.PREV
+				}
+			}
+		}
+		
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				ROOT = {
+					any_owned_state = {
+						is_core_of = PREV.PREV
+					}
+				}
+				not = { tag = ROOT }
+			}
+			ROOT = {
+				set_country_flag = owns_core_state@PREV
+			}
+		}
+	}
+}
+
+country_event = {
+	#判断归还核心
+	id = sys.8
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = no
+	option = {}
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		any_other_country = {
+			ROOT = {
+				all_owned_state = {
+					not = { is_core_of = PREV.PREV}
+				}
+				has_country_flag = owns_core_state@PREV
+			}
+		}
+		
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				ROOT = {
+					all_owned_state = {
+						not = { is_core_of = PREV.PREV }
+					}
+					has_country_flag = owns_core_state@PREV
+				}
+			}
+			ROOT = {
+				clr_country_flag = owns_core_state@PREV
+			}
+		}
+	}
+}
+
+# country_event = {
+# 	#不结盟不接壤的人
+# 	id = sys.9
+# 	hidden = yes
+# 	fire_only_once = no
+# 	is_triggered_only = no
+# 	option = {}
+# 	mean_time_to_happen = {
+# 		days = 15
+# 	}
+# 	trigger = {
+# 		not = {
+# 			tag = XXX
+# 		}
+# 	}
+# 	immediate = {
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					or = {
+# 						any_neighbor_country = {
+# 		                    or = {
+# 		                        is_in_faction_with = ROOT
+# 		                        tag = ROOT
+# 		                        is_subject_of = ROOT
+# 		                    }
+# 		                }
+# 		                any_country = {
+# 		                	is_subject_of = PREV
+# 		                	any_neighbor_country = {
+# 			                    or = {
+# 			                        is_in_faction_with = ROOT
+# 			                        tag = ROOT
+# 			                        is_subject_of = ROOT
+# 			                    }
+# 			                }
+# 		                }
+
+# 		                has_country_flag = ally_@ROOT_by_focus
+# 					}
+# 				}
+
+# 				not = { has_country_flag = cant_ally_@ROOT }
+# 			}
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = -200
+# 			}
+# 			set_country_flag = cant_ally_@ROOT
+
+# 			ROOT = {
+# 				clr_country_flag = is_can_ally_@PREV
+# 			}
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				# is_neighbor_of = ROOT
+# 				or = {
+# 					any_neighbor_country = {
+# 	                    or = {
+# 	                        is_in_faction_with = ROOT
+# 	                        tag = ROOT
+# 	                        is_subject_of = ROOT
+# 	                    }
+# 	                }
+# 	                any_country = {
+# 	                	is_subject_of = PREV
+# 	                	any_neighbor_country = {
+# 		                    or = {
+# 		                        is_in_faction_with = ROOT
+# 		                        tag = ROOT
+# 		                        is_subject_of = ROOT
+# 		                    }
+# 		                }
+# 	                }
+
+# 	                has_country_flag = ally_@ROOT_by_focus
+# 				}
+
+# 				has_country_flag = cant_ally_@ROOT
+				
+# 			}
+# 			clr_country_flag = cant_ally_@ROOT
+
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = 200
+# 			}
+# 			ROOT = {
+# 				set_country_flag = is_can_ally_@PREV
+# 			}
+			
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#敌对关系修正
+# 	id = sys.10
+# 	hidden = yes
+# 	fire_only_once = no
+# 	is_triggered_only = no
+# 	option = {}
+# 	mean_time_to_happen = {
+# 		days = 5
+# 	}
+# 	trigger = {
+# 		not = {
+# 			tag = XXX
+# 		}
+# 	}	
+
+# 	immediate = {
+# 		#坏观点
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					has_country_flag = bad_opinion_@ROOT
+# 				}
+# 				has_opinion = {
+# 				    target = ROOT
+# 				    value < -79
+# 				}
+# 			}
+# 			set_country_flag = bad_opinion_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = 75
+# 			}
+# 		}
+		
+# 		every_country = {
+# 			limit = {
+# 				has_country_flag = bad_opinion_@ROOT
+# 				has_opinion = {
+# 				    target = ROOT
+# 				    value > -11
+# 				}
+# 			}
+# 			clr_country_flag = bad_opinion_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = -75
+# 			}
+# 		}
+
+# 		#意识形态
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					has_government = ROOT
+# 				}
+# 				not = { has_country_flag = different_government_@ROOT }
+# 			}
+# 			set_country_flag = different_government_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = 10
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = -10
+# 			}
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				has_government = ROOT
+# 				has_country_flag = different_government_@ROOT
+# 			}
+# 			clr_country_flag = different_government_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = -10
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = 10
+# 			}
+# 		}
+
+# 		#种族
+# 		every_country = {
+# 			limit = {
+# 				or = {
+# 					and = {
+# 						has_idea = Ghost
+# 						ROOT = { has_idea = Ghost }
+# 					}
+# 					and = {
+# 						has_idea = Human
+# 						ROOT = { has_idea = Human }
+# 					}
+# 					and = {
+# 						has_idea = Fairy
+# 						ROOT = { has_idea = Fairy }
+# 					}
+# 					and = {
+# 						has_idea = Magician
+# 						ROOT = { has_idea = Magician }
+# 					}
+# 					and = {
+# 						has_idea = God
+# 						ROOT = { has_idea = God }				
+# 					}
+# 					and = {
+# 						has_idea = Youkai
+# 						ROOT = { has_idea = Youkai }
+# 					}
+# 					and = {
+# 						has_idea = Pri_youkai
+# 						ROOT = { has_idea = God }
+# 					}
+# 					and = {
+# 						has_idea = Kappa
+# 						ROOT = { has_idea = Kappa }
+# 					}
+# 					and = {
+# 						has_idea = Tenggu
+# 						ROOT = { has_idea = Tenggu }
+# 					}
+# 				}
+# 				not = { has_country_flag = same_race_@ROOT }
+# 			}
+# 			set_country_flag = same_race_@ROOT
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 			add_ai_strategy = {
+# 				type = befriend
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = 5
+# 			}
+			
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					and = {
+# 						has_idea = Ghost
+# 						ROOT = { has_idea = Ghost }
+# 					}
+# 					and = {
+# 						has_idea = Human
+# 						ROOT = { has_idea = Human }
+# 					}
+# 					and = {
+# 						has_idea = Fairy
+# 						ROOT = { has_idea = Fairy }
+# 					}
+# 					and = {
+# 						has_idea = Magician
+# 						ROOT = { has_idea = Magician }
+# 					}
+# 					and = {
+# 						has_idea = God
+# 						ROOT = { has_idea = God }
+# 					}
+# 					and = {
+# 						has_idea = Youkai
+# 						ROOT = { has_idea = Youkai }
+# 					}
+# 					and = {
+# 						has_idea = Pri_youkai
+# 						ROOT = { has_idea = God }
+# 					}
+# 					and = {
+# 						has_idea = Kappa
+# 						ROOT = { has_idea = Kappa }
+# 					}
+# 					and = {
+# 						has_idea = Tenggu
+# 						ROOT = { has_idea = Tenggu }
+# 					}
+# 				}
+# 				has_country_flag = same_race_@ROOT
+# 			}
+# 			clr_country_flag = same_race_@ROOT
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 			add_ai_strategy = {
+# 				type = befriend
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 		}
+
+# 		#世界观
+# 		every_country = {
+# 			limit = {
+# 				or = {
+# 					and = {
+# 						check_variable = { OL_view_type = 0}
+# 						ROOT = { check_variable = { OL_view_type = 0 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 1}
+# 						ROOT = { check_variable = { OL_view_type = 1 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 2}
+# 						ROOT = { check_variable = { OL_view_type = 2 } }
+# 					}
+# 				}
+# 				not = { has_country_flag = same_view_@ROOT }
+# 			}
+
+# 			set_country_flag = same_view_@ROOT
+# 			add_ai_strategy = {
+# 				type = alliance	
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					and = {
+# 						check_variable = { OL_view_type = 0}
+# 						ROOT = { check_variable = { OL_view_type = 0 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 1}
+# 						ROOT = { check_variable = { OL_view_type = 1 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 2}
+# 						ROOT = { check_variable = { OL_view_type = 2 } }
+# 					}
+# 				}
+# 				has_country_flag = same_view_@ROOT
+				
+# 			}
+# 			clr_country_flag = same_view_@ROOT
+# 			add_ai_strategy = {
+# 				type = alliance
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 			add_ai_strategy = {
+# 				type = send_volunteers_desire
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				or = {
+# 					and = {
+# 						check_variable = { OL_view_type = 0}
+# 						ROOT = { check_variable = { OL_view_type = 2 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 2}
+# 						ROOT = { check_variable = { OL_view_type = 1 } }
+# 					}
+# 				}
+# 				not = { has_country_flag = enemy_view_@ROOT }
+# 			}
+# 			set_country_flag = enemy_view_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = 5
+# 			}
+# 		}
+
+# 		every_country = {
+# 			limit = {
+# 				not = {
+# 					and = {
+# 						check_variable = { OL_view_type = 0}
+# 						ROOT = { check_variable = { OL_view_type = 2 } }
+# 					}
+# 					and = {
+# 						check_variable = { OL_view_type = 2}
+# 						ROOT = { check_variable = { OL_view_type = 1 } }
+# 					}
+# 				}
+# 				has_country_flag = enemy_view_@ROOT
+# 			}
+# 			clr_country_flag = enemy_view_@ROOT
+# 			add_ai_strategy = {
+# 				type = antagonize
+# 				id = ROOT
+# 				value = -5
+# 			}
+# 		}
+# 	}
+# }

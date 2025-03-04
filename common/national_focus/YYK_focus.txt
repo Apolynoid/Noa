@@ -1,0 +1,3857 @@
+#!gfx:interface\TH_focus.gfx
+focus_tree = {
+	id = YYK_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YYK
+		}
+	}
+	shared_focus = ty_medium_main 
+	default = no
+	continuous_focus_position = { x = 2000 y = 3010 }
+
+	# 冥界的命运
+	focus = {
+		id = YYK_ming_jie_de_ming_yun
+		icon = YYK_focus_fate_of_netherworld
+		cost = 7
+		x = 23
+		y = 1
+	
+		cancelable = no
+	
+		completion_reward = {
+			country_event = yyk.101
+			hidden_effect = {
+				set_variable = {
+					YKO_army_support = 80
+				}
+				set_variable = {
+					KNA_army_support = 20
+				}
+				set_variable = {
+					YKO_equipment = 90
+				}
+				set_variable = {
+					KNA_equipment = 10
+				}
+				set_variable = {
+					YKO_secured_equipment = 10
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# ---- 反对幽幽子 ----
+	# 反对幽幽子
+	focus = {
+		id = KNA_fan_dui_you_you_zi
+		icon = KNA_focus_oppose_yuyuko
+		cost = 1
+		x = -4
+		y = 1
+
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_country_flag = YYK_KNA_selected_flag
+				has_global_flag = YYK_netherworld_civil_war_begun_flag
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				AND = {
+					has_country_flag = YYK_YKO_selected_flag
+					has_global_flag = YYK_netherworld_civil_war_begun_flag
+				}
+			}
+		}
+
+		relative_position_id = YYK_ming_jie_de_ming_yun
+	
+		prerequisite = {
+			focus = YYK_ming_jie_de_ming_yun
+		}
+
+		mutually_exclusive = {
+			focus = YKO_zhi_chi_you_you_zi
+		}
+
+		available = {
+			always = no
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = auto_complete_tt
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 建立地下反抗中心
+	focus = {
+		id = KNA_jian_li_di_xia_fan_kang_zhong_xin
+		icon = GFX_focus_prc_infiltration
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_fan_dui_you_you_zi
+	
+		prerequisite = {
+			focus = KNA_fan_dui_you_you_zi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			add_political_power = 150
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 争取军队支持
+	focus = {
+		id = KNA_zheng_qu_jun_dui_zhi_chi
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_jian_li_di_xia_fan_kang_zhong_xin
+	
+		prerequisite = {
+			focus = KNA_jian_li_di_xia_fan_kang_zhong_xin
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			set_temp_variable = {
+				YYK_army_fraction = 15
+			}
+			KNA_seek__YYK_army_fraction__army_support = yes
+			unlock_decision_tooltip = KNA_xun_qiu_jun_dui_zhi_chi
+			custom_effect_tooltip = YKO_reaction_tt
+			hidden_effect = {
+				set_country_flag = KNA_seek_army_support_flag
+				YYK_YKO_further_action = yes
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 突袭武器库
+	focus = {
+		id = KNA_tu_xi_wu_qi_ku
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_zheng_qu_jun_dui_zhi_chi
+	
+		prerequisite = {
+			focus = KNA_zheng_qu_jun_dui_zhi_chi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			set_temp_variable = {
+				YYK_equipment_fraction = 20
+			}
+			KNA_seize__YYK_equipment_fraction__weapon = yes
+			unlock_decision_tooltip = KNA_duo_qu_wu_qi
+			custom_effect_tooltip = YKO_reaction_tt
+			hidden_effect = {
+				set_country_flag = KNA_seize_weapon_flag
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 争取地方支持
+	focus = {
+		id = KNA_zheng_qu_di_fang_zhi_chi
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_tu_xi_wu_qi_ku
+	
+		prerequisite = {
+			focus = KNA_tu_xi_wu_qi_ku
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = KNA_seek_local_support_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 集结革命民兵
+	focus = {
+		id = KNA_ji_jie_ge_ming_min_bing
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_zheng_qu_di_fang_zhi_chi
+	
+		prerequisite = {
+			focus = KNA_zheng_qu_di_fang_zhi_chi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = KNA_revolution_militia_tt
+			hidden_effect = {
+				set_country_flag = KNA_revolution_militia_flag
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界革命
+	focus = {
+		id = KNA_ming_jie_ge_ming
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 7
+		x = -5
+		y = 1
+
+		offset = {
+			x = 5
+			y = 0
+			trigger = {
+				has_country_flag = YYK_KNA_selected_flag
+				has_global_flag = YYK_netherworld_civil_war_begun_flag
+			}
+		}
+
+		relative_position_id = KNA_ji_jie_ge_ming_min_bing
+	
+		prerequisite = {
+			focus = KNA_ji_jie_ge_ming_min_bing
+		}
+
+		available = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 强化革命阵线
+	focus = {
+		id = KNA_qiang_hua_ge_ming_zhen_xian
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = -5
+		y = 1
+
+		relative_position_id = KNA_ming_jie_ge_ming
+	
+		prerequisite = {
+			focus = KNA_ming_jie_ge_ming
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_hun_luan_de_ge_ming_zhen_xian_idea
+				add_idea = KNA_hun_luan_de_ge_ming_zhen_xian_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 争取承认
+	focus = {
+		id = KNA_zheng_qu_cheng_ren
+		icon = GFX_goal_tripartite_pact
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_qiang_hua_ge_ming_zhen_xian
+	
+		prerequisite = {
+			focus = KNA_qiang_hua_ge_ming_zhen_xian
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 请求外界支援
+	focus = {
+		id = KNA_qing_qiu_wai_jie_zhi_yuan
+		icon = GFX_focus_generic_concessions
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_zheng_qu_cheng_ren
+	
+		prerequisite = {
+			focus = KNA_zheng_qu_cheng_ren
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = 400
+			}
+			add_equipment_to_stockpile = {
+				type = magic_focus_a
+				amount = 100
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 外籍志愿者部队
+	focus = {
+		id = KNA_wai_ji_zhi_yuan_zhe_bu_dui
+		icon = KNA_focus_foreign_volunteer_army
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_qing_qiu_wai_jie_zhi_yuan
+	
+		prerequisite = {
+			focus = KNA_qing_qiu_wai_jie_zhi_yuan
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = KNA_foreign_volunteer_army_tt
+			hidden_effect = {
+				division_template = {
+					name = "外籍志愿者"
+					is_locked = yes
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+                        division = "name = \"外籍志愿者\" division_template = \"外籍志愿者\" start_experience_factor = 0.6"
+                        owner = KNA
+                    }
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+                        division = "name = \"外籍志愿者\" division_template = \"外籍志愿者\" start_experience_factor = 0.6"
+                        owner = KNA
+                    }
+				}
+			}
+			add_ideas = KNA_wai_ji_zhi_yuan_zhe_bu_dui_idea
+			set_temp_variable = {
+				YYK_fervour_increase_num = 5
+			}
+			YYK_fervour__YYK_fervour_increase_num__increase = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 夺取工厂所有权
+	focus = {
+		id = KNA_duo_qu_gong_chang_suo_you_quan
+		icon = GFX_focus_DEN_heavy_regulations
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_qiang_hua_ge_ming_zhen_xian
+	
+		prerequisite = {
+			focus = KNA_qiang_hua_ge_ming_zhen_xian
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_political_power = -50
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 重新组织生产
+	focus = {
+		id = KNA_chong_xin_zu_zhi_sheng_chan
+		icon = GFX_focus_production
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_duo_qu_gong_chang_suo_you_quan
+	
+		prerequisite = {
+			focus = KNA_duo_qu_gong_chang_suo_you_quan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_gong_ye_hun_luan_idea
+				add_idea = KNA_gong_ye_hun_luan_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战争建设计划
+	focus = {
+		id = KNA_zhan_zheng_jian_she_ji_hua
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_chong_xin_zu_zhi_sheng_chan
+	
+		prerequisite = {
+			focus = KNA_chong_xin_zu_zhi_sheng_chan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_gong_ye_hun_luan_a_idea
+				add_idea = KNA_gong_ye_hun_luan_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 为了革命利益
+	focus = {
+		id = KNA_wei_le_ge_ming_li_yi
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		cost = 7
+		x = 0
+		y = 4
+
+		relative_position_id = KNA_qiang_hua_ge_ming_zhen_xian
+	
+		prerequisite = {
+			focus = KNA_wai_ji_zhi_yuan_zhe_bu_dui
+		}
+
+		prerequisite = {
+			focus = KNA_zhan_zheng_jian_she_ji_hua
+		}
+	
+		completion_reward = {
+			remove_ideas = KNA_hun_luan_de_ge_ming_zhen_xian_a_idea
+			remove_ideas = KNA_gong_ye_hun_luan_b_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命军事委员会
+	focus = {
+		id = KNA_ge_ming_jun_shi_wei_yuan_hui
+		icon = GFX_focus_NOR_empower_sivorg
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_ming_jie_ge_ming
+	
+		prerequisite = {
+			focus = KNA_ming_jie_ge_ming
+		}
+	
+		completion_reward = {
+			add_ideas = KNA_ge_ming_jun_shi_wei_yuan_hui_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 加强战场火力
+	focus = {
+		id = KNA_jia_qiang_zhan_chang_huo_li
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_ge_ming_jun_shi_wei_yuan_hui
+	
+		prerequisite = {
+			focus = KNA_ge_ming_jun_shi_wei_yuan_hui
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				ahead_reduction = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 紧急工业动员
+	focus = {
+		id = KNA_jin_ji_gong_ye_dong_yuan
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_ge_ming_jun_shi_wei_yuan_hui
+	
+		prerequisite = {
+			focus = KNA_ge_ming_jun_shi_wei_yuan_hui
+		}
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 扩大革命军
+	focus = {
+		id = KNA_kuo_da_ge_ming_jun
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = KNA_ge_ming_jun_shi_wei_yuan_hui
+	
+		prerequisite = {
+			focus = KNA_ge_ming_jun_shi_wei_yuan_hui
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_idea
+				add_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 接触激进同情者
+	focus = {
+		id = KNA_jie_chu_ji_jin_tong_qing_zhe
+		icon = GFX_goal_generic_military_deal
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_kuo_da_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_kuo_da_ge_ming_jun
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = KNA_create_radical_units_tt
+			hidden_effect = {
+				YKO = {
+					country_event = kna.101
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命现实主义
+	focus = {
+		id = KNA_ge_ming_xian_shi_zhu_yi
+		icon = GFX_focus_desperate_measures
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_kuo_da_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_kuo_da_ge_ming_jun
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			unlock_decision_tooltip = KNA_jin_ji_gong_chang_zhuan_huan
+			unlock_decision_tooltip = KNA_jiang_di_xun_lian_biao_zhun
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命宣传
+	focus = {
+		id = KNA_ge_ming_xuan_chuan
+		icon = GFX_focus_revolution_propaganda
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = KNA_kuo_da_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_jie_chu_ji_jin_tong_qing_zhe
+			focus = KNA_ge_ming_xian_shi_zhu_yi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_a_idea
+				add_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 整编革命军
+	focus = {
+		id = KNA_zheng_bian_ge_ming_jun
+		icon = GFX_focus_army_dicipline
+		cost = 7
+		x = 5
+		y = 1
+
+		relative_position_id = KNA_ming_jie_ge_ming
+	
+		prerequisite = {
+			focus = KNA_ming_jie_ge_ming
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 扩大民兵组织
+	focus = {
+		id = KNA_kuo_da_min_bing_zu_zhi
+		icon = GFX_focus_ETH_peacekeeping_forces
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_zheng_bian_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_zheng_bian_ge_ming_jun
+		}
+
+		mutually_exclusive = {
+			focus = KNA_lu_jun_zheng_gui_hua
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_a_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军事经验交流
+	focus = {
+		id = KNA_jun_shi_jing_yan_jiao_liu
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_kuo_da_min_bing_zu_zhi
+	
+		prerequisite = {
+			focus = KNA_kuo_da_min_bing_zu_zhi
+		}
+	
+		completion_reward = {
+			army_experience = 30
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_b_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 整合地方武装
+	focus = {
+		id = KNA_zheng_he_di_fang_wu_zhuang
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_jun_shi_jing_yan_jiao_liu
+	
+		prerequisite = {
+			focus = KNA_jun_shi_jing_yan_jiao_liu
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_c_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_d_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 陆军正规化
+	focus = {
+		id = KNA_lu_jun_zheng_gui_hua
+		icon = GFX_focus_staff
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_zheng_bian_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_zheng_bian_ge_ming_jun
+		}
+
+		mutually_exclusive = {
+			focus = KNA_kuo_da_min_bing_zu_zhi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_a_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_e_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 引进先进组织体系
+	focus = {
+		id = KNA_yin_jin_xian_jin_zu_zhi_ti_xi
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_lu_jun_zheng_gui_hua
+	
+		prerequisite = {
+			focus = KNA_lu_jun_zheng_gui_hua
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_e_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_f_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界军事学院
+	focus = {
+		id = KNA_ming_jie_jun_shi_xue_yuan
+		icon = GFX_focus_generic_military_academy
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_yin_jin_xian_jin_zu_zhi_ti_xi
+	
+		prerequisite = {
+			focus = KNA_yin_jin_xian_jin_zu_zhi_ti_xi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ming_jie_ge_ming_jun_f_idea
+				add_idea = KNA_ming_jie_ge_ming_jun_g_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 激发革命热情
+	focus = {
+		id = KNA_ji_fa_ge_ming_re_qing
+		icon = KNA_focus_arouse_revolutionary_fervour
+		cost = 7
+		x = 0
+		y = 4
+
+		relative_position_id = KNA_zheng_bian_ge_ming_jun
+	
+		prerequisite = {
+			focus = KNA_zheng_he_di_fang_wu_zhuang
+			focus = KNA_ming_jie_jun_shi_xue_yuan
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			set_temp_variable = {
+				YYK_fervour_increase_num = 10
+			}
+			YYK_fervour__YYK_fervour_increase_num__increase = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 最终攻势：白玉楼
+	focus = {
+		id = KNA_zui_zhong_gong_shi_bai_yu_lou
+		icon = KNA_focus_final_offense_hakugyokurou
+		cost = 12
+		x = 0
+		y = 6
+
+		relative_position_id = KNA_ming_jie_ge_ming
+	
+		prerequisite = {
+			focus = KNA_wei_le_ge_ming_li_yi
+			focus = KNA_ge_ming_xuan_chuan
+			focus = KNA_ji_fa_ge_ming_re_qing
+		}
+
+		available = {
+			count_triggers = {
+				amount = 2
+				has_completed_focus = KNA_wei_le_ge_ming_li_yi
+				has_completed_focus = KNA_ge_ming_xuan_chuan
+				has_completed_focus = KNA_ji_fa_ge_ming_re_qing
+			}
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = KNA_zui_zhong_gong_shi_idea
+				days = 180
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界共和国
+	focus = {
+		id = KNA_ming_jie_gong_he_guo
+		icon = KNA_focus_netherworld_republic
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_zui_zhong_gong_shi_bai_yu_lou
+	
+		prerequisite = {
+			focus = KNA_zui_zhong_gong_shi_bai_yu_lou
+		}
+
+		available = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+			set_cosmetic_tag = KNA_republic
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 工业建设
+	focus = {
+		id = KNA_gong_ye_jian_she
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = -4
+		y = 1
+
+		relative_position_id = KNA_ming_jie_gong_he_guo
+	
+		prerequisite = {
+			focus = KNA_ming_jie_gong_he_guo
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = industrys
+				category = build
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 国家重建计划
+	focus = {
+		id = KNA_guo_jia_chong_jian_ji_hua
+		icon = GFX_goal_generic_construction
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_gong_ye_jian_she
+	
+		prerequisite = {
+			focus = KNA_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+			add_ideas = KNA_guo_jia_chong_jian_ji_hua_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 基础设施建设
+	focus = {
+		id = KNA_ji_chu_she_shi_jian_she
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_guo_jia_chong_jian_ji_hua
+	
+		prerequisite = {
+			focus = KNA_guo_jia_chong_jian_ji_hua
+		}
+	
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+				  	type = infrastructure
+				  	level = 2
+				  	instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 民用工厂建设
+	focus = {
+		id = KNA_min_yong_gong_chang_jian_she
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_ji_chu_she_shi_jian_she
+	
+		prerequisite = {
+			focus = KNA_ji_chu_she_shi_jian_she
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军用工厂建设
+	focus = {
+		id = KNA_jun_yong_gong_chang_jian_she
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_gong_ye_jian_she
+	
+		prerequisite = {
+			focus = KNA_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 投资基础科学
+	focus = {
+		id = KNA_tou_zi_ji_chu_ke_xue
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = KNA_gong_ye_jian_she
+	
+		prerequisite = {
+			focus = KNA_guo_jia_chong_jian_ji_hua
+			focus = KNA_jun_yong_gong_chang_jian_she
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 科技进步
+	focus = {
+		id = KNA_ke_ji_jin_bu
+		icon = GFX_focus_research
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_tou_zi_ji_chu_ke_xue
+	
+		prerequisite = {
+			focus = KNA_tou_zi_ji_chu_ke_xue
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = KNA_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_ke_ji_jin_bu
+	
+		prerequisite = {
+			focus = KNA_ke_ji_jin_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 关注国内局势
+	focus = {
+		id = KNA_guan_zhu_guo_nei_ju_shi
+		icon = GFX_focus_domestic_affairs
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_ming_jie_gong_he_guo
+	
+		prerequisite = {
+			focus = KNA_ming_jie_gong_he_guo
+		}
+	
+		completion_reward = {
+			add_political_power = 150
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战争酬恤金
+	focus = {
+		id = KNA_zhan_zheng_chou_xu_jin
+		icon = GFX_focus_mex_privatisation
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_guan_zhu_guo_nei_ju_shi
+	
+		prerequisite = {
+			focus = KNA_guan_zhu_guo_nei_ju_shi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YYK_nei_zhan_shang_hen_idea
+				add_idea = YYK_nei_zhan_shang_hen_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 复员军人再就业
+	focus = {
+		id = KNA_fu_yuan_jun_ren_zai_jiu_ye
+		icon = GFX_focus_generic_full_employment
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_zhan_zheng_chou_xu_jin
+	
+		prerequisite = {
+			focus = KNA_zhan_zheng_chou_xu_jin
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_idea
+				add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 社会福利
+	focus = {
+		id = KNA_she_hui_fu_li
+		icon = GFX_focus_generic_welfare
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_fu_yuan_jun_ren_zai_jiu_ye
+	
+		prerequisite = {
+			focus = KNA_fu_yuan_jun_ren_zai_jiu_ye
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_a_idea
+				add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 白玉楼审判
+	focus = {
+		id = KNA_bai_yu_lou_shen_pan
+		icon = GFX_focus_generic_court
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_zhan_zheng_chou_xu_jin
+	
+		prerequisite = {
+			focus = KNA_zhan_zheng_chou_xu_jin
+		}
+	
+		completion_reward = {
+			country_event = kna.102
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命教育
+	focus = {
+		id = KNA_ge_ming_jiao_yu
+		icon = GFX_focus_education
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KNA_bai_yu_lou_shen_pan
+	
+		prerequisite = {
+			focus = KNA_bai_yu_lou_shen_pan
+		}
+	
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = YYK_fan_dui_zhe_di_kang_state_idea
+					}
+					NOT = {
+						has_state_flag = YYK_suppressed_flag
+					}
+				}
+				YYK_remove_resistance = yes
+			}
+			random_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = YYK_fan_dui_zhe_di_kang_state_idea
+					}
+					NOT = {
+						has_state_flag = YYK_suppressed_flag
+					}
+				}
+				YYK_remove_resistance = yes
+			}
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+			swap_ideas = {
+				remove_idea = YYK_nei_zhan_shang_hen_a_idea
+				add_idea = YYK_nei_zhan_shang_hen_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命阵线协商会议
+	focus = {
+		id = KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = KNA_zhan_zheng_chou_xu_jin
+	
+		prerequisite = {
+			focus = KNA_she_hui_fu_li
+		}
+
+		prerequisite = {
+			focus = KNA_ge_ming_jiao_yu
+		}
+	
+		completion_reward = {
+			remove_ideas = YYK_nei_zhan_shang_hen_b_idea
+			remove_ideas = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_b_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 加入下克上运动
+	focus = {
+		id = KNA_jia_ru_xia_ke_shang_yun_dong
+		icon = GFX_focus_gekokujyo_movement
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+	
+		prerequisite = {
+			focus = KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = KNA_ming_jie_bu_jie_meng
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			NOT = {
+				GEK = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+	
+		completion_reward = {
+			GEK = {
+				country_event = kna.103
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界不结盟
+	focus = {
+		id = KNA_ming_jie_bu_jie_meng
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+	
+		prerequisite = {
+			focus = KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = KNA_jia_ru_xia_ke_shang_yun_dong
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 0
+		}
+	}
+
+	# 消灭隙间妖怪
+	focus = {
+		id = KNA_xiao_mie_xi_jian_yao_guai
+		icon = GFX_focus_attack_YKR
+		cost = 12
+		x = 2
+		y = 1
+
+		offset = {
+			x = -2
+			y = 0
+			trigger = {
+				has_completed_focus = KNA_ming_jie_bu_jie_meng
+			}
+		}
+
+		relative_position_id = KNA_jia_ru_xia_ke_shang_yun_dong
+	
+		prerequisite = {
+			focus = KNA_jia_ru_xia_ke_shang_yun_dong
+			focus = KNA_ming_jie_bu_jie_meng
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+			  	YKR = {
+					OR = {
+				  		exists = no
+				  		is_subject = yes
+					}
+			  	}
+			  	has_war_with = YKR
+				is_ally_with = YKR
+			}
+		}
+
+		will_lead_to_war_with = YKR
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YKR
+				type = topple_government
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 0
+		}
+	}
+
+	# 向地狱输出革命
+	focus = {
+		id = KNA_xiang_di_yu_shu_chu_ge_ming
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		cost = 12
+		x = 0
+		y = 1
+
+		allow_branch = {
+			has_completed_focus = KNA_ming_jie_bu_jie_meng
+		}
+
+		relative_position_id = KNA_ming_jie_bu_jie_meng
+	
+		prerequisite = {
+			focus = KNA_ming_jie_bu_jie_meng
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+		}
+	
+		completion_reward = {
+			create_faction = KNA_pan_netherworld_revolution_alliance
+			unlock_decision_category_tooltip = KNA_di_yu_ge_ming
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军事建设
+	focus = {
+		id = KNA_jun_shi_jian_she
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 7
+		x = 4
+		y = 1
+
+		relative_position_id = KNA_ming_jie_gong_he_guo
+	
+		prerequisite = {
+			focus = KNA_ming_jie_gong_he_guo
+		}
+	
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = military
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军事理论探索
+	focus = {
+		id = KNA_jun_shi_li_lun_tan_suo
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KNA_jun_shi_jian_she
+	
+		prerequisite = {
+			focus = KNA_jun_shi_jian_she
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 基础武器研发
+	focus = {
+		id = KNA_ji_chu_wu_qi_yan_fa
+		icon = GFX_focus_focus_fra_maquis
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_jun_shi_jian_she
+	
+		prerequisite = {
+			focus = KNA_jun_shi_jian_she
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 1.0
+				bonus = 1
+				uses = 1
+				category = infantry
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 装甲化尝试
+	focus = {
+		id = KNA_zhuang_jia_hua_chang_shi
+		icon = GFX_goal_generic_build_tank
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = KNA_ji_chu_wu_qi_yan_fa
+	
+		prerequisite = {
+			focus = KNA_ji_chu_wu_qi_yan_fa
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = shield_weapons
+			  }
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 革命军训练操典
+	focus = {
+		id = KNA_ge_ming_jun_xun_lian_cao_dian
+		icon = GFX_goal_generic_small_arms
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = KNA_jun_shi_jian_she
+
+		prerequisite = {
+			focus = KNA_jun_shi_li_lun_tan_suo
+		}
+	
+		prerequisite = {
+			focus = KNA_ji_chu_wu_qi_yan_fa
+		}
+
+		available = {
+			has_completed_focus = KNA_ge_ming_xuan_chuan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_b_idea
+				add_idea = KNA_ge_ming_jun_shi_wei_yuan_hui_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# ---- 支持幽幽子 ----
+	# 支持幽幽子
+	focus = {
+		id = YKO_zhi_chi_you_you_zi
+		icon = YKO_focus_support_yuyuko
+		cost = 1
+		x = 4
+		y = 1
+
+		offset = {
+			x = -4
+			y = 0
+			trigger = {
+				has_country_flag = YYK_YKO_selected_flag
+				has_global_flag = YYK_netherworld_civil_war_begun_flag
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				AND = {
+					has_country_flag = YYK_KNA_selected_flag
+					has_global_flag = YYK_netherworld_civil_war_begun_flag
+				}
+			}
+		}
+
+		relative_position_id = YYK_ming_jie_de_ming_yun
+	
+		prerequisite = {
+			focus = YYK_ming_jie_de_ming_yun
+		}
+
+		mutually_exclusive = {
+			focus = KNA_fan_dui_you_you_zi
+		}
+	
+		available = {
+			always = no
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = auto_complete_tt
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 确保首都卫队支持
+	focus = {
+		id = YKO_que_bao_shou_du_wei_dui_zhi_chi
+		icon = GFX_focus_generic_manpower
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_zhi_chi_you_you_zi
+	
+		prerequisite = {
+			focus = YKO_zhi_chi_you_you_zi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = YKO_capital_guard_support_tt
+			hidden_effect = {
+				set_country_flag = YKO_capital_guard_support_flag
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 确保白玉楼安全
+	focus = {
+		id = YKO_que_bao_bai_yu_lou_an_quan
+		icon = GFX_goal_generic_demand_territory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_que_bao_shou_du_wei_dui_zhi_chi
+	
+		prerequisite = {
+			focus = YKO_que_bao_shou_du_wei_dui_zhi_chi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = YKO_secure_hakugyokurou_tt
+			hidden_effect = {
+				for_each_scope_loop = {
+					array = hakugyokurou_states
+					set_variable = {
+						yko_control_level = 4
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 安插忠诚官僚
+	focus = {
+		id = YKO_an_cha_zhong_cheng_guan_liao
+		icon = GFX_focus_generic_treaty
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_que_bao_bai_yu_lou_an_quan
+	
+		prerequisite = {
+			focus = YKO_que_bao_bai_yu_lou_an_quan
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = YKO_loyal_bureau_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 清洗军队
+	focus = {
+		id = YKO_qing_xi_jun_dui
+		icon = GFX_focus_purge
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_an_cha_zhong_cheng_guan_liao
+	
+		prerequisite = {
+			focus = YKO_an_cha_zhong_cheng_guan_liao
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			set_temp_variable = {
+				YYK_army_fraction = 25
+			}
+			YKO_seek__YYK_army_fraction__army_support = yes
+			custom_effect_tooltip = YKO_army_purge_tt
+			YKO_purge_army = yes
+			hidden_effect = {
+				set_country_flag = YKO_army_purge_flag
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 消灭反叛分子
+	focus = {
+		id = YKO_xiao_mie_fan_pan_fen_zi
+		icon = GFX_goal_generic_political_pressure
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_qing_xi_jun_dui
+	
+		prerequisite = {
+			focus = YKO_qing_xi_jun_dui
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = YKO_destroy_rebellions_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = {
+								yko_control_level = 2
+							}
+							check_variable = {
+								yko_control_level = 3
+							}
+						}
+					}
+					YKO_gain_influence = yes
+				}
+			}
+			YYK_civil_war = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 镇压叛乱
+	focus = {
+		id = YKO_zhen_ya_pan_luan
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 7
+		x = 5
+		y = 1
+
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_country_flag = YYK_YKO_selected_flag
+				has_global_flag = YYK_netherworld_civil_war_begun_flag
+			}
+		}
+
+		relative_position_id = YKO_xiao_mie_fan_pan_fen_zi
+	
+		prerequisite = {
+			focus = YKO_xiao_mie_fan_pan_fen_zi
+		}
+
+		available = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战争工业动员
+	focus = {
+		id = YKO_zhan_zheng_gong_ye_dong_yuan
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = -5
+		y = 1
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_zhen_ya_pan_luan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YKO_que_fa_zu_zhi_de_sheng_chan_idea
+				add_idea = YKO_que_fa_zu_zhi_de_sheng_chan_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 强化与隙间的关系
+	focus = {
+		id = YKO_qiang_hua_yu_xi_jian_de_guan_xi
+		icon = GFX_focus_befriend_YKR
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_zhen_ya_pan_luan
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 防御策略
+	focus = {
+		id = YKO_fang_yu_ce_lue
+		icon = GFX_goal_generic_defence
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_zhen_ya_pan_luan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YKO_ming_jie_lu_jun_idea
+				add_idea = YKO_ming_jie_lu_jun_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 白玉楼防御圈
+	focus = {
+		id = YKO_bai_yu_lou_fang_yu_quan
+		icon = GFX_goal_generic_fortify_city
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_fang_yu_ce_lue
+	
+		prerequisite = {
+			focus = YKO_fang_yu_ce_lue
+		}
+	
+		completion_reward = {
+			231 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 行政结构调整
+	focus = {
+		id = YKO_xing_zheng_jie_gou_tiao_zheng
+		icon = GFX_focus_domestic_affairs
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_zhen_ya_pan_luan
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YKO_di_xiao_de_xing_zheng_xi_tong_c_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_c_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_d_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = YKO_di_xiao_de_xing_zheng_xi_tong_e_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_e_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_f_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_a_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战时紧急权力
+	focus = {
+		id = YKO_zhan_shi_jin_ji_quan_li
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 7
+		x = 5
+		y = 1
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_zhen_ya_pan_luan
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 投资军工生产
+	focus = {
+		id = YKO_tou_zi_jun_gong_sheng_chan
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = YKO_zhan_zheng_gong_ye_dong_yuan
+	
+		prerequisite = {
+			focus = YKO_zhan_zheng_gong_ye_dong_yuan
+		}
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 与企业家合作
+	focus = {
+		id = YKO_yu_qi_ye_jia_he_zuo
+		icon = GFX_focus_DEN_no_regulations
+		cost = 3
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_tou_zi_jun_gong_sheng_chan
+	
+		prerequisite = {
+			focus = YKO_tou_zi_jun_gong_sheng_chan
+		}
+
+		mutually_exclusive = {
+			focus = YKO_gong_chang_guo_you_hua
+		}
+	
+		completion_reward = {
+			add_ideas = YKO_yu_qi_ye_jia_he_zuo_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 隙间工业援助
+	focus = {
+		id = YKO_xi_jian_gong_ye_yuan_zhu
+		icon = GFX_focus_YKR_industrial_aid
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = YKO_zhan_zheng_gong_ye_dong_yuan
+	
+		prerequisite = {
+			focus = YKO_zhan_zheng_gong_ye_dong_yuan
+		}
+
+		prerequisite = {
+			focus = YKO_qiang_hua_yu_xi_jian_de_guan_xi
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 工厂国有化
+	focus = {
+		id = YKO_gong_chang_guo_you_hua
+		icon = GFX_focus_DEN_heavy_regulations
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_xi_jian_gong_ye_yuan_zhu
+	
+		prerequisite = {
+			focus = YKO_xi_jian_gong_ye_yuan_zhu
+		}
+
+		mutually_exclusive = {
+			focus = YKO_yu_qi_ye_jia_he_zuo
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 扩大军备生产
+	focus = {
+		id = YKO_kuo_da_jun_bei_sheng_chan
+		icon = GFX_focus_production
+		cost = 12
+		x = 0
+		y = 4
+
+		relative_position_id = YKO_zhan_zheng_gong_ye_dong_yuan
+	
+		prerequisite = {
+			focus = YKO_yu_qi_ye_jia_he_zuo
+			focus = YKO_gong_chang_guo_you_hua
+		}
+	
+		completion_reward = {
+			remove_ideas = YKO_que_fa_zu_zhi_de_sheng_chan_a_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 隙间军事援助
+	focus = {
+		id = YKO_xi_jian_jun_shi_yuan_zhu
+		icon = GFX_focus_YKR_military_aid
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = YKO_fang_yu_ce_lue
+
+		prerequisite = {
+			focus = YKO_qiang_hua_yu_xi_jian_de_guan_xi
+		}
+
+		prerequisite = {
+			focus = YKO_fang_yu_ce_lue
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 提拔基层军官
+	focus = {
+		id = YKO_ti_ba_ji_ceng_jun_guan
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = YKO_fang_yu_ce_lue
+
+		prerequisite = {
+			focus = YKO_fang_yu_ce_lue
+		}
+
+		prerequisite = {
+			focus = YKO_xing_zheng_jie_gou_tiao_zheng
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = YKO_jun_dui_bei_qing_xi_idea
+			}
+		}
+	
+		completion_reward = {
+			modify_timed_idea = {
+				idea = YKO_jun_dui_bei_qing_xi_idea
+				days = -180
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军事改革
+	focus = {
+		id = YKO_jun_shi_gai_ge
+		icon = GFX_focus_chi_army_reform
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_fang_yu_ce_lue
+
+		prerequisite = {
+			focus = YKO_xi_jian_jun_shi_yuan_zhu
+			focus = YKO_ti_ba_ji_ceng_jun_guan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YKO_ming_jie_lu_jun_a_idea
+				add_idea = YKO_ming_jie_lu_jun_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 静态战争
+	focus = {
+		id = YKO_jing_tai_zhan_zheng
+		icon = GFX_focus_trench_warfare
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = YKO_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = YKO_jun_shi_gai_ge
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YKO_ming_jie_lu_jun_d_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_ming_jie_lu_jun_d_idea
+					add_idea = YKO_ming_jie_lu_jun_e_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YKO_ming_jie_lu_jun_b_idea
+					add_idea = YKO_ming_jie_lu_jun_c_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 重火力改良
+	focus = {
+		id = YKO_zhong_huo_li_gai_liang
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = YKO_jun_shi_gai_ge
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				ahead_reduction = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 制式武器
+	focus = {
+		id = YKO_zhi_shi_wu_qi
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = YKO_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = YKO_jun_shi_gai_ge
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YKO_ming_jie_lu_jun_c_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_ming_jie_lu_jun_c_idea
+					add_idea = YKO_ming_jie_lu_jun_e_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YKO_ming_jie_lu_jun_b_idea
+					add_idea = YKO_ming_jie_lu_jun_d_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 幽灵自杀式攻击
+	focus = {
+		id = YKO_you_ling_zi_sha_shi_gong_ji
+		icon = GFX_focus_desperate_measures
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = YKO_jing_tai_zhan_zheng
+		}
+
+		prerequisite = {
+			focus = YKO_zhong_huo_li_gai_liang
+		}
+
+		prerequisite = {
+			focus = YKO_zhi_shi_wu_qi
+		}
+	
+		completion_reward = {
+			decrease_force_attack_cost = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 削减行政开支
+	focus = {
+		id = YKO_xue_jian_xing_zheng_kai_zhi
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = YKO_zhan_shi_jin_ji_quan_li
+
+		prerequisite = {
+			focus = YKO_xing_zheng_jie_gou_tiao_zheng
+		}
+	
+		prerequisite = {
+			focus = YKO_zhan_shi_jin_ji_quan_li
+		}
+
+		mutually_exclusive = {
+			focus = YKO_que_bao_xing_zheng_xi_tong_zhong_cheng
+		}
+
+		cancel = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_a_idea
+				add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 任命技术官僚
+	focus = {
+		id = YKO_ren_ming_ji_shu_guan_liao
+		icon = GFX_focus_technocracy
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_xue_jian_xing_zheng_kai_zhi
+
+		prerequisite = {
+			focus = YKO_xue_jian_xing_zheng_kai_zhi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			remove_ideas = YKO_di_xiao_de_xing_zheng_xi_tong_b_idea
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = civil
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 确保行政系统忠诚
+	focus = {
+		id = YKO_que_bao_xing_zheng_xi_tong_zhong_cheng
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 3
+		x = 1
+		y = 1
+
+		relative_position_id = YKO_zhan_shi_jin_ji_quan_li
+	
+		prerequisite = {
+			focus = YKO_zhan_shi_jin_ji_quan_li
+		}
+
+		mutually_exclusive = {
+			focus = YKO_xue_jian_xing_zheng_kai_zhi
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = YKO_unable_to_solve_political_problems_until_war_ends_tt
+			if = {
+				limit = {
+					has_idea = YKO_di_xiao_de_xing_zheng_xi_tong_a_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_a_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_d_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_c_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 承认现有行政体系
+	focus = {
+		id = YKO_cheng_ren_xian_you_xing_zheng_ti_xi
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 3
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_que_bao_xing_zheng_xi_tong_zhong_cheng
+	
+		prerequisite = {
+			focus = YKO_que_bao_xing_zheng_xi_tong_zhong_cheng
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YKO_di_xiao_de_xing_zheng_xi_tong_d_idea
+				}
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_d_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_f_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YKO_di_xiao_de_xing_zheng_xi_tong_c_idea
+					add_idea = YKO_di_xiao_de_xing_zheng_xi_tong_e_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 增强西行寺家威望
+	focus = {
+		id = YKO_zeng_qiang_xi_xing_si_jia_wei_wang
+		icon = YKO_focus_strengthen_authority_of_saigyouji
+		cost = 7
+		x = 0
+		y = 4
+
+		relative_position_id = YKO_zhan_shi_jin_ji_quan_li
+	
+		prerequisite = {
+			focus = YKO_ren_ming_ji_shu_guan_liao
+			focus = YKO_cheng_ren_xian_you_xing_zheng_ti_xi
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 瓦解叛军斗志
+	focus = {
+		id = YKO_wa_jie_pan_jun_dou_zhi
+		icon = GFX_goal_generic_propaganda
+		cost = 12
+		x = 0
+		y = 6
+
+		relative_position_id = YKO_zhen_ya_pan_luan
+	
+		prerequisite = {
+			focus = YKO_kuo_da_jun_bei_sheng_chan
+		}
+
+		prerequisite = {
+			focus = YKO_you_ling_zi_sha_shi_gong_ji
+		}
+
+		prerequisite = {
+			focus = YKO_zeng_qiang_xi_xing_si_jia_wei_wang
+		}
+
+		bypass = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			set_temp_variable = {
+                YYK_fervour_decrease_num = 20
+            }
+            YYK_fervour__YYK_fervour_decrease_num__decrease = yes
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 秩序重归冥界
+	focus = {
+		id = YKO_zhi_xu_chong_gui_ming_jie
+		icon = YKO_focus_order_restored
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_wa_jie_pan_jun_dou_zhi
+	
+		prerequisite = {
+			focus = YKO_wa_jie_pan_jun_dou_zhi
+		}
+
+		available = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 与世无争的冥界
+	focus = {
+		id = YKO_yu_shi_wu_zheng_de_ming_jie
+		icon = GFX_focus_gensokyo_peace
+		cost = 7
+		x = -5
+		y = 1
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_zhi_xu_chong_gui_ming_jie
+		}
+
+		mutually_exclusive = {
+			focus = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.3
+			}
+			set_politics = {
+				ruling_party = oldgenso
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 与四季的协定
+	focus = {
+		id = YKO_yu_si_ji_de_xie_ding
+		icon = GFX_focus_befriend_SKI
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_yu_shi_wu_zheng_de_ming_jie
+	
+		prerequisite = {
+			focus = YKO_yu_shi_wu_zheng_de_ming_jie
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = YKO_si_ji_de_zhi_cai_idea
+			}
+		}
+	
+		completion_reward = {
+			remove_ideas = YKO_si_ji_de_zhi_cai_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界恢复和平
+	focus = {
+		id = YKO_ming_jie_hui_fu_he_ping
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_yu_si_ji_de_xie_ding
+	
+		prerequisite = {
+			focus = YKO_yu_si_ji_de_xie_ding
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = build
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 白玉楼工业圈
+	focus = {
+		id = YKO_bai_yu_lou_gong_ye_quan
+		icon = GFX_focus_generic_industry_2
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_ming_jie_hui_fu_he_ping
+	
+		prerequisite = {
+			focus = YKO_ming_jie_hui_fu_he_ping
+		}
+
+		available = {
+			231 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+	
+		completion_reward = {
+			231 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				every_neighbor_state = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 让西行妖再次开花
+	focus = {
+		id = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		icon = YKO_focus_let_saigyouayakashi_rebloom
+		cost = 7
+		x = 5
+		y = 1
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_zhi_xu_chong_gui_ming_jie
+		}
+
+		mutually_exclusive = {
+			focus = YKO_yu_shi_wu_zheng_de_ming_jie
+		}
+	
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 0
+		}
+	}
+
+	# 国家工业计划
+	focus = {
+		id = YKO_guo_jia_gong_ye_ji_hua
+		icon = GFX_focus_generic_modernize_industry
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+	
+		prerequisite = {
+			focus = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 征服地狱
+	focus = {
+		id = YKO_zheng_fu_di_yu
+		icon = GFX_goal_generic_territory_or_war
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_guo_jia_gong_ye_ji_hua
+	
+		prerequisite = {
+			focus = YKO_guo_jia_gong_ye_ji_hua
+		}
+
+		available = {
+			is_subject = no
+		}
+	
+		completion_reward = {
+			unlock_decision_category_tooltip = YKO_di_yu_zheng_fu_ji_hua
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界与地狱女皇
+	focus = {
+		id = YKO_ming_jie_yu_di_yu_nv_huang
+		icon = GFX_focus_generic_monarchy_2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_zheng_fu_di_yu
+	
+		prerequisite = {
+			focus = YKO_zheng_fu_di_yu
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YKO_SI_occupied_Netherworld_Hell_ratio_tt
+				check_variable = {
+					SI_Netherworld_ratio > 0.5
+				}
+				check_variable = {
+					SI_Hell_ratio > 0.5
+				}
+			}
+			has_country_leader = {
+				character = YYK_yyk
+                ruling_only = yes
+			}
+		}
+	
+		completion_reward = {
+			YYK_yyk = {
+				swap_country_leader_traits = {
+					remove = YKO_wang_ling_gong_zhu
+					add = YKO_wang_ling_nv_huang
+					ideology = oldorder_type
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 国家重建
+	focus = {
+		id = YKO_guo_jia_chong_jian
+		icon = GFX_goal_generic_construction
+		cost = 7
+		x = -2
+		y = 2
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_yu_shi_wu_zheng_de_ming_jie
+			focus = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = industrys
+				category = build
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 发展新工业区
+	focus = {
+		id = YKO_fa_zhan_xin_gong_ye_qu
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = YKO_guo_jia_chong_jian
+	
+		prerequisite = {
+			focus = YKO_guo_jia_chong_jian
+		}
+	
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 旧工业区重建
+	focus = {
+		id = YKO_jiu_gong_ye_qu_chong_jian
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = YKO_guo_jia_chong_jian
+	
+		prerequisite = {
+			focus = YKO_guo_jia_chong_jian
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_e_idea
+				}
+				swap_ideas = {
+					remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_e_idea
+					add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_f_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_idea
+					add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_c_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 引入新生产模式
+	focus = {
+		id = YKO_yin_ru_xin_sheng_chan_mo_shi
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_guo_jia_chong_jian
+	
+		prerequisite = {
+			focus = YKO_fa_zhan_xin_gong_ye_qu
+		}
+
+		prerequisite = {
+			focus = YKO_jiu_gong_ye_qu_chong_jian
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_f_idea
+				}
+				remove_ideas = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_f_idea
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_c_idea
+					add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_d_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界公路网
+	focus = {
+		id = YKO_ming_jie_gong_lu_wang
+		icon = GFX_focus_generic_improve_roads
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_yu_shi_wu_zheng_de_ming_jie
+			focus = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		}
+	
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+				  	type = infrastructure
+				  	level = 2
+				  	instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 审判叛乱分子
+	focus = {
+		id = YKO_shen_pan_pan_luan_fen_zi
+		icon = GFX_focus_generic_court
+		cost = 7
+		x = 2
+		y = 2
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_yu_shi_wu_zheng_de_ming_jie
+			focus = YKO_rang_xi_xing_yao_zai_ci_kai_hua
+		}
+	
+		completion_reward = {
+			country_event = yko.102
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 清扫游击队
+	focus = {
+		id = YKO_qing_sao_you_ji_dui
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = YKO_shen_pan_pan_luan_fen_zi
+	
+		prerequisite = {
+			focus = YKO_shen_pan_pan_luan_fen_zi
+		}
+
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = YYK_fan_dui_zhe_di_kang_idea
+				}
+			}
+		}
+	
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = YYK_fan_dui_zhe_di_kang_state_idea
+					}
+					NOT = {
+						has_state_flag = YYK_suppressed_flag
+					}
+				}
+				YYK_remove_resistance = yes
+			}
+			random_controlled_state = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = YYK_fan_dui_zhe_di_kang_state_idea
+					}
+					NOT = {
+						has_state_flag = YYK_suppressed_flag
+					}
+				}
+				YYK_remove_resistance = yes
+			}
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = primary_weapons
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 国家管控媒体
+	focus = {
+		id = YKO_guo_jia_guan_kong_mei_ti
+		icon = GFX_focus_generic_printing_press
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = YKO_shen_pan_pan_luan_fen_zi
+	
+		prerequisite = {
+			focus = YKO_shen_pan_pan_luan_fen_zi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YYK_nei_zhan_shang_hen_idea
+				add_idea = YYK_nei_zhan_shang_hen_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 战争宣传
+	focus = {
+		id = YKO_zhan_zheng_xuan_chuan
+		icon = GFX_focus_war_propaganda
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = YKO_shen_pan_pan_luan_fen_zi
+	
+		prerequisite = {
+			focus = YKO_qing_sao_you_ji_dui
+		}
+
+		prerequisite = {
+			focus = YKO_guo_jia_guan_kong_mei_ti
+		}
+	
+		completion_reward = {
+			remove_ideas = YYK_nei_zhan_shang_hen_c_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 有限国家福利
+	focus = {
+		id = YKO_you_xian_guo_jia_fu_li
+		icon = GFX_focus_generic_welfare
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_yin_ru_xin_sheng_chan_mo_shi
+
+		prerequisite = {
+			focus = YKO_ming_jie_hui_fu_he_ping
+		}
+	
+		prerequisite = {
+			focus = YKO_yin_ru_xin_sheng_chan_mo_shi
+		}
+
+		mutually_exclusive = {
+			focus = YKO_guo_jia_zheng_zhao_lao_gong
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_d_idea
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 国家征召劳工
+	focus = {
+		id = YKO_guo_jia_zheng_zhao_lao_gong
+		icon = GFX_focus_generic_full_employment
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_zhan_zheng_xuan_chuan
+	
+		prerequisite = {
+			focus = YKO_zhan_zheng_xuan_chuan
+		}
+
+		prerequisite = {
+			focus = YKO_zheng_fu_di_yu
+		}
+
+		mutually_exclusive = {
+			focus = YKO_you_xian_guo_jia_fu_li
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			if = {
+				limit = {
+					has_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_d_idea
+				}
+				remove_ideas = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_d_idea
+			}
+			else_if = {
+				limit = {
+					has_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_c_idea
+				}
+				swap_ideas = {
+					remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_c_idea
+					add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_f_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_idea
+					add_idea = YYK_nei_zhan_hou_de_sheng_chan_wen_ti_e_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 冥界科技进步
+	focus = {
+		id = YKO_ming_jie_ke_ji_jin_bu
+		icon = GFX_focus_research
+		cost = 7
+		x = -2
+		y = 6
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_you_xian_guo_jia_fu_li
+			focus = YKO_guo_jia_zheng_zhao_lao_gong
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 基础科学研究
+	focus = {
+		id = YKO_ji_chu_ke_xue_yan_jiu
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_ming_jie_ke_ji_jin_bu
+	
+		prerequisite = {
+			focus = YKO_ming_jie_ke_ji_jin_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = YKO_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = YKO_ming_jie_ke_ji_jin_bu
+	
+		prerequisite = {
+			focus = YKO_ming_jie_ke_ji_jin_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 1
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 总结内战经验
+	focus = {
+		id = YKO_zong_jie_nei_zhan_jing_yan
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = 2
+		y = 6
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_you_xian_guo_jia_fu_li
+			focus = YKO_guo_jia_zheng_zhao_lao_gong
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础武器研发
+	focus = {
+		id = YKO_ji_chu_wu_qi_yan_fa
+		icon = GFX_focus_focus_fra_maquis
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = YKO_zong_jie_nei_zhan_jing_yan
+	
+		prerequisite = {
+			focus = YKO_zong_jie_nei_zhan_jing_yan
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 1.0
+				bonus = 1
+				uses = 1
+				category = infantry
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 军事理论探索
+	focus = {
+		id = YKO_jun_shi_li_lun_tan_suo
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = YKO_zong_jie_nei_zhan_jing_yan
+	
+		prerequisite = {
+			focus = YKO_zong_jie_nei_zhan_jing_yan
+		}
+	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+
+	# 装甲研究
+	focus = {
+		id = YKO_zhuang_jia_yan_jiu
+		icon = GFX_goal_generic_build_tank
+		cost = 12
+		x = 0
+		y = 7
+
+		relative_position_id = YKO_zhi_xu_chong_gui_ming_jie
+	
+		prerequisite = {
+			focus = YKO_ming_jie_ke_ji_jin_bu
+		}
+
+		prerequisite = {
+			focus = YKO_zong_jie_nei_zhan_jing_yan
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = shield_weapons
+			  }
+		}
+	
+		ai_will_do = {
+		  factor = 1
+		}
+	}
+}

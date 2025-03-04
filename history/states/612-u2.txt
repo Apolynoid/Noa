@@ -1,0 +1,29 @@
+state={
+	id=612
+	name="STATE_612"
+	provinces={
+		7323 7334 7337 7345 7356 7363 7367 7383 
+	}
+	resources={
+		energy = 8
+		powder = 5.0
+		metal = 0.0
+		gas=5.000
+		crystal=12.000
+	}
+	history={
+		146.1.1 = {
+			owner = CJK
+			add_core_of = CJK
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 0
+			}
+		}
+	}
+	state_category=s5
+	manpower=54912
+	buildings_max_level_factor=1.000
+	local_supplies=2.500
+}

@@ -1,0 +1,21 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_infantry_weapons"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_all_infantry_weapons.png"
+	}	
+
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_artillery"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_all_artillery.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_armor"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_all_armor.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_cat_eq_all_aircraft"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_all_aircraft.png"
+	}
+}

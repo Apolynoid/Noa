@@ -1,0 +1,532 @@
+SEJ_reduce_opposition_power = {
+    if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_idea
+        }
+        swap_ideas = {
+            remove_idea = SEJ_fan_dui_pai_bu_he_zuo_idea
+            add_idea = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+        }
+    }
+    else_if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+        }
+        swap_ideas = {
+            remove_idea = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+            add_idea = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+        }
+    }
+    else_if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+        }
+        remove_ideas = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+    }
+    else = {
+        add_political_power = 100
+    }
+}
+
+SEJ_remove_opposition_power = {
+    if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_idea
+        }
+        remove_ideas = SEJ_fan_dui_pai_bu_he_zuo_idea
+    }
+    else_if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+        }
+        remove_ideas = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+    }
+    else_if = {
+        limit = {
+            has_idea = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+        }
+        remove_ideas = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+    }
+    else = {
+        add_political_power = 100
+    }
+}
+
+SEJ_support_init_and_trigger = {
+    hidden_effect = {
+        SEJ = {
+            set_variable = {
+                support_science_weapon = 0
+            }
+            set_variable = {
+                support_magic_weapon = 0
+            }
+            set_variable = {
+                support_manpower = 10
+            }
+            set_variable = {
+                support_xp = 5
+            }
+            every_country = {
+                limit = {
+                    is_in_faction_with = SEJ
+                }
+                country_event = sej.136
+            }
+        }
+    }
+}
+
+SEJ_army_infiltration_add_5 = {
+    custom_effect_tooltip = SEJ_army_infiltration_add_5_tt
+    hidden_effect = {
+        add_to_variable = {
+            SEJ_army_infiltration = 5
+        }
+        clamp_variable = {
+            var = SEJ_army_infiltration
+            min = 0
+            max = 100
+        }
+    }
+}
+
+SEJ_army_infiltration_add_10 = {
+    custom_effect_tooltip = SEJ_army_infiltration_add_10_tt
+    hidden_effect = {
+        add_to_variable = {
+            SEJ_army_infiltration = 10
+        }
+        clamp_variable = {
+            var = SEJ_army_infiltration
+            min = 0
+            max = 100
+        }
+    }
+}
+
+SEJ_army_infiltration_minus_20 = {
+    custom_effect_tooltip = SEJ_army_infiltration_minus_20_tt
+    hidden_effect = {
+        subtract_from_variable = {
+            SEJ_army_infiltration = 20
+        }
+        clamp_variable = {
+            var = SEJ_army_infiltration
+            min = 0
+            max = 100
+        }
+    }
+}
+
+SEJ_trigger_civil_war = {
+    custom_effect_tooltip = SEJ_trigger_civil_war_tt
+    hidden_effect = {
+        # calc land distribution
+        set_temp_variable = {
+            SEJ_size_ratio_temp = 1
+        }
+        subtract_from_temp_variable = {
+            SEJ_size_ratio_temp = party_popularity@neworder
+        }
+        set_temp_variable = {
+            SEJ_hegemonist_rebellion_size = party_popularity@neworder
+        }
+        multiply_temp_variable = {
+            SEJ_hegemonist_rebellion_size = num_owned_states
+        }
+        # calc army distribution
+        set_temp_variable = {
+            SEJ_army_ratio_temp = SEJ_army_infiltration
+        }
+        divide_temp_variable = {
+            SEJ_army_ratio_temp = -100
+        }
+        add_to_temp_variable = {
+            SEJ_army_ratio_temp = 1
+        }
+        # swap capitals
+        set_capital = {state = 135}
+        # trigger civil war
+        start_civil_war = {
+            ruling_party = neworder
+            ideology = fandong
+            size = SEJ_size_ratio_temp
+            army_ratio = SEJ_army_ratio_temp
+            capital = 119
+            states = all
+            states_filter = {
+                NOT = {
+                    state = 135
+                }
+            }
+            keep_unit_leaders_trigger = {
+                NOT = {
+                    has_ideology_group = fandong
+                }
+            }
+            # set alt tag
+            set_country_flag = SEJ_original_tag_flag
+        }
+        # manual land distribution
+        #log = "Current value of SEJ_hegemonist_rebellion_size is: [?SEJ_hegemonist_rebellion_size]"
+        while_loop_effect = {
+            limit = {
+                check_variable = {
+                    SEJ_hegemonist_rebellion_size > 1
+                }
+            }
+            subtract_from_temp_variable = {
+                SEJ_hegemonist_rebellion_size = 1
+            }
+            random_state = {
+                limit = {
+                    is_controlled_by = SEO
+                    any_neighbor_state = {
+                        is_controlled_by = SEJ
+                    }
+                }
+                transfer_state_to = SEJ
+            }
+        }
+        # clear radicalists influence
+        add_popularity = {
+            ideology = fandong
+            popularity = -1
+        }
+        # extra equipments & factories
+        if = {
+            limit = {
+                has_completed_focus = SEJ_di_xia_gong_fang
+            }
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        if = {
+            limit = {
+                has_completed_focus = SEJ_tu_xi_jun_shi_cang_ku
+            }
+            add_equipment_to_stockpile = {
+                type = magic_core_a
+                amount = 1000
+            }
+            add_equipment_to_stockpile = {
+                type = magic_energy_a
+                amount = 200
+            }
+        }
+        # set state-based militias
+        SEJ = {
+            delete_unit_template_and_units = {
+                division_template = "妖怪复兴民兵"
+                disband = yes
+            }
+            division_template = {
+                name = "妖怪复兴民兵"
+                is_locked = yes
+                regiments = {
+                    ma_infantry = { x = 0 y = 0 }
+                    ma_infantry = { x = 0 y = 1 }
+                    ma_light_infantry = { x = 0 y = 2 }
+                }
+            }
+            every_owned_state = {
+                create_unit = {
+                    division = "name = \"妖怪复兴民兵\" division_template = \"妖怪复兴民兵\" start_experience_factor = 0.1 start_manpower_factor = 0.3 start_equipment_factor = 0.3"
+                    owner = SEJ
+                }
+            }
+        }
+        SEO = {
+            delete_unit_template_and_units = {
+                division_template = "下克上民兵卫队"
+                disband = yes
+            }
+            division_template = {
+                name = "下克上民兵卫队"
+                is_locked = yes
+                regiments = {
+                    ma_infantry = { x = 0 y = 0 }
+                    ma_infantry = { x = 0 y = 1 }
+                    ma_infantry = { x = 0 y = 2 }
+                }
+            }
+            every_owned_state = {
+                create_unit = {
+                    division = "name = \"下克上民兵卫队\" division_template = \"下克上民兵卫队\" start_experience_factor = 0.1 start_manpower_factor = 0.3 start_equipment_factor = 0.3"
+                    owner = SEO
+                }
+            }
+        }
+        # radicalists guards
+        SEJ = {
+            delete_unit_template_and_units = {
+                division_template = "辉针城卫队"
+                disband = yes
+            }
+        }
+        SEO = {
+            delete_unit_template_and_units = {
+                division_template = "辉针城卫队"
+                disband = yes
+            }
+            load_oob = "SEJ_kishinjou_guards"
+        }
+        # variables copy & dynamic modifier change
+        SEO = {
+            set_variable = { SEJ_revolutionary_army_atk = -0.05 }
+            set_variable = { SEJ_revolutionary_army_def = -0.05 }
+            set_variable = { SEJ_revolutionary_army_mo = 0.1 }
+            set_variable = { SEJ_revolutionary_army_org = -0.1 }
+            set_variable = { SEJ_revolutionary_army_con = 0 }
+            set_variable = { SEJ_revolutionary_army_cop = 0 }
+            set_variable = { SEJ_revolutionary_army_mcp = 0 }
+            set_variable = { SEJ_revolutionary_army_mpf = 0 }
+            set_variable = { SEJ_revolutionary_army_psp = 0 }
+            set_variable = { SEJ_revolutionary_army_tta = 0 }
+        }
+        SEJ = {
+            remove_dynamic_modifier = {
+                modifier = SEJ_ge_ming_jun_idea
+            }
+            add_dynamic_modifier = {
+                modifier = SEJ_yao_guai_zhong_zu_ge_ming_jun_idea
+            }
+        }
+        SEO = {
+            add_dynamic_modifier = {
+                modifier = SEJ_ge_ming_jun_idea
+            }
+        }
+        # law change
+        SEJ = {
+            add_ideas = low_economic_mobilisation
+        }
+        # ideas move
+        SEO = {
+            add_ideas = hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+            add_ideas = SEJ_di_yi_ge_wu_nian_ji_hua_idea
+            add_ideas = SEJ_pan_luan_tong_meng_nei_zhan_idea
+        }
+        SEJ = {
+            add_ideas = SEJ_pan_luan_tong_meng_nei_zhan_idea
+        }
+        # radicalists focus set
+        SEO = {
+            load_focus_tree = SEJ_focus
+            complete_national_focus = SEJ_jian_chi_xia_ke_shang_dao_lu
+            unlock_national_focus = SEJ_zheng_tong_xia_ke_shang_dao_lu
+            complete_national_focus = SEJ_fen_hua_yao_guai_zhong_zu_pai
+        }
+        # complete focus based on time
+        SEJ = {
+            if = {
+                limit = {
+                    check_variable = {
+                        days_mission_timeout@SEJ_ji_jiang_dao_lai_de_ji_jin_pai_zhen_ya < 146
+                    }
+                }
+                SEO = {
+                    complete_national_focus = SEJ_ji_xu_di_yi_ge_wu_nian_ji_hua
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        days_mission_timeout@SEJ_ji_jiang_dao_lai_de_ji_jin_pai_zhen_ya < 86
+                    }
+                }
+                SEO = {
+                    complete_national_focus = SEJ_zhong_gong_ye_jian_she
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        days_mission_timeout@SEJ_ji_jiang_dao_lai_de_ji_jin_pai_zhen_ya < 51
+                    }
+                }
+                SEO = {
+                    complete_national_focus = SEJ_ji_chu_she_shi_jian_she
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        days_mission_timeout@SEJ_ji_jiang_dao_lai_de_ji_jin_pai_zhen_ya < 16
+                    }
+                }
+                SEO = {
+                    complete_national_focus = SEJ_wan_cheng_di_yi_ge_wu_nian_ji_hua
+                }
+            }
+        }
+        # set flag
+        set_country_flag = SEJ_civil_war_begun_flag
+        # trigger news event
+        news_event = {
+            id = sej.130
+            days = 5
+        }
+    }
+}
+
+SEJ_calc_buff = {
+    # count faction members
+    set_variable = {
+        SEJ_faction_member_num = 0
+    }
+    every_allied_country = {
+        if = {
+            limit = {
+                has_capitulated = no
+            }
+            add_to_variable = {
+                SEJ.SEJ_faction_member_num = 1
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_dynamic_modifier = {
+                        modifier = SEJ_gekokujyo_movement_buff_member_idea
+                    }
+                }
+            }
+            add_dynamic_modifier = {
+                modifier = SEJ_gekokujyo_movement_buff_member_idea
+            }
+        }
+    }
+    # calc factor
+    set_variable = {
+        SEJ_leader_factor = SEJ_faction_member_num
+    }
+    clamp_variable = {
+        var = SEJ_leader_factor
+        min = 0
+        max = 20
+    }
+    set_variable = {
+        SEJ_member_factor = SEJ_faction_member_num
+    }
+    clamp_variable = {
+        var = SEJ_member_factor
+        min = 0
+        max = 10
+    }
+    # apply modifier
+    set_variable = {
+        SEJ_leader_buff_building = 0.015
+    }
+    set_variable = {
+        SEJ_leader_buff_consumer = -0.015
+    }
+    set_variable = {
+        SEJ_leader_buff_factory = 0.01
+    }
+    if = {
+        limit = {
+            has_completed_focus = SEJ_qiang_hua_ge_ming_tong_meng
+        }
+        set_variable = {
+            SEJ_leader_buff_exp = 0.01
+        }
+        set_variable = {
+            SEJ_leader_buff_training = -0.01
+        }
+        set_variable = {
+            SEJ_leader_buff_core_atk = 0.01
+        }
+        set_variable = {
+            SEJ_leader_buff_core_def = 0.01
+        }
+        set_variable = {
+            SEJ_leader_buff_morale = 0.01
+        }
+    }
+    multiply_variable = {
+        SEJ_leader_buff_building = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_consumer = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_factory = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_exp = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_training = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_core_atk = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_core_def = SEJ_leader_factor
+    }
+    multiply_variable = {
+        SEJ_leader_buff_morale = SEJ_leader_factor
+    }
+    # members
+    set_variable = {
+        SEJ_member_buff_building = 0.015
+    }
+    set_variable = {
+        SEJ_member_buff_consumer = -0.015
+    }
+    set_variable = {
+        SEJ_member_buff_factory = 0.01
+    }
+    if = {
+        limit = {
+            has_completed_focus = SEJ_qiang_hua_ge_ming_tong_meng
+        }
+        set_variable = {
+            SEJ_member_buff_exp = 0.01
+        }
+        set_variable = {
+            SEJ_member_buff_training = -0.01
+        }
+        set_variable = {
+            SEJ_member_buff_core_atk = 0.01
+        }
+        set_variable = {
+            SEJ_member_buff_core_def = 0.01
+        }
+        set_variable = {
+            SEJ_member_buff_morale = 0.01
+        }
+    }
+    multiply_variable = {
+        SEJ_member_buff_building = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_consumer = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_factory = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_exp = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_training = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_core_atk = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_core_def = SEJ_member_factor
+    }
+    multiply_variable = {
+        SEJ_member_buff_morale = SEJ_member_factor
+    }
+}

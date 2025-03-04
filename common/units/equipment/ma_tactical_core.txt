@@ -1,0 +1,100 @@
+# All infantry equipment
+
+equipments = {
+
+	tactical_core_a = {
+		year = 153
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_sc_attack
+			up_defense
+			up_speed_type2
+		}
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 54
+		breakthrough = 30
+		hardness = 0.75
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 30.5
+		hard_attack = 25.5
+		ap_attack = 70
+		air_attack = 10
+
+		#Misc Abilities
+		reliability = 0.55
+		maximum_speed = 5.5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 38
+
+		
+		
+	}
+
+	tactical_core153 = {
+		year = 153
+	
+		archetype = tactical_core_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			crystal = 2
+			powder = 1
+			metal = 1
+		}
+	}
+
+	tactical_core157 = {
+		year = 157
+	
+		archetype = tactical_core_a
+		parent = tactical_core153
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			crystal = 3
+			powder = 1
+			metal = 1
+		}
+		defense = 63
+		breakthrough = 33.5
+		armor_value = 105
+		soft_attack = 36
+		hard_attack = 31
+		ap_attack = 90
+		air_attack = 14
+		build_cost_ic = 46
+	}
+}

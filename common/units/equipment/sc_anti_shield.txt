@@ -1,0 +1,122 @@
+# All infantry equipment
+
+equipments = {
+
+	anti_shield_a = {
+		year = 147
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = {
+			anti_tank
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_sc_attack
+			up_ap_attack
+			up_speed
+		}
+		
+		
+
+		
+		
+		#Defensive Abilities
+		breakthrough = 9
+		hardness = 0.01
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 10
+		ap_attack = 30
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 6
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 3.5
+
+		
+		
+	}
+
+	basic_anti_shield = {
+		year = 147
+
+		archetype = anti_shield_a
+
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 1
+			crystal = 1
+		}
+	}
+
+	anti_shield152 = {
+		year = 152
+	
+		archetype = anti_shield_a
+		parent = basic_anti_shield
+		
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 1
+			crystal = 1
+		}
+
+		breakthrough = 12
+		soft_attack = 12
+		hard_attack = 12
+		ap_attack = 60
+		build_cost_ic = 4
+	}
+
+	anti_shield158 = {
+		year = 158
+	
+		archetype = anti_shield_a
+		parent = anti_shield152
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			powder = 1
+			metal = 2
+			gas = 1
+			crystal = 1
+		}
+
+		breakthrough = 17
+		soft_attack = 14.5
+		hard_attack = 14.5
+		ap_attack = 90
+		build_cost_ic = 4.5
+	}
+}

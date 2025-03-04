@@ -1,0 +1,461 @@
+﻿add_namespace = sca
+##########焦点事件###########
+# 红魔城庆典准备
+country_event = {
+	id = sca.101
+	title = sca.101.t
+	desc = sca.101.d
+	is_triggered_only = yes
+	option = {
+		name = sca.101.1
+	}
+}
+
+# 蕾米莉亚遭遇刺杀
+country_event = {
+	id = sca.102
+	title = sca.102.t
+	desc = sca.102.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SCA_remilia_been_assasinated_flag	
+			set_nationality = {
+				target_country = XXX
+				character = SCA_rem
+			}
+			mark_focus_tree_layout_dirty = yes
+			unlock_national_focus = SCA_hong_mo_cheng_qing_dian
+			complete_national_focus = SCA_jin_ji_shi_tai
+		}
+	}
+
+	option = {
+		name = sca.102.1
+		add_stability = -0.1
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = sca.104
+				days = 30
+			}
+		}
+	}
+}
+
+# 蕾米莉亚遭遇刺杀 世界
+news_event = {
+	id = sca.103
+	title = sca.103.t
+	desc = sca.103.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 斯卡蕾特帝国
+	option = {
+		name = sca.103.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# 雾之湖妖精联合体
+	option = {
+		name = sca.103.2
+		trigger = {
+			original_tag = CIR
+		}
+	}
+
+	# 其他
+	option = {
+		name = sca.103.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+				}
+			}
+		}
+	}
+}
+
+# 帝国境内发生叛乱
+country_event = {
+	id = sca.104
+	title = sca.104.t
+	desc = sca.104.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				SCA_fairy_rebellion_value = 60
+			}
+			set_variable = {
+				SCA_rebellion_mtth = 30
+			}
+			set_variable = {
+				SCA_rebellion_progress = 7
+			}
+			set_variable = {
+				SCA_fairy_rebellion_pp = -0.45
+			}
+			set_variable = {
+				SCA_fairy_rebellion_st = -0.3
+			}
+			set_variable = {
+				SCA_fairy_rebellion_ws = -0.3
+			}
+			set_variable = {
+				SCA_fairy_rebellion_cf = 0.6
+			}
+			news_event = {
+				id = sca.105
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = sca.104.1
+		remove_ideas = SCA_yao_jing_bu_man_idea
+		add_dynamic_modifier = {
+			modifier = SCA_yao_jing_bao_dong_idea
+		}
+		hidden_effect = {
+			country_event = {
+				id = sca.106
+				days = 15
+			}
+		}
+	}
+}
+
+# SCA境内发生动荡 世界
+news_event = {
+	id = sca.105
+	title = sca.105.t
+	desc = sca.105.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 斯卡蕾特帝国
+	option = {
+		name = sca.105.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# 雾之湖妖精联合体
+	option = {
+		name = sca.105.2
+		trigger = {
+			original_tag = CIR
+		}
+	}
+
+	# 其他
+	option = {
+		name = sca.105.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+				}
+			}
+		}
+	}
+}
+
+# 军队中发生抗命事件
+country_event = {
+	id = sca.106
+	title = sca.106.t
+	desc = sca.106.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SCA_rebellion_system_flag
+			set_country_flag = SCA_fairy_rebellion_flag
+			mark_focus_tree_layout_dirty = yes
+			set_variable = {
+				SCA_army_loyalty_value = 30
+			}
+			set_variable = {
+				SCA_loyalty_progress = 4
+			}
+			set_variable = {
+				SCA_army_loyalty_cp = -0.35
+			}
+			set_variable = {
+				SCA_army_loyalty_eg = -0.35
+			}
+			set_variable = {
+				SCA_army_loyalty_ld = 0.35
+			}
+		}
+	}
+
+	option = {
+		name = sca.106.1
+		custom_effect_tooltip = SCA_start_rebellion_system_tt
+		add_dynamic_modifier = {
+			modifier = SCA_bu_zhong_cheng_de_jun_dui_idea
+		}
+	}
+}
+
+# 叛乱带来的损失
+country_event = {
+	id = sca.107
+	title = sca.107.t
+	desc = sca.107.d
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = SCA
+		has_country_flag = SCA_rebellion_system_flag
+	}
+
+	mean_time_to_happen = {
+		days = 0
+		modifier = {
+			add = SCA_rebellion_mtth
+			tag = SCA
+		}
+	}
+
+	option = {
+		name = sca.107.1
+		random_core_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+	}
+}
+
+# 叛乱逐渐平息
+country_event = {
+	id = sca.108
+	title = sca.108.t
+	desc = sca.108.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = SCA_rebellion_system_flag
+			remove_dynamic_modifier = {
+				modifier = SCA_yao_jing_bao_dong_idea
+			}
+			remove_dynamic_modifier = {
+				modifier = SCA_bu_zhong_cheng_de_jun_dui_idea
+			}
+		}
+	}
+
+	option = {
+		name = sca.108.1
+		custom_effect_tooltip = SCA_end_rebellion_system_tt
+		effect_tooltip = {
+			remove_dynamic_modifier = {
+				modifier = SCA_yao_jing_bao_dong_idea
+			}
+			remove_dynamic_modifier = {
+				modifier = SCA_bu_zhong_cheng_de_jun_dui_idea
+			}
+		}
+	}
+}
+
+# 蕾米莉亚女皇的恢复
+country_event = {
+	id = sca.109
+	title = sca.109.t
+	desc = sca.109.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.109.1
+		add_stability = 0.05
+		add_political_power = 50
+		hidden_effect = {
+			set_nationality = {
+				target_country = SCA
+				character = SCA_rem
+			}
+			promote_character = {
+				character = SCA_rem
+				ideology = guli_type
+			}
+			promote_character = {
+				character = SCA_rem
+				ideology = oldgenso_type
+			}
+		}
+	}
+}
+
+# [SCA.GetName]提出合作建议
+country_event = {
+	id = sca.110
+	title = sca.110.t
+	desc = sca.110.d
+	is_triggered_only = yes
+
+	# 我们接受这一提议
+	option = {
+		name = sca.110.1
+		SCA = {
+			diplomatic_relation = {
+				country = HUM
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = HUM
+				relation = guarantee
+				active = yes
+			}
+			add_political_power = 100
+			add_stability = 0.1
+			hidden_effect = {
+				country_event = sca.111
+			}
+		}
+		add_ideas = SCA_shou_dao_si_ka_lei_te_de_bao_hu_idea
+		add_stability = -0.05
+	}
+
+	# 我们绝不与恶魔合作
+	option = {
+		name = sca.110.2
+		hidden_effect = {
+			country_event = sca.112
+		}
+	}
+}
+
+# [HUM.GetName]同意与我们合作
+country_event = {
+	id = sca.111
+	title = sca.111.t
+	desc = sca.111.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.111.1
+	}
+}
+
+# [HUM.GetName]拒绝与我们合作
+country_event = {
+	id = sca.112
+	title = sca.112.t
+	desc = sca.112.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.112.1
+	}
+}
+
+# [SCA.GetName]邀请我们加入科技合作
+country_event = {
+	id = sca.113
+	title = sca.113.t
+	desc = sca.113.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.113.1
+		add_to_tech_sharing_group = scarlet_imperial_academy
+	}
+}
+
+# 来自[SCA.GetName]的工业援助
+country_event = {
+	id = sca.114
+	title = sca.114.t
+	desc = sca.114.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.114.1
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+	}
+}
+
+# 来自[SCA.GetName]的投资
+country_event = {
+	id = sca.115
+	title = sca.115.t
+	desc = sca.115.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.115.1
+		add_timed_idea = {
+            idea = SCA_di_guo_tou_zi_idea
+            days = 365
+        }
+	}
+}
+
+# 来自[SCA.GetName]的军事援助
+country_event = {
+	id = sca.116
+	title = sca.116.t
+	desc = sca.116.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.116.1
+		army_experience = 10
+	}
+}
+
+# 芙兰朵露政变
+country_event = {
+	id = sca.117
+	title = sca.117.t
+	desc = sca.117.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.117.1
+	}
+}
+
+# 战胜CIR带来的军事进步
+country_event = {
+	id = sca.118
+	title = sca.118.t
+	desc = sca.118.d
+	is_triggered_only = yes
+
+	option = {
+		name = sca.118.1
+		SCA_improve_war_preparation = yes
+	}
+}

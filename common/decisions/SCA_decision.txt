@@ -1,0 +1,222 @@
+# 妖精暴动
+SCA_yao_jing_bao_dong = {
+    # 暴动扩大
+    SCA_bao_dong_kuo_da = {
+        allowed = {
+            original_tag = SCA
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            has_country_flag = SCA_rebellion_system_flag
+        }
+
+        cancel_trigger = {
+            NOT = {
+                has_country_flag = SCA_rebellion_system_flag
+            }
+        }
+
+        icon = revolt
+
+        selectable_mission = no
+
+        days_mission_timeout = 50
+
+        is_good = no
+
+        timeout_effect = {
+            SCA_fairy_rebellion_plus_5 = yes
+        }
+    }
+
+    # 争取军队支持
+    SCA_zheng_qu_jun_dui_zhi_chi = {
+        allowed = {
+            original_tag = SCA
+        }
+
+        visible = {
+            has_completed_focus = SCA_chu_li_pan_luan
+        }
+
+        icon = generic_military
+
+        days_remove = 40
+
+        cost = 20
+
+        cancel_trigger = {
+            NOT = {
+                has_country_flag = SCA_rebellion_system_flag
+            }
+        }
+
+        remove_effect = {
+            SCA_army_loyalty_plus_5 = yes
+        }
+
+        ai_will_do = {
+            base = 50000
+            modifier = {
+                factor = 0
+                check_variable = {
+                    SCA_army_loyalty_value > 50
+                }
+            }
+        }
+    }
+
+    # 派军队维持秩序
+    SCA_pai_jun_dui_wei_chi_zhi_xu = {
+        allowed = {
+            original_tag = SCA
+        }
+
+        visible = {
+            has_completed_focus = SCA_chu_li_pan_luan
+        }
+
+        available = {
+            has_active_mission = SCA_bao_dong_kuo_da
+            custom_trigger_tooltip = {
+                tooltip = SCA_army_loyalty_ge_40_tt
+                check_variable = {
+                    var = SCA_army_loyalty_value
+                    value = 40
+                    compare = greater_than_or_equals
+                }
+            }
+        }
+
+        icon = generic_army_support
+
+        days_re_enable = 40
+
+        cost = 10
+
+        complete_effect = {
+            SCA_army_loyalty_minus_3 = yes
+            add_days_mission_timeout = {
+                mission = SCA_bao_dong_kuo_da
+                days = 60
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+            modifier = {
+                factor = 0
+                OR = {
+                    NOT = {
+                        has_active_mission = SCA_bao_dong_kuo_da
+                    }
+                    check_variable = {
+                        days_mission_timeout@SCA_bao_dong_kuo_da > 60
+                    }
+                }
+            }
+        }
+    }
+
+    # 开启谈判进程
+    SCA_kai_qi_tan_pan_jin_cheng = {
+        allowed = {
+            original_tag = SCA
+        }
+
+        visible = {
+            has_completed_focus = SCA_chang_shi_huan_he_guan_xi
+        }
+
+        icon = generic_political_rally
+
+        days_remove = 40
+
+        cost = 30
+
+        cancel_trigger = {
+            NOT = {
+                has_country_flag = SCA_rebellion_system_flag
+            }
+        }
+
+        remove_effect = {
+            SCA_fairy_rebellion_minus_5 = yes
+        }
+
+        ai_will_do = {
+            base = 100000
+        }
+    }
+
+    # 派军队镇压
+    SCA_pai_jun_dui_zhen_ya = {
+        allowed = {
+            original_tag = SCA
+        }
+
+        visible = {
+            has_completed_focus = SCA_zhen_ya_fan_dui_zhe
+        }
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = SCA_army_loyalty_ge_60_tt
+                check_variable = {
+                    var = SCA_army_loyalty_value
+                    value = 60
+                    compare = greater_than_or_equals
+                }
+            }
+        }
+
+        icon = oppression
+
+        days_remove = 40
+
+        cost = 40
+
+        cancel_trigger = {
+            NOT = {
+                has_country_flag = SCA_rebellion_system_flag
+            }
+        }
+
+        remove_effect = {
+            SCA_army_loyalty_minus_5 = yes
+            SCA_fairy_rebellion_minus_10 = yes
+        }
+    }
+}
+
+# 帝国科学院
+SCA_di_guo_ke_xue_yuan = {
+	# 邀请FROM加盟科学院
+	SCA_yao_qing_FROM_jia_meng_ke_xue_yuan = {
+		target_root_trigger = {
+            has_completed_focus = SCA_ji_shu_jiao_liu
+        }
+        target_array = subjects
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                is_subject = yes
+                NOT = {
+                    is_in_tech_sharing_group = scarlet_imperial_academy
+                }
+            }
+        }
+        icon = generic_research
+		days_re_enable = 180
+        remove_effect = {
+            FROM = {
+                country_event = sca.113
+            }
+        }
+	}
+}

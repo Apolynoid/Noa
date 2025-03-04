@@ -1,0 +1,164 @@
+YKO_focus = {
+	name = "YKO focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = YYK
+	}
+	enable = {
+		NOT = {
+			has_country_flag = YYK_KNA_flag
+		}
+	}
+	abort = {
+		has_country_flag = YYK_KNA_flag
+	}
+
+	ai_national_focuses = {
+		# before war
+		YYK_ming_jie_de_ming_yun
+		YKO_zhi_chi_you_you_zi
+		YKO_que_bao_shou_du_wei_dui_zhi_chi
+		YKO_que_bao_bai_yu_lou_an_quan
+		YKO_an_cha_zhong_cheng_guan_liao
+		YKO_qing_xi_jun_dui
+		YKO_xiao_mie_fan_pan_fen_zi
+		# civil war
+		YKO_zhen_ya_pan_luan
+		YKO_fang_yu_ce_lue
+		YKO_xing_zheng_jie_gou_tiao_zheng
+		YKO_ti_ba_ji_ceng_jun_guan
+		YKO_jun_shi_gai_ge
+		YKO_jing_tai_zhan_zheng
+		YKO_zhi_shi_wu_qi
+		# industrial
+		YKO_zhan_zheng_gong_ye_dong_yuan
+		YKO_tou_zi_jun_gong_sheng_chan
+		YKO_yu_qi_ye_jia_he_zuo
+		YKO_kuo_da_jun_bei_sheng_chan
+		# rush civil-war-end focus quick
+		YKO_you_ling_zi_sha_shi_gong_ji
+		YKO_zeng_qiang_xi_xing_si_jia_wei_wang
+		# after civil war
+		YKO_zhi_xu_chong_gui_ming_jie
+		YKO_yu_shi_wu_zheng_de_ming_jie
+		# quick recovery
+		YKO_shen_pan_pan_luan_fen_zi
+		YKO_qing_sao_you_ji_dui
+		YKO_guo_jia_chong_jian
+		YKO_jiu_gong_ye_qu_chong_jian
+		YKO_fa_zhan_xin_gong_ye_qu
+		YKO_yin_ru_xin_sheng_chan_mo_shi
+		YKO_yu_si_ji_de_xie_ding
+		YKO_ming_jie_hui_fu_he_ping
+		YKO_you_xian_guo_jia_fu_li
+		YKO_guo_jia_guan_kong_mei_ti
+		# only pick when civil war last really long
+		YKO_qiang_hua_yu_xi_jian_de_guan_xi
+		YKO_xi_jian_gong_ye_yuan_zhu
+		YKO_wa_jie_pan_jun_dou_zhi
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+KNA_focus = {
+	name = "KNA focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = YYK
+	}
+	enable = {
+		has_country_flag = YYK_KNA_flag
+	}
+	abort = {
+		NOT = {
+			has_country_flag = YYK_KNA_flag
+		}
+	}
+
+	ai_national_focuses = {
+		# before war
+		YYK_ming_jie_de_ming_yun
+		KNA_fan_dui_you_you_zi
+		KNA_jian_li_di_xia_fan_kang_zhong_xin
+		KNA_zheng_qu_jun_dui_zhi_chi
+		KNA_tu_xi_wu_qi_ku
+		KNA_zheng_qu_di_fang_zhi_chi
+		KNA_ji_jie_ge_ming_min_bing
+		# civil war
+		KNA_ming_jie_ge_ming
+		# military first
+		KNA_zheng_bian_ge_ming_jun
+		KNA_lu_jun_zheng_gui_hua
+		KNA_yin_jin_xian_jin_zu_zhi_ti_xi
+		KNA_ming_jie_jun_shi_xue_yuan
+		# revolutionary front - industrial
+		KNA_qiang_hua_ge_ming_zhen_xian
+		KNA_duo_qu_gong_chang_suo_you_quan
+		KNA_chong_xin_zu_zhi_sheng_chan
+		KNA_zhan_zheng_jian_she_ji_hua
+		# revolutionary military committee
+		KNA_ge_ming_jun_shi_wei_yuan_hui
+		KNA_jin_ji_gong_ye_dong_yuan
+		KNA_kuo_da_ge_ming_jun
+		KNA_ge_ming_xian_shi_zhu_yi
+		KNA_ge_ming_xuan_chuan
+		# rush for after civil war
+		KNA_ji_fa_ge_ming_re_qing
+		KNA_zui_zhong_gong_shi_bai_yu_lou
+		# after civil war
+		KNA_ming_jie_gong_he_guo
+		# remove debuff
+		KNA_guan_zhu_guo_nei_ju_shi
+		KNA_zhan_zheng_chou_xu_jin
+		KNA_bai_yu_lou_shen_pan
+		KNA_ge_ming_jiao_yu
+		KNA_fu_yuan_jun_ren_zai_jiu_ye
+		KNA_she_hui_fu_li
+		KNA_ge_ming_zhen_xian_xie_shang_hui_yi
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}

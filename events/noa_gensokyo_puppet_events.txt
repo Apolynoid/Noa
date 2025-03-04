@@ -1,0 +1,1329 @@
+﻿add_namespace = genpup
+
+# SCA 122
+country_event = {
+	id = genpup.101
+	title = genpup.101.t
+	desc = genpup.101.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = SCA_puppet_event_flag
+		}
+		NOT = {
+			country_exists = SCA
+		}
+		controls_state = 122
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SCA_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.101.1
+		SCA = {
+			transfer_state = 122
+		}
+		puppet = SCA
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.101.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = SCA
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SCA
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = SCA
+		}
+		puppet = SCA
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.101.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# MRY 28
+country_event = {
+	id = genpup.102
+	title = genpup.102.t
+	desc = genpup.102.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = MRY_puppet_event_flag
+		}
+		NOT = {
+			country_exists = MRY
+		}
+		controls_state = 28
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MRY_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.102.1
+		MRY = {
+			transfer_state = 28
+		}
+		puppet = MRY
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.102.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = MRY
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = MRY
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = MRY
+		}
+		puppet = MRY
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.102.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# TEG/OTG 399
+country_event = {
+	id = genpup.103
+	title = genpup.103.t
+	desc = genpup.103.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = TEG_puppet_event_flag
+		}
+		NOT = {
+			country_exists = TEG
+			country_exists = OTG
+		}
+		controls_state = 399
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TEG_puppet_event_flag
+			OTG = {
+				every_core_state = {
+					add_core_of = TEG
+				}
+				every_character = {
+					set_nationality = TEG
+					clr_character_flag = nationality_OTG
+					set_character_flag = nationality_TEG
+				}
+			}
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.103.1
+		TEG = {
+			transfer_state = 399
+		}
+		puppet = TEG
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.103.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = TEG
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = TEG
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = TEG
+		}
+		puppet = TEG
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.103.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SEJ 119
+country_event = {
+	id = genpup.104
+	title = genpup.104.t
+	desc = genpup.104.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = SEJ_puppet_event_flag
+		}
+		NOT = {
+			country_exists = SEJ
+		}
+		controls_state = 119
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SEJ_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.104.1
+		SEJ = {
+			transfer_state = 119
+		}
+		puppet = SEJ
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.104.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = SEJ
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SEJ
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = SEJ
+		}
+		puppet = SEJ
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.104.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# CIR 118
+country_event = {
+	id = genpup.105
+	title = genpup.105.t
+	desc = genpup.105.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = CIR_puppet_event_flag
+		}
+		NOT = {
+			country_exists = CIR
+		}
+		controls_state = 118
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = CIR_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.105.1
+		CIR = {
+			transfer_state = 118
+		}
+		puppet = CIR
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.105.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = CIR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = CIR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = CIR
+		}
+		puppet = CIR
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.105.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# NMS 223
+country_event = {
+	id = genpup.106
+	title = genpup.106.t
+	desc = genpup.106.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = NMS_puppet_event_flag
+		}
+		NOT = {
+			country_exists = NMS
+		}
+		controls_state = 223
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NMS_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.106.1
+		NMS = {
+			transfer_state = 223
+		}
+		puppet = NMS
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.106.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = NMS
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = NMS
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = NMS
+		}
+		puppet = NMS
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.106.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# TKM 299
+country_event = {
+	id = genpup.107
+	title = genpup.107.t
+	desc = genpup.107.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = TKM_puppet_event_flag
+		}
+		NOT = {
+			country_exists = TKM
+		}
+		controls_state = 299
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TKM_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.107.1
+		TKM = {
+			transfer_state = 299
+		}
+		puppet = TKM
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.107.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = TKM
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = TKM
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = TKM
+		}
+		puppet = TKM
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.107.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# NTR 88
+
+# WHR 164
+country_event = {
+	id = genpup.109
+	title = genpup.109.t
+	desc = genpup.109.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = WHR_puppet_event_flag
+		}
+		NOT = {
+			country_exists = WHR
+		}
+		controls_state = 164
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = WHR_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.109.1
+		WHR = {
+			transfer_state = 164
+		}
+		puppet = WHR
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.109.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = WHR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = WHR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = WHR
+		}
+		puppet = WHR
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.109.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# HKR 192
+country_event = {
+	id = genpup.110
+	title = genpup.110.t
+	desc = genpup.110.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = HKR_puppet_event_flag
+		}
+		NOT = {
+			country_exists = HKR
+		}
+		any_owned_state = {
+			is_core_of = HKR
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 192
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HKR_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.110.1
+		HKR = {
+			transfer_state = 192
+		}
+		puppet = HKR
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.110.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = HKR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = HKR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = HKR
+		}
+		puppet = HKR
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.110.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# YKR 201
+country_event = {
+	id = genpup.111
+	title = genpup.111.t
+	desc = genpup.111.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = YKR_puppet_event_flag
+		}
+		NOT = {
+			country_exists = YKR
+		}
+		controls_state = 201
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YKR_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.111.1
+		YKR = {
+			transfer_state = 201
+		}
+		puppet = YKR
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.111.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = YKR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = YKR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = YKR
+		}
+		puppet = YKR
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.111.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# MSD 259
+country_event = {
+	id = genpup.112
+	title = genpup.112.t
+	desc = genpup.112.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = MSD_puppet_event_flag
+		}
+		NOT = {
+			country_exists = MSD
+		}
+		controls_state = 259
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MSD_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.112.1
+		MSD = {
+			transfer_state = 259
+		}
+		puppet = MSD
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.112.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = MSD
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = MSD
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = MSD
+		}
+		puppet = MSD
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.112.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# MRS/NAR 188
+country_event = {
+	id = genpup.113
+	title = genpup.113.t
+	desc = genpup.113.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = MRS_puppet_event_flag
+		}
+		NOT = {
+			country_exists = MRS
+			country_exists = ALI
+			country_exists = NAR
+		}
+		controls_state = 188
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MRS_puppet_event_flag
+			ALI = {
+				every_core_state = {
+					add_core_of = MRS
+				}
+				every_character = {
+					set_nationality = MRS
+					clr_character_flag = nationality_ALI
+					set_character_flag = nationality_MRS
+				}
+			}
+			NAR = {
+				every_core_state = {
+					add_core_of = MRS
+				}
+				every_character = {
+					set_nationality = MRS
+					clr_character_flag = nationality_NAR
+					set_character_flag = nationality_MRS
+				}
+			}
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.113.1
+		MRS = {
+			transfer_state = 188
+		}
+		puppet = MRS
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.113.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = MRS
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = MRS
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = MRS
+		}
+		puppet = MRS
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.113.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SRB 633
+country_event = {
+	id = genpup.114
+	title = genpup.114.t
+	desc = genpup.114.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = SRB_puppet_event_flag
+		}
+		NOT = {
+			country_exists = SRB
+		}
+		any_owned_state = {
+			is_core_of = SRB
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 633
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SRB_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.114.1
+		SRB = {
+			transfer_state = 633
+		}
+		puppet = SRB
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.114.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = SRB
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SRB
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = SRB
+		}
+		puppet = SRB
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.114.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SBK 242
+country_event = {
+	id = genpup.115
+	title = genpup.115.t
+	desc = genpup.115.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = SBK_puppet_event_flag
+		}
+		NOT = {
+			country_exists = SBK
+		}
+		any_owned_state = {
+			is_core_of = SBK
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 242
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SBK_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.115.1
+		SBK = {
+			transfer_state = 242
+		}
+		puppet = SBK
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.115.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = SBK
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = SBK
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = SBK
+		}
+		puppet = SBK
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.115.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# WAK 158
+country_event = {
+	id = genpup.116
+	title = genpup.116.t
+	desc = genpup.116.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = WAK_puppet_event_flag
+		}
+		NOT = {
+			country_exists = WAK
+		}
+		any_owned_state = {
+			is_core_of = WAK
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 158
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = WAK_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.116.1
+		WAK = {
+			transfer_state = 158
+		}
+		puppet = WAK
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.116.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = WAK
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = WAK
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = WAK
+		}
+		puppet = WAK
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.116.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# PRI 146
+country_event = {
+	id = genpup.117
+	title = genpup.117.t
+	desc = genpup.117.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = PRI_puppet_event_flag
+		}
+		NOT = {
+			country_exists = PRI
+		}
+		any_owned_state = {
+			is_core_of = PRI
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 146
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = PRI_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.117.1
+		PRI = {
+			transfer_state = 146
+		}
+		puppet = PRI
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.117.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = PRI
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = PRI
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = PRI
+		}
+		puppet = PRI
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.117.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+}

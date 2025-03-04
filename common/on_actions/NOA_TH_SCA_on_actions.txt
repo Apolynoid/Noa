@@ -1,0 +1,55 @@
+on_actions = {
+	on_weekly_SCA = {
+		effect = {
+			if = {
+				limit = {
+					SCA = {
+						has_dynamic_modifier = {
+							modifier = SCA_bu_chong_fen_de_zhan_zheng_zhun_bei_idea
+						}
+						has_war = yes
+					}
+				}
+				SCA = {
+					add_to_variable = {
+						SCA_insufficient_war_preparation = 0.004
+					}
+				}
+			}
+			if = {
+				limit = {
+					SCA = {
+						has_dynamic_modifier = {
+							modifier = SCA_bu_chong_fen_de_zhan_zheng_zhun_bei_idea
+						}
+						has_war = no
+						has_completed_focus = SCA_ying_dui_wei_xie
+					}
+				}
+				SCA = {
+					add_to_variable = {
+						SCA_insufficient_war_preparation = 0.003
+					}
+				}
+			}
+		}
+	}
+
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = SCA
+					}
+					FROM = {
+						original_tag = CIR
+					}
+				}
+				SCA = {
+					country_event = sca.118
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,5 @@
+
+specialization_race = {
+	color = {0 0 255}
+	program_background = "GFX_sp_facility_card_bg"
+}

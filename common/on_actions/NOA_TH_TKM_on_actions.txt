@@ -1,0 +1,45 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			for_each_scope_loop = {
+				array = TKM.TKM_trade_limit_list
+				TKM_try_adding_trade_limit = yes
+			}
+		}
+	}
+
+	on_weekly_TKM = {
+		effect = {
+			for_each_scope_loop = {
+				array = TKM.TKM_trade_limit_list
+				if = {
+					limit = {
+						is_ally_with = TKM
+					}
+					TKM_cancel_trade_limit = yes
+				} else = {
+					TKM_try_adding_trade_limit = yes
+				}
+			}
+		}
+	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = TKM
+					}
+					FROM = {
+						original_tag = SBK
+					}
+				}
+				news_event = {
+					id = tkm.121
+					days = 5
+				}
+			}
+		}
+	}
+}

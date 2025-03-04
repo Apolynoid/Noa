@@ -1,0 +1,612 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "圣辇船陆战队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "命莲寺护卫队"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+		melee_cavalry = { x = 2 y = 0 }
+		melee_cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "实验圣佛光炮小队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_magic_energy_brigade = { x = 1 y = 0}
+		ma_magic_energy_brigade = { x = 1 y = 1}
+	}
+}
+
+units = {
+	#新加
+	division = {
+		name = "实验圣佛光炮小队"
+		location = 2088
+		division_template = "实验圣佛光炮小队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "实验圣佛光炮小队"
+		location = 2088
+		division_template = "实验圣佛光炮小队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 5439
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 5439
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 5439
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 5439
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 30
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 30
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 30
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 30
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1327
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1327
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1327
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1327
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	#KYK
+	division = {
+		name = "圣辇船陆战队"
+		location = 1315
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1315
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1315
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1315
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "圣辇船陆战队"
+		location = 3529
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3529
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3529
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3529
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "圣辇船陆战队"
+		location = 3514
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3514
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3514
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3514
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "圣辇船陆战队"
+		location = 1905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1905
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "圣辇船陆战队"
+		location = 7678
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 7678
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 7678
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 7678
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "圣辇船陆战队"
+		location = 811
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 811
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 811
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 811
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "圣辇船陆战队"
+		location = 993
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 993
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 993
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 993
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	#NUE
+	division = {
+		name = "命莲寺护卫队"
+		location = 1352
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 1352
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 1352
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 1352
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1352
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2373
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2373
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 2373
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 2373
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 1186
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 1186
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1186
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 1186
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 3213
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 3213
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3213
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "圣辇船陆战队"
+		location = 3213
+		division_template = "圣辇船陆战队"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	#NMS
+	division = {
+		name = "命莲寺护卫队"
+		location = 3617
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 3617
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺护卫队"
+		location = 2088
+		division_template = "命莲寺护卫队"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+}
+
+focus = {
+	current = "NMS_ying_dui_zong_jiao_wei_ji"
+	progress = 0
+}

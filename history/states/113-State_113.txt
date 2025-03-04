@@ -1,0 +1,51 @@
+
+state={
+	id=113
+	name="STATE_113"
+	resources={
+
+		powder = 0.0
+		metal = 10.0
+		gas=20.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			buildings = {
+				infrastructure =7
+				industrial_complex = 2
+				arms_factory = 4
+				radar_station = 1
+
+			}
+		}
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
+			buildings = {
+				infrastructure =7
+				industrial_complex = 9
+				arms_factory = 3
+				
+
+			}
+
+		}
+
+		victory_points = {
+			3670 40 
+		}
+
+	}
+
+	provinces={
+		64 534 1129 1268 1515 2718 3667 3669 3670 3672 3675 4001 4005 4011 4013 4019 4024 4031 
+	}
+	manpower=157880.0
+	buildings_max_level_factor=1.000
+	state_category=s15
+	local_supplies=2.5
+}

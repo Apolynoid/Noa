@@ -1,0 +1,1234 @@
+spriteTypes = {	
+
+	#### Generic goal icons
+
+	SpriteType = {
+		name = "GFX_focus_skillful_workers"
+		texturefile = "gfx/interface/goals/focus_generic_skillful_workers.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_traditional_production"
+		texturefile = "gfx/interface/goals/focus_generic_traditional_production.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_cooperative_production"
+		texturefile = "gfx/interface/goals/focus_generic_cooperative_production.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_socialized_production"
+		texturefile = "gfx/interface/goals/focus_generic_socialized_production.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_production"
+		texturefile = "gfx/interface/goals/focus_generic_production.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_production2"
+		texturefile = "gfx/interface/goals/focus_generic_production2.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_labor_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_labor_propaganda.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_construction"
+		texturefile = "gfx/interface/goals/focus_generic_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_reconstruction"
+		texturefile = "gfx/interface/goals/focus_generic_reconstruction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_balanced_construction"
+		texturefile = "gfx/interface/goals/focus_generic_balanced_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_civilian_construction"
+		texturefile = "gfx/interface/goals/focus_generic_civilian_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_military_construction"
+		texturefile = "gfx/interface/goals/focus_generic_military_construction.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_energy_plant"
+		texturefile = "gfx/interface/goals/focus_generic_energy_plant.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_economic_cooperation"
+		texturefile = "gfx/interface/goals/focus_generic_economic_cooperation.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_recover_from_ruins"
+		texturefile = "gfx/interface/goals/focus_generic_recover_from_ruins.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_civ_mil_combination"
+		texturefile = "gfx/interface/goals/focus_civ_mil_combination.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_village_socialism"
+		texturefile = "gfx/interface/goals/focus_generic_village_socialism.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_investment"
+		texturefile = "gfx/interface/goals/focus_generic_investment.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_spiritual_power"
+		texturefile = "gfx/interface/goals/focus_generic_spiritual_power.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_army_experience"
+		texturefile = "gfx/interface/goals/focus_generic_army_experience.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_lessons_of_war"
+		texturefile = "gfx/interface/goals/focus_generic_lessons_of_war.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_army_dicipline"
+		texturefile = "gfx/interface/goals/focus_army_dicipline.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_staff"
+		texturefile = "gfx/interface/goals/focus_generic_staff.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_military_command"
+		texturefile = "gfx/interface/goals/focus_generic_military_command.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_trench_warfare"
+		texturefile = "gfx/interface/goals/focus_generic_trench_warfare.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_wargame"
+		texturefile = "gfx/interface/goals/focus_generic_wargame.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_volunteer_army"
+		texturefile = "gfx/interface/goals/focus_generic_volunteer_army.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_purge"
+		texturefile = "gfx/interface/goals/focus_generic_purge.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_desperate_measures"
+		texturefile = "gfx/interface/goals/focus_generic_desperate_measures.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_enemy_in_all_directions"
+		texturefile = "gfx/interface/goals/focus_enemy_in_all_directions.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_book"
+		texturefile = "gfx/interface/goals/focus_generic_book.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_education"
+		texturefile = "gfx/interface/goals/focus_generic_education.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improved_education"
+		texturefile = "gfx/interface/goals/focus_generic_improved_education.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_education_equality"
+		texturefile = "gfx/interface/goals/focus_generic_education_equality.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_open_up_education_resourses"
+		texturefile = "gfx/interface/goals/focus_generic_open_up_education_resourses.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_basic_science"
+		texturefile = "gfx/interface/goals/focus_generic_basic_science.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_racial_science"
+		texturefile = "gfx/interface/goals/focus_generic_racial_science.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_civilian_science"
+		texturefile = "gfx/interface/goals/focus_generic_civilian_science.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_military_science"
+		texturefile = "gfx/interface/goals/focus_generic_military_science.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_invite_scientists"
+		texturefile = "gfx/interface/goals/focus_generic_invite_scientists.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_science_institute"
+		texturefile = "gfx/interface/goals/focus_generic_science_institute.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_peace"
+		texturefile = "gfx/interface/goals/focus_generic_peace.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_status_quo"
+		texturefile = "gfx/interface/goals/focus_generic_status_quo.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_domestic_affairs"
+		texturefile = "gfx/interface/goals/focus_generic_domestic_affairs.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_centralization"
+		texturefile = "gfx/interface/goals/focus_generic_centralization.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_political_division"
+		texturefile = "gfx/interface/goals/focus_generic_political_division.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_total_collectivization"
+		texturefile = "gfx/interface/goals/focus_generic_total_collectivization.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_isolationism"
+		texturefile = "gfx/interface/goals/focus_generic_isolationism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_rose_and_dove"
+		texturefile = "gfx/interface/goals/focus_generic_rose_and_dove.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_equality"
+		texturefile = "gfx/interface/goals/focus_generic_equality.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_democracy"
+		texturefile = "gfx/interface/goals/focus_generic_democracy.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_election"
+		texturefile = "gfx/interface/goals/focus_generic_election.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_parliament"
+		texturefile = "gfx/interface/goals/focus_generic_parliament.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_president"
+		texturefile = "gfx/interface/goals/focus_generic_president.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_encourage_political_participation"
+		texturefile = "gfx/interface/goals/focus_generic_encourage_political_participation.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_elite_politics"
+		texturefile = "gfx/interface/goals/focus_generic_elite_politics.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_technocracy"
+		texturefile = "gfx/interface/goals/focus_generic_technocracy.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_protest"
+		texturefile = "gfx/interface/goals/focus_generic_protest.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_revenge"
+		texturefile = "gfx/interface/goals/focus_generic_revenge.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_revanchism"
+		texturefile = "gfx/interface/goals/focus_generic_revanchism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_glory"
+		texturefile = "gfx/interface/goals/focus_generic_glory.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_get_key"
+		texturefile = "gfx/interface/goals/focus_generic_get_key.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_rid_of_controll"
+		texturefile = "gfx/interface/goals/focus_generic_rid_of_controll.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_freedom"
+		texturefile = "gfx/interface/goals/focus_generic_freedom.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_independence"
+		texturefile = "gfx/interface/goals/focus_generic_independence.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_final_push"
+		texturefile = "gfx/interface/goals/focus_generic_final_push.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_peace_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_peace_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_war_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_war_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_revolution_propaganda"
+		texturefile = "gfx/interface/goals/focus_generic_revolution_propaganda.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_down_with_doves"
+		texturefile = "gfx/interface/goals/focus_generic_down_with_doves.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_down_with_hawks"
+		texturefile = "gfx/interface/goals/focus_generic_down_with_hawks.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_gekokujyo_movement"
+		texturefile = "gfx/interface/goals/focus_generic_gekokujyo_movement.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_radicalism"
+		texturefile = "gfx/interface/goals/focus_generic_radicalism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_reformism"
+		texturefile = "gfx/interface/goals/focus_generic_reformism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_hegemonism"
+		texturefile = "gfx/interface/goals/focus_generic_hegemonism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_gensokyo_peace"
+		texturefile = "gfx/interface/goals/focus_generic_gensokyo_peace.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_anti_gekokujyo"
+		texturefile = "gfx/interface/goals/focus_generic_anti_gekokujyo.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SCA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_CIR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_CIR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_TKM.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_hegemonist_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_hegemonist_TKM.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_SEJ"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SEJ.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_NMS"
+		texturefile = "gfx/interface/goals/focus_generic_attack_NMS.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_YKR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_YKR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_OTG"
+		texturefile = "gfx/interface/goals/focus_generic_attack_OTG.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_MRY"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MRY.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_HUM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_HUM.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_MSD"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MSD.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_LIL"
+		texturefile = "gfx/interface/goals/focus_generic_attack_LIL.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_SRB"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SRB.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_SBK"
+		texturefile = "gfx/interface/goals/focus_generic_attack_SBK.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_WHR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_WHR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_HKR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_HKR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_KAG"
+		texturefile = "gfx/interface/goals/focus_generic_attack_KAG.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_MAM"
+		texturefile = "gfx/interface/goals/focus_generic_attack_MAM.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_TES"
+		texturefile = "gfx/interface/goals/focus_generic_attack_TES.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_gekokujyo_movement"
+		texturefile = "gfx/interface/goals/focus_generic_attack_gekokujyo_movement.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_TEG"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_radicalist_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_radicalist_TKM.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_SEJ"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SEJ.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_CIR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_CIR.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SCA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_YKR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_YKR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_NTR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_NTR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_LIL"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_LIL.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_SBK"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SBK.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_WHR"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_WHR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_SKI"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_SKI.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_deal_with_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_deal_with_SCA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_deal_with_SBK"
+		texturefile = "gfx/interface/goals/focus_generic_deal_with_SBK.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SEJ_military_aid"
+		texturefile = "gfx/interface/goals/focus_generic_SEJ_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SEJ_industrial_aid"
+		texturefile = "gfx/interface/goals/focus_generic_SEJ_industrial_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YKR_military_aid"
+		texturefile = "gfx/interface/goals/focus_generic_YKR_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YKR_industrial_aid"
+		texturefile = "gfx/interface/goals/focus_generic_YKR_industrial_aid.png"			
+	}
+
+	#### SCA Remilia Scarlet 斯卡蕾特帝国
+
+	SpriteType = {
+		name = "SCA_focus_scarlet_mansion_celebration"
+		texturefile = "gfx/interface/goals/focus_SCA_scarlet_mansion_celebration.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_cut_administration_expenses"
+		texturefile = "gfx/interface/goals/focus_SCA_cut_administration_expenses.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_strengthen_authority_of_scarlet"
+		texturefile = "gfx/interface/goals/focus_SCA_strengthen_authority_of_scarlet.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_new_era_of_the_empire"
+		texturefile = "gfx/interface/goals/focus_SCA_new_era_of_the_empire.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_continue_the_rule_of_remilia"
+		texturefile = "gfx/interface/goals/focus_SCA_continue_the_rule_of_remilia.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_flandre_coup_detat"
+		texturefile = "gfx/interface/goals/focus_SCA_flandre_coup_detat.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_the_second_scarlet_mist_incident"
+		texturefile = "gfx/interface/goals/focus_SCA_the_second_scarlet_mist_incident.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_imperial_hegemony"
+		texturefile = "gfx/interface/goals/focus_SCA_imperial_hegemony.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_deal_with_threats"
+		texturefile = "gfx/interface/goals/focus_SCA_deal_with_threats.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_sphere_of_influence"
+		texturefile = "gfx/interface/goals/focus_SCA_sphere_of_influence.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_imperial_industrial_aid"
+		texturefile = "gfx/interface/goals/focus_SCA_imperial_industrial_aid.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_imperial_military_aid"
+		texturefile = "gfx/interface/goals/focus_SCA_imperial_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_youkai_mountain_line"
+		texturefile = "gfx/interface/goals/focus_SCA_youkai_mountain_line.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_large_area_economy"
+		texturefile = "gfx/interface/goals/focus_SCA_large_area_economy.png"			
+	}
+
+	#### TEG Shameimaru Aya 天狗共和国
+
+	SpriteType = {
+		name = "TEG_focus_fate_of_tenmaku_leaders"
+		texturefile = "gfx/interface/goals/focus_TEG_fate_of_tenmaku_leaders.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_president_aya"
+		texturefile = "gfx/interface/goals/focus_TEG_president_aya.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_momiji_hold_power"
+		texturefile = "gfx/interface/goals/focus_TEG_momiji_hold_power.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_public_safety_committee"
+		texturefile = "gfx/interface/goals/focus_TEG_public_safety_committee.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_president_hatate"
+		texturefile = "gfx/interface/goals/focus_TEG_president_hatate.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_arsenal_of_democracy"
+		texturefile = "gfx/interface/goals/focus_TEG_arsenal_of_democracy.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_defend_the_republic"
+		texturefile = "gfx/interface/goals/focus_TEG_defend_the_republic.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_spread_democracy"
+		texturefile = "gfx/interface/goals/focus_TEG_spread_democracy.png"			
+	}
+
+	#### CIR Cirno 雾之湖妖精联合体
+
+	SpriteType = {
+		name = "CIR_focus_cirno_revolution_policy"
+		texturefile = "gfx/interface/goals/focus_CIR_cirno_revolution_policy.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_daiyousei_reform_strategy"
+		texturefile = "gfx/interface/goals/focus_CIR_daiyousei_reform_strategy.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_anti_scarlet_alliance"
+		texturefile = "gfx/interface/goals/focus_CIR_anti_scarlet_alliance.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_SEJ_military_aid"
+		texturefile = "gfx/interface/goals/focus_CIR_SEJ_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_preparation_against_the_devil"
+		texturefile = "gfx/interface/goals/focus_CIR_preparation_against_the_devil.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_aim_at_weakness_of_the_devil"
+		texturefile = "gfx/interface/goals/focus_CIR_aim_at_weakness_of_the_devil.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_revanchism_propaganda"
+		texturefile = "gfx/interface/goals/focus_CIR_revanchism_propaganda.png"			
+	}
+
+	SpriteType = {
+		name = "CIR_focus_keep_fairies_strength_in_numbers"
+		texturefile = "gfx/interface/goals/focus_CIR_keep_fairies_strength_in_numbers.png"			
+	}
+
+	#### SEJ Kijin Seija 叛乱同盟
+
+	SpriteType = {
+		name = "SEJ_focus_the_path_of_gekokujyo"
+		texturefile = "gfx/interface/goals/focus_SEJ_the_path_of_gekokujyo.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_orthodox_gekokujyo"
+		texturefile = "gfx/interface/goals/focus_SEJ_orthodox_gekokujyo.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_divide_youkai_racists"
+		texturefile = "gfx/interface/goals/focus_SEJ_divide_youkai_racists.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_handle_enemy_of_the_revolution"
+		texturefile = "gfx/interface/goals/focus_SEJ_handle_enemy_of_the_revolution.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_politic_bureau_unity"
+		texturefile = "gfx/interface/goals/focus_SEJ_politic_bureau_unity.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_revolutionary_education"
+		texturefile = "gfx/interface/goals/focus_SEJ_revolutionary_education.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_ideology_mania"
+		texturefile = "gfx/interface/goals/focus_SEJ_ideology_mania.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_gekokujyo_never_ends"
+		texturefile = "gfx/interface/goals/focus_SEJ_gekokujyo_never_ends.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_gekokujyo_tech_sharing"
+		texturefile = "gfx/interface/goals/focus_SEJ_gekokujyo_tech_sharing.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_gekokujyo_in_all_gensokyo"
+		texturefile = "gfx/interface/goals/focus_SEJ_gekokujyo_in_all_gensokyo.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_realistic_gekokujyo"
+		texturefile = "gfx/interface/goals/focus_SEJ_realistic_gekokujyo.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_disband_gekokujyo_movement"
+		texturefile = "gfx/interface/goals/focus_SEJ_disband_gekokujyo_movement.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_admit_YKR_leadership"
+		texturefile = "gfx/interface/goals/focus_SEJ_admit_YKR_leadership.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_integration_into_gensokyo"
+		texturefile = "gfx/interface/goals/focus_SEJ_integration_into_gensokyo.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_youkai_racial_rejuvenation"
+		texturefile = "gfx/interface/goals/focus_SEJ_youkai_racial_rejuvenation.png"			
+	}
+
+	SpriteType = {
+		name = "SEJ_focus_promote_the_glory_of_youkais"
+		texturefile = "gfx/interface/goals/focus_SEJ_promote_the_glory_of_youkais.png"			
+	}
+
+	#### NMS Hijiri Byakuren 命莲寺
+	SpriteType = {
+		name = "NMS_focus_handle_religious_crisis"
+		texturefile = "gfx/interface/goals/focus_NMS_handle_religious_crisis.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_reformists"
+		texturefile = "gfx/interface/goals/focus_NMS_reformists.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_racists"
+		texturefile = "gfx/interface/goals/focus_NMS_racists.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_youkai_militarism"
+		texturefile = "gfx/interface/goals/focus_NMS_youkai_militarism.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_end_of_faction"
+		texturefile = "gfx/interface/goals/focus_NMS_end_of_faction.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_gensokyo_treaty_of_harmony"
+		texturefile = "gfx/interface/goals/focus_NMS_gensokyo_treaty_of_harmony.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_byakuren_plan"
+		texturefile = "gfx/interface/goals/focus_NMS_byakuren_plan.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_murasa_plan"
+		texturefile = "gfx/interface/goals/focus_NMS_murasa_plan.png"			
+	}
+
+	SpriteType = {
+		name = "NMS_focus_learn_from_palanquin_ship"
+		texturefile = "gfx/interface/goals/focus_NMS_learn_from_palanquin_ship.png"			
+	}
+
+	#### TKM Horikawa Raiko 九十九工业
+
+	SpriteType = {
+		name = "TKM_focus_146_property_political_meeting"
+		texturefile = "gfx/interface/goals/focus_TKM_146_property_political_meeting.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_plan_of_horikawa_raiko"
+		texturefile = "gfx/interface/goals/focus_TKM_plan_of_horikawa_raiko.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_property_war_bonds"
+		texturefile = "gfx/interface/goals/focus_TKM_property_war_bonds.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_establish_energy_development_zone"
+		texturefile = "gfx/interface/goals/focus_TKM_establish_energy_development_zone.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_revolution_of_tsukumo_yatsuhashi"
+		texturefile = "gfx/interface/goals/focus_TKM_revolution_of_tsukumo_yatsuhashi.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_demand_SBK_referendum"
+		texturefile = "gfx/interface/goals/focus_TKM_demand_SBK_referendum.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_south_misty_lake_revolution_alliance"
+		texturefile = "gfx/interface/goals/focus_TKM_south_misty_lake_revolution_alliance.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_reform_of_tatara_kogasa"
+		texturefile = "gfx/interface/goals/focus_TKM_reform_of_tatara_kogasa.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_utilize_tsukumogami_feature"
+		texturefile = "gfx/interface/goals/focus_TKM_utilize_tsukumogami_feature.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_production_tool_tsukumogamize"
+		texturefile = "gfx/interface/goals/focus_TKM_production_tool_tsukumogamize.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_weapon_tsukumogamize"
+		texturefile = "gfx/interface/goals/focus_TKM_weapon_tsukumogamize.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_energy_stockpile"
+		texturefile = "gfx/interface/goals/focus_TKM_energy_stockpile.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_improve_energy_efficiency"
+		texturefile = "gfx/interface/goals/focus_TKM_improve_energy_efficiency.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_advanced_industrial_energy_utilization"
+		texturefile = "gfx/interface/goals/focus_TKM_advanced_industrial_energy_utilization.png"			
+	}
+
+	SpriteType = {
+		name = "TKM_focus_advanced_military_energy_utilization"
+		texturefile = "gfx/interface/goals/focus_TKM_advanced_military_energy_utilization.png"			
+	}
+
+	#### HKR Hakurei Reimu 博丽神社
+
+
+
+	#### HUM Kamishirasawa Keine 人间之里
+
+	SpriteType = {
+		name = "HUM_focus_end_of_protection"
+		texturefile = "gfx/interface/goals/focus_HUM_end_of_protection.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_totally_crash_the_plutocrat"
+		texturefile = "gfx/interface/goals/focus_HUM_totally_crash_the_plutocrat.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_human_free_city"
+		texturefile = "gfx/interface/goals/focus_HUM_human_free_city.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_empire_reborn"
+		texturefile = "gfx/interface/goals/focus_HUM_empire_reborn.png"			
+	}
+
+	SpriteType = {
+		name = "HUM_focus_human_militarism"
+		texturefile = "gfx/interface/goals/focus_HUM_human_militarism.png"			
+	}
+
+	#### NTR 河童共和国
+
+	SpriteType = {
+		name = "NTR_focus_military_cooperation_with_TEG"
+		texturefile = "gfx/interface/goals/focus_NTR_military_cooperation_with_TEG.png"			
+	}
+
+	SpriteType = {
+		name = "NTR_focus_economic_cooperation_with_TEG"
+		texturefile = "gfx/interface/goals/focus_NTR_economic_cooperation_with_TEG.png"			
+	}
+
+	SpriteType = {
+		name = "NTR_focus_study_political_system_of_TEG"
+		texturefile = "gfx/interface/goals/focus_NTR_study_political_system_of_TEG.png"			
+	}
+
+	SpriteType = {
+		name = "NTR_focus_arouse_enthusiasm_of_unification"
+		texturefile = "gfx/interface/goals/focus_NTR_arouse_enthusiasm_of_unification.png"			
+	}
+
+	SpriteType = {
+		name = "NTR_focus_analyse_weakness_of_potential_enemies"
+		texturefile = "gfx/interface/goals/focus_NTR_analyse_weakness_of_potential_enemies.png"			
+	}
+	
+	#### MRS Kirisame Marisa 魔法之森
+
+	SpriteType = {
+		name = "MRS_focus_convene_the_witch_meeting"
+		texturefile = "gfx/interface/goals/focus_MRS_convene_the_witch_meeting.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_archmage_alice"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_alice.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_archmage_marisa"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_marisa.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_stabilize_the_course"
+		texturefile = "gfx/interface/goals/focus_MRS_stabilize_the_course.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_archmage_narumi"
+		texturefile = "gfx/interface/goals/focus_MRS_archmage_narumi.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_rebuild_national_identity"
+		texturefile = "gfx/interface/goals/focus_MRS_rebuild_national_identity.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_dawn_of_magical_forest"
+		texturefile = "gfx/interface/goals/focus_MRS_dawn_of_magical_forest.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_alice_plan"
+		texturefile = "gfx/interface/goals/focus_MRS_alice_plan.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_marisa_plan"
+		texturefile = "gfx/interface/goals/focus_MRS_marisa_plan.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_narumi_plan"
+		texturefile = "gfx/interface/goals/focus_MRS_narumi_plan.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_puppet_legion"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_legion.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_improve_puppet"
+		texturefile = "gfx/interface/goals/focus_MRS_improve_puppet.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_puppet_support"
+		texturefile = "gfx/interface/goals/focus_MRS_puppet_support.png"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_hakkero_production"
+		texturefile = "gfx/interface/goals/focus_MRS_hakkero_production.dds"			
+	}
+
+	SpriteType = {
+		name = "MRS_focus_contact_alice"
+		texturefile = "gfx/interface/goals/focus_MRS_contact_alice.dds"			
+	}
+
+	SpriteType = {
+	name = "MRS_focus_contact_narumi"
+	texturefile = "gfx/interface/goals/focus_MRS_contact_narumi.dds"			
+	}
+
+	SpriteType = {
+	name = "MRS_focus_magical_forest_map"
+	texturefile = "gfx/interface/goals/focus_MRS_magical_forest_map.dds"			
+	}
+
+	SpriteType = {
+	name = "MRS_focus_HKR_MRS_federation"
+	texturefile = "gfx/interface/goals/focus_MRS_HKR_MRS_federation.png"			
+	}
+
+	#### NAR Yatadera Narumi 魔法之森联合体
+
+	SpriteType = {
+		name = "NAR_focus_union_army"
+		texturefile = "gfx/interface/goals/focus_NAR_union_army.png"			
+	}
+
+	SpriteType = {
+		name = "NAR_focus_born_from_ashes"
+		texturefile = "gfx/interface/goals/focus_NAR_born_from_ashes.png"			
+	}
+
+	#### ALI Alice Margatroid 人偶师协会
+	SpriteType = {
+		name = "ALI_focus_fight_against_tyranny"
+		texturefile = "gfx/interface/goals/focus_ALI_fight_against_tyranny.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_assisted_production"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_assisted_production.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_assisted_combat"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_assisted_combat.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_workshop_expansion"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_workshop_expansion.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppets_military_establishment"
+		texturefile = "gfx/interface/goals/focus_ALI_puppets_military_establishment.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_puppet_for_propaganda"
+		texturefile = "gfx/interface/goals/focus_ALI_puppet_for_propaganda.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_magical_forest_new_look"
+		texturefile = "gfx/interface/goals/focus_ALI_magical_forest_new_look.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_invite_god_of_makai"
+		texturefile = "gfx/interface/goals/focus_ALI_invite_god_of_makai.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_construction"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_construction.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_immigrates"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_immigrates.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_production"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_production.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_power"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_power.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_training_system"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_training_system.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_knowledge"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_knowledge.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_makai_research_ability"
+		texturefile = "gfx/interface/goals/focus_ALI_makai_research_ability.png"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_mass_mobilization"
+		texturefile = "gfx/interface/goals/focus_ALI_mass_mobilization.dds"			
+	}
+
+	SpriteType = {
+		name = "ALI_focus_the_only_hegemony_in_gensokyo"
+		texturefile = "gfx/interface/goals/focus_ALI_the_only_hegemony_in_gensokyo.dds"			
+	}
+
+	#### YYK Saigyouji Yuyuko 白玉楼
+	SpriteType = {
+		name = "YYK_focus_fate_of_netherworld"
+		texturefile = "gfx/interface/goals/focus_YYK_fate_of_netherworld.png"			
+	}
+
+	SpriteType = {
+		name = "KNA_focus_oppose_yuyuko"
+		texturefile = "gfx/interface/goals/focus_KNA_oppose_yuyuko.png"			
+	}
+
+	SpriteType = {
+		name = "KNA_focus_foreign_volunteer_army"
+		texturefile = "gfx/interface/goals/focus_KNA_foreign_volunteer_army.png"			
+	}
+
+	SpriteType = {
+		name = "KNA_focus_arouse_revolutionary_fervour"
+		texturefile = "gfx/interface/goals/focus_KNA_arouse_revolutionary_fervour.png"			
+	}
+
+	SpriteType = {
+		name = "KNA_focus_final_offense_hakugyokurou"
+		texturefile = "gfx/interface/goals/focus_KNA_final_offense_hakugyokurou.png"			
+	}
+
+	SpriteType = {
+		name = "KNA_focus_netherworld_republic"
+		texturefile = "gfx/interface/goals/focus_KNA_netherworld_republic.png"			
+	}
+
+	SpriteType = {
+		name = "YKO_focus_support_yuyuko"
+		texturefile = "gfx/interface/goals/focus_YKO_support_yuyuko.png"			
+	}
+
+	SpriteType = {
+		name = "YKO_focus_strengthen_authority_of_saigyouji"
+		texturefile = "gfx/interface/goals/focus_YKO_strengthen_authority_of_saigyouji.png"			
+	}
+
+	SpriteType = {
+		name = "YKO_focus_order_restored"
+		texturefile = "gfx/interface/goals/focus_YKO_order_restored.png"			
+	}
+
+	SpriteType = {
+		name = "YKO_focus_let_saigyouayakashi_rebloom"
+		texturefile = "gfx/interface/goals/focus_YKO_let_saigyouayakashi_rebloom.png"			
+	}
+}

@@ -1,0 +1,456 @@
+leader_traits = {
+	# generic
+	# 下克上的学徒
+	gekokujyo_apprentice = {
+		random = no
+		#generic
+		surrender_limit = 0.05
+		offensive_war_stability_factor = 0.05
+		war_support_factor = 0.05
+		army_morale_factor = 0.05
+		fandong_acceptance = 50
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+	# HKR
+	# 赤色杀人魔
+	HKR_chi_se_sha_ren_mo = {
+		random = no
+		#generic
+
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		production_speed_buildings_factor = -0.15
+		research_speed_factor = -0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 人类英雄
+	HKR_ren_lei_ying_xiong = {
+		random = no
+		#generic
+
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		research_speed_factor = 0.05
+		ST_race_penalty_Human_factor = -0.3
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# MRS
+	# 弱者的保护者
+	MRS_ruo_zhe_de_bao_hu_zhe = {
+		random = no
+		#generic
+		ST_race_penalty_Pri_youkai_factor = -0.3
+		ST_race_penalty_Fairy_factor = -0.3
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 平等的象征
+	MRS_ping_deng_de_xiang_zheng = {
+		random = no
+		#generic
+		ST_race_penalty_Pri_youkai_factor = -0.3
+		ST_race_penalty_Fairy_factor = -0.3
+		ST_race_penalty_all_factor = -0.4
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 平等的捍卫者
+	MRS_ping_deng_de_han_wei_zhe = {
+		random = no
+		#generic
+		ST_race_penalty_all_factor = -1
+		CONV_RULE_cannot_convert = 1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 名声显赫的大魔女
+	MRS_ming_sheng_xian_he_de_da_mo_nv = {
+		random = no
+		#generic
+		stability_factor = 0.4
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 七色的人偶使
+	MRS_qi_se_de_ren_ou_shi = {
+		random = no
+		#generic
+		weekly_manpower = 2
+		training_time_factor = -0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 魔法之国的爱丽丝
+	MRS_mo_fa_zhi_guo_de_ai_li_si = {
+		random = no
+		#generic
+		research_speed_factor = 0.05
+		oldorder_drift = 0.01
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		experience_gain_army_factor = 0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#ALI
+	# 魔界之神
+	ALI_mo_jie_zhi_shen = {
+		random = no
+
+		research_speed_factor = 0.1
+		surrender_limit = 0.2
+		offensive_war_stability_factor = 0.1
+		war_support_factor = 0.1
+		drift_defence_factor = 0.5
+		oldorder_drift = 0.02
+		army_attack_factor = 0.05
+		breakthrough_factor = 0.05
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#TEG
+	# 媒体人士
+	TEG_mei_ti_ren_shi = {
+		random = no
+
+		decryption_factor = 0.2
+		intel_from_operatives_factor = 0.2
+		civilian_intel_factor = 0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 共和军事领袖
+	TEG_gong_he_jun_shi_ling_xiu = {
+		random = no
+
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		army_morale_factor = 0.1
+		stability_factor = 0.1
+		surrender_limit = 0.15
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#HUM
+	# 妥协者
+	HUM_tuo_xie_zhe = {
+		random = no
+
+		stability_factor = 0.15
+		defensive_war_stability_factor = 0.3
+		war_support_factor = -0.1
+		ai_focus_defense_factor = 0.5
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#SCA
+	# 旧秩序的保卫者
+	SCA_jiu_zhi_xu_de_bao_wei_zhe = {
+		random = no
+
+		stability_factor = 0.1
+		defensive_war_stability_factor = 0.1
+		political_power_gain = 0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 旧秩序的荣耀
+	SCA_jiu_zhi_xu_de_rong_yao = {
+		random = no
+
+		stability_factor = 0.15
+		defensive_war_stability_factor = 0.1
+		political_power_gain = 0.1
+		army_morale_factor = 0.05
+		army_org_factor = 0.05
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 鹰派君主
+	SCA_ying_pai_jun_zhu = {
+		random = no
+
+		war_support_factor = 0.15
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 政局混乱
+	SCA_zheng_ju_hun_luan = {
+		random = no
+
+		stability_factor = -0.15
+		political_power_factor = -0.5
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#CIR
+	# 妖精革命领袖
+	CIR_yao_jing_ge_ming_ling_xiu = {
+		random = no
+
+		stability_factor = 0.15
+		war_support_factor = 0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 妖精之国的建造者
+	CIR_yao_jing_zhi_guo_de_jian_zao_zhe = {
+		random = no
+
+		production_speed_buildings_factor = 0.08
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#SEJ
+	# 下克上的象征
+	SEJ_xia_ke_shang_de_xiang_zheng = {
+		random = no
+
+		surrender_limit = 0.1
+		offensive_war_stability_factor = 0.1
+		party_popularity_stability_factor = 0.05
+		war_support_factor = 0.1
+		army_morale_factor = 0.05
+		fandong_acceptance = 50
+		EXHC_increase_period_factor = 0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 小人族的公主
+	SEJ_xiao_ren_zu_de_gong_zhu = {
+		random = no
+
+		stability_factor = 0.25
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#NMS
+	# 大阿阇梨
+	NMS_da_a_she_li = {
+		random = no
+
+		political_power_gain = 0.2
+		defensive_war_stability_factor = 0.15
+		party_popularity_stability_factor = 0.05
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 船长
+	NMS_chuan_zhang = {
+		random = no
+
+		war_support_factor = 0.05
+		war_stability_factor = 0.1
+		weekly_casualties_war_support = 0.001
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#TKM
+	# 道具独立斗士
+	TKM_dao_ju_du_li_dou_shi = {
+		random = no
+
+		political_power_factor = 0.15
+		weekly_casualties_war_support = 0.001
+		ai_desired_divisions_factor = 0.20
+		character_coop_cost_factor = -0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 道具实业领袖
+	TKM_dao_ju_shi_ye_ling_xiu = {
+		random = no
+
+		stability_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#YYK
+	# 亡灵公主
+	YKO_wang_ling_gong_zhu = {
+		random = no
+
+		stability_factor = 0.05
+		mobilization_laws_cost_factor = -0.2
+		economy_cost_factor = -0.2
+		character_coop_cost_factor = -0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 亡灵女皇
+	YKO_wang_ling_nv_huang = {
+		random = no
+
+		stability_factor = 0.15
+		mobilization_laws_cost_factor = -0.2
+		economy_cost_factor = -0.2
+		character_coop_cost_factor = -0.2
+		political_power_gain = 0.1
+		war_support_factor = 0.05
+		army_morale_factor = 0.05
+		army_org_factor = 0.05
+		command_power_gain_mult = 0.1
+		max_command_power_mult = 0.1
+		compliance_growth = 0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 理想主义骚灵革命者
+	KNA_li_xiang_zhu_yi_sao_ling_ge_ming_zhe = {
+		random = no
+
+		political_power_gain = 0.1
+		war_support_factor = 0.1
+		army_morale_factor = 0.05
+		surrender_limit = 0.1
+		resistance_growth_on_our_occupied_states = 0.2
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+#=========生产商通用============
+    manufacturer_cost_increase = {
+		random = no
+		#generic
+
+		manufacturer_cost_factor = 0.05
+		political_power_gain = -0.03
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+#=========adviosr通用============
+	popular_figurehead = {
+		sprite = 13
+		stability_factor = 0.25
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 下克上的学徒
+	gekokujyo_apprentice_advisor = {
+		random = no
+		#generic
+		army_core_attack_factor = 0.08
+		army_core_defence_factor = 0.08
+		resistance_growth_on_our_occupied_states = 0.3
+		
+		ai_will_do = {
+			factor = -5
+		}
+	} 
+
+    advisor_cost_increase = {
+		random = no
+		#generic
+		political_power_gain = -0.05
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	ideo_slot_increase = {
+		random = no
+		#generic
+
+		ideo_slot_cost_factor = 0.1
+		political_power_gain = -0.05
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+}

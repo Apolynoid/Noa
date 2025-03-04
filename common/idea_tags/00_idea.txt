@@ -1,0 +1,103 @@
+idea_categories = {
+	hidden_ideas = {
+		hidden = yes
+	
+		cost = 0
+		removal_cost = -1
+
+		ledger = hidden
+	}
+
+	country = {
+		type = national_spirit
+		
+		cost = 0
+		removal_cost = -1
+
+		ledger = hidden
+	}
+
+	country_status = {
+		slot = races
+		slot = sub_races
+		slot = scale
+		
+		ledger = all
+
+		cost = 0
+		removal_cost = -1
+	}
+	
+	basic_laws = {
+		slot = mobilization_laws
+		slot = economy
+		slot = conservative
+		slot = lobby
+		slot = magic_laws
+
+		ledger = civilian
+		
+		cost = 150
+		removal_cost = -1
+	}
+
+	characters = {
+		character_slot = character_coop
+		character_slot = character_coop
+		character_slot = character_coop
+		character_slot = character_coop
+		character_slot = character_coop
+		character_slot = character_coop
+
+		cost = 250
+		removal_cost = 0
+
+		ledger = invalid
+
+	}
+	
+	manufacturer = {
+		slot = manufacturer_s
+		slot = manufacturer
+		slot = manufacturer
+		slot = materiel_manufacturer
+		slot = tank_manufacturer
+		slot = aircraft_manufacturer
+
+		cost = 250
+		removal_cost = 0
+
+		ledger = invalid
+
+	}
+
+	
+	improvement_slots = {
+		slot = politics_enhancement
+		slot = army_enhancement
+		slot = industry_enhancement
+		slot = lobby_slot
+		slot = lobby_slot
+		slot = ideo_slot
+
+		ledger = invalid
+
+		cost = 250
+		removal_cost = 0
+	}
+	
+}
+
+slot_ledgers = {
+	politics_enhancement = civilian
+	army_enhancement = army
+	industry_enhancement = civilian
+	ideo_slot = army
+	lobby_slot = civilian
+	manufacturer_s = all
+	manufacturer = civilian
+	tank_manufacturer = army
+	aircraft_manufacturer = air
+	materiel_manufacturer = civilian
+	character_coop = civilian
+}

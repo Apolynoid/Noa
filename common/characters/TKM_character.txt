@@ -1,0 +1,209 @@
+characters={
+	TKM_kog ={
+		name = TKM_kog
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kog.dds"
+				small="gfx/leaders/TKM/TKM_kog_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				TKM_dao_ju_shi_ye_ling_xiu
+			}
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero old_guard }
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 6
+			logistics_skill = 7
+			# id = 29            
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_kog
+			name = TKM_kog
+			cost = 200
+			traits = {
+				popular_figurehead
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_benben ={
+		name = TKM_benben
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_benben.dds"
+				small="gfx/leaders/TKM/TKM_benben_small.dds"
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_huolizhuanjia trait_cautious }
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 3
+			# id = 30            
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_benben
+			name = TKM_benben
+			cost = 200
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_yatsuhashi ={
+		name = TKM_yatsuhashi
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
+				small="gfx/leaders/TKM/TKM_yatsuhashi_small.dds"
+			}
+		}
+		country_leader={
+			ideology = gekokujyoism
+			traits = {
+				gekokujyo_apprentice
+			}
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_reckless th_trait_tezhongzhuanjia  }
+			attack_skill = 7
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			# id = 31              
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_yatsuhashi
+			name = TKM_yatsuhashi
+			cost = 200
+			traits = {
+				gekokujyo_apprentice_advisor
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_raiko ={
+		name = TKM_raiko
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_raiko.dds"
+				small="gfx/leaders/TKM/TKM_raiko_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				TKM_dao_ju_du_li_dou_shi
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero th_trait_tezhongzhuanjia }
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 8
+			logistics_skill = 7
+			# id = 32 
+			skill = 7
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_raiko
+			name = TKM_raiko
+			cost = 200
+			modifier = {
+				equipment_capture_factor = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TKM_kokoro ={
+		name = TKM_kokoro
+		portraits={
+			civilian={
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TKM/TKM_kokoro.dds"
+				small="gfx/leaders/TKM/TKM_kokoro_small.dds"
+			}
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_chongjizhuanjia  }
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 4
+			# id = 33            
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TKM_kokoro
+			name = TKM_kokoro
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

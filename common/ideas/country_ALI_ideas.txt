@@ -1,0 +1,138 @@
+ideas = {
+	country = {
+		#mrs
+
+    # 人偶的协助 生产
+    ali_ren_ou_de_xie_zhu_a_idea = {
+      picture = ALI_ningyo
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.05
+        production_factory_start_efficiency_factor = 0.1
+      }
+    }
+
+    # 人偶的协助 战斗
+    ali_ren_ou_de_xie_zhu_b_idea = {
+      picture = ALI_ningyo
+      modifier = {
+        army_org_factor = 0.05
+        weekly_manpower = 2
+      }
+    }
+
+    # 人偶的协助 综合
+    ali_ren_ou_de_xie_zhu_c_idea = {
+      picture = ALI_ningyo
+      modifier = {
+        production_factory_efficiency_gain_factor = 0.1
+        production_factory_max_efficiency_factor = 0.05
+        production_factory_start_efficiency_factor = 0.1
+        army_org_factor = 0.05
+        weekly_manpower = 2
+      }
+    }
+
+    # 宣传攻势
+    ali_xuan_chuan_gong_shi_idea = {
+      picture = generic_propaganda_campaign
+      cancel = {
+        has_global_flag = MRS_civil_war_end_flag
+      }
+      modifier = {
+        monthly_population = -0.05
+        stability_factor = -0.05
+        war_support_factor = -0.05
+        army_attack_factor = -0.05
+        army_morale_factor = -0.05
+        qinwai_drift = 0.01
+      }
+    }
+
+    # 人偶用于宣传
+    ali_ren_ou_yong_yu_xuan_chuan_idea = {
+      picture = ALI_ningyo_propaganda
+      modifier = {
+        political_power_gain = 0.1
+        drift_defence_factor = 0.1
+      }
+    }
+
+    # 国防工业
+    ali_guo_fang_gong_ye_idea = {
+      picture = SOV_third_five_year_plan_military
+      modifier = {
+        production_speed_arms_factory_factor = 0.1
+      }
+    }
+
+    # 魔界移民计划
+    ali_mo_jie_yi_min_ji_hua_idea = {
+      picture = ALI_makai_immigrant
+      modifier = {
+        monthly_population = 0.1
+      }
+    }
+
+    # 魔界的知识
+    ali_mo_jie_de_zhi_shi_idea = {
+      picture = generic_research_bonus
+      research_bonus = {
+        magic = 0.15
+      }
+    }
+
+    # 魔界的力量
+    ali_mo_jie_de_li_liang_idea = {
+      picture = ALI_makai_power
+      modifier = {
+        army_attack_factor = 0.1
+      }
+    }
+
+    # 魔界的生产
+    ali_mo_jie_de_sheng_chan_idea = {
+      picture = ALI_makai_production
+      modifier = {
+        industrial_capacity_factory = 0.1
+        production_factory_max_efficiency_factor = 0.05
+      }
+    }
+
+    # 大规模战争动员
+    ali_da_gui_mo_zhan_zheng_dong_yuan_idea = {
+      picture = FRA_national_mobilization_focus
+      modifier = {
+        conscription_factor = 0.1
+      }
+    }
+
+    # 幻想乡的唯一霸权
+    ali_huan_xiang_xiang_de_wei_yi_ba_quan_idea = {
+      picture = ALI_the_only_hegemony_in_gensokyo
+      modifier = {
+        stability_factor = 0.3
+      }
+    }
+
+    # 停滞的战争机器
+    ali_ting_zhi_de_zhan_zheng_ji_qi_idea = {
+      picture = great_depression
+      modifier = {
+        army_attack_factor = -0.5
+        army_defence_factor = -0.5
+        breakthrough_factor = -0.5
+        army_morale_factor = -0.3
+        command_power_gain = -0.1
+        experience_gain_army_factor = -0.2
+        training_time_army_factor = 0.3
+        political_power_cost = 0.5
+        stability_factor = -0.3
+        production_factory_efficiency_gain_factor = -0.3
+        production_factory_max_efficiency_factor = -0.3
+        production_factory_start_efficiency_factor = -0.3
+        industrial_capacity_factory = -0.2
+      }
+    }
+  }
+}

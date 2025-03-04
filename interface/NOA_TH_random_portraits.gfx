@@ -1,0 +1,268 @@
+spriteTypes = {
+	# Fairy
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_1"
+		texturefile = "gfx/leaders/gen/fai1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_1_small"
+		texturefile = "gfx/leaders/gen/fai1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_2"
+		texturefile = "gfx/leaders/gen/fai2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_2_small"
+		texturefile = "gfx/leaders/gen/fai2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_3"
+		texturefile = "gfx/leaders/gen/fai3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_3_small"
+		texturefile = "gfx/leaders/gen/fai3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_4"
+		texturefile = "gfx/leaders/gen/fai4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Fairy_Generic_4_small"
+		texturefile = "gfx/leaders/gen/fai4_small.png"
+	}
+
+	# Scarlet
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_1"
+		texturefile = "gfx/leaders/gen/sca1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_1_small"
+		texturefile = "gfx/leaders/gen/sca1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_2"
+		texturefile = "gfx/leaders/gen/sca2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_2_small"
+		texturefile = "gfx/leaders/gen/sca2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_3"
+		texturefile = "gfx/leaders/gen/sca3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_3_small"
+		texturefile = "gfx/leaders/gen/sca3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_4"
+		texturefile = "gfx/leaders/gen/sca4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Scarlet_Generic_4_small"
+		texturefile = "gfx/leaders/gen/sca4_small.png"
+	}
+	
+	# Tengu
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_1"
+		texturefile = "gfx/leaders/gen/teg1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_1_small"
+		texturefile = "gfx/leaders/gen/teg1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_2"
+		texturefile = "gfx/leaders/gen/teg2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_2_small"
+		texturefile = "gfx/leaders/gen/teg2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_3"
+		texturefile = "gfx/leaders/gen/teg3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_3_small"
+		texturefile = "gfx/leaders/gen/teg3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_4"
+		texturefile = "gfx/leaders/gen/teg4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Tengu_Generic_4_small"
+		texturefile = "gfx/leaders/gen/teg4_small.png"
+	}
+
+	# Kappa
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_1"
+		texturefile = "gfx/leaders/gen/kap1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_1_small"
+		texturefile = "gfx/leaders/gen/kap1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_2"
+		texturefile = "gfx/leaders/gen/kap2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_2_small"
+		texturefile = "gfx/leaders/gen/kap2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_3"
+		texturefile = "gfx/leaders/gen/kap3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_3_small"
+		texturefile = "gfx/leaders/gen/kap3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_4"
+		texturefile = "gfx/leaders/gen/kap4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Kappa_Generic_4_small"
+		texturefile = "gfx/leaders/gen/kap4_small.png"
+	}
+
+	# rabbit
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_1"
+		texturefile = "gfx/leaders/gen/inb1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_1_small"
+		texturefile = "gfx/leaders/gen/inb1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_2"
+		texturefile = "gfx/leaders/gen/inb2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_2_small"
+		texturefile = "gfx/leaders/gen/inb2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_3"
+		texturefile = "gfx/leaders/gen/inb3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_3_small"
+		texturefile = "gfx/leaders/gen/inb3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_4"
+		texturefile = "gfx/leaders/gen/inb4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Rabbit_Generic_4_small"
+		texturefile = "gfx/leaders/gen/inb4_small.png"
+	}
+
+	# generic
+	spriteType = {
+		name = "GFX_Portrait_Generic_1"
+		texturefile = "gfx/leaders/gen/gen1.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_1_small"
+		texturefile = "gfx/leaders/gen/gen1_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_2"
+		texturefile = "gfx/leaders/gen/gen2.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_2_small"
+		texturefile = "gfx/leaders/gen/gen2_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_3"
+		texturefile = "gfx/leaders/gen/gen3.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_3_small"
+		texturefile = "gfx/leaders/gen/gen3_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_4"
+		texturefile = "gfx/leaders/gen/gen4.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_4_small"
+		texturefile = "gfx/leaders/gen/gen4_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_5"
+		texturefile = "gfx/leaders/gen/gen5.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_5_small"
+		texturefile = "gfx/leaders/gen/gen5_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_6"
+		texturefile = "gfx/leaders/gen/gen6.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_6_small"
+		texturefile = "gfx/leaders/gen/gen6_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_7"
+		texturefile = "gfx/leaders/gen/gen7.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_7_small"
+		texturefile = "gfx/leaders/gen/gen7_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_8"
+		texturefile = "gfx/leaders/gen/gen8.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_8_small"
+		texturefile = "gfx/leaders/gen/gen8_small.png"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Generic_9"
+		texturefile = "gfx/leaders/gen/gen9.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Generic_9_small"
+		texturefile = "gfx/leaders/gen/gen9_small.png"
+	}
+}

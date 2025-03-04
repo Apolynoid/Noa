@@ -1,0 +1,79 @@
+CIR_focus = {
+	name = "CIR focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = CIR
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# we begin with econimic
+		CIR_dui_kang_e_mo_de_zhun_bei
+		CIR_gong_ye_jian_she
+		CIR_chong_jian_gong_ye_qu
+		CIR_min_yong_gong_ye_jian_she
+		CIR_yao_jing_yan_jiu_yuan
+		# then we do the politics
+		CIR_lian_he_ti_de_xian_zhuang
+		CIR_cirno_de_ge_ming_fang_zhen
+		CIR_tong_yi_xing_dong
+		CIR_qiang_hua_yao_jing_zheng_zhi_ju
+		# anti-scarlet pact asap
+		CIR_fan_scarlet_xie_yue
+		CIR_yu_chun_zhi_yao_jing_de_he_zuo
+		# finish the politics
+		CIR_zhu_zhong_jun_shi_gong_ye
+		CIR_sheng_chan_zai_jia_bei
+		CIR_wei_da_li_xiang
+		# attack sca asap
+		CIR_yu_e_mo_de_jue_zhan
+		CIR_xuan_chuan_gong_shi
+		CIR_zhan_zheng_jun_shi_dong_yuan
+		CIR_zhan_zheng_gong_ye_dong_yuan
+		# finish industries
+		CIR_zhong_gong_ye_you_xian
+		CIR_bing_guan_bao_lei_gong_ye_qu
+		CIR_nong_ye_zai_gui_hua
+		CIR_xin_gong_ye_gui_hua
+		CIR_jun_shi_gong_ye_jian_she
+		CIR_liu_shui_xian_you_hua
+		# finally do the military
+		CIR_jun_shi_jian_she
+		CIR_fu_chou_zhu_yi_xuan_chuan
+		CIR_fa_hui_yao_jing_shu_liang_you_shi
+		CIR_yao_jing_jun_shi_xue_yuan
+		CIR_zheng_he_yao_jing_ge_ming_jun
+		CIR_zu_zhi_zhi_shang
+		CIR_zhen_dui_e_mo_de_ruo_dian
+		CIR_bu_ji_gai_liang
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

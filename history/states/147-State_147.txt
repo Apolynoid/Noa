@@ -1,0 +1,34 @@
+
+state={
+	id=147
+	name="STATE_147"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		9 446 937 2212 4298 4508 4512 
+	}
+	manpower=131
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.500
+}

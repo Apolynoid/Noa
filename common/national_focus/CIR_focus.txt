@@ -1,0 +1,1695 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+focus_tree = {
+	id = CIR_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CIR
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 600 y = 900 }
+	shared_focus = ty_medium_main
+	# 政治线
+	# 联合体的现状
+	focus = {
+		id = CIR_lian_he_ti_de_xian_zhuang
+		icon = GFX_focus_domestic_affairs
+		cost = 7
+		x = 20
+		y = 1
+	
+		completion_reward = {
+		  	add_political_power = 75
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 琪露诺的革命方针
+	focus = {
+		id = CIR_cirno_de_ge_ming_fang_zhen
+		icon = CIR_focus_cirno_revolution_policy
+		cost = 7
+		x = -6
+		y = 1
+
+		relative_position_id = CIR_lian_he_ti_de_xian_zhuang
+
+		prerequisite = {
+			focus = CIR_lian_he_ti_de_xian_zhuang
+		}
+
+		mutually_exclusive = {
+			focus = CIR_daiyousei_de_gai_ge_ce_lue
+		}
+	
+		completion_reward = {
+		  	add_political_power = 50
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 注重军事工业
+	focus = {
+		id = CIR_zhu_zhong_jun_shi_gong_ye
+		icon = GFX_focus_military_construction
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = CIR_cirno_de_ge_ming_fang_zhen
+
+		prerequisite = {
+			focus = CIR_cirno_de_ge_ming_fang_zhen
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 生产再加倍
+	focus = {
+		id = CIR_sheng_chan_zai_jia_bei
+		icon = GFX_focus_mass_production_NOA
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zhu_zhong_jun_shi_gong_ye
+
+		prerequisite = {
+			focus = CIR_zhu_zhong_jun_shi_gong_ye
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_sheng_chan_zai_jia_bei_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 统一行动
+	focus = {
+		id = CIR_tong_yi_xing_dong
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CIR_cirno_de_ge_ming_fang_zhen
+
+		prerequisite = {
+			focus = CIR_cirno_de_ge_ming_fang_zhen
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_idea
+				add_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强化妖精政治局
+	focus = {
+		id = CIR_qiang_hua_yao_jing_zheng_zhi_ju
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_tong_yi_xing_dong
+
+		prerequisite = {
+			focus = CIR_tong_yi_xing_dong
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_a_idea
+				add_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 伟大理想
+	focus = {
+		id = CIR_wei_da_li_xiang
+		icon = GFX_focus_glory
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = CIR_cirno_de_ge_ming_fang_zhen
+
+		prerequisite = {
+			focus = CIR_sheng_chan_zai_jia_bei
+		}
+
+		prerequisite = {
+			focus = CIR_qiang_hua_yao_jing_zheng_zhi_ju
+		}
+	
+		completion_reward = {
+		  	add_war_support = 0.1
+			add_stability = 0.05
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 大妖精的改革策略
+	focus = {
+		id = CIR_daiyousei_de_gai_ge_ce_lue
+		icon = CIR_focus_daiyousei_reform_strategy
+		cost = 7
+		x = 6
+		y = 1
+
+		relative_position_id = CIR_lian_he_ti_de_xian_zhuang
+
+		prerequisite = {
+			focus = CIR_lian_he_ti_de_xian_zhuang
+		}
+
+		mutually_exclusive = {
+			focus = CIR_cirno_de_ge_ming_fang_zhen
+		}
+	
+		completion_reward = {
+		  	add_popularity = {
+				ideology = qinwai
+				popularity = 0.3
+			}
+			set_politics = {
+				ruling_party = qinwai
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 0
+		}
+	}
+
+	# 注重民用工业
+	focus = {
+		id = CIR_zhu_zhong_min_yong_gong_ye
+		icon = GFX_focus_civilian_construction
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = CIR_daiyousei_de_gai_ge_ce_lue
+
+		prerequisite = {
+			focus = CIR_daiyousei_de_gai_ge_ce_lue
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = industrial_complex
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = industrial_complex
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = industrial_complex
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 调整生产结构
+	focus = {
+		id = CIR_tiao_zheng_sheng_chan_jie_gou
+		icon = GFX_goal_generic_consumer_goods
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zhu_zhong_min_yong_gong_ye
+
+		prerequisite = {
+			focus = CIR_zhu_zhong_min_yong_gong_ye
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_tiao_zheng_sheng_chan_jie_gou_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强调妖精团结
+	focus = {
+		id = CIR_qiang_diao_yao_jing_tuan_jie
+		icon = GFX_goal_generic_national_unity
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CIR_daiyousei_de_gai_ge_ce_lue
+
+		prerequisite = {
+			focus = CIR_daiyousei_de_gai_ge_ce_lue
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				remove_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_idea
+				add_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精议会
+	focus = {
+		id = CIR_yao_jing_yi_hui
+		icon = GFX_focus_parliament
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_qiang_diao_yao_jing_tuan_jie
+
+		prerequisite = {
+			focus = CIR_qiang_diao_yao_jing_tuan_jie
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_c_idea
+				add_idea = CIR_lian_he_ti_zheng_zhi_zhuang_kuang_d_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精之国
+	focus = {
+		id = CIR_yao_jing_zhi_guo
+		icon = GFX_focus_DEN_civilian_preparations
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = CIR_daiyousei_de_gai_ge_ce_lue
+
+		prerequisite = {
+			focus = CIR_tiao_zheng_sheng_chan_jie_gou
+		}
+
+		prerequisite = {
+			focus = CIR_yao_jing_yi_hui
+		}
+	
+		completion_reward = {
+		  	add_war_support = 0.05
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 反斯卡蕾特协约
+	focus = {
+		id = CIR_fan_scarlet_xie_yue
+		icon = CIR_focus_anti_scarlet_alliance
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CIR_lian_he_ti_de_xian_zhuang
+
+		prerequisite = {
+			focus = CIR_cirno_de_ge_ming_fang_zhen
+			focus = CIR_daiyousei_de_gai_ge_ce_lue
+		}
+
+		bypass = {
+			SCA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			add_named_threat = {
+				threat = 5
+				name = CIR_fan_scarlet_xie_yue
+			}
+		  	add_ideas = CIR_fan_scarlet_xie_yue_idea
+			every_country = {
+				limit = {
+					AND = {
+						exists = yes
+						is_subject = no
+						OR = {
+							original_tag = TEG
+							original_tag = LIL
+							AND = {
+								original_tag = SEJ
+								has_government = fandong
+							}
+						}
+					}
+				}
+				country_event = cir.101
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与叛乱同盟的合作
+	focus = {
+		id = CIR_yu_SEJ_de_he_zuo
+		icon = GFX_focus_befriend_SEJ
+		cost = 3
+		x = -1
+		y = 1
+
+		relative_position_id = CIR_fan_scarlet_xie_yue
+
+		prerequisite = {
+			focus = CIR_fan_scarlet_xie_yue
+		}
+
+		available = {
+			SEJ = {
+				exists = yes
+				is_subject = no
+				has_idea = CIR_fan_scarlet_xie_yue_idea
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 30
+			CIR = {
+				add_opinion_modifier = {
+				  	target = SEJ
+				  	modifier = CIR_jia_qiang_he_zuo_op
+				}
+			}
+			SEJ = {
+				add_opinion_modifier = {
+				  	target = CIR
+				  	modifier = CIR_jia_qiang_he_zuo_op
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 叛乱同盟的军事指导
+	focus = {
+		id = CIR_SEJ_de_jun_shi_zhi_dao
+		icon = CIR_focus_SEJ_military_aid
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CIR_yu_SEJ_de_he_zuo
+
+		prerequisite = {
+			focus = CIR_yu_SEJ_de_he_zuo
+		}
+	
+		completion_reward = {
+		  	army_experience = 40
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与天狗的合作
+	focus = {
+		id = CIR_yu_tian_gou_de_he_zuo
+		icon = GFX_focus_befriend_TEG
+		cost = 3
+		x = 1
+		y = 1
+
+		relative_position_id = CIR_fan_scarlet_xie_yue
+
+		prerequisite = {
+			focus = CIR_fan_scarlet_xie_yue
+		}
+	
+		available = {
+			TEG = {
+				exists = yes
+				is_subject = no
+				has_idea = CIR_fan_scarlet_xie_yue_idea
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 30
+			CIR = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = CIR_jia_qiang_he_zuo_op
+				}
+			}
+			TEG = {
+				add_opinion_modifier = {
+				  	target = CIR
+				  	modifier = CIR_jia_qiang_he_zuo_op
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗的经济援助
+	focus = {
+		id = CIR_tian_gou_de_jing_ji_yuan_zhu
+		icon = NTR_focus_economic_cooperation_with_TEG
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CIR_yu_tian_gou_de_he_zuo
+
+		prerequisite = {
+			focus = CIR_yu_tian_gou_de_he_zuo
+		}
+	
+		completion_reward = {
+		  	add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与春之妖精的合作
+	focus = {
+		id = CIR_yu_chun_zhi_yao_jing_de_he_zuo
+		icon = GFX_focus_befriend_LIL
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CIR_fan_scarlet_xie_yue
+
+		prerequisite = {
+			focus = CIR_fan_scarlet_xie_yue
+		}
+
+		available = {
+			LIL = {
+				exists = yes
+				is_subject = no
+				has_idea = CIR_fan_scarlet_xie_yue_idea
+			}
+		}
+	
+		completion_reward = {
+		  	LIL = {
+				country_event = cir.105
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与恶魔的决战
+	focus = {
+		id = CIR_yu_e_mo_de_jue_zhan
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_yu_chun_zhi_yao_jing_de_he_zuo
+
+		prerequisite = {
+			focus = CIR_wei_da_li_xiang
+			focus = CIR_yao_jing_zhi_guo
+			focus = CIR_yu_chun_zhi_yao_jing_de_he_zuo
+		}
+
+		available = {
+			is_subject = no
+			date > 148.1.1
+			OR = {
+			  	threat > 0.5
+				AND = {
+					date > 149.1.1
+					threat > 0.3
+				}
+			  	date > 149.9.1
+			}
+		}
+
+		bypass = {
+			OR = {
+			  	SCA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+			  	}
+			  	has_war_with = SCA
+			}
+		}
+
+		continue_if_invalid = yes
+
+		cancelable = no
+
+		will_lead_to_war_with = SCA
+
+		select_effect = {
+			hidden_effect = {
+				news_event = cir.112
+			}
+		}
+	
+		completion_reward = {
+			declare_war_on = {
+				target = SCA
+				type = annex_everything
+			}
+		  	add_timed_idea = {
+				idea = CIR_dui_e_mo_de_jue_zhan_ji_hua_idea
+				days = 180
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 10000
+		}
+	}
+
+	# 宣传攻势
+	focus = {
+		id = CIR_xuan_chuan_gong_shi
+		icon = GFX_goal_generic_propaganda
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = CIR_yu_e_mo_de_jue_zhan
+
+		prerequisite = {
+			focus = CIR_yu_e_mo_de_jue_zhan
+		}
+	
+		completion_reward = {
+		  	SCA = {
+				add_timed_idea = {
+					idea = CIR_shou_dao_pan_jun_xuan_chuan_ying_xiang_idea
+					days = 180
+				}
+				hidden_effect = {
+					country_event = cir.110
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 接触帝国反对者
+	focus = {
+		id = CIR_jie_chu_di_guo_fan_dui_zhe
+		icon = GFX_goal_generic_military_deal
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_xuan_chuan_gong_shi
+
+		prerequisite = {
+			focus = CIR_xuan_chuan_gong_shi
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = CIR_rebellion_destruction_tt
+		  	SCA = {
+				country_event = cir.111
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争军事动员
+	focus = {
+		id = CIR_zhan_zheng_jun_shi_dong_yuan
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = CIR_yu_e_mo_de_jue_zhan
+
+		prerequisite = {
+			focus = CIR_yu_e_mo_de_jue_zhan
+		}
+	
+		completion_reward = {
+		  	add_stability = -0.05
+			add_manpower = 1000
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争工业动员
+	focus = {
+		id = CIR_zhan_zheng_gong_ye_dong_yuan
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zhan_zheng_jun_shi_dong_yuan
+
+		prerequisite = {
+			focus = CIR_zhan_zheng_jun_shi_dong_yuan
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = CIR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = CIR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = CIR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = CIR
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事/工业线
+	# 对抗恶魔的准备
+	focus = {
+		id = CIR_dui_kang_e_mo_de_zhun_bei
+		icon = CIR_focus_preparation_against_the_devil
+		cost = 12
+		x = 0
+		y = 9
+
+		relative_position_id = CIR_lian_he_ti_de_xian_zhuang
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事建设
+	focus = {
+		id = CIR_jun_shi_jian_she
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 7
+		x = -6
+		y = 1
+
+		relative_position_id = CIR_dui_kang_e_mo_de_zhun_bei
+
+		prerequisite = {
+			focus = CIR_dui_kang_e_mo_de_zhun_bei
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				add_idea = CIR_yao_jing_ge_ming_jun_a_idea
+				remove_idea = CIR_yao_jing_ge_ming_jun_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精军事学院
+	focus = {
+		id = CIR_yao_jing_jun_shi_xue_yuan
+		icon = GFX_focus_generic_military_academy
+		cost = 7
+		x = -6
+		y = 1
+
+		relative_position_id = CIR_jun_shi_jian_she
+
+		prerequisite = {
+			focus = CIR_jun_shi_jian_she
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_yao_jing_jun_shi_xue_yuan_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 总结战争经验
+	focus = {
+		id = CIR_zong_jie_zhan_zheng_jing_yan
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = CIR_yao_jing_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = CIR_yao_jing_jun_shi_xue_yuan
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 提拔新锐军官
+	focus = {
+		id = CIR_ti_ba_xin_rui_jun_guan
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zong_jie_zhan_zheng_jing_yan
+
+		prerequisite = {
+			focus = CIR_zong_jie_zhan_zheng_jing_yan
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				add_idea = CIR_yao_jing_jun_shi_xue_yuan_a_idea
+				remove_idea = CIR_yao_jing_jun_shi_xue_yuan_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整合妖精革命军
+	focus = {
+		id = CIR_zheng_he_yao_jing_ge_ming_jun
+		icon = GFX_focus_army_dicipline
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = CIR_yao_jing_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = CIR_yao_jing_jun_shi_xue_yuan
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				add_idea = CIR_yao_jing_ge_ming_jun_b_idea
+				remove_idea = CIR_yao_jing_ge_ming_jun_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 组织至上
+	focus = {
+		id = CIR_zu_zhi_zhi_shang
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zheng_he_yao_jing_ge_ming_jun
+
+		prerequisite = {
+			focus = CIR_zheng_he_yao_jing_ge_ming_jun
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CIR_yao_jing_ge_ming_jun_c_idea
+				remove_idea = CIR_yao_jing_ge_ming_jun_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 针对恶魔的弱点
+	focus = {
+		id = CIR_zhen_dui_e_mo_de_ruo_dian
+		icon = CIR_focus_aim_at_weakness_of_the_devil
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_zu_zhi_zhi_shang
+
+		prerequisite = {
+			focus = CIR_zu_zhi_zhi_shang
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CIR_yao_jing_ge_ming_jun_d_idea
+				remove_idea = CIR_yao_jing_ge_ming_jun_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 复仇主义宣传
+	focus = {
+		id = CIR_fu_chou_zhu_yi_xuan_chuan
+		icon = CIR_focus_revanchism_propaganda
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_jun_shi_jian_she
+
+		prerequisite = {
+			focus = CIR_jun_shi_jian_she
+		}
+	
+		completion_reward = {
+		  	add_stability = 0.1
+			add_war_support = 0.1
+			add_ideas = CIR_yao_jing_lian_he_ti_jun_shi_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 发扬妖精数量优势
+	focus = {
+		id = CIR_fa_hui_yao_jing_shu_liang_you_shi
+		icon = CIR_focus_keep_fairies_strength_in_numbers
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_fu_chou_zhu_yi_xuan_chuan
+
+		prerequisite = {
+			focus = CIR_fu_chou_zhu_yi_xuan_chuan
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CIR_yao_jing_lian_he_ti_jun_shi_a_idea
+				remove_idea = CIR_yao_jing_lian_he_ti_jun_shi_idea
+			}
+			custom_effect_tooltip = CIR_gain_fairy_mass_advantage_tt
+			hidden_effect = {
+				set_technology = {
+					CIR_yao_jing_shu_liang_you_shi_tech = 1
+					popup = no
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 补给改良
+	focus = {
+		id = CIR_bu_ji_gai_liang
+		icon = GFX_focus_generic_truck
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_fa_hui_yao_jing_shu_liang_you_shi
+
+		prerequisite = {
+			focus = CIR_fa_hui_yao_jing_shu_liang_you_shi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CIR_yao_jing_lian_he_ti_jun_shi_b_idea
+				remove_idea = CIR_yao_jing_lian_he_ti_jun_shi_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业建设
+	focus = {
+		id = CIR_gong_ye_jian_she
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = 6
+		y = 1
+
+		relative_position_id = CIR_dui_kang_e_mo_de_zhun_bei
+
+		prerequisite = {
+			focus = CIR_dui_kang_e_mo_de_zhun_bei
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_jing_ji_gui_hua_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重工业优先
+	focus = {
+		id = CIR_zhong_gong_ye_you_xian
+		icon = GFX_goal_generic_construction
+		cost = 7
+		x = 6
+		y = 1
+
+		relative_position_id = CIR_gong_ye_jian_she
+
+		prerequisite = {
+			focus = CIR_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_gong_ye_sheng_chan_you_hua_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事工业建设
+	focus = {
+		id = CIR_jun_shi_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = CIR_zhong_gong_ye_you_xian
+
+		prerequisite = {
+			focus = CIR_zhong_gong_ye_you_xian
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 流水线优化
+	focus = {
+		id = CIR_liu_shui_xian_you_hua
+		icon = GFX_focus_production
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_jun_shi_gong_ye_jian_she
+
+		prerequisite = {
+			focus = CIR_jun_shi_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				add_idea = CIR_gong_ye_sheng_chan_you_hua_a_idea
+				remove_idea = CIR_gong_ye_sheng_chan_you_hua_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 冰冠堡垒工业区
+	focus = {
+		id = CIR_bing_guan_bao_lei_gong_ye_qu
+		icon = GFX_focus_generic_industry_3
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = CIR_zhong_gong_ye_you_xian
+
+		prerequisite = {
+			focus = CIR_zhong_gong_ye_you_xian
+		}
+
+		bypass = {
+			NOT = {
+			  has_full_control_of_state = 118
+			}
+		}
+	
+		completion_reward = {
+			118 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				  	type = industrial_complex
+				  	level = 1
+				  	instant_build = yes
+				}
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 2
+				  	instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 农业再规划
+	focus = {
+		id = CIR_nong_ye_zai_gui_hua
+		icon = GFX_focus_generic_farmland
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_bing_guan_bao_lei_gong_ye_qu
+
+		prerequisite = {
+			focus = CIR_bing_guan_bao_lei_gong_ye_qu
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				add_idea = CIR_jing_ji_gui_hua_a_idea
+				remove_idea = CIR_jing_ji_gui_hua_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 新工业规划
+	focus = {
+		id = CIR_xin_gong_ye_gui_hua
+		icon = GFX_focus_generic_modernize_industry
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_nong_ye_zai_gui_hua
+
+		prerequisite = {
+			focus = CIR_nong_ye_zai_gui_hua
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				add_idea = CIR_jing_ji_gui_hua_b_idea
+				remove_idea = CIR_jing_ji_gui_hua_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重建工业区
+	focus = {
+		id = CIR_chong_jian_gong_ye_qu
+		icon = GFX_focus_reconstruction
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_gong_ye_jian_she
+
+		prerequisite = {
+			focus = CIR_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+		  	remove_ideas = CIR_shou_sun_de_gong_ye_qu_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 民用工业建设
+	focus = {
+		id = CIR_min_yong_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_chong_jian_gong_ye_qu
+
+		prerequisite = {
+			focus = CIR_chong_jian_gong_ye_qu
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视铁路
+	focus = {
+		id = CIR_zhong_shi_tie_lu
+		icon = GFX_focus_generic_railroad
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CIR_min_yong_gong_ye_jian_she
+
+		mutually_exclusive = {
+			focus = CIR_zhong_shi_gong_lu
+		}
+
+		prerequisite = {
+			focus = CIR_min_yong_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+		  	add_ideas = CIR_zhong_shi_tie_lu_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视公路
+	focus = {
+		id = CIR_zhong_shi_gong_lu
+		icon = GFX_focus_generic_improve_roads
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CIR_min_yong_gong_ye_jian_she
+
+		mutually_exclusive = {
+			focus = CIR_zhong_shi_tie_lu
+		}
+
+		prerequisite = {
+			focus = CIR_min_yong_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		  	add_ideas = CIR_zhong_shi_gong_lu_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精研究院
+	focus = {
+		id = CIR_yao_jing_yan_jiu_yuan
+		icon = GFX_focus_science_institute
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_dui_kang_e_mo_de_zhun_bei
+
+		prerequisite = {
+			focus = CIR_dui_kang_e_mo_de_zhun_bei
+		}
+	
+		completion_reward = {
+		  	add_research_slot = 1
+			if = {
+				limit = {
+					118 = {
+						is_fully_controlled_by = ROOT
+						nuclear_facility < 1
+					}
+				}
+				118 = {
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						instant_build = yes
+						province = 1167
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = CIR
+						nuclear_facility < 1
+					}
+					construct_building_in_random_province = {
+						nuclear_facility = 1
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军用科技研究部
+	focus = {
+		id = CIR_jun_yong_ke_ji_yan_jiu_bu
+		icon = GFX_focus_military_science
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = CIR_yao_jing_yan_jiu_yuan
+
+		prerequisite = {
+			focus = CIR_yao_jing_yan_jiu_yuan
+		}
+
+		prerequisite = {
+			focus = CIR_jun_shi_jian_she
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = military
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 火炮研究
+	focus = {
+		id = CIR_huo_pao_yan_jiu
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_jun_yong_ke_ji_yan_jiu_bu
+
+		prerequisite = {
+			focus = CIR_jun_yong_ke_ji_yan_jiu_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 0.8
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 装甲研究
+	focus = {
+		id = CIR_zhuang_jia_yan_jiu
+		icon = GFX_goal_generic_build_tank
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_huo_pao_yan_jiu
+
+		prerequisite = {
+			focus = CIR_huo_pao_yan_jiu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 0.8
+				uses = 1
+				category = shield_weapons
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 民用科技研究部
+	focus = {
+		id = CIR_min_yong_ke_ji_yan_jiu_bu
+		icon = GFX_focus_civilian_science
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = CIR_yao_jing_yan_jiu_yuan
+
+		prerequisite = {
+			focus = CIR_yao_jing_yan_jiu_yuan
+		}
+
+		prerequisite = {
+			focus = CIR_gong_ye_jian_she
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = civil
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础科学研究
+	focus = {
+		id = CIR_ji_chu_ke_xue_yan_jiu
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_min_yong_ke_ji_yan_jiu_bu
+
+		prerequisite = {
+			focus = CIR_min_yong_ke_ji_yan_jiu_bu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 生产方式研究
+	focus = {
+		id = CIR_sheng_chan_fang_shi_yan_jiu
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CIR_ji_chu_ke_xue_yan_jiu
+
+		prerequisite = {
+			focus = CIR_ji_chu_ke_xue_yan_jiu
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = industrys
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}

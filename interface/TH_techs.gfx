@@ -1,0 +1,2468 @@
+spriteTypes = { 
+	spriteType = {
+		name = "GFX_combined_infantry_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_combined_infantry_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_artillery_and_support_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_artillery_and_support_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_armor_and_air_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_armor_and_air_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_race_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_race_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_hum_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_hum_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_kap_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_kap_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_p_youkai_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_p_youkai_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_youkai_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_youkai_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	
+	spriteType = {
+		name = "GFX_Beast_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Beast_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Human_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Human_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Pri_youkai_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Pri_youkai_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Youkai_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_YYoukai_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Magician_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Magician_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Kappa_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Kappa_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Tenggu_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Tenggu_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_God_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_God_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Fairy_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Fairy_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_Ghost_race_tech_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_Ghost_tech_tab.dds"
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_secret_folder_tab"
+		textureFile = "gfx//interface//techtree//techtree_special_tab.dds"
+		noOfFrames = 2		
+	}
+    ##########fix vanillia
+     #################support
+     spriteType = {
+		name = "GFX_technology_support_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_support_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_support_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_support_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_support_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+##### electronics tech #####
+
+	spriteType = {
+		name = "GFX_technology_electronics_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_electronics_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_electronics_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_electronics_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_electronics_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	##################fix over#############
+
+
+	################## infantry_general tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_general_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_general_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_general_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_general_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_general_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	################## infantry_sc_support tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_support_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_sc_support_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_sc_support_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_support_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_sc_support_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+################## infantry_sc_primary tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_primary_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_sc_primary_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_sc_primary_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_primary_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_sc_primary_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+################## infantry_sc_advanced tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_advanced_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_sc_advanced_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_sc_advanced_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_advanced_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_sc_advanced_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+################## infantry_ma_support tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_support_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_ma_support_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_ma_support_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_support_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_ma_support_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+################## infantry_ma_primary tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_primary_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_ma_primary_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_ma_primary_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_primary_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_ma_primary_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+################## infantry_ma_advanced tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_advanced_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_ma_advanced_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_ma_advanced_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_advanced_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_ma_advanced_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+
+	################## electronics_science tech ################
+
+	spriteType = {
+		name = "GFX_technology_electronics_sc_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_electronics_sc_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_electronics_sc_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_electronics_sc_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_electronics_sc_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	################## electronics_magic tech ################
+
+	spriteType = {
+		name = "GFX_technology_electronics_ma_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_electronics_ma_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_electronics_ma_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_electronics_ma_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_electronics_ma_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+
+	################## industry_science tech ################
+
+	spriteType = {
+		name = "GFX_technology_industry_sc_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_industry_sc_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_industry_sc_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_industry_sc_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_industry_sc_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	################## industry_magic tech ################
+
+	spriteType = {
+		name = "GFX_technology_industry_ma_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_industry_ma_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_industry_ma_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_industry_ma_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_industry_ma_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	################## infantry_combined tech ################
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_combined_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_ma_combined_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_ma_combined_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_ma_combined_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_ma_combined_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	spriteType = {
+		name = "GFX_technology_infantry_sc_combined_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_infantry_sc_combined_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_infantry_sc_combined_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_infantry_sc_combined_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_infantry_sc_combined_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	################## secret秘密 tech ################
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}	
+		
+	spriteType = {
+		name = "GFX_technology_secret_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_technology_secret_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_secret_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_secret_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	####electronic_ma####
+	# SpriteType = {
+	# 	name = "GFX_lingliganying147_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliganying147.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliganying152_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliganying152.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliganying157_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliganying157.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliganying162_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliganying162.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliganying167_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliganying167.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jiemigai149_medium"
+	# 	texturefile = "gfx/interface/technologies/jiemigai149.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jiemigai154_medium"
+	# 	texturefile = "gfx/interface/technologies/jiemigai154.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jiemigai159_medium"
+	# 	texturefile = "gfx/interface/technologies/jiemigai159.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jiemigai164_medium"
+	# 	texturefile = "gfx/interface/technologies/jiemigai164.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jiemigai169_medium"
+	# 	texturefile = "gfx/interface/technologies/jiemigai169.dds"
+	# }	
+	# ####electronic_mechanical_engineering####
+	# SpriteType = {
+	# 	name = "GFX_jichushuxue_medium"
+	# 	texturefile = "gfx/interface/technologies/jichushuxue.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shuxuegongju_medium"
+	# 	texturefile = "gfx/interface/technologies/shuxuegongju.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_lingben_medium"
+		texturefile = "gfx/interface/technologies/lingben.dds"
+	}	
+	SpriteType = {
+		name = "GFX_waike_medium"
+		texturefile = "gfx/interface/technologies/waike.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jisuangongju144_medium"
+		texturefile = "gfx/interface/technologies/jisuangongju144.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jisuangongju149_medium"
+		texturefile = "gfx/interface/technologies/jisuangongju149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jisuangongju154_medium"
+		texturefile = "gfx/interface/technologies/jisuangongju154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jisuangongju159_medium"
+		texturefile = "gfx/interface/technologies/jisuangongju159.dds"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_tongxunlilun_medium"
+	# 	texturefile = "gfx/interface/technologies/tongxunlilun.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_jiami137_medium"
+		texturefile = "gfx/interface/technologies/jiami137.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiami147_medium"
+		texturefile = "gfx/interface/technologies/jiami147.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiami157_medium"
+		texturefile = "gfx/interface/technologies/jiami157.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiami167_medium"
+		texturefile = "gfx/interface/technologies/jiami167.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiemi137_medium"
+		texturefile = "gfx/interface/technologies/jiemi137.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiemi147_medium"
+		texturefile = "gfx/interface/technologies/jiemi147.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiemi157_medium"
+		texturefile = "gfx/interface/technologies/jiemi157.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiemi167_medium"
+		texturefile = "gfx/interface/technologies/jiemi167.dds"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_lingganleida142_medium"
+	# 	texturefile = "gfx/interface/technologies/lingganleida142.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_dimianjiance_medium"
+	# 	texturefile = "gfx/interface/technologies/dimianjiance.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingganleida162_medium"
+	# 	texturefile = "gfx/interface/technologies/lingganleida162.dds"
+	# }	
+	####electronic_sc####
+	SpriteType = {
+		name = "GFX_wuxiandian147_medium"
+		texturefile = "gfx/interface/technologies/wuxiandian147.dds"
+	}	
+	SpriteType = {
+		name = "GFX_wuxiandian152_medium"
+		texturefile = "gfx/interface/technologies/wuxiandian152.dds"
+	}	
+	SpriteType = {
+		name = "GFX_wuxiandian157_medium"
+		texturefile = "gfx/interface/technologies/wuxiandian157.dds"
+	}	
+	SpriteType = {
+		name = "GFX_wuxiandian162_medium"
+		texturefile = "gfx/interface/technologies/wuxiandian162.dds"
+	}	
+	SpriteType = {
+		name = "GFX_wuxiandian167_medium"
+		texturefile = "gfx/interface/technologies/wuxiandian167.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiamigai149_medium"
+		texturefile = "gfx/interface/technologies/jiamigai149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiamigai154_medium"
+		texturefile = "gfx/interface/technologies/jiamigai154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiamigai159_medium"
+		texturefile = "gfx/interface/technologies/jiamigai159.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiamigai164_medium"
+		texturefile = "gfx/interface/technologies/jiamigai164.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jiamigai169_medium"
+		texturefile = "gfx/interface/technologies/jiamigai169.dds"
+	}	
+	####fairy_race####
+	SpriteType = {
+		name = "GFX_fairy_tech_medium"
+		texturefile = "gfx/interface/technologies/fairy_tech.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranronghe1_medium"
+		texturefile = "gfx/interface/technologies/ziranronghe1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranronghe2_medium"
+		texturefile = "gfx/interface/technologies/ziranronghe2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranronghe3_medium"
+		texturefile = "gfx/interface/technologies/ziranronghe3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranronghe4_medium"
+		texturefile = "gfx/interface/technologies/ziranronghe4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranronghe5_medium"
+		texturefile = "gfx/interface/technologies/ziranronghe5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranenhui1_medium"
+		texturefile = "gfx/interface/technologies/ziranenhui1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranenhui2_medium"
+		texturefile = "gfx/interface/technologies/ziranenhui2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranenhui3_medium"
+		texturefile = "gfx/interface/technologies/ziranenhui3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranenhui4_medium"
+		texturefile = "gfx/interface/technologies/ziranenhui4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziranenhui5_medium"
+		texturefile = "gfx/interface/technologies/ziranenhui5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaojinggansiban1_medium"
+		texturefile = "gfx/interface/technologies/yaojinggansiban1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaojinggansiban2_medium"
+		texturefile = "gfx/interface/technologies/yaojinggansiban2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaojinggansiban3_medium"
+		texturefile = "gfx/interface/technologies/yaojinggansiban3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaojinggansiban4_medium"
+		texturefile = "gfx/interface/technologies/yaojinggansiban4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaojinggansiban5_medium"
+		texturefile = "gfx/interface/technologies/yaojinggansiban5.dds"
+	}	
+	####ghost_race####
+	SpriteType = {
+		name = "GFX_ghost_tech_medium"
+		texturefile = "gfx/interface/technologies/ghost_tech.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shitihua1_medium"
+		texturefile = "gfx/interface/technologies/shitihua1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shitihua2_medium"
+		texturefile = "gfx/interface/technologies/shitihua2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shitihua3_medium"
+		texturefile = "gfx/interface/technologies/shitihua3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shitihua4_medium"
+		texturefile = "gfx/interface/technologies/shitihua4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shitihua5_medium"
+		texturefile = "gfx/interface/technologies/shitihua5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuanshentou1_medium"
+		texturefile = "gfx/interface/technologies/ziyuanshentou1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuanshentou2_medium"
+		texturefile = "gfx/interface/technologies/ziyuanshentou2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuanshentou3_medium"
+		texturefile = "gfx/interface/technologies/ziyuanshentou3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuanshentou4_medium"
+		texturefile = "gfx/interface/technologies/ziyuanshentou4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuanshentou5_medium"
+		texturefile = "gfx/interface/technologies/ziyuanshentou5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linghunqinshiban1_medium"
+		texturefile = "gfx/interface/technologies/linghunqinshiban1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linghunqinshiban2_medium"
+		texturefile = "gfx/interface/technologies/linghunqinshiban2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linghunqinshiban3_medium"
+		texturefile = "gfx/interface/technologies/linghunqinshiban3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linghunqinshiban4_medium"
+		texturefile = "gfx/interface/technologies/linghunqinshiban4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linghunqinshiban5_medium"
+		texturefile = "gfx/interface/technologies/linghunqinshiban5.dds"
+	}	
+	####god_race####
+	SpriteType = {
+		name = "GFX_god_tech_medium"
+		texturefile = "gfx/interface/technologies/god_tech.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengetansuo1_medium"
+		texturefile = "gfx/interface/technologies/shengetansuo1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengetansuo2_medium"
+		texturefile = "gfx/interface/technologies/shengetansuo2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengetansuo3_medium"
+		texturefile = "gfx/interface/technologies/shengetansuo3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengetansuo4_medium"
+		texturefile = "gfx/interface/technologies/shengetansuo4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengetansuo5_medium"
+		texturefile = "gfx/interface/technologies/shengetansuo5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengge1_medium"
+		texturefile = "gfx/interface/technologies/shengge1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengge2_medium"
+		texturefile = "gfx/interface/technologies/shengge2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengge3_medium"
+		texturefile = "gfx/interface/technologies/shengge3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengge4_medium"
+		texturefile = "gfx/interface/technologies/shengge4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengge5_medium"
+		texturefile = "gfx/interface/technologies/shengge5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shenmingdaixingzhe1_medium"
+		texturefile = "gfx/interface/technologies/shenmingdaixingzhe1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shenmingdaixingzhe2_medium"
+		texturefile = "gfx/interface/technologies/shenmingdaixingzhe2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shenmingdaixingzhe3_medium"
+		texturefile = "gfx/interface/technologies/shenmingdaixingzhe3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shenmingdaixingzhe4_medium"
+		texturefile = "gfx/interface/technologies/shenmingdaixingzhe4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shenmingdaixingzhe5_medium"
+		texturefile = "gfx/interface/technologies/shenmingdaixingzhe5.dds"
+	}	
+	####human_race####
+	SpriteType = {
+		name = "GFX_human_tech_medium"
+		texturefile = "gfx/interface/technologies/human_tech.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kongjuyizhiji1_medium"
+		texturefile = "gfx/interface/technologies/kongjuyizhiji1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kongjuyizhiji2_medium"
+		texturefile = "gfx/interface/technologies/kongjuyizhiji2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kongjuyizhiji3_medium"
+		texturefile = "gfx/interface/technologies/kongjuyizhiji3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kongjuyizhiji4_medium"
+		texturefile = "gfx/interface/technologies/kongjuyizhiji4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kongjuyizhiji5_medium"
+		texturefile = "gfx/interface/technologies/kongjuyizhiji5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengchandongli1_medium"
+		texturefile = "gfx/interface/technologies/shengchandongli1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengchandongli2_medium"
+		texturefile = "gfx/interface/technologies/shengchandongli2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengchandongli3_medium"
+		texturefile = "gfx/interface/technologies/shengchandongli3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengchandongli4_medium"
+		texturefile = "gfx/interface/technologies/shengchandongli4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shengchandongli5_medium"
+		texturefile = "gfx/interface/technologies/shengchandongli5.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuanchongpao1_medium"
+		texturefile = "gfx/interface/technologies/chuanchongpao1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuanchongpao2_medium"
+		texturefile = "gfx/interface/technologies/chuanchongpao2.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuanchongpao3_medium"
+		texturefile = "gfx/interface/technologies/chuanchongpao3.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuanchongpao4_medium"
+		texturefile = "gfx/interface/technologies/chuanchongpao4.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuanchongpao5_medium"
+		texturefile = "gfx/interface/technologies/chuanchongpao5.dds"
+	}	
+	####hum_tech_tech####
+	# SpriteType = {
+	# 	name = "GFX_zhiyuanwuyujiaqiang150_medium"
+	# 	texturefile = "gfx/interface/technologies/zhiyuanwuyujiaqiang150.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhiyuanwuyujiaqiang160_medium"
+	# 	texturefile = "gfx/interface/technologies/zhiyuanwuyujiaqiang160.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhiyuanwuyujiaqiang170_medium"
+	# 	texturefile = "gfx/interface/technologies/zhiyuanwuyujiaqiang170.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuandunhuopao150_medium"
+	# 	texturefile = "gfx/interface/technologies/chuandunhuopao150.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuandunhuopao160_medium"
+	# 	texturefile = "gfx/interface/technologies/chuandunhuopao160.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuandunhuopao170_medium"
+	# 	texturefile = "gfx/interface/technologies/chuandunhuopao170.dds"
+	# }	
+	####industry####
+	# SpriteType = {
+	# 	name = "GFX_production_theory_medium"
+	# 	texturefile = "gfx/interface/technologies/production_theory.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_org_production_medium"
+	# 	texturefile = "gfx/interface/technologies/org_production.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_jizhongshenchan145_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jizhongshenchan148_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan148.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jizhongshenchan151_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan151.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jizhongshenchan156_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan156.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jizhongshenchan161_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan161.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jizhongshenchan166_medium"
+		texturefile = "gfx/interface/technologies/jizhongshenchan166.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan145_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan148_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan148.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan151_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan151.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan156_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan156.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan161_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan161.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fensanshenchan166_medium"
+		texturefile = "gfx/interface/technologies/fensanshenchan166.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu130_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu130.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu140_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu146_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu151_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu151.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu156_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu156.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu161_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu161.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jianzaojishu166_medium"
+		texturefile = "gfx/interface/technologies/jianzaojishu166.dds"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_yunshudui140_medium"
+	# 	texturefile = "gfx/interface/technologies/yunshudui140.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yunshucheliang146_medium"
+	# 	texturefile = "gfx/interface/technologies/yunshucheliang146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yunshucheliang151_medium"
+	# 	texturefile = "gfx/interface/technologies/yunshucheliang151.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_jijianjianzao140_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jijianjianzao146_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jijianjianzao151_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao151.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jijianjianzao156_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao156.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jijianjianzao161_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao161.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jijianjianzao166_medium"
+		texturefile = "gfx/interface/technologies/jijianjianzao166.dds"
+	}	
+	SpriteType = {
+		name = "GFX_minyongjianzao146_medium"
+		texturefile = "gfx/interface/technologies/minyongjianzao146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_junyongjianzao151_medium"
+		texturefile = "gfx/interface/technologies/junyongjianzao151.dds"
+	}	
+	SpriteType = {
+		name = "GFX_minyongjianzao156_medium"
+		texturefile = "gfx/interface/technologies/minyongjianzao156.dds"
+	}	
+	SpriteType = {
+		name = "GFX_junyongjianzao161_medium"
+		texturefile = "gfx/interface/technologies/junyongjianzao161.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangkongpao151_medium"
+		texturefile = "gfx/interface/technologies/fangkongpao151.png"
+	}	
+	SpriteType = {
+		name = "GFX_fangkongpao161_medium"
+		texturefile = "gfx/interface/technologies/fangkongpao161.png"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa130_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa130.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa140_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa146_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa150_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa150.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa155_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa155.dds"
+	}	
+	SpriteType = {
+		name = "GFX_ziyuankaifa160_medium"
+		texturefile = "gfx/interface/technologies/ziyuankaifa160.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuyouguan146_medium"
+		texturefile = "gfx/interface/technologies/chuyouguan146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shiyouzhuanhua140_medium"
+		texturefile = "gfx/interface/technologies/shiyouzhuanhua140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shiyouzhuanhua146_medium"
+		texturefile = "gfx/interface/technologies/shiyouzhuanhua146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shiyouzhuanhua150_medium"
+		texturefile = "gfx/interface/technologies/shiyouzhuanhua150.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shiyouzhuanhua155_medium"
+		texturefile = "gfx/interface/technologies/shiyouzhuanhua155.dds"
+	}	
+	SpriteType = {
+		name = "GFX_shiyouzhuanhua160_medium"
+		texturefile = "gfx/interface/technologies/shiyouzhuanhua160.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuyouguan146_medium"
+		texturefile = "gfx/interface/technologies/chuyouguan146.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuyouguan150_medium"
+		texturefile = "gfx/interface/technologies/chuyouguan150.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuyouguan155_medium"
+		texturefile = "gfx/interface/technologies/chuyouguan155.dds"
+	}	
+	SpriteType = {
+		name = "GFX_chuyouguan160_medium"
+		texturefile = "gfx/interface/technologies/chuyouguan160.dds"
+	}	
+	####industry_ma####
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan130_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan130.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan140_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan140.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan145_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan145.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan150_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan150.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan155_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan155.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan160_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan160.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan165_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan165.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglishengchan170_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishengchan170.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_waijiefuzhushengchan147_medium"
+	# 	texturefile = "gfx/interface/technologies/waijiefuzhushengchan147.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_waijiefuzhushengchan152_medium"
+	# 	texturefile = "gfx/interface/technologies/waijiefuzhushengchan152.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_waijiefuzhushengchan157_medium"
+	# 	texturefile = "gfx/interface/technologies/waijiefuzhushengchan157.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_waijiefuzhushengchan162_medium"
+	# 	texturefile = "gfx/interface/technologies/waijiefuzhushengchan162.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_waijiefuzhushengchan167_medium"
+	# 	texturefile = "gfx/interface/technologies/waijiefuzhushengchan167.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_lingqi140_medium"
+		texturefile = "gfx/interface/technologies/lingqi140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_lingqi145_medium"
+		texturefile = "gfx/interface/technologies/lingqi145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_lingqi149_medium"
+		texturefile = "gfx/interface/technologies/lingqi149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_lingqi154_medium"
+		texturefile = "gfx/interface/technologies/lingqi154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_lingqi159_medium"
+		texturefile = "gfx/interface/technologies/lingqi159.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaoshi145_medium"
+		texturefile = "gfx/interface/technologies/yaoshi145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaoshi149_medium"
+		texturefile = "gfx/interface/technologies/yaoshi149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaoshi154_medium"
+		texturefile = "gfx/interface/technologies/yaoshi154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_yaoshi159_medium"
+		texturefile = "gfx/interface/technologies/yaoshi159.dds"
+	}	
+	####industry_sc####
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan130_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan130.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan140_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan140.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan145_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan150_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan150.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan155_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan155.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan160_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan160.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan165_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan165.dds"
+	}	
+	SpriteType = {
+		name = "GFX_fangwaijieshengchan170_medium"
+		texturefile = "gfx/interface/technologies/fangwaijieshengchan170.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linglifuzhushengchan147_medium"
+		texturefile = "gfx/interface/technologies/linglifuzhushengchan147.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linglifuzhushengchan152_medium"
+		texturefile = "gfx/interface/technologies/linglifuzhushengchan152.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linglifuzhushengchan157_medium"
+		texturefile = "gfx/interface/technologies/linglifuzhushengchan157.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linglifuzhushengchan162_medium"
+		texturefile = "gfx/interface/technologies/linglifuzhushengchan162.dds"
+	}	
+	SpriteType = {
+		name = "GFX_linglifuzhushengchan167_medium"
+		texturefile = "gfx/interface/technologies/linglifuzhushengchan167.dds"
+	}	
+	SpriteType = {
+		name = "GFX_meitan140_medium"
+		texturefile = "gfx/interface/technologies/meitan145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_meitan145_medium"
+		texturefile = "gfx/interface/technologies/meitan145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_meitan149_medium"
+		texturefile = "gfx/interface/technologies/meitan149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_meitan154_medium"
+		texturefile = "gfx/interface/technologies/meitan154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_meitan159_medium"
+		texturefile = "gfx/interface/technologies/meitan159.dds"
+	}
+	SpriteType = {
+		name = "GFX_jinshu145_medium"
+		texturefile = "gfx/interface/technologies/jinshu145.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jinshu149_medium"
+		texturefile = "gfx/interface/technologies/jinshu149.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jinshu154_medium"
+		texturefile = "gfx/interface/technologies/jinshu154.dds"
+	}	
+	SpriteType = {
+		name = "GFX_jinshu159_medium"
+		texturefile = "gfx/interface/technologies/jinshu159.dds"
+	}		
+	####infantry_a####
+	# SpriteType = {
+	# 	name = "GFX_gun1_medium"
+	# 	texturefile = "gfx/interface/technologies/gun1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglidanyao_medium"
+	# 	texturefile = "gfx/interface/technologies/linglidanyao.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gun2_medium"
+	# 	texturefile = "gfx/interface/technologies/gun2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliliushuixian_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliliushuixian.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gun3_medium"
+	# 	texturefile = "gfx/interface/technologies/gun3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spear1_medium"
+	# 	texturefile = "gfx/interface/technologies/spear1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglizhufu_medium"
+	# 	texturefile = "gfx/interface/technologies/linglizhufu.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spear2_medium"
+	# 	texturefile = "gfx/interface/technologies/spear2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spear3_medium"
+	# 	texturefile = "gfx/interface/technologies/spear3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card1_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglicunchu_medium"
+	# 	texturefile = "gfx/interface/technologies/linglicunchu.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card2_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card3_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card3.dds"
+	# }	
+	# ####infantry_ma_advanced####
+	# SpriteType = {
+	# 	name = "GFX_ma_fighter1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fighter1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_fighter2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fighter2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_fighter3_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fighter3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_fighter4_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fighter4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_fighter5_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fighter5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_bomber1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_bomber1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_bomber2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_bomber2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_bomber3_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_bomber3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_bomber4_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_bomber4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_bomber5_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_bomber5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_st_bomber1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_st_bomber1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_st_bomber2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_st_bomber2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_st_bomber3_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_st_bomber3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_st_bomber4_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_st_bomber4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_st_bomber5_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_st_bomber5.dds"
+	# }	
+	# ####infantry_ma_combined####
+	# SpriteType = {
+	# 	name = "GFX_ma_shield1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_linglixishou_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_linglixishou.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield3_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield4_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield5_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield6_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield6.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shield7_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shield7.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_yaoshouxunhua_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_yaoshouxunhua.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_spear4_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_spear4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_jinzhanjiaqiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_jinzhanjiaqiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_spear5_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_spear5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_jinzhanjiaqiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_jinzhanjiaqiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_spear6_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_spear6.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_jinzhanjiaqiang3_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_jinzhanjiaqiang3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tezhonglinglidanyuan1_medium"
+	# 	texturefile = "gfx/interface/technologies/tezhonglinglidanyuan1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yindaoshimo1_medium"
+	# 	texturefile = "gfx/interface/technologies/yindaoshimo1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tezhonglinglidanyuan2_medium"
+	# 	texturefile = "gfx/interface/technologies/tezhonglinglidanyuan2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yindaoshimo2_medium"
+	# 	texturefile = "gfx/interface/technologies/yindaoshimo2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tezhonglinglidanyuan3_medium"
+	# 	texturefile = "gfx/interface/technologies/tezhonglinglidanyuan3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yindaoshimo3_medium"
+	# 	texturefile = "gfx/interface/technologies/yindaoshimo3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tezhonglinglidanyuan4_medium"
+	# 	texturefile = "gfx/interface/technologies/tezhonglinglidanyuan4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanshujiejiehexin1_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanshujiejiehexin1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanshujiejiehexin2_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanshujiejiehexin2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanshujiejiehexin3_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanshujiejiehexin3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanshujiejiehexin4_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanshujiejiehexin4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanshujiejiehexin5_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanshujiejiehexin5.dds"
+	# }	
+	# ####infantry_ma_primary####
+	# SpriteType = {
+	# 	name = "GFX_linglishimo_medium"
+	# 	texturefile = "gfx/interface/technologies/linglishimo.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card4_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shimogailiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/shimogailiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card5_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shimogailiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/shimogailiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_spell_card6_medium"
+	# 	texturefile = "gfx/interface/technologies/spell_card6.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shimogailiang3_medium"
+	# 	texturefile = "gfx/interface/technologies/shimogailiang3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_huifushimo1_medium"
+	# 	texturefile = "gfx/interface/technologies/huifushimo1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_huifushimo2_medium"
+	# 	texturefile = "gfx/interface/technologies/huifushimo2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_huifushimo3_medium"
+	# 	texturefile = "gfx/interface/technologies/huifushimo3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_huifushimo4_medium"
+	# 	texturefile = "gfx/interface/technologies/huifushimo4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yejianlinggan1_medium"
+	# 	texturefile = "gfx/interface/technologies/yejianlinggan1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yejianlinggan2_medium"
+	# 	texturefile = "gfx/interface/technologies/yejianlinggan2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_yejianlinggan3_medium"
+	# 	texturefile = "gfx/interface/technologies/yejianlinggan3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_core_shield1_medium"
+	# 	texturefile = "gfx/interface/technologies/core_shield1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_fangyujizhongmokuai_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_fangyujizhongmokuai.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shuliangkuochong1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shuliangkuochong1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_xunlianjiaqiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_xunlianjiaqiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_core_shield2_medium"
+	# 	texturefile = "gfx/interface/technologies/core_shield2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_shuliangkuochong2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_shuliangkuochong2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_xunlianjiaqiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_xunlianjiaqiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_ma_gongjijizhongmokuai_medium"
+	# 	texturefile = "gfx/interface/technologies/ma_gongjijizhongmokuai.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_core_shield3_medium"
+	# 	texturefile = "gfx/interface/technologies/core_shield3.dds"
+	# }	
+	# ####infantry_ma_support####
+	# SpriteType = {
+	# 	name = "GFX_linglijiejie149_medium"
+	# 	texturefile = "gfx/interface/technologies/linglijiejie149.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglijiejie155_medium"
+	# 	texturefile = "gfx/interface/technologies/linglijiejie155.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglijiejie161_medium"
+	# 	texturefile = "gfx/interface/technologies/linglijiejie161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglijiejie167_medium"
+	# 	texturefile = "gfx/interface/technologies/linglijiejie167.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_feixingzhencha149_medium"
+	# 	texturefile = "gfx/interface/technologies/feixingzhencha149.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_feixingzhencha155_medium"
+	# 	texturefile = "gfx/interface/technologies/feixingzhencha155.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_feixingzhencha161_medium"
+	# 	texturefile = "gfx/interface/technologies/feixingzhencha161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_feixingzhencha167_medium"
+	# 	texturefile = "gfx/interface/technologies/feixingzhencha167.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_energy1_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_energy1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mofaranliao1_medium"
+	# 	texturefile = "gfx/interface/technologies/mofaranliao1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_energy2_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_energy2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mofaranliao2_medium"
+	# 	texturefile = "gfx/interface/technologies/mofaranliao2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_energy3_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_energy3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mofaranliao3_medium"
+	# 	texturefile = "gfx/interface/technologies/mofaranliao3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_energy4_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_energy4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mofaranliao4_medium"
+	# 	texturefile = "gfx/interface/technologies/mofaranliao4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_energy5_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_energy5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mofaranliao5_medium"
+	# 	texturefile = "gfx/interface/technologies/mofaranliao5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_focus1_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_focus1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_dongnenggailiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/dongnenggailiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_focus2_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_focus2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_dongnenggailiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/dongnenggailiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_focus3_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_focus3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_dongnenggailiang3_medium"
+	# 	texturefile = "gfx/interface/technologies/dongnenggailiang3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_focus4_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_focus4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_scout1_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_scout1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_scout2_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_scout2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_magic_scout3_medium"
+	# 	texturefile = "gfx/interface/technologies/magic_scout3.dds"
+	# }	
+	# ####infantry_sc_advanced####
+	# SpriteType = {
+	# 	name = "GFX_sc_fighter1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fighter1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_fighter2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fighter2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_fighter3_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fighter3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_fighter4_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fighter4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_fighter5_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fighter5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_bomber1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_bomber1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_bomber2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_bomber2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_bomber3_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_bomber3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_bomber4_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_bomber4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_bomber5_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_bomber5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_st_bomber1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_st_bomber1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_st_bomber2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_st_bomber2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_st_bomber3_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_st_bomber3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_st_bomber4_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_st_bomber4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_st_bomber5_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_st_bomber5.dds"
+	# }	
+	####infantry_sc_combined####
+	# SpriteType = {
+	# 	name = "GFX_sc_shield1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_linglixishou_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_linglixishou.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield3_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield4_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield5_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield6_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield6.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shield7_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shield7.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_yaoshouxunhua_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_yaoshouxunhua.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_spear4_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_spear4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_jinzhanjiaqiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_jinzhanjiaqiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_spear5_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_spear5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_jinzhanjiaqiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_jinzhanjiaqiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_spear6_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_spear6.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_jinzhanjiaqiang3_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_jinzhanjiaqiang3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_smg1_medium"
+	# 	texturefile = "gfx/interface/technologies/smg1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_weichongjiaqiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/weichongjiaqiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_smg2_medium"
+	# 	texturefile = "gfx/interface/technologies/smg2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_weichongjiaqiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/weichongjiaqiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_smg3_medium"
+	# 	texturefile = "gfx/interface/technologies/smg3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_weichongjiaqiang3_medium"
+	# 	texturefile = "gfx/interface/technologies/weichongjiaqiang3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_smg4_medium"
+	# 	texturefile = "gfx/interface/technologies/smg4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jijia1_medium"
+	# 	texturefile = "gfx/interface/technologies/jijia1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jijia2_medium"
+	# 	texturefile = "gfx/interface/technologies/jijia2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jijia3_medium"
+	# 	texturefile = "gfx/interface/technologies/jijia3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jijia4_medium"
+	# 	texturefile = "gfx/interface/technologies/jijia4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jijia5_medium"
+	# 	texturefile = "gfx/interface/technologies/jijia5.dds"
+	# }	
+	####infantry_sc_primary####
+	SpriteType = {
+		name = "GFX_tangxiangailiang_medium"
+		texturefile = "gfx/interface/technologies/tangxiangailiang.png"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_gun4_medium"
+	# 	texturefile = "gfx/interface/technologies/gun4.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_danyaogailiang1_medium"
+		texturefile = "gfx/interface/technologies/danyaogailiang1.png"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_gun5_medium"
+	# 	texturefile = "gfx/interface/technologies/gun5.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_danyaogailiang2_medium"
+		texturefile = "gfx/interface/technologies/danyaogailiang2.png"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_gun6_medium"
+	# 	texturefile = "gfx/interface/technologies/gun6.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_danyaogailiang3_medium"
+		texturefile = "gfx/interface/technologies/danyaogailiang3.png"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_shoulei1_medium"
+	# 	texturefile = "gfx/interface/technologies/shoulei1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shoulei2_medium"
+	# 	texturefile = "gfx/interface/technologies/shoulei2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shoulei3_medium"
+	# 	texturefile = "gfx/interface/technologies/shoulei3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shoulei4_medium"
+	# 	texturefile = "gfx/interface/technologies/shoulei4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_miaozhunjing1_medium"
+	# 	texturefile = "gfx/interface/technologies/miaozhunjing1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_miaozhunjing2_medium"
+	# 	texturefile = "gfx/interface/technologies/miaozhunjing2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_miaozhunjing3_medium"
+	# 	texturefile = "gfx/interface/technologies/miaozhunjing3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_special_shield1_medium"
+	# 	texturefile = "gfx/interface/technologies/special_shield1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_fangyujizhongmokuai_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_fangyujizhongmokuai.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shuliangkuochong1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shuliangkuochong1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_xunlianjiaqiang1_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_xunlianjiaqiang1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_special_shield2_medium"
+	# 	texturefile = "gfx/interface/technologies/special_shield2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_shuliangkuochong2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_shuliangkuochong2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_xunlianjiaqiang2_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_xunlianjiaqiang2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_sc_gongjijizhongmokuai_medium"
+	# 	texturefile = "gfx/interface/technologies/sc_gongjijizhongmokuai.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_special_shield3_medium"
+	# 	texturefile = "gfx/interface/technologies/special_shield3.dds"
+	# }	
+	# ####infantry_sc_support####
+	# SpriteType = {
+	# 	name = "GFX_wunvzhiyuan149_medium"
+	# 	texturefile = "gfx/interface/technologies/wunvzhiyuan149.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_wunvzhiyuan155_medium"
+	# 	texturefile = "gfx/interface/technologies/wunvzhiyuan155.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_wunvzhiyuan161_medium"
+	# 	texturefile = "gfx/interface/technologies/wunvzhiyuan161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_wunvzhiyuan167_medium"
+	# 	texturefile = "gfx/interface/technologies/wunvzhiyuan167.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gongjianpao149_medium"
+	# 	texturefile = "gfx/interface/technologies/gongjianpao149.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gongjianpao155_medium"
+	# 	texturefile = "gfx/interface/technologies/gongjianpao155.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gongjianpao161_medium"
+	# 	texturefile = "gfx/interface/technologies/gongjianpao161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_gongjianpao167_medium"
+	# 	texturefile = "gfx/interface/technologies/gongjianpao167.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mortar1_medium"
+	# 	texturefile = "gfx/interface/technologies/mortar1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tuiyaopopian1_medium"
+	# 	texturefile = "gfx/interface/technologies/tuiyaopopian1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mortar2_medium"
+	# 	texturefile = "gfx/interface/technologies/mortar2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tuiyaopopian2_medium"
+	# 	texturefile = "gfx/interface/technologies/tuiyaopopian2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mortar3_medium"
+	# 	texturefile = "gfx/interface/technologies/mortar3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tuiyaopopian3_medium"
+	# 	texturefile = "gfx/interface/technologies/tuiyaopopian3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mortar4_medium"
+	# 	texturefile = "gfx/interface/technologies/mortar4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tuiyaopopian4_medium"
+	# 	texturefile = "gfx/interface/technologies/tuiyaopopian4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_mortar5_medium"
+	# 	texturefile = "gfx/interface/technologies/mortar5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tuiyaopopian5_medium"
+	# 	texturefile = "gfx/interface/technologies/tuiyaopopian5.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_anti_shield1_medium"
+	# 	texturefile = "gfx/interface/technologies/anti_shield1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuanjiadan1_medium"
+	# 	texturefile = "gfx/interface/technologies/chuanjiadan1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_anti_shield2_medium"
+	# 	texturefile = "gfx/interface/technologies/anti_shield2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuanjiadan2_medium"
+	# 	texturefile = "gfx/interface/technologies/chuanjiadan2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_anti_shield3_medium"
+	# 	texturefile = "gfx/interface/technologies/anti_shield3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_chuanjiadan3_medium"
+	# 	texturefile = "gfx/interface/technologies/chuanjiadan3.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_anti_shield4_medium"
+	# 	texturefile = "gfx/interface/technologies/anti_shield4.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_science_scout1_medium"
+	# 	texturefile = "gfx/interface/technologies/science_scout1.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_science_scout2_medium"
+	# 	texturefile = "gfx/interface/technologies/science_scout2.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_science_scout3_medium"
+	# 	texturefile = "gfx/interface/technologies/science_scout3.dds"
+	# }	
+	
+	####support####
+	# SpriteType = {
+	# 	name = "GFX_zhiyuanzhuangbei_medium"
+	# 	texturefile = "gfx/interface/technologies/zhiyuanzhuangbei.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhihuixiaodui146_medium"
+	# 	texturefile = "gfx/interface/technologies/zhihuixiaodui146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhihuixiaodui151_medium"
+	# 	texturefile = "gfx/interface/technologies/zhihuixiaodui151.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhihuixiaodui156_medium"
+	# 	texturefile = "gfx/interface/technologies/zhihuixiaodui156.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhihuixiaodui161_medium"
+	# 	texturefile = "gfx/interface/technologies/zhihuixiaodui161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhihuixiaodui166_medium"
+	# 	texturefile = "gfx/interface/technologies/zhihuixiaodui166.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_duzhanxiaodui146_medium"
+	# 	texturefile = "gfx/interface/technologies/duzhanxiaodui146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_duzhanxiaodui151_medium"
+	# 	texturefile = "gfx/interface/technologies/duzhanxiaodui151.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_duzhanxiaodui156_medium"
+	# 	texturefile = "gfx/interface/technologies/duzhanxiaodui156.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_duzhanxiaodui161_medium"
+	# 	texturefile = "gfx/interface/technologies/duzhanxiaodui161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_duzhanxiaodui166_medium"
+	# 	texturefile = "gfx/interface/technologies/duzhanxiaodui166.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houqinbaoyang146_medium"
+	# 	texturefile = "gfx/interface/technologies/houqinbaoyang146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houqinbaoyang151_medium"
+	# 	texturefile = "gfx/interface/technologies/houqinbaoyang151.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houqinbaoyang156_medium"
+	# 	texturefile = "gfx/interface/technologies/houqinbaoyang156.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houqinbaoyang161_medium"
+	# 	texturefile = "gfx/interface/technologies/houqinbaoyang161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houqinbaoyang166_medium"
+	# 	texturefile = "gfx/interface/technologies/houqinbaoyang166.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanchanggongbing146_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanchanggongbing146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanchanggongbing151_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanchanggongbing151.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanchanggongbing156_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanchanggongbing156.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanchanggongbing161_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanchanggongbing161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_zhanchanggongbing166_medium"
+	# 	texturefile = "gfx/interface/technologies/zhanchanggongbing166.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houfangyiliao146_medium"
+	# 	texturefile = "gfx/interface/technologies/houfangyiliao146.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houfangyiliao151_medium"
+	# 	texturefile = "gfx/interface/technologies/houfangyiliao151.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houfangyiliao156_medium"
+	# 	texturefile = "gfx/interface/technologies/houfangyiliao156.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houfangyiliao161_medium"
+	# 	texturefile = "gfx/interface/technologies/houfangyiliao161.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_houfangyiliao166_medium"
+	# 	texturefile = "gfx/interface/technologies/houfangyiliao166.dds"
+	# }	
+
+	####_secret####
+	# SpriteType = {
+	# 	name = "GFX_abandoned_medium"
+	# 	texturefile = "gfx/interface/technologies/abandoned.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_tech_changed_medium"
+	# 	texturefile = "gfx/interface/technologies/tech_changed.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_nukes_medium"
+	# 	texturefile = "gfx/interface/technologies/nukes.dds"
+	# }	
+	SpriteType = {
+	 	name = "GFX_gaonenglingqichang_medium"
+	 	texturefile = "gfx/interface/technologies/energy_plant.png"
+	}	
+	SpriteType = {
+		name = "GFX_advanced_energy_plant_medium"
+		texturefile = "gfx/interface/technologies/advanced_energy_plant.png"
+   }
+	# SpriteType = {
+	# 	name = "GFX_fanyongdongliyinqing_medium"
+	# 	texturefile = "gfx/interface/technologies/fanyongdongliyinqing.dds"
+	# }	
+	SpriteType = {
+		name = "GFX_shiyanfanyingdui_medium"
+		texturefile = "gfx/interface/technologies/shiyanfanyingdui.png"
+	}	
+	SpriteType = {
+		name = "GFX_hedongliyinqing_medium"
+		texturefile = "gfx/interface/technologies/hedongliyinqing.png"
+	}	
+	# SpriteType = {
+	# 	name = "GFX_kongjianxue_medium"
+	# 	texturefile = "gfx/interface/technologies/kongjianxue.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_xijianshengchengqi_medium"
+	# 	texturefile = "gfx/interface/technologies/xijianshengchengqi.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jingjiexue_medium"
+	# 	texturefile = "gfx/interface/technologies/jingjiexue.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jingjieganraoqi_medium"
+	# 	texturefile = "gfx/interface/technologies/jingjieganraoqi.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jingjiekongzhijuzheng_medium"
+	# 	texturefile = "gfx/interface/technologies/jingjiekongzhijuzheng.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jingjiesiliezhadan_medium"
+	# 	texturefile = "gfx/interface/technologies/jingjiesiliezhadan.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shengmingxue_medium"
+	# 	texturefile = "gfx/interface/technologies/shengmingxue.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shengmingganyingqi_medium"
+	# 	texturefile = "gfx/interface/technologies/shengmingganyingqi.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_jingshenxue_medium"
+	# 	texturefile = "gfx/interface/technologies/jingshenxue.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_linglimoniqi_medium"
+	# 	texturefile = "gfx/interface/technologies/linglimoniqi.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_shengwumonijuzhen_medium"
+	# 	texturefile = "gfx/interface/technologies/shengwumonijuzhen.dds"
+	# }	
+	# SpriteType = {
+	# 	name = "GFX_lingliguozaizhadan_medium"
+	# 	texturefile = "gfx/interface/technologies/lingliguozaizhadan.dds"
+	# }	
+}

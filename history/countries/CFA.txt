@@ -1,0 +1,80 @@
+﻿capital = 12
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        gun1 = 1
+        spell_card2 = 1
+        
+        #辅助
+            
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+
+        #工程学 
+            jichushuxue = 1
+        #专用工程学
+
+        #工业
+            production_theory = 1
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+
+146.1.1={
+    # set_research_slots = 3
+    # Starting tech
+    set_technology = {
+    #步兵武器
+     #灵力
+    
+     #外界
+    #火炮
+
+    #陆军学说
+
+    #工程学
+    
+    #工业
+    
+    #支援
+    #装甲
+
+    }
+    
+    add_ideas = {
+        type1_manpowerlv3
+        Tribal
+        Fairy
+        hawk1
+        close2
+        free_magic
+    }
+    add_manpower = 1000
+    oob = "CFA_146"
+    set_politics = {
+    
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        fandong = 75
+        neworder = 0
+        oldorder = 0
+        guli = 5
+    }
+    
+    
+}

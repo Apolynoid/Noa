@@ -1,0 +1,99 @@
+# All infantry equipment
+
+equipments = {
+
+	special_shield_a = {
+		year = 149
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_sc_attack
+			up_defense
+			up_speed
+			up_hardness
+		}
+		
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 20
+		breakthrough = 14.5
+		hardness = 0.6
+		armor_value = 25
+
+		#Offensive Abilities
+		soft_attack = 23
+		hard_attack = 10
+		ap_attack = 31
+		air_attack = 2
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 8
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 25
+	}
+
+	special_shield150 = {
+		year = 149
+	
+		archetype = special_shield_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 1
+		}
+	}
+
+	special_shield159 = {
+		year = 157
+	
+		archetype = special_shield_a
+		parent = special_shield150
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			powder = 1
+			metal = 2
+			gas = 1
+		}
+		
+		defense = 26
+		breakthrough = 16.5
+		hardness = 0.4
+		armor_value = 40
+		soft_attack = 28
+		hard_attack = 13
+		ap_attack = 46
+		air_attack = 3
+		build_cost_ic = 40
+	}
+}

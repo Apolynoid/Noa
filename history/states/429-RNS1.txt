@@ -1,0 +1,33 @@
+state={
+	id=429
+	name="STATE_429"
+	provinces={
+		1944 2019 2880 4492 4493 4496 4498 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=344.0
+	buildings_max_level_factor=1.000
+}

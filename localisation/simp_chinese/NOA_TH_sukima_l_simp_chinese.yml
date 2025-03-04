@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+SUKIMA_RULE_OKI_HEL:0 "旧地狱之门"
+SUKIMA_RULE_OKI_SCA:0 "雾之湖之门"
+SUKIMA_RULE_OKI_GEN:0 "无缘冢之门"
+SUKIMA_RULE_OKI_HUM:0 "村落之门"
+SUKIMA_RULE_OKI_BYA:0 "竹林之门"
+SUKIMA_RULE_OKI_HEL2:0 "地狱之门"
+
+SUKIMA_RULE_YKR_SCA:0 "幻草原间隙"
+SUKIMA_RULE_YKR_CHE:0 "妖怪山间隙"
+SUKIMA_RULE_YKR_NET:0 "冥界间隙"
+SUKIMA_RULE_YKR_HKR:0 "神社间隙"
+SUKIMA_RULE_YKR_KAG:0 "竹林间隙"
+SUKIMA_RULE_YKR_EMB:0 "村落间隙"
+
+sukima_blocked_tt:0 "没有§Y$kongjianmonijishu$§!科技"
+back_door_blocked_tt:0 "没有§Y$back_door_simulation_tech$§!科技"

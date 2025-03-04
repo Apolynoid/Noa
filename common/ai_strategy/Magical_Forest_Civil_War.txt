@@ -1,0 +1,48 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+MRS_civil_war_desicion = {
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+	}
+	enable = {
+		has_global_flag = MRS_civil_war_prepare_flag
+		NOT = {
+			has_global_flag = MRS_civil_war_end_flag
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision		
+		value = 1000
+	}
+}
+
+MRS_core_desicion = {
+	allowed = {
+		OR = {
+			original_tag = MRS
+			original_tag = ALI
+			original_tag = NAR
+		}
+	}
+	enable = {
+		OR = {
+			has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+			has_idea = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision		
+		value = 1000
+	}
+}

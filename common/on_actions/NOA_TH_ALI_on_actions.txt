@@ -1,0 +1,36 @@
+on_actions = {
+	on_daily_ALI = {
+		effect = {
+			sphere_of_influence_check = yes
+			if = {
+				limit = {
+					date < 150.1.1
+					NOT = {
+						has_country_flag = ALI_mojie
+					}
+				}
+				if = {
+					limit = {
+						surrender_progress > 0.3
+					}
+					set_country_flag = ALI_mojie
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ALI
+						has_completed_focus = ALI_can_shi_ce_lve
+					}
+				}
+				FROM = {
+					country_event = ali.106
+				}
+			}
+		}
+	}
+}

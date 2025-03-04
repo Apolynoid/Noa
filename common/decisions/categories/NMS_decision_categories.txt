@@ -1,0 +1,18 @@
+# 派系斗争
+NMS_pai_xi_dou_zheng = {
+	icon = generic_political_actions
+
+	priority = 96
+
+	allowed = {
+		original_tag = NMS
+	}
+
+	visible = {
+		has_dynamic_modifier = {
+			modifier = NMS_pai_xi_dou_zheng_idea
+		}
+	}
+
+	visible_when_empty = yes
+}

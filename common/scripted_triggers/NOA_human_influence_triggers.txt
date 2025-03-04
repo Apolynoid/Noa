@@ -1,0 +1,34 @@
+can_influence_human = {
+	OR = {
+		original_tag = SCA
+		original_tag = SEJ
+		original_tag = NMS
+		original_tag = TKM
+		original_tag = MAM
+		original_tag = KAG
+		original_tag = MSD
+		original_tag = HUM
+	}
+}
+
+hum_reserve_over_10 = {
+	custom_trigger_tooltip = {
+		tooltip = reserve_over_10
+		check_variable = {
+			var = HUM.reserveInfluence
+			value = 10
+			compare = greater_than_or_equals
+		}
+	}
+}
+
+hum_reserve_over_35 = {
+	custom_trigger_tooltip = {
+		tooltip = reserve_over_35
+		check_variable = {
+			var = HUM.reserveInfluence
+			value = 35
+			compare = greater_than_or_equals
+		}
+	}
+}

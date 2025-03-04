@@ -1,0 +1,103 @@
+suppression_generic = {
+	
+	role = suppression
+	
+	upgrade_prio = {
+		factor = 80
+
+		modifier = {
+			factor = 0
+			ai_has_role_template = garrison
+		}
+	}
+
+	suppression_generic_waike = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+		}
+
+		target_template = {
+			
+			regiments = {
+				sc_light_infantry = 5
+			}
+		}
+	}
+	suppression_generic_lingben = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			regiments = {
+				ma_light_infantry = 5
+			}
+		}
+	}
+}
+
+garrison_generic = {
+	
+	role = garrison
+	
+	upgrade_prio = {
+		factor = 80
+
+		modifier = {
+			factor = 0
+			ai_has_role_template = garrison
+		}
+	}
+
+	garrison_generic_waike = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				not = { has_tech = waike }
+			}
+		}
+		
+		target_template = {
+			
+			regiments = {
+				sc_light_infantry = 5
+			}
+		}
+	}
+	garrison_generic_lingben = {
+	
+		reinforce_prio = 0
+		custom_icon = 7
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				has_tech = waike
+			}
+		}
+		
+		target_template = {
+			
+			regiments = {
+				ma_light_infantry = 5
+			}
+		}
+	}
+}

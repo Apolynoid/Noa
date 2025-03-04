@@ -1,0 +1,109 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+    no_puppet_liberate_or_force_government = {
+        peace_action_type = { puppet force_government liberate }
+
+        enable = {
+            always = yes
+        }
+
+        ai_desire = -100
+    }
+
+    take_unclaimed_states = {
+        peace_action_type = { take_states }
+
+        enable = {
+            ROOT.FROM.FROM.FROM = {
+                pc_is_state_claimed = no
+            }
+        }
+
+        ai_desire = 25
+    }
+
+    take_nearby_states = {
+        peace_action_type = { take_states }
+
+        enable = {
+            ROOT = { 
+                tag = ROOT.FROM 
+            }
+            ROOT.FROM.FROM.FROM = {
+                any_neighbor_state = {
+                    OR = {
+                        pc_is_state_claimed_by = ROOT.FROM
+                        is_owned_by = ROOT.FROM
+                    }
+                }
+            }
+        }
+
+        ai_desire = 15
+    }
+
+    take_claimed_states = {
+        peace_action_type = { take_states }
+
+        enable = {
+            ROOT = { 
+                tag = ROOT.FROM 
+            } #We are negotiating for ourselves
+            ROOT.FROM.FROM.FROM = {
+                is_claimed_by = ROOT.FROM 
+            } #It is ours
+        }
+
+        ai_desire = 40
+    }
+
+    do_not_take_ally_cores = {
+        peace_action_type = { take_states }
+
+        enable = {
+            ROOT = { 
+                tag = ROOT.FROM 
+            }
+            ROOT.FROM.FROM.FROM = {
+                NOT = {
+                    is_core_of = ROOT.FROM
+                }
+                NOT = {
+                    is_claimed_by = ROOT.FROM
+                }
+                any_country_with_core = {
+                    is_ally_with = ROOT.FROM
+                }
+            }
+        }
+
+        ai_desire = -90
+    }
+
+    do_not_take_ally_claims = {
+        peace_action_type = { take_states }
+
+        enable = {
+            ROOT = { 
+                tag = ROOT.FROM 
+            }
+            ROOT.FROM.FROM.FROM = {
+                NOT = {
+                    is_core_of = ROOT.FROM
+                }
+                NOT = {
+                    is_claimed_by = ROOT.FROM
+                }
+            }
+            any_allied_country = {
+                ROOT.FROM.FROM.FROM = {
+                    is_claimed_by = PREV
+                }
+            }
+        }
+
+        ai_desire = -50
+    }
+}

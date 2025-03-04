@@ -1,0 +1,91 @@
+# All infantry equipment
+
+equipments = {
+
+	smg_a = {
+		year = 146
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_sc_attack
+			up_defense
+			up_speed
+		}
+		
+		#Defensive Abilities
+		defense = 16
+		breakthrough = 9.5
+		hardness = 0.25
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 11
+		hard_attack = 4
+		ap_attack = 6
+		air_attack = 2
+
+		#Misc Abilities
+		reliability = 0.8
+		maximum_speed = 10#4
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 9.5
+	}
+
+	smg146 = {
+		year = 146
+	
+		archetype = smg_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 2
+			metal = 1
+		}
+	}
+
+	smg153 = {
+		year = 153
+	
+		archetype = smg_a
+		parent = smg146
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 2
+			metal = 1
+		}
+		
+		defense = 20
+		breakthrough = 13.5
+		soft_attack = 14
+		hard_attack = 6
+		air_attack = 2.5
+		build_cost_ic = 10.5
+	}
+}

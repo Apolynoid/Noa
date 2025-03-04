@@ -1,0 +1,29 @@
+state={
+	id=654
+	name="STATE_654"
+	provinces={
+		7145 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=0.000
+	}
+	history={
+		146.1.1 = {
+			owner = MEL
+			add_core_of = MEL
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+	}
+	state_category=s0
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=2.500
+}

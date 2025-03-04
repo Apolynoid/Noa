@@ -1,0 +1,262 @@
+SEJ_peace_focus = {
+	name = "SEJ peace focus with challenging HKR"
+	desc = "quick industrial growth"
+
+	allowed = {
+		original_tag = SEJ
+	}
+	enable = {
+		has_war = no
+		HKR = {
+			NOT = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_in_faction_with = YKR
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_war = yes
+			HKR = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_in_faction_with = YKR
+				}
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		# politics first
+		SEJ_jian_chi_xia_ke_shang_dao_lu
+		SEJ_zheng_tong_xia_ke_shang_dao_lu
+		SEJ_fen_hua_yao_guai_zhong_zu_pai
+		SEJ_qiang_diao_zheng_zhi_ju_tuan_jie
+		SEJ_ge_ming_jiao_yu
+		SEJ_yi_shi_xing_tai_kuang_re
+		SEJ_xia_ke_shang_yong_bu_ting_xie
+		# deal with WHR soon
+		# some focus just to avoid time gap
+		SEJ_chu_li_ge_ming_de_di_ren
+		SEJ_zhong_jie_dong_yao_guai_wei_xie
+		SEJ_quan_huan_xiang_xiang_xia_ke_shang
+		SEJ_qiang_hua_ge_ming_tong_meng
+		SEJ_tiao_zhan_bo_li_wu_nv
+		# do not attack YKR until you are really ready!!!
+		# economic second
+		SEJ_ji_xu_di_yi_ge_wu_nian_ji_hua
+		SEJ_zhong_gong_ye_jian_she
+		SEJ_ji_chu_she_shi_jian_she
+		SEJ_wan_cheng_di_yi_ge_wu_nian_ji_hua
+		SEJ_di_er_ge_wu_nian_ji_hua
+		SEJ_nong_ye_ji_ti_hua
+		SEJ_gong_ye_jian_she_wei_yuan_hui
+		SEJ_min_yong_gong_ye_jian_she
+		SEJ_hui_zhen_cheng_gong_ye_zhong_xin
+		SEJ_jun_shi_gong_ye_jian_she
+		# military focuses should be completed during war
+		SEJ_zhan_zheng_de_jiao_xun
+		SEJ_qiang_hua_ge_ming_jun
+		SEJ_lian_meng_qing_bao_ju
+		SEJ_jun_dui_zheng_zhi_hua
+		SEJ_dong_yuan_zhi_yuan_zhe
+		SEJ_jun_shi_gai_ge
+		SEJ_jing_ji_dong_yuan
+		SEJ_zhong_shi_hou_qin
+		SEJ_dao_lu_biao_zhun_hua
+		# finally get some research slot
+		SEJ_pu_ji_ji_chu_jiao_yu
+		SEJ_ying_yong_ke_xue_yan_jiu
+		SEJ_ji_chu_ke_xue_yan_jiu
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+SEJ_peace_focus_without_HKR = {
+	name = "SEJ peace focus without challenging HKR"
+	desc = "quick industrial growth"
+
+	allowed = {
+		original_tag = SEJ
+	}
+	enable = {
+		has_war = no
+		HKR = {
+			OR = {
+				exists = no
+				is_subject = yes
+				is_in_faction_with = YKR
+			}
+		}
+	}
+	abort = {
+		has_war = yes
+	}
+
+	ai_national_focuses = {
+		# politics first
+		SEJ_jian_chi_xia_ke_shang_dao_lu
+		SEJ_zheng_tong_xia_ke_shang_dao_lu
+		SEJ_fen_hua_yao_guai_zhong_zu_pai
+		SEJ_qiang_diao_zheng_zhi_ju_tuan_jie
+		SEJ_ge_ming_jiao_yu
+		SEJ_yi_shi_xing_tai_kuang_re
+		SEJ_xia_ke_shang_yong_bu_ting_xie
+		# deal with WHR soon
+		SEJ_chu_li_ge_ming_de_di_ren
+		SEJ_zhong_jie_dong_yao_guai_wei_xie
+		SEJ_quan_huan_xiang_xiang_xia_ke_shang
+		SEJ_qiang_hua_ge_ming_tong_meng
+		# do not attack YKR until you are really ready!!!
+		# economic second
+		SEJ_ji_xu_di_yi_ge_wu_nian_ji_hua
+		SEJ_zhong_gong_ye_jian_she
+		SEJ_ji_chu_she_shi_jian_she
+		SEJ_wan_cheng_di_yi_ge_wu_nian_ji_hua
+		SEJ_di_er_ge_wu_nian_ji_hua
+		SEJ_nong_ye_ji_ti_hua
+		SEJ_gong_ye_jian_she_wei_yuan_hui
+		SEJ_min_yong_gong_ye_jian_she
+		SEJ_hui_zhen_cheng_gong_ye_zhong_xin
+		SEJ_jun_shi_gong_ye_jian_she
+		# military focuses should be completed during war
+		SEJ_zhan_zheng_de_jiao_xun
+		SEJ_qiang_hua_ge_ming_jun
+		SEJ_lian_meng_qing_bao_ju
+		SEJ_jun_dui_zheng_zhi_hua
+		SEJ_dong_yuan_zhi_yuan_zhe
+		SEJ_jun_shi_gai_ge
+		SEJ_jing_ji_dong_yuan
+		SEJ_zhong_shi_hou_qin
+		SEJ_dao_lu_biao_zhun_hua
+		# finally get some research slot
+		SEJ_pu_ji_ji_chu_jiao_yu
+		SEJ_ying_yong_ke_xue_yan_jiu
+		SEJ_ji_chu_ke_xue_yan_jiu
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+SEJ_war_focus = {
+	name = "SEJ war focus"
+	desc = "lead to military growth"
+
+	allowed = {
+		original_tag = SEJ
+	}
+	enable = {
+		has_war = yes
+	}
+	abort = {
+		OR = {
+			has_war = no
+			has_completed_focus = SEJ_dao_lu_biao_zhun_hua
+		}
+	}
+
+	ai_national_focuses = {
+		SEJ_zhan_zheng_de_jiao_xun
+		SEJ_qiang_hua_ge_ming_jun
+		SEJ_lian_meng_qing_bao_ju
+		SEJ_jun_dui_zheng_zhi_hua
+		SEJ_dong_yuan_zhi_yuan_zhe
+		SEJ_jun_shi_gai_ge
+		SEJ_jing_ji_dong_yuan
+		SEJ_zhong_shi_hou_qin
+		SEJ_dao_lu_biao_zhun_hua
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+SEJ_basic_strategies = {
+	name = "SEJ war focus"
+	desc = "lead to military growth"
+
+	allowed = {
+		original_tag = SEJ
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ideas = {
+		NIB_nib = 30000
+		SEJ_sej = 20000
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+}

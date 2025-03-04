@@ -1,0 +1,2348 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+focus_tree = {
+	id = TKM_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TKM
+		}
+	}
+
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 2300 y = 940 }
+	default = no
+	# 政治线
+	# 146季道具政治会议
+	focus = {
+		id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		icon = TKM_focus_146_property_political_meeting
+		cost = 7
+		x = 18
+		y = 1
+
+		cancelable = no
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_bu_wen_ding_de_xin_sheng_zheng_quan_idea
+				add_idea = TKM_bu_wen_ding_de_xin_sheng_zheng_quan_a_idea
+			}
+			country_event = tkm.101
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 应对动荡的幻想乡
+	focus = {
+		id = TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = -11
+		y = 1
+
+		relative_position_id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+
+		offset = {
+			x = 7
+			trigger = {
+				OR = {
+					has_completed_focus = TKM_ku_chuan_lei_gu_de_ji_hua
+					has_completed_focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+					has_completed_focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+			  	threat > 0.1
+				AND = {
+					date > 146.6.1
+					threat > 0.05
+				}
+			  	date > 147.1.1
+			}
+		}
+  
+		completion_reward = {
+			add_war_support = 0.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 干涉魔法之森内战
+	focus = {
+		id = TKM_gan_she_mo_fa_zhi_sen_nei_zhan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+
+		prerequisite = {
+			focus = TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+		}
+
+		available = {
+			has_global_flag = MRS_civil_war_prepare_flag
+		}
+
+		bypass = {
+			OR = {
+				has_global_flag = MRS_civil_war_end_flag
+				has_global_flag = MRS_civil_war_avoided_flag
+			}
+		}
+  
+		completion_reward = {
+			hidden_effect = {
+				set_variable = {
+					TKM_magic_forest_cooperator = TKM
+				}
+			}
+			unlock_decision_category_tooltip = TKM_jie_ru_mo_fa_zhi_sen_nei_zhan
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 人里贸易协定
+	focus = {
+		id = TKM_ren_li_mao_yi_xie_ding
+		icon = GFX_focus_befriend_HUM_NOA
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+
+		prerequisite = {
+			focus = TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+		}
+
+		available = {
+			HUM = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		bypass = {
+			HUM = {
+				NOT = {
+					has_idea = hum_TKM_de_bao_hu_idea
+				}
+			}
+		}
+  
+		completion_reward = {
+			HUM = {
+				country_event = {
+					id = tkm.115
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			HUM = {
+				event_option_tooltip = tkm.115.1
+			}
+			custom_effect_tooltip = TKM_hum_deal_one_year_limit_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 堀川雷鼓的计划
+	focus = {
+		id = TKM_ku_chuan_lei_gu_de_ji_hua
+		icon = TKM_focus_plan_of_horikawa_raiko
+		cost = 1
+		x = -7
+		y = 1
+
+		relative_position_id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+
+		offset = {
+			x = 7
+			trigger = {
+				has_completed_focus = TKM_ku_chuan_lei_gu_de_ji_hua
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_completed_focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+					has_completed_focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+			focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+		}
+
+		available = {
+			always = no
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = auto_complete_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 道具发展局
+	focus = {
+		id = TKM_dao_ju_fa_zhan_ju
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_ku_chuan_lei_gu_de_ji_hua
+
+		prerequisite = {
+			focus = TKM_ku_chuan_lei_gu_de_ji_hua
+		}
+  
+		completion_reward = {
+			remove_ideas = TKM_bu_wen_ding_de_xin_sheng_zheng_quan_a_idea
+			add_political_power = 100
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 九十九扩军计划
+	focus = {
+		id = TKM_jiu_shi_jiu_kuo_jun_ji_hua
+		icon = GFX_focus_generic_manpower
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_fa_zhan_ju
+
+		prerequisite = {
+			focus = TKM_dao_ju_fa_zhan_ju
+		}
+  
+		completion_reward = {
+			add_timed_idea = {
+				idea = TKM_jiu_shi_jiu_kuo_jun_ji_hua_idea
+				days = 730
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 道具战争债券
+	focus = {
+		id = TKM_dao_ju_zhan_zheng_zhai_quan
+		icon = TKM_focus_property_war_bonds
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_dao_ju_fa_zhan_ju
+
+		prerequisite = {
+			focus = TKM_dao_ju_fa_zhan_ju
+		}
+  
+		completion_reward = {
+			hidden_effect = {
+				set_variable = {
+					TKM_property_war_bond_pp = 0.2
+				}
+				set_country_flag = TKM_war_bond_to_pay_flag
+			}
+			add_dynamic_modifier = {
+				modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+			}
+			custom_effect_tooltip = TKM_war_bond_pp_tt
+			unlock_decision_tooltip = TKM_chang_huan_zhan_zheng_zhai_quan
+			activate_mission = TKM_zhan_zheng_zhai_quan_yan_qi
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 集中道具工坊
+	focus = {
+		id = TKM_ji_zhong_dao_ju_gong_fang
+		icon = GFX_focus_SOV_merge_plants
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_fa_zhan_ju
+
+		prerequisite = {
+			focus = TKM_dao_ju_fa_zhan_ju
+		}
+  
+		completion_reward = {
+			TKM_production_promote = yes
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 夺取妖怪小镇
+	focus = {
+		id = TKM_duo_qu_yao_guai_xiao_zhen
+		icon = GFX_focus_attack_SBK
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TKM_dao_ju_fa_zhan_ju
+
+		prerequisite = {
+			focus = TKM_jiu_shi_jiu_kuo_jun_ji_hua
+		}
+
+		prerequisite = {
+			focus = TKM_dao_ju_zhan_zheng_zhai_quan
+		}
+
+		prerequisite = {
+			focus = TKM_ji_zhong_dao_ju_gong_fang
+		}
+
+		available = {
+			is_subject = no
+			date > 147.3.1
+			has_army_manpower = { size > 1199 }
+			custom_trigger_tooltip = {
+				tooltip = TKM_attack_SBK_eq_trigger_tt
+				check_variable = { num_equipment_in_armies_k@gun_a > 12 }
+			}
+		}
+
+		bypass = {
+			OR = {
+				SBK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SBK
+			}
+		}
+
+		cancelable = no
+	  
+		will_lead_to_war_with = SBK
+  
+		completion_reward = {
+			declare_war_on = {
+				target = SBK
+				type = annex_everything
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 高能灵气特别开发区
+	focus = {
+		id = TKM_gao_neng_ling_qi_te_bie_kai_fa_qu
+		icon = TKM_focus_establish_energy_development_zone
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_duo_qu_yao_guai_xiao_zhen
+
+		prerequisite = {
+			focus = TKM_duo_qu_yao_guai_xiao_zhen
+		}
+
+		available = {
+			has_completed_focus = TKM_li_yong_fu_sang_shen_de_te_dian
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_establish_energy_development_zone_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 建立泛妖怪认同
+	focus = {
+		id = TKM_jian_li_fan_yao_guai_ren_tong
+		icon = GFX_goal_generic_improve_relations
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_duo_qu_yao_guai_xiao_zhen
+
+		prerequisite = {
+			focus = TKM_duo_qu_yao_guai_xiao_zhen
+		}
+
+		available = {
+			SBK = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				controls_state = 242
+				any_allied_country = {
+					controls_state = 242
+				}
+				any_subject_country = {
+					controls_state = 242
+				}
+			}
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_allow_integration_of_WAK_NMS_tt
+			custom_effect_tooltip = occupation_law_introduce_tt
+			hidden_effect = {
+				set_country_flag = can_integrate_flag_WAK
+				set_country_flag = can_integrate_flag_NMS
+			}
+			add_state_core = 225
+			add_state_core = 240
+			add_state_core = 242
+			add_state_core = 260
+			add_state_core = 430
+			add_state_core = 432
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 九十九八桥的革命
+	focus = {
+		id = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+		icon = TKM_focus_revolution_of_tsukumo_yatsuhashi
+		cost = 1
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_completed_focus = TKM_ku_chuan_lei_gu_de_ji_hua
+					has_completed_focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = TKM_ku_chuan_lei_gu_de_ji_hua
+			focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+		}
+
+		available = {
+			always = no
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = auto_complete_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 道具下克上教育
+	focus = {
+		id = TKM_dao_ju_xia_ke_shang_jiao_yu
+		icon = SEJ_focus_revolutionary_education
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+
+		prerequisite = {
+			focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+		}
+  
+		completion_reward = {
+			remove_ideas = TKM_bu_wen_ding_de_xin_sheng_zheng_quan_a_idea
+			add_war_support = 0.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 下克上军事援助
+	focus = {
+		id = TKM_xia_ke_shang_jun_shi_yuan_zhu
+		icon = GFX_focus_SEJ_military_aid
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_xia_ke_shang_jiao_yu
+
+		prerequisite = {
+			focus = TKM_dao_ju_xia_ke_shang_jiao_yu
+		}
+
+		bypass = {
+			SEJ = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+  
+		completion_reward = {
+			army_experience = 50
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 下克上经济援助
+	focus = {
+		id = TKM_xia_ke_shang_jing_ji_yuan_zhu
+		icon = GFX_focus_SEJ_industrial_aid
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_xia_ke_shang_jun_shi_yuan_zhu
+
+		prerequisite = {
+			focus = TKM_xia_ke_shang_jun_shi_yuan_zhu
+		}
+
+		bypass = {
+			SEJ = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+  
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入下克上运动
+	focus = {
+		id = TKM_jia_ru_xia_ke_shang_yun_dong
+		icon = GFX_focus_gekokujyo_movement
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_xia_ke_shang_jing_ji_yuan_zhu
+
+		prerequisite = {
+			focus = TKM_xia_ke_shang_jing_ji_yuan_zhu
+		}
+
+		mutually_exclusive = {
+			focus = TKM_nan_wu_zhi_hu_ge_ming_tong_meng
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+				GEK = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = TKM_gekokujyo_movement_refused_flag
+			}
+		}
+  
+		completion_reward = {
+			GEK = {
+				country_event = tkm.123
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 道具生产运动
+	focus = {
+		id = TKM_dao_ju_sheng_chan_yun_dong
+		icon = GFX_focus_mass_production_NOA
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_dao_ju_xia_ke_shang_jiao_yu
+
+		prerequisite = {
+			focus = TKM_dao_ju_xia_ke_shang_jiao_yu
+		}
+  
+		completion_reward = {
+			TKM_production_promote = yes
+			add_ideas = TKM_dao_ju_sheng_chan_yun_dong_idea
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 支持妖怪小镇激进派
+	focus = {
+		id = TKM_zhi_chi_yao_guai_xiao_zhen_ji_jin_pai
+		icon = GFX_focus_deal_with_SBK
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_xia_ke_shang_jiao_yu
+
+		prerequisite = {
+			focus = TKM_dao_ju_xia_ke_shang_jiao_yu
+		}
+
+		available = {
+			is_subject = no
+			date > 147.1.1
+			threat > 0.1
+		}
+
+		bypass = {
+			OR = {
+				SBK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SBK
+			}
+		}
+  
+		completion_reward = {
+			NOA_gain_random_agency_upgrade = yes
+			custom_effect_tooltip = TKM_unlock_boost_radicalists_operation
+			SBK = {
+				TKM_SBK_begin_to_be_influenced = yes
+				hidden_effect = {
+					country_event = tkm.127
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 鼓励妖怪小镇公投
+	focus = {
+		id = TKM_gu_li_yao_guai_xiao_zhen_gong_tou
+		icon = TKM_focus_demand_SBK_referendum
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_zhi_chi_yao_guai_xiao_zhen_ji_jin_pai
+
+		prerequisite = {
+			focus = TKM_zhi_chi_yao_guai_xiao_zhen_ji_jin_pai
+		}
+
+		available = {
+			is_subject = no
+			SBK = {
+				fandong > 0.3
+			}
+		}
+
+		cancel_if_invalid = yes
+
+		bypass = {
+			OR = {
+				SBK = {
+					OR = {
+						exists = no
+						is_subject = yes
+						NOT = {
+							has_idea = TKM_fan_yao_guai_ji_jin_pai_idea
+						}
+					}
+				}
+				has_war_with = SBK
+			}
+		}
+
+		will_lead_to_war_with = SBK
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_referendum_effect_tt
+			custom_effect_tooltip = current_effect_tt
+			if = {
+				limit = {
+					SBK = {
+						fandong > 0.5
+					}
+				}
+				SBK = {
+					every_core_state = {
+						add_core_of = TKM
+					}
+				}
+			} else_if = {
+				limit = {
+					SBK = {
+						fandong > 0.4
+					}
+				}
+				SBK = {
+					every_core_state = {
+						add_claim_by = TKM
+					}
+				}
+				custom_effect_tooltip = TKM_allow_integration_of_SBK_tt
+				custom_effect_tooltip = occupation_law_introduce_tt
+				hidden_effect = {
+					set_country_flag = can_integrate_flag_SBK
+				}
+			}
+			SBK = {
+				country_event = tkm.129
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = tkm.130.1
+			custom_effect_tooltip = else_tt
+			event_option_tooltip = tkm.131.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 南雾之湖革命同盟
+	focus = {
+		id = TKM_nan_wu_zhi_hu_ge_ming_tong_meng
+		icon = TKM_focus_south_misty_lake_revolution_alliance
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_gu_li_yao_guai_xiao_zhen_gong_tou
+
+		prerequisite = {
+			focus = TKM_gu_li_yao_guai_xiao_zhen_gong_tou
+		}
+
+		mutually_exclusive = {
+			focus = TKM_jia_ru_xia_ke_shang_yun_dong
+		}
+  
+		completion_reward = {
+			add_stability = 0.1
+			create_faction = TKM_south_misty_lake_revolution_alliance
+			hidden_effect = {
+				news_event = {
+					id = tkm.126
+					days = 5
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 多多良小伞的改革
+	focus = {
+		id = TKM_duo_duo_liang_xiao_san_de_gai_ge
+		icon = TKM_focus_reform_of_tatara_kogasa
+		cost = 1
+		x = 7
+		y = 1
+
+		relative_position_id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+
+		offset = {
+			x = -7
+			trigger = {
+				has_completed_focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+			}
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					has_completed_focus = TKM_ku_chuan_lei_gu_de_ji_hua
+					has_completed_focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = TKM_ku_chuan_lei_gu_de_ji_hua
+			focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+		}
+
+		available = {
+			always = no
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = auto_complete_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+	
+	# 道具建设协会
+	focus = {
+		id = TKM_dao_ju_jian_she_xie_hui
+		icon = GFX_focus_DEN_civilian_preparations
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_duo_duo_liang_xiao_san_de_gai_ge
+
+		prerequisite = {
+			focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+		}
+  
+		completion_reward = {
+			remove_ideas = TKM_bu_wen_ding_de_xin_sheng_zheng_quan_a_idea
+			add_stability = 0.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗经济援助
+	focus = {
+		id = TKM_tian_gou_jing_ji_yuan_zhu
+		icon = NTR_focus_economic_cooperation_with_TEG
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_jian_she_xie_hui
+
+		prerequisite = {
+			focus = TKM_dao_ju_jian_she_xie_hui
+		}
+
+		bypass = {
+			TEG = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+  
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 地区工业规划
+	focus = {
+		id = TKM_di_qu_gong_ye_gui_hua
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_tian_gou_jing_ji_yuan_zhu
+
+		prerequisite = {
+			focus = TKM_tian_gou_jing_ji_yuan_zhu
+		}
+  
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+				  type = infrastructure
+				  level = 1
+				  instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 保障妖怪小镇安全
+	focus = {
+		id = TKM_bao_zhang_yao_guai_xiao_zhen_an_quan
+		icon = GFX_focus_befriend_SBK
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_dao_ju_jian_she_xie_hui
+
+		prerequisite = {
+			focus = TKM_dao_ju_jian_she_xie_hui
+		}
+
+		available = {
+			is_subject = no
+			date > 147.1.1
+			threat > 0.1
+		}
+
+		bypass = {
+			OR = {
+				SBK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SBK
+			}
+		}
+
+		will_lead_to_war_with = SBK
+  
+		completion_reward = {
+			SBK = {
+				country_event = tkm.132
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = tkm.133.1
+			custom_effect_tooltip = else_tt
+			event_option_tooltip = tkm.134.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 学习人类生产技术
+	focus = {
+		id = TKM_xue_xi_ren_lei_sheng_chan_ji_shu
+		icon = GFX_focus_production
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_dao_ju_jian_she_xie_hui
+
+		prerequisite = {
+			focus = TKM_dao_ju_jian_she_xie_hui
+		}
+  
+		completion_reward = {
+			TKM_production_promote = yes
+			add_ideas = TKM_dao_ju_sheng_chan_guan_li_idea
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争后勤学
+	focus = {
+		id = TKM_zhan_zheng_hou_qin_xue
+		icon = GFX_focus_generic_truck
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_xue_xi_ren_lei_sheng_chan_ji_shu
+
+		prerequisite = {
+			focus = TKM_xue_xi_ren_lei_sheng_chan_ji_shu
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_dao_ju_sheng_chan_guan_li_idea
+				add_idea = TKM_dao_ju_sheng_chan_guan_li_a_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 高能灵气贸易谈判
+	focus = {
+		id = TKM_gao_neng_ling_qi_mao_yi_tan_pan
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = TKM_dao_ju_jian_she_xie_hui
+
+		prerequisite = {
+			focus = TKM_bao_zhang_yao_guai_xiao_zhen_an_quan
+		}
+
+		prerequisite = {
+			focus = TKM_di_qu_gong_ye_gui_hua
+			focus = TKM_zhan_zheng_hou_qin_xue
+		}
+
+		available = {
+			has_completed_focus = TKM_li_yong_fu_sang_shen_de_te_dian
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_allow_trade_limit_negotiation_tt
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 消灭对道具的威胁
+	focus = {
+		id = TKM_xiao_mie_dui_dao_ju_de_wei_xie
+		icon = GFX_goal_generic_major_war
+		cost = 7
+		x = 0
+		y = 6
+
+		relative_position_id = TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_te_bie_kai_fa_qu
+			focus = TKM_jian_li_fan_yao_guai_ren_tong
+			focus = TKM_jia_ru_xia_ke_shang_yun_dong
+			focus = TKM_nan_wu_zhi_hu_ge_ming_tong_meng
+			focus = TKM_gao_neng_ling_qi_mao_yi_tan_pan
+		}
+
+		available = {
+			is_subject = no
+			date > 148.1.1
+			OR = {
+			  	threat > 0.6
+				AND = {
+					date > 149.1.1
+					threat > 0.4
+				}
+			  	date > 149.11.1
+			}
+		}
+  
+		completion_reward = {
+			add_war_support = 0.1
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 进攻命莲寺
+	focus = {
+		id = TKM_jin_gong_ming_lian_si
+		icon = GFX_focus_attack_NMS
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_xiao_mie_dui_dao_ju_de_wei_xie
+
+		prerequisite = {
+			focus = TKM_xiao_mie_dui_dao_ju_de_wei_xie
+		}
+
+		available = {
+			is_subject = no
+		}
+	  
+		bypass = {
+			OR = {
+				NMS = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = NMS
+			}
+		}
+
+		cancelable = no
+	  
+		will_lead_to_war_with = NMS
+  
+		completion_reward = {
+			declare_war_on = {
+				target = NMS
+				type = take_state_focus
+			    generator = { 165 173 177 316 }
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 进军雾之湖南岸
+	focus = {
+		id = TKM_jin_jun_wu_zhi_hu_nan_an
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_xiao_mie_dui_dao_ju_de_wei_xie
+
+		prerequisite = {
+			focus = TKM_xiao_mie_dui_dao_ju_de_wei_xie
+		}
+
+		available = {
+			is_subject = no
+		}
+	  
+		bypass = {
+			OR = {
+				SCA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SCA
+			}
+		}
+
+		cancelable = no
+	  
+		will_lead_to_war_with = SCA
+		will_lead_to_war_with = WAK
+  
+		completion_reward = {
+			declare_war_on = {
+				target = WAK
+				type = take_state_focus
+			    generator = { 187 204 }
+			}
+			declare_war_on = {
+				target = SCA
+				type = puppet_wargoal_focus
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业-军事-高能灵气
+	# 利用付丧神的特点
+	focus = {
+		id = TKM_li_yong_fu_sang_shen_de_te_dian
+		icon = TKM_focus_utilize_tsukumogami_feature
+		cost = 7
+		x = 18
+		y = 10
+  
+		completion_reward = {
+			unlock_decision_category_tooltip = TKM_fu_sang_shen_gao_neng_ling_qi_te_xing
+			custom_effect_tooltip = TKM_influence_energy_feature_tt
+			hidden_effect = {
+				activate_mission = TKM_ling_li_te_xing_jie_suan
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 生产工具付丧神化
+	focus = {
+		id = TKM_sheng_chan_gong_ju_fu_sang_shen_hua
+		icon = TKM_focus_production_tool_tsukumogamize
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = TKM_li_yong_fu_sang_shen_de_te_dian
+
+		prerequisite = {
+			focus = TKM_li_yong_fu_sang_shen_de_te_dian
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_increase_upper_bound_of_industrial_level_2_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_industrial_feature_upper_bound = 2
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 武器付丧神化
+	focus = {
+		id = TKM_wu_qi_fu_sang_shen_hua
+		icon = TKM_focus_weapon_tsukumogamize
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = TKM_li_yong_fu_sang_shen_de_te_dian
+
+		prerequisite = {
+			focus = TKM_li_yong_fu_sang_shen_de_te_dian
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_increase_upper_bound_of_military_level_2_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_military_feature_upper_bound = 2
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 高能灵气自给计划
+	focus = {
+		id = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+		icon = GFX_focus_energy_NOA
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TKM_li_yong_fu_sang_shen_de_te_dian
+
+		prerequisite = {
+			focus = TKM_sheng_chan_gong_ju_fu_sang_shen_hua
+			focus = TKM_wu_qi_fu_sang_shen_hua
+		}
+  
+		completion_reward = {
+			add_ideas = TKM_gao_neng_ling_qi_zi_ji_ji_hua_idea
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 高能灵气厂建设
+	focus = {
+		id = TKM_gao_neng_ling_qi_chang_jian_she
+		icon = GFX_focus_energy_plant
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+		}
+
+		bypass = {
+			has_tech = advanced_energy_plant
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				technology = gaonenglingqichang
+				technology = advanced_energy_plant
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 高能灵气储蓄
+	focus = {
+		id = TKM_gao_neng_ling_qi_chu_xu
+		icon = TKM_focus_energy_stockpile
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_sp_bead_storage_increase_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_sp_bead_storage = 40
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战略资源开发
+	focus = {
+		id = TKM_zhan_lve_zi_yuan_kai_fa
+		icon = GFX_goal_generic_construction2
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_gao_neng_ling_qi_zi_ji_ji_hua_idea
+				add_idea = TKM_gao_neng_ling_qi_zi_ji_ji_hua_a_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 提高灵气利用率
+	focus = {
+		id = TKM_ti_gao_ling_qi_li_yong_lv
+		icon = TKM_focus_improve_energy_efficiency
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TKM_gao_neng_ling_qi_zi_ji_ji_hua
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_chang_jian_she
+		}
+
+		prerequisite = {
+			focus = TKM_gao_neng_ling_qi_chu_xu
+		}
+
+		prerequisite = {
+			focus = TKM_zhan_lve_zi_yuan_kai_fa
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_energy_per_sp_bead_decrease_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_energy_per_sp_bead = 250
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 先进工业灵力运用
+	focus = {
+		id = TKM_xian_jin_gong_ye_ling_li_yun_yong
+		icon = TKM_focus_advanced_industrial_energy_utilization
+		cost = 12
+		x = 0
+		y = 4
+
+		relative_position_id = TKM_sheng_chan_gong_ju_fu_sang_shen_hua
+
+		prerequisite = {
+			focus = TKM_gong_ye_yu_suan_qing_xie
+		}
+
+		prerequisite = {
+			focus = TKM_sheng_chan_gong_ju_fu_sang_shen_hua
+		}
+
+		prerequisite = {
+			focus = TKM_ti_gao_ling_qi_li_yong_lv
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_increase_upper_bound_of_industrial_level_4_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_industrial_feature_upper_bound = 4
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 先进军事灵力运用
+	focus = {
+		id = TKM_xian_jin_jun_shi_ling_li_yun_yong
+		icon = TKM_focus_advanced_military_energy_utilization
+		cost = 12
+		x = 0
+		y = 4
+
+		relative_position_id = TKM_wu_qi_fu_sang_shen_hua
+
+		prerequisite = {
+			focus = TKM_wu_qi_fu_sang_shen_hua
+		}
+
+		prerequisite = {
+			focus = TKM_ti_gao_ling_qi_li_yong_lv
+		}
+
+		prerequisite = {
+			focus = TKM_jiu_shi_jiu_jun_shi_gai_ge
+		}
+  
+		completion_reward = {
+			custom_effect_tooltip = TKM_increase_upper_bound_of_military_level_4_tt
+			hidden_effect = {
+				set_variable = {
+					TKM_military_feature_upper_bound = 4
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 国家建设计划
+	focus = {
+		id = TKM_guo_jia_jian_she_ji_hua
+		icon = GFX_focus_generic_industry_2
+		cost = 7
+		x = -8
+		y = 0
+
+		relative_position_id = TKM_li_yong_fu_sang_shen_de_te_dian
+  
+		completion_reward = {
+			add_ideas = TKM_guo_jia_jian_she_ji_hua_idea
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础科学研究
+	focus = {
+		id = TKM_ji_chu_ke_xue_yan_jiu
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_guo_jia_jian_she_ji_hua
+
+		prerequisite = {
+			focus = TKM_guo_jia_jian_she_ji_hua
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 应用科学研究
+	focus = {
+		id = TKM_ying_yong_ke_xue_yan_jiu
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_ji_chu_ke_xue_yan_jiu
+
+		prerequisite = {
+			focus = TKM_ji_chu_ke_xue_yan_jiu
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 2
+				category = industrys
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战略铁路规划
+	focus = {
+		id = TKM_zhan_lve_tie_lu_gui_hua
+		icon = GFX_focus_generic_railroad
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_guo_jia_jian_she_ji_hua
+
+		prerequisite = {
+			focus = TKM_guo_jia_jian_she_ji_hua
+		}
+  
+		completion_reward = {
+			build_railway = {
+				level = 4
+				start_state = 299
+				target_state = 426
+			}
+			build_railway = {
+				level = 4
+				start_state = 299
+				target_state = 427
+			}
+			build_railway = {
+				level = 3
+				start_state = 426
+				target_state = 427
+			}
+			build_railway = {
+				level = 3
+				start_state = 426
+				target_state = 213
+			}
+			299 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			swap_ideas = {
+				remove_idea = TKM_guo_jia_jian_she_ji_hua_idea
+				add_idea = TKM_guo_jia_jian_she_ji_hua_a_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事工业建设
+	focus = {
+		id = TKM_jun_shi_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_zhan_lve_tie_lu_gui_hua
+
+		prerequisite = {
+			focus = TKM_zhan_lve_tie_lu_gui_hua
+		}
+  
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  	type = arms_factory
+				  	level = 1
+				  	instant_build = yes
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 付丧神研究所
+	focus = {
+		id = TKM_fu_sang_shen_yan_jiu_suo
+		icon = GFX_focus_science_institute
+		cost = 7
+		x = -1
+		y = 3
+
+		relative_position_id = TKM_guo_jia_jian_she_ji_hua
+
+		prerequisite = {
+			focus = TKM_ying_yong_ke_xue_yan_jiu
+		}
+
+		prerequisite = {
+			focus = TKM_jun_shi_gong_ye_jian_she
+		}
+  
+		completion_reward = {
+			add_research_slot = 1
+			if = {
+				limit = {
+					299 = {
+						is_fully_controlled_by = ROOT
+						nuclear_facility < 1
+					}
+				}
+				299 = {
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						instant_build = yes
+						province = 615
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = TKM
+						nuclear_facility < 1
+					}
+					construct_building_in_random_province = {
+						nuclear_facility = 1
+					}
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = TKM_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_fu_sang_shen_yan_jiu_suo
+
+		prerequisite = {
+			focus = TKM_fu_sang_shen_yan_jiu_suo
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = secret
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 道具高速公路
+	focus = {
+		id = TKM_dao_ju_gao_su_gong_lu
+		icon = GFX_focus_generic_improve_roads
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TKM_guo_jia_jian_she_ji_hua
+
+		prerequisite = {
+			focus = TKM_guo_jia_jian_she_ji_hua
+		}
+  
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+				  type = infrastructure
+				  level = 1
+				  instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 投资轻工业
+	focus = {
+		id = TKM_tou_zi_qing_gong_ye
+		icon = GFX_goal_generic_construction
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_dao_ju_gao_su_gong_lu
+
+		prerequisite = {
+			focus = TKM_dao_ju_gao_su_gong_lu
+		}
+  
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TKM_bo_ruo_de_gong_ye_idea
+				}
+				swap_ideas = {
+					remove_idea = TKM_bo_ruo_de_gong_ye_idea
+					add_idea = TKM_bo_ruo_de_gong_ye_a_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = TKM_bo_ruo_de_gong_ye_c_idea
+					add_idea = TKM_bo_ruo_de_gong_ye_d_idea
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业预算倾斜
+	focus = {
+		id = TKM_gong_ye_yu_suan_qing_xie
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = 1
+		y = 3
+
+		relative_position_id = TKM_guo_jia_jian_she_ji_hua
+
+		prerequisite = {
+			focus = TKM_zhan_lve_tie_lu_gui_hua
+		}
+
+		prerequisite = {
+			focus = TKM_tou_zi_qing_gong_ye
+		}
+  
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TKM_bo_ruo_de_gong_ye_a_idea
+				}
+				swap_ideas = {
+					remove_idea = TKM_bo_ruo_de_gong_ye_a_idea
+					add_idea = TKM_bo_ruo_de_gong_ye_b_idea
+				}
+			}
+			else = {
+				remove_ideas = TKM_bo_ruo_de_gong_ye_d_idea
+			}
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = build
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 生产结构调整
+	focus = {
+		id = TKM_sheng_chan_jie_gou_tiao_zheng
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TKM_gong_ye_yu_suan_qing_xie
+
+		prerequisite = {
+			focus = TKM_gong_ye_yu_suan_qing_xie
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_guo_jia_jian_she_ji_hua_a_idea
+				add_idea = TKM_guo_jia_jian_she_ji_hua_b_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 民用工厂建设
+	focus = {
+		id = TKM_min_yong_gong_chang_jian_she
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_sheng_chan_jie_gou_tiao_zheng
+
+		prerequisite = {
+			focus = TKM_sheng_chan_jie_gou_tiao_zheng
+		}
+  
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 国家动员计划
+	focus = {
+		id = TKM_guo_jia_dong_yuan_ji_hua
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = 8
+		y = 0
+
+		relative_position_id = TKM_li_yong_fu_sang_shen_de_te_dian
+  
+		completion_reward = {
+			add_ideas = TKM_guo_jia_dong_yuan_ji_hua_idea
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 总结战争经验
+	focus = {
+		id = TKM_zong_jie_zhan_zheng_jing_yan
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TKM_guo_jia_dong_yuan_ji_hua
+
+		prerequisite = {
+			focus = TKM_guo_jia_dong_yuan_ji_hua
+		}
+  
+		completion_reward = {
+			army_experience = 30
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 新军事理论探索
+	focus = {
+		id = TKM_xin_jun_shi_li_lun_tan_suo
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_zong_jie_zhan_zheng_jing_yan
+
+		prerequisite = {
+			focus = TKM_zong_jie_zhan_zheng_jing_yan
+		}
+  
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 九十九军事改革
+	focus = {
+		id = TKM_jiu_shi_jiu_jun_shi_gai_ge
+		icon = GFX_focus_chi_army_reform
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TKM_xin_jun_shi_li_lun_tan_suo
+
+		prerequisite = {
+			focus = TKM_xin_jun_shi_li_lun_tan_suo
+		}
+  
+		completion_reward = {
+			add_ideas = TKM_jiu_shi_jiu_jun_shi_gai_ge_idea
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视机动
+	focus = {
+		id = TKM_zhong_shi_ji_dong
+		icon = GFX_goal_generic_build_tank
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = TKM_jiu_shi_jiu_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = TKM_jiu_shi_jiu_jun_shi_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = TKM_zhong_shi_huo_li
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = shield_weapons
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视火力
+	focus = {
+		id = TKM_zhong_shi_huo_li
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TKM_jiu_shi_jiu_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = TKM_jiu_shi_jiu_jun_shi_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = TKM_zhong_shi_ji_dong
+		}
+  
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 九十九军事操典
+	focus = {
+		id = TKM_jiu_shi_jiu_jun_shi_cao_dian
+		icon = GFX_goal_generic_small_arms
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TKM_jiu_shi_jiu_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = TKM_zhong_shi_ji_dong
+			focus = TKM_zhong_shi_huo_li
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_jiu_shi_jiu_jun_shi_gai_ge_idea
+				add_idea = TKM_jiu_shi_jiu_jun_shi_gai_ge_a_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 建立道具参谋部
+	focus = {
+		id = TKM_jian_li_dao_ju_can_mou_bu
+		icon = GFX_focus_staff
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TKM_guo_jia_dong_yuan_ji_hua
+
+		prerequisite = {
+			focus = TKM_guo_jia_dong_yuan_ji_hua
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_guo_jia_dong_yuan_ji_hua_idea
+				add_idea = TKM_dao_ju_can_mou_bu_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 培养基层士官
+	focus = {
+		id = TKM_pei_yang_ji_ceng_shi_guan
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TKM_jian_li_dao_ju_can_mou_bu
+
+		prerequisite = {
+			focus = TKM_jian_li_dao_ju_can_mou_bu
+		}
+  
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TKM_dao_ju_can_mou_bu_idea
+				}
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_idea
+					add_idea = TKM_dao_ju_can_mou_bu_a_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_b_idea
+					add_idea = TKM_dao_ju_can_mou_bu_c_idea
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 任用理论派军官
+	focus = {
+		id = TKM_ren_yong_li_lun_pai_jun_guan
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 7
+		x = -1
+		y = 2
+
+		relative_position_id = TKM_jian_li_dao_ju_can_mou_bu
+
+		prerequisite = {
+			focus = TKM_xin_jun_shi_li_lun_tan_suo
+			focus = TKM_jian_li_dao_ju_can_mou_bu
+		}
+
+		mutually_exclusive = {
+			focus = TKM_ren_yong_shi_zhan_pai_jun_guan
+		}
+  
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TKM_dao_ju_can_mou_bu_idea
+				}
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_idea
+					add_idea = TKM_dao_ju_can_mou_bu_b_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_a_idea
+					add_idea = TKM_dao_ju_can_mou_bu_c_idea
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 任用实战派军官
+	focus = {
+		id = TKM_ren_yong_shi_zhan_pai_jun_guan
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 7
+		x = 1
+		y = 2
+
+		relative_position_id = TKM_jian_li_dao_ju_can_mou_bu
+
+		prerequisite = {
+			focus = TKM_pei_yang_ji_ceng_shi_guan
+		}
+
+		mutually_exclusive = {
+			focus = TKM_ren_yong_li_lun_pai_jun_guan
+		}
+  
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TKM_dao_ju_can_mou_bu_a_idea
+				add_idea = TKM_dao_ju_can_mou_bu_d_idea
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 委托式指挥
+	focus = {
+		id = TKM_wei_tuo_shi_zhi_hui
+		icon = GFX_focus_military_command
+		cost = 12
+		x = 2
+		y = 3
+
+		relative_position_id = TKM_jian_li_dao_ju_can_mou_bu
+
+		prerequisite = {
+			focus = TKM_ren_yong_li_lun_pai_jun_guan
+			focus = TKM_ren_yong_shi_zhan_pai_jun_guan
+		}
+
+		prerequisite = {
+			focus = TKM_pei_yang_ji_ceng_shi_guan
+		}
+  
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.2
+				uses = 1
+        		category = land_doctrine
+			}
+			if = {
+				limit = {
+					has_idea = TKM_dao_ju_can_mou_bu_c_idea
+				}
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_c_idea
+					add_idea = TKM_dao_ju_can_mou_bu_e_idea
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = TKM_dao_ju_can_mou_bu_d_idea
+					add_idea = TKM_dao_ju_can_mou_bu_f_idea
+				}
+			}
+		}
+  
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}

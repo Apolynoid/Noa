@@ -1,0 +1,21 @@
+# 反斯卡蕾特协约成员
+CIR_fan_si_ka_lei_te_xie_yue_cheng_yuan = {
+	icon = saf_anti_colonialist_crusade
+
+	priority = 100
+
+	allowed = {
+		OR = {
+			original_tag = SEJ
+			original_tag = CIR
+			original_tag = LIL
+			original_tag = TEG
+		}
+	}
+
+	visible = {
+		has_idea = CIR_fan_scarlet_xie_yue_idea
+	}
+
+	visible_when_empty = no
+}

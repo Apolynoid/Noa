@@ -1,0 +1,106 @@
+defined_text = { 
+	name = NMS_get_reformists_dissatisfaction_level
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_reformists_dissatisfaction_level = 0
+			}
+		}
+		localization_key = NMS_satisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_reformists_dissatisfaction_level = 1
+			}
+		}
+		localization_key = NMS_slightly_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_reformists_dissatisfaction_level = 2
+			}
+		}
+		localization_key = NMS_medium_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_reformists_dissatisfaction_level = 3
+			}
+		}
+		localization_key = NMS_severely_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_reformists_dissatisfaction_level = 9
+			}
+		}
+		localization_key = NMS_lost_power_tt
+	}
+	text = {
+		localization_key = NMS_unknown_status_tt
+	}
+}
+
+defined_text = { 
+	name = NMS_get_racists_dissatisfaction_level
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_racists_dissatisfaction_level = 0
+			}
+		}
+		localization_key = NMS_satisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_racists_dissatisfaction_level = 1
+			}
+		}
+		localization_key = NMS_slightly_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_racists_dissatisfaction_level = 2
+			}
+		}
+		localization_key = NMS_medium_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_racists_dissatisfaction_level = 3
+			}
+		}
+		localization_key = NMS_severely_dissatisfied_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				NMS_racists_dissatisfaction_level = 9
+			}
+		}
+		localization_key = NMS_lost_power_tt
+	}
+	text = {
+		localization_key = NMS_unknown_status_tt
+	}
+}
+
+defined_text = { 
+	name = NMS_get_attack_SCA_name
+	text = {
+		trigger = {
+			has_non_aggression_pact_with = SCA
+		}
+		localization_key = NMS_tear_up_the_treaty_name
+	}
+	text = {
+		localization_key = NMS_challange_hegemony_name
+	}
+}

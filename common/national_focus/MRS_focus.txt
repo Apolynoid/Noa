@@ -1,0 +1,1378 @@
+focus_tree = {
+  id = MRS_focus
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = MRS
+    }
+  }
+  shared_focus = MRS_jun_shi_dong_yuan
+  shared_focus = MRS_jian_she_mo_fa_zhi_sen
+  shared_focus = ty_medium_main 
+
+  continuous_focus_position = { x = 20 y = 2500 }
+  
+  default = no
+
+  # 政治线 political
+  # 召开魔女大会
+  focus = {
+      id = MRS_zhao_kai_mo_nv_da_hui
+      icon = MRS_focus_convene_the_witch_meeting
+      cost = 12
+      x = 10
+      y = 1
+
+      available ={
+         has_global_flag = main_scenario
+      }
+
+      completion_reward = {
+        add_political_power = 150
+        country_event = {
+          id = mrs.101
+        }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  # 激进线 radicals
+  # 大魔女成美
+  focus = {
+    id = MRS_da_mo_nv_cheng_mei
+    icon = MRS_focus_archmage_narumi
+    cost = 1
+    x = -4
+    y = 1
+
+    relative_position_id = MRS_zhao_kai_mo_nv_da_hui
+
+    available = {
+      always = no
+    }
+
+    prerequisite = {
+      focus = MRS_zhao_kai_mo_nv_da_hui
+    }
+
+    mutually_exclusive = {
+      focus = MRS_da_mo_nv_mo_li_sha
+      focus = MRS_da_mo_nv_ai_li_si
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_auto_complete_tt
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 支持弱者斗争
+  focus = {
+    id = MRS_zhi_chi_ruo_zhe_dou_zheng
+    icon = GFX_focus_protest
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_da_mo_nv_cheng_mei
+
+    prerequisite = {
+      focus = MRS_da_mo_nv_cheng_mei
+    }
+
+    completion_reward = {
+      add_war_support = 0.1
+      add_political_power = 30
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 尝试接触爱丽丝
+  focus = {
+    id = MRS_chang_shi_jie_chu_ai_li_si
+    icon = MRS_focus_contact_alice
+    cost = 3
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_zhi_chi_ruo_zhe_dou_zheng
+
+    available = {
+      has_war = no
+      OR = {
+        MSD = {
+          OR = {
+            exists = no
+            is_puppet = yes
+          }
+        }
+        206 = {
+          NOT = {
+            is_owned_and_controlled_by = ROOT
+          }
+        }
+        has_country_flag = MRS_victory_in_kemonomichi_war_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_zhi_chi_ruo_zhe_dou_zheng
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          # 兽道战争胜利
+          has_full_control_of_state = 206
+        }
+        country_event = {
+          id = mrs.104
+        }
+      }
+      else = {
+        country_event = {
+          id = mrs.105
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 鼓励弱者联合
+  focus = {
+    id = MRS_gu_li_ruo_zhe_lian_he
+    icon = GFX_focus_ITA_corpo_volontari_della_liberta
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_chang_shi_jie_chu_ai_li_si
+
+    prerequisite = {
+      focus = MRS_chang_shi_jie_chu_ai_li_si
+    }
+
+    completion_reward = {
+      remove_ideas = mrs_fen_lie_de_mo_fa_shi_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 宣扬种族平等
+  focus = {
+    id = MRS_xuan_yang_zhong_zu_ping_deng
+    icon = GFX_focus_equality
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_gu_li_ruo_zhe_lian_he
+
+    prerequisite = {
+      focus = MRS_gu_li_ruo_zhe_lian_he
+    }
+
+    completion_reward = {
+      add_ideas = mrs_mo_fa_zhi_sen_de_ping_deng_idea
+      swap_ruler_traits = {
+        remove = MRS_ruo_zhe_de_bao_hu_zhe
+        add = MRS_ping_deng_de_xiang_zheng
+      }
+      custom_effect_tooltip = MRS_civil_war_warning_tt
+      hidden_effect = {
+        if = {
+          limit = {
+            has_country_flag = MRS_alice_refuse_flag
+          }
+          country_event = {
+            id = mrs.102
+            days = 1
+          }
+          news_event = {
+            id = mrs.111
+            days = 7
+          }
+        }
+        else = {
+          country_event = {
+            id = mrs.108
+            days = 7
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 孤立线 isolationists
+  # 大魔女魔理沙
+  focus = {
+    id = MRS_da_mo_nv_mo_li_sha
+    icon = MRS_focus_archmage_marisa
+    cost = 1
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_zhao_kai_mo_nv_da_hui
+
+    available = {
+      always = no
+    }
+
+    prerequisite = {
+      focus = MRS_zhao_kai_mo_nv_da_hui
+    }
+
+    mutually_exclusive = {
+      focus = MRS_da_mo_nv_cheng_mei
+      focus = MRS_da_mo_nv_ai_li_si
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_auto_complete_tt
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 稳定航向
+  focus = {
+    id = MRS_wen_ding_hang_xiang
+    icon = MRS_focus_stabilize_the_course
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_da_mo_nv_mo_li_sha
+
+    prerequisite = {
+      focus = MRS_da_mo_nv_mo_li_sha
+    }
+
+    completion_reward = {
+      add_war_support = -0.05
+      add_stability = 0.1
+      add_political_power = 30
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 争取成美支持
+  focus = {
+    id = MRS_zheng_qu_cheng_mei_zhi_chi
+    icon = MRS_focus_contact_narumi
+    cost = 3
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_wen_ding_hang_xiang
+
+    available = {
+      has_war = no
+      OR = {
+        MSD = {
+          OR = {
+            exists = no
+            is_puppet = yes
+          }
+        }
+        206 = {
+          NOT = {
+            is_owned_and_controlled_by = ROOT
+          }
+        }
+        has_country_flag = MRS_victory_in_kemonomichi_war_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_wen_ding_hang_xiang
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          # 兽道战争胜利
+          has_full_control_of_state = 206
+        }
+        country_event = {
+          id = mrs.106
+        }
+      }
+      else = {
+        if = {
+          limit = {
+            has_country_flag = MRS_alice_overly_compromise_flag
+          }
+          country_event = {
+            id = mrs.107
+          }
+        }
+        else = {
+          country_event = {
+            id = mrs.116
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 争取爱丽丝支持
+  focus = {
+    id = MRS_zheng_qu_ai_li_si_zhi_chi
+    icon = MRS_focus_contact_alice
+    cost = 3
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_wen_ding_hang_xiang
+
+    available = {
+      has_war = no
+      OR = {
+        MSD = {
+          OR = {
+            exists = no
+            is_puppet = yes
+          }
+        }
+        206 = {
+          NOT = {
+            is_owned_and_controlled_by = ROOT
+          }
+        }
+        has_country_flag = MRS_victory_in_kemonomichi_war_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_wen_ding_hang_xiang
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          # 兽道战争胜利
+          has_full_control_of_state = 206
+        }
+        country_event = {
+          id = mrs.104
+        }
+      }
+      else = {
+        if = {
+          limit = {
+            has_country_flag = NAR_narumi_overly_compromise_flag
+          }
+          country_event = {
+            id = mrs.105
+          }
+        }
+        else = {
+          country_event = {
+            id = mrs.117
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 调和魔法使矛盾
+  focus = {
+    id = MRS_tiao_he_mo_fa_shi_mao_dun
+    icon = GFX_goal_generic_improve_relations
+    cost = 7
+    x = 0
+    y = 2
+
+    relative_position_id = MRS_wen_ding_hang_xiang
+
+    prerequisite = {
+      focus = MRS_zheng_qu_cheng_mei_zhi_chi
+    }
+    
+    prerequisite = {
+      focus = MRS_zheng_qu_ai_li_si_zhi_chi
+    }
+
+    completion_reward = {
+      remove_ideas = mrs_fen_lie_de_mo_fa_shi_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 压制叛乱分子
+  focus = {
+    id = MRS_ya_zhi_pan_luan_fen_zi
+    icon = GFX_focus_eng_move_to_secure_the_dominions
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_tiao_he_mo_fa_shi_mao_dun
+
+    prerequisite = {
+      focus = MRS_tiao_he_mo_fa_shi_mao_dun
+    }
+
+    completion_reward = {
+      add_political_power = 60
+      custom_effect_tooltip = MRS_civil_war_warning_tt
+      hidden_effect = {
+        if = {
+          limit = {
+            OR = {
+              has_country_flag = NAR_narumi_refuse_flag
+              has_country_flag = MRS_alice_refuse_flag
+            }
+          }
+          if = {
+            limit  = {
+              has_country_flag = MRS_alice_refuse_flag
+            }
+            country_event = {
+              id = mrs.102
+              days = 1
+            }
+          }
+          if = {
+            limit  = {
+              has_country_flag = NAR_narumi_refuse_flag
+            }
+            country_event = {
+              id = mrs.103
+              days = 3
+            }
+          }
+          news_event = {
+            id = mrs.111
+            days = 9
+          }
+        }
+        else = {
+          country_event = {
+            id = mrs.108
+            days = 7
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 改良线 reformists
+  # 大魔女爱丽丝
+  focus = {
+    id = MRS_da_mo_nv_ai_li_si
+    icon = MRS_focus_archmage_alice
+    cost = 1
+    x = 4
+    y = 1
+
+    relative_position_id = MRS_zhao_kai_mo_nv_da_hui
+
+    available = {
+      always = no
+    }
+
+    prerequisite = {
+      focus = MRS_zhao_kai_mo_nv_da_hui
+    }
+
+    mutually_exclusive = {
+      focus = MRS_da_mo_nv_cheng_mei
+      focus = MRS_da_mo_nv_mo_li_sha
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_auto_complete_tt
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 宣扬和平共处
+  focus = {
+    id = MRS_xuan_yang_he_ping_gong_chu
+    icon = GFX_focus_peace_propaganda
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_da_mo_nv_ai_li_si
+
+    prerequisite = {
+      focus = MRS_da_mo_nv_ai_li_si
+    }
+
+    completion_reward = {
+      remove_ideas = mrs_fen_lie_de_mo_fa_shi_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 尝试接触成美
+  focus = {
+    id = MRS_chang_shi_jie_chu_cheng_mei
+    icon = MRS_focus_contact_narumi
+    cost = 3
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_xuan_yang_he_ping_gong_chu
+
+    available = {
+      has_war = no
+      OR = {
+        MSD = {
+          OR = {
+            exists = no
+            is_puppet = yes
+          }
+        }
+        206 = {
+          NOT = {
+            is_owned_and_controlled_by = ROOT
+          }
+        }
+        has_country_flag = MRS_victory_in_kemonomichi_war_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_xuan_yang_he_ping_gong_chu
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          # 兽道战争胜利
+          has_full_control_of_state = 206
+        }
+        country_event = {
+          id = mrs.106
+        }
+      }
+      else = {
+        country_event = {
+          id = mrs.107
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 保护自治区
+  focus = {
+    id = MRS_bao_hu_zi_zhi_qu
+    icon = GFX_focus_generic_self_management
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_chang_shi_jie_chu_cheng_mei
+
+    prerequisite = {
+      focus = MRS_chang_shi_jie_chu_cheng_mei
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+      add_political_power = 60
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 取缔激进思想
+  focus = {
+    id = MRS_qu_di_ji_jin_si_xiang
+    icon = GFX_goal_generic_political_pressure
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_bao_hu_zi_zhi_qu
+
+    prerequisite = {
+      focus = MRS_bao_hu_zi_zhi_qu
+    }
+
+    completion_reward = {
+      add_political_power = 100
+      custom_effect_tooltip = MRS_civil_war_warning_tt
+      hidden_effect = {
+        if = {
+          limit = {
+            has_country_flag = NAR_narumi_refuse_flag
+          }
+          country_event = {
+            id = mrs.103
+            days = 1
+          }
+          news_event = {
+            id = mrs.111
+            days = 7
+          }
+        }
+        else = {
+          country_event = {
+            id = mrs.108
+            days = 7
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 内战后 after civil war
+  # 尘埃落定
+  focus = {
+    id = MRS_chen_ai_luo_ding
+    icon = GFX_focus_SWE_refuge_from_war
+    cost = 7
+    x = 0
+    y = 6
+
+    relative_position_id = MRS_zhao_kai_mo_nv_da_hui
+
+    available = {
+      OR = {
+        has_global_flag = MRS_civil_war_end_flag
+        has_global_flag = MRS_civil_war_avoided_flag
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_xuan_yang_zhong_zu_ping_deng
+      focus = MRS_ya_zhi_pan_luan_fen_zi
+      focus = MRS_qu_di_ji_jin_si_xiang
+    }
+
+    completion_reward = {
+      add_political_power = 100
+      add_stability = 0.05
+      add_ideas = Town
+      if = {
+        limit = {
+          has_idea = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+        }
+        remove_ideas = mrs_hun_luan_de_zhi_hui_xi_tong_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 分化反对派
+  focus = {
+    id = MRS_fen_hua_fan_dui_pai
+    icon = GFX_focus_political_division
+    cost = 7
+    x = -1
+    y = 1
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_chen_ai_luo_ding
+    }
+
+    bypass = {
+      NOT = {
+        has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+        has_idea = mrs_yu_ai_li_si_tuo_xie_idea
+        has_idea = mrs_yu_cheng_mei_tuo_xie_idea
+      }
+    }
+
+    completion_reward = {
+      if = {
+        limit = {
+          has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+        }
+        swap_ideas = {
+          remove_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+          add_idea = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+        }
+      }
+      if = {
+        limit = {
+          has_idea = mrs_yu_ai_li_si_tuo_xie_idea
+        }
+        modify_timed_idea = {
+          idea = mrs_yu_ai_li_si_tuo_xie_idea
+          days = -90
+        }
+      }
+      if = {
+        limit = {
+          has_idea = mrs_yu_cheng_mei_tuo_xie_idea
+        }
+        modify_timed_idea = {
+          idea = mrs_yu_cheng_mei_tuo_xie_idea
+          days = -90
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重塑集体认同
+  focus = {
+    id = MRS_chong_su_ji_ti_ren_tong
+    icon = MRS_focus_rebuild_national_identity
+    cost = 7
+    x = 1
+    y = 1
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_chen_ai_luo_ding
+    }
+
+    completion_reward = {
+      remove_ideas = mrs_bushimofashi
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 恢复生产
+  focus = {
+    id = MRS_hui_fu_sheng_chan
+    icon = GFX_goal_generic_production
+    cost = 12
+    x = -2
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      add_offsite_building = {
+        type = industrial_complex
+        level = 1
+      }
+      add_offsite_building = {
+        type = arms_factory
+        level = 1
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加强边界防御
+  focus = {
+    id = MRS_jia_qiang_bian_jie_fang_yu
+    icon = GFX_goal_generic_construct_military
+    cost = 18
+    x = 0
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    available = {
+      has_war = no
+    }
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = MRS_border_bunker_tt
+      hidden_effect = {
+        every_core_state = {
+          add_building_construction = {
+            type = bunker
+            level = 2
+            instant_build = yes
+            province = {
+                all_provinces = yes
+                limit_to_border = yes
+            }
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 开放教育资源
+  focus = {
+    id = MRS_kai_fang_jiao_yu_zi_yuan
+    icon = GFX_focus_open_up_education_resourses
+    cost = 7
+    x = 2
+    y = 2
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_fen_hua_fan_dui_pai
+    }
+
+    prerequisite = {
+      focus = MRS_chong_su_ji_ti_ren_tong
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 2
+        uses = 1
+        category = math
+      }
+      add_stability = 0.05
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 魔法之森的黎明
+  focus = {
+    id = MRS_mo_fa_zhi_sen_de_li_ming
+    icon = MRS_focus_dawn_of_magical_forest
+    cost = 7
+    x = 0
+    y = 3
+
+    relative_position_id = MRS_chen_ai_luo_ding
+
+    prerequisite = {
+      focus = MRS_hui_fu_sheng_chan
+    }
+
+    prerequisite = {
+      focus = MRS_kai_fang_jiao_yu_zi_yuan
+    }
+
+    completion_reward = {
+      add_ideas = mrs_mo_fa_zhi_sen_de_li_ming_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军事科技准备
+  focus = {
+    id = MRS_jun_shi_ke_ji_zhun_bei
+    icon = GFX_focus_focus_fra_maquis
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_li_ming
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_li_ming
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        ahead_reduction = 1.0
+        bonus = 1
+        uses = 2
+        category = military
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 战争准备
+  focus = {
+    id = MRS_zhan_zheng_zhun_bei
+    icon = GFX_goal_generic_military_sphere
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_li_ming
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_li_ming
+    }
+
+    completion_reward = {
+      add_war_support = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 新式军事思想
+  focus = {
+    id = MRS_xin_shi_jun_shi_si_xiang
+    icon = GFX_goal_generic_army_doctrines
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = MRS_mo_fa_zhi_sen_de_li_ming
+
+    prerequisite = {
+      focus = MRS_mo_fa_zhi_sen_de_li_ming
+    }
+
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 加入革命运动
+  focus = {
+    id = MRS_jia_ru_ge_ming_yun_dong
+    icon = GFX_focus_gekokujyo_movement
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = MRS_zhan_zheng_zhun_bei
+
+    allow_branch = {
+      has_government = fandong
+    }
+
+    available = {
+      NOT = {
+        GEK = {
+          OR = {
+            exists = no
+            is_puppet = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_zhun_bei
+    }
+
+    mutually_exclusive = {
+      focus = MRS_du_shan_qi_shen
+    }
+
+    completion_reward = {
+      GEK = {
+        country_event = mrs.126
+      }
+    }
+
+    ai_will_do = {
+      factor = 1000
+    }
+  }
+
+  # 加入绯红体系
+  focus = {
+    id = MRS_jia_ru_fei_hong_ti_xi
+    icon = GFX_focus_befriend_SCA
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = MRS_zhan_zheng_zhun_bei
+
+    allow_branch = {
+      has_government = guli
+    }
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_zhun_bei
+    }
+
+    available = {
+      is_subject = no
+      NOT = {
+        SCA = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            has_government = neworder
+          }
+        }
+      }
+    }
+
+    mutually_exclusive = {
+      focus = MRS_du_shan_qi_shen
+    }
+
+    completion_reward = {
+      SCA = {
+        country_event = mrs.130
+      }
+    }
+
+    ai_will_do = {
+      factor = 1000
+    }
+  }
+
+  # 与付丧神合作
+  focus = {
+    id = MRS_yu_fu_sang_shen_he_zuo
+    icon = GFX_focus_befriend_TKM_NOA
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = MRS_zhan_zheng_zhun_bei
+
+    allow_branch = {
+      has_government = qinwai
+    }
+
+    available = {
+      is_subject = no
+      TKM = {
+        AND = {
+          exists = yes
+          is_puppet = no
+          has_government = qinwai
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_zhun_bei
+    }
+
+    mutually_exclusive = {
+      focus = MRS_du_shan_qi_shen
+    }
+
+    completion_reward = {
+      TKM = {
+        country_event = mrs.137
+      }
+    }
+
+    ai_will_do = {
+      factor = 1000
+    }
+  }
+
+  # 独善其身
+  focus = {
+    id = MRS_du_shan_qi_shen
+    icon = GFX_focus_ARG_defense_and_democracy
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = MRS_zhan_zheng_zhun_bei
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_zhun_bei
+    }
+
+    mutually_exclusive = {
+      focus = MRS_jia_ru_ge_ming_yun_dong
+      focus = MRS_jia_ru_fei_hong_ti_xi
+      focus = MRS_yu_fu_sang_shen_he_zuo
+    }
+
+    available = {
+      is_subject = no
+    }
+
+    completion_reward = {
+      add_stability = 0.1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 博丽-魔法使联邦
+  focus = {
+    id = MRS_bo_li_mo_fa_shi_lian_bang
+    icon = MRS_focus_HKR_MRS_federation
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = MRS_zhan_zheng_zhun_bei
+
+    allow_branch = {
+      has_country_leader = {
+        character = MRS_mrs
+        ruling_only = yes
+      }
+    }
+
+    prerequisite = {
+      focus = MRS_zhan_zheng_zhun_bei
+    }
+
+    available = {
+      is_subject = no
+      NOT = {
+        HKR = {
+          OR = {
+            exists = no
+            is_puppet = yes
+            NOT = {
+              has_government = qinwai
+              has_government = guli
+            }
+          }
+        }
+      }
+    }
+
+    will_lead_to_war_with = HKR
+
+    completion_reward = {
+      HKR = {
+        country_event = mrs.132
+      }
+    }
+
+    ai_will_do = {
+      factor = -1
+    }
+  }
+
+  # 消灭叛乱威胁
+  focus = {
+		id = MRS_xiao_mie_pan_luan_wei_xie
+		icon = GFX_focus_attack_SEJ
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = MRS_du_shan_qi_shen
+
+    allow_branch = {
+      has_government = guli
+    }
+
+		prerequisite = {
+			focus = MRS_du_shan_qi_shen
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				SEJ = {
+					OR = {
+				  		exists = no
+				  		is_subject = yes
+					}
+			  }
+			  has_war_with = SEJ
+				is_ally_with = SEJ
+			}
+		}
+
+		will_lead_to_war_with = SEJ
+
+		completion_reward = {
+			create_wargoal = {
+				target = SEJ
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+  # 冲击帝国
+  focus = {
+		id = MRS_chong_ji_di_guo
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = MRS_du_shan_qi_shen
+
+    allow_branch = {
+      OR = {
+        has_government = fandong
+        has_government = qinwai
+      }
+    }
+
+		prerequisite = {
+			focus = MRS_du_shan_qi_shen
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				SCA = {
+					OR = {
+				  		exists = no
+				  		is_subject = yes
+					}
+			  }
+			  has_war_with = SCA
+				is_ally_with = SCA
+			}
+		}
+
+		will_lead_to_war_with = SCA
+
+		completion_reward = {
+			create_wargoal = {
+				target = SCA
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+  # 向兽道妖怪复仇
+  focus = {
+		id = MRS_xiang_shou_dao_yao_guai_fu_chou
+		icon = GFX_focus_attack_MSD
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = MRS_du_shan_qi_shen
+
+		prerequisite = {
+			focus = MRS_du_shan_qi_shen
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				MSD = {
+					OR = {
+				  		exists = no
+				  		is_subject = yes
+					}
+			  	}
+			  	has_war_with = MSD
+				is_ally_with = MSD
+			}
+		}
+
+		will_lead_to_war_with = MSD
+
+		completion_reward = {
+			create_wargoal = {
+				target = MSD
+				type = puppet_wargoal_focus
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

@@ -1,0 +1,1004 @@
+on_actions = {
+	# During justifying wargoals
+	# triggered daily, so make sure there is a sink somewhere not firing events
+	# country, FROM = target nation
+	on_justifying_wargoal_pulse = {
+		random_events = {
+			100 = gen.15
+		}
+	}
+
+	on_nuke_drop = {
+		effect = {
+			if = {
+				limit = {
+					has_tech = jingjiesiliezhadan
+				}
+				FROM = {
+					remove_building = {
+					    type = infrastructure
+					    level = 50
+					}
+					remove_building = {
+					    type = arms_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = industrial_complex
+					    level = 50
+					}
+					remove_building = {
+					    type = air_base
+					    level = 50
+					}
+					remove_building = {
+					    type = anti_air_building
+					    level = 50
+					}
+					remove_building = {
+					    type = powder_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = metal_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = gas_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = rock_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = energy_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = fuel_silo
+					    level = 50
+					}
+					remove_building = {
+					    type = radar_station
+					    level = 50
+					}
+					remove_building = {
+					    type = nuclear_reactor
+					    level = 50
+					}
+					every_neighbor_state = {
+						damage_building = {
+						    type = infrastructure
+						    damage = 50
+						}
+						damage_building = {
+						    type = arms_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = industrial_complex
+						    damage = 50
+						}
+						damage_building = {
+						    type = air_base
+						    damage = 50
+						}
+						damage_building = {
+						    type = anti_air_building
+						    damage = 50
+						}
+						damage_building = {
+						    type = powder_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = metal_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = gas_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = rock_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = energy_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = fuel_silo
+						    damage = 50
+						}
+						damage_building = {
+						    type = radar_station
+						    damage = 50
+						}
+						damage_building = {
+						    type = nuclear_reactor
+						    damage = 50
+						}
+					}
+					controller = {
+						if = {
+							limit = {
+								not = { tag = ROOT}
+							}
+							EXHC_exhaustion_add25 = yes
+							EXHC_exhaustion_add25 = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_tech = lingliguozaizhadan
+				}
+				FROM = {
+					if = {
+						limit = {
+							not = {
+								has_dynamic_modifier = {
+									modifier = lingliguozaizhadan_bombed
+								}
+							}
+						}
+						add_dynamic_modifier = {
+							modifier = lingliguozaizhadan_bombed
+						}
+					}
+					
+					controller = {
+						if = {
+							limit = {
+								not = { tag = ROOT}
+							}
+							##############强力副作用
+							if = {
+								limit = {
+									has_idea = th_nuke_idea1
+								}
+								modify_timed_idea = {
+								    idea = th_nuke_idea1
+								    days = 180
+								}
+								else = {
+									add_timed_idea = {idea = th_nuke_idea1 days = 180}
+								}
+								EXHC_exhaustion_add25 = yes
+								EXHC_exhaustion_add25 = yes
+							}
+							############副作用
+							every_country = {
+								limit = {
+									or = {
+										is_in_faction_with = PREV
+										is_subject_of = PREV
+									}
+								}
+								if = {
+									limit = {
+										has_idea = th_nuke_idea2
+									}
+									modify_timed_idea = {
+									    idea = th_nuke_idea2
+									    days = 180
+									}
+									else = {
+										add_timed_idea = {idea = th_nuke_idea2 days = 180}
+									}
+								}
+								EXHC_exhaustion_add25 = yes
+							}
+							OVERLORD = {
+								if = {
+									limit = {
+										is_in_faction = no
+									}
+									if = {
+										limit = {
+											has_idea = th_nuke_idea2
+										}
+										modify_timed_idea = {
+											idea = th_nuke_idea2
+											days = 180
+										}
+										else = {
+											add_timed_idea = {idea = th_nuke_idea2 days = 180}
+										}
+									}
+									EXHC_exhaustion_add25 = yes
+								}
+							}
+							################
+						}
+					}
+				}
+			}
+			FROM = {
+				#type 1
+				set_temp_variable = { reduce_manpower1 = -50000}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 0}
+					}
+					divide_temp_variable = { reduce_manpower1 = 14}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 1}
+					}
+					divide_temp_variable = { reduce_manpower1 = 20}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 2}
+					}
+					divide_temp_variable = { reduce_manpower1 = 25}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 3}
+					}
+					divide_temp_variable = { reduce_manpower1 = 16}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 4}
+					}
+					divide_temp_variable = { reduce_manpower1 = 4}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 5}
+					}
+					divide_temp_variable = { reduce_manpower1 = 8}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 6}
+					}
+					divide_temp_variable = { reduce_manpower1 = 8}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 7}
+					}
+					divide_temp_variable = { reduce_manpower1 = 0.2}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 8}
+					}
+					divide_temp_variable = { reduce_manpower1 = 12.5}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 9}
+					}
+					divide_temp_variable = { reduce_manpower1 = 25}
+				}
+				#type2
+				set_temp_variable = { reduce_manpower2 = state_population_k}
+				if = {
+					limit = {
+						check_variable = { reduce_manpower2 > 3000}
+					}
+					set_temp_variable = { reduce_manpower2 = -1500}
+					else = {
+						divide_temp_variable = { reduce_manpower2 = -3 }
+					}
+				}
+				multiply_temp_variable = { reduce_manpower2 = 1000 }
+				#final
+				if = {
+					limit = {
+						check_variable = { reduce_manpower2 < reduce_manpower1}
+					}
+					add_manpower = reduce_manpower2
+					else = {
+						add_manpower = reduce_manpower1
+					}
+				}
+			}
+		}
+	}
+
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			subject_situation_change_list = yes
+			EXHC_exhaustion_add10 = yes
+			
+			hidden_effect = {
+				declare_war_events = yes
+			}
+
+			###与附庸叛乱的机制一样
+			SS_subject_independence_war = yes
+
+			threat_generator = yes
+			
+			# every_country = {
+			# 	limit = {
+			# 		or = {
+			# 			has_guaranteed = FROM
+			# 			and = {
+			# 				any_country = {
+			# 					FROM = {
+			# 						is_subject_of = PREV
+			# 					}
+			# 					PREV = { has_guaranteed = PREV }
+			# 				}
+			# 			}
+			# 		}
+					
+			# 		not = { tag = ROOT }
+			# 	}
+			# 	country_event = { id = gen.14 days = 1 }
+			# }
+			#hkr
+			if = {
+				limit = {
+					tag = HKR
+					FROM = {
+						tag = MSD
+					}
+					MSD = {
+						has_war_with = ALI
+					}
+				}
+				set_country_flag = HKR_beici
+			}
+			if = {
+				limit = {
+					or = {
+						has_idea = hkr_bayunzi
+						has_idea = hkr_bayunzi2
+						has_idea = hkr_bayunzi3
+					}
+					YKR = { has_war = no}
+				}
+				YKR = { country_event = hkr.62 }
+			}
+			#hum denfence
+			if = {
+				limit = {
+					FROM = {
+						or = {
+							tag = HUM
+							is_subject_of = HUM
+						}
+						has_idea = HUM_youkai_influence 
+					}
+					HUM = {
+						is_in_faction = no
+					}
+				}
+				TKM = {
+					if = {
+						limit = {
+							has_guaranteed = HUM
+							is_in_faction = no
+							not = {
+								has_war_with = HUM
+							}
+						}
+						country_event = { days = 2 id = hud.1 }
+					}
+					
+				}
+				random_country = {
+					limit = {
+						not = { tag = TKM }
+						or = { 
+							TKM = { has_war_with = HUM }
+							not = { TKM = { has_guaranteed = HUM } }
+						}
+						has_guaranteed = HUM
+						is_in_faction = no
+						not = {
+							has_war_with = HUM
+							tag = ROOT
+						}
+					}
+					country_event = { days = 2 id = hud.1 }
+				}
+			}
+			##易者加入战争
+			if = {
+				limit = {
+					tag = YYK
+					has_country_flag = YYK_lianhediyulouling
+					FROM = {
+						tag = AOO
+					}
+					HGH = {
+						is_subject = no
+					}
+				}
+				HGH = {
+					declare_war_on = {
+						type = annex_everything
+						target = AOO
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YYK
+					has_country_flag = YYK_lianhediyulouling
+					FROM = {
+						tag = AKO
+					}
+					HGH = {
+						is_subject = no
+					}
+				}
+				HGH = {
+					declare_war_on = {
+						type = annex_everything
+						target = AKO
+					}
+				}
+			}
+		}
+	}
+	
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			news_event = { id = country_capitulated.0 days = 0 }
+		}
+	}
+
+	on_government_change = {
+		effect = {
+	        country_event = glo.3000	
+		}
+	}
+
+	#Not run on a specific country.
+on_startup = {
+	effect = {
+		##########defines#############
+		random_country = {
+			ST_race_defines = yes
+			SS_defines = yes
+			power_defines = yes
+			outlook_defines = yes
+			exhuastion_defines = yes
+			FAPO_defines = yes
+			GO_defines = yes
+			HMIF_defines = yes
+			set_variable = { global.PO_gensokyo_p = 25}
+			teshudibiao = yes
+	        power_global_value_generator = yes
+	        LS_defines = yes
+	        CO_defines = yes
+	        CONV_defines = yes
+	        region_defines = yes
+	        FT_defines = yes
+			POconvert_defines = yes
+			set_portal_movement_modifiers = yes
+	        every_state = {
+	       		state_value_calculator = yes
+		    }
+		}	
+
+		every_country = { 
+			country_event = glo.2000 #初始化设定
+			leader_nationality_set = yes
+			get_original_general_skills = yes
+			every_owned_state = {
+				limit = {
+					not = { is_core_of = PREV }
+					state_population_k > 0.05
+				}
+				add_compliance = -40
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = Gensokyo
+			}
+			add_to_array = {
+				array = global.Gensokyo_state
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = Hell
+			}
+			add_to_array = {
+				array = global.Hell_state
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = Underground
+			}
+			add_to_array = {
+				array = global.Underground_state
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = Celestial
+			}
+			add_to_array = {
+				array = global.Celestial_state
+			}
+		}
+		every_state = {
+			limit = {
+				is_on_continent = Netherworld
+			}
+			add_to_array = {
+				array = global.Netherworld_state
+			}
+		}
+		##########defines#############
+
+
+		####country_start_up
+		random_country = {
+			startup_opinion = yes
+			startup_outlook = yes
+		}
+
+		every_country = {
+		    limit = {
+		        capital_scope = {
+		            not = { is_on_continent = Gensokyo }
+		        }
+		    }
+		    set_variable = { OL_view_value = 90}
+		}
+
+		
+		####country_start_up
+		every_country = {
+			country_event = glo.3000 #refresh
+			# country_event = glo.1 #welcome
+		}
+		#scenario choose
+		random_country = {
+			if = {
+		    	limit = {
+		     		has_start_date >145.12.30 
+		    	}	
+		    	set_global_flag = main_scenario
+
+		    	NMS = {	set_variable = { EXHC_current_exhaustion = 5}	}
+		    	TKM = {	set_variable = { EXHC_current_exhaustion = 10}	}
+
+		    	ZYD = {	set_variable = { EXHC_current_exhaustion = 15}	}
+
+		    	333 = {
+		    		add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+						    all_provinces = yes
+						    limit_to_border = yes
+						}
+					}
+		    	}
+		    	112 = {
+		    		add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+						    all_provinces = yes
+						    limit_to_border = yes
+						}
+					}
+		    	}
+		    	103 = {
+		    		add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+						    all_provinces = yes
+						    limit_to_border = yes
+						}
+					}
+		    	}
+		    	97 = {
+		    		add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 2691
+					}
+		    	}
+		    	97 = {
+		    		add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 2314
+					}
+		    	}
+
+				else = {
+					every_state = {
+			            add_resistance = 45
+			            add_compliance = -100
+			        }
+			    }  
+			}
+		}
+		
+		#daily
+		every_country = {
+			random_country = {
+			    every_state = {
+			       	state_value_calculator = yes
+			    }
+			    power_global_value_generator = yes
+		    }
+
+			if = {
+		    	limit = {
+		    		has_idea = Fairy
+		    	}
+		    	FAPO_calculator = yes
+		    }
+		    if = {
+		    	limit = {
+		    		not = { has_idea = Human }
+		    	}
+		    	HMIF_daily_changer = yes
+		    }
+
+			SS_power_calculator = yes
+
+		    region_daily_check = yes
+
+		    # AC_daily_check = yes
+
+		    country_value_calculator_and_manpower_gainer = yes
+
+		    outlook_daily_change = yes
+		    
+		    LS_daily = yes
+
+		    exhuastion_daily_change = yes
+		    
+		    power_daily_changer = yes
+
+		    CO_coring_daily = yes
+
+			state_race_manpower = yes
+			
+			ST_race_penalty_daily = yes
+
+			POPU_pp_gain = yes
+		}
+
+		#forsmallscenario
+		every_country = {
+		    limit = {
+		        not = {
+		        	has_global_flag = main_scenario
+		        }
+		    }
+		    add_ideas = allsmallscenario
+		    set_research_slots = 1
+		}
+		
+		#scenario choose
+
+		########NMS 人类修正########
+		if = {
+	        limit = {
+	            NMS = { is_ai = no}
+	            has_global_flag = main_scenario
+	        }
+	        HUM = {
+	          set_major = yes
+	        }
+	        EET = {
+	          set_major = yes
+	        }
+	        TKM = {
+	          set_major = yes
+	        }
+	        SRB = {
+	          set_major = yes
+	        }
+	    }
+
+	    ####ahievement on
+	    # random_country = {
+	    # 	achievement_setting = yes
+	    # }
+
+	    #english leader
+	    random_country = {
+	    	scenario_setting = yes
+	    }
+
+		#ai禁止切换科技树
+		every_country = {
+			limit = {
+				is_ai = yes
+			}
+			set_technology = {
+				tech_changed = 0 #
+			}
+		}
+	}
+}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = HUM
+					}
+					ROOT = {
+						tag = SRB
+						has_country_flag = SRB_quderenleilingdaoquan
+					}
+				}
+				FROM.FROM = {
+					add_compliance = 70
+				}
+			}
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+				state_race_manpower = yes
+				ST_race_penalty_daily = yes
+			}
+			SCC_captured_events = yes
+		}
+	}
+
+	#ROOT is subject FROM is previous overlord
+	on_subject_free = {
+		effect = {	
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+			}
+		}
+	}
+
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			ROOT = {
+				clr_country_flag = LS_start_lowing
+				clr_country_flag = LS_is_cooling_down
+				clr_country_flag = LS_cooldown_completed
+			}
+			FROM = {
+				ROOT = {
+					subject_level2 = yes
+					country_value_calculator_and_manpower_gainer = yes
+					subject_situation_change_list = yes
+					if = {
+						limit = {
+							not = { has_country_flag = initialled }
+						}
+						country_event = glo.2000
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_idea = Human
+					}
+					FROM = {
+						tag = SRB
+						has_country_flag = SRB_jiaodaorenleichengxian
+					}
+				}
+				add_ideas = Magician
+		        hidden_effect = {
+		          set_technology = {
+		            human_tech = 0
+		          }
+		          tech_initialize = yes
+		          country_event = glo.3000
+		        }
+				every_owned_state = {
+					limit = {
+						check_variable = { ST_present_race = 4}
+					}
+					set_variable = { ST_present_race = 5 }
+				}
+			}
+		}
+	}
+
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+			ROOT = {
+				if = {
+					limit = {
+						or = {
+							is_ai = no
+							has_idea = none_theory
+						}
+					}
+					set_technology = {
+						tech_changed = 1 #
+					}
+				}
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+				if = {
+					limit = {
+						not = { has_country_flag = initialled }
+					}
+					country_event = glo.2000
+				}
+			}
+			army_character_release_146 = yes
+		}
+	}
+
+	#ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			ROOT = {
+				if = {
+					limit = {
+						or = {
+							is_ai = no
+							has_idea = none_theory
+						}
+					}
+					set_technology = {
+						tech_changed = 1 #
+					}
+				}
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+				if = {
+					limit = {
+						not = { has_country_flag = initialled }
+					}
+					country_event = glo.2000
+				}
+			}	
+			army_character_release_146 = yes
+		}
+	}
+	
+	# From is owner country
+	on_army_leader_daily = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = { random < 0.02 }
+					NOT = { has_trait = sick }
+					set_temp_variable = { temp = sum_unit_terrain_modifier@sickness_chance }
+					divide_temp_variable = { temp = num_units }
+					check_variable = { temp > 0.75 }
+					NOT = { has_unit_leader_flag = recently_sick }
+				}
+				add_timed_unit_leader_trait = {
+					trait = sick
+					days = 30
+				}
+				unit_leader_event = { id = generic.17 }
+			}
+		}
+	}
+
+	on_army_leader_won_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.001 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	
+	# From is owner country
+	on_army_leader_lost_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.001 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	
+	
+	on_army_leader_promoted = {
+		effect = {
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}	
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+			}
+			FROM = {
+				country_value_calculator_and_manpower_gainer = yes
+				army_character_peace_return = yes
+			}
+		}
+	}
+
+	#Root is exile
+	#From is new host
+	#FromFrom is old host
+	on_host_changed_from_capitulation = {
+		effect = {
+			#Transfer exile leaders to new host
+			From.From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root.From
+				}
+			}
+		}
+	}
+
+	#Root is exile
+	#From is old host
+	on_exile_government_reinstated = {
+		effect = {
+			From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root
+				}
+			}
+			Root = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					remove_unit_leader_trait = exiled_leader
+					remove_exile_tag = yes
+				}
+			}
+		}
+	}
+
+}

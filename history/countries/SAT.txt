@@ -1,0 +1,105 @@
+﻿capital = 298
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        gun1 = 1
+        
+        linglicunchu = 1
+        spell_card2 = 1
+        linglidanyao = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        lingliganying147 = 1
+        lingganleida142 = 1
+        
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        ziyuankaifa130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+
+        #种族
+        SAT_Kasha = 1
+    }
+    
+}
+146.1.1={
+    oob = "SAT_146"
+
+    
+    add_ideas = {
+        manpowerlv1
+        Beast
+        Village
+        close3
+        dove2
+        free_magic
+
+        SAT_Komeiji_Isolationism
+        SAT_keep_on_guard_idea_0
+        SAT_beast_army
+        SAT_nuclear_fusion_normal
+    }
+    
+    UTH = {
+        subject_level2 = yes
+        set_cosmetic_tag = UTH_SAT
+    }
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        guli = 60
+        neworder = 0
+        oldorder = 19
+        fandong = 1
+    }
+    set_cosmetic_tag = SAT_temp
+    
+}
+
+set_variable = {
+	var = ROOT.SAT_YUG_prestige
+	value = 3
+}
+
+set_variable = {
+	var = ROOT.SAT_PRS_prestige
+	value = 2
+}
+
+set_variable = {
+	var = ROOT.SAT_UNL_prestige
+	value = 1
+}
+
+set_variable = {
+	var = ROOT.SAT_YMM_prestige
+	value = 2
+}

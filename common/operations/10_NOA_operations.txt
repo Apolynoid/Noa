@@ -1,0 +1,82 @@
+### operations are sorted by order of 
+### 1) no. of required operatives
+### 2) required network strength
+### eg. 1/70 comes before 2/40
+
+TKM_operation_boost_radicalists = { ### 8 2/40
+	icon = GFX_operations_boost_resistance
+	map_icon = GFX_operations_boost_resistance_map
+	name = TKM_operation_boost_radicalists
+	desc = TKM_operation_boost_radicalists_desc
+	priority = 20
+	
+	cost_multiplier = 0.25
+	
+	days = 30
+	network_strength = 15
+	operatives = 1
+
+	visible = {
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+
+		FROM = {
+			has_idea = TKM_fan_yao_guai_ji_jin_pai_idea
+		}
+	}
+
+	operation_target = {
+		targets = { SBK }
+	}
+
+	equipment = {
+		gun_a = 100
+	}
+
+	risk_chance = 0.05
+	experience = 1.0
+	outcome_extra_chance = 0.1
+
+	outcome_execute = {
+		FROM = {
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.05
+			}
+		}
+	}
+	outcome_extra_execute = { # SCOPE_OPERATION
+		FROM = {
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.1
+			}
+		}
+	}
+
+	outcome_potential = {
+		FROM = {
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.05
+			}
+		}
+	}
+
+	
+	target_weight = {
+		base = 100
+	}
+	
+	phases = { #infiltration
+		infiltration_border = { base = 100 }
+	}
+	phases = { #resistance support
+		NOA_distribute_weapons = { base = 100 }
+	}
+	phases = { #exfiltration
+		exfiltration_border = { base = 100 }
+	}
+}

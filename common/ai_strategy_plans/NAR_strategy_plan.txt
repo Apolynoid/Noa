@@ -1,0 +1,153 @@
+NAR_focus_before_civil_war_ends = {
+	name = "NAR focus before civil war ends"
+	desc = "rush for military and politics"
+
+	allowed = {
+		tag = NAR
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		OR = {
+			has_global_flag = MRS_civil_war_end_flag
+			has_global_flag = MRS_civil_war_avoided_flag
+		}
+	}
+
+	ai_national_focuses = {
+		# politics first
+		NAR_shu_yu_ruo_zhe_de_jun_dui
+		NAR_tong_yi_zhi_hui_xi_tong
+		NAR_lian_he_ti_sheng_chan_neng_li
+		NAR_qing_qiu_wai_bu_yuan_zhu
+		NAR_jie_chu_ji_jin_tong_qing_zhe
+		NAR_zhun_bei_zui_hou_yi_ji
+		# military then
+		MRS_jun_shi_dong_yuan
+		MRS_xian_jin_mo_fa_shi_wu_zhuang
+		MRS_mo_fa_zhi_sen_di_tu_ce_hui
+		MRS_jun_bei_shen_cha
+		MRS_qiang_hua_jun_dui_jian_she
+		MRS_mo_li_sha_de_fang_an
+		MRS_ren_ou_jun_tuan
+		MRS_gai_jin_jun_yong_ren_ou
+		MRS_ben_tu_fang_yu
+		MRS_shi_ying_di_xing
+		MRS_pao_bing_ge_xin
+		MRS_liang_chan_ba_gua_lu
+		MRS_fang_yu_gong_cheng_jian_she
+		MRS_gai_shan_hou_qin_ti_xi
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+MRS_focus_after_civil_war_ends = {
+	name = "MRS focus after civil war ends"
+	desc = "politics and industrial"
+
+	allowed = {
+		tag = MRS
+	}
+	enable = {
+		OR = {
+			has_global_flag = MRS_civil_war_end_flag
+			has_global_flag = MRS_civil_war_avoided_flag
+		}
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# politics first
+		NAR_shu_yu_ruo_zhe_de_jun_dui
+		NAR_tong_yi_zhi_hui_xi_tong
+		NAR_lian_he_ti_sheng_chan_neng_li
+		NAR_qing_qiu_wai_bu_yuan_zhu
+		NAR_jie_chu_ji_jin_tong_qing_zhe
+		NAR_zhun_bei_zui_hou_yi_ji
+		# second-stage politics
+		NAR_yu_huo_chong_sheng
+		NAR_she_hui_hua_sheng_chan
+		NAR_zhan_hou_shen_pan
+		NAR_qiang_hua_lian_he_ti_yi_hui
+		NAR_sheng_er_ping_deng
+		# go and fetch some factories
+		MRS_jian_she_mo_fa_zhi_sen
+		MRS_gai_zao_da_zi_ran
+		MRS_yin_ru_mo_dao_ji_xie
+		MRS_xian_dai_hua_sheng_chan_fang_shi
+		MRS_quan_mian_gong_ye_hua
+		MRS_kuo_da_sheng_chan_xian
+		MRS_gong_ye_ji_shu_jin_bu
+		MRS_you_hua_sheng_chan_jie_gou
+		MRS_jian_zhu_ji_shu_ge_xin
+		# back to politics
+		NAR_chong_jian_min_bing_zu_zhi
+		NAR_mo_fa_zhi_sen_ke_xue_yuan
+		# fetch military factories
+		MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
+		MRS_jun_shi_gong_ye_jian_she
+		# military then
+		MRS_jun_shi_dong_yuan
+		MRS_xian_jin_mo_fa_shi_wu_zhuang
+		MRS_mo_fa_zhi_sen_di_tu_ce_hui
+		MRS_jun_bei_shen_cha
+		MRS_qiang_hua_jun_dui_jian_she
+		MRS_mo_li_sha_de_fang_an
+		MRS_ren_ou_jun_tuan
+		MRS_gai_jin_jun_yong_ren_ou
+		MRS_ben_tu_fang_yu
+		MRS_shi_ying_di_xing
+		# finally to factions
+		NAR_ge_ming_de_lian_he_ti
+		NAR_ge_ming_wai_jiao
+		NAR_ge_ming_xuan_chuan
+		NAR_wu_zhuang_qun_zhong
+		NAR_jia_ru_ge_ming_yun_dong
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}

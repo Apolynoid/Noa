@@ -1,0 +1,96 @@
+# 即将到来的内战
+YYK_ji_jiang_dao_lai_de_nei_zhan = {
+	icon = generic_crisis
+
+	priority = 96
+
+	allowed = {
+		original_tag = YYK
+	}
+
+	visible = {
+		OR = {
+			has_completed_focus = KNA_fan_dui_you_you_zi
+			has_completed_focus = YKO_zhi_chi_you_you_zi
+		}
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_begun_flag
+		}
+	}
+
+	visible_when_empty = yes
+}
+
+# 冥界内战
+YYK_ming_jie_nei_zhan = {
+	icon = border_conflicts
+
+	priority = 97
+
+	allowed = {
+		original_tag = YYK
+	}
+
+	visible = {
+		has_global_flag = YYK_netherworld_civil_war_begun_flag
+		NOT = {
+			has_global_flag = YYK_netherworld_civil_war_ended_flag
+		}
+	}
+
+	visible_when_empty = yes
+}
+
+# 清除反对者抵抗
+YYK_qing_chu_fan_dui_zhe_di_kang = {
+	icon = eng_move_to_secure_the_dominions
+
+	priority = 97
+
+	allowed = {
+		original_tag = YYK
+	}
+
+	visible = {
+		has_global_flag = YYK_netherworld_civil_war_ended_flag
+		has_dynamic_modifier = {
+			modifier = YYK_fan_dui_zhe_di_kang_idea
+		}
+	}
+
+	visible_when_empty = yes
+}
+
+# 地狱革命
+KNA_di_yu_ge_ming = {
+	icon = spr_the_seeds_of_revolution
+
+	priority = 98
+
+	allowed = {
+		original_tag = YYK
+	}
+
+	visible = {
+		has_country_flag = YYK_KNA_flag
+		is_subject = no
+		has_completed_focus = KNA_xiang_di_yu_shu_chu_ge_ming
+	}
+}
+
+# 地狱征服计划
+YKO_di_yu_zheng_fu_ji_hua = {
+	icon = hol_war_on_pacifism
+
+	priority = 98
+
+	allowed = {
+		original_tag = YYK
+	}
+
+	visible = {
+		has_country_flag = YYK_YKO_flag
+		is_subject = no
+		has_completed_focus = YKO_zheng_fu_di_yu
+	}
+}

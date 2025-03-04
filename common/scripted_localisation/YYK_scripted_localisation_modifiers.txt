@@ -1,0 +1,66 @@
+defined_text = { 
+	name = YYK_get_fervour
+	text = {
+		trigger = {
+			check_variable = {
+				KNA.KNA_fervour > 69
+			}
+		}
+		localization_key = YYK_high_fervour_tt
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = {
+					KNA.KNA_fervour < 70
+				}
+				check_variable = {
+					KNA.KNA_fervour > 39
+				}
+			}
+		}
+		localization_key = YYK_medium_fervour_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				KNA.KNA_fervour < 40
+			}
+		}
+		localization_key = YYK_low_fervour_tt
+	}
+	text = {
+		localization_key = YYK_unknown_fervour_tt
+	}
+}
+
+defined_text = { 
+	name = YYK_get_fervour_change
+	text = {
+		trigger = {
+			check_variable = {
+				KNA.KNA_fervour_change > 0
+			}
+		}
+		localization_key = YYK_positive_fervour_change_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				KNA.KNA_fervour_change < 0
+			}
+		}
+		localization_key = YYK_negative_fervour_change_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				KNA.KNA_fervour_change = 0
+			}
+		}
+		localization_key = YYK_zero_fervour_change_tt
+	}
+	text = {
+		localization_key = YYK_unknown_fervour_change_tt
+	}
+}

@@ -1,0 +1,90 @@
+﻿capital = 419
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        linglijiejie149 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        lingliganying147 = 1
+        jiami137 = 1
+        jiami147 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+        
+        #secret
+        kongjianxue = 1
+        jingjiexue = 1
+        shengmingxue = 1
+        jingshenxue = 1
+        kongjianmonijishu = 1
+    }
+    
+}
+146.1.1={
+    oob = "KAS_146"
+    set_country_flag = bunengsuiyiqiehuanzhengti
+    set_country_flag = owns_mountain_portal
+    add_ideas = {
+    manpowerlv1
+    isolation
+    Beast
+    sub_Youkai
+    Town
+    hawk0
+    dove2
+    close3
+    sc_rule
+    gensoukyo_creator_idea
+    }
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 98
+        guli = 0
+        neworder = 2
+        oldorder = 0
+        fandong = 0
+    }
+}

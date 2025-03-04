@@ -1,0 +1,284 @@
+ideas = {
+	country = {
+		# 妖精不满
+		SCA_yao_jing_bu_man_idea = {
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				war_support_factor = -0.2
+			}
+		}
+
+		# 低效的行政体系
+		SCA_di_xiao_de_xing_zheng_ti_xi_idea = {
+	    	picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+	    }
+
+		SCA_di_xiao_de_xing_zheng_ti_xi_a_idea = {
+	    	picture = generic_political_problem
+
+			cancel = {
+				has_completed_focus = SCA_flandre_zheng_bian
+			}
+
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+	    }
+
+		# 落后的军事理论
+		SCA_luo_hou_de_jun_shi_li_lun_idea = {
+			picture = chi_incompetent_officers
+			modifier = {
+				command_power_gain_mult = -0.5
+				experience_gain_army_factor = -0.3
+				land_equipment_upgrade_xp_cost = 0.2
+				land_doctrine_cost_factor = 0.5
+			}
+		}
+
+		# 削减行政开支
+		SCA_xue_jian_xing_zheng_kai_zhi_idea = {
+			picture = generic_controlled_administration
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		# 清洗军队
+		SCA_qing_xi_jun_dui_idea = {
+			picture = generic_purge
+			modifier = {
+				experience_gain_army_factor = -0.2
+				land_equipment_upgrade_xp_cost = 0.2
+				training_time_army_factor = 0.2
+				land_doctrine_cost_factor = 0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		# 帝国的新时代
+		SCA_di_guo_de_xin_shi_dai_idea = {
+			picture = SCA_new_era_of_the_empire
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_stability_factor = 0.1
+				drift_defence_factor = 0.1
+				surrender_limit = 0.1
+			}
+		}
+
+		# 受到斯卡蕾特的保护
+		SCA_shou_dao_si_ka_lei_te_de_bao_hu_idea = {
+			picture = SCA_protected_by_scarlet
+			modifier = {
+				production_speed_buildings_factor = 0.03
+			}
+		}
+
+		# 第二次红雾异变
+		SCA_di_er_ci_hong_wu_yi_bian_idea = {
+			picture = SCA_second_red_mist_incident
+			modifier = {
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.05
+			}
+		}
+
+		# 帝国霸权
+		SCA_di_guo_ba_quan_idea = {
+			picture = SCA_imperial_hegemony
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_stability_factor = 0.1
+				drift_defence_factor = 0.1
+				surrender_limit = 0.1
+				civil_war_involvement_tension = -0.1
+				generate_wargoal_tension = -0.1
+				justify_war_goal_time = -0.1
+			}
+		}
+
+		# 管理势力圈
+		# 管理势力圈
+		SCA_guan_li_shi_li_quan_idea = {
+			picture = SCA_sphere_of_influence
+			modifier = {
+				LS_subject_level_low_pp_cost = -0.2
+				SS_subject_modifier_factor = 0.2
+			}
+		}
+
+		# 帝国投资
+		SCA_di_guo_tou_zi_idea = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		# 军事线
+		# 防御策略
+		SCA_fang_yu_ce_lue_idea = {
+			picture = YUG_federal_defense_council
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+
+		SCA_fang_yu_ce_lue_a_idea = {
+			picture = YUG_federal_defense_council
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_bunker_factor = 0.1
+			}
+		}
+
+		SCA_fang_yu_ce_lue_b_idea = {
+			picture = YUG_federal_defense_council
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_bunker_factor = 0.1
+				max_planning_factor = 0.05
+				max_dig_in_factor = 0.1
+			}
+		}
+
+		# 扩张帝国卫队
+		SCA_kuo_zhang_di_guo_wei_dui_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.003
+				minimum_training_level = -0.1
+			}
+		}
+
+		# 帝国军事学院
+		SCA_di_guo_jun_shi_xue_yuan_idea = {
+			picture = generic_army_war_college
+			modifier = {
+
+			}
+		}
+
+		SCA_di_guo_jun_shi_xue_yuan_a_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				land_reinforce_rate = 0.05
+				army_leader_cost_factor = -0.1
+			}
+		}
+
+		SCA_di_guo_jun_shi_xue_yuan_b_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.1
+				max_command_power_mult = 0.1
+				land_reinforce_rate = 0.05
+				army_leader_cost_factor = -0.1
+				initiative_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		SCA_di_guo_jun_shi_xue_yuan_c_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				experience_gain_army_unit_factor = 0.05
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+			}
+		}
+
+		# 工业线
+		# 帝国铁路局
+		SCA_di_guo_tie_lu_ju_idea = {
+	    	picture = generic_railroads
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+			}
+	    }
+
+		# 工业投资
+		SCA_gong_ye_tou_zi_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		# 工业技术投资
+		SCA_gong_ye_ji_shu_tou_zi_idea = {
+			picture = generic_research_bonus
+			research_bonus = {
+				industrys = 0.05
+			}
+		}
+
+		# 工业建设投资
+		SCA_gong_ye_jian_she_tou_zi_idea = {
+	    	picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+	    }
+
+		# 大空间经济
+		SCA_da_kong_jian_jing_ji_a_idea = {
+			picture = SCA_large_area_economy
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+
+			research_bonus = {
+				industrys = 0.05
+			}
+		}
+
+		SCA_da_kong_jian_jing_ji_idea = {
+			picture = SCA_large_area_economy
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2
+				industrial_capacity_factory = 0.1
+			}
+
+			research_bonus = {
+				industrys = 0.05
+			}
+		}
+
+		SCA_da_kong_jian_jing_ji_b_idea = {
+			picture = SCA_large_area_economy
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.1
+			}
+
+			research_bonus = {
+				industrys = 0.05
+			}
+		}
+	}
+}

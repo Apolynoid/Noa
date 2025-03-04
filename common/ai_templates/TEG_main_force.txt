@@ -1,0 +1,88 @@
+main_force_TEG = {
+
+	available_for = {
+		TEG
+	}
+
+	role = main_force
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			not = { has_tech = waike }
+		}
+	}
+	
+	main_force_basic_TEG = {		
+		upgrade_prio = {
+			factor = 2
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 5
+				sc_mortar_brigade = 1
+			}
+		}
+
+		replace_at_match = 0.4
+		replace_with = main_force_improved_TEG
+		target_min_match = 0.5
+	}
+
+	main_force_improved_TEG = {
+	
+		upgrade_prio = {
+			factor = 5
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_zhanchanggongbing = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 6
+				sc_mortar_brigade = 3
+			}
+		}
+
+		replace_at_match = 0.4
+		replace_with = main_force_advanced_TEG
+		target_min_match = 0.5
+	}
+
+	main_force_advanced_TEG = {
+		upgrade_prio = {
+			factor = 5
+		}
+
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_zhanchanggongbing = 1
+				sp_wunv = 1
+				sp_gongjianpao = 1
+			}
+
+			
+			regiments = {
+				sc_infantry = 8
+				sc_mortar_brigade = 4
+			}
+		}
+	}
+}
+

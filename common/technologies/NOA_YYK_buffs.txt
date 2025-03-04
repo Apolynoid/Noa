@@ -1,0 +1,25 @@
+technologies = {
+	YYK_shu_si_fang_yu_tech = {
+		allow = {
+			always = no   
+		}
+		category_army = {
+			defense = 0.2
+		}
+		ai_will_do = {
+        	base = 0
+      	}
+	}
+    
+	YYK_ming_jie_nei_zhan_tech = {
+		allow = {
+			always = no   
+		}
+		category_army = {
+			defense = 0.1
+		}
+		ai_will_do = {
+        	base = 0
+      	}
+	}
+}

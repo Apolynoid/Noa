@@ -1,0 +1,709 @@
+﻿division_template = {
+	name = "共和国轻装游击编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 1 y = 0 }
+		sc_light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "共和国正式编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		sc_mortar_brigade = { x = 1 y = 0 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "天狗特种编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_sf_infantry = { x = 1 y = 0 }
+		sc_sf_infantry = { x = 1 y = 1 }
+		sc_sf_infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+units = {
+	division = {
+		name = "共和国正式编制"
+		location = 5223
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5223
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5223
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5223
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5223
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5223
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 7312
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 7312
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 7312
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5296
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5296
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5296
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5296
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5296
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5296
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 7354
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 7354
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 7354
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5273
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5273
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5273
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5273
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5273
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5273
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5217
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5217
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5217
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5217
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5217
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5217
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 1708
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 1708
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 1708
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 1708
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 1708
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 1708
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 4391
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 4391
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 4391
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 831
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 831
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 831
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5270
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5270
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5270
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5294
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5294
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5294
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天狗特种编制"
+		location = 25
+		division_template = "天狗特种编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天狗特种编制"
+		location = 25
+		division_template = "天狗特种编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天狗特种编制"
+		location = 25
+		division_template = "天狗特种编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 25
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 25
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 25
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 25
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 25
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 4392
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 4392
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 4392
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5211
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5211
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5211
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 3110
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 3110
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 3110
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5151
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5151
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5151
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5125
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5125
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5125
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国正式编制"
+		location = 5184
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5184
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国正式编制"
+		location = 5184
+		division_template = "共和国正式编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "共和国轻装游击编制"
+		location = 158
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 158
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 158
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5157
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5157
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5157
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	
+
+	division = {
+		name = "共和国轻装游击编制"
+		location = 204
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 204
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 204
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	
+
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5359
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5359
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 5359
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	
+
+	division = {
+		name = "共和国轻装游击编制"
+		location = 7516
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 7516
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 7516
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	
+
+	division = {
+		name = "共和国轻装游击编制"
+		location = 3415
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 3415
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "共和国轻装游击编制"
+		location = 3415
+		division_template = "共和国轻装游击编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+}

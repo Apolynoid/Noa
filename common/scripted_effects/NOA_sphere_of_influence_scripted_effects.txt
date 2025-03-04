@@ -1,0 +1,131 @@
+sphere_of_influence_check = {
+    ##Netherworld
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Netherworld
+            }
+        }
+        set_variable = { SI_Netherworld_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Netherworld
+            }
+            add_to_variable = { ROOT.SI_Netherworld_ratio = 1}
+        }
+        every_subject_country = {
+            every_owned_state = {
+                limit = {
+                    is_on_continent = Netherworld
+                }
+                add_to_variable = { ROOT.SI_Netherworld_ratio = 1}
+            }
+        }
+
+        divide_variable = { SI_Netherworld_ratio = global.RE_Netherworld_all }
+    }
+    
+
+    ##Celestial
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Celestial
+            }
+        }
+        set_variable = { SI_Celestial_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Celestial
+            }
+            add_to_variable = { ROOT.SI_Celestial_ratio = 1}
+        }
+        every_subject_country = {
+            every_owned_state = {
+                limit = {
+                    is_on_continent = Celestial
+                }
+                add_to_variable = { ROOT.SI_Celestial_ratio = 1}
+            }
+        }
+        divide_variable = { SI_Celestial_ratio = global.RE_Celestial_all }
+    }
+    
+
+    ##Underground
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Underground
+            }
+        }
+        set_variable = { SI_Underground_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Underground
+            }
+            add_to_variable = { ROOT.SI_Underground_ratio = 1}
+        }
+        every_subject_country = {
+            every_owned_state = {
+                limit = {
+                    is_on_continent = Underground
+                }
+                add_to_variable = { ROOT.SI_Underground_ratio = 1}
+            }
+        }
+        divide_variable = { SI_Underground_ratio = global.RE_Underground_all }
+    }
+    
+
+    ##Hell
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Hell
+            }
+        }
+        set_variable = { SI_Hell_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Hell
+            }
+            add_to_variable = { ROOT.SI_Hell_ratio = 1}
+        }
+        every_subject_country = {
+            every_owned_state = {
+                limit = {
+                    is_on_continent = Hell
+                }
+                add_to_variable = { ROOT.SI_Hell_ratio = 1}
+            }
+        }
+        divide_variable = { SI_Hell_ratio = global.RE_Hell_all }
+    }
+    
+
+    ##Gensokyo
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Gensokyo
+            }
+        }
+        set_variable = { SI_Gensokyo_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Gensokyo
+            }
+            add_to_variable = { ROOT.SI_Gensokyo_ratio = 1}
+        }
+        every_subject_country = {
+            every_owned_state = {
+                limit = {
+                    is_on_continent = Gensokyo
+                }
+                add_to_variable = { ROOT.SI_Gensokyo_ratio = 1}
+            }
+        }
+        divide_variable = { SI_Gensokyo_ratio = global.RE_Gensokyo_all }
+    }
+}

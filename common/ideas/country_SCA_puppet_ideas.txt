@@ -1,0 +1,125 @@
+ideas = {
+	country = {
+		# 斯卡蕾特势力圈
+	    SCA_puppet_SCA_shi_li_quan_idea = {
+	    	picture = SCA_Puppet_scarlet_sphere
+			cancel = {
+				NOT = {
+					is_puppet_of = SCA
+				}
+			}
+			modifier = {
+				surrender_limit = 0.5
+			}
+			targeted_modifier = {
+				tag = SCA
+				cic_to_target_factor = 0.08
+				mic_to_target_factor = 0.08
+			}
+	    }
+
+		SCA_puppet_SCA_shi_li_quan_a_idea = {
+	    	picture = SCA_Puppet_scarlet_sphere
+			cancel = {
+				NOT = {
+					is_puppet_of = SCA
+				}
+			}
+			modifier = {
+				surrender_limit = 0.5
+			}
+	    }
+
+		# 行政强化
+		SCA_puppet_xing_zheng_qiang_hua_idea = {
+			picture = generic_political_support
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+
+		SCA_puppet_xing_zheng_qiang_hua_a_idea = {
+			picture = generic_political_support
+			modifier = {
+				political_power_gain = 0.1
+				party_popularity_stability_factor = 0.2
+			}
+		}
+
+		# 帝国训练操典
+		SCA_puppet_di_guo_xun_lian_cao_dian_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_factor = 0.05
+				max_dig_in_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		# 帝国工业体系
+		SCA_puppet_di_guo_gong_ye_ti_xi_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+
+		SCA_puppet_di_guo_gong_ye_ti_xi_a_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		# 军事线
+		# 参谋处
+		SCA_puppet_can_mou_chu_idea = {
+			picture = CZE_planning_bonus
+			modifier = {
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+			}
+		}
+
+		SCA_puppet_can_mou_chu_a_idea = {
+			picture = CZE_planning_bonus
+			modifier = {
+				max_planning_factor = 0.1
+				planning_speed = 0.05
+				max_dig_in_factor = 0.1
+			}
+		}
+
+		# 工业线
+		# 经济规划
+		SCA_puppet_jing_ji_gui_hua_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.03
+			}
+		}
+
+		SCA_puppet_jing_ji_gui_hua_a_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.03
+				production_speed_rail_way_factor = 0.08
+			}
+		}
+
+		# 教育改革
+		SCA_puppet_jiao_yu_gai_ge_idea = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

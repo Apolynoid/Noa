@@ -1,0 +1,83 @@
+﻿l_simp_chinese:
+# 政治线 political
+# 内战部分 civil war
+NAR_shu_yu_ruo_zhe_de_jun_dui:0 "属于弱者的军队"
+NAR_shu_yu_ruo_zhe_de_jun_dui_desc:0 ""
+NAR_tong_yi_zhi_hui_xi_tong:0 "统一指挥系统"
+NAR_tong_yi_zhi_hui_xi_tong_desc:0 ""
+NAR_yao_jing_de_ling_li:0 "妖精的灵力"
+NAR_yao_jing_de_ling_li_desc:0 ""
+NAR_lian_he_ti_sheng_chan_neng_li:0 "联合体生产能力"
+NAR_lian_he_ti_sheng_chan_neng_li_desc:0 ""
+NAR_yao_guai_de_zhan_dou_li:0 "妖怪的战斗力"
+NAR_yao_guai_de_zhan_dou_li_desc:0 ""
+NAR_jie_chu_ji_jin_tong_qing_zhe:0 "接触激进同情者"
+NAR_jie_chu_ji_jin_tong_qing_zhe_desc:0 ""
+NAR_qing_qiu_wai_bu_yuan_zhu:0 "请求外部援助"
+NAR_qing_qiu_wai_bu_yuan_zhu_desc:0 ""
+NAR_zhun_bei_zui_hou_yi_ji:0 "准备最后一击"
+NAR_zhun_bei_zui_hou_yi_ji_desc:0 ""
+NAR_yu_huo_chong_sheng:0 "浴火重生"
+NAR_yu_huo_chong_sheng_desc:0 ""
+NAR_sheng_er_ping_deng:0 "生而平等"
+NAR_sheng_er_ping_deng_desc:0 ""
+NAR_she_hui_hua_sheng_chan:0 "社会化生产"
+NAR_she_hui_hua_sheng_chan_desc:0 ""
+NAR_chong_jian_min_bing_zu_zhi:0 "重建民兵组织"
+NAR_chong_jian_min_bing_zu_zhi_desc:0 ""
+NAR_mo_fa_zhi_sen_ke_xue_yuan:0 "魔法之森科学院"
+NAR_mo_fa_zhi_sen_ke_xue_yuan_desc:0 ""
+NAR_zhan_hou_shen_pan:0 "战后审判"
+NAR_zhan_hou_shen_pan_desc:0 ""
+NAR_qiang_hua_lian_he_ti_yi_hui:0 "强化联合体议会"
+NAR_qiang_hua_lian_he_ti_yi_hui_desc:0 ""
+NAR_ge_ming_de_lian_he_ti:0 "革命的联合体"
+NAR_ge_ming_de_lian_he_ti_desc:0 ""
+NAR_ge_ming_wai_jiao:0 "革命外交"
+NAR_ge_ming_wai_jiao_desc:0 ""
+NAR_jia_ru_ge_ming_yun_dong:0 "加入革命运动"
+NAR_jia_ru_ge_ming_yun_dong_desc:0 ""
+NAR_du_li_zi_zhu:0 "独立自主"
+NAR_du_li_zi_zhu_desc:0 ""
+NAR_fen_sui_di_guo:0 "粉碎帝国"
+NAR_fen_sui_di_guo_desc:0 ""
+NAR_xiao_chu_shou_dao_wei_xie:0 "消除兽道威胁"
+NAR_xiao_chu_shou_dao_wei_xie_desc:0 ""
+NAR_ge_ming_xuan_chuan:0 "革命宣传"
+NAR_ge_ming_xuan_chuan_desc:0 ""
+NAR_wu_zhuang_qun_zhong:0 "武装群众"
+NAR_wu_zhuang_qun_zhong_desc:0 ""
+
+#idea
+nar_she_hui_hua_sheng_chan_idea:0 "社会化生产"
+nar_she_hui_hua_sheng_chan_idea_desc:0 ""
+nar_min_bing_idea:0 "民兵"
+nar_min_bing_idea_desc:0 "民兵组织在内战中证明了其价值，为了保障魔法之森的安全，我们应该继续维持这一组织形式。"
+nar_lian_he_ti_yi_hui_idea:0 "联合体议会"
+nar_lian_he_ti_yi_hui_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_a_idea:0 "联合体议会"
+nar_lian_he_ti_yi_hui_a_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_b_idea:0 "联合体议会"
+nar_lian_he_ti_yi_hui_b_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_c_idea:0 "联合体议会"
+nar_lian_he_ti_yi_hui_c_idea_desc:0 ""
+
+#op
+NAR_ge_ming_wai_jiao_radicalist_op:0 "革命外交"
+NAR_ge_ming_wai_jiao_non_radicalist_op:0 "革命外交"
+NAR_tuan_jie_mo_fa_dao_ju_op:0 "团结魔法道具"
+
+#tt
+
+
+ #decision
+
+
+# flag
+NAR_ask_SEJ_for_help_flag:0 "向[SEJ.GetName]求援"
+NAR_ask_CIR_for_help_flag:0 "向[CIR.GetName]求援"
+NAR_ask_TKM_for_help_flag:0 "向[TKM.GetName]求援"
+NAR_request_accepted_flag:0 "她们同意了请求"
+NAR_request_denied_flag:0 "她们拒绝了请求"
+
+ #other

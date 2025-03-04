@@ -1,0 +1,24 @@
+spriteTypes = {
+	#------------------- AGENCY LOGOS -------------------------------
+		
+	spriteType = {
+		name = "GFX_idea_slot_lobby_slot"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_politics_enhancement"
+		textureFile = "gfx/interface/buffs/politics_enhancement.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_army_enhancement"
+		textureFile = "gfx/interface/buffs/army_enhancement.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_industry_enhancement"
+		textureFile = "gfx/interface/buffs/industry_enhancement.png"
+	}
+
+}

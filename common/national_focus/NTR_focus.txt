@@ -1,0 +1,1374 @@
+focus_tree = {
+  id = NTR_focus
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = NTR
+    }
+  }
+
+  shared_focus = ty_medium_main 
+
+  continuous_focus_position = { x = 1500 y = 1500 }
+  default = no
+
+  # 加强与天狗的合作
+  focus = {
+    id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    icon = GFX_focus_befriend_TEG
+    cost = 7
+    x = 20
+    y = 2
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    completion_reward = {
+      add_political_power = 30
+      TEG = {
+        add_opinion_modifier = {
+          target = NTR
+          modifier = NTR_jia_qiang_he_zuo_op
+        }
+      }
+      NTR = {
+        add_opinion_modifier = {
+          target = TEG
+          modifier = NTR_jia_qiang_he_zuo_op
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 强化共和政府
+  focus = {
+    id = NTR_qiang_hua_gong_he_zheng_fu
+    icon = GFX_focus_generic_improve_the_administration
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_bu_wen_ding_de_gong_he_guo_a_idea
+        remove_idea = NTR_bu_wen_ding_de_gong_he_guo_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 稳定民主制度
+  focus = {
+    id = NTR_wen_ding_min_zhu_zhi_du
+    icon = GFX_focus_democracy
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_qiang_hua_gong_he_zheng_fu
+
+    prerequisite = {
+      focus = NTR_qiang_hua_gong_he_zheng_fu
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_bu_wen_ding_de_gong_he_guo_b_idea
+        remove_idea = NTR_bu_wen_ding_de_gong_he_guo_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 学习天狗政治制度
+  focus = {
+    id = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du
+    icon = NTR_focus_study_political_system_of_TEG
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_wen_ding_min_zhu_zhi_du
+
+    prerequisite = {
+      focus = NTR_wen_ding_min_zhu_zhi_du
+    }
+
+    available ={
+      TEG = {
+        OR = {
+          has_completed_focus = TEG_fu_yu_yi_hui_geng_da_quan_li
+          has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+          has_completed_focus = TEG_zong_tong_yu_yi_hui_fen_li
+        }
+      }
+    }
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    completion_reward = {
+      remove_ideas = NTR_bu_wen_ding_de_gong_he_guo_b_idea
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_fu_yu_yi_hui_geng_da_quan_li
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_a_idea
+      }
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_gong_gong_an_quan_wei_yuan_hui
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_b_idea
+      }
+      if = {
+        limit = {
+          TEG = {
+            has_completed_focus = TEG_zong_tong_yu_yi_hui_fen_li
+          }
+        }
+        add_ideas = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du_c_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 鼓励政治参与
+  focus = {
+    id = NTR_gu_li_zheng_zhi_can_yu
+    icon = GFX_focus_encourage_political_participation
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du
+
+    prerequisite = {
+      focus = NTR_xue_xi_tian_gou_zheng_zhi_zhi_du
+    }
+
+    completion_reward = {
+      add_ideas = NTR_zheng_zhi_can_yu_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 激发统一热情
+  focus = {
+    id = NTR_ji_fa_tong_yi_re_qing
+    icon = NTR_focus_arouse_enthusiasm_of_unification
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_gu_li_zheng_zhi_can_yu
+
+    prerequisite = {
+      focus = NTR_gu_li_zheng_zhi_can_yu
+    }
+
+    completion_reward = {
+      YAW = {
+        every_core_state = {
+          add_claim_by = NTR
+        }
+      }
+      add_ideas = NTR_tong_yi_re_qing_idea
+      custom_effect_tooltip = NTR_allow_integration_of_YAW_KAP_tt
+      custom_effect_tooltip = occupation_law_introduce_tt
+      hidden_effect = {
+        set_country_flag = can_integrate_flag_KAP
+        set_country_flag = can_integrate_flag_YAW
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 共和国军事建设
+  focus = {
+    id = NTR_gong_he_guo_jun_shi_jian_she
+    icon = GFX_goal_generic_military_sphere
+    cost = 7
+    x = -10
+    y = 0
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    completion_reward = {
+      army_experience = 10
+      add_war_support = 0.05
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗的军事合作
+  focus = {
+    id = NTR_yu_tian_gou_de_jun_shi_he_zuo
+    icon = NTR_focus_military_cooperation_with_TEG
+    cost = 7
+    x = -6
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_jun_shi_jian_she
+    }
+
+    completion_reward = {
+      add_ideas = NTR_yu_tian_gou_de_jun_shi_he_zuo_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 学习天狗参谋部
+  focus = {
+    id = NTR_xue_xi_tian_gou_can_mou_bu
+    icon = GFX_focus_staff
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = NTR_yu_tian_gou_de_jun_shi_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_tian_gou_de_jun_shi_he_zuo
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_yu_tian_gou_de_jun_shi_he_zuo_idea
+        add_idea = NTR_yu_tian_gou_de_jun_shi_he_zuo_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 引入战争模拟
+  focus = {
+    id = NTR_yin_ru_zhan_zheng_mo_ni
+    icon = GFX_focus_wargame
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_xue_xi_tian_gou_can_mou_bu
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_xue_xi_tian_gou_can_mou_bu
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = NTR_if_TEG_agree_tt
+      effect_tooltip = {
+        TEG = {
+          add_ideas = NTR_zhan_zheng_mo_ni_idea
+        }
+        NTR = {
+          add_ideas = NTR_zhan_zheng_mo_ni_idea
+        }
+      }
+      hidden_effect = {
+        TEG = {
+          country_event = {
+            id = ntr.104
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 分析潜在敌人弱点
+  focus = {
+    id = NTR_fen_xi_qian_zai_di_ren_ruo_dian
+    icon = NTR_focus_analyse_weakness_of_potential_enemies
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_yin_ru_zhan_zheng_mo_ni
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+        has_country_flag = NTR_wargaming_refused_flag
+      }
+    }
+
+    available = {
+      has_country_flag = NTR_wargaming_accepted_flag
+    }
+
+    prerequisite = {
+      focus = NTR_yin_ru_zhan_zheng_mo_ni
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_zhan_zheng_mo_ni_idea
+        add_idea = NTR_zhan_zheng_mo_ni_a_idea
+      }
+      TEG = {
+        swap_ideas = {
+          remove_idea = NTR_zhan_zheng_mo_ni_idea
+          add_idea = NTR_zhan_zheng_mo_ni_a_idea
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 学习训练体系
+  focus = {
+    id = NTR_xue_xi_xun_lian_ti_xi
+    icon = GFX_goal_generic_small_arms
+    cost = 7
+    x = -2
+    y = 1
+
+    relative_position_id = NTR_yu_tian_gou_de_jun_shi_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+        has_completed_focus = TEG_xian_jin_xun_lian_fang_fa
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_tian_gou_de_jun_shi_he_zuo
+    }
+
+    completion_reward = {
+      add_ideas = NTR_xue_xi_xun_lian_ti_xi_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 学习山地作战技术
+  focus = {
+    id = NTR_xue_xi_shan_di_zuo_zhan_ji_shu
+    icon = GFX_focus_GRE_a_land_of_mountains
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_xue_xi_xun_lian_ti_xi
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+        has_completed_focus = TEG_shi_ying_yao_guai_shan_di_xing
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_xue_xi_xun_lian_ti_xi
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_xue_xi_xun_lian_ti_xi_idea
+        add_idea = NTR_xue_xi_xun_lian_ti_xi_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 联合演习
+  focus = {
+    id = NTR_lian_he_yan_xi
+    icon = GFX_focus_generic_combined_arms
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_xue_xi_shan_di_zuo_zhan_ji_shu
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_xue_xi_shan_di_zuo_zhan_ji_shu
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = NTR_if_TEG_agree_tt
+      effect_tooltip = {
+        TEG = {
+          army_experience = 30
+          add_equipment_to_stockpile = {
+            type = gun_a
+            amount = -100
+          }
+        }
+        NTR = {
+          army_experience = 30
+          add_equipment_to_stockpile = {
+            type = gun_a
+            amount = -100
+          }
+        }
+      }
+      hidden_effect = {
+        TEG = {
+          country_event = {
+            id = ntr.105
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 陆军正规化
+  focus = {
+    id = NTR_lu_jun_zheng_gui_hua
+    icon = GFX_focus_army_dicipline
+    cost = 12
+    x = -2
+    y = 1
+
+    relative_position_id = NTR_gong_he_guo_jun_shi_jian_she
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_jun_shi_jian_she
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_gong_he_guo_lu_jun_idea
+        remove_idea = NTR_min_bing_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 选拔战争精英
+  focus = {
+    id = NTR_xuan_ba_zhan_zheng_jing_ying
+    icon = GFX_focus_generic_military_mission
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_lu_jun_zheng_gui_hua
+
+    prerequisite = {
+      focus = NTR_lu_jun_zheng_gui_hua
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_gong_he_guo_lu_jun_a_idea
+        remove_idea = NTR_gong_he_guo_lu_jun_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 河童军事学院
+  focus = {
+    id = NTR_he_tong_jun_shi_xue_yuan
+    icon = GFX_focus_generic_military_academy
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_xuan_ba_zhan_zheng_jing_ying
+
+    prerequisite = {
+      focus = NTR_xuan_ba_zhan_zheng_jing_ying
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_gong_he_guo_lu_jun_b_idea
+        remove_idea = NTR_gong_he_guo_lu_jun_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军事工业建设
+  focus = {
+    id = NTR_jun_shi_gong_ye_jian_she
+    icon = GFX_goal_generic_construct_mil_factory
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_he_tong_jun_shi_xue_yuan
+
+    prerequisite = {
+      focus = NTR_he_tong_jun_shi_xue_yuan
+    }
+
+    completion_reward = {
+      random_core_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_core_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_core_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 扩军计划
+  focus = {
+    id = NTR_kuo_jun_ji_hua
+    icon = GFX_focus_generic_little_entente
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_jun_shi_gong_ye_jian_she
+
+    prerequisite = {
+      focus = NTR_jun_shi_gong_ye_jian_she
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        add_idea = NTR_gong_he_guo_lu_jun_c_idea
+        remove_idea = NTR_gong_he_guo_lu_jun_b_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军事技术研究
+  focus = {
+    id = NTR_jun_shi_ji_shu_yan_jiu
+    icon = GFX_goal_generic_small_arms
+    cost = 7
+    x = -6
+    y = 1
+
+    relative_position_id = NTR_gong_he_guo_jun_shi_jian_she
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_jun_shi_jian_she
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 0.5
+        uses = 2
+        category = military
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 基础武器研究
+  focus = {
+    id = NTR_ji_chu_wu_qi_yan_jiu
+    icon = GFX_focus_focus_fra_maquis
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_jun_shi_ji_shu_yan_jiu
+
+    prerequisite = {
+      focus = NTR_jun_shi_ji_shu_yan_jiu
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        ahead_reduction = 2
+        uses = 1
+        category = primary_weapons
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 重视装甲研究
+  focus = {
+    id = NTR_zhong_shi_zhuang_jia_yan_jiu
+    icon = GFX_goal_generic_build_tank
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_ji_chu_wu_qi_yan_jiu
+
+    prerequisite = {
+      focus = NTR_ji_chu_wu_qi_yan_jiu
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        ahead_reduction = 2
+        uses = 1
+        category = shield_weapons
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 军事理论研究
+  focus = {
+    id = NTR_jun_shi_li_lun_yan_jiu
+    icon = GFX_goal_generic_army_doctrines
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_zhong_shi_zhuang_jia_yan_jiu
+
+    prerequisite = {
+      focus = NTR_zhong_shi_zhuang_jia_yan_jiu
+    }
+
+    completion_reward = {
+      add_doctrine_cost_reduction = {
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 共和国工业建设
+  focus = {
+    id = NTR_gong_he_guo_gong_ye_jian_she
+    icon = GFX_focus_construction
+    cost = 7
+    x = 10
+    y = 0
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    available ={
+      has_global_flag = main_scenario
+    }
+
+    completion_reward = {
+      add_ideas = NTR_gong_he_guo_gong_ye_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗的经济合作
+  focus = {
+    id = NTR_yu_tian_gou_de_jing_ji_he_zuo
+    icon = NTR_focus_economic_cooperation_with_TEG
+    cost = 7
+    x = 6
+    y = 1
+
+    relative_position_id = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+
+    bypass = {
+      TEG = {
+        OR = {
+          exists = no
+          is_subject = yes
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_jia_qiang_yu_tian_gou_de_he_zuo
+    }
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_gong_ye_jian_she
+    }
+
+    completion_reward = {
+      add_ideas = NTR_yu_tian_gou_de_jing_ji_he_zuo_idea
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 请求天狗经济援助
+  focus = {
+    id = NTR_qing_qiu_tian_gou_jing_ji_yuan_zhu
+    icon = GFX_focus_generic_concessions
+    cost = 12
+    x = -2
+    y = 1
+
+    relative_position_id = NTR_yu_tian_gou_de_jing_ji_he_zuo
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_tian_gou_de_jing_ji_he_zuo
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = NTR_if_TEG_agree_tt
+      effect_tooltip = {
+        NTR = {
+          add_offsite_building = {
+            type = industrial_complex
+            level = 4
+          }
+        }
+      }
+      hidden_effect = {
+        TEG = {
+          country_event = {
+            id = ntr.106
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与天狗的贸易协定
+  focus = {
+    id = NTR_yu_tian_gou_de_mao_yi_xie_ding
+    icon = GFX_goal_generic_positive_trade_relations
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_qing_qiu_tian_gou_jing_ji_yuan_zhu
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_qing_qiu_tian_gou_jing_ji_yuan_zhu
+    }
+
+    completion_reward = {
+      TEG = {
+        add_opinion_modifier = {
+          target = NTR
+          modifier = NTR_mao_yi_xie_ding_op
+        }
+      }
+      NTR = {
+        add_opinion_modifier = {
+          target = TEG
+          modifier = NTR_mao_yi_xie_ding_op
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 邀请天狗投资
+  focus = {
+    id = NTR_yao_qing_tian_gou_tou_zi
+    icon = GFX_focus_investment
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_yu_tian_gou_de_mao_yi_xie_ding
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_tian_gou_de_mao_yi_xie_ding
+    }
+
+    completion_reward = {
+      add_timed_idea = {
+        idea = NTR_tian_gou_tou_zi_idea
+        days = 365
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 妖怪山科技交流
+  focus = {
+    id = NTR_yao_guai_shan_ke_ji_jiao_liu
+    icon = GFX_goal_tfv_generic_tech_sharing
+    cost = 12
+    x = 2
+    y = 1
+
+    relative_position_id = NTR_yu_tian_gou_de_jing_ji_he_zuo
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+        NOT = {
+          is_in_faction_with = TEG
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_tian_gou_de_jing_ji_he_zuo
+    }
+
+    completion_reward = {
+      custom_effect_tooltip = NTR_if_TEG_agree_tt
+      effect_tooltip = {
+        TEG = {
+          add_to_tech_sharing_group = youkai_mountain_tech_sharing
+        }
+        NTR = {
+          add_to_tech_sharing_group = youkai_mountain_tech_sharing
+        }
+      }
+      hidden_effect = {
+        TEG = {
+          country_event = {
+            id = ntr.101
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 与流亡科学家交流
+  focus = {
+    id = NTR_yu_liu_wang_ke_xue_jia_jiao_liu
+    icon = GFX_goal_generic_scientific_exchange
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_yao_guai_shan_ke_ji_jiao_liu
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yao_guai_shan_ke_ji_jiao_liu
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 2
+        ahead_reduction = 2
+        uses = 1
+        category = math
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 引进资源勘探技术
+  focus = {
+    id = NTR_yin_jin_zi_yuan_kan_tan_ji_shu
+    icon = GFX_goal_generic_construction2
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_yu_liu_wang_ke_xue_jia_jiao_liu
+
+    bypass = {
+      OR = {
+        TEG = {
+          OR = {
+            exists = no
+            is_subject = yes
+          }
+        }
+      }
+    }
+
+    prerequisite = {
+      focus = NTR_yu_liu_wang_ke_xue_jia_jiao_liu
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        ahead_reduction = 1
+        uses = 1
+        category = resource
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 发扬河童技术优势
+  focus = {
+    id = NTR_fa_yang_he_tong_ji_shu_you_shi
+    icon = GFX_focus_research
+    cost = 7
+    x = 2
+    y = 1
+
+    relative_position_id = NTR_gong_he_guo_gong_ye_jian_she
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_gong_ye_jian_she
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 0.5
+        uses = 2
+        category = civil
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 工业技术进步
+  focus = {
+    id = NTR_gong_ye_ji_shu_jin_bu
+    icon = GFX_goal_generic_production
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_fa_yang_he_tong_ji_shu_you_shi
+
+    prerequisite = {
+      focus = NTR_fa_yang_he_tong_ji_shu_you_shi
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 0.8
+        uses = 2
+        category = industrys
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 建筑技术革新
+  focus = {
+    id = NTR_jian_zhu_ji_shu_ge_xin
+    icon = GFX_goal_generic_construction
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_gong_ye_ji_shu_jin_bu
+
+    prerequisite = {
+      focus = NTR_gong_ye_ji_shu_jin_bu
+    }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 0.8
+        ahead_reduction = 1.5
+        uses = 2
+        category = build
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 河童科学院
+  focus = {
+    id = NTR_he_tong_ke_xue_yuan
+    icon = GFX_focus_science_institute
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_jian_zhu_ji_shu_ge_xin
+
+    prerequisite = {
+      focus = NTR_jian_zhu_ji_shu_ge_xin
+    }
+
+    completion_reward = {
+      add_research_slot = 1
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 科技引领未来
+  focus = {
+    id = NTR_ke_ji_yin_ling_wei_lai
+    icon = GFX_focus_research2
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_he_tong_ke_xue_yuan
+
+    prerequisite = {
+      focus = NTR_he_tong_ke_xue_yuan
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_he_tong_de_yan_jiu_neng_li_idea
+        add_idea = NTR_he_tong_de_yan_jiu_neng_li_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 工业发展计划
+  focus = {
+    id = NTR_gong_ye_fa_zhan_ji_hua
+    icon = GFX_focus_generic_industry_2
+    cost = 7
+    x = 6
+    y = 1
+
+    relative_position_id = NTR_gong_he_guo_gong_ye_jian_she
+
+    prerequisite = {
+      focus = NTR_gong_he_guo_gong_ye_jian_she
+    }
+
+    completion_reward = {
+      add_timed_idea = {
+        idea = NTR_gong_ye_fa_zhan_ji_hua_idea
+        days = 365
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 投资中小企业
+  focus = {
+    id = NTR_tou_zi_zhong_xiao_qi_ye
+    icon = GFX_focus_mex_privatisation
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_gong_ye_fa_zhan_ji_hua
+
+    prerequisite = {
+      focus = NTR_gong_ye_fa_zhan_ji_hua
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_gong_he_guo_gong_ye_idea
+        add_idea = NTR_gong_he_guo_gong_ye_a_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 河童工业城
+  focus = {
+    id = NTR_he_tong_gong_ye_cheng
+    icon = GFX_goal_generic_construct_civ_factory
+    cost = 12
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_tou_zi_zhong_xiao_qi_ye
+
+    prerequisite = {
+      focus = NTR_tou_zi_zhong_xiao_qi_ye
+    }
+
+    completion_reward = {
+      random_core_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+      random_core_state = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+  # 先进培育技术
+  focus = {
+    id = NTR_xian_jin_pei_yu_ji_shu
+    icon = GFX_focus_SOV_breadbasket_of_the_union
+    cost = 7
+    x = 0
+    y = 1
+
+    relative_position_id = NTR_he_tong_gong_ye_cheng
+
+    prerequisite = {
+      focus = NTR_he_tong_gong_ye_cheng
+    }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = NTR_gong_he_guo_gong_ye_a_idea
+        add_idea = NTR_gong_he_guo_gong_ye_b_idea
+      }
+    }
+
+    ai_will_do = {
+      factor = 1
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+﻿l_simp_chinese:
+cir.101.t:0 "[CIR.GetName]邀请我们签订反斯卡蕾特协约"
+cir.101.d:0 "出于对[SCA.GetName]威胁的考虑，[CIR.GetName]邀请我们共同签订一份反斯卡蕾特协约。这份协约将保证协约中的任意国家受到[SCA.GetName]的攻击时，将视为对整个协约的攻击。同时，协约中的各国也将相互协作，增强国力以应对[SCA.GetName]的威胁。"
+cir.101.1:0 "我们将共同应对帝国的威胁"
+cir.101.2:0 "我们没必要加入她们"
+
+cir.102.t:0 "[FROM.GetName]同意签订协约"
+cir.102.d:0 "来自[FROM.GetName]方面的消息，[FROM.GetName]同意加入反斯卡蕾特协约。"
+cir.102.1:0 "我们将共同应对帝国的威胁"
+
+cir.103.t:0 "[FROM.GetName]拒绝签订协约"
+cir.103.d:0 "来自[FROM.GetName]方面的消息，[FROM.GetName]拒绝加入反斯卡蕾特协约。"
+cir.103.1:0 "那就这样吧"
+
+cir.104.t:0 "履行反斯卡蕾特协约"
+cir.104.d:0 "由于[SCA.GetName]对反斯卡蕾特协约成员的进攻，我们必须履行我们作为盟友的职责。"
+cir.104.1:0 "我们必须尽快完成战争准备"
+
+cir.105.t:0 "[CIR.GetName]邀请我们参与对[SCA.GetName]的进攻"
+cir.105.d:0 "[CIR.GetName]与[SCA.GetName]之间的微妙和平显然不会永久保持下去。近日，来自[CIR.GetName]的使者希望我们能够在未来与[SCA.GetName]的战争中与[CIR.GetName]协同作战，这将大大增加[SCA.GetName]所受的军事压力。然而，考虑到[SCA.GetName]的军事实力，也有声音认为加入这场战争是不明智的。"
+cir.105.1:0 "我们参加"
+cir.105.2:0 "我们最好不要参与"
+
+cir.106.t:0 "[LIL.GetName]同意参与进攻"
+cir.106.d:0 "来自[LIL.GetName]方面的消息，[LIL.GetName]同意参加我们的军事行动，在未来与[SCA.GetName]交战时将配合我们加入战争。"
+cir.106.1:0 "我们将共同摧毁妖精的压迫者"
+
+cir.107.t:0 "[LIL.GetName]拒绝参与进攻"
+cir.107.d:0 "来自[LIL.GetName]方面的消息，[LIL.GetName]拒绝参加我们的军事行动。"
+cir.107.1:0 "那我们就自己解决帝国"
+
+cir.108.t:0 "履行进攻承诺"
+cir.108.d:0 "根据我们之前对[CIR.GetName]的承诺，我们必须履行我们作为盟友的职责。"
+cir.108.1:0 "我们必须尽快完成战争准备"
+
+cir.109.t:0 "幻想乡大战"
+cir.109.d:0 "来自雾之湖东部的消息：[SCA.GetName]与[CIR.GetName]之间的紧张关系终于被打破，两国之间已经进入战争状态。\n\n[CIR.GetName]于上一次战争中从[SCA.GetName]赢得了独立，然而无论是[SCA.GetName]还是[CIR.GetName]都对此现状感到不满：[SCA.GetName]声称[CIR.GetName]不过是一群非法占据帝国领土的叛军，而[CIR.GetName]宣称要解放受到帝国压迫的所有妖精同胞。考虑到两国及其盟友的范围与实力，这次战争的规模甚至可能会超越上一次人类战争。\n\n目前，两国的盟友已经开始了战争动员，幻想乡的命运将决定于这次战争的胜负。"
+cir.109.1:0 "是时候彻底终结这帮叛乱分子了"
+cir.109.2:0 "我们要彻底终结妖精的压迫者！"
+cir.109.3:0 "战争即地狱"
+
+cir.110.t:0 "[CIR.GetName]的宣传影响"
+cir.110.d:0 "我们的士兵和工人都受到[CIR.GetName]的宣传影响，在彻底肃清宣传的威胁前，我们的前线战斗力和后方工业生产都会受到影响！"
+cir.110.1:0 "糟糕"
+
+cir.111.t:0 "反对者的破坏行动"
+cir.111.d:0 "帝国境内的一些妖精受到[CIR.GetName]的影响，举行了反对帝国的暴动！"
+cir.111.1:0 "必须马上处理她们！"
+
+cir.112.t:0 "[CIR.GetName]针对[SCA.GetName]进行战争动员"
+cir.112.d:0 "近日，[CIR.GetName]的领袖[CIR.GetLeader]发表声明称，[CIR.GetName]有义务解放[SCA.GetName]境内的妖精同胞，而且正准备履行这一义务。\n\n[CIR.GetName]于上一次战争中从[SCA.GetName]赢得了独立，并且以幻想乡妖精的解放者自居。然而，考虑到两国之间的国力差距与幻想乡外部环境的干涉，[CIR.GetName]与[SCA.GetName]之间达成了一份脆弱的停火协议。由于幻想乡局势的变化与[SCA.GetName]境内动乱的影响，这份停火协议似乎已经无法维持了。\n\n[CIR.GetName]与[SCA.GetName]都已经开始在国内进行战争动员，并开始与各自的盟友接触。一场规模超越上一次人类战争的大战似乎在所难免。"
+cir.112.1:0 "不足为惧"
+cir.112.2:0 "帝国的末日到了！"
+cir.112.3:0 "风暴将至……"

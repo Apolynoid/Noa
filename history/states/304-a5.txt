@@ -1,0 +1,1994 @@
+
+state={
+	id=304
+	name="STATE_304"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=25.000
+	}
+	provinces={
+		164 269 681 750 769 853 977 1611 1807 2466 2527 2756 2758 2770 2772 2777 2807 
+	}
+	manpower=130548
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+		victory_points = {
+			3250 5 
+		}
+		victory_points = {
+			2128 20 
+		}
+		victory_points = {
+			3822 1 
+		}
+		victory_points = {
+			3640 1 
+		}
+		victory_points = {
+			2829 1 
+		}
+		victory_points = {
+			3814 10
+		}
+		victory_points = {
+			5725 5 
+		}
+		victory_points = {
+			1624 20
+		}
+		victory_points = {
+			5729 2 
+		}
+		victory_points = {
+			5744 10
+		}
+		victory_points = {
+			322 2
+		}
+		victory_points = {
+			7083 10
+		}
+		victory_points = {
+			95 2
+		}
+		victory_points = {
+			7021 2
+		}
+		victory_points = {
+			1920 10 
+		}
+		victory_points = {
+			2819 2 
+		}
+		victory_points = {
+			2765 5 
+		}
+		victory_points = {
+			1246 1 
+		}
+		victory_points = {
+			2768 1 
+		}
+		victory_points = {
+			2044 1 
+		}
+		victory_points = {
+			2003 8 
+		}
+		victory_points = {
+			3878 1 
+		}
+		victory_points = {
+			7 30 
+		}
+		victory_points = {
+			755 10 
+		}
+		victory_points = {
+			2709 10 
+		}
+		victory_points = {
+			2273 1 
+		}
+		victory_points = {
+			2078 10 
+		}
+		victory_points = {
+			1607 2 
+		}
+		victory_points = {
+			441 1 
+		}
+		victory_points = {
+			5945 10 
+		}
+		victory_points = {
+			3987 5 
+		}
+		victory_points = {
+			260 2 
+		}
+		victory_points = {
+			4512 1 
+		}
+		victory_points = {
+			3866 1 
+		}
+		victory_points = {
+			851 1 
+		}
+		victory_points = {
+			3279 1 
+		}
+		victory_points = {
+			5787 1 
+		}
+		victory_points = {
+			3939 1 
+		}
+		victory_points = {
+			5809 1 
+		}
+		victory_points = {
+			1759 1 
+		}
+		victory_points = {
+			3879 1 
+		}
+		victory_points = {
+			3941 1 
+		}
+		victory_points = {
+			3946 2 
+		}
+		victory_points = {
+			3927 1 
+		}
+		victory_points = {
+			751 1 
+		}
+		victory_points = {
+			3867 1 
+		}
+		victory_points = {
+			844 1 
+		}
+		victory_points = {
+			195 1 
+		}
+		victory_points = {
+			302 5
+		}
+		victory_points = {
+			2272 1 
+		}
+		victory_points = {
+			1237 1 
+		}
+		victory_points = {
+			323 1 
+		}
+		victory_points = {
+			1221 1 
+		}
+		victory_points = {
+			2020 5 
+		}
+		victory_points = {
+			2716 5 
+		}
+		victory_points = {
+			1167 30 
+		}
+		victory_points = {
+			1602 20 
+		}
+		victory_points = {
+			726 2 
+		}
+		victory_points = {
+			213 5 
+		}
+		victory_points = {
+			2253 3 
+		}
+		victory_points = {
+			2222 1 
+		}
+		victory_points = {
+			999 3
+		}
+		victory_points = {
+			243 1 
+		}
+		victory_points = {
+			1267 1 
+		}
+		victory_points = {
+			913 1 
+		}
+		victory_points = {
+			3261 5
+		}
+		victory_points = {
+			121 1 
+		}
+		victory_points = {
+			3258 2
+		}
+		victory_points = {
+			3271 1 
+		}
+		victory_points = {
+			1565 1 
+		}
+		victory_points = {
+			2455 5 
+		}
+		victory_points = {
+			2380 5 
+		}
+		victory_points = {
+			1904 3 
+		}
+		victory_points = {
+			3259 15 
+		}
+		victory_points = {
+			2197 2 
+		}
+		victory_points = {
+			969 1 
+		}
+		victory_points = {
+			2025 5 
+		}
+		victory_points = {
+			4365 1 
+		}
+		victory_points = {
+			3218 3 
+		}
+		victory_points = {
+			2795 2 
+		}
+		victory_points = {
+			667 1 
+		}
+		victory_points = {
+			4383 1 
+		}
+		victory_points = {
+			1238 5 
+		}
+		victory_points = {
+			206 1 
+		}
+		victory_points = {
+			1204 1 
+		}
+		victory_points = {
+			1917 3 
+		}
+		victory_points = {
+			245 10 
+		}
+		victory_points = {
+			738 1 
+		}
+		victory_points = {
+			4281 1 
+		}
+		victory_points = {
+			1115 5 
+		}
+		victory_points = {
+			4293 1 
+		}
+		victory_points = {
+			444 5 
+		}
+		victory_points = {
+			4503 1 
+		}
+		victory_points = {
+			4496 1 
+		}
+		victory_points = {
+			303 2 
+		}
+		victory_points = {
+			1585 5 
+		}
+		victory_points = {
+			1868 1 
+		}
+		victory_points = {
+			5919 1 
+		}
+		victory_points = {
+			2267 2 
+		}
+		victory_points = {
+			1830 5 
+		}
+		victory_points = {
+			2245 2 
+		}
+		victory_points = {
+			2942 2 
+		}
+		victory_points = {
+			2041 5 
+		}
+		victory_points = {
+			3174 1 
+		}
+		victory_points = {
+			1200 1 
+		}
+		victory_points = {
+			2489 1 
+		}
+		victory_points = {
+			39 15
+		}
+		victory_points = {
+			2315 1 
+		}
+		victory_points = {
+			5585 10
+		}
+		victory_points = {
+			40 15
+		}
+		victory_points = {
+			2398 1
+		}
+		victory_points = {
+			878 2
+		}
+		victory_points = {
+			5594 4 
+		}
+		victory_points = {
+			759 2 
+		}
+		victory_points = {
+			5966 4 
+		}
+		victory_points = {
+			511 5 
+		}
+		victory_points = {
+			171 1 
+		}
+		victory_points = {
+			1390 1 
+		}
+		victory_points = {
+			2595 1 
+		}
+		victory_points = {
+			1529 1 
+		}
+		victory_points = {
+			456 1 
+		}
+		victory_points = {
+			700 2 
+		}
+		victory_points = {
+			2657 1 
+		}
+		victory_points = {
+			1958 1 
+		}
+		victory_points = {
+			1691 1 
+		}
+		victory_points = {
+			1659 1 
+		}
+		victory_points = {
+			1776 1 
+		}
+		victory_points = {
+			2629 1 
+		}
+		victory_points = {
+			2629 1 
+		}
+		victory_points = {
+			450 1 
+		}
+		victory_points = {
+			1641 10 
+		}
+		victory_points = {
+			2658 1 
+		}
+		victory_points = {
+			2146 8 
+		}
+		victory_points = {
+			1660 20 
+		}
+		victory_points = {
+			2064 10 
+		}
+		victory_points = {
+			714 2 
+		}
+		victory_points = {
+			368 3 
+		}
+		victory_points = {
+			674 1 
+		}
+		victory_points = {
+			2600 1 
+		}
+		victory_points = {
+			550 1 
+		}
+		victory_points = {
+			6771 1 
+		}
+		victory_points = {
+			1744 5 
+		}
+		victory_points = {
+			2833 1 
+		}
+		victory_points = {
+			1422 2 
+		}
+		victory_points = {
+			1073 1 
+		}
+		victory_points = {
+			2566 2 
+		}
+		victory_points = {
+			1442 5 
+		}
+		victory_points = {
+			1764 1 
+		}
+		victory_points = {
+			1821 1 
+		}
+		victory_points = {
+			1932 1 
+		}
+		victory_points = {
+			1632 1 
+		}
+		victory_points = {
+			2054 1 
+		}
+		victory_points = {
+			1807 1 
+		}
+		victory_points = {
+			1501 1 
+		}
+		victory_points = {
+			2301 5 
+		}
+		victory_points = {
+			1569 2 
+		}
+		victory_points = {
+			1780 1 
+		}
+		victory_points = {
+			745 1 
+		}
+		victory_points = {
+			2453 2 
+		}
+		victory_points = {
+			1343 20 
+		}
+		victory_points = {
+			1242 1 
+		}
+		victory_points = {
+			2374 1 
+		}
+		victory_points = {
+			2213 1 
+		}
+		victory_points = {
+			6671 1 
+		}
+		victory_points = {
+			6679 1 
+		}
+		victory_points = {
+			174 5 
+		}
+		victory_points = {
+			2596 2 
+		}
+		victory_points = {
+			1425 2 
+		}
+		victory_points = {
+			548 2 
+		}
+		victory_points = {
+			1794 10 
+		}
+		victory_points = {
+			2047 2 
+		}
+		victory_points = {
+			2299 1 
+		}
+		victory_points = {
+			2698 1 
+		}
+		victory_points = {
+			4 1 
+		}
+		victory_points = {
+			870 1 
+		}
+		victory_points = {
+			1308 1 
+		}
+		victory_points = {
+			349 1 
+		}
+		victory_points = {
+			1428 1 
+		}
+		victory_points = {
+			202 1 
+		}
+		victory_points = {
+			863 3 
+		}
+		victory_points = {
+			267 1 
+		}
+		victory_points = {
+			623 1 
+		}
+		victory_points = {
+			2668 1 
+		}
+		victory_points = {
+			2628 1 
+		}
+		victory_points = {
+			2290 1 
+		}
+		victory_points = {
+			659 5 
+		}
+		victory_points = {
+			1922 2 
+		}
+		victory_points = {
+			2200 1 
+		}
+		victory_points = {
+			282 1 
+		}
+		victory_points = {
+			1133 1 
+		}
+		victory_points = {
+			890 1 
+		}
+		victory_points = {
+			3059 20 
+		}
+		victory_points = {
+			1379 5 
+		}
+		victory_points = {
+			962 5 
+		}
+		victory_points = {
+			2111 5 
+		}
+		victory_points = {
+			753 1 
+		}
+		victory_points = {
+			3058 1 
+		}
+		victory_points = {
+			1962 2 
+		}
+		victory_points = {
+			2460 2 
+		}
+		victory_points = {
+			321 15 
+		}
+		victory_points = {
+			1435 1 
+		}
+		victory_points = {
+			752 1 
+		}
+		victory_points = {
+			1383 2 
+		}
+		victory_points = {
+			579 2 
+		}
+		victory_points = {
+			2579 2 
+		}
+		victory_points = {
+			1928 2 
+		}
+		victory_points = {
+			1405 1 
+		}
+		victory_points = {
+			1606 1 
+		}
+		victory_points = {
+			6683 1 
+		}
+		victory_points = {
+			6811 1 
+		}
+		victory_points = {
+			6677 1 
+		}
+		victory_points = {
+			6654 1 
+		}
+		victory_points = {
+			220 1 
+		}
+		victory_points = {
+			2583 2 
+		}
+		victory_points = {
+			1466 1 
+		}
+		victory_points = {
+			852 1 
+		}
+		victory_points = {
+			547 5 
+		}
+		victory_points = {
+			2624 1 
+		}
+		victory_points = {
+			1520 1 
+		}
+		victory_points = {
+			1113 1 
+		}
+		victory_points = {
+			1184 1 
+		}
+		victory_points = {
+			6783 1 
+		}
+		victory_points = {
+			6807 1 
+		}
+		victory_points = {
+			6729 2 
+		}
+		victory_points = {
+			6753 1 
+		}
+		victory_points = {
+			1209 1 
+		}
+		victory_points = {
+			1853 1 
+		}
+		victory_points = {
+			2278 2 
+		}
+		victory_points = {
+			3312 2 
+		}
+		victory_points = {
+			3303 15 
+		}
+		victory_points = {
+			3300 1 
+		}
+		victory_points = {
+			2027 30 
+		}
+		victory_points = {
+			1489 5 
+		}
+		victory_points = {
+			2263 10 
+		}
+		victory_points = {
+			3432 1 
+		}
+		victory_points = {
+			4421 3 
+		}
+		victory_points = {
+			1907 5 
+		}
+		victory_points = {
+			5383 5 
+		}
+		victory_points = {
+			7562 1
+		}
+		victory_points = {
+			7539 15
+		}
+		victory_points = {
+			3424 1
+		}
+		victory_points = {
+			7583 1
+		}
+		victory_points = {
+			7569 1
+		}
+		victory_points = {
+			7571 1
+		}
+		victory_points = {
+			7599 3
+		}
+		victory_points = {
+			5892 1 
+		}
+		victory_points = {
+			6767 1 
+		}
+		victory_points = {
+			6777 1 
+		}
+		victory_points = {
+			6791 1 
+		}
+		victory_points = {
+			6773 1 
+		}
+		victory_points = {
+			1522 2 
+		}
+		victory_points = {
+			371 10
+		}
+		victory_points = {
+			5035 1 
+		}
+		victory_points = {
+			5043 20
+		}
+		victory_points = {
+			5077 1 
+		}
+		victory_points = {
+			5036 1 
+		}
+		victory_points = {
+			1387 1
+		}
+		victory_points = {
+			3415 5
+		}
+		victory_points = {
+			7516 5 
+		}
+		victory_points = {
+			5363 1
+		}
+		victory_points = {
+			5359 1 
+		}
+		victory_points = {
+			204 1 
+		}
+		victory_points = {
+			4398 2 
+		}
+		victory_points = {
+			5294 5
+		}
+		victory_points = {
+			1708 10 
+		}
+		victory_points = {
+			5296 5
+		}
+		victory_points = {
+			3110 2 
+		}
+		victory_points = {
+			25 25
+		}
+		victory_points = {
+			5217 10
+		}
+		victory_points = {
+			5184 1
+		}
+		victory_points = {
+			831 1 
+		}
+		victory_points = {
+			4391 5
+		}
+		victory_points = {
+			5270 2
+		}
+		victory_points = {
+			5125 1 
+		}
+		victory_points = {
+			4392 2
+		}
+		victory_points = {
+			5211 10
+		}
+		victory_points = {
+			5151 5
+		}
+		victory_points = {
+			5157 3
+		}
+		victory_points = {
+			158 1 
+		}
+		victory_points = {
+			530 1 
+		}
+		victory_points = {
+			5120 1 
+		}
+		victory_points = {
+			5273 1 
+		}
+		victory_points = {
+			5228 1 
+		}
+		victory_points = {
+			5182 5 
+		}
+		victory_points = {
+			4033 2 
+		}
+		victory_points = {
+			590 1 
+		}
+		victory_points = {
+			2720 5 
+		}
+		victory_points = {
+			5223 5
+		}
+		victory_points = {
+			5274 1
+		}
+		victory_points = {
+			629 2 
+		}
+		victory_points = {
+			919 5 
+		}
+		victory_points = {
+			4144 1 
+		}
+		victory_points = {
+			802 1 
+		}
+		victory_points = {
+			5455 1 
+		}
+		victory_points = {
+			4193 5 
+		}
+		victory_points = {
+			4076 10 
+		}
+		victory_points = {
+			3122 1 
+		}
+		victory_points = {
+			4225 1 
+		}
+		victory_points = {
+			4197 5 
+		}
+		victory_points = {
+			172 2 
+		}
+		victory_points = {
+			415 1 
+		}
+		victory_points = {
+			3127 2 
+		}
+		victory_points = {
+			4257 20 
+		}
+		victory_points = {
+			1122 10 
+		}
+		victory_points = {
+			3403 5 
+		}
+		victory_points = {
+			4198 1 
+		}
+		victory_points = {
+			4196 1 
+		}
+		victory_points = {
+			4208 5
+		}
+		victory_points = {
+			1463 1
+		}
+		victory_points = {
+			590 1 
+		}
+		victory_points = {
+			5333 8
+		}
+		victory_points = {
+			3132 5
+		}
+		victory_points = {
+			3132 5
+		}
+		victory_points = {
+			4220 1
+		}
+		victory_points = {
+			3416 1 
+		}
+		victory_points = {
+			551 1 
+		}
+		victory_points = {
+			61 15 
+		}
+		victory_points = {
+			173 1 
+		}
+		victory_points = {
+			484 1 
+		}
+		victory_points = {
+			5054 1 
+		}
+		victory_points = {
+			5032 2 
+		}
+		victory_points = {
+			1075 1 
+		}
+		victory_points = {
+			4974 1 
+		}
+		victory_points = {
+			2771 1 
+		}
+		victory_points = {
+			5103 1 
+		}
+		victory_points = {
+			5096 2 
+		}
+		victory_points = {
+			5038 2 
+		}
+		victory_points = {
+			5046 1 
+		}
+		victory_points = {
+			2755 1 
+		}
+		victory_points = {
+			5008 5 
+		}
+		victory_points = {
+			4968 1 
+		}
+		victory_points = {
+			5005 1 
+		}
+		victory_points = {
+			3240 1 
+		}
+		victory_points = {
+			71 1 
+		}
+		victory_points = {
+			4958 1 
+		}
+		victory_points = {
+			3237 1 
+		}
+		victory_points = {
+			3680 1 
+		}
+		victory_points = {
+			5022 1 
+		}
+		victory_points = {
+			5042 1 
+		}
+		victory_points = {
+			990 1 
+		}
+		victory_points = {
+			4939 1 
+		}
+		victory_points = {
+			4892 5 
+		}
+		victory_points = {
+			4857 1 
+		}
+		victory_points = {
+			4807 1 
+		}
+		victory_points = {
+			4786 1 
+		}
+		victory_points = {
+			1954 1 
+		}
+		victory_points = {
+			555 1 
+		}
+		victory_points = {
+			4695 1 
+		}
+		victory_points = {
+			4739 1 
+		}
+		victory_points = {
+			4689 1 
+		}
+		victory_points = {
+			4691 1 
+		}
+		victory_points = {
+			1560 2 
+		}
+		victory_points = {
+			80 1 
+		}
+		victory_points = {
+			4615 1 
+		}
+		victory_points = {
+			1888 1 
+		}
+		victory_points = {
+			4715 1 
+		}
+		victory_points = {
+			4651 1 
+		}
+		victory_points = {
+			4611 2 
+		}
+		victory_points = {
+			4616 1 
+		}
+		victory_points = {
+			4578 1 
+		}
+		victory_points = {
+			1135 2 
+		}
+		victory_points = {
+			4558 1 
+		}
+		victory_points = {
+			1254 1 
+		}
+		victory_points = {
+			4565 1 
+		}
+		victory_points = {
+			1662 5 
+		}
+		victory_points = {
+			138 2 
+		}
+		victory_points = {
+			4613 1 
+		}
+		victory_points = {
+			4591 15 
+		}
+		victory_points = {
+			4846 2 
+		}
+		victory_points = {
+			4897 1 
+		}
+		victory_points = {
+			4835 1 
+		}
+		victory_points = {
+			4840 1 
+		}
+		victory_points = {
+			4832 2 
+		}
+		victory_points = {
+			4891 2 
+		}
+		victory_points = {
+			468 5 
+		}
+		victory_points = {
+			406 2 
+		}
+		victory_points = {
+			1558 1 
+		}
+		victory_points = {
+			1046 1 
+		}
+		victory_points = {
+			1253 3 
+		}
+		victory_points = {
+			4887 2 
+		}
+		victory_points = {
+			4895 1 
+		}
+		victory_points = {
+			4864 1 
+		}
+		victory_points = {
+			4838 1 
+		}
+		victory_points = {
+			4802 1 
+		}
+		victory_points = {
+			4719 1 
+		}
+		victory_points = {
+			4769 1 
+		}
+		victory_points = {
+			4818 10 
+		}
+		victory_points = {
+			155 3 
+		}
+		victory_points = {
+			1812 2 
+		}
+		victory_points = {
+			77 1 
+		}
+		victory_points = {
+			3077 1 
+		}
+		victory_points = {
+			2637 1 
+		}
+		victory_points = {
+			1775 2 
+		}
+		victory_points = {
+			3383 2 
+		}
+		victory_points = {
+			48 10 
+		}
+		victory_points = {
+			1455 20 
+		}
+		victory_points = {
+			3366 1 
+		}
+		victory_points = {
+			3070 1 
+		}
+		victory_points = {
+			3102 2 
+		}
+		victory_points = {
+			621 1 
+		}
+		victory_points = {
+			1367 1 
+		}
+		victory_points = {
+			2369 2 
+		}
+		victory_points = {
+			1713 10 
+		}
+		victory_points = {
+			1550 3 
+		}
+		victory_points = {
+			240 2 
+		}
+		victory_points = {
+			6918 1 
+		}
+		victory_points = {
+			892 5
+		}
+		victory_points = {
+			3953 5
+		}
+		victory_points = {
+			3967 5
+		}
+		victory_points = {
+			431 2
+		}
+		victory_points = {
+			5876 2
+		}
+		victory_points = {
+			785 2
+		}
+		victory_points = {
+			1523 2 
+		}
+		victory_points = {
+			3092 1 
+		}
+		victory_points = {
+			3588 2 
+		}
+		victory_points = {
+			3585 1 
+		}
+		victory_points = {
+			1043 1 
+		}
+		victory_points = {
+			2760 10 
+		}
+		victory_points = {
+			1146 5 
+		}
+		victory_points = {
+			3574 1 
+		}
+		victory_points = {
+			2779 10 
+		}
+		victory_points = {
+			1381 2 
+		}
+		victory_points = {
+			1919 2 
+		}
+		victory_points = {
+			337 2 
+		}
+		victory_points = {
+			1681 2 
+		}
+		victory_points = {
+			1389 2 
+		}
+		victory_points = {
+			2532 15 
+		}
+		victory_points = {
+			2362 1 
+		}
+		victory_points = {
+			2831 5 
+		}
+		victory_points = {
+			2473 10 
+		}
+		victory_points = {
+			2841 1 
+		}
+		victory_points = {
+			3207 2 
+		}
+		victory_points = {
+			3197 1 
+		}
+		victory_points = {
+			2496 3 
+		}
+		victory_points = {
+			193 1 
+		}
+		victory_points = {
+			615 20 
+		}
+		victory_points = {
+			4292 1 
+		}
+		victory_points = {
+			4307 1 
+		}
+		victory_points = {
+			3213 5 
+		}
+		victory_points = {
+			3617 20
+		}
+		victory_points = {
+			2088 30
+		}
+		victory_points = {
+			3633 1 
+		}
+		victory_points = {
+			1327 5 
+		}
+		victory_points = {
+			1315 1 
+		}
+		victory_points = {
+			5705 1 
+		}
+		victory_points = {
+			3514 2
+		}
+		victory_points = {
+			1905 1 
+		}
+		victory_points = {
+			7678 1 
+		}
+		victory_points = {
+			993 1 
+		}
+		victory_points = {
+			811 5
+		}
+		victory_points = {
+			1352 1 
+		}
+		victory_points = {
+			2373 1 
+		}
+		victory_points = {
+			1186 1 
+		}
+		victory_points = {
+			5439 2 
+		}
+		victory_points = {
+			30 1 
+		}
+		victory_points = {
+			905 1 
+		}
+		victory_points = {
+			3660 1 
+		}
+		victory_points = {
+			3921 2 
+		}
+		victory_points = {
+			3616 2 
+		}
+		victory_points = {
+			3529 1 
+		}
+		victory_points = {
+			3193 3 
+		}
+		victory_points = {
+			1310 3 
+		}
+		victory_points = {
+			3158 3 
+		}
+		victory_points = {
+			463 1 
+		}
+		victory_points = {
+			533 5 
+		}
+		victory_points = {
+			3166 10 
+		}
+		victory_points = {
+			1732 20 
+		}
+		victory_points = {
+			2 1 
+		}
+		victory_points = {
+			3495 1 
+		}
+		victory_points = {
+			3177 1 
+		}
+		victory_points = {
+			3160 1 
+		}
+		victory_points = {
+			3184 35 
+		}
+		victory_points = {
+			126 5 
+		}
+		victory_points = {
+			1804 20 
+		}
+		victory_points = {
+			3471 2 
+		}
+		victory_points = {
+			5604 1 
+		}
+		victory_points = {
+			230 5 
+		}
+		victory_points = {
+			5609 5 
+		}
+		victory_points = {
+			3494 20 
+		}
+		victory_points = {
+			1106 2 
+		}
+		victory_points = {
+			3157 1 
+		}
+		victory_points = {
+			224 1 
+		}
+		victory_points = {
+			2476 1 
+		}
+		victory_points = {
+			1169 1 
+		}
+		victory_points = {
+			3150 1 
+		}
+		victory_points = {
+			2432 1 
+		}
+		victory_points = {
+			5643 1 
+		}
+		victory_points = {
+			3142 1 
+		}
+		victory_points = {
+			1420 2 
+		}
+		victory_points = {
+			2296 1 
+		}
+		victory_points = {
+			5471 1 
+		}
+		victory_points = {
+			775 1 
+		}
+		victory_points = {
+			1296 1 
+		}
+		victory_points = {
+			50 1 
+		}
+		victory_points = {
+			5535 1 
+		}
+		victory_points = {
+			398 1 
+		}
+		victory_points = {
+			5507 1 
+		}
+		victory_points = {
+			1028 1 
+		}
+		victory_points = {
+			1554 1 
+		}
+		victory_points = {
+			87 1 
+		}
+		victory_points = {
+			2038 2 
+		}
+		victory_points = {
+			1032 1 
+		}
+		victory_points = {
+			6622 1 
+		}
+		victory_points = {
+			5473 1 
+		}
+		victory_points = {
+			87 1 
+		}
+		victory_points = {
+			6613 1 
+		}
+		victory_points = {
+			6575 1 
+		}
+		victory_points = {
+			6525 1 
+		}
+		victory_points = {
+			5489 5 
+		}
+		victory_points = {
+			6567 20 
+		}
+		victory_points = {
+			6577 5 
+		}
+		victory_points = {
+			6578 2 
+		}
+		victory_points = {
+			6588 1 
+		}
+		victory_points = {
+			6536 2 
+		}
+		victory_points = {
+			6507 1 
+		}
+		victory_points = {
+			6497 1 
+		}
+		victory_points = {
+			6483 1 
+		}
+		victory_points = {
+			6542 2 
+		}
+		victory_points = {
+			6489 1 
+		}
+		victory_points = {
+			6535 1 
+		}
+		victory_points = {
+			6592 1 
+		}
+		victory_points = {
+			6615 1 
+		}
+		victory_points = {
+			1644 2
+		}
+		victory_points = {
+			167 2
+		}
+		victory_points = {
+			6101 1 
+		}
+		victory_points = {
+			6069 1 
+		}
+		victory_points = {
+			6115 1 
+		}
+		victory_points = {
+			949 1 
+		}
+		victory_points = {
+			1580 1 
+		}
+		victory_points = {
+			119 10 
+		}
+		victory_points = {
+			6152 1 
+		}
+		victory_points = {
+			6184 5 
+		}
+		victory_points = {
+			6143 1 
+		}
+		victory_points = {
+			6094 1 
+		}
+		victory_points = {
+			6050 1 
+		}
+		victory_points = {
+			1631 1 
+		}
+		victory_points = {
+			6415 5 
+		}
+		victory_points = {
+			6398 1 
+		}
+		victory_points = {
+			528 1 
+		}
+		victory_points = {
+			357 1 
+		}
+		victory_points = {
+			6403 1 
+		}
+		victory_points = {
+			6392 1 
+		}
+		victory_points = {
+			5998 1 
+		}
+		victory_points = {
+			1576 2 
+		}
+		victory_points = {
+			2416 2 
+		}
+		victory_points = {
+			2901 20 
+		}
+		victory_points = {
+			2493 5 
+		}
+		victory_points = {
+			6416 1 
+		}
+		victory_points = {
+			6112 1 
+		}
+		victory_points = {
+			6419 1 
+		}
+		victory_points = {
+			1227 1 
+		}
+		victory_points = {
+			1846 1 
+		}
+		victory_points = {
+			2812 1 
+		}
+		victory_points = {
+			6058 10 
+		}
+		victory_points = {
+			6085 20 
+		}
+		victory_points = {
+			2285 1 
+		}
+		victory_points = {
+			1443 1 
+		}
+		victory_points = {
+			2116 5 
+		}
+		victory_points = {
+			588 1 
+		}
+		victory_points = {
+			6323 1 
+		}
+		victory_points = {
+			6269 1 
+		}
+		victory_points = {
+			7071 1 
+		}
+		victory_points = {
+			7025 5
+		}
+		victory_points = {
+			7052 1
+		}
+		victory_points = {
+			7019 1 
+		}
+		victory_points = {
+			6972 1 
+		}
+		victory_points = {
+			6933 1 
+		}
+		victory_points = {
+			6988 1 
+		}
+		victory_points = {
+			6970 2
+		}
+		victory_points = {
+			6882 1 
+		}
+		victory_points = {
+			6881 5 
+		}
+		victory_points = {
+			6864 1 
+		}
+		victory_points = {
+			6973 1 
+		}
+		victory_points = {
+			6911 1 
+		}
+		victory_points = {
+			1798 2 
+		}
+		victory_points = {
+			624 1 
+		}
+		victory_points = {
+			2690 5
+		}
+		victory_points = {
+			2702 1 
+		}
+		victory_points = {
+			7559 1 
+		}
+		victory_points = {
+			634 1 
+		}
+		victory_points = {
+			6368 1 
+		}
+		victory_points = {
+			2124 1 
+		}
+		victory_points = {
+			1906 1 
+		}
+		victory_points = {
+			6336 2 
+		}
+		victory_points = {
+			2053 1 
+		}
+		victory_points = {
+			6319 1 
+		}
+		victory_points = {
+			6297 1 
+		}
+		victory_points = {
+			6314 1 
+		}
+		victory_points = {
+			6271 2 
+		}
+		victory_points = {
+			6258 5 
+		}
+		victory_points = {
+			6326 5 
+		}
+		victory_points = {
+			6276 2 
+		}
+		victory_points = {
+			6279 15 
+		}
+		victory_points = {
+			6234 2 
+		}
+		victory_points = {
+			6227 1 
+		}
+		victory_points = {
+			6191 1 
+		}
+		victory_points = {
+			6233 2 
+		}
+		victory_points = {
+			6223 5 
+		}
+		victory_points = {
+			6195 1 
+		}
+		victory_points = {
+			6159 1 
+		}
+		victory_points = {
+			6182 1 
+		}
+		#
+		victory_points = {
+			2164 1 
+		}
+		victory_points = {
+			1519 1 
+		}
+		victory_points = {
+			1356 1 
+		}
+		victory_points = {
+			16 1 
+		}
+		victory_points = {
+			2822 1 
+		}
+		victory_points = {
+			7102 1 
+		}
+		victory_points = {
+			374 1 
+		}
+		victory_points = {
+			1023 5
+		}
+		victory_points = {
+			3050 1 
+		}
+		victory_points = {
+			1557 1 
+		}
+		victory_points = {
+			1179 1 
+		}
+		victory_points = {
+			1688 1 
+		}
+		victory_points = {
+			147 1 
+		}
+		victory_points = {
+			7209 5
+		}
+		victory_points = {
+			7275 1 
+		}
+		victory_points = {
+			7117 1 
+		}
+		victory_points = {
+			7211 1 
+		}
+		victory_points = {
+			7197 1 
+		}
+		victory_points = {
+			7179 1 
+		}
+		victory_points = {
+			7538 1 
+		}
+		victory_points = {
+			7508 2
+		}
+		victory_points = {
+			7441 1
+		}
+		victory_points = {
+			7454 1
+		}
+		victory_points = {
+			7376 1
+		}
+		victory_points = {
+			1220 1
+		}
+		victory_points = {
+			7124 15
+		}
+		victory_points = {
+			7492 1
+		}
+		victory_points = {
+			7407 2
+		}
+		victory_points = {
+			7438 1
+		}
+		victory_points = {
+			7362 1
+		}
+		victory_points = {
+			7356 1
+		}
+		victory_points = {
+			7473 2
+		}
+		victory_points = {
+			7470 5
+		}
+		victory_points = {
+			7417 1
+		}
+		victory_points = {
+			7414 1
+		}
+		victory_points = {
+			7463 1
+		}
+		victory_points = {
+			7392 1
+		}
+		victory_points = {
+			7422 5
+		}
+		victory_points = {
+			7341 1
+		}
+		victory_points = {
+			7357 3
+		}
+		victory_points = {
+			7273 1
+		}
+		victory_points = {
+			7311 3
+		}
+		victory_points = {
+			7198 1
+		}
+		victory_points = {
+			7310 1
+		}
+		victory_points = {
+			7261 5
+		}
+		victory_points = {
+			7263 2
+		}
+		victory_points = {
+			7233 2
+		}
+		victory_points = {
+			7238 2
+		}
+		victory_points = {
+			7198 1
+		}
+		victory_points = {
+			7354 5
+		}
+		victory_points = {
+			7312 1
+		}
+		victory_points = {
+			7697 2
+		}
+
+	}
+
+	
+}

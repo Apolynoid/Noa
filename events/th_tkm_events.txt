@@ -1,0 +1,1264 @@
+﻿add_namespace = tkm
+# 146季道具政治会议
+country_event = {
+	id = tkm.101
+	title = tkm.101.t
+	desc = tkm.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 堀川雷鼓在会议上维持优势
+	option = {
+		name = tkm.101.1
+		ai_chance = {
+			base = 7
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		hidden_effect = {
+			complete_national_focus = TKM_ku_chuan_lei_gu_de_ji_hua
+			news_event = {
+				id = tkm.102
+				days = 5
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	# 九十九八桥取得了会议的主导
+	option = {
+		name = tkm.101.2
+		ai_chance = {
+			base = 0
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = fandong
+			elections_allowed = no
+		}
+		lobbyincrease = yes
+		lobbyincrease = yes
+		hidden_effect = {
+			complete_national_focus = TKM_jiu_shi_jiu_ba_qiao_de_ge_ming
+			news_event = {
+				id = tkm.103
+				days = 5
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	# 多多良小伞出乎意料的胜出
+	option = {
+		name = tkm.101.3
+		ai_chance = {
+			base = 0
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.2
+		}
+		promote_character = {
+			character = TKM_kog
+			ideology = qinwai_type
+		}
+		hidden_effect = {
+			complete_national_focus = TKM_duo_duo_liang_xiao_san_de_gai_ge
+			news_event = {
+				id = tkm.104
+				days = 5
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+# TKM_raiko赢得TKM领导权
+news_event = {
+	id = tkm.102
+	title = tkm.102.t
+	desc = tkm.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = tkm.102.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = tkm.102.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.102.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# TKM_yatsuhashi赢得TKM领导权
+news_event = {
+	id = tkm.103
+	title = tkm.103.t
+	desc = tkm.103.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = tkm.103.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = tkm.103.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.103.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# TKM_kog赢得TKM领导权
+news_event = {
+	id = tkm.104
+	title = tkm.104.t
+	desc = tkm.104.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = tkm.104.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = tkm.104.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.104.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# TKM希望与我们进行合作
+country_event = {
+	id = tkm.105
+	title = tkm.105.t
+	desc = tkm.105.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 我们接受这笔交易
+	option = {
+		name = tkm.105.1
+		army_experience = 40
+		custom_effect_tooltip = TKM_deal_MRS_tt
+		hidden_effect = {
+			TKM = {
+				set_variable = {
+					TKM_magic_forest_cooperator = ROOT
+				}
+				country_event = tkm.106
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				tag = MRS
+			}
+		}
+	}
+
+	# 我们仅靠自己就能赢得战争
+	option = {
+		name = tkm.105.2
+		hidden_effect = {
+			set_country_flag = TKM_refuse_to_cooperate_flag
+			TKM = {
+				country_event = tkm.107
+			}
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 0
+				tag = ALI
+			}
+			modifier = {
+				factor = 0
+				tag = NAR
+			}
+		}
+	}
+}
+
+# FROM同意了我方提出的条件
+country_event = {
+	id = tkm.106
+	title = tkm.106.t
+	desc = tkm.106.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.106.1
+		custom_effect_tooltip = TKM_deal_TKM_tt
+	}
+}
+
+# FROM拒绝了我方提出的条件
+country_event = {
+	id = tkm.107
+	title = tkm.107.t
+	desc = tkm.107.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.107.1
+		hidden_effect = {
+			clr_country_flag = TKM_is_negotiating_flag
+		}
+	}
+}
+
+# 来自TKM的武器援助
+country_event = {
+	id = tkm.108
+	title = tkm.108.t
+	desc = tkm.108.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.108.1
+		effect_tooltip = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = 200
+				producer = TKM
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				amount = 100
+				producer = TKM
+			}
+		}
+	}
+}
+
+# 来自TKM的军事顾问
+country_event = {
+	id = tkm.109
+	title = tkm.109.t
+	desc = tkm.109.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.109.1
+		effect_tooltip = {
+			add_ideas = TKM_TKM_jun_shi_gu_wen_idea
+		}
+	}
+}
+
+# 来自TKM的工业援助
+country_event = {
+	id = tkm.110
+	title = tkm.110.t
+	desc = tkm.110.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.110.1
+		effect_tooltip = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	}
+}
+
+# 向TKM转交高能灵气开采权
+country_event = {
+	id = tkm.111
+	title = tkm.111.t
+	desc = tkm.111.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		OR = {
+			tag = MRS
+			tag = ALI
+			tag = NAR
+		}
+		has_global_flag = MRS_civil_war_end_flag
+		check_variable = {
+			TKM.TKM_magic_forest_cooperator = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = tkm.111.1
+		hidden_effect = {
+			TKM = {
+				country_event = tkm.112
+				country_event = {
+					id = tkm.113
+					days = 2190
+				}
+			}
+		}
+		give_resource_rights = {
+			receiver = TKM
+			state = 354
+			resources = { energy }
+		}
+		give_resource_rights = {
+			receiver = TKM
+			state = 162
+			resources = { energy }
+		}
+	}
+}
+
+# TKM_magic_forest_cooperator向我们转交资源开采权
+country_event = {
+	id = tkm.112
+	title = tkm.112.t
+	desc = tkm.112.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.112.1
+		effect_tooltip = {
+			var:TKM_magic_forest_cooperator = {
+				give_resource_rights = {
+					receiver = TKM
+					state = 354
+					resources = { energy }
+				}
+				give_resource_rights = {
+					receiver = TKM
+					state = 162
+					resources = { energy }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tkm.113
+	title = tkm.113.t
+	desc = tkm.113.d
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		if = {
+			limit = {
+				TKM = {
+					OR = {
+						AND = {
+							has_resources_rights = {
+								state = 354
+								resources = { energy }
+							}
+							NOT = {
+								owns_state = 354
+							}
+						}
+						AND = {
+							has_resources_rights = {
+								state = 162
+								resources = { energy }
+							}
+							NOT = {
+								owns_state = 162
+							}
+						}
+					}
+				}
+			}
+			TKM = {
+				country_event = tkm.114
+			}
+		}
+	}
+}
+
+# 资源开采权到期
+country_event = {
+	id = tkm.114
+	title = tkm.114.t
+	desc = tkm.114.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.114.1
+		remove_resource_rights = 354
+		remove_resource_rights = 162
+	}
+}
+
+# HUM TKM希望与我们达成贸易协定
+country_event = {
+	id = tkm.115
+	title = tkm.115.t
+	desc = tkm.115.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 这将是双赢的交易
+	option = {
+		name = tkm.115.1
+		swap_ideas = {
+			remove_idea = hum_TKM_de_bao_hu_idea
+			add_idea = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+		}
+		hidden_effect = {
+			TKM = {
+				country_event = tkm.116
+				country_event = {
+					id = tkm.118
+					days = 365
+				}
+			}
+		}
+		give_resource_rights = {
+			receiver = TKM
+			state = 539
+			resources = { energy }
+		}
+	}
+
+	# 我们不能接受
+	option = {
+		name = tkm.115.2
+		hidden_effect = {
+			TKM = {
+				country_event = tkm.117
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# HUM同意了我们的提议
+country_event = {
+	id = tkm.116
+	title = tkm.116.t
+	desc = tkm.116.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.116.1
+		effect_tooltip = {
+			HUM = {
+				give_resource_rights = {
+					receiver = TKM
+					state = 539
+					resources = { energy }
+				}
+			}
+		}
+	}
+}
+
+# HUM拒绝了我们的提议
+country_event = {
+	id = tkm.117
+	title = tkm.117.t
+	desc = tkm.117.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.117.1
+	}
+}
+
+country_event = {
+	id = tkm.118
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				TKM = {
+					has_resources_rights = {
+						state = 539
+						resources = { energy }
+					}
+					NOT = {
+						owns_state = 539
+					}
+				}
+			}
+			TKM = {
+				country_event = tkm.119
+			}
+		}
+	}
+}
+
+# 资源开采权到期
+country_event = {
+	id = tkm.119
+	title = tkm.119.t
+	desc = tkm.119.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.119.1
+		remove_resource_rights = 539
+	}
+}
+
+# 偿付战争债券
+country_event = {
+	id = tkm.120
+	title = tkm.120.t
+	desc = tkm.120.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = TKM
+		NOT = {
+			has_dynamic_modifier = {
+				modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+			}
+		}
+		has_country_flag = TKM_war_bond_to_pay_flag
+		has_war = no
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			TKM_pay_off_war_bonds = yes
+		}
+	}
+
+	option = {
+		name = tkm.120.1
+		effect_tooltip = {
+			TKM_pay_off_war_bonds = yes
+		}
+	}
+}
+
+# TKM向SBK宣战
+news_event = {
+	id = tkm.121
+	title = tkm.121.t
+	desc = tkm.121.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# TKM
+	option = {
+		name = tkm.121.1
+		trigger = {
+			original_tag = TKM
+		}
+	}
+
+	# SBK
+	option = {
+		name = tkm.121.2
+		trigger = {
+			original_tag = SBK
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.121.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TKM
+					original_tag = SBK
+				}
+			}
+		}
+	}
+}
+
+# SBK接受TKM的保护
+news_event = {
+	id = tkm.122
+	title = tkm.122.t
+	desc = tkm.122.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# TKM
+	option = {
+		name = tkm.122.1
+		trigger = {
+			original_tag = TKM
+		}
+	}
+
+	# SBK
+	option = {
+		name = tkm.122.2
+		trigger = {
+			original_tag = SBK
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.122.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TKM
+					original_tag = SBK
+				}
+			}
+		}
+	}
+}
+
+# SEJ TKM请求加入同盟
+country_event = {
+	id = tkm.123
+	title = tkm.123.t
+	desc = tkm.123.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.123.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = TKM
+		}
+		TKM = {
+			country_event = noa_gen.101
+		}
+		hidden_effect = {
+			news_event = {
+				id = tkm.125
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = tkm.123.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			TKM = {
+				country_event = tkm.124
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = tkm.124
+	title = tkm.124.t
+	desc = tkm.124.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.124.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = TKM_jia_ru_xia_ke_shang_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			set_country_flag = TKM_gekokujyo_movement_refused_flag
+		}
+	}
+}
+
+# TKM加入下克上革命运动
+news_event = {
+	id = tkm.125
+	title = tkm.125.t
+	desc = tkm.125.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = tkm.125.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = tkm.125.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.125.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# TKM宣布创建南雾之湖革命同盟
+news_event = {
+	id = tkm.126
+	title = tkm.126.t
+	desc = tkm.126.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = tkm.126.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = tkm.126.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.126.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# SBK TKM公开支持国内激进派
+country_event = {
+	id = tkm.127
+	title = tkm.127.t
+	desc = tkm.127.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.127.1
+		effect_tooltip = {
+			TKM_SBK_begin_to_be_influenced = yes
+		}
+	}
+}
+
+# 干涉SBK的尝试失败
+country_event = {
+	id = tkm.128
+	title = tkm.128.t
+	desc = tkm.128.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.128.1
+	}
+}
+
+# SBK TKM要求我们进行公投
+country_event = {
+	id = tkm.129
+	title = tkm.129.t
+	desc = tkm.129.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 我们最好接受她们的要求
+	option = {
+		name = tkm.129.1
+		TKM = {
+			puppet = SBK
+			hidden_effect = {
+				country_event = tkm.130
+				news_event = {
+					id = tkm.122
+					days = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = SBK.party_popularity@fandong
+			}
+		}
+	}
+
+	# 我们绝不向叛乱分子屈服!
+	option = {
+		name = tkm.129.2
+		trigger = {
+			fandong < 0.5
+		}
+		TKM = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = SBK
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				country_event = tkm.131
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = TKM
+					ratio > 1
+				}
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = TKM
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = {
+					tag = TKM
+					ratio < 0.3
+				}
+			}
+		}
+	}
+}
+
+# SBK同意接受我们的保护
+country_event = {
+	id = tkm.130
+	title = tkm.130.t
+	desc = tkm.130.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.130.1
+		effect_tooltip = {
+			puppet = SBK
+		}
+	}
+}
+
+# SBK拒绝公投
+country_event = {
+	id = tkm.131
+	title = tkm.131.t
+	desc = tkm.131.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.131.1
+		create_wargoal = {
+			target = SBK
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+# SBK TKM向我们提出保护提议
+country_event = {
+	id = tkm.132
+	title = tkm.132.t
+	desc = tkm.132.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 我们最好接受她们的要求
+	option = {
+		name = tkm.132.1
+		TKM = {
+			SBK = {
+				subject_level4 = yes
+				add_ideas = TKM_jiu_shi_jiu_jing_ji_bao_hu_idea
+			}
+			hidden_effect = {
+				country_event = tkm.133
+				news_event = {
+					id = tkm.122
+					days = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	# 我们绝不束手就擒
+	option = {
+		name = tkm.132.2
+		TKM = {
+			effect_tooltip = {
+				create_wargoal = {
+					target = SBK
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				country_event = tkm.134
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				strength_ratio = {
+					tag = TKM
+					ratio > 1
+				}
+			}
+			modifier = {
+				factor = 0.2
+				strength_ratio = {
+					tag = TKM
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				factor = 0.1
+				strength_ratio = {
+					tag = TKM
+					ratio < 0.3
+				}
+			}
+		}
+	}
+}
+
+# SBK同意接受我们的保护
+country_event = {
+	id = tkm.133
+	title = tkm.133.t
+	desc = tkm.133.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.133.1
+		effect_tooltip = {
+			SBK = {
+				subject_level4 = yes
+				add_ideas = TKM_jiu_shi_jiu_jing_ji_bao_hu_idea
+			}
+		}
+	}
+}
+
+# SBK拒绝接受我们的保护
+country_event = {
+	id = tkm.134
+	title = tkm.134.t
+	desc = tkm.134.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.134.1
+		create_wargoal = {
+			target = SBK
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+# TKM希望我们解除贸易限制
+country_event = {
+	id = tkm.135
+	title = tkm.135.t
+	desc = tkm.135.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 这对我们双方都有好处
+	option = {
+		name = tkm.135.1
+		TKM_cancel_trade_limit = yes
+		SCA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = TKM_jie_chu_mao_yi_xian_zhi_op
+			}
+		}
+		NMS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = TKM_jie_chu_mao_yi_xian_zhi_op
+			}
+		}
+		TKM = {
+			hidden_effect = {
+				country_event = tkm.136
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = TKM
+					has_opinion = {
+						target = TKM
+						value < -100
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = TKM
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_changemaker = no
+			}
+		}
+	}
+
+	# 我们不能承受激怒斯卡雷特与命莲寺的风险
+	option = {
+		name = tkm.135.2
+		TKM = {
+			hidden_effect = {
+				country_event = tkm.137
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				AND = {
+					TKM_THIS_no_need_to_worry_about_SCA = yes
+					TKM_THIS_no_need_to_worry_about_NMS = yes
+				}
+			}
+			modifier = {
+				factor = 0.3
+				TKM_THIS_no_need_to_worry_about_SCA = yes
+			}
+			modifier = {
+				factor = 0.3
+				TKM_THIS_no_need_to_worry_about_NMS = yes
+			}
+			modifier = {
+				factor = 0.5
+				is_changemaker = yes
+			}
+		}
+	}
+}
+
+# FROM同意解除贸易限制
+country_event = {
+	id = tkm.136
+	title = tkm.136.t
+	desc = tkm.136.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.136.1
+		effect_tooltip = {
+			FROM = {
+				TKM_cancel_trade_limit = yes
+			}
+		}
+	}
+}
+
+# FROM拒绝解除贸易限制
+country_event = {
+	id = tkm.137
+	title = tkm.137.t
+	desc = tkm.137.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = tkm.137.1
+	}
+}
+
+# 战火蔓延南雾之湖 TKM vs NMS-SCA
+
+# 战火蔓延南雾之湖/南雾之湖战争扩大 TKM vs NMS
+
+# 战火蔓延南雾之湖/南雾之湖战争扩大 TKM vs SCA
+
+# 魔力转换装置故障
+country_event = {
+	id = tkm.141
+	title = tkm.141.t
+	desc = tkm.141.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				TKM_industrial_feature_level = 0
+			}
+			set_variable = {
+				TKM_military_feature_level = 0
+			}
+		}
+	}
+
+	option = {
+		name = tkm.141.1
+		add_political_power = -100
+		custom_effect_tooltip = TKM_energy_level_0_tt
+	}
+}
+
+# temp HUM 消debuff
+country_event = {
+	id = tkm.201
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		remove_ideas = hum_TKM_de_bao_hu_idea
+		remove_ideas = hum_xiu_ding_hou_de_yu_TKM_xie_yi_idea
+		remove_ideas = hum_fu_quan_zhan_zheng_de_yin_ying_idea
+		remove_ideas = hum_yao_guai_de_ying_xiang_idea
+		remove_ideas = hum_cai_fa_idea
+	}
+}

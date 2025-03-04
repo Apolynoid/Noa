@@ -1,0 +1,35 @@
+# 妖精暴动
+SCA_yao_jing_bao_dong = {
+	icon = generic_crisis
+
+	scripted_gui = SCA_fairy_rebellion_ui
+
+	priority = 96
+
+	allowed = {
+		original_tag = SCA
+	}
+
+	visible = {
+		has_country_flag = SCA_rebellion_system_flag
+	}
+
+	visible_when_empty = yes
+}
+
+# 帝国科学院
+SCA_di_guo_ke_xue_yuan = {
+	icon = NOR_monarchist_prep
+
+	priority = 95
+
+	allowed = {
+		original_tag = SCA
+	}
+
+	visible = {
+		has_completed_focus = SCA_ji_shu_jiao_liu
+	}
+
+	visible_when_empty = yes
+}

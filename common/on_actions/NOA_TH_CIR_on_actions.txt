@@ -1,0 +1,35 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = SCA
+					FROM = {
+						has_idea = CIR_fan_scarlet_xie_yue_idea
+					}
+				}
+				# show events and trigger mission
+				every_country = {
+					limit = {
+						has_idea = CIR_fan_scarlet_xie_yue_idea
+					}
+					country_event = cir.104
+				}
+			}
+			if = {
+				limit = {
+					original_tag = CIR
+					FROM = {
+						original_tag = SCA
+					}
+					LIL = {
+						has_country_flag = CIR_join_attack_on_SCA_flag
+					}
+				}
+				LIL = {
+					country_event = cir.108
+				}
+			}
+		}
+	}
+}

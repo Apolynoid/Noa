@@ -1,0 +1,188 @@
+SCA_before_rebellion_end = {
+	name = "SCA before the end of rebellion"
+	desc = "quick end of rebellion"
+
+	allowed = {
+		original_tag = SCA
+	}
+	enable = {
+		has_country_flag = SCA_remilia_been_assasinated_flag
+	}
+	abort = {
+		has_country_flag = SCA_fairy_rebellion_flag
+		NOT = {
+			has_country_flag = SCA_rebellion_system_flag
+		}
+	}
+
+	ai_national_focuses = {
+		SCA_zhao_kai_she_zheng_hui_yi
+		SCA_chu_li_pan_luan
+		SCA_chang_shi_huan_he_guan_xi
+		SCA_tou_zi_fu_li_xiang_mu
+		SCA_qiang_diao_tuan_jie
+		SCA_fan_si_xian_zhuang
+		SCA_gai_ge_guan_liao_xi_tong
+		# military
+		SCA_gai_ge_di_guo_lu_jun
+		SCA_di_guo_jun_shi_xue_yuan
+		SCA_fang_yu_ce_lue
+		SCA_ren_yong_zhong_cheng_jun_guan
+		SCA_que_bao_jun_dui_zhong_cheng
+		# economic
+		SCA_di_guo_gong_ye_jian_she
+		SCA_gong_ye_tou_zi_ji_hua
+		SCA_gong_ye_jian_she_tou_zi
+		SCA_min_yong_gong_chang_jian_she
+		SCA_ji_xu_tou_zi_hong_mo_guan
+		SCA_jun_yong_gong_chang_jian_she
+		# continue politics
+		SCA_di_guo_de_xin_shi_dai
+		SCA_ji_xu_remilia_de_tong_zhi
+		SCA_jia_qiang_zhong_yang_ji_quan
+		SCA_jiu_zhi_xu_de_rong_yao
+		SCA_ying_dui_wei_xie
+		# continue military
+		SCA_kuo_zhang_di_guo_wei_dui
+		SCA_fang_yu_gong_shi_jian_she
+		SCA_yao_guai_shan_fang_xian
+		SCA_jing_tai_zhan_zheng
+		# continue economic
+		SCA_di_guo_tie_lu_ju
+		SCA_gong_ye_ji_shu_tou_zi
+		SCA_sheng_chan_ji_shu_jin_bu
+		SCA_di_guo_gong_ye_ji_shu_bu
+		SCA_da_kong_jian_jing_ji
+		SCA_zhan_zheng_zhun_bei
+		SCA_di_guo_zi_yuan_guan_li_ju
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = admiral
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -10000
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -10000
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+
+SCA_after_rebellion_end = {
+	name = "SCA after the end of rebellion"
+	desc = "some minor fix"
+
+	allowed = {
+		original_tag = SCA
+	}
+	enable = {
+		has_country_flag = SCA_fairy_rebellion_flag
+		NOT = {
+			has_country_flag = SCA_rebellion_system_flag
+		}
+	}
+
+	ai_national_focuses = {
+		SCA_zhao_kai_she_zheng_hui_yi
+		SCA_chu_li_pan_luan
+		SCA_chang_shi_huan_he_guan_xi
+		SCA_tou_zi_fu_li_xiang_mu
+		SCA_qiang_diao_tuan_jie
+		SCA_fan_si_xian_zhuang
+		SCA_gai_ge_guan_liao_xi_tong
+		SCA_xue_jian_xing_zheng_kai_zhi
+		# military
+		SCA_gai_ge_di_guo_lu_jun
+		SCA_di_guo_jun_shi_xue_yuan
+		SCA_fang_yu_ce_lue
+		SCA_di_guo_jun_xie_bu
+		SCA_ren_yong_jie_chu_jun_guan
+		SCA_jun_shi_li_lun_yan_jiu
+		# economic
+		SCA_di_guo_gong_ye_jian_she
+		SCA_gong_ye_tou_zi_ji_hua
+		SCA_gong_ye_jian_she_tou_zi
+		SCA_min_yong_gong_chang_jian_she
+		SCA_ji_xu_tou_zi_hong_mo_guan
+		SCA_jun_yong_gong_chang_jian_she
+		# continue politics
+		SCA_di_guo_de_xin_shi_dai
+		SCA_ji_xu_remilia_de_tong_zhi
+		SCA_jia_qiang_zhong_yang_ji_quan
+		SCA_jiu_zhi_xu_de_rong_yao
+		SCA_ying_dui_wei_xie
+		# continue military
+		SCA_kuo_zhang_di_guo_wei_dui
+		SCA_fang_yu_gong_shi_jian_she
+		SCA_yao_guai_shan_fang_xian
+		SCA_jing_tai_zhan_zheng
+		# continue economic
+		SCA_di_guo_tie_lu_ju
+		SCA_gong_ye_ji_shu_tou_zi
+		SCA_sheng_chan_ji_shu_jin_bu
+		SCA_di_guo_gong_ye_ji_shu_bu
+		SCA_da_kong_jian_jing_ji
+		SCA_zhan_zheng_zhun_bei
+		SCA_di_guo_zi_yuan_guan_li_ju
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		SCA_mli = 30000
+		SCA_rem = 20000
+		SCA_flan = 10000
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}

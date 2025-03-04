@@ -1,0 +1,26 @@
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = LIL
+					has_war_with = SCA
+					SCA = {
+						has_war_with = CIR
+					}
+					CIR = {
+						exists = yes
+						is_subject = no
+					}
+				}
+			}
+			# ready to exile
+			LIL = {
+				become_exiled_in = {
+					target = CIR
+					# legitimacy = 60
+				}
+			}
+		}
+	}
+}

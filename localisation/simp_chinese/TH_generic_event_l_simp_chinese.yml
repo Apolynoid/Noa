@@ -1,0 +1,21 @@
+﻿l_simp_chinese:
+noa_gen.101.t:0 "[FROM.GetName]同意我们加入阵营"
+noa_gen.101.d:0 "来自[FROM.GetName]的消息，[FROM.GetName]同意我们加入阵营。"
+noa_gen.101.1:0 "我们将并肩作战"
+
+noa_gen.102.t:0 "[FROM.GetName]正在策划对我们的进攻"
+noa_gen.102.d:0 "[FROM.GetName]正在向我国边境方向调动军队，显然她们正准备对我们进攻！"
+noa_gen.102.1:0 "我们必须为此做好准备"
+
+noa_gen.103.t:0 "[FROM.GetName]邀请我们加入阵营"
+noa_gen.103.d:0 "来自[FROM.GetName]的消息，考虑到幻想乡的动荡局势，[FROM.GetName]希望我们能加入她们的阵营。"
+noa_gen.103.1:0 "我们将齐心协力"
+noa_gen.103.2:0 "我们不能冒这种风险"
+
+noa_gen.104.t:0 "[FROM.GetName]接受了我们的邀请"
+noa_gen.104.d:0 "来自[FROM.GetName]的消息，她们接受了我们的邀请，现在她们是我们阵营中的一员了。"
+noa_gen.104.1:0 "我们将在风暴中同舟共济"
+
+noa_gen.105.t:0 "[FROM.GetName]拒绝了我们的邀请"
+noa_gen.105.d:0 "来自[FROM.GetName]的消息，她们拒绝了我们的邀请。"
+noa_gen.105.1:0 "可惜"

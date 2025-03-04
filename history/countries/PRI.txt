@@ -1,0 +1,101 @@
+﻿capital = 146
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
+        lingliliushuixian = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+    
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+            
+    }
+    
+}
+143.7.1={
+    oob = "PRI_143"
+    # set_research_slots = 4
+    
+    add_ideas = {
+        Ghost
+        Village
+        open2
+        hawk0
+        sc_rule
+    }
+    #########调整
+#    set_stability = 0.6
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 30
+        guli = 65
+        neworder = 0
+        oldorder = 0
+        fandong = 5
+    }
+}
+146.1.1={
+    oob = "PRI_146"
+    # set_research_slots = 4
+    
+    add_ideas = {
+        Ghost
+        Village
+        open2
+        hawk0
+        sc_rule
+    }
+    add_ideas = {
+        SCA_puppet_SCA_shi_li_quan_idea
+    }
+    #########调整
+#    set_stability = 0.6
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 25
+        guli = 70
+        neworder = 0
+        oldorder = 0
+        fandong = 5
+    }
+}

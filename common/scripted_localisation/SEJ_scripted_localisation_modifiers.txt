@@ -1,0 +1,42 @@
+defined_text = { 
+	name = SEJ_get_gekokujyo_movement_tt
+	text = {
+		trigger = {
+			original_tag = SEJ
+		}
+		localization_key = SEJ_faction_leader_tt
+	}
+	text = {
+		localization_key = SEJ_faction_member_tt
+	}
+}
+
+defined_text = { 
+	name = SEJ_get_leader_military_buff_tt
+	text = {
+		trigger = {
+			SEJ = {
+				has_completed_focus = SEJ_qiang_hua_ge_ming_tong_meng
+			}
+		}
+		localization_key = SEJ_military_leader_buff_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = SEJ_get_member_military_buff_tt
+	text = {
+		trigger = {
+			SEJ = {
+				has_completed_focus = SEJ_qiang_hua_ge_ming_tong_meng
+			}
+		}
+		localization_key = SEJ_military_member_buff_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}

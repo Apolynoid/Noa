@@ -1,0 +1,38 @@
+technology_sharing_group = {
+	id = youkai_mountain_tech_sharing
+	name = youkai_mountain_tech_sharing_name
+	desc = youkai_mountain_tech_sharing_desc
+	picture = GFX_youkai_mountain_tech_sharing
+
+	research_sharing_per_country_bonus = 0.1
+
+	available = {
+		is_in_faction = yes
+	}
+}
+
+technology_sharing_group = {
+	id = scarlet_imperial_academy
+	name = scarlet_imperial_academy_name
+	desc = scarlet_imperial_academy_desc
+	picture = GFX_scarlet_imperial_academy
+
+	research_sharing_per_country_bonus = 0.05
+
+	available = {
+		is_in_faction_with = SCA
+	}
+}
+
+technology_sharing_group = {
+	id = gekokujyo_tech_mutual_aid_committee
+	name = gekokujyo_tech_mutual_aid_committee_name
+	desc = gekokujyo_tech_mutual_aid_committee_desc
+	picture = GFX_gekokujyo_tech_mutual_aid_committee
+
+	research_sharing_per_country_bonus = 0.05
+
+	available = {
+		is_in_faction_with = SEJ
+	}
+}

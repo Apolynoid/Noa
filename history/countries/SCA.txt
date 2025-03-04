@@ -1,0 +1,157 @@
+﻿capital = 122
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
+
+        #专用辅助
+        magic_energy1 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        ma_shield1 = 1
+
+        #陆军学说
+
+        #空军
+        magic_scout1 = 1
+        ma_fighter1 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        jiami137 = 1
+        lingganleida142 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jijianjianzao140 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+
+        #种族
+            
+    }
+}
+146.1.1={
+    set_country_flag = bunengqie_fandong
+    oob = "SCA_146"
+    # give_guarantee = GRS
+    set_major = yes
+    drop_cosmetic_tag = yes
+    create_faction = feihongtixi
+    add_to_faction = WAK
+    add_to_faction = PRI	
+    
+    add_ideas={
+        can_create_faction_idea
+    	Fairy
+        sub_Pri_youkai
+        Empire
+        close1
+        hawk1
+        sc_rule
+    }
+    add_ideas = {
+        hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+        SCA_yao_jing_bu_man_idea
+        SCA_di_xiao_de_xing_zheng_ti_xi_idea
+        SCA_luo_hou_de_jun_shi_li_lun_idea
+    }
+
+    set_variable = { SCA_insufficient_war_preparation = -0.4 }
+
+    add_dynamic_modifier = {
+        modifier = SCA_bu_chong_fen_de_zhan_zheng_zhun_bei_idea
+    }
+
+    PRI = {
+        subject_level4 = yes
+    }
+    GRS = {
+        subject_level4 = yes
+    }
+    WAK = {
+        subject_level4 = yes
+    }
+        
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        guli = 60
+        neworder = 20
+        oldorder = 0
+        fandong = 0
+    }
+
+
+    add_equipment_to_stockpile = {
+        type = ma_fighter148
+        amount = 150
+        producer = SCA
+    }
+
+    recruit_character = SCA_rem
+    recruit_character = SCA_flan
+    recruit_character = SCA_kak
+    recruit_character = SCA_pachy
+    recruit_character = SCA_mli
+    recruit_character = SCA_sky
+    recruit_character = SCA_council_leader
+
+    promote_character = {
+        character = SCA_rem
+        ideology = guli_type
+    }
+
+    country_event = {
+        id = sca.101
+        days = 15
+    }
+
+    country_event = {
+        id = sca.102
+        days = 60
+    }
+
+    news_event = {
+        id = sca.103
+        days = 65
+    }
+
+    news_event = {
+        id = sca.109
+        days = 750
+    }
+}

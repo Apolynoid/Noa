@@ -1,0 +1,230 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "常备编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_cavalry = { x = 0 y = 3 }
+	}
+	support = {
+
+	}
+}
+
+
+units = {
+	division = {
+		name = "常备编制"
+		location = 1238
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1917
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 738
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 206
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1204
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1917
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1238
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 206
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1204
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1917
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 738
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 245
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1238
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1917
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 738
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 245
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1238
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 206
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 245
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1238
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 206
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 738
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 245
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "常备编制"
+		location = 4281
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 4281
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1115
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1115
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1204
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常备编制"
+		location = 1204
+		division_template = "常备编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}

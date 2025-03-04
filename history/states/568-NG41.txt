@@ -1,0 +1,25 @@
+state={
+	id=568
+	name="STATE_568"
+	provinces={
+		157 209 763 1292 1360 1688 1727 1865 2074 2458 2936 2944 
+	}
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s5
+	manpower=205634
+	buildings_max_level_factor=1.000
+	local_supplies=2.5.000
+}

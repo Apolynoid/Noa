@@ -1,0 +1,492 @@
+shared_focus = {
+  id = MEL_Shared_Central_Refuse_Disposal
+  icon = GFX_goal_generic_construction2
+  cost = 5.00
+  x = 6
+  y = 0
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  ai_will_do = {
+    factor = 25
+  }
+  completion_reward = {
+    add_offsite_building = { type = industrial_complex level = 1 }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_civil_refuse_collection
+  icon = GFX_focus_generic_africa_factory
+  cost = 5.00
+  prerequisite = {
+    focus = MEL_Shared_Central_Refuse_Disposal
+  }
+  x = -2
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  ai_will_do = {
+    factor = 25
+  }
+  relative_position_id = MEL_Shared_Central_Refuse_Disposal
+  completion_reward = {
+    add_offsite_building = { type = industrial_complex level = 1 }
+    add_ideas = { MEL_Shared_civil_refuse_collection_idea }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_organic_refuse_focus
+  icon = GFX_goal_generic_construction
+  cost = 5.00
+  prerequisite = {
+    focus = MEL_Shared_civil_refuse_collection
+  }
+  x = 0
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_civil_refuse_collection
+  completion_reward = {
+    PO_add4 = yes
+    OL_minus3 = yes
+    swap_ideas = {
+      remove_idea = MEL_Shared_civil_refuse_collection_idea
+      add_idea = MEL_Shared_civil_refuse_collection_idea_2
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Methane
+  icon = GFX_focus_research2
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_organic_refuse_focus
+  }
+  mutually_exclusive = {
+    focus = MEL_Shared_Crematory
+  }
+  x = 2
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_organic_refuse_focus
+  completion_reward = {
+    PO_add6 = yes
+    swap_ideas = {
+      remove_idea = MEL_Shared_civil_refuse_collection_idea_2
+      add_idea = MEL_Shared_civil_refuse_collection_Methane_idea
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_garbage_chemistry
+  icon = GFX_goal_tfv_generic_tech_sharing
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Methane
+  }
+  x = 1
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Methane
+  completion_reward = {
+    OL_minus3 = yes
+    add_offsite_building = { type = gas_factory level = 3 }
+    add_tech_bonus = {
+      name = MEL_Shared_garbage_chemistry
+      bonus = 1
+      uses = 2
+      category = oil_res
+      category = gas_res
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_inorganic_refuse_focus
+  icon = GFX_goal_generic_construct_civilian
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_civil_refuse_collection
+  }
+  x = 5
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_civil_refuse_collection
+  completion_reward = {
+    OL_minus2 = yes
+    add_offsite_building = { type = rock_factory level = 1 }
+    add_offsite_building = { type = metal_factory level = 1 }
+    add_tech_bonus = {
+      name = MEL_Shared_inorganic_refuse_focus
+      bonus = 1
+      uses = 2
+      category = crystal_res
+      category = metal_res
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_military_refuse_center
+  icon = GFX_goal_generic_small_arms
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Central_Refuse_Disposal
+  }
+  x = 6
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Central_Refuse_Disposal
+  completion_reward = {
+    add_offsite_building = { type = arms_factory level = 1 }
+    add_ideas = { MEL_Shared_military_refuse_center_idea }
+    add_tech_bonus = {
+      name = MEL_Shared_Ammonia
+      bonus = 3
+      uses = 1
+      category = mortar
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Crematory
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_organic_refuse_focus
+  }
+  mutually_exclusive = {
+    focus = MEL_Shared_Methane
+  }
+  x = -2
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_organic_refuse_focus
+  completion_reward = {
+    PO_minus3 = yes
+    add_offsite_building = { type = industrial_complex level = 2 }
+    swap_ideas = {
+      remove_idea = MEL_Shared_civil_refuse_collection_idea_2
+      add_idea = MEL_Shared_civil_refuse_collection_Crematory_idea
+    }
+    
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Ammonia
+  icon = GFX_goal_generic_consumer_goods
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Crematory
+    focus = MEL_Shared_Methane
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_organic_refuse_focus
+  completion_reward = {
+    add_tech_bonus = {
+      name = MEL_Shared_Ammonia
+      bonus = 1
+      uses = 2
+      category = jiegou
+      category = fuzhu
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Electricity_Network
+  icon = GFX_focus_generic_africa_production
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Crematory
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Crematory
+  completion_reward = {
+    PO_minus2 = yes
+    OL_minus2 = yes
+    add_offsite_building = { type = industrial_complex level = 1 }
+    swap_ideas = {
+      remove_idea = MEL_Shared_civil_refuse_collection_Crematory_idea
+      add_idea = MEL_Shared_civil_refuse_collection_Crematory_idea_2
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Refuse_Smoke
+  icon = GFX_goal_generic_dangerous_deal
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Crematory
+  }
+  x = -1
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Crematory
+  completion_reward = {
+    add_ideas = { MEL_Shared_Refuse_Smoke_idea }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_organic_energy
+  icon = GFX_goal_generic_oil_refinery
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Methane
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+    OR = {
+      AND = {
+        tag = MEL
+        194 = { CONTROLLER = { OR = { tag = MEL is_subject_of = MEL } } }
+      }
+      AND = {
+        tag = SGS
+        248 = { CONTROLLER = { OR = { tag = SGS is_subject_of = SGS } } }
+      }
+    }
+  }
+  relative_position_id = MEL_Shared_Methane
+  completion_reward = {
+    if = {
+      limit = { tag = MEL  194 = { CONTROLLER = { OR = { tag = MEL is_subject_of = MEL } } } }
+      194 = {
+        add_resource = {
+            type = energy
+            amount = 15
+        }
+      }
+    }
+    if = {
+      limit = { tag = SGS  248 = { CONTROLLER = { OR = { tag = SGS is_subject_of = SGS } } } }
+      248 = {
+        add_resource = {
+            type = energy
+            amount = 15
+        }
+      }
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Nritification
+  icon = GFX_goal_poland_goal
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Ammonia
+  }
+  x = 0
+  y = 1
+  relative_position_id = MEL_Shared_Ammonia
+  completion_reward = {
+    add_offsite_building = { type = powder_factory level = 3 }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Garbage_Economics
+  icon = GFX_focus_spa_the_spanish_miracle
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_organic_energy
+    focus = MEL_Shared_Electricity_Network
+  }
+  x = 0
+  y = 1
+  relative_position_id = MEL_Shared_Nritification
+  completion_reward = {
+    add_offsite_building = { type = industrial_complex level = 2 }
+    add_offsite_building = { type = arms_factory level = 1 }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Metal_Recycle
+  icon = GFX_focus_generic_aluminum
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_inorganic_refuse_focus
+  }
+  x = 0
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_inorganic_refuse_focus
+  completion_reward = {
+    add_offsite_building = { type = metal_factory level = 3 }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Material_Science
+  icon = GFX_goal_generic_production2
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_garbage_chemistry
+  }
+  prerequisite = {
+    focus = MEL_Shared_Metal_Recycle
+  }
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  x = 0
+  y = 2
+  relative_position_id = MEL_Shared_Metal_Recycle
+  completion_reward = {
+    PO_add3 = yes
+    add_ideas = { MEL_Shared_Material_Science_idea }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Simplified_Cl
+  icon = GFX_goal_generic_CAS
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Refuse_Smoke
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Refuse_Smoke
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MEL_Shared_Refuse_Smoke_idea
+      add_idea = MEL_Shared_Refuse_Smoke_idea_2
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Expand_Arsenal
+  icon = GFX_goal_generic_army_artillery
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_military_refuse_center
+  }
+  x = -1
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_military_refuse_center
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MEL_Shared_military_refuse_center_idea
+      add_idea = MEL_Shared_military_refuse_center_idea_2
+    }
+    custom_effect_tooltip = MEL_More_Equipment_Acquired_tt
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Equipment_Adaption
+  icon = GFX_focus_generic_combined_arms
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_military_refuse_center
+  }
+  x = 1
+  y = 1
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_military_refuse_center
+  completion_reward = {
+    add_tech_bonus = {
+      name = MEL_Shared_Equipment_Adaption
+      bonus = 1
+      ahead_reduction = 0.5
+      uses = 2
+      category = primary_weapons
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Simplified_Arms_Factory
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Expand_Arsenal
+  }
+  prerequisite = {
+    focus = MEL_Shared_Metal_Recycle
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Expand_Arsenal
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MEL_Shared_military_refuse_center_idea_2
+      add_idea = MEL_Shared_military_refuse_center_idea_3
+    }
+  }
+
+}
+shared_focus = {
+  id = MEL_Shared_Inverse_Research
+  icon = GFX_goal_continuous_research
+  cost = 10.00
+  prerequisite = {
+    focus = MEL_Shared_Equipment_Adaption
+  }
+  x = 0
+  y = 2
+  available = {
+    MEL_Pact_of_Union_Check = yes
+  }
+  relative_position_id = MEL_Shared_Equipment_Adaption
+  completion_reward = {
+    add_tech_bonus = {
+      name = MEL_Shared_Inverse_Research
+      bonus = 0.75
+      ahead_reduction = 1.5
+      uses = 2
+      category = techtree_tech
+      category = math
+    }
+  }
+
+}

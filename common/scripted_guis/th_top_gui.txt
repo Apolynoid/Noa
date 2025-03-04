@@ -1,0 +1,106 @@
+scripted_gui = {
+
+	th_view_type_top_effect = {
+		context_type = player_context
+		
+		window_name = "th_view_type_top"
+
+		parent_window_token = top_bar
+        
+		visible = {
+            always = yes
+		}
+		
+		effects = {
+
+		}
+
+		triggers = {
+		   th_view_type_fanling_visible = {
+		      check_variable = { OL_view_type = 0 }
+		   }
+		   th_view_type_pingheng_visible = {
+		      check_variable = { OL_view_type = 1 }
+		   }
+		   th_view_type_weiwu_visible = {
+		      check_variable = { OL_view_type = 2 }
+		   }
+		}
+        
+	}
+
+	th_top_power_effect = {
+		context_type = player_context
+		
+		window_name = "th_top_power"
+
+		parent_window_token = top_bar
+        
+		visible = {
+            always = yes
+		}
+		
+		effects = {
+		    th_top_power_bg_click = {
+		   #      effect_tooltip = {
+		   #         power_checker = yes
+		   #      }
+		   #      if = {
+		   #      	limit ={
+		   #      		not = {has_idea = Human}
+		   #      	}
+		   #      	set_temp_variable = { show = 1 }
+					# subtract_from_temp_variable = { show = show_hum_influence }
+					# set_variable = { show_hum_influence = show }
+		   #      }
+			}
+		}
+        
+	}
+
+	th_top_power_effect = {
+		context_type = player_context
+		
+		window_name = "th_top_exhaustion"
+
+		parent_window_token = top_bar
+        
+		visible = {
+            always = yes
+		}
+		
+		effects = {
+
+		}
+        
+	}
+
+	th_view_type_effect = {
+		context_type = player_context
+		
+		window_name = "th_view_type"
+
+		parent_window_token = politics_tab
+        
+		visible = {
+            always = yes
+		}
+		
+		effects = {
+
+		}
+
+		triggers = {
+		   th_view_bad_type_icon_visible = {
+		      check_variable = { OL_view_type = 0 }
+		   }
+		   th_view_normal_type_icon_visible = {
+		      check_variable = { OL_view_type = 1 }
+		   }
+		   th_view_good_type_icon_visible = {
+		      check_variable = { OL_view_type = 2 }
+		   }
+		}
+	}
+}
+

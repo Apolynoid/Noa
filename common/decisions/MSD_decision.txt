@@ -1,0 +1,128 @@
+# 兽道战争
+MSD_shou_dao_zhan_zheng = {
+    # 战争准备
+    MSD_shou_dao_zhan_zheng_zhun_bei = {
+        allowed = {
+            original_tag = MSD
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            OR = {
+                206 = {
+                    is_owned_by = MSD
+                }
+                MSD = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+                206 = {
+                    owner = {
+                        OR = {
+                            exists = no
+                            is_subject = yes
+                            has_war_with = MSD
+                        }
+                    }
+                }
+            }
+        }
+
+        icon = generic_ignite_civil_war
+
+        selectable_mission = no
+
+        days_mission_timeout = 140
+
+        is_good = no
+
+        timeout_effect = {
+            army_experience = 10
+            activate_mission = MSD_shou_dao_zhan_zheng_bao_fa
+            hidden_effect = {
+                MRS = {
+                    country_event = kem_war.101
+                }
+            }
+        }
+    }
+
+    # 兽道战争爆发
+    MSD_shou_dao_zhan_zheng_bao_fa = {
+        allowed = {
+            original_tag = MSD
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            OR = {
+                206 = {
+                    is_owned_by = MSD
+                }
+                MSD = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+                206= {
+                    owner = {
+                        OR = {
+                            exists = no
+                            is_subject = yes
+                            has_war_with = MSD
+                        }
+                    }
+                }
+            }
+        }
+
+        icon = generic_ignite_civil_war
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        war_with_on_timeout = MRS
+
+        timeout_effect = {
+            declare_war_on = {
+			    target = MRS
+			    type = take_state_focus
+			    generator = { 206 }
+			}
+            add_ideas = MSD_shou_dao_zhan_zheng_idea
+
+            set_global_flag = MSD_kemonomichi_war_begun_flag
+
+            MRS = { 
+                add_ideas = mrs_shou_dao_zhan_zheng_idea 
+            }
+            
+            hidden_effect = {
+                news_event = { 
+                    days = 5 
+                    id = kem_war.102
+                }
+            }
+        }
+    }
+}

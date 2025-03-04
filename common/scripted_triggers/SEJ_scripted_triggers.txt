@@ -1,0 +1,7 @@
+SEJ_still_hold_gekokujyo_movement = {
+	SEJ = {
+		exists = yes
+		is_subject = no
+		is_faction_leader = yes
+	}
+}

@@ -1,0 +1,315 @@
+characters={
+	UND_sts ={
+		name = UND_sts
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_sts.dds"
+				small="gfx/leaders/UND/UND_sts_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_sts.dds"
+				small="gfx/leaders/UND/UND_sts_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_huoqiangzhuanjia }
+			skill = 7
+			attack_skill = 5
+			defense_skill = 8
+			planning_skill = 6
+			logistics_skill = 7
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_sts
+		# 	name = UND_sts
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	UND_luize ={
+		name = UND_luize
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_luize.dds"
+				small="gfx/leaders/UND/UND_luize_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_luize.dds"
+				small="gfx/leaders/UND/UND_luize_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character trait_reckless }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 5
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_luize
+		# 	name = UND_luize
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	UND_sara ={
+		name = UND_sara
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_sara.dds"
+				small="gfx/leaders/UND/UND_sara_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_sara.dds"
+				small="gfx/leaders/UND/UND_sara_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_yinyangshi }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 7
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_sara
+		# 	name = UND_sara
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	UND_kotohime ={
+		name = UND_kotohime
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_kotohime.dds"
+				small="gfx/leaders/UND/UND_kotohime_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_kotohime.dds"
+				small="gfx/leaders/UND/UND_kotohime_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_huolizhuanjia }
+			skill = 8
+			attack_skill = 5
+			defense_skill = 9
+			planning_skill = 9
+			logistics_skill = 9
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_kotohime
+		# 	name = UND_kotohime
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	###############
+	UND_biten ={
+		name = UND_biten
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_biten.dds"
+				small="gfx/leaders/UND/UND_biten_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_biten.dds"
+				small="gfx/leaders/UND/UND_biten_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_biten
+		# 	name = UND_biten
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		country_leader = {
+			ideology = guli_type
+		}
+	}
+	UND_enoko ={
+		name = UND_enoko
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_enoko.dds"
+				small="gfx/leaders/UND/UND_enoko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_enoko.dds"
+				small="gfx/leaders/UND/UND_enoko_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_enoko
+		# 	name = UND_enoko
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		country_leader = {
+			ideology = qinwai_type
+		}
+	}
+	UND_chiyari ={
+		name = UND_chiyari
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_chiyari.dds"
+				small="gfx/leaders/UND/UND_chiyari_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_chiyari.dds"
+				small="gfx/leaders/UND/UND_chiyari_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_chiyari
+		# 	name = UND_chiyari
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		country_leader = {
+			ideology = fandong_type
+		}
+	}
+	UND_hisami ={
+		name = UND_hisami
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_hisami.dds"
+				small="gfx/leaders/UND/UND_hisami_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_hisami.dds"
+				small="gfx/leaders/UND/UND_hisami_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_hisami
+		# 	name = UND_hisami
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		country_leader = {
+			ideology = oldorder_type
+		}
+	}
+	UND_zanmu ={
+		name = UND_zanmu
+		portraits={
+			civilian={
+				large="gfx/leaders/UND/UND_zanmu.dds"
+				small="gfx/leaders/UND/UND_zanmu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/UND/UND_zanmu.dds"
+				small="gfx/leaders/UND/UND_zanmu_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = UND_zanmu
+		# 	name = UND_zanmu
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+		country_leader = {
+			ideology = neworder_type
+		}
+	}
+}

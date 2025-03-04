@@ -1,0 +1,420 @@
+ideas = {
+	character_coop = {
+
+	}
+	lobby_slot = { 
+		# law = yes
+		#HUM
+		kaifangjiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}
+				not = {
+					has_idea = baoshoujiaqiang
+				}                                 	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				compliance_growth = 0.1
+				manufacturer_cost_factor = -0.2
+				research_speed_factor = 0.1
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		baoshoujiaqiang = {
+
+		    available = { 
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}    
+				not = {
+					has_idea = kaifangjiaqiang
+				}                             	    
+		    }
+					
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				encryption = 10
+				stability_factor = 0.3
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		gepaijiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -1
+				}      
+				not = {
+					has_idea = yingpaijiaqiang
+				}                             	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 450
+			cancel_if_invalid = no
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				improve_relations_maintain_cost_factor = -0.4
+				trade_opinion_factor = 0.8
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		yingpaijiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 1
+				}     
+				not = {
+					has_idea = gepaijiaqiang
+				}                             	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 450
+			cancel_if_invalid = no
+
+			modifier = {
+				war_support_factor = 0.3
+		   		justify_war_goal_time = -0.25
+		   		EXHC_increase_period_factor = 0.2
+				EXHC_root_decrease_factor = 0.1
+				EXHC_decrease_cost_factor = -0.2
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+	}
+	ideo_slot = {
+		fandongjiaqiang = {
+
+		    available = {
+				has_government = fandong
+				fandong > 0.9     
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 1
+				}                            	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+				ARMY_CORE_ATTACK_FACTOR = 0.1
+				ARMY_CORE_DEFENCE_FACTOR = 0.1
+				supply_consumption_factor = -0.2
+
+				ai_focus_aggressive_factor = 0.15
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.2
+
+				fandong_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		qinwaijiaqiang = {
+
+		    available = {
+				has_government = qinwai
+				qinwai > 0.9          
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -1
+				}                        	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+				send_volunteer_factor = 1
+				conscription_factor = 0.2
+				political_power_gain = 0.2
+				SS_subject_modifier_factor = 0.5
+
+				research_speed_factor = 0.15
+				production_speed_buildings_factor = 0.05
+
+				consumer_goods_factor = -0.15
+
+				qinwai_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		neworderjiaqiang = {
+
+		    available = {
+				has_government = neworder
+				neworder > 0.9  
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > -2
+				}         
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < 2
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 1
+				}                                	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+				ARMY_ORG_FACTOR = 0.2
+				offensive_war_stability_factor = 0.1
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+
+				ai_focus_aggressive_factor = 0.3
+
+				army_leader_start_level = 1
+				command_power_gain = 0.2
+				max_command_power_mult = 0.1
+				production_speed_arms_factory_factor = 0.1
+
+				neworder_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		gulijiaqiang = {
+
+		    available = {
+				has_government = guli
+				guli > 0.9     
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > -2
+				}         
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < 2
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -1
+				}                            	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+				defensive_war_stability_factor = 0.2
+
+				stability_factor = 0.35
+				ARMY_CORE_ATTACK_FACTOR = 0.05
+				ARMY_CORE_DEFENCE_FACTOR = 0.05
+
+				dig_in_speed_factor = 0.1
+				max_dig_in = 10
+
+				production_speed_bunker_factor = 0.3
+				production_speed_anti_air_building_factor = 0.3
+				production_speed_radar_station_factor = 0.3
+				production_speed_buildings_factor = 0.2
+
+				ai_focus_defense_factor = 0.3
+				guli_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		oldorderjiaqiang = {
+
+		    available = {
+				has_government = oldorder
+				oldorder > 0.9 
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 1
+				}      
+				date > 149.1.1                           	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+
+				ai_focus_aggressive_factor = 0.3
+
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+
+				drift_defence_factor = 1
+				conscription_factor = 0.1
+				supply_consumption_factor = -0.2
+
+				decryption_factor = 0.1
+				encryption_factor = 0.1
+				war_support_factor = 0.2
+
+				oldorder_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+
+		oldgensojiaqiang = {
+
+		    available = {
+				has_government = oldgenso
+				oldgenso > 0.9 
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -1
+				}     
+				date > 149.1.1                            	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			cancel_if_invalid = no
+
+			modifier = {
+				
+				ARMY_CORE_ATTACK_FACTOR = 0.05
+				ARMY_CORE_DEFENCE_FACTOR = 0.05
+				ai_focus_war_production_factor = 0.3
+
+				drift_defence_factor = 1
+
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.15
+
+				compliance_growth = 0.05
+				stability_factor = 0.2
+
+				oldgenso_drift = 0.01
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+		}
+	}
+}

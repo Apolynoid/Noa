@@ -1,0 +1,1143 @@
+portal_hint = {
+	#hints
+	##
+	view_portal_624_to_652_f = {
+		visible = {
+			or = {
+				624 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				652 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 624
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_624_to_652_l = {
+		visible = {
+			or = {
+				624 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				652 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 652
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_640_to_648_f = {
+		visible = {
+			or = {
+				640 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				648 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 640
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_640_to_648_l = {
+		visible = {
+			or = {
+				640 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				648 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 648
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_626_to_650_f = {
+		visible = {
+			or = {
+				626 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				650 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 626
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_626_to_650_l = {
+		visible = {
+			or = {
+				626 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				650 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 650
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_627_to_643_f = {
+		visible = {
+			or = {
+				627 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				643 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 627
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_627_to_643_l = {
+		visible = {
+			or = {
+				627 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				643 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 643
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_628_to_655_f = {
+		visible = {
+			or = {
+				628 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				655 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 628
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_628_to_655_l = {
+		visible = {
+			or = {
+				628 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				655 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 655
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_629_to_654_f = {
+		visible = {
+			or = {
+				629 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				654 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 629
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_629_to_654_l = {
+		visible = {
+			or = {
+				629 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				654 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 654
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_630_to_649_f = {
+		visible = {
+			or = {
+				630 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				649 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 630
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_630_to_649_l = {
+		visible = {
+			or = {
+				630 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				649 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 649
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_631_to_645_f = {
+		visible = {
+			or = {
+				631 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				645 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 631
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_631_to_645_l = {
+		visible = {
+			or = {
+				631 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				645 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 645
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_634_to_656_f = {
+		visible = {
+			or = {
+				634 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				656 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 634
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_634_to_656_l = {
+		visible = {
+			or = {
+				634 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				656 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 656
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_635_to_653_f = {
+		visible = {
+			or = {
+				635 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				653 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 635
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_635_to_653_l = {
+		visible = {
+			or = {
+				635 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				653 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 653
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_636_to_658_f = {
+		visible = {
+			or = {
+				636 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				658 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 636
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_636_to_658_l = {
+		visible = {
+			or = {
+				636 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				658 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 658
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_637_to_657_f = {
+		visible = {
+			or = {
+				637 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				657 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 637
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_637_to_657_l = {
+		visible = {
+			or = {
+				637 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				657 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 657
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_638_to_644_f = {
+		visible = {
+			or = {
+				638 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				644 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 638
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_638_to_644_l = {
+		visible = {
+			or = {
+				638 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				644 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 644
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_639_to_647_f = {
+		visible = {
+			or = {
+				639 = {
+					any_neighbor_state = {
+					controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				647 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 639
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_639_to_647_l = {
+		visible = {
+			or = {
+				639 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				647 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 647
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_632_to_646_f = {
+		visible = {
+			or = {
+				632 = {
+					any_neighbor_state = {
+					controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				646 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 632
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_632_to_646_l = {
+		visible = {
+			or = {
+				632 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				646 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 646
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	##
+	view_portal_625_to_651_f = {
+		visible = {
+			or = {
+				625 = {
+					any_neighbor_state = {
+					controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				651 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 625
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	view_portal_625_to_651_l = {
+		visible = {
+			or = {
+				625 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				651 = {
+					any_neighbor_state = {
+						controller = {
+							or = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			goto_state = 651
+		}
+		fire_only_once = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+portal_training = {
+
+}

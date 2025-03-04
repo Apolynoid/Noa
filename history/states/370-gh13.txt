@@ -1,0 +1,35 @@
+
+state={
+	id=370
+	name="STATE_370"
+	resources={
+		powder = 0.0
+		metal = 0.0
+		gas=5.000
+		crystal=20.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			add_core_of = ZYD
+			add_core_of = MEL
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		29 1391 4856 4857 4858 4865 4867 4874 4875 4884 
+	}
+	manpower=633.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

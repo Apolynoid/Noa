@@ -1,0 +1,100 @@
+﻿capital = 28
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        mortar1 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+        jijia1 = 1
+
+        #陆军学说
+        fire_support = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1   
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+
+        #种族
+            
+    }
+    
+}
+146.1.1={
+    oob = "MRY_146"
+    
+    set_major = yes
+    set_country_flag = bunengqie_fandong
+
+    diplomatic_relation = { 
+        country = KAP relation = non_aggression_pact active = yes
+    }
+    add_ideas = {
+    Shrine
+    Youkai
+    hawk2
+    open1
+    sc_rule
+    
+    MRY_shenmingdeweiji_idea
+    MRY_fugushenwei_idea
+    }
+    add_timed_idea = {
+        idea = MRY_kejizhishen_idea
+        days = 1825
+    }
+    set_politics = {
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 25
+        guli = 5
+        neworder = 70
+        oldorder = 0
+        fandong = 0
+    }
+    OTG = {
+        huxiangbaodu = yes
+    }
+    KAP = {
+        huxiangbaodu = yes
+    }
+}

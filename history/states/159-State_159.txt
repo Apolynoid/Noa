@@ -1,0 +1,31 @@
+state={
+	id=159
+	name="STATE_159"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas = 5.0
+		crystal = 20.0
+	}
+
+	provinces={
+		81 236 428 586 807 1099 1569 1758 2132 2238 2410 2794 2797 2808 2814 
+	}
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=126998.0
+	buildings_max_level_factor=1.000
+}

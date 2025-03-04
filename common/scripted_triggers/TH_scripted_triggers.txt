@@ -1,0 +1,1624 @@
+long_introduce_country = {
+	or = {
+		tag = CIR
+		tag = SEJ
+	}
+}
+has_same_ideology = {
+	custom_trigger_tooltip = {
+		tooltip = has_same_ideology_tt
+		OR = {
+			AND = {
+				has_government = qinwai
+				ROOT = { has_government = qinwai }
+			}
+			AND = {
+				has_government = fandong
+				ROOT = { has_government = fandong }
+			}
+			AND = {
+				has_government = guli
+				ROOT = { has_government = guli }
+			}
+			AND = {
+				has_government = neworder
+				ROOT = { has_government = neworder }
+			}
+			AND = {
+				has_government = oldgenso
+				ROOT = { has_government = oldgenso }
+			}
+			AND = {
+				has_government = oldorder
+				ROOT = { has_government = oldorder }
+			}
+		}
+	}
+}
+
+manufacture_visible_conditions = {
+	exists = yes
+	not = {
+		tag = ROOT
+		has_war_with = ROOT
+		has_opinion = {
+			target = PREV
+			value < -100
+		}
+	}
+	or = {
+		ROOT = {
+			has_country_flag = use_by_focus_@PREV
+		}
+		and = {
+			or = {
+				and = {
+					or = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { is_subject_of = PREV }
+					}
+				}
+				has_opinion = { target = ROOT value > 0 }  
+			}
+			# ROOT = {
+			# 	not = { has_country_flag = owns_core_state@PREV }
+			# }
+		}     
+	}
+}
+manufacture_conditions = {
+	exists = yes
+	custom_trigger_tooltip = {
+    	tooltip = manufacturer_condition
+    	#下面这些如果无特殊需求请不要改	
+		not = {
+			tag = ROOT
+			has_war_with = ROOT
+			has_opinion = {
+              target = PREV
+              value < -100
+            }
+		}
+    	or = {
+	    	ROOT = {
+		    	has_country_flag = use_by_focus_@PREV
+	    	}
+	    	and = {
+				or = {
+			        and = {
+			        	or = {
+			        		is_in_faction_with = ROOT
+			        		is_subject_of = ROOT
+			        		ROOT = { is_subject_of = PREV}
+			        	}
+			        }
+			        and = {
+			        	has_country_flag = {
+			                flag = openvalue
+			                value > -1
+			            }
+			            ROOT = {
+			                has_country_flag = {
+				                flag = openvalue     
+				                value > -1
+			                }
+			            } 
+			            has_opinion = { target = ROOT value > 39 }  
+			        }
+			        has_opinion = { target = ROOT value > 99 }  
+				    
+				}
+				ROOT = {
+					not = { has_country_flag = owns_core_state@PREV }
+				}
+		    }     
+    	}	
+	}
+}
+
+
+Fairy_country_with_fairy_leader = {
+	and = {
+		has_idea = Fairy
+		or = {
+			not = {
+				tag = SCA
+				tag = YUK
+				tag = CLO
+			}
+			and = {
+				tag = SCA
+				or = {
+					is_subject = yes
+					has_country_flag = ducaibeituifan
+				}
+			}
+			and = {
+				tag = YUK
+				or = {
+					is_subject = yes
+					has_country_flag = ducaibeituifan
+				}
+			}
+			and = {
+				tag = CLO
+				not = {
+					has_government = guli
+				}
+			}
+		}
+	}
+}
+# is_pure_waike_tech = {
+#     OR = {
+#         is_researching_technology = waike
+#         has_tech = waike
+#     }
+#     NOT = {has_tech = lingkejiehe154}
+# }
+
+# is_pure_lingben_tech = {
+#     OR = {
+#         is_researching_technology = lingben
+#         has_tech = lingben
+#     }
+#     NOT = {has_tech = lingkejiehe154}  
+# }
+
+# is_combined_tech = {
+#     has_tech = lingkejiehe154
+# }
+
+bypass_declare_war = {
+	or = {
+		has_war_with = PREV
+  		is_subject_of = ROOT
+  		not = { country_exists = THIS }
+  		# has_non_aggression_pact_with = PREV
+	}
+}
+
+is_same_race = {
+	custom_trigger_tooltip = {
+		tooltip = is_same_race_tt
+			or = {
+			and = {
+				has_idea = Human
+				PREV = {
+					has_idea = Human
+				}
+			}
+			and = {
+				has_idea = Ghost
+				PREV = {
+					has_idea = Ghost
+				}
+			}
+			and = {
+				has_idea = Fairy
+				PREV = {
+					has_idea = Fairy
+				}
+			}
+			and = {
+				has_idea = Pri_youkai
+				PREV = {
+					has_idea = Pri_youkai
+				}
+			}
+			and = {
+				has_idea = Youkai
+				PREV = {
+					has_idea = Youkai
+				}
+			}
+			and = {
+				has_idea = Tenggu
+				PREV = {
+					has_idea = Tenggu
+				}
+			}
+			and = {
+				has_idea = Kappa
+				PREV = {
+					has_idea = Kappa
+				}
+			}
+			and = {
+				has_idea = God
+				PREV = {
+					has_idea = God
+				}
+			}
+			and = {
+				has_idea = Magician
+				PREV = {
+					has_idea = Magician
+				}
+			}
+			and = {
+				has_idea = Beast
+				PREV = {
+					has_idea = Beast
+				}
+			}
+		}
+	}
+}
+
+is_same_view = {
+	or = {
+		and = {
+			check_variable = { OL_view_type = 0}
+			PREV = {
+				check_variable = { OL_view_type = 0}
+			}
+		}
+		and = {
+			check_variable = { OL_view_type = 1}
+			PREV = {
+				check_variable = { OL_view_type = 1}
+			}
+		}
+		and = {
+			check_variable = { OL_view_type = 2}
+			PREV = {
+				check_variable = { OL_view_type = 2}
+			}
+		}
+	}
+}
+
+is_same_government = {
+	or = {
+		and = {
+			has_government = guli
+			PREV = {
+				has_government = guli
+			}
+		}
+		and = {
+			has_government = qinwai
+			PREV = {
+				has_government = qinwai
+			}
+		}
+		and = {
+			has_government = fandong
+			PREV = {
+				has_government = fandong
+			}
+		}
+		and = {
+			has_government = neworder
+			PREV = {
+				has_government = neworder
+			}
+		}
+		and = {
+			has_government = oldorder
+			PREV = {
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+before_declare_war = {
+	if = {
+		limit = {
+			THIS = { exists = yes }
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = before_declare_war2_tt
+				OVERLORD = {
+					not = {
+						has_non_aggression_pact_with = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = before_declare_war1_tt
+					not = {
+						has_non_aggression_pact_with = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = before_declare_war3_tt
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					or = {
+						is_neighbor_of = ROOT
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+						any_neighbor_country = {
+							is_in_faction_with = ROOT
+						}
+
+						any_allied_country = {
+							is_neighbor_of = ROOT
+						}
+						any_allied_country = {
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_allied_country = {
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+
+						any_country = {
+							is_subject_of = PREV
+							is_neighbor_of = ROOT
+						}
+						any_country = {
+							is_subject_of = PREV
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_country = {
+							is_subject_of = PREV
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+
+						any_country = {
+							is_in_faction_with = PREV
+							is_neighbor_of = ROOT
+						}
+						any_country = {
+							is_in_faction_with = PREV
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_country = {
+							is_in_faction_with = PREV
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+
+					}
+				}
+				else = {
+					or = {
+						is_neighbor_of = ROOT
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+						any_neighbor_country = {
+							is_in_faction_with = ROOT
+						}
+
+						any_allied_country = {
+							is_neighbor_of = ROOT
+						}
+						any_allied_country = {
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_allied_country = {
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+
+						any_country = {
+							is_subject_of = PREV
+							is_neighbor_of = ROOT
+						}
+						any_country = {
+							is_subject_of = PREV
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_country = {
+							is_subject_of = PREV
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+
+						any_country = {
+							is_in_faction_with = PREV
+							is_neighbor_of = ROOT
+						}
+						any_country = {
+							is_in_faction_with = PREV
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+						any_country = {
+							is_in_faction_with = PREV
+							any_neighbor_country = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	ROOT = {
+		is_subject = no
+	}
+	not = {
+		is_subject_of = ROOT
+	}
+}
+jierangpanding = {
+	if = {
+		limit = {
+			is_subject = yes
+		}
+		OVERLORD = {
+			or = {
+				is_neighbor_of = ROOT
+				any_neighbor_country = {
+					is_subject_of = ROOT
+				}
+				any_neighbor_country = {
+					is_in_faction_with = ROOT
+				}
+
+				any_allied_country = {
+					is_neighbor_of = ROOT
+				}
+				any_allied_country = {
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_allied_country = {
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+
+				any_country = {
+					is_subject_of = PREV
+					is_neighbor_of = ROOT
+				}
+				any_country = {
+					is_subject_of = PREV
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_country = {
+					is_subject_of = PREV
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+
+				any_country = {
+					is_in_faction_with = PREV
+					is_neighbor_of = ROOT
+				}
+				any_country = {
+					is_in_faction_with = PREV
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_country = {
+					is_in_faction_with = PREV
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+
+			}
+		}
+		else = {
+			or = {
+				is_neighbor_of = ROOT
+				any_neighbor_country = {
+					is_subject_of = ROOT
+				}
+				any_neighbor_country = {
+					is_in_faction_with = ROOT
+				}
+
+				any_allied_country = {
+					is_neighbor_of = ROOT
+				}
+				any_allied_country = {
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_allied_country = {
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+
+				any_country = {
+					is_subject_of = PREV
+					is_neighbor_of = ROOT
+				}
+				any_country = {
+					is_subject_of = PREV
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_country = {
+					is_subject_of = PREV
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+
+				any_country = {
+					is_in_faction_with = PREV
+					is_neighbor_of = ROOT
+				}
+				any_country = {
+					is_in_faction_with = PREV
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+				}
+				any_country = {
+					is_in_faction_with = PREV
+					any_neighbor_country = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+faqiqingqiu = {
+	country_exists = THIS
+	not = {
+   		has_war_with = ROOT
+  	}
+	ROOT = {
+		is_subject = no
+	}
+}
+
+youkai_mountain_country = {
+	or = {
+		tag = TEG#
+		tag = OTG#
+
+		tag = MRY#
+
+		tag = KAP#
+		tag = YAW#
+		tag = GRS#
+		tag = NTR#
+
+		tag = KAS#
+
+		tag = NMN#
+		tag = AKI#
+
+		tag = TBA
+		tag = KRD
+
+	}
+}
+
+SW_country = {
+	or = {
+		tag = HU3
+		tag = ZYD
+		tag = MEL
+		tag = SGS
+	}
+}
+
+Ghost_country = {
+	or = {
+		tag = YYK
+		tag = PRI
+		tag = UUG
+		tag = ACE
+
+		tag = YCE
+		tag = SAK
+		tag = GYK
+		tag = HGH
+		tag = YYG
+		tag = YYH
+		
+		tag = OIL
+		tag = CJK
+		
+		tag = ZON
+	}
+}
+
+Fairy_country = {
+	or = {
+		#8
+		tag = CFA
+		tag = CIR
+		tag = SCA
+		tag = SGS
+		tag = LIL
+		tag = YUK
+
+		tag = UFA
+		tag = CLO
+	}
+}
+
+Human_country = {
+	or = {
+		#6
+		# tag = HKR
+		tag = HUM
+		tag = HU1
+		tag = HU2
+		tag = HU3
+		tag = HU4
+		tag = EMB
+		tag = HU7
+		tag = HU8
+	}
+}
+
+Magician_country = {
+	or = {
+		#5
+		tag = MRS
+		tag = HKR
+		tag = ZYD
+		tag = ALI
+		tag = SRB
+		tag = MOK
+		tag = NAR
+	}
+}
+
+Kappa_country = {
+	or = {
+		#4
+		tag = GRS
+		tag = KAP
+		tag = NTR
+		tag = YAW
+	}
+}
+
+God_country = {
+	or = {
+		#8
+		tag = AKI
+		tag = OKI
+		tag = SKI
+		tag = TES
+		tag = CCA
+		tag = KMC
+		tag = HCT
+		tag = KEK
+	}
+}
+
+Pri_youkai_country = {
+	or = {
+		#9
+		tag = TKM
+		tag = MEL
+		tag = NMS
+		tag = SEJ
+
+		tag = SBK
+	}
+}
+
+Beast_country = {
+	or = {
+		#12
+		tag = CHE
+		tag = EET
+		tag = INB
+		tag = KAG
+
+		tag = MSD
+
+		tag = UTH
+		# tag = SC1
+		# tag = SEJ
+		tag = UDO
+		tag = WAK
+		# tag = SBK
+		tag = KAS
+		tag = SAT
+		tag = BYA
+		tag = RGO
+		
+	}
+}
+
+Youkai_country = {
+	or = {
+		#14
+		tag = IKU
+		
+		tag = YUG
+		tag = MAM
+		tag = PRS
+		# tag = ONI
+		tag = NMN
+		# tag = SAT
+		tag = UNA
+		tag = UNL
+		tag = YKR
+		tag = MRY
+
+		tag = GOL
+		tag = HUB
+		tag = HB1
+		tag = URM
+		tag = YMM
+
+		tag = AKO
+		tag = AOO
+
+		tag = TBA
+		tag = KRD
+
+		tag = WHR
+	}
+}
+
+Tenggu_country = {
+	or = {
+		#2
+		tag = OTG
+		tag = TEG
+	}
+}
+go_weiwu_condition = {
+	or = {
+        and = {
+            check_variable = { PO_average_mp < 30}
+        }
+
+        and = {
+        	check_variable = { PO_average_mp < 35}
+        	check_variable = { OL_view_value < 65}
+        }
+        
+        and = {
+            has_country_flag = OL_to_pingheng
+            check_variable = { OL_view_type = 0 }
+        }
+
+        and = {
+            has_country_flag = OL_to_weiwu
+            not = { check_variable = { OL_view_type = 2} }
+        }
+
+    }
+}
+
+go_weixin_condition = {
+	or = {
+        and = {
+            check_variable = { PO_average_mp > 70}
+        }
+
+        and = {
+            check_variable = { PO_average_mp > 65}
+            check_variable = { OL_view_value > 50}
+        }
+
+        
+        and = {
+            has_country_flag = OL_to_pingheng
+            check_variable = { OL_view_type = 2 }
+        }
+
+        and = {
+            has_country_flag = OL_to_weixin
+            not = { check_variable = { OL_view_type = 0} }
+        }
+            
+    }
+}
+
+random_leader = {
+	or = {
+		tag = CFA
+		tag = BYA
+		tag = GRS
+		tag = UFA
+	}
+}
+
+lv2_manpower = {
+	NOT = { has_idea = isolation }
+}
+lv3_manpower = {
+	has_war_support > 0.3
+	NOT = { has_idea = isolation }
+}
+lv4_manpower = {
+	has_war_support > 0.5
+	NOT = { has_idea = isolation }
+}
+lv5_manpower = {
+	has_war_support > 0.7
+	NOT = { has_idea = isolation }
+}
+lv6_manpower = {
+	has_war_support > 0.9
+	NOT = { has_idea = isolation }
+}
+lv7_manpower = {
+	has_war_support > 1.2
+	NOT = { has_idea = isolation }
+}
+
+caidankaiqi = {
+	always = no
+}
+
+ST_origin_same_race = {
+	custom_trigger_tooltip = {
+		tooltip = ST_origin_same_race_tt
+		or = {
+			and = {
+				controller = {
+					has_idea = Beast
+				}
+				check_variable = { ST_origin_race = 0}
+			}
+			and = {
+				controller = {
+					has_idea = Pri_youkai
+				}
+				check_variable = { ST_origin_race = 1}
+			}
+			and = {
+				controller = {
+					has_idea = Youkai
+				}
+				check_variable = { ST_origin_race = 2}
+			}
+			and = {
+				controller = {
+					has_idea = God
+				}
+				check_variable = { ST_origin_race = 3}
+			}
+			and = {
+				controller = {
+					has_idea = Human
+				}
+				check_variable = { ST_origin_race = 4}
+			}
+			and = {
+				controller = {
+					has_idea = Magician
+				}
+				check_variable = { ST_origin_race = 5}
+			}
+			and = {
+				controller = {
+					has_idea = Fairy
+				}
+				check_variable = { ST_origin_race = 6}
+			}
+			and = {
+				controller = {
+					has_idea = Ghost
+				}
+				check_variable = { ST_origin_race = 7}
+			}
+			and = {
+				controller = {
+					has_idea = Kappa
+				}
+				check_variable = { ST_origin_race = 8}
+			}
+			and = {
+				controller = {
+					has_idea = Tenggu
+				}
+				check_variable = { ST_origin_race = 9}
+			}
+		}
+	}
+}
+ST_present_same_race = {
+	custom_trigger_tooltip = {
+		tooltip = ST_present_same_race_tt
+		or = {
+			and = {
+				controller = {
+					has_idea = Beast
+				}
+				check_variable = { ST_present_race = 0}
+			}
+			and = {
+				controller = {
+					has_idea = Pri_youkai
+				}
+				check_variable = { ST_present_race = 1}
+			}
+			and = {
+				controller = {
+					has_idea = Youkai
+				}
+				check_variable = { ST_present_race = 2}
+			}
+			and = {
+				controller = {
+					has_idea = God
+				}
+				check_variable = { ST_present_race = 3}
+			}
+			and = {
+				controller = {
+					has_idea = Human
+				}
+				check_variable = { ST_present_race = 4}
+			}
+			and = {
+				controller = {
+					has_idea = Magician
+				}
+				check_variable = { ST_present_race = 5}
+			}
+			and = {
+				controller = {
+					has_idea = Fairy
+				}
+				check_variable = { ST_present_race = 6}
+			}
+			and = {
+				controller = {
+					has_idea = Ghost
+				}
+				check_variable = { ST_present_race = 7}
+			}
+			and = {
+				controller = {
+					has_idea = Kappa
+				}
+				check_variable = { ST_present_race = 8}
+			}
+			and = {
+				controller = {
+					has_idea = Tenggu
+				}
+				check_variable = { ST_present_race = 9}
+			}
+		}
+	}
+}
+
+dont_annex = {
+	always = no
+}
+
+is_same_continent = {
+	or = {
+		and = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Underground
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Celestial
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Celestial
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Netherworld
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Netherworld
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+}
+
+ST_race_is_Beast = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_0_tt
+		check_variable = { ST_present_race = 0 }
+	}
+}
+ST_race_is_Pri_youkai = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_1_tt
+		check_variable = { ST_present_race = 1 }
+	}
+}
+ST_race_is_Youkai = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_2_tt
+		check_variable = { ST_present_race = 2 }
+	}
+}
+ST_race_is_God = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_3_tt
+		check_variable = { ST_present_race = 3 }
+	}
+}
+ST_race_is_Human = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_4_tt
+		check_variable = { ST_present_race = 4 }
+	}
+}
+ST_race_is_Magician = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_5_tt
+		check_variable = { ST_present_race = 5 }
+	}
+}
+ST_race_is_Fairy = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_6_tt
+		check_variable = { ST_present_race = 6 }
+	}
+}
+ST_race_is_Ghost = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_7_tt
+		check_variable = { ST_present_race = 7 }
+	}
+}
+ST_race_is_Kappa = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_8_tt
+		check_variable = { ST_present_race = 8 }
+	}
+}
+ST_race_is_Tengu = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_9_tt
+		check_variable = { ST_present_race = 9 }
+	}
+}
+
+JOIN_FACTION = {
+	FROM = { 
+		has_rule = can_join_factions 
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = HUM_defence
+			}
+			ROOT = {
+				not = { has_war_together_with = HUM }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = HUM_defence_tt
+			always = no
+		}
+	}
+	or = {
+		##########接壤判定
+		# custom_trigger_tooltip = {
+		# 	tooltip = join_faction_tt
+		# 	FROM = {
+		# 		if = {
+		# 			limit = {
+		# 				is_subject = yes
+		# 			}
+		# 			OVERLORD = {
+		# 				or = {
+		# 					is_neighbor_of = ROOT
+		# 					any_neighbor_country = {
+		# 						is_subject_of = ROOT
+		# 					}
+		# 					any_neighbor_country = {
+		# 						is_in_faction_with = ROOT
+		# 					}
+
+		# 					any_allied_country = {
+		# 						is_neighbor_of = ROOT
+		# 					}
+		# 					any_allied_country = {
+		# 						any_neighbor_country = {
+		# 							is_subject_of = ROOT
+		# 						}
+		# 					}
+		# 					any_allied_country = {
+		# 						any_neighbor_country = {
+		# 							is_in_faction_with = ROOT
+		# 						}
+		# 					}
+
+		# 					any_country = {
+		# 						is_subject_of = PREV
+		# 						is_neighbor_of = ROOT
+		# 					}
+		# 					any_country = {
+		# 						is_subject_of = PREV
+		# 						any_neighbor_country = {
+		# 							is_subject_of = ROOT
+		# 						}
+		# 					}
+		# 					any_country = {
+		# 						is_subject_of = PREV
+		# 						any_neighbor_country = {
+		# 							is_in_faction_with = ROOT
+		# 						}
+		# 					}
+
+		# 					any_country = {
+		# 						is_in_faction_with = PREV
+		# 						is_neighbor_of = ROOT
+		# 					}
+		# 					any_country = {
+		# 						is_in_faction_with = PREV
+		# 						any_neighbor_country = {
+		# 							is_subject_of = ROOT
+		# 						}
+		# 					}
+		# 					any_country = {
+		# 						is_in_faction_with = PREV
+		# 						any_neighbor_country = {
+		# 							is_in_faction_with = ROOT
+		# 						}
+		# 					}
+
+		# 				}
+		# 				has_opinion = {
+		# 					target = ROOT
+		# 					value > -10
+		# 				}
+		# 			}
+		# 		}
+		# 		else = {
+		# 			or = {
+		# 				is_neighbor_of = ROOT
+		# 				any_neighbor_country = {
+		# 					is_subject_of = ROOT
+		# 				}
+		# 				any_neighbor_country = {
+		# 					is_in_faction_with = ROOT
+		# 				}
+
+		# 				any_allied_country = {
+		# 					is_neighbor_of = ROOT
+		# 				}
+		# 				any_allied_country = {
+		# 					any_neighbor_country = {
+		# 						is_subject_of = ROOT
+		# 					}
+		# 				}
+		# 				any_allied_country = {
+		# 					any_neighbor_country = {
+		# 						is_in_faction_with = ROOT
+		# 					}
+		# 				}
+
+		# 				any_country = {
+		# 					is_subject_of = PREV
+		# 					is_neighbor_of = ROOT
+		# 				}
+		# 				any_country = {
+		# 					is_subject_of = PREV
+		# 					any_neighbor_country = {
+		# 						is_subject_of = ROOT
+		# 					}
+		# 				}
+		# 				any_country = {
+		# 					is_subject_of = PREV
+		# 					any_neighbor_country = {
+		# 						is_in_faction_with = ROOT
+		# 					}
+		# 				}
+
+		# 				any_country = {
+		# 					is_in_faction_with = PREV
+		# 					is_neighbor_of = ROOT
+		# 				}
+		# 				any_country = {
+		# 					is_in_faction_with = PREV
+		# 					any_neighbor_country = {
+		# 						is_subject_of = ROOT
+		# 					}
+		# 				}
+		# 				any_country = {
+		# 					is_in_faction_with = PREV
+		# 					any_neighbor_country = {
+		# 						is_in_faction_with = ROOT
+		# 					}
+		# 				}
+		# 			}
+		# 			has_opinion = {
+		# 				target = ROOT
+		# 				value > -10
+		# 			}
+		# 		}
+		# 	}
+		# }
+		########观点判定
+		if = {
+			limit = {
+				ROOT = {
+					has_government = guli
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						not = { has_government = oldorder }
+					}
+					has_opinion = {
+						target = ROOT
+						value > 49
+					}
+					else = {
+						has_opinion = {
+							target = ROOT
+							value > 79
+						}
+					}
+				}
+			}
+			else = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_government = oldorder
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_government = oldorder
+					}
+					has_opinion = {
+						target = ROOT
+						value > 39
+					}
+					else = {
+						has_opinion = {
+							target = ROOT
+							value > 79
+						}
+					}
+				}
+			}
+			else = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_government = qinwai
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_government = qinwai
+					}
+					has_opinion = {
+						target = ROOT
+						value > 14
+					}
+					else_if = {
+						limit = {
+							has_government = guli
+						}
+						has_opinion = {
+							target = ROOT
+							value > 49
+						}
+						else = {
+							has_opinion = {
+								target = ROOT
+								value > 79
+							}
+						}
+					}
+				}
+			}
+			else = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_government = fandong
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_government = fandong
+					}
+					has_opinion = {
+						target = ROOT
+						value > 14
+					}
+					else_if = {
+						limit = {
+							has_government = guli
+						}
+						has_opinion = {
+							target = ROOT
+							value > 49
+						}
+						else = {
+							has_opinion = {
+								target = ROOT
+								value > 79
+							}
+						}
+					}
+				}
+			}
+			else = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_government = neworder
+				}
+			}
+			FROM = {
+				if = {
+					limit = {
+						has_government = neworder
+					}
+					has_opinion = {
+						target = ROOT
+						value > 39
+					}
+					else_if = {
+						limit = {
+							has_government = guli
+						}
+						has_opinion = {
+							target = ROOT
+							value > 49
+						}
+						else = {
+							has_opinion = {
+								target = ROOT
+								value > 79
+							}
+						}
+					}
+				}
+			}
+			else = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+	}
+}
+#portal
+indoor_is_being_threatened = {
+	or = {
+		and = {
+			tag = KAS
+			not = {
+				and = {
+					82 = {
+						is_fully_controlled_by = ROOT
+					}
+					378 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+			}
+		}
+		and = {
+			tag = YKR
+			not = {
+				and = {
+					509 = {
+						is_fully_controlled_by = ROOT
+					}
+					351 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+			}
+		}
+		and = {
+			tag = OKI
+			not = {
+				and = {
+					261 = {
+						is_fully_controlled_by = ROOT
+					}
+					278 = {
+						is_fully_controlled_by = ROOT
+					}
+					256 = {
+						is_fully_controlled_by = ROOT
+					}
+					275 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+			}
+		}
+		and = {
+			tag = SRB
+			not = {
+				291 = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+	}
+}
+
+controlled_by_subject_or_you = {
+	CONTROLLER = {
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+		}
+	}
+}
+
+is_MAF = {
+	custom_trigger_tooltip = {
+		tooltip = is_MAF_tt
+		has_country_flag = MAF_united
+	}
+}
+
+MAF_is_subject = {
+	custom_trigger_tooltip = {
+		tooltip = MAF_is_subject_tt
+		any_country = {
+			has_country_flag = MAF_united
+			is_subject = yes
+		}
+		
+	}
+}
+
+MAF_is_created = {
+	custom_trigger_tooltip = {
+		tooltip = MAF_is_created_tt
+		any_country = {
+			has_country_flag = MAF_united
+		}
+		
+	}
+}
+
+is_subject_of_MAF = {
+	custom_trigger_tooltip = {
+		tooltip = is_subject_of_MAF_tt
+		any_country = {
+			has_country_flag = MAF_united
+			PREV = {
+				is_subject_of = PREV
+			}
+		}
+	}
+}
+
+MAF_is_subject_of_ROOT = {
+	custom_trigger_tooltip = {
+		tooltip = MAF_is_subject_of_ROOT_tt
+		any_country = {
+			has_country_flag = MAF_united
+			is_subject_of = ROOT
+		}
+	}
+}
+
+has_war_with_MAF = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_MAF_tt
+		any_country = {
+			has_country_flag = MAF_united
+			has_war_with = PREV
+		}
+	}
+}
+
+weak_races = {
+	or = {
+		has_idea = Fairy
+		has_idea = Ghost
+		has_idea = Pri_youkai
+		has_idea = Beast
+		has_idea = Magician
+	}
+	not = {
+		tag = KAS
+		tag = SCA
+		tag = YUK
+		tag = SAT
+		tag = YYK
+		tag = SKI
+		tag = GYK
+		tag = SAK
+		tag = YCE
+		tag = SRB
+		tag = EET
+	}
+}

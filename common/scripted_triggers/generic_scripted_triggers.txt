@@ -1,0 +1,6 @@
+is_changemaker = {
+	OR = {
+		has_government = fandong
+		has_government = qinwai
+	}
+}

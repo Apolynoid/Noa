@@ -1,0 +1,33 @@
+state={
+	id=430
+	name="STATE_430"
+	provinces={
+		704 896 2057 2198 2859 2869 4285 4287 4290 4495 4503 4509 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SBK
+			add_core_of = SBK
+			buildings = {
+				infrastructure =2
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=214.0
+	buildings_max_level_factor=1.000
+}

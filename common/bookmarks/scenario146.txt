@@ -1,0 +1,314 @@
+bookmarks = {
+	bookmark = { #146
+		name = "DAWN_NAME"
+		desc = "DAWN_DESCS"
+		date = 146.1.1.7
+		picture = "GFX_Scenario146"
+		default_country = "SCA"
+		default = yes
+		
+
+		"SCA"={
+			history = "SCA_DAWN_DESC"
+			ideas = { 
+				SCA_yao_jing_bu_man_idea
+				SCA_di_xiao_de_xing_zheng_ti_xi_idea
+				SCA_luo_hou_de_jun_shi_li_lun_idea
+			}
+			focuses = {
+				SCA_hong_mo_cheng_qing_dian
+				SCA_ji_xu_remilia_de_tong_zhi
+				SCA_ying_dui_wei_xie
+			}
+		}
+		
+		"MRY"={
+			history = "MRY_DAWN_DESC"
+			ideas = { 
+				MRY_kejizhishen_idea
+    			MRY_shenmingdeweiji_idea
+    			MRY_fugushenwei_idea
+			}
+			focuses = {
+				MRY_shenmingyongyuanshishen
+				MRY_xiangtiangouxuanzhan
+				MRY_chengweiyaoguaishanzhizhu
+			}
+		}
+		
+		"TEG"={
+			history = "TEG_DAWN_DESC"
+		#	ideology = gexin
+			ideas = { 
+    			TEG_cui_ruo_de_min_zhu_zhi_du_idea
+    			TEG_can_mou_zong_bu_idea
+				TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea
+			}
+			focuses = {
+				TEG_da_xuan
+				TEG_jie_jue_tian_mo_wen_ti
+				TEG_bao_wei_gong_he_guo
+			}
+		}
+		
+		"SEJ"={
+			history = "SEJ_DAWN_DESC"
+			ideas = { 
+				SEJ_xia_ke_shang_ge_ming_shi_yuan_di_idea
+				SEJ_yao_guai_zhong_zu_zhu_yi_pai_xi_idea
+				SEJ_di_yi_ge_wu_nian_ji_hua_idea
+			}
+			focuses = {
+				SEJ_jian_chi_xia_ke_shang_dao_lu
+				SEJ_quan_huan_xiang_xiang_xia_ke_shang
+				SEJ_xia_ke_shang_yong_bu_ting_xie
+			}
+		}
+
+		"CIR"={
+			history = "CIR_DAWN_DESC"
+			ideas = { 
+				CIR_yao_jing_ge_ming_jun_idea
+				CIR_lian_he_ti_zheng_zhi_zhuang_kuang_idea
+				CIR_shou_sun_de_gong_ye_qu_idea
+			}
+			focuses = {
+				CIR_dui_kang_e_mo_de_zhun_bei
+				CIR_fan_scarlet_xie_yue
+				CIR_yu_e_mo_de_jue_zhan
+			}
+		}
+
+		"NMS"={
+			history = "NMS_DAWN_DESC"
+			ideas = { 
+				hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+				NMS_zong_jiao_wei_ji_idea
+				NMS_di_xiao_de_gong_ye_ti_xi_idea
+			}
+			focuses = {
+				NMS_ying_dui_zong_jiao_wei_ji
+				NMS_li_yong_ren_lei_pei_kuan
+				NMS_zhu_dong_fang_yu_zheng_ce
+			}
+		}
+
+		"TKM"={
+			history = "TKM_DAWN_DESC"
+			ideas = { 
+				TKM_bu_wen_ding_de_xin_sheng_zheng_quan_idea
+				TKM_ren_lei_de_bao_hu_zhe_idea
+				TKM_bo_ruo_de_gong_ye_idea
+			}
+			focuses = {
+				TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+				TKM_li_yong_fu_sang_shen_de_te_dian
+				TKM_xiao_mie_dui_dao_ju_de_wei_xie
+			}
+		}
+		
+		"---"={
+			history = "OTHER_DAWN_DESC"
+			ideas = { 
+			}
+		}
+
+#		"HKR"={
+#		    minor = yes
+#			history = "HKR_DAWN_DESC"		#sca
+#			ideas={ 
+#				hkr_treaty
+#				hkr_bolifendui
+#				hkr_bayunzi
+#			}	
+#            focuses = {
+#            	HKR_chongshenbayunziguanxi
+#            	HKR_jiaqiangxianzhezaihuanxiangxiangdeyingxiang
+#            	HKR_zhenyayaoguaijiefangyundong
+#			}			
+#		}
+
+		"MRS"={
+		    minor = yes
+			history = "MRS_DAWN_DESC"		#sca
+			ideas={ 
+				mrs_bushimofashi
+				mrs_fen_lie_de_mo_fa_shi_idea
+				mrs_hun_luan_de_zhi_hui_xi_tong_idea
+			}	
+           focuses = {
+           	MRS_zhao_kai_mo_nv_da_hui
+				MRS_chen_ai_luo_ding
+				MRS_mo_fa_zhi_sen_de_li_ming
+			}			
+		}
+#		"TES"={
+#		    minor = yes
+#			history = "TES_DAWN_DESC"		#sca
+#			ideas={ 
+#				not_gensoukyo_idea
+#				God
+#			}	
+#            focuses = {
+#            	TES_zhuanyishoudou
+#            	TES_binamingjuducai
+#            	TES_kuodayingxianglidaodiyu
+#			}			
+#		}
+#		"SRB"={
+#		    minor = yes
+#			history = "SRB_DAWN_DESC"		#sca
+#			ideas={ 
+#				Shrine
+#				God
+#				srb_daojiaotansuojingshen_o_idea
+#			}	
+#            focuses = {
+#            	SRB_xuanchengtianhuang
+#            	SRB_quderenleilingdaoquan
+#            	SRB_huoshaomingliansi
+#			}			
+#		}
+
+#		"AKI"={
+#		    minor = yes
+#			history = "AKI_DAWN_DESC"		#sca
+#			ideas={ 
+#            AKI_tudijianbing_idea
+#            AKI_jiduanzhuyiyundong_idea
+#            AKI_renyushendemohujiexian_idea
+#			}	
+#            focuses = {
+#            	AKI_cunluodalianhe
+#            	AKI_xirenlidechengli
+#            	AKI_tongyiwuyuanzhong
+#			}			
+#		}
+    
+#    	"MEL"={
+#		    minor = yes
+#			history = "MEL_DAWN_DESC"		#sca
+#			ideas={ 
+#	            SGS_tuanjiexieding_idea
+#	            MEL_messy_economy_idea
+#	            MEL_unorganized_militia_idea
+#			}	
+#            focuses = {
+#            	MEL_BiAnHua_Plant
+#            	MEL_mustard_gas
+#              	MEL_Liberation
+#			}			
+#		}
+
+		"YYK"={
+		    minor = yes
+			history = "YYK_DAWN_DESC"		#sca
+			ideas={ 
+				YYK_you_ling_ji_jin_pai_xi_idea
+				YYK_bu_zhong_cheng_de_jun_dui_idea
+			    YKO_que_fa_zu_zhi_de_sheng_chan_idea
+			}	
+            focuses = {
+				KNA_fan_dui_you_you_zi
+				YYK_ming_jie_de_ming_yun
+				YKO_zhi_chi_you_you_zi
+			}			
+		}  
+
+#		"CLO"={
+#		    minor = yes
+#			history = "CLO_DAWN_DESC"		#sca
+#			ideas={ 
+#				not_gensoukyo_idea
+#				CLO_neibusaodong1_idea
+#				CLO_zhengfu1_idea
+#			}	
+#            focuses = {
+#            	CLO_chongguishentan
+#				CLO_hekaxinzhixu
+#				CLO_nvshendeshili
+#			}			
+#		}  
+
+#		"SAT"={
+#		    minor = yes
+#			history = "SAT_DAWN_DESC"		#sat
+#			ideas={ 
+#				SAT_Komeiji_Isolationism
+#				SAT_keep_on_guard_idea_0
+#				SAT_beast_army
+#			}	
+#            focuses = {
+#				SAT_proclaim_our_past_role
+#				SAT_surveillance_network
+#				SAT_the_second_sun
+#			}			
+#		}  
+
+#		"SGS"={
+#		    minor = yes
+#			history = "SGS_DAWN_DESC"		#sgs
+#			ideas={ 
+#				SGS_tuanjiexieding_idea
+#				SGS_yaojingyoujidui_idea
+#				SGS_captanul_idea
+#			}	
+#            focuses = {
+#				SGS_xinanhuanxiangxianggongyehua
+#				SGS_xinanhuanxiangxiangzhiguang
+#				SGS_xinanzhanluan
+#			}			
+#		} 
+
+#		"MSD" = {
+#			minor = yes
+#			history = "MSD_DAWN_DESC"			#sat
+#			ideas = {
+#				MSD_jingjiweiji_idea
+#				msd_xian_dai_jun_dui_idea
+#				MSD_qingxijijinfenzi_idea
+#			}
+#			focuses = {
+#				MSD_shou_dao_bian_jing_de_chong_tu
+#				MSD_xian_dai_jun_dui
+#				MSD_bei_mian_de_wei_xie
+#			}
+#		}
+
+#		"HUM" = {
+#			minor = yes
+#			history = "HUM_DAWN_DESC"			#sat
+#			ideas = {
+#				hum_yao_guai_de_ying_xiang_idea
+#				hum_fu_quan_zhan_zheng_de_yin_ying_idea
+#				hum_cai_fa_idea
+#			}
+#			focuses = {
+#				HUM_chang_shi_bai_tuo_yao_guai_ying_xiang
+#				HUM_zhan_hou_chong_jian
+#				HUM_ren_lei_zi_you_shi
+#			}
+#		}
+
+		"NTR" = {
+			minor = yes
+			history = "NTR_DAWN_DESC"			#sat
+			ideas = {
+				NTR_bu_wen_ding_de_gong_he_guo_idea
+				NTR_he_tong_de_yan_jiu_neng_li_idea
+				NTR_min_bing_idea
+			}
+			focuses = {
+				NTR_jia_qiang_yu_tian_gou_de_he_zuo
+				NTR_yao_guai_shan_ke_ji_jiao_liu
+				NTR_ji_fa_tong_yi_re_qing
+			}
+		}
+    
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

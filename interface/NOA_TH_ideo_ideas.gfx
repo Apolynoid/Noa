@@ -1,0 +1,58 @@
+spriteTypes = {	
+
+	### generic 通用
+	spriteType = {
+		name = "GFX_idea_gekokujyo_spirit"
+		texturefile = "gfx/interface/buffs/gekokujyo_spirit.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_political_power_focus"
+		texturefile = "gfx/interface/buffs/political_power_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_war_propaganda_focus"
+		texturefile = "gfx/interface/buffs/war_propaganda_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_intel_focus"
+		texturefile = "gfx/interface/buffs/intel_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_army_exp_focus"
+		texturefile = "gfx/interface/buffs/army_exp_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_logistic_focus"
+		texturefile = "gfx/interface/buffs/logistic_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_planning_focus"
+		texturefile = "gfx/interface/buffs/military_planning_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_army_mobilisation_focus"
+		texturefile = "gfx/interface/buffs/army_mobilisation_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_consumer_goods_focus"
+		texturefile = "gfx/interface/buffs/consumer_goods_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_factory_output_focus"
+		texturefile = "gfx/interface/buffs/factory_output_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_factory_focus"
+		texturefile = "gfx/interface/buffs/factory_focus.png"
+	}
+}

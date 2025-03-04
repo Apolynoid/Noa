@@ -1,0 +1,12 @@
+HUM_ren_lei_liu_wang_zhe_state_idea = {
+	icon = GFX_modifiers_hum_human_exile
+	remove_trigger = {
+		always = no
+	}
+	
+	recruitable_population_factor = -0.5
+	local_building_slots_factor = -0.33
+	state_resources_factor = -0.5
+	state_production_speed_buildings_factor = -0.33
+	army_speed_factor_for_controller = -0.33
+}

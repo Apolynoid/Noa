@@ -1,0 +1,1865 @@
+# 即将到来的内战
+YYK_ji_jiang_dao_lai_de_nei_zhan = {
+    # 当前地块状态：完全支持西行寺家
+    YYK_totally_support_YKO = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                check_variable = {
+                    yko_control_level = 4
+                }
+            }
+        }
+        available = {
+            always = no
+        }
+        on_map_mode = map_only
+        icon = yko_control_strong
+        cost = 20
+        days_remove = 30
+        days_re_enable = 15
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    # 当前地块状态：完全支持革命阵线
+    YYK_totally_support_KNA = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                check_variable = {
+                    yko_control_level = 1
+                }
+            }
+        }
+        available = {
+            always = no
+        }
+        on_map_mode = map_only
+        icon = kna_control_strong
+        cost = 20
+        days_remove = 30
+        days_re_enable = 15
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    # 当前地块状态：倾向西行寺家
+    YYK_partially_support_YKO = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                check_variable = {
+                    yko_control_level = 3
+                }
+            }
+        }
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = YYK_being_influenced_flag
+                }
+                YYK_is_neighboring_core_state = yes
+                if = {
+                    limit = {
+                        ROOT = {
+                            is_ai = yes
+                        }
+                    }
+                    NOT = {
+                        has_state_flag = YYK_is_hakugyokurou_states_flag
+                    }
+                }
+            }
+            ROOT = {
+                NOT = {
+                    has_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        on_map_mode = map_only
+        icon = yko_control_weak
+        cost = 20
+        days_remove = 30
+        days_re_enable = 15
+        cancel_trigger = {
+            OR = {
+                has_global_flag = YYK_netherworld_civil_war_begun_flag
+                YYK_state_totally_controlled = yes
+            }
+        }
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    clr_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    set_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    clr_country_flag = YYK_influencing_flag
+                }
+            }
+            FROM = {
+                YYK_gain_influence = yes
+            }
+        }
+        ai_will_do = {
+            base = 100
+            modifier = {
+                factor = 0
+                is_in_array = {
+                    array = hakugyokurou_states
+                    value = FROM
+                }
+            }
+        }
+    }
+
+    # 当前地块状态：倾向革命阵线
+    YYK_partially_support_KNA = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                check_variable = {
+                    yko_control_level = 2
+                }
+            }
+        }
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = YYK_being_influenced_flag
+                }
+                YYK_is_neighboring_core_state = yes
+                if = {
+                    limit = {
+                        ROOT = {
+                            is_ai = yes
+                        }
+                    }
+                    NOT = {
+                        has_state_flag = YYK_is_hakugyokurou_states_flag
+                    }
+                }
+            }
+            ROOT = {
+                NOT = {
+                    has_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        on_map_mode = map_only
+        icon = kna_control_weak
+        cost = 20
+        days_remove = 30
+        days_re_enable = 15
+        cancel_trigger = {
+            OR = {
+                has_global_flag = YYK_netherworld_civil_war_begun_flag
+                YYK_state_totally_controlled = yes
+            }
+        }
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    clr_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    set_country_flag = YYK_influencing_flag
+                }
+            }
+        }
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+                ROOT = {
+                    clr_country_flag = YYK_influencing_flag
+                }
+            }
+            FROM = {
+                YYK_gain_influence = yes
+            }
+        }
+        ai_will_do = {
+            base = 100
+            modifier = {
+                factor = 0
+                is_in_array = {
+                    array = hakugyokurou_states
+                    value = FROM
+                }
+            }
+        }
+    }
+
+    # 当前地块状态：出现变量错误
+    YYK_variable_error = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                OR = {
+                    NOT = {
+                        has_variable = yko_control_level
+                    }
+                    check_variable = {
+                        yko_control_level = 0
+                    }
+                }
+            }
+        }
+        available = {
+            always = no
+        }
+        on_map_mode = map_only
+        cost = 114
+        days_remove = 30
+        days_re_enable = 15
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    # 夺取武器
+    KNA_duo_qu_wu_qi = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_KNA_selected_flag
+            YYK_can_seize_weapon = yes
+        }
+
+        available = {
+            YYK_still_equipment_left_to_seize = yes
+            NOT = {
+                has_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        days_remove = 30
+        icon = generic_prepare_civil_war
+        cost = 15
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        remove_effect = {
+            set_temp_variable = {
+				YYK_equipment_fraction = 8
+			}
+			KNA_seize__YYK_equipment_fraction__weapon = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = -20
+            }
+            hidden_effect = {
+                clr_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+    }
+
+    # 寻求军队支持
+    KNA_xun_qiu_jun_dui_zhi_chi = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_KNA_selected_flag
+            YYK_can_KNA_seek_army_support = yes
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        days_remove = 30
+        icon = generic_army_support
+        cost = 25
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        remove_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 8
+			}
+			KNA_seek__YYK_army_fraction__army_support = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = -20
+            }
+            hidden_effect = {
+                clr_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+    }
+
+    # 确保武器库安全
+    YKO_que_bao_wu_qi_ku_an_quan = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_YKO_selected_flag
+            YYK_can_seize_weapon = yes
+        }
+
+        available = {
+            YYK_still_equipment_left_to_seize = yes
+            NOT = {
+                has_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        days_remove = 30
+        icon = generic_prepare_civil_war
+        cost = 10
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        remove_effect = {
+            YKO_secure_10_weapon = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = 15
+            }
+            hidden_effect = {
+                clr_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 强化军队忠诚
+    YKO_qiang_hua_jun_dui_zhong_cheng = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_YKO_selected_flag
+            YYK_can_seek_army_support = yes
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        days_remove = 30
+        icon = generic_army_support
+        cost = 30
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        remove_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 6
+			}
+			YKO_seek__YYK_army_fraction__army_support = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = 15
+            }
+            hidden_effect = {
+                clr_country_flag = YYK_preparing_for_civil_war_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 30
+        }
+    }
+
+    # AI-KNA 国策
+    # 建立地下反抗中心
+    YYK_jian_li_di_xia_fan_kang_zhong_xin = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 35
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = KNA_better_prepared_tt
+            hidden_effect = {
+                activate_mission = YYK_zheng_qu_jun_dui_zhi_chi
+            }
+        }
+    }
+
+    # 争取军队支持
+    YYK_zheng_qu_jun_dui_zhi_chi = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 35
+
+        is_good = no
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 15
+			}
+			KNA_seek__YYK_army_fraction__army_support = yes
+			custom_effect_tooltip = KNA_seek_army_support_tt
+			hidden_effect = {
+				set_country_flag = KNA_seek_army_support_flag
+                country_event = yyk.102
+                activate_mission = YYK_tu_xi_wu_qi_ku
+                YYK_KNA_further_action = yes
+			}
+        }
+    }
+
+    # 突袭武器库
+    YYK_tu_xi_wu_qi_ku = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 35
+
+        is_good = no
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_equipment_fraction = 20
+			}
+			KNA_seize__YYK_equipment_fraction__weapon = yes
+			custom_effect_tooltip = KNA_seize_weapon_tt
+			hidden_effect = {
+				set_country_flag = KNA_seize_weapon_flag
+                country_event = yyk.103
+                activate_mission = YYK_zheng_qu_di_fang_zhi_chi
+			}
+        }
+    }
+
+    # 争取地方支持
+    YYK_zheng_qu_di_fang_zhi_chi = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 35
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = KNA_seek_local_support_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+				}
+                activate_mission = YYK_ji_jie_ge_ming_min_bing
+			}
+        }
+    }
+
+    # 集结革命民兵
+    YYK_ji_jie_ge_ming_min_bing = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 35
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = KNA_revolution_militia_tt
+			hidden_effect = {
+				set_country_flag = KNA_revolution_militia_flag
+			}
+        }
+    }
+
+    # AI-YKO 国策
+    # 确保首都卫队支持
+    YYK_que_bao_shou_du_wei_dui_zhi_chi = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = YKO_capital_guard_support_tt
+			hidden_effect = {
+				set_country_flag = YKO_capital_guard_support_flag
+                activate_mission = YYK_que_bao_bai_yu_lou_an_quan
+			}
+        }
+    }
+
+    # 确保白玉楼安全
+    YYK_que_bao_bai_yu_lou_an_quan = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = YKO_secure_hakugyokurou_tt
+			hidden_effect = {
+				for_each_scope_loop = {
+					array = hakugyokurou_states
+					set_variable = {
+						yko_control_level = 4
+					}
+				}
+                activate_mission = YYK_an_cha_zhong_cheng_guan_liao
+			}
+        }
+    }
+
+    # 安插忠诚官僚
+    YYK_an_cha_zhong_cheng_guan_liao = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = YKO_loyal_bureau_tt
+			hidden_effect = {
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+				random_owned_state = {
+					limit = {
+						NOT = {
+							has_state_flag = YYK_being_influenced_flag
+						}
+						check_variable = {
+							yko_control_level = 3
+						}
+					}
+					YKO_gain_influence = yes
+				}
+                activate_mission = YYK_qing_xi_jun_dui
+            }
+        }
+    }
+
+    # 清洗军队
+    YYK_qing_xi_jun_dui = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 25
+			}
+			YKO_seek__YYK_army_fraction__army_support = yes
+			custom_effect_tooltip = YKO_army_purge_tt
+            YKO_purge_army = yes
+			hidden_effect = {
+				set_country_flag = YKO_army_purge_flag
+                country_event = yyk.104
+                activate_mission = YYK_xiao_mie_fan_pan_fen_zi
+			}
+        }
+    }
+
+    # 消灭反叛分子
+    YYK_xiao_mie_fan_pan_fen_zi = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_operation
+
+        selectable_mission = no
+
+        days_mission_timeout = 60
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = YKO_destroy_rebellions_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							check_variable = {
+								yko_control_level = 2
+							}
+							check_variable = {
+								yko_control_level = 3
+							}
+						}
+					}
+					YKO_gain_influence = yes
+				}
+			}
+			YYK_civil_war = yes
+        }
+    }
+
+    # AI-地块争夺
+    YYK_di_fang_xing_dong_zheng_qu__YYK_AI_target_state__di_qu_zhi_chi = {
+        activation = {
+            always = no
+        }
+
+        allowed = {
+            original_tag = YYK
+        }
+
+        available = {
+            always = no
+        }
+
+        highlight_states = {
+            highlight_state_targets = {
+                state = YYK_AI_target_state
+            }
+        }
+
+        days_mission_timeout = 30
+        icon = infiltrate_state
+        selectable_mission = no
+        is_good = no
+
+        cancel_trigger = {
+            OR = {
+                has_global_flag = YYK_netherworld_civil_war_begun_flag
+                YYK_state_totally_controlled = yes
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                var:YYK_AI_target_state = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+                # re-choose target
+                YYK_random_state_seize_choose = yes
+            }
+        }
+
+        timeout_effect = {
+            hidden_effect = {
+                var:YYK_AI_target_state = {
+                    clr_state_flag = YYK_being_influenced_flag
+                }
+            }
+            var:YYK_AI_target_state = {
+                YYK_lose_influence = yes
+            }
+            # re-choose target
+            hidden_effect = {
+                YYK_random_state_seize_choose = yes
+            }
+        }
+    }
+
+    # AI-行动选择
+    YYK_di_fang_xing_dong_duo_qu_wu_qi = {
+        activation = {
+            always = no
+        }
+
+        allowed = {
+            original_tag = YYK
+        }
+
+        available = {
+            always = no
+        }
+
+        days_mission_timeout = 30
+        icon = generic_prepare_civil_war
+        selectable_mission = no
+        is_good = no
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                YYK_KNA_further_action = yes
+            }
+        }
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_equipment_fraction = 8
+			}
+			KNA_seize__YYK_equipment_fraction__weapon = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = -20
+            }
+            hidden_effect = {
+                YYK_KNA_further_action = yes
+            }
+        }
+    }
+
+    YYK_di_fang_xing_dong_xun_qiu_jun_dui_zhi_chi = {
+        activation = {
+            always = no
+        }
+
+        allowed = {
+            original_tag = YYK
+        }
+
+        available = {
+            always = no
+        }
+
+        days_mission_timeout = 30
+        icon = generic_army_support
+        selectable_mission = no
+        is_good = no
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                YYK_KNA_further_action = yes
+            }
+        }
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 8
+			}
+			KNA_seek__YYK_army_fraction__army_support = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = -20
+            }
+            hidden_effect = {
+                YYK_KNA_further_action = yes
+            }
+        }
+    }
+
+    YYK_di_fang_xing_dong_que_bao_wu_qi_ku_an_quan = {
+        activation = {
+            always = no
+        }
+
+        allowed = {
+            original_tag = YYK
+        }
+
+        available = {
+            always = no
+        }
+
+        days_mission_timeout = 30
+        icon = generic_prepare_civil_war
+        selectable_mission = no
+        is_good = no
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                YYK_YKO_further_action = yes
+            }
+        }
+
+        timeout_effect = {
+            YKO_secure_10_weapon = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = 15
+            }
+            hidden_effect = {
+                YYK_YKO_further_action = yes
+            }
+        }
+    }
+
+    YYK_di_fang_xing_dong_qiang_hua_jun_dui_zhong_cheng = {
+        activation = {
+            always = no
+        }
+
+        allowed = {
+            original_tag = YYK
+        }
+
+        available = {
+            always = no
+        }
+
+        days_mission_timeout = 30
+        icon = generic_army_support
+        selectable_mission = no
+        is_good = no
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                YYK_YKO_further_action = yes
+            }
+        }
+
+        timeout_effect = {
+            set_temp_variable = {
+				YYK_army_fraction = 6
+			}
+			YKO_seek__YYK_army_fraction__army_support = yes
+            add_days_mission_timeout = {
+                mission = YYK_nei_zhan_bao_fa
+                days = 15
+            }
+            hidden_effect = {
+                YYK_YKO_further_action = yes
+            }
+        }
+    }
+
+	# 内战爆发
+	YYK_nei_zhan_bao_fa = {
+		allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+        }
+
+        icon = generic_ignite_civil_war
+
+        selectable_mission = no
+
+        days_mission_timeout = 250
+
+        is_good = no
+
+        timeout_effect = {
+            YYK_civil_war = yes
+        }
+	}
+}
+
+# 冥界内战
+YYK_ming_jie_nei_zhan = {
+    # 战争债券
+    YYK_zhan_zheng_zhai_quan = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            always = yes
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = YYK_war_bond_desicion_cost
+
+        icon = hol_attract_foreign_investors
+        
+        days_remove = 180
+
+        days_re_enable = 180
+
+        fire_only_once = no
+
+        complete_effect = {
+            custom_effect_tooltip = decision_cost_increase_20_tt
+            hidden_effect = {
+                add_to_variable = {
+                    YYK_war_bond_desicion_cost = 20
+                }
+            }
+        }
+
+        modifier = {
+            industrial_capacity_factory = 0.15
+        }
+
+        ai_will_do = {
+            base = 1
+        }
+    }
+
+    # 革命意识宣传
+    KNA_ge_ming_yi_shi_xuan_chuan = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_KNA_flag
+        }
+        
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = KNA_fervour_less_than_88_tt
+                check_variable = {
+                    KNA_fervour < 88
+                }
+            }
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = KNA_propaganda_desicion_cost
+
+        icon = eng_propaganda_campaigns
+        
+        days_remove = 90
+
+        days_re_enable = 90
+
+        fire_only_once = no
+
+        complete_effect = {
+            set_temp_variable = {
+                YYK_fervour_increase_num = 12
+            }
+            YYK_fervour__YYK_fervour_increase_num__increase = yes
+            custom_effect_tooltip = decision_cost_increase_20_tt
+            hidden_effect = {
+                add_to_variable = {
+                    KNA_propaganda_desicion_cost = 20
+                }
+                set_country_flag = KNA_doing_propaganda_flag
+            }
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                clr_country_flag = KNA_doing_propaganda_flag
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                clr_country_flag = KNA_doing_propaganda_flag
+            }
+        }
+
+        modifier = {
+            custom_modifier_tooltip = KNA_propaganda_fade_tt
+        }
+
+        ai_will_do = {
+            base = 1
+        }
+    }
+
+    # 紧急工厂转换
+    KNA_jin_ji_gong_chang_zhuan_huan = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_KNA_flag
+            has_completed_focus = KNA_ge_ming_xian_shi_zhu_yi
+        }
+        
+        available = {
+            num_of_civilian_factories_available_for_projects > 2
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = 50
+
+        icon = generic_industry
+        
+        days_remove = 365
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_stability = -0.05
+            set_temp_variable = {
+                YYK_fervour_decrease_num = 5
+            }
+            YYK_fervour__YYK_fervour_decrease_num__decrease = yes
+        }
+
+        modifier = {
+            civilian_factory_use = 3
+            military_factory_donations = 2
+        }
+
+        ai_will_do = {
+            base = 1
+        }
+    }
+
+    # 降低训练标准
+    KNA_jiang_di_xun_lian_biao_zhun = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_KNA_flag
+            has_completed_focus = KNA_ge_ming_xian_shi_zhu_yi
+        }
+        
+        available = {
+            always = yes
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = 50
+
+        icon = SWE_set_army_budget
+        
+        days_remove = 365
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_war_support = -0.05
+            set_temp_variable = {
+                YYK_fervour_decrease_num = 5
+            }
+            YYK_fervour__YYK_fervour_decrease_num__decrease = yes
+        }
+
+        modifier = {
+            weekly_manpower = 2
+            training_time_army_factor = -0.2
+            minimum_training_level = -0.3
+            mobilization_speed = 0.1
+        }
+
+        ai_will_do = {
+            base = 1
+        }
+    }
+
+    # 紧急民兵征召
+    YYK_jin_ji_min_bing_zheng_zhao = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            surrender_progress > 0.4
+            has_manpower > 400
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = 50
+
+        icon = generic_reorganize_irregulars
+        
+        days_remove = 60
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_manpower = -400
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = YYK_emergency_militia_tt
+            hidden_effect = {
+                for_loop_effect = {
+                    end = 10
+                    if = {
+                        limit = {
+                            has_country_flag = YYK_KNA_flag
+                        }
+                        random_owned_controlled_state = {
+                            create_unit = {
+                                division = "name = \"革命民兵\" division_template = \"革命民兵\" start_experience_factor = 0.1 start_equipment_factor = 0.1"
+                                owner = KNA
+                            }
+                        }
+                    }
+                    else = {
+                        random_owned_controlled_state = {
+                            create_unit = {
+                                division = "name = \"效忠派民兵\" division_template = \"效忠派民兵\" start_experience_factor = 0.1 start_equipment_factor = 0.1"
+                                owner = KNA
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        cancel_effect = {
+            add_manpower = 400
+        }
+
+        ai_will_do = {
+            base = 1000
+        }
+    }
+
+    # 殊死防御
+    YYK_shu_si_fang_yu = {
+        allowed = {
+            original_tag = YYK
+        }
+        
+        available = {
+            surrender_progress > 0.65
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = 50
+
+        icon = generic_protection
+
+        days_remove = 180
+
+        fire_only_once = yes
+
+        complete_effect = {
+            hidden_effect = {
+                set_technology = {
+                    YYK_shu_si_fang_yu_tech = 1
+                    popup = no
+                }
+            }
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                set_technology = {
+                    YYK_shu_si_fang_yu_tech = 0
+                }
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                set_technology = {
+                    YYK_shu_si_fang_yu_tech = 0
+                }
+            }
+        }
+
+        modifier = {
+            custom_modifier_tooltip = YYK_desperate_defense_tt
+            army_morale_factor = 0.2
+        }
+
+        ai_will_do = {
+            base = 1000
+        }
+    }
+
+    # 坚守白玉楼区域
+    YKO_jian_shou_bai_yu_lou_qu_yu = {
+        allowed = {
+            original_tag = YYK
+        }
+
+        visible = {
+            has_country_flag = YYK_YKO_flag
+        }
+        
+        available = {
+            has_full_control_of_state = 231
+            231 = {
+                any_neighbor_state = {
+                    is_controlled_by = KNA
+                }
+            }
+        }
+
+        cancel_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_ended_flag
+        }
+
+        cost = 30
+
+        icon = generic_fortification
+
+        days_remove = 90
+
+        fire_only_once = yes
+
+        complete_effect = {
+            231 = {
+                add_dynamic_modifier = {
+                    modifier = YKO_bai_yu_lou_fang_yu_idea
+                }
+            }
+        }
+
+        remove_effect = {
+            231 = {
+                remove_dynamic_modifier = {
+                    modifier = YKO_bai_yu_lou_fang_yu_idea
+                }
+            }
+        }
+
+        cancel_effect = {
+            231 = {
+                remove_dynamic_modifier = {
+                    modifier = YKO_bai_yu_lou_fang_yu_idea
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 1000
+        }
+    }
+}
+
+# 清除反对者抵抗
+YYK_qing_chu_fan_dui_zhe_di_kang = {
+    # 清除FROM地区的抵抗
+    YYK_qing_chu_FROM_di_qu_de_di_kang = {
+        state_target = any_controlled_state
+        allowed = {
+            OR = {
+                original_tag = YYK
+            }
+        }
+        target_root_trigger = {
+            always = yes
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = YYK_fan_dui_zhe_di_kang_state_idea
+                }
+            }
+        }
+        available = {
+            ROOT = {
+                NOT = {
+                    has_country_flag = YYK_suppressing_resistance_flag
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_police_action
+        cost = 20
+        days_remove = 20
+        days_re_enable = 15
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = YYK_suppressing_resistance_flag
+                FROM = {
+                    set_state_flag = YYK_suppressed_flag
+                }
+            }
+        }
+        remove_effect = {
+            hidden_effect = {
+                clr_country_flag = YYK_suppressing_resistance_flag
+            }
+            FROM = {
+                YYK_remove_resistance = yes
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+}
+
+# 地狱革命
+KNA_di_yu_ge_ming = {
+    # 向FROM输出革命
+    KNA_xiang_FROM_shu_chu_ge_ming = {
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = KNA_xiang_di_yu_shu_chu_ge_ming
+        }
+        target_array = global.countries
+        targets_dynamic = yes
+        target_trigger = {
+            # 接壤
+            FROM = {
+                any_neighbor_country = {
+                    OR = {
+                        tag = KNA
+                        is_subject_of = KNA
+                        is_in_faction_with = KNA
+                    }
+                }
+            }
+            # 可攻击
+            FROM = {
+                NOT = {
+                    is_subject_of = KNA
+                }
+                NOT = {
+                    is_in_faction_with = KNA
+                }
+            }
+            # 在地狱
+            FROM = {
+                any_owned_state = {
+                    is_on_continent = Hell
+                }
+            }
+            # 非激进/改良
+            FROM = {
+                NOT = {
+                    has_government = fandong 
+                }
+                NOT = {
+                    has_government = qinwai
+                }
+            }
+        }
+        cost = 50
+        icon = generic_ignite_civil_war
+        days_remove = 60
+        war_with_target_on_complete = yes
+        cancel_trigger = {
+            is_subject = yes
+        }
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    country_event = noa_gen.102
+                }
+            }
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = puppet_wargoal_focus
+            }
+        }
+    }
+
+    # 邀请FROM加入革命同盟
+    KNA_yao_qing_FROM_jia_ru_ge_ming_tong_meng = {
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            is_subject = no
+            is_in_faction = yes
+            has_completed_focus = KNA_xiang_di_yu_shu_chu_ge_ming
+        }
+        target_array = global.countries
+        targets_dynamic = yes
+        target_trigger = {
+            # 接壤
+            FROM = {
+                any_neighbor_country = {
+                    OR = {
+                        tag = KNA
+                        is_subject_of = KNA
+                        is_in_faction_with = KNA
+                    }
+                }
+            }
+            # 在地狱
+            FROM = {
+                any_owned_state = {
+                    is_on_continent = Hell
+                }
+            }
+            # 激进/改良
+            FROM = {
+                OR = {
+                    has_government = fandong 
+                    has_government = qinwai
+                }
+            }
+            # 无阵营
+            FROM = {
+                is_subject = no
+                is_in_faction = no
+            }
+            FROM = {
+                NOT = {
+                    has_country_flag = KNA_already_invited_flag
+                }
+            }
+        }
+        cost = 20
+        icon = hol_exchange_intelligence_data
+        days_remove = 60
+        cancel_trigger = {
+            OR = {
+                is_subject = yes
+                is_in_faction = no
+                FROM = {
+                    is_in_faction = yes
+                }
+                FROM = {
+                    NOT = {
+                        has_government = fandong
+                    }
+                    NOT = {
+                        has_government = qinwai
+                    }
+                }
+            }
+        }
+        remove_effect = {
+            FROM = {
+                country_event = noa_gen.103
+            }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = KNA_already_invited_flag
+                }
+            }
+        }
+    }
+}
+
+# 地狱征服计划
+YKO_di_yu_zheng_fu_ji_hua = {
+	# 启动对FROM的征服计划
+    YKO_qi_dong_dui_FROM_de_zheng_fu_ji_hua = {
+        allowed = {
+            original_tag = YYK
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = YKO_zheng_fu_di_yu
+        }
+        target_array = global.countries
+        targets_dynamic = yes
+        target_trigger = {
+            # 接壤
+            FROM = {
+                any_neighbor_country = {
+                    OR = {
+                        tag = YKO
+                        is_subject_of = YKO
+                    }
+                }
+            }
+            # 可攻击
+            FROM = {
+                NOT = {
+                    is_subject_of = YKO
+                }
+            }
+            # 在地狱
+            FROM = {
+                any_owned_state = {
+                    is_on_continent = Hell
+                }
+            }
+        }
+        cost = 50
+        icon = generic_ignite_civil_war
+        days_remove = 60
+        war_with_target_on_complete = yes
+        cancel_trigger = {
+            is_subject = yes
+        }
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    country_event = noa_gen.102
+                }
+            }
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = puppet_wargoal_focus
+            }
+        }
+    }
+}

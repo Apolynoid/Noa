@@ -1,0 +1,37 @@
+ideas = {
+	hidden_ideas = {
+		# 夜间直觉
+		sp_ye_jian_zhi_jue_idea = {
+			modifier = {
+				land_night_attack = 0.15
+			}
+		}
+		
+		# 侵略天性
+		sp_qin_lve_tian_xing_idea = {
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+			}
+		}
+
+		# 神格显现
+		sp_shen_ge_xian_xian_idea = {
+			modifier = {
+				consumer_goods_factor = -0.15
+				encryption = 5
+				decryption = 5
+				max_planning_factor = 0.15
+				planning_speed = 0.1
+			}
+		}
+
+		# 自然融合
+		sp_zi_ran_rong_he_idea = {
+			modifier = {
+				supply_consumption_factor = -0.15
+				global_building_slots_factor = 0.1
+			}
+		}
+	}
+}

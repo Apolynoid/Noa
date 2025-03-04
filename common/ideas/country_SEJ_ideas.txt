@@ -1,0 +1,571 @@
+ideas = {
+	country = {
+		# 下克上革命始源地
+		SEJ_xia_ke_shang_ge_ming_shi_yuan_di_idea = {
+			picture = SEJ_home_of_the_gekokujyo_revolution
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.2
+				resistance_damage_to_garrison_on_our_occupied_states = 0.05
+				resistance_growth_on_our_occupied_states = 0.1
+				drift_defence_factor = 0.5
+			}
+			allowed_civil_war = {
+				has_government = fandong
+			}
+		}
+
+		# 妖怪种族主义派系
+		SEJ_yao_guai_zhong_zu_zhu_yi_pai_xi_idea = {
+			picture = SEJ_youkai_racists
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				drift_defence_factor = -0.1
+			}
+		}
+
+		# 冬之妖怪的威胁
+		SEJ_dong_zhi_yao_guai_de_wei_xie_idea = {
+			picture = SEJ_whr_threat
+
+			cancel = {
+				WHR = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+
+			modifier = {
+				political_power_factor = -0.05
+				industrial_capacity_factory = -0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 政治线
+		# 反对派不合作
+		SEJ_fan_dui_pai_bu_he_zuo_idea = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				send_volunteers_tension = 0.2
+				production_factory_efficiency_gain_factor = -0.15
+				consumer_goods_factor = 0.3
+				command_power_gain_mult = -0.15
+				experience_gain_army_factor = -0.2
+			}
+		}
+
+		SEJ_fan_dui_pai_bu_he_zuo_a_idea = {
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				send_volunteers_tension = 0.1
+				production_factory_efficiency_gain_factor = -0.1
+				consumer_goods_factor = 0.2
+				command_power_gain_mult = -0.1
+				experience_gain_army_factor = -0.1
+			}
+		}
+
+		SEJ_fan_dui_pai_bu_he_zuo_b_idea = {
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				consumer_goods_factor = 0.1
+				command_power_gain_mult = -0.05
+			}
+		}
+
+		# 下克上社会教育
+		SEJ_xia_ke_shang_she_hui_jiao_yu_idea = {
+			picture = SEJ_gekokujyo_social_education
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				compliance_growth_on_our_occupied_states = -0.1
+				research_speed_factor = 0.03
+			}
+
+			cancel = {
+				NOT = {
+					has_government = fandong
+				}
+			}
+		}
+
+		SEJ_xia_ke_shang_she_hui_jiao_yu_a_idea = {
+			picture = SEJ_gekokujyo_social_education
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				compliance_growth_on_our_occupied_states = -0.1
+				research_speed_factor = 0.03
+				army_morale_factor = 0.05
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.05
+				army_breakthrough_against_major_factor = 0.05
+				weekly_manpower = 10
+			}
+
+			cancel = {
+				NOT = {
+					has_government = fandong
+				}
+			}
+		}
+
+		# 下克上同盟
+		SEJ_xia_ke_shang_tong_meng_idea = {
+			picture = SEJ_gekokujyo_alliance
+
+			cancel = {
+				NOT = {
+					is_in_faction_with = SEJ
+				}
+			}
+
+			modifier = {
+				political_power_factor = 0.05
+				experience_gain_army_factor = 0.05
+				training_time_army_factor = -0.05
+				weekly_manpower = 5
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		# 同盟行政改革
+		SEJ_tong_meng_xing_zheng_gai_ge_idea = {
+			picture = generic_politics
+			modifier = {
+				fandong_acceptance = -30
+				guli_acceptance = 50
+				oldgenso_acceptance = 50
+				oldorder_acceptance = 50
+			}
+		}
+
+		SEJ_tong_meng_xing_zheng_gai_ge_a_idea = {
+			picture = generic_politics
+			modifier = {
+				fandong_acceptance = -30
+				guli_acceptance = 50
+				oldgenso_acceptance = 50
+				oldorder_acceptance = 50
+				political_power_factor = 0.1
+			}
+		}
+
+		SEJ_tong_meng_xing_zheng_gai_ge_b_idea = {
+			picture = generic_politics
+			modifier = {
+				fandong_acceptance = -30
+				guli_acceptance = 50
+				oldgenso_acceptance = 50
+				oldorder_acceptance = 50
+				political_power_factor = 0.1
+				compliance_growth = 0.05
+				CO_core_resistance_required = -5
+			}
+		}
+
+		# 妖怪复兴思潮影响
+		SEJ_yao_guai_fu_xing_si_chao_ying_xiang_idea = {
+			picture = generic_hegemonism
+			modifier = {
+				neworder_drift = 0.03
+			}
+		}
+
+		# 叛乱同盟内战
+		SEJ_pan_luan_tong_meng_nei_zhan_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				army_attack_factor = 0.1
+				surrender_limit = -0.3
+			}
+
+			cancel = {
+				has_civil_war = no
+			}
+		}
+
+		# 妖怪的荣耀
+		SEJ_yao_guai_de_rong_yao_idea = {
+			picture = SEJ_glory_of_youkais
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+
+		# 军事线
+		# 革命军 tt
+		SEJ_ge_ming_jun_tt_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_1_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_2_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				command_power_gain_mult = 0.05
+				max_command_power_mult = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_3_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_4_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				max_planning_factor = 0.03
+				planning_speed = 0.1
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_5_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				max_planning_factor = 0.07
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_6_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_7_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		SEJ_ge_ming_jun_tt_8_idea = {
+			picture = SEJ_revolutionary_army
+			modifier = {
+				army_org_factor = 0.03
+				training_time_army_factor = -0.1
+			}
+		}
+
+		# 妖怪种族革命军 tt
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_1_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_2_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				command_power_gain_mult = 0.05
+				max_command_power_mult = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_3_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_4_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				max_planning_factor = 0.03
+				planning_speed = 0.1
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_5_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				max_planning_factor = 0.07
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_6_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_7_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		SEJ_yao_guai_zhong_zu_ge_ming_jun_tt_8_idea = {
+			picture = SEJ_racial_revolutionary_army
+			modifier = {
+				army_org_factor = 0.03
+				training_time_army_factor = -0.1
+			}
+		}
+
+		# 辉针城军事学院
+		SEJ_hui_zhen_cheng_jun_shi_xue_yuan_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 后勤改革
+		SEJ_hou_qin_gai_ge_idea = {
+			picture = generic_supply_line
+			modifier = {
+				no_supply_grace = 24
+				supply_factor = 0.1
+				supply_node_range = 0.1
+				truck_attrition_factor = -0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_hou_qin_gai_ge_a_idea = {
+			picture = generic_supply_line
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				no_supply_grace = 24
+				supply_factor = 0.1
+				supply_node_range = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
+				truck_attrition_factor = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 经济动员
+		SEJ_jing_ji_dong_yuan_idea = {
+			picture = generic_license_production
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.7
+				production_speed_rail_way_factor = 0.15
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		
+		# 工业线
+		# 第一个五年计划
+		SEJ_di_yi_ge_wu_nian_ji_hua_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.1
+			}
+
+			allowed_civil_war = {
+				has_government = neworder
+			}
+		}
+
+		# 第二个五年计划
+		SEJ_di_er_ge_wu_nian_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = -0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_di_er_ge_wu_nian_ji_hua_a_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				stability_factor = -0.05
+			}
+
+			research_bonus = {
+				build = 0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 第三个五年计划
+		SEJ_di_san_ge_wu_nian_ji_hua_idea = {
+			picture = SOV_fourth_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				global_building_slots = 1
+			}
+
+			research_bonus = {
+				build = 0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_di_san_ge_wu_nian_ji_hua_a_idea = {
+			picture = SOV_fourth_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				global_building_slots = 1
+				local_resources_factor = 0.1
+			}
+
+			research_bonus = {
+				build = 0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 农业集体化
+		SEJ_nong_ye_ji_ti_hua_d_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_nong_ye_ji_ti_hua_c_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_nong_ye_ji_ti_hua_b_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_nong_ye_ji_ti_hua_a_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		SEJ_nong_ye_ji_ti_hua_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				consumer_goods_factor = -0.4
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 基础教育
+		SEJ_ji_chu_jiao_yu_idea = {
+			picture = generic_book
+			modifier = {
+				research_speed_factor = 0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+	}
+}

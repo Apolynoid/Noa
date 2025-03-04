@@ -1,0 +1,31 @@
+state={
+	id=251
+	name="STATE_251"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas = 0.0
+		crystal = 25.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		123 341 343 355 379 587 617 695 696 761 978 1096 1154 1274 1311 1500 1816 1876 1955 2054 2229 2280 2501 2537 2914 2925 2928 2929 
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=63195.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,16 @@
+spriteTypes = {
+	#------------------- AGENCY LOGOS -------------------------------
+		
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_SEJ_radical"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_SEJ_radical.png"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_SEJ_hegemonist"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_SEJ_hegemonist.png"
+		noOfFrames = 2
+	}
+
+}

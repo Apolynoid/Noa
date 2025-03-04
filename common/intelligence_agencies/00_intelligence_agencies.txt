@@ -1,0 +1,569 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_SEJ_radical
+	names = { "下克上联盟安全委员会" }
+	
+	available = { original_tag = SEJ }
+	
+	default = { 
+		tag = SEJ
+		has_government = fandong
+	} 
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_SEJ_hegemonist
+	names = { "妖怪种族下克上保卫局" }
+	
+	available = { original_tag = SEJ }
+	
+	default = { 
+		tag = SEJ
+		has_government = neworder
+	} 
+}
+
+## RoA part
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_ALI
+	names = { "仿真人偶工厂" }
+	
+	available = { always = yes }
+	
+	default = { 
+		tag = ALI
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_CHE
+	names = { "撸猫协会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = CHE
+			tag = YKR
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_CIR2
+	names = { "自然与地理信息窥探学会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = CIR
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_CIR1
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = CIR
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_CLO
+	names = { "地狱生命化机构" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = CLO
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_HCT2
+	names = { "生命纯化研究机构" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = HCT
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_HCT1
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = HCT
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_HKR
+	names = { "博丽异变处理分队" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = HKR
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_KAG
+	names = { "暗影卫队" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = KAG
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_KMC
+	names = { "灵魂运输与审判组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = KMC
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_LIL
+	names = { "乐园情报局" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = LIL
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_MRS
+	names = { "新魔女情报盗窃组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		tag = MRS
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_MRY2
+	names = { "信仰传播与植入组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = MRY
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_MRY1
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = MRY
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_MRY3
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = MRY
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_MSD
+	names = { "鸟兽演唱乐队" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = MSD
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_NMS1
+	names = { "珍宝探测班组" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = NMS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_NMS4
+	names = { "妖怪佛教传播与研究寺会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = NMS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_NMS2
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = NMS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_NMS3
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = NMS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_PRI4
+	names = { "音乐与情感关系研究协会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = PRI
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_PRI2
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = PRI
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_PRI1
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = PRI
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_PRI3
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = PRI
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SBK
+	names = { "无头会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SBK
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SCA1
+	names = { "皇家恶魔渗透组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SCA
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SCA2
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SCA
+		}
+	} 
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SGS4
+	names = { "恶作剧研究组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SGS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SGS1
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SGS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SGS2
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SGS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SGS3
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SGS
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SKI
+	names = { "黑白分析研究机构" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SKI
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_SRB
+	names = { "神雷会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = SRB
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_UTH
+	names = { "怨灵运输班组" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = UTH
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_WAK
+	names = { "雾之湖水质探测机构" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = WAK
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_YMM
+	names = { "传染与感染研究协会" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = YMM
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_YMM2
+	names = { "" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = YMM
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_YUG
+	names = { "地底角斗场" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = YUG
+		}
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_YYK
+	names = { "冥界樱花修剪组织" }
+	
+	available = { always = yes }
+	
+	default = { 
+		or = {
+			tag = YYK
+		}
+	} 
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_1
+	names = { "谣言传播与建立班组" }
+	
+	available = { always = yes }
+	
+	default = { 
+		always = yes
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_2
+	names = { "冰雪迷踪" }
+	
+	available = { always = yes }
+	
+	default = { 
+		always = yes
+	} 
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_agent_3
+	names = { "地底颠覆部" }
+	
+	available = { always = yes }
+	
+	default = { 
+		always = yes
+	} 
+}

@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+ specialization_race:0 "种族科技"
+ specialization_race_short:0 "种族科技"
+
+ sp_race_norcturnal_intuition:0 "夜间直觉"
+ sp_race_norcturnal_intuition_desc:0 "凭借自身的直觉与灵力，妖兽能够在夜间更好的感知周遭环境。通过有计划的将这一特点应用于作战计划中，我们的战士在夜间作战中将取得更大的优势。"
+ sp_race_aggressive_nature:0 "侵略天性"
+ sp_race_aggressive_nature_desc:0 "我们身为草根妖怪的本性使得我们渴望战斗。通过适当引导这一本性，我们能使我们的战士发挥出更好的战斗力。"
+ sp_race_deification:0 "神格显现"
+ sp_race_deification_desc:0 "神明可以通过显现自己的神格为治下的民众带来恩惠。这既可以用于祝福作物丰收，也可以用于更好安排军事计划。"
+ sp_race_nature_intergration:0 "自然融合"
+ sp_race_nature_intergration_desc:0 "妖精是从自然中诞生的产物，因此天然与自然亲近。这使得我们在物资运输与建筑规划方面有着天然的优势。"
+
+ sp_ye_jian_zhi_jue_idea:0 "夜间直觉"
+ sp_qin_lve_tian_xing_idea:0 "侵略天性"
+ sp_shen_ge_xian_xian_idea:0 "神格显现"
+ sp_zi_ran_rong_he_idea:0 "自然融合"
+
+ can_research_pri_youkai_sp_flag:0 "可以研究草根妖怪种族科技"
+ can_research_god_sp_flag:0 "可以研究神明种族科技"
+ can_research_fairy_sp_flag:0 "可以研究妖精种族科技"
+
+ nuclear_facility: "特殊工程研究设施"
+ nuclear_facility_plural: "特殊工程研究设施"
+ nuclear_facility_desc: "特殊工程研究实验设施允许你启动特殊工程的研究项目。"

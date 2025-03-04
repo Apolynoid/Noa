@@ -1,0 +1,90 @@
+characters={
+	CIR_cir ={
+		name = CIR_cir
+		portraits={
+			civilian={
+				large="gfx/leaders/CIR/CIR_cir.dds"
+				small="gfx/leaders/CIR/CIR_cir_small.dds"
+			}
+			army = {
+				large="gfx/leaders/CIR/CIR_cir.dds"
+				small="gfx/leaders/CIR/CIR_cir_small.dds"
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			traits = {
+				CIR_yao_jing_ge_ming_ling_xiu
+			}
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero th_trait_huoqiangzhuanjia }
+			attack_skill = 5
+			defense_skill = 7
+			planning_skill = 7
+			logistics_skill = 7
+			# id = 27
+			skill = 7
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = CIR_cir
+			name = CIR_cir
+			cost = 200
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				EXHC_increase_period_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	CIR_dys ={
+		name = CIR_dys
+		portraits={
+			civilian={
+				large="gfx/leaders/CIR/CIR_dys.dds"
+				small="gfx/leaders/CIR/CIR_dys_small.dds"
+			}
+			army = {
+				large="gfx/leaders/CIR/CIR_dys.dds"
+				small="gfx/leaders/CIR/CIR_dys_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				CIR_yao_jing_zhi_guo_de_jian_zao_zhe
+			}
+			id=-1
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  war_hero trait_cautious }
+			attack_skill = 4
+			defense_skill = 7
+			planning_skill = 5
+			logistics_skill = 7
+			# id = 28
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = CIR_dys
+			name = CIR_dys
+			cost = 200
+			modifier = {
+				consumer_goods_factor = -0.06
+				ST_race_penalty_all_factor = -0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

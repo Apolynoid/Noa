@@ -1,0 +1,35 @@
+
+state={
+	id=342
+	name="STATE_342"
+	resources={
+		energy = 5
+		powder = 0.0
+		metal = 0.0
+		gas=5.000
+		crystal=30.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MEL
+			add_core_of = MEL
+			buildings = {
+				infrastructure =1
+				industrial_complex = 2
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		339 661 988 2028 3200 4653 4666 4673 4688 4691 4693 4694 4702 4706 4717 
+	}
+	manpower=273027.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

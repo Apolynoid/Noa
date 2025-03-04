@@ -1,0 +1,915 @@
+MRS_mo_fa_zhi_sen_nei_zhan = {
+  # 内战爆发
+  MRS_nei_zhan_bao_fa = {
+    activation = {
+        has_global_flag = MRS_civil_war_prepare_flag
+        NOT = {
+          has_global_flag = MRS_civil_war_flag
+        }
+        NOT = {
+          OR = {
+            MRS = {
+              has_war_with = ALI
+            }
+            MRS = {
+              has_war_with = NAR
+            }
+          }
+        }
+    }
+    available = {
+      always = no
+    }
+    cancel_trigger = {
+      OR = {
+        MRS = {
+          has_war_with = ALI
+        }
+        MRS = {
+          has_war_with = NAR
+        }
+      }
+    }
+    icon = generic_ignite_civil_war
+    is_good = no
+    war_with_on_timeout = MRS
+    war_with_on_timeout = ALI
+    war_with_on_timeout = NAR
+    days_mission_timeout = 30
+    selectable_mission = no
+    complete_effect = {
+      
+    }
+    timeout_effect = {
+      hidden_effect = {
+        news_event = {
+          id = mrs.112
+        }
+      }
+      if = {
+        limit = {
+          tag = MRS
+        }
+        if = {
+          limit = {
+            country_exists = ALI
+          }
+          declare_war_on = {
+            target = ALI
+            type = MRS_Civil_War
+          }
+          if = {
+            limit = {
+              country_exists = NAR
+            }
+            ALI = {
+              declare_war_on = {
+                target = NAR
+                type = MRS_Civil_War
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = NAR
+          }
+          declare_war_on = {
+            target = NAR
+            type = MRS_Civil_War
+          }
+        }
+      }
+      if = {
+        limit = {
+          tag = ALI
+        }
+        if = {
+          limit = {
+            country_exists = MRS
+          }
+          MRS = {
+            declare_war_on = {
+              target = ALI
+              type = MRS_Civil_War
+            }
+          }
+          if = {
+            limit = {
+              country_exists = NAR
+            }
+            MRS = {
+              declare_war_on = {
+                target = NAR
+                type = MRS_Civil_War
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = NAR
+          }
+          declare_war_on = {
+            target = NAR
+            type = MRS_Civil_War
+          }
+        }
+      }
+      if = {
+        limit = {
+          tag = NAR
+        }
+        if = {
+          limit = {
+            country_exists = ALI
+          }
+          declare_war_on = {
+            target = ALI
+            type = MRS_Civil_War
+          }
+          if = {
+            limit = {
+              country_exists = MRS
+            }
+            ALI = {
+              declare_war_on = {
+                target = MRS
+                type = MRS_Civil_War
+              }
+            }
+          }
+        }
+        if = {
+          limit = {
+            country_exists = MRS
+          }
+          MRS = {
+            declare_war_on = {
+              target = NAR
+              type = MRS_Civil_War
+            }
+          }
+        }
+      }
+    }
+  }
+
+  # 招募民兵
+  MRS_zhao_mu_min_bing = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NAR
+      }
+    }
+    fire_only_once = no
+    days_remove = 15
+    cost = 30
+    icon = generic_reorganize_irregulars
+    available = {
+      num_divisions < 40
+    }
+    modifier = {
+      weekly_manpower = -1
+    }
+    remove_effect = {
+      ROOT = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            owner = ROOT
+          }
+        }
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"内战民兵\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            owner = ROOT
+          }
+        }
+      }
+    }
+
+    ai_will_do = {
+      base = 10000
+    }
+  }
+
+  # 购买步兵装备
+  MRS_gou_mai_bu_bing_zhuang_bei = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NAR
+      }
+    }
+    fire_only_once = no
+    days_remove = 15
+    cost = 15
+    icon = ger_military_buildup
+
+    remove_effect = {
+      add_equipment_to_stockpile = {
+        type = magic_core_a
+        amount = 200
+        producer = ROOT
+      }
+    }
+
+    ai_will_do = {
+      base = 5000
+    }
+  }
+
+  # 对魔女联盟发起宣传攻势
+  MRS_dui_MRS_fa_qi_xuan_chuan_gong_shi = {
+    allowed = {
+      tag = ALI
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_fa_dong_xuan_chuan_gong_shi
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+        NOT = {
+          has_idea = ali_xuan_chuan_gong_shi_idea
+        }
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+    icon = eng_propaganda_campaigns
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      MRS = {
+        add_timed_idea = {
+          idea = ali_xuan_chuan_gong_shi_idea
+          days = 30
+        }
+      }
+    }
+  }
+
+  # 对魔法之森联合体发起宣传攻势
+  MRS_dui_NAR_fa_qi_xuan_chuan_gong_shi = {
+    allowed = {
+      tag = ALI
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_fa_dong_xuan_chuan_gong_shi
+      }
+      NAR = {
+        exists = yes
+        is_puppet = no
+        NOT = {
+          has_idea = ali_xuan_chuan_gong_shi_idea
+        }
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+    icon = eng_propaganda_campaigns
+
+    cancel_trigger = {
+      NAR = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      NAR = {
+        add_timed_idea = {
+          idea = ali_xuan_chuan_gong_shi_idea
+          days = 30
+        }
+      }
+    }
+  }
+
+  # 接触魔女联盟的激进同情者
+  MRS_jie_chu_MRS_de_ji_jin_tong_qing_zhe = {
+    allowed = {
+      tag = NAR
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NAR_jie_chu_ji_jin_tong_qing_zhe
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+    icon = generic_military
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      MRS = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"魔法使激进同情者\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            allow_spawning_on_enemy_provs = yes
+            owner = NAR
+          }
+        }
+      }
+    }
+  }
+
+  # 煽动人偶师协会的人偶
+  MRS_shan_dong_ALI_de_ren_ou = {
+    allowed = {
+      tag = NAR
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NAR_jie_chu_ji_jin_tong_qing_zhe
+      }
+      ALI = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 7
+    cost = 10
+    icon = eng_propaganda_campaigns
+
+    cancel_trigger = {
+      ALI = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    remove_effect = {
+      ALI = {
+        random_owned_controlled_state = {
+          create_unit = {
+            division = "name = \"人偶反叛部队\" division_template = \"内战民兵\" start_experience_factor = 0.5"
+            allow_spawning_on_enemy_provs = yes
+            owner = NAR
+          }
+        }
+      }
+    }
+  }
+
+  # 对魔女联盟发起最终攻势
+  MRS_dui_MRS_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = ALI
+        tag = NAR
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NAR_zhun_bei_zui_hou_yi_ji
+        has_completed_focus = ALI_xiang_sheng_li_jin_jun
+      }
+      MRS = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+    icon = generic_intelligence_operation
+
+    cancel_trigger = {
+      MRS = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = MRS
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+
+  # 对人偶师协会发起最终攻势
+  MRS_dui_ALI_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = NAR
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = NAR_zhun_bei_zui_hou_yi_ji
+      }
+      ALI = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+    icon = generic_intelligence_operation
+
+    cancel_trigger = {
+      ALI = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = ALI
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+
+  # 对魔法之森联合体发起最终攻势
+  MRS_dui_NAR_fa_qi_zui_zhong_gong_shi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      OR = {
+        has_completed_focus = ALI_xiang_sheng_li_jin_jun
+      }
+      NAR = {
+        exists = yes
+        is_puppet = no
+      }
+    }
+    fire_only_once = yes
+    days_remove = 30
+    cost = 10
+    icon = generic_intelligence_operation
+
+    cancel_trigger = {
+      NAR = {
+        OR = {
+          exists = no
+          is_puppet = yes
+        } 
+      }
+    }
+
+    targeted_modifier = {
+      tag = NAR
+      attack_bonus_against = 0.4
+      breakthrough_bonus_against = 0.4
+      defense_bonus_against = 0.2
+    }
+
+    remove_effect = {
+      if = {
+        limit = {
+          NOT = {
+            has_idea = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+          }
+        }
+        add_ideas = mrs_shi_bai_de_zui_zhong_gong_shi_idea
+      }
+    }
+  }
+}
+
+MRS_mo_fa_zhi_sen_chong_jian = {
+  # 增强地区合作
+  MRS_zeng_qiang_FROM_di_qu_he_zuo = {
+    state_target = any_controlled_state
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NAR
+      }
+    }
+    target_root_trigger = {
+      always = yes
+    }
+    target_trigger = {
+      FROM = {
+        NOT = {
+          is_core_of = ROOT
+        }
+        any_neighbor_state = {
+          is_core_of = ROOT
+        }
+        OR = {
+          is_core_of = MRS
+          is_core_of = ALI
+          is_core_of = NAR
+        }
+      }
+    }
+    on_map_mode = map_and_decisions_view
+    icon = generic_nationalism
+    cost = 10
+    days_remove = 15
+    days_re_enable = 15
+    remove_effect = {
+      FROM = {
+        add_compliance = 20
+      }
+    }
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 5000
+        FROM = {
+          compliance < 40
+        }
+      }
+    }
+  }
+
+  # 整合魔法之森联合体
+  MRS_zheng_he_mo_fa_zhi_sen_lian_he_ti = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+      }
+    }
+    visible = {
+      NOT = {
+        has_character = NAR_narumi
+      }
+    }
+    available = {
+      NAR = {
+        all_core_state = {
+          OR = {
+            AND = {
+              state = 206
+              NOT = {
+                is_owned_by = ROOT
+              }
+            }
+            is_core_of = ROOT
+          }
+        }
+      }
+    }
+    cost = 20
+    icon = generic_civil_support
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_NAR_tt
+      hidden_effect = {
+        NAR = {
+          every_character = {
+            set_nationality = ROOT
+            clr_character_flag = nationality_NAR
+            set_character_flag = nationality_@ROOT
+          }
+        }
+        promote_character = {
+          character = NAR_narumi
+          ideology = fandong_type
+        }
+      }
+    }
+    ai_will_do = {
+      base = 10000
+    }
+  }
+
+  # 整合人偶师协会
+  MRS_zheng_he_ren_ou_shi_xie_hui = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = NAR
+      }
+    }
+    visible = {
+      NOT = {
+        has_character = ALI_ali
+      }
+    }
+    available = {
+      ALI = {
+        all_core_state = {
+          OR = {
+            AND = {
+              state = 206
+              NOT = {
+                is_owned_by = ROOT
+              }
+            }
+            is_core_of = ROOT
+          }
+        }
+      }
+    }
+    cost = 20
+    icon = generic_civil_support
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_ALI_tt
+      hidden_effect = {
+        ALI = {
+          every_character = {
+            set_nationality = ROOT
+            clr_character_flag = nationality_ALI
+            set_character_flag = nationality_@ROOT
+          }
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = qinwai_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = neworder_type
+        }
+        promote_character = {
+          character = ALI_ali
+          ideology = oldorder_type
+        }
+      }
+    }
+    ai_will_do = {
+      base = 10000
+    }
+  }
+
+  # 整合魔女联盟
+  MRS_zheng_he_mo_nv_lian_meng = {
+    allowed = {
+      OR = {
+        tag = ALI
+        tag = NAR
+      }
+    }
+    visible = {
+      NOT = {
+        has_character = MRS_mrs
+      }
+    }
+    available = {
+      MRS = {
+        all_core_state = {
+          OR = {
+            AND = {
+              state = 206
+              NOT = {
+                is_owned_by = ROOT
+              }
+            }
+            is_core_of = ROOT
+          }
+        }
+      }
+    }
+    cost = 20
+    icon = generic_civil_support
+    fire_only_once = yes
+    days_remove = 15
+    remove_effect = {
+      custom_effect_tooltip = MRS_integrate_MRS_tt
+      hidden_effect = {
+        MRS = {
+          every_character = {
+            set_nationality = ROOT
+            clr_character_flag = nationality_MRS
+            set_character_flag = nationality_@ROOT
+          }
+        }
+        promote_character = {
+          character = NAR_narumi
+          ideology = fandong_type
+        }
+        if = {
+          limit = {
+              tag = NAR
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = qinwai_type
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = neworder_type
+          }
+          promote_character = {
+            character = ALI_ali
+            ideology = oldorder_type
+          }
+        }
+        promote_character = {
+          character = MRS_mrs
+          ideology = guli_type
+        }
+        promote_character = {
+          character = ELL_ellen
+          ideology = oldgenso_type
+        }
+      }
+    }
+    ai_will_do = {
+      base = 10000
+    }
+  }
+
+  # 魔法之森再统一
+  MRS_mo_fa_zhi_sen_zai_tong_yi = {
+    allowed = {
+      OR = {
+        tag = MRS
+        tag = ALI
+        tag = NAR
+      }
+    }
+    available = {
+      custom_trigger_tooltip = {
+        tooltip = MRS_reunite_MRS_trigger_tt
+        all_state = {
+          OR = {
+            AND = {
+              state = 206
+              OR = {
+                AND = {
+                  is_core_of = ROOT
+                  is_owned_by = ROOT
+                }
+                NOT = {
+                  OR = {
+                    is_owned_by = MRS
+                    is_owned_by = ALI
+                    is_owned_by = NAR
+                  }
+                }
+              }
+            }
+            AND = {
+              NOT = {
+                is_core_of = MRS
+              }
+              NOT = {
+                is_core_of = ALI
+              }
+              NOT = {
+                is_core_of = NAR
+              }
+            }
+            AND = {
+              is_core_of = ROOT
+              is_owned_by = ROOT
+            }
+          }
+        }
+      }
+    }
+    cost = 20
+    icon = generic_form_nation
+    fire_only_once = yes
+    complete_effect = {
+      add_political_power = 150
+      add_stability = 0.15
+      add_war_support = 0.15
+      add_ideas = Country
+      if = {
+        limit = {
+          has_idea = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+        }
+        remove_ideas = mrs_fan_dui_zhe_di_kang_yun_dong_idea
+      }
+      if = {
+        limit = {
+          has_idea = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+        }
+        remove_ideas = mrs_bei_xue_ruo_de_fan_dui_zhe_idea
+      }
+      if = {
+        limit = {
+          has_idea = mrs_bushimofashi
+        }
+        remove_ideas = mrs_bushimofashi
+      }
+      hidden_effect = {
+        every_state = {
+          remove_claim_by = MRS
+          remove_claim_by = ALI
+          remove_claim_by = NAR
+        }
+        if = {
+          limit = {
+            NOT = {
+              tag = MRS
+            }
+          }
+          MRS = {
+            every_core_state = {
+              remove_core_of = MRS
+            }
+          }
+        }
+        if = {
+          limit = {
+            NOT = {
+              tag = ALI
+            }
+          }
+          ALI = {
+            every_core_state = {
+              remove_core_of = ALI
+            }
+          }
+        }
+        if = {
+          limit = {
+            NOT = {
+              tag = NAR
+            }
+          }
+          NAR = {
+            every_core_state = {
+              remove_core_of = NAR
+            }
+          }
+        }
+      }
+    }
+    ai_will_do = {
+      base = 0
+      modifier = {
+        add = 20000
+        AND = {
+          has_character = MRS_mrs
+          has_character = ALI_ali
+          has_character = NAR_narumi
+        }
+      }
+    }
+  }
+}

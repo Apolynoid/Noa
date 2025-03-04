@@ -1,0 +1,35 @@
+# 介入魔法之森内战
+TKM_jie_ru_mo_fa_zhi_sen_nei_zhan = {
+	icon = military_operation
+
+	priority = 95
+
+	allowed = {
+		original_tag = TKM
+	}
+
+	visible = {
+		has_completed_focus = TKM_gan_she_mo_fa_zhi_sen_nei_zhan
+		has_global_flag = MRS_civil_war_prepare_flag
+		NOT = {
+			has_global_flag = MRS_civil_war_end_flag
+		}
+	}
+}
+
+# 付丧神高能灵气特性
+TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
+	icon = tkm_tskumogami_spiritual_power_feature
+
+	priority = 92
+
+	allowed = {
+		original_tag = TKM
+	}
+
+	visible = {
+		has_completed_focus = TKM_li_yong_fu_sang_shen_de_te_dian
+	}
+
+	visible_when_empty = yes
+}

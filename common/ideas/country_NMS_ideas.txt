@@ -1,0 +1,435 @@
+ideas = {
+	country = {
+		# 宗教危机
+		NMS_zong_jiao_wei_ji_idea = {
+			picture = NMS_religious_crisis
+			modifier = {
+				political_power_gain = -1.0
+				industrial_capacity_factory = -0.3
+				army_attack_factor = -0.2
+				war_support_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		# 派系斗争 tt
+		NMS_pai_xi_dou_zheng_tt_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+
+			}
+		}
+
+		NMS_pai_xi_dou_zheng_tt_a_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				research_speed_factor = 0.07
+				stability_factor = 0.07
+				production_speed_buildings_factor = 0.07
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		NMS_pai_xi_dou_zheng_tt_b_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				research_speed_factor = -0.07
+				stability_factor = -0.07
+				production_speed_buildings_factor = -0.07
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		NMS_pai_xi_dou_zheng_tt_c_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				war_support_factor = 0.07
+				experience_gain_army_factor = 0.1
+				army_attack_factor = 0.07
+				army_defence_factor = 0.07
+			}
+		}
+
+		NMS_pai_xi_dou_zheng_tt_d_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				war_support_factor = -0.07
+				experience_gain_army_factor = -0.1
+				army_attack_factor = -0.07
+				army_defence_factor = -0.07
+			}
+		}
+
+		# 改良派政治行动
+		NMS_gai_liang_pai_zheng_zhi_xing_dong_a_idea = {
+			picture = generic_politics
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		NMS_gai_liang_pai_zheng_zhi_xing_dong_b_idea = {
+			picture = generic_politics
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				ST_race_penalty_Human_factor = -0.3
+				compliance_growth = 0.1
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+
+		NMS_gai_liang_pai_zheng_zhi_xing_dong_c_idea = {
+			picture = generic_politics
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		NMS_gai_liang_pai_zheng_zhi_xing_dong_d_idea = {
+			picture = generic_politics
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		NMS_gai_liang_pai_zheng_zhi_xing_dong_e_idea = {
+			picture = generic_politics
+			modifier = {
+				stability_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				ST_race_penalty_Human_factor = -0.3
+				compliance_growth = 0.1
+				resistance_damage_to_garrison = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		# 人类生产技术
+		NMS_ren_lei_sheng_chan_ji_shu_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 种族派军事改革
+		NMS_zhong_zu_pai_jun_shi_gai_ge_a_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_b_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				conscription = 0.05
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_c_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				conscription = 0.075
+				training_time_factor = -0.1
+				army_morale_factor = 0.05
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_d_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				max_command_power_mult = 0.1
+				army_org_factor	= 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_e_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				max_command_power_mult = 0.1
+				army_org_factor	= 0.05
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_f_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				conscription = 0.05
+				max_command_power_mult = 0.1
+				army_org_factor	= 0.05
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_zhong_zu_pai_jun_shi_gai_ge_g_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				conscription = 0.075
+				training_time_factor = -0.1
+				army_morale_factor = 0.05
+				max_command_power_mult = 0.1
+				army_org_factor	= 0.05
+			}
+			research_bonus = {
+				military = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 妖怪天性
+		NMS_yao_guai_tian_xing_idea = {
+			picture = generic_youkai_nature
+			modifier = {
+				army_attack_factor = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 工业-军事
+		# 低效的工业体系
+		NMS_di_xiao_de_gong_ye_ti_xi_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_di_xiao_de_gong_ye_ti_xi_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 停滞的研究水平
+		NMS_ting_zhi_de_yan_jiu_shui_ping_idea = {
+			picture = generic_low_research_level
+			modifier = {
+				research_speed_factor = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 落后的军事能力
+		NMS_luo_hou_de_jun_shi_neng_li_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.05
+				breakthrough_factor = -0.05
+				army_org_factor = -0.2
+				army_morale_factor = -0.2
+				command_power_gain_mult = -0.3
+				experience_gain_army_factor = -0.1
+				training_time_factor = 0.1
+				max_planning_factor = -0.2
+				planning_speed = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_luo_hou_de_jun_shi_neng_li_a_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.05
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				command_power_gain_mult = -0.3
+				experience_gain_army_factor = -0.1
+				training_time_factor = 0.1
+				max_planning_factor = -0.1
+				planning_speed = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_luo_hou_de_jun_shi_neng_li_b_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.05
+				command_power_gain_mult = -0.3
+				experience_gain_army_factor = -0.1
+				max_planning_factor = -0.1
+				planning_speed = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		NMS_luo_hou_de_jun_shi_neng_li_c_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.05
+				max_planning_factor = -0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 科研投资
+		NMS_ke_yan_tou_zi_idea = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		# 人类赔款
+		NMS_ren_lei_pei_kuan_idea = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.2
+			}
+		}
+
+		# 纳兹琳资源勘探组
+		NMS_na_zi_lin_zi_yuan_kan_tan_zu_idea = {
+			picture = ast_all_in
+			modifier = {
+				local_resources_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.2
+			}
+			cancel = {
+				NOT = {
+					has_character = NMS_mouse
+				}
+			}
+			allowed_civil_war = {
+				has_character = NMS_mouse
+			}
+		}
+
+		# 军事工业建设
+		NMS_jun_shi_gong_ye_jian_she_idea = {
+			picture = SOV_third_five_year_plan_military
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		NMS_jun_shi_gong_ye_jian_she_a_idea = {
+			picture = SOV_third_five_year_plan_military
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+
+		NMS_jun_shi_gong_ye_jian_she_b_idea = {
+			picture = SOV_third_five_year_plan_military
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_rail_way_factor = 0.15
+				production_speed_bunker_factor = 0.1
+				land_bunker_effectiveness_factor = 0.2
+			}
+		}
+
+		# 现代化军队
+		NMS_xian_dai_hua_jun_dui_idea = {
+			picture = ARG_war_division
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		NMS_xian_dai_hua_jun_dui_a_idea = {
+			picture = ARG_war_division
+			modifier = {
+				army_org_factor = 0.05
+				supply_factor = 0.1
+				supply_node_range = 0.1
+			}
+		}
+
+		NMS_xian_dai_hua_jun_dui_b_idea = {
+			picture = ARG_war_division
+			modifier = {
+				army_org_factor = 0.05
+				max_planning_factor = 0.1
+				planning_speed = 0.2
+			}
+		}
+
+		NMS_xian_dai_hua_jun_dui_c_idea = {
+			picture = ARG_war_division
+			modifier = {
+				army_org_factor = 0.05
+				supply_factor = 0.1
+				supply_node_range = 0.1
+				max_planning_factor = 0.1
+				planning_speed = 0.2
+			}
+		}
+	}
+}

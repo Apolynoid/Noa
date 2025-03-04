@@ -1,0 +1,16 @@
+technologies = {
+    TEG_kua_guo_he_liu_tech = {
+        allow = {
+          always = no   
+        }
+        category_army = {
+			river = {
+				attack = 0.5
+				defence = 0.5
+			}
+		}
+        ai_will_do = {
+          base = 0
+        }
+    }
+}

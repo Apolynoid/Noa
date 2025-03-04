@@ -1,0 +1,38 @@
+YYK_ge_ming_re_qing_idea = {
+	icon = GFX_idea_KNA_revolution_fervour
+	remove_trigger = {
+		has_global_flag = YYK_netherworld_civil_war_ended_flag
+	}
+	land_reinforce_rate = YYK_revolution_fervour_lrr
+	army_attack_factor = YYK_revolution_fervour_atk
+	army_morale_factor = YYK_revolution_fervour_mor
+	breakthrough_factor = YYK_revolution_fervour_brt
+	pocket_penalty = YYK_revolution_fervour_pkp
+	custom_modifier_tooltip = YYK_fervour_tt
+}
+
+YKO_bai_yu_lou_fang_yu_idea = {
+	icon = GFX_modifiers_BEL_eben_emael_raided
+	attacker_modifier = yes
+
+	army_attack_factor = -0.5
+	army_speed_factor = -0.5
+	local_org_regain = -0.5
+}
+
+YYK_fan_dui_zhe_di_kang_idea = {
+	icon = GFX_idea_chi_war_of_resistance3
+
+	stability_factor = YYK_opposition_resistance_sf
+	custom_modifier_tooltip = YYK_opposition_resistance_tt
+}
+
+YYK_fan_dui_zhe_di_kang_state_idea = {
+	icon = GFX_modifiers_generic_resistance
+
+	disable_strategic_redeployment = 1
+	local_factories = -0.75
+	local_resources = -0.65
+	local_intel_to_enemies = 0.3
+	state_production_speed_buildings_factor = -0.5
+}

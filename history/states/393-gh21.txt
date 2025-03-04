@@ -1,0 +1,34 @@
+state={
+	id=393
+	name="STATE_393"
+	provinces={
+		481 555 966 1272 1926 2408 3205 3206 4697 4716 4718 4722 4724 4733 4734 4735 4738 4740 4742 4748 4753 4755 4756 4757 4766 4770 4773 4781 
+	}
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=2.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SGS
+			add_core_of = SGS
+			add_claim_by = MEL
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=127455.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,114 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_basic_anti_shield_tech_medium"
+		texturefile = "gfx/equipments/antishield/art0.dds"
+	}
+
+	spriteType = {
+		name = "GFX_basic_magic_focus_tech_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus0.dds"
+	}
+
+# doctrines
+	spriteType = {
+		name = "GFX_special_operations_medium"
+		texturefile = "gfx/interface/technologies/kampfgruppe.dds"
+	}
+
+	spriteType = {
+		name = "GFX_combined_operations_medium"
+		texturefile = "gfx/interface/technologies/branch_interoperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_storm_troops_medium"
+		texturefile = "gfx/interface/technologies/werwolf_guerillas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_infiltration_medium"
+		texturefile = "gfx/interface/technologies/infiltration_assault.dds"
+	}
+
+	spriteType = {
+		name = "GFX_armor_breakthrough_medium"
+		texturefile = "gfx/interface/technologies/armored_spearhead.dds"
+	}
+
+	spriteType = {
+		name = "GFX_synthetic_combat_unit_medium"
+		texturefile = "gfx/interface/technologies/regimental_combat_teams.dds"
+	}
+
+	spriteType = {
+		name = "GFX_special_force_assault_medium"
+		texturefile = "gfx/interface/technologies/armored_operations.dds"
+	}
+
+	spriteType = {
+		name = "GFX_special_force_firepower_medium"
+		texturefile = "gfx/interface/technologies/vast_offensives.dds"
+	}
+
+	spriteType = {
+		name = "GFX_fire_support_medium"
+		texturefile = "gfx/interface/technologies/superior_firepower.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dispersed_firepower_medium"
+		texturefile = "gfx/interface/technologies/dispersed_support.dds"
+	}
+
+	spriteType = {
+		name = "GFX_combat_team_support_medium"
+		texturefile = "gfx/interface/technologies/intergrated_support.dds"
+	}
+
+	spriteType = {
+		name = "GFX_fire_coverage_medium"
+		texturefile = "gfx/interface/technologies/shock_and_awe.dds"
+	}
+
+	spriteType = {
+		name = "GFX_centralized_fire_schedule_medium"
+		texturefile = "gfx/interface/technologies/centralized_fire_control.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advanced_firepower_medium"
+		texturefile = "gfx/interface/technologies/advanced_firebases.dds"
+	}
+
+	spriteType = {
+		name = "GFX_defense_works_medium"
+		texturefile = "gfx/interface/technologies/prepared_defense.dds"
+	}
+
+	spriteType = {
+		name = "GFX_multilayer_defense_line_medium"
+		texturefile = "gfx/interface/technologies/defence_in_depth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_large_formation_warfare_medium"
+		texturefile = "gfx/interface/technologies/human_wave_offensive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_preparation_fire_medium"
+		texturefile = "gfx/interface/technologies/concentrated_fire_plans.dds"
+	}
+
+# MRS
+	spriteType = {
+		name = "GFX_magic_energy149_hakkero"
+		texturefile = "gfx/equipments/art/hakkero.dds"
+	}
+
+# NMS
+	spriteType = {
+		name = "GFX_special_force_146_motorcycle"
+		texturefile = "gfx/equipments/sf/motorcycle.png"
+	}
+}

@@ -1,0 +1,80 @@
+﻿capital = 475
+
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        gun3 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        mortar1 = 1
+
+        #专用基础
+        special_shield1 = 1
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        yunshudui140 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+    
+}
+
+146.1.1={
+    add_manpower = 3300
+    oob = "KEK_146"
+    # set_research_slots = 0
+    add_ideas = {
+        God
+        Town
+        dove2
+        close1
+        limit_magic
+        low_economic_mobilisation
+        type4_manpowerlv3
+    }
+    set_politics = {
+        ruling_party = oldgenso
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 3
+        neworder = 7
+        oldorder = 7
+        fandong = 3
+        oldgenso = 80
+    }
+}

@@ -1,0 +1,421 @@
+wargoal_types = {
+	take_state = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_NOCB_NAME
+
+		allowed = {
+			# always = no
+		}
+		
+		available = {
+			or = {
+				PREV = {
+					is_neighbor_of = ROOT
+				}
+				###拒绝贤者的
+				and = {
+					PREV = {
+						has_idea = gensoukyo_creator_idea2
+					}
+					ROOT = {
+						has_country_flag = SAGE_rejected_@PREV.PREV
+						capital_scope = {
+							is_on_continent = Gensokyo
+						}
+					}
+				}
+			}
+		}
+		
+		take_states = {
+			
+		}
+
+		generate_base_cost = 300#test
+		generate_per_state_cost = 0
+
+		take_states_limit = 1
+		expire = 182
+		#take_states_cost = -50 		#50% cheaper warcost for states
+		
+		threat = 7
+	}
+	take_core_state = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_TAKE_CORE_NAME
+		
+		allowed = {
+			#always = no
+		}
+		
+		take_states = {
+			is_core_of = ROOT
+			
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+		
+		generate_base_cost = 75#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -150
+
+		expire = 365
+		
+		
+		threat = 0.1
+	}
+	take_claimed_state = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		
+		war_name = WAR_TAKE_CLAIM_NAME
+
+		take_states = {
+			is_claimed_by = ROOT
+			
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+		
+		generate_base_cost = 100#test
+		generate_per_state_cost = 0	
+		
+		take_states_limit = 99
+		take_states_cost = -100
+
+		expire = 365
+		
+		
+		threat = 0.25
+	}
+	take_weak_core_state = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_TAKE_WEAK_CORE_NAME
+		
+		allowed = {
+			#always = no
+		}
+		
+		take_states = {
+			any_country = {
+				is_subject_of = ROOT
+				PREV = { is_core_of = PREV}
+			}
+			
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+		
+		generate_base_cost = 120#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -75
+
+		expire = 182
+		
+		
+		threat = 0.35
+	}
+	take_weak_claim_state = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_TAKE_WEAK_CLAIM_NAME
+		
+		allowed = {
+			#always = no
+		}
+		
+		take_states = {
+			any_country = {
+				is_subject_of = ROOT
+				PREV = { is_claimed_by = PREV}
+			}
+			
+			is_owned_by = PREV
+			is_controlled_by = PREV
+		}
+		
+		generate_base_cost = 150#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -50
+
+		expire = 182
+		
+		
+		threat = 0.5
+	}
+
+
+	###from others
+
+	SW_luanzhan = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_SW_luanzhan_NAME
+
+		allowed = {
+			always = no
+		}			
+		
+		generate_base_cost = 200		
+		generate_per_state_cost = 50
+
+		expire = 30
+		
+		threat = 0.1
+	}
+	take_state_focus = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_TAKE_CLAIM_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+		
+		generate_base_cost = 200		
+		generate_per_state_cost = 50
+		
+		take_states_limit = 5
+		take_states_cost = -300
+		
+		expire = 730
+		
+		threat = 2
+	}
+	puppet_wargoal_focus = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_PUPPET
+
+		allowed = {
+			always = no
+		}				
+		
+		generate_base_cost = 200		
+		generate_per_state_cost = 50
+
+		expire = 730
+		
+		threat = 2
+	}
+	
+	annex_everything = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_NAME
+
+		allowed = {
+			always = no
+		}
+		
+		take_states = {
+		# 	is_capital = yes
+		}
+
+		generate_base_cost = 300#test
+		generate_per_state_cost = 0
+
+		take_states_limit = 1
+		expire = 182
+		#take_states_cost = -50 		#50% cheaper warcost for states
+		
+		threat = 6
+	}
+
+	civil_war = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = CIVIL_WAR_NAME
+
+		allowed = {
+			always = no
+		}
+
+		take_states = {
+			
+		}
+
+		expire = 365
+				
+		threat = 1
+		take_states_threat_factor = 0.1
+		take_states_cost = -75
+	}
+
+	topple_government = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		allowed = {
+			always = no
+		}
+
+		take_states = {
+			is_capital = yes
+		}
+		
+		generate_base_cost = 250#test
+		generate_per_state_cost = 0	
+		
+		take_states_limit = 1
+		take_states_cost = 500
+
+		threat = 0.5
+
+		expire = 365
+	}
+
+	liberate_wargoal = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_liberate_wargoal
+
+		allowed = {
+			always = no
+		}
+		take_states = {
+			is_capital = yes
+		}		
+		
+		generate_base_cost = 250		
+		generate_per_state_cost = 0
+
+		take_states_limit = 1
+		take_states_cost = 500
+
+		expire = 365
+		
+		threat = 2
+	}
+
+	duli_wargoal = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_duli
+
+		allowed = {
+			always = no
+		}	
+
+		expire = 365
+
+		
+		threat = 0
+	}
+
+	help_duli_wargoal = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_help_duli
+
+		allowed = {
+			always = no
+		}	
+
+		expire = 365
+		
+		threat = 0
+	}
+
+	dahongmoguan_wargoal = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_dahongmoguan
+
+		allowed = {
+			always = no
+		}	
+		
+		take_states_cost = -60
+		
+		threat = 0.1
+
+		expire = 182
+	}
+	
+	SAGE_WAR = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_SAGE_WAR
+		
+		allowed = {
+			always = no
+		}
+		available = {
+		}
+		
+		take_states = {
+
+		}
+		generate_base_cost = 100#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -300
+
+		expire = 182
+		
+		
+		threat = 20
+	}
+	
+	TBA_tunbingshichang = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_TBA_tunbingshichang
+		
+		allowed = {
+		#	always = no
+		}
+		available = {
+			ROOT = {
+				has_completed_focus = TBA_78
+			}
+			PREV = {
+				is_neighbor_of = ROOT
+			}
+		}
+		
+		take_states = {
+			
+		}
+		
+		generate_base_cost = 30#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -300
+
+		expire = 182
+		
+		threat = 5
+	}
+	
+}

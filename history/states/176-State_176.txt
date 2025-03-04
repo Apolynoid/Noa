@@ -1,0 +1,33 @@
+
+state={
+	id=176
+	name="STATE_176"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=5.000
+	}
+	history={
+		146.1.1 = {
+			owner = URM
+			add_core_of = URM	
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+		}
+	}
+
+	provinces={
+		766 949 1003 1304 1452 2827 2835 
+	}
+	manpower=156330.0
+	state_category=s2
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

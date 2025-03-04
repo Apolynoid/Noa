@@ -1,0 +1,948 @@
+KNA_gain_influence = {
+    subtract_from_variable = {
+        yko_control_level = 1
+    }
+    clamp_variable = {
+        var = yko_control_level
+        min = 1
+        max = 4
+    }
+}
+
+YKO_gain_influence = {
+    add_to_variable = {
+        yko_control_level = 1
+    }
+    clamp_variable = {
+        var = yko_control_level
+        min = 1
+        max = 4
+    }
+}
+
+YYK_gain_influence = {
+    custom_effect_tooltip = YYK_gain_influence_tt
+    hidden_effect = {
+        if = {
+            limit = {
+                ROOT = {
+                    has_country_flag = YYK_KNA_selected_flag
+                }
+            }
+            KNA_gain_influence = yes
+            ROOT = {
+                random_owned_state = {
+                    limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+                }
+            }
+        }
+        else = {
+            YKO_gain_influence = yes
+            ROOT = {
+                random_owned_state = {
+                    limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 4
+                            }
+                        }
+                    }
+                    YKO_gain_influence = yes
+                }
+            }
+        }
+    }
+}
+
+YYK_lose_influence = {
+    custom_effect_tooltip = YYK_lose_influence_tt
+    hidden_effect = {
+        if = {
+            limit = {
+                ROOT = {
+                    has_country_flag = YYK_KNA_selected_flag
+                }
+            }
+            YKO_gain_influence = yes
+            ROOT = {
+                random_owned_state = {
+                    limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 4
+                            }
+                        }
+                    }
+                    YKO_gain_influence = yes
+                }
+            }
+        }
+        else = {
+            KNA_gain_influence = yes
+            ROOT = {
+                random_owned_state = {
+                    limit = {
+                        YYK_state_totally_controlled = no
+                        NOT = {
+                            has_state_flag = YYK_being_influenced_flag
+                        }
+                        any_neighbor_state = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                        }
+                    }
+                    KNA_gain_influence = yes
+                }
+            }
+        }
+    }
+}
+
+KNA_seize__YYK_equipment_fraction__weapon = {
+    custom_effect_tooltip = KNA_seize__YYK_equipment_fraction__weapon_tt
+    hidden_effect = {
+        add_to_variable = {
+            KNA_equipment = YYK_equipment_fraction
+        }
+        set_temp_variable = {
+            KNA_equipment_limit = 100
+        }
+        subtract_from_temp_variable = {
+            KNA_equipment_limit = YKO_secured_equipment
+        }
+        clamp_variable = {
+            var = KNA_equipment
+            min = 10
+            max = KNA_equipment_limit
+        }
+        set_variable = {
+            YKO_equipment = 100
+        }
+        subtract_from_variable = {
+            YKO_equipment = KNA_equipment
+        }
+    }
+}
+
+KNA_seek__YYK_army_fraction__army_support = {
+    custom_effect_tooltip = KNA_seek__YYK_army_fraction__army_support_tt
+    hidden_effect = {
+        add_to_variable = {
+            KNA_army_support = YYK_army_fraction
+        }
+        clamp_variable = {
+            var = KNA_army_support
+            min = 0
+            max = 100
+        }
+        set_variable = {
+            YKO_army_support = 100
+        }
+        subtract_from_variable = {
+            YKO_army_support = KNA_army_support
+        }
+    }
+}
+
+YKO_secure_10_weapon = {
+    custom_effect_tooltip = YKO_secure_10_weapon_tt
+    hidden_effect = {
+        add_to_variable = {
+            YKO_secured_equipment = 10
+        }
+        set_temp_variable = {
+            YKO_equipment_limit = 100
+        }
+        subtract_from_temp_variable = {
+            YKO_equipment_limit = KNA_equipment
+        }
+        clamp_variable = {
+            var = YKO_secured_equipment
+            min = 10
+            max = YKO_equipment_limit
+        }
+        set_variable = {
+            KNA_equipment = 100
+        }
+        subtract_from_variable = {
+            KNA_equipment = YKO_equipment
+        }
+    }
+}
+
+YKO_seek__YYK_army_fraction__army_support = {
+    custom_effect_tooltip = YKO_seek__YYK_army_fraction__army_support_tt
+    hidden_effect = {
+        add_to_variable = {
+            YKO_army_support = YYK_army_fraction
+        }
+        clamp_variable = {
+            var = YKO_army_support
+            min = 0
+            max = 100
+        }
+        set_variable = {
+            KNA_army_support = 100
+        }
+        subtract_from_variable = {
+            KNA_army_support = YKO_army_support
+        }
+    }
+}
+
+YKO_purge_army = {
+    remove_ideas = YYK_bu_zhong_cheng_de_jun_dui_idea
+    add_timed_idea = {
+        idea = YKO_jun_dui_bei_qing_xi_idea
+        days = 540
+    }
+}
+
+YYK_random_state_seize_choose = {
+    set_variable = {
+        YYK_AI_target_state = 231
+    }
+    random_owned_state = {
+        limit = {
+            # not fully controlled
+            YYK_state_totally_controlled = no
+            # neighboring enemy core
+            YYK_is_neighboring_enemy_core_state = yes
+            # not being seized
+            NOT = {
+                has_state_flag = YYK_being_influenced_flag
+            }
+            # do not seize capital neighbor -- focus will do
+            NOT = {
+                is_in_array = {
+                    array = hakugyokurou_states
+                    value = THIS
+                }
+            }
+        }
+        set_variable = {
+            ROOT.YYK_AI_target_state = THIS
+        }
+    }
+    if = {
+        limit = {
+            check_variable = {
+                YYK_AI_target_state = 231
+            }
+        }
+        # no valid state
+        log = "YYK_AI_state: No Valid State!"
+        set_country_flag = YYK_no_valid_state_flag
+    }
+    else = {
+        # some valid state
+        log = "YYK_AI_state: trying to activate [?YYK_AI_target_state.GetName] mission"
+        var:YYK_AI_target_state = {
+            set_state_flag = YYK_being_influenced_flag
+        }
+        activate_mission = YYK_di_fang_xing_dong_zheng_qu__YYK_AI_target_state__di_qu_zhi_chi
+    }
+}
+
+YYK_weapon_action_weight_calc = {
+    set_temp_variable = {
+        YYK_total_seized_equipment = KNA_equipment
+    }
+    add_to_temp_variable = {
+        YYK_total_seized_equipment = YKO_secured_equipment
+    }
+    set_variable = {
+        YYK_AI_weapon_weight = 100
+    }
+    subtract_from_variable = {
+        YYK_AI_weapon_weight = YYK_total_seized_equipment
+    }
+    if = {
+        limit = {
+            check_variable = {
+                YYK_AI_weapon_weight < 10
+            }
+        }
+        multiply_variable = {
+            YYK_AI_weapon_weight = 0.5
+        }
+    }
+}
+
+YYK_KNA_further_action = {
+    if = {
+        limit = {
+            YYK_can_KNA_seek_army_support = no
+            YYK_can_seize_weapon = no
+        }
+        # no further action
+        set_country_flag = YYK_no_valid_action_flag
+    }
+    else_if = {
+        limit = {
+            YYK_can_KNA_seek_army_support = no
+        }
+        # seize weapon now
+        activate_mission = YYK_di_fang_xing_dong_duo_qu_wu_qi
+    }
+    else_if = {
+        limit = {
+            YYK_can_seize_weapon = no
+        }
+        # seek army support now
+        activate_mission = YYK_di_fang_xing_dong_xun_qiu_jun_dui_zhi_chi
+    }
+    else = {
+        # calc weight
+        YYK_weapon_action_weight_calc = yes
+        set_variable = {
+            YYK_AI_army_weight = 50
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    KNA_army_support > 92
+                }
+            }
+            multiply_variable = {
+                YYK_AI_army_weight = 0.1
+            }
+        }
+        # random choose between two options
+        random_list = {
+            YYK_AI_weapon_weight = {
+                activate_mission = YYK_di_fang_xing_dong_duo_qu_wu_qi
+            }
+            YYK_AI_army_weight = {
+                activate_mission = YYK_di_fang_xing_dong_xun_qiu_jun_dui_zhi_chi
+            }
+        }
+    }
+}
+
+YYK_YKO_further_action = {
+    if = {
+        limit = {
+            YYK_can_seek_army_support = no
+            YYK_can_seize_weapon = no
+        }
+        # no further action
+        set_country_flag = YYK_no_valid_action_flag
+    }
+    else_if = {
+        limit = {
+            YYK_can_seek_army_support = no
+        }
+        # seize weapon now
+        activate_mission = YYK_di_fang_xing_dong_que_bao_wu_qi_ku_an_quan
+    }
+    else_if = {
+        limit = {
+            YYK_can_seize_weapon = no
+        }
+        # seek army support now
+        activate_mission = YYK_di_fang_xing_dong_qiang_hua_jun_dui_zhong_cheng
+    }
+    else = {
+        # calc weight
+        YYK_weapon_action_weight_calc = yes
+        set_variable = {
+            YYK_AI_army_weight = 50
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    YKO_army_support > 94
+                }
+            }
+            multiply_variable = {
+                YYK_AI_army_weight = 0.1
+            }
+        }
+        # random choose between two options
+        log = "YKO_AI_action_desicion: weapon:[?YYK_AI_weapon_weight] army:[?YYK_AI_army_weight]"
+        random_list = {
+            YYK_AI_weapon_weight = {
+                activate_mission = YYK_di_fang_xing_dong_que_bao_wu_qi_ku_an_quan
+            }
+            YYK_AI_army_weight = {
+                activate_mission = YYK_di_fang_xing_dong_qiang_hua_jun_dui_zhong_cheng
+            }
+        }
+    }
+}
+
+YYK_civil_war = {
+    custom_effect_tooltip = YYK_civil_war_tt
+    hidden_effect = {
+        set_global_flag = YYK_netherworld_civil_war_begun_flag
+        # civil war
+        if = {
+            limit = {
+                has_country_flag = YYK_KNA_selected_flag
+            }
+            set_capital = {state = 156}
+            set_temp_variable = {
+                YKO_equipment_ratio = YKO_equipment
+            }
+            divide_temp_variable = {
+                YKO_equipment_ratio = 100
+            }
+            set_temp_variable = {
+                YKO_army_ratio = YKO_army_support
+            }
+            divide_temp_variable = {
+                YKO_army_ratio = 100
+            }
+            start_civil_war = {
+                ruling_party = fandong
+                ideology = oldorder
+                size = YKO_equipment_ratio
+                army_ratio = YKO_army_ratio
+                capital = 231
+                states = all
+                states_filter = {
+                    NOT = {
+                        state = 156
+                    }
+                }
+                keep_unit_leaders_trigger = {
+                    has_ideology_group = fandong
+                }
+                # set alt tag
+                set_country_flag = YYK_YKO_flag
+                set_country_flag = YYK_YKO_selected_flag
+                set_country_flag = world_limit
+                set_country_flag = medium_focus_8_lower_flag
+                # load focus tree
+                load_focus_tree = YYK_focus
+                unlock_national_focus = YYK_ming_jie_de_ming_yun
+                unlock_national_focus = YKO_zhi_chi_you_you_zi
+            }
+            set_country_flag = YYK_KNA_flag
+        }
+        else = {
+            set_temp_variable = {
+                KNA_equipment_ratio = KNA_equipment
+            }
+            divide_temp_variable = {
+                KNA_equipment_ratio = 100
+            }
+            set_temp_variable = {
+                KNA_army_ratio = KNA_army_support
+            }
+            divide_temp_variable = {
+                KNA_army_ratio = 100
+            }
+            start_civil_war = {
+                ruling_party = oldorder
+                ideology = fandong
+                size = KNA_equipment_ratio
+                army_ratio = KNA_army_ratio
+                capital = 156
+                states = all
+                states_filter = {
+                    state = 156
+                }
+                keep_unit_leaders_trigger = {
+                    NOT = {
+                        has_ideology_group = fandong
+                    }
+                }
+                # set alt tag
+                set_country_flag = YYK_KNA_flag
+                set_country_flag = YYK_KNA_selected_flag
+                set_country_flag = world_limit
+                set_country_flag = medium_focus_8_lower_flag
+                # load focus tree
+                load_focus_tree = YYK_focus
+                unlock_national_focus = YYK_ming_jie_de_ming_yun
+                unlock_national_focus = KNA_fan_dui_you_you_zi
+            }
+            set_country_flag = YYK_YKO_flag
+        }
+        # opinion change
+        if = {
+            limit = {
+                has_country_flag = YYK_KNA_selected_flag
+            }
+            KNA = {
+                YKR = {
+                    remove_background_friend = yes
+                }
+            }
+            YKO = {
+                YKR = {
+                    add_background_friend = yes
+                }
+            }
+        }
+        # character move
+        KNA = {
+            clr_country_flag = YYK_no_kana_flag
+            if = {
+                limit = {
+                    has_character = YYK_yyk
+                }
+                set_nationality = {
+                    target_country = YKO
+                    character = YYK_yyk
+                }
+            }
+            if = {
+                limit = {
+                    has_character = YYK_youmu
+                }
+                set_nationality = {
+                    target_country = YKO
+                    character = YYK_youmu
+                }
+            }
+            if = {
+                limit = {
+                    has_character = YYK_yok
+                }
+                set_nationality = {
+                    target_country = YKO
+                    character = YYK_yok
+                }
+            }
+        }
+        YKO = {
+            promote_character = {
+                character = YYK_yyk
+                ideology = oldorder_type
+            }
+            promote_character = {
+                character = YYK_yyk
+                ideology = oldgenso_type
+            }
+            promote_character = {
+                character = YYK_youmu
+                ideology = neworder_type
+            }
+            promote_character = {
+                character = YYK_yok
+                ideology = guli_type
+            }
+        }
+        YKO = {
+            clr_country_flag = YYK_no_kana_flag
+            if = {
+                limit = {
+                    has_character = UND_kana
+                }
+                set_nationality = {
+                    target_country = KNA
+                    character = UND_kana
+                }
+            }
+        }
+        KNA = {
+            promote_character = {
+                character = UND_kana
+                ideology = fandong_type
+            }
+        }
+        # ideology set
+        KNA = {
+            set_popularities = {
+                qinwai = 13
+                fandong = 87
+            }
+        }
+        YKO = {
+            set_popularities = {
+                guli = 8
+                neworder = 8
+                oldorder = 68
+                oldgenso = 16
+            }
+        }
+        # army transfer
+        KNA = {
+            country_lock_all_division_template = no
+            every_owned_state = {
+                teleport_armies = {
+                    limit = {
+                        tag = KNA
+                    }
+                }
+            }
+        }
+        YKO = {
+            country_lock_all_division_template = no
+            every_owned_state = {
+                teleport_armies = {
+                    limit = {
+                        tag = YKO
+                    }
+                }
+            }
+        }
+        # state move
+        YKO = {
+            156 = {
+                set_state_flag = YYK_support_KNA_in_civil_war_flag
+            }
+            every_owned_state = {
+                if = {
+                    limit = {
+                        OR = {
+                            check_variable = {
+                                yko_control_level = 1
+                            }
+                            check_variable = {
+                                yko_control_level = 2
+                            }
+                        }
+                    }
+                    set_state_flag = YYK_support_KNA_in_civil_war_flag
+                    transfer_state_to = KNA
+                }
+                else = {
+                    set_state_flag = YYK_support_YKO_in_civil_war_flag
+                }
+            }
+        }
+        # militia generation
+        KNA = {
+            division_template = {
+                name = "革命民兵"
+                is_locked = yes
+                regiments = {
+                    ma_infantry = { x = 0 y = 0 }
+                    ma_infantry = { x = 0 y = 1 }
+                    ma_light_infantry = { x = 1 y = 0 }
+                    ma_light_infantry = { x = 1 y = 1 }
+                }
+            }
+            every_owned_state = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            yko_control_level = 1
+                        }
+                    }
+                    create_unit = {
+                        division = "name = \"革命民兵\" division_template = \"革命民兵\" start_experience_factor = 0.3"
+                        owner = KNA
+                    }
+                    create_unit = {
+                        division = "name = \"革命民兵\" division_template = \"革命民兵\" start_experience_factor = 0.2"
+                        owner = KNA
+                        count = 2
+                    }
+                }
+                else = {
+                    create_unit = {
+                        division = "name = \"革命民兵\" division_template = \"革命民兵\" start_experience_factor = 0.2"
+                        owner = KNA
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    YYK = {
+                        has_country_flag = KNA_revolution_militia_flag
+                    }
+                }
+                every_owned_state = {
+                    create_unit = {
+                        division = "name = \"革命民兵\" division_template = \"革命民兵\" start_experience_factor = 0.2"
+                        owner = KNA
+                    }
+                }
+            }
+        }
+        YKO = {
+            division_template = {
+                name = "效忠派民兵"
+                is_locked = yes
+                regiments = {
+                    ma_infantry = { x = 0 y = 0 }
+                    ma_infantry = { x = 0 y = 1 }
+                    ma_light_infantry = { x = 1 y = 0 }
+                    ma_light_infantry = { x = 1 y = 1 }
+                }
+            }
+            every_owned_state = {
+                if = {
+                    limit = {
+                        check_variable = {
+                            yko_control_level = 4
+                        }
+                    }
+                    create_unit = {
+                        division = "name = \"效忠派民兵\" division_template = \"效忠派民兵\" start_experience_factor = 0.3"
+                        owner = YKO
+                    }
+                    create_unit = {
+                        division = "name = \"效忠派民兵\" division_template = \"效忠派民兵\" start_experience_factor = 0.2"
+                        owner = YKO
+                        count = 2
+                    }
+                }
+                else = {
+                    create_unit = {
+                        division = "name = \"效忠派民兵\" division_template = \"效忠派民兵\" start_experience_factor = 0.2"
+                        owner = YKO
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    YYK = {
+                        has_country_flag = YKO_capital_guard_support_flag
+                    }
+                }
+                load_oob = "YKO_capital_guards"
+            }
+        }
+        # cosmetic tag
+        KNA = {
+            set_cosmetic_tag = YYK_revolutionary
+        }
+        YKO = {
+            set_cosmetic_tag = YYK_loyalist
+        }
+        # reload focus tree
+        KNA = {
+            mark_focus_tree_layout_dirty = yes
+        }
+        YKO = {
+            mark_focus_tree_layout_dirty = yes
+        }
+        # variable set
+        KNA = {
+            set_variable = {
+                YYK_war_bond_desicion_cost = 40
+            }
+            set_variable = {
+                KNA_propaganda_desicion_cost = 20
+            }
+        }
+        YKO = {
+            set_variable = {
+                YYK_war_bond_desicion_cost = 40
+            }
+        }
+        # idea renew
+        KNA = {
+            add_ideas = {
+                YYK_ming_jie_nei_zhan_idea
+                KNA_hun_luan_de_ge_ming_zhen_xian_idea
+                KNA_ming_jie_ge_ming_jun_idea
+                KNA_gong_ye_hun_luan_idea
+            }
+            set_variable = {
+                KNA_fervour = 80
+            }
+            YYK_fervour_calculation = yes
+            YYK_fervour_change_calculation = yes
+            add_dynamic_modifier = {
+                modifier = YYK_ge_ming_re_qing_idea
+            }
+        }
+        YKO = {
+            add_ideas = {
+                YYK_ming_jie_nei_zhan_idea
+                YKO_ming_jie_lu_jun_idea
+                YKO_di_xiao_de_xing_zheng_xi_tong_idea
+            }
+        }
+        # event
+        YKO = {
+            if = {
+                limit = {
+                    has_idea = YYK_bu_zhong_cheng_de_jun_dui_idea
+                }
+                country_event = {
+                    id = yko.101
+                }
+            }
+        }
+        news_event = {
+            id = yyk.105
+            days = 5
+        }
+        # add threat
+        add_named_threat = {
+            threat = 5
+            name = YYK_civil_war_tt
+        }
+    }
+}
+
+YYK_fervour_calculation = {
+    hidden_effect = {
+        KNA = {
+            set_variable = {
+                YYK_revolution_fervour_lrr = KNA_fervour
+            }
+            subtract_from_variable = {
+                YYK_revolution_fervour_lrr = 40
+            }
+            divide_variable = {
+                YYK_revolution_fervour_lrr = 1500
+            }
+            set_variable = {
+                YYK_revolution_fervour_atk = KNA_fervour
+            }
+            subtract_from_variable = {
+                YYK_revolution_fervour_atk = 40
+            }
+            divide_variable = {
+                YYK_revolution_fervour_atk = 1200
+            }
+            set_variable = {
+                YYK_revolution_fervour_mor = KNA_fervour
+            }
+            subtract_from_variable = {
+                YYK_revolution_fervour_mor = 40
+            }
+            divide_variable = {
+                YYK_revolution_fervour_mor = 300
+            }
+            set_variable = {
+                YYK_revolution_fervour_brt = KNA_fervour
+            }
+            subtract_from_variable = {
+                YYK_revolution_fervour_brt = 40
+            }
+            divide_variable = {
+                YYK_revolution_fervour_brt = 600
+            }
+            set_variable = {
+                YYK_revolution_fervour_pkp = KNA_fervour
+            }
+            subtract_from_variable = {
+                YYK_revolution_fervour_pkp = 40
+            }
+            divide_variable = {
+                YYK_revolution_fervour_pkp = -300
+            }
+        }
+    }
+}
+
+YYK_fervour__YYK_fervour_increase_num__increase = {
+    KNA = {
+        custom_effect_tooltip = YYK_fervour__YYK_fervour_increase_num__increase_tt
+        hidden_effect = {
+            add_to_variable = {
+                KNA_fervour = YYK_fervour_increase_num
+            }
+            clamp_variable = {
+                var = KNA_fervour
+                min = 0
+                max = 100
+            }
+            YYK_fervour_calculation = yes
+        }
+    }
+}
+
+YYK_fervour__YYK_fervour_decrease_num__decrease = {
+    KNA = {
+        custom_effect_tooltip = YYK_fervour__YYK_fervour_decrease_num__decrease_tt
+        hidden_effect = {
+            subtract_from_variable = {
+                KNA_fervour = YYK_fervour_decrease_num
+            }
+            clamp_variable = {
+                var = KNA_fervour
+                min = 0
+                max = 100
+            }
+            YYK_fervour_calculation = yes
+        }
+    }
+}
+
+YYK_fervour_change_calculation = {
+    set_variable = {
+        KNA.KNA_fervour_change = YKO.surrender_progress
+    }
+    subtract_from_variable = {
+        KNA.KNA_fervour_change = KNA.surrender_progress
+    }
+    if = {
+        limit = {
+            KNA = {
+                controls_province = 1343
+            }
+        }
+        add_to_variable = {
+            KNA.KNA_fervour_change = 0.3
+        }
+    }
+    multiply_variable = {
+        KNA.KNA_fervour_change = 10
+    }
+    # desicion fade
+    if = {
+        limit = {
+            KNA = {
+                has_country_flag = KNA_doing_propaganda_flag
+            }
+        }
+        subtract_from_variable = {
+            KNA.KNA_fervour_change = 1
+        }
+    }
+}
+
+YYK_opposition_resistance_calculation = {
+    set_variable = {
+        YYK_opposition_resistance_sf = YYK_opposition_num
+    }
+    multiply_variable = {
+        YYK_opposition_resistance_sf = -0.02
+    }
+}
+
+YYK_remove_resistance = {
+    remove_dynamic_modifier = {
+        modifier = YYK_fan_dui_zhe_di_kang_state_idea
+    }
+    hidden_effect = {
+        owner = {
+            subtract_from_variable = {
+                YYK_opposition_num = 1
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        YYK_opposition_num < 1
+                    }
+                }
+                remove_dynamic_modifier = {
+                    modifier = YYK_fan_dui_zhe_di_kang_idea
+                }
+                country_event = yyk.110
+            }
+            YYK_opposition_resistance_calculation = yes
+        }
+    }
+}

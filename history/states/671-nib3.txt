@@ -1,0 +1,32 @@
+state={
+	id=671
+	name="STATE_671"
+	provinces={
+		441 721 1934 2363 2678 2695 5807 5808 5815 5816 
+	}
+	resources={
+		powder=3.000
+		metal=0.000
+		gas=6.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SEJ
+			add_core_of = SEJ
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=1782
+	state_category=s7
+	buildings_max_level_factor=1.000
+	local_supplies=2.50
+}

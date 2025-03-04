@@ -1,0 +1,201 @@
+SCA_calc_army_loyalty = {
+    hidden_effect = {
+        clamp_variable = {
+            var = SCA_army_loyalty_value
+            min = 0
+            max = 100
+        }
+        set_variable = {
+            SCA_loyalty_progress = SCA_army_loyalty_value
+        }
+        divide_variable = {
+            SCA_loyalty_progress = 10
+        }
+        round_variable = SCA_loyalty_progress
+        add_to_variable = {
+            SCA_loyalty_progress = 1
+        }
+        # calc debuff
+        set_variable = {
+            SCA_army_loyalty_cp = SCA_army_loyalty_value
+        }
+        subtract_from_variable = {
+            SCA_army_loyalty_cp = 100
+        }
+        divide_variable = {
+            SCA_army_loyalty_cp = 200
+        }
+        set_variable = {
+            SCA_army_loyalty_eg = SCA_army_loyalty_cp
+        }
+        set_variable = {
+            SCA_army_loyalty_ld = SCA_army_loyalty_cp
+        }
+        multiply_variable = {
+            SCA_army_loyalty_ld = -1
+        }
+    }
+}
+
+SCA_calc_rebellion_value = {
+    hidden_effect = {
+        clamp_variable = {
+            var = SCA_fairy_rebellion_value
+            min = 0
+            max = 100
+        }
+        set_variable = {
+            SCA_rebellion_mtth = 120
+        }
+        subtract_from_variable = {
+            SCA_rebellion_mtth = SCA_fairy_rebellion_value
+        }
+        divide_variable = {
+            SCA_rebellion_mtth = 2
+        }
+        round_variable = SCA_rebellion_mtth
+        # calc progress bar
+        set_variable = {
+            SCA_rebellion_progress = SCA_fairy_rebellion_value
+        }
+        divide_variable = {
+            SCA_rebellion_progress = 10
+        }
+        round_variable = SCA_rebellion_progress
+        add_to_variable = {
+            SCA_rebellion_progress = 1
+        }
+        # calc debuff
+        set_variable = {
+            SCA_fairy_rebellion_cf = SCA_fairy_rebellion_value
+        }
+        divide_variable = {
+            SCA_fairy_rebellion_cf = 100
+        }
+        set_variable = {
+            SCA_fairy_rebellion_pp = SCA_fairy_rebellion_cf
+        }
+        multiply_variable = {
+            SCA_fairy_rebellion_pp = -1
+        }
+        set_variable = {
+            SCA_fairy_rebellion_st = SCA_fairy_rebellion_pp
+        }
+        divide_variable = {
+            SCA_fairy_rebellion_st = 2
+        }
+        set_variable = {
+            SCA_fairy_rebellion_ws = SCA_fairy_rebellion_st
+        }
+        # debuff modifier
+        multiply_variable = {
+            SCA_fairy_rebellion_pp = 0.75
+        }
+        # end check
+        if = {
+            limit = {
+                check_variable = {
+                    var = SCA_fairy_rebellion_value
+                    value = 0
+                    compare = less_than_or_equals
+                }
+            }
+            country_event = sca.108
+        }
+    }
+}
+
+SCA_army_loyalty_plus_5 = {
+    custom_effect_tooltip = SCA_army_loyalty_add_5_tt
+    hidden_effect = {
+        SCA = {
+            add_to_variable = {
+                SCA_army_loyalty_value = 5
+            }
+            SCA_calc_army_loyalty = yes
+        }
+    }
+}
+
+SCA_army_loyalty_plus_40 = {
+    custom_effect_tooltip = SCA_army_loyalty_add_40_tt
+    hidden_effect = {
+        SCA = {
+            add_to_variable = {
+                SCA_army_loyalty_value = 40
+            }
+            SCA_calc_army_loyalty = yes
+        }
+    }
+}
+
+SCA_army_loyalty_minus_3 = {
+    custom_effect_tooltip = SCA_army_loyalty_sub_3_tt
+    hidden_effect = {
+        SCA = {
+            subtract_from_variable = {
+                SCA_army_loyalty_value = 3
+            }
+            SCA_calc_army_loyalty = yes
+        }
+    }
+}
+
+SCA_army_loyalty_minus_5 = {
+    custom_effect_tooltip = SCA_army_loyalty_sub_5_tt
+    hidden_effect = {
+        SCA = {
+            subtract_from_variable = {
+                SCA_army_loyalty_value = 5
+            }
+            SCA_calc_army_loyalty = yes
+        }
+    }
+}
+
+SCA_fairy_rebellion_plus_5 = {
+    custom_effect_tooltip = SCA_fairy_rebellion_add_5_tt
+    hidden_effect = {
+        SCA = {
+            add_to_variable = {
+                SCA_fairy_rebellion_value = 5
+            }
+            SCA_calc_rebellion_value = yes
+        }
+    }
+}
+
+SCA_fairy_rebellion_minus_5 = {
+    custom_effect_tooltip = SCA_fairy_rebellion_sub_5_tt
+    hidden_effect = {
+        SCA = {
+            subtract_from_variable = {
+                SCA_fairy_rebellion_value = 5
+            }
+            SCA_calc_rebellion_value = yes
+        }
+    }
+}
+
+SCA_fairy_rebellion_minus_10 = {
+    custom_effect_tooltip = SCA_fairy_rebellion_sub_10_tt
+    hidden_effect = {
+        SCA = {
+            subtract_from_variable = {
+                SCA_fairy_rebellion_value = 10
+            }
+            SCA_calc_rebellion_value = yes
+        }
+    }
+}
+
+SCA_improve_war_preparation = {
+    custom_effect_tooltip = SCA_improve_war_preparation_tt
+    hidden_effect = {
+        SCA = {
+            add_to_variable = {
+                SCA_insufficient_war_preparation = 0.1
+            }
+        }
+    }
+}

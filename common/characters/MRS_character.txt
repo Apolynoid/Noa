@@ -1,0 +1,383 @@
+characters={
+	MRS_mrs ={
+		name = MRS_mrs
+		portraits={
+			civilian={
+				large="gfx/leaders/MRS/MRS_mrs.dds"
+				small="gfx/leaders/MRS/MRS_mrs_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRS/MRS_mrs.dds"
+				small="gfx/leaders/MRS/MRS_mrs_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
+			# id = 19
+			attack_skill = 11
+			defense_skill = 6
+			planning_skill = 1
+			logistics_skill = 2
+			skill = 6
+		}
+		country_leader={
+			ideology=guli_type
+			traits = {
+				MRS_ming_sheng_xian_he_de_da_mo_nv
+			}
+			id=-1
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = MRS_mrs
+			name = MRS_mrs
+			cost = 200
+			modifier = {
+				army_artillery_attack_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	ALI_ali ={
+		name = ALI_ali
+		portraits={
+			civilian={
+				large="gfx/leaders/ALI/ALI_ali.dds"
+				small="gfx/leaders/ALI/ALI_ali_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ALI/ALI_ali.dds"
+				small="gfx/leaders/ALI/ALI_ali_small.dds"
+			}
+		}
+		corps_commander = {
+			# id = 18
+			traits = {  th_original_character th_character th_trait_jijiacaokongzhe th_trait_yinyangshi war_hero }
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 6
+			logistics_skill = 11
+			skill = 7
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				MRS_qi_se_de_ren_ou_shi
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			traits = {
+				MRS_mo_fa_zhi_guo_de_ai_li_si
+			}
+			id=-1
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = ALI_ali
+			name = ALI_ali
+			cost = 200
+			modifier = {
+				special_forces_cap = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ALI_hor ={
+		name = ALI_hor
+		portraits={
+			civilian={
+				large="gfx/leaders/ALI/ALI_hor.dds"
+				small="gfx/leaders/ALI/ALI_hor_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ALI/ALI_hor.dds"
+				small="gfx/leaders/ALI/ALI_hor_small.dds"
+			}
+		}
+		corps_commander = {
+			# id = 17
+			traits = {  th_original_character th_character ALI_quganyoujiti_trait trait_cautious th_trait_huoqiangzhuanjia }
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			skill = 2
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = ALI_hor
+			name = ALI_hor
+			cost = 200
+			modifier = {
+				land_reinforce_rate = 0.03
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ALI_shh ={
+		name = ALI_shh
+		portraits={
+			civilian={
+				large="gfx/leaders/ALI/ALI_shh.dds"
+				small="gfx/leaders/ALI/ALI_shh_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ALI/ALI_shh.dds"
+				small="gfx/leaders/ALI/ALI_shh_small.dds"
+			}
+		}
+		corps_commander = {
+			# id = 16
+			traits = {  th_original_character th_character ALI_quganyoujiti_trait trait_reckless th_trait_chongjizhuanjia }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			skill = 2
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = ALI_shh
+			name = ALI_shh
+			cost = 200
+			research_bonus = {
+				shield_weapons = 0.15
+			}
+			modifier = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ALI_ski ={ #not original
+		name = ALI_ski
+		portraits={
+			civilian={
+				large="gfx/leaders/ALI/ALI_ski.dds"
+				small="gfx/leaders/ALI/ALI_ski_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ALI/ALI_ski.dds"
+				small="gfx/leaders/ALI/ALI_ski_small.dds"
+			}
+		}
+		field_marshal = {
+            traits = {  th_character th_trait_dayaoguai trait_cautious }
+            skill = 13
+            attack_skill = 9
+            defense_skill = 8
+            planning_skill = 4
+            logistics_skill = 4
+        }
+		country_leader={
+			ideology=oldorder_type
+			traits = {
+				ALI_mo_jie_zhi_shen
+			}
+			id=-1
+		}
+	}
+	ALI_yumeko ={
+		name = ALI_yumeko
+		portraits={
+			civilian={
+				large="gfx/leaders/ALI/ALI_yumeko.dds"
+				small="gfx/leaders/ALI/ALI_yumeko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ALI/ALI_yumeko.dds"
+				small="gfx/leaders/ALI/ALI_yumeko_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_chongjizhuanjia harsh_leader }
+			skill = 9
+			attack_skill = 10
+			defense_skill = 8
+			planning_skill = 5
+			logistics_skill = 12
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = ALI_yumeko
+		# 	name = ALI_yumeko
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+
+	ELL_ellen ={
+		name = ELL_ellen
+		portraits={
+			civilian={
+				large="gfx/leaders/ELL/ELL_ellen.dds"
+				small="gfx/leaders/ELL/ELL_ellen_small.dds"
+			}
+			army = {
+				large="gfx/leaders/ELL/ELL_ellen.dds"
+				small="gfx/leaders/ELL/ELL_ellen_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_huolizhuanjia }
+			skill = 8
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 6
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = ELL_ellen
+			name = ELL_ellen
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				magic = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	NAR_narumi ={
+		name = NAR_narumi
+		portraits={
+			civilian={
+				large="gfx/leaders/NAR/NAR_narumi.dds"
+				small="gfx/leaders/NAR/NAR_narumi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/NAR/NAR_narumi.dds"
+				small="gfx/leaders/NAR/NAR_narumi_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_cautious jungle_rat }
+			# id = 20
+			attack_skill = 2
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 6
+			skill = 5
+		}
+		country_leader={
+			ideology=fandong_type
+			traits = {
+				MRS_ruo_zhe_de_bao_hu_zhe
+			}
+			id=-1
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = NAR_narumi
+			name = NAR_narumi
+			cost = 200
+			modifier = {
+				weekly_manpower = 2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	RNS_rns ={
+		name = RNS_rns
+		portraits={
+			civilian={
+				large="gfx/leaders/RNS/RNS_rns.dds"
+				small="gfx/leaders/RNS/RNS_rns_small.dds"
+			}
+			army = {
+				large="gfx/leaders/RNS/RNS_rns.dds"
+				small="gfx/leaders/RNS/RNS_rns_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character trait_cautious   }
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 4
+            logistics_skill = 4
+            
+            skill = 4
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = RNS_rns
+			name = RNS_rns
+			cost = 200
+			modifier = {
+				trade_opinion_factor = 1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	RNS_tokiko ={
+		name = RNS_tokiko
+		portraits={
+			civilian={
+				large="gfx/leaders/RNS/RNS_tokiko.dds"
+				small="gfx/leaders/RNS/RNS_tokiko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/RNS/RNS_tokiko.dds"
+				small="gfx/leaders/RNS/RNS_tokiko_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  th_trait_chongjizhuanjia  }
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 2
+            
+            skill = 4
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = RNS_tokiko
+			name = RNS_tokiko
+			cost = 200
+			modifier = {
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.2
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

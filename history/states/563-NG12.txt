@@ -1,0 +1,24 @@
+state={
+	id=563
+	name="STATE_563"
+	history={
+		146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
+			}
+
+		}
+
+	}
+	state_category=s5
+	provinces={
+		2793 7094 7095 7096 7097 7098 7099 7100 7101 7102 7103 7104 7105 7106 7107 7108 7109 
+	}
+	manpower=141235
+	buildings_max_level_factor=1.000
+	local_supplies=2.5.000
+}

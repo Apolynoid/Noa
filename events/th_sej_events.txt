@@ -1,0 +1,1232 @@
+﻿add_namespace = sej
+# 集体化状况得到改善
+country_event = {
+	id = sej.101
+	title = sej.101.t
+	desc = sej.101.d
+	is_triggered_only = yes
+	option = {
+		name = sej.101.1
+		if = {
+			limit = {
+				has_idea = SEJ_nong_ye_ji_ti_hua_d_idea
+			}
+			swap_ideas = {
+				remove_idea = SEJ_nong_ye_ji_ti_hua_d_idea
+				add_idea = SEJ_nong_ye_ji_ti_hua_c_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SEJ_nong_ye_ji_ti_hua_c_idea
+			}
+			swap_ideas = {
+				remove_idea = SEJ_nong_ye_ji_ti_hua_c_idea
+				add_idea = SEJ_nong_ye_ji_ti_hua_b_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SEJ_nong_ye_ji_ti_hua_b_idea
+			}
+			swap_ideas = {
+				remove_idea = SEJ_nong_ye_ji_ti_hua_b_idea
+				add_idea = SEJ_nong_ye_ji_ti_hua_a_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SEJ_nong_ye_ji_ti_hua_a_idea
+			}
+			swap_ideas = {
+				remove_idea = SEJ_nong_ye_ji_ti_hua_a_idea
+				add_idea = SEJ_nong_ye_ji_ti_hua_idea
+			}
+		}
+		else = {
+			add_political_power = 100
+		}
+	}
+}
+
+# 反对派表示抗议
+country_event = {
+	id = sej.102
+	title = sej.102.t
+	desc = sej.102.d
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_ideas = SEJ_fan_dui_pai_bu_he_zuo_idea
+		}
+	}
+
+	option = {
+		name = sej.102.1
+		effect_tooltip = {
+			add_ideas = SEJ_fan_dui_pai_bu_he_zuo_idea
+		}
+		unlock_decision_category_tooltip = SEJ_chu_li_fan_dui_pai
+	}
+}
+
+# EET SEJ_smm请求庇护
+country_event = {
+	id = sej.103
+	title = sej.103.t
+	desc = sej.103.d
+	is_triggered_only = yes
+
+	# 我们将提供她所要求的庇护
+	option = {
+		name = sej.103.1
+		add_political_power = -50
+		custom_effect_tooltip = SEJ_sukuna_join_tt
+		hidden_effect = {
+			XXX = {
+				SEJ_smm = {
+					set_nationality = EET
+					clr_character_flag = nationality_SEJ
+					set_character_flag = nationality_EET
+				}
+			}
+		}
+	}
+
+	# 我们担负不起这个风险
+	option = {
+		name = sej.103.2
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# SEJ邀请我们举行联合军事演习
+country_event = {
+	id = sej.104
+	title = sej.104.t
+	desc = sej.104.d
+	is_triggered_only = yes
+
+	# 这将对我们两国都有好处
+	option = {
+		name = sej.104.1
+		add_political_power = -50
+		army_experience = 10
+		hidden_effect = {
+			set_country_flag = SEJ_has_exercised_flag
+		}
+		SEJ = {
+			army_experience = 5
+			hidden_effect = {
+				country_event = sej.105
+			}
+		}
+	}
+
+	# 这没有必要
+	option = {
+		name = sej.104.2
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.106
+			}
+		}
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# 联合演习要求得到同意
+country_event = {
+	id = sej.105
+	title = sej.105.t
+	desc = sej.105.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.105.1
+	}
+}
+
+# 联合演习要求被拒
+country_event = {
+	id = sej.106
+	title = sej.106.t
+	desc = sej.106.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.106.1
+	}
+}
+
+# SEJ的支援
+country_event = {
+	id = sej.107
+	title = sej.107.t
+	desc = sej.107.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.107.1
+		add_ideas = SEJ_xia_ke_shang_tong_meng_idea
+	}
+}
+
+# CIR SEJ希望与我们签订一份互助条约
+country_event = {
+	id = sej.108
+	title = sej.108.t
+	desc = sej.108.d
+	is_triggered_only = yes
+
+	# 这将对我们两国都有好处
+	option = {
+		name = sej.108.1
+		add_political_power = -30
+		CIR = {
+			diplomatic_relation = {
+				country = SEJ
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = military
+			}
+		}
+		SEJ = {
+			effect_tooltip = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 2
+					category = civil
+				}
+			}
+			hidden_effect = {
+				country_event = sej.109
+			}
+		}
+	}
+
+	# 这没有必要
+	option = {
+		name = sej.108.2
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.110
+			}
+		}
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# CIR同意签订互助条约
+country_event = {
+	id = sej.109
+	title = sej.109.t
+	desc = sej.109.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.109.1
+		add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = civil
+		}
+	}
+}
+
+# CIR拒绝签订互助条约
+country_event = {
+	id = sej.110
+	title = sej.110.t
+	desc = sej.110.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.110.1
+	}
+}
+
+# SEJ邀请我们加入科技互助委员会
+country_event = {
+	id = sej.111
+	title = sej.111.t
+	desc = sej.111.d
+	is_triggered_only = yes
+
+	# 这将对我们两国都有好处
+	option = {
+		name = sej.111.1
+		add_to_tech_sharing_group = gekokujyo_tech_mutual_aid_committee
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.112
+			}
+		}
+	}
+
+	# 这没有必要
+	option = {
+		name = sej.111.2
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.113
+			}
+		}
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# 科技互助邀请得到同意
+country_event = {
+	id = sej.112
+	title = sej.112.t
+	desc = sej.112.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.112.1
+	}
+}
+
+# 科技互助邀请遭到拒绝
+country_event = {
+	id = sej.113
+	title = sej.113.t
+	desc = sej.113.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.113.1
+	}
+}
+
+# sej稳固了在SEJ政治局的领导地位
+news_event = {
+	id = sej.114
+	title = sej.114.t
+	desc = sej.114.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = sej.114.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = sej.114.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.114.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# SEJ宣布将在全幻想乡传播下克上思想
+news_event = {
+	id = sej.115
+	title = sej.115.t
+	desc = sej.115.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = sej.115.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = sej.115.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.115.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# smm赢得了在SEJ政治局的领导地位
+news_event = {
+	id = sej.116
+	title = sej.116.t
+	desc = sej.116.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = sej.116.1
+		trigger = {
+			has_government = fandong
+			NOT = {
+				original_tag = SEJ
+			}
+		}
+	}
+
+	# 改良
+	option = {
+		name = sej.116.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.116.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+
+	# SEJ
+	option = {
+		name = sej.116.4
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+}
+
+# 下克上革命同盟的解散
+news_event = {
+	id = sej.117
+	title = sej.117.t
+	desc = sej.117.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = sej.117.1
+		trigger = {
+			has_government = fandong
+			NOT = {
+				original_tag = SEJ
+			}
+		}
+	}
+
+	# 改良
+	option = {
+		name = sej.117.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.117.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+
+	# SEJ
+	option = {
+		name = sej.117.4
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+}
+
+# CIR 组建新的革命同盟
+country_event = {
+	id = sej.118
+	title = sej.118.t
+	desc = sej.118.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.118.1
+		create_faction = CIR_gensokyo_revolutionary_movement
+	}
+}
+
+# CIR sej希望加入我们的事业
+country_event = {
+	id = sej.119
+	title = sej.119.t
+	desc = sej.119.d
+	is_triggered_only = yes
+
+	# 欢迎！
+	option = {
+		name = sej.119.1
+		add_political_power = -50
+		custom_effect_tooltip = SEJ_seija_join_tt
+		hidden_effect = {
+			XXX = {
+				SEJ_sej = {
+					set_nationality = CIR
+					clr_character_flag = nationality_SEJ
+					set_character_flag = nationality_CIR
+				}
+			}
+		}
+	}
+
+	# 也许这并不是一个好主意
+	option = {
+		name = sej.119.2
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# YKR SEJ愿意承认我们的领导地位
+country_event = {
+	id = sej.120
+	title = sej.120.t
+	desc = sej.120.d
+	is_triggered_only = yes
+
+	# 她们做出了正确的选择
+	option = {
+		name = sej.120.1
+		# if ykr has no faction, create one
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = YKR_gensokyo_security_treaty_organisation
+		}
+		faction_leader = {
+			add_to_faction = SEJ
+		}
+		SEJ = {
+			country_event = noa_gen.101
+		}
+		hidden_effect = {
+			SEJ = {
+				country_event = sej.121
+			}
+			news_event = {
+				id = sej.123
+				days = 10
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						original_tag = SEJ
+					}
+					has_government = fandong
+				}
+				add_opinion_modifier = {
+					target = SEJ
+					modifier = SEJ_xia_ke_shang_shi_ye_de_pan_tu_op
+				}
+			}
+		}
+	}
+
+	# 我们没必要与她们结盟
+	option = {
+		name = sej.120.2
+		hidden_effect = {
+			SEJ = {
+				country_event = sej.122
+			}
+		}
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# YKR同意了
+country_event = {
+	id = sej.121
+	title = sej.121.t
+	desc = sej.121.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.121.1
+	}
+}
+
+# YKR拒绝了
+country_event = {
+	id = sej.122
+	title = sej.122.t
+	desc = sej.122.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.122.1
+	}
+}
+
+# news SEJ承认YKR的领导地位
+news_event = {
+	id = sej.123
+	title = sej.123.t
+	desc = sej.123.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = sej.123.1
+		trigger = {
+			has_government = fandong
+			NOT = {
+				original_tag = SEJ
+			}
+		}
+	}
+
+	# 改良
+	option = {
+		name = sej.123.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.123.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+
+	# SEJ
+	option = {
+		name = sej.123.4
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+}
+
+# WHR SEJ希望我们停止骚扰边界
+country_event = {
+	id = sej.124
+	title = sej.124.t
+	desc = sej.124.d
+	is_triggered_only = yes
+
+	# 我们接受她们的条件
+	option = {
+		name = sej.124.1
+		add_political_power = 100
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.125
+			}
+		}
+	}
+
+	# 我们拒绝接受
+	option = {
+		name = sej.124.2
+		custom_effect_tooltip = SEJ_will_lead_to_war_tt
+		SEJ = {
+			hidden_effect = {
+				country_event = sej.126
+			}
+		}
+		ai_chance = {
+			base = -1000
+		}
+	}
+}
+
+# WHR同意了
+country_event = {
+	id = sej.125
+	title = sej.125.t
+	desc = sej.125.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.125.1
+		add_political_power = -100
+		remove_ideas = SEJ_dong_zhi_yao_guai_de_wei_xie_idea
+	}
+}
+
+# WHR拒绝了
+country_event = {
+	id = sej.126
+	title = sej.126.t
+	desc = sej.126.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.126.1
+		create_wargoal = {
+			target = WHR
+			type = topple_government
+		}
+	}
+}
+
+# 幻想乡大战
+news_event = {
+	id = sej.127
+	title = sej.127.t
+	desc = sej.127.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = CIR_gensokyo_great_war_tt
+		}
+		SEJ = {
+			has_war_with = SCA
+		}
+		CIR = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = CIR_gensokyo_great_war_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = sej.127.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# SEJ
+	option = {
+		name = sej.127.2
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.127.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = SEJ
+				}
+			}
+		}
+	}
+}
+
+# hidden 国策判定
+country_event = {
+	id = sej.128
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = SEJ_jian_chi_xia_ke_shang_dao_lu
+				}
+				NOT = {
+					focus_progress = {
+						focus = SEJ_jian_chi_xia_ke_shang_dao_lu
+						progress > 0.01
+					}
+				}
+				NOT = {
+					has_completed_focus = SEJ_yao_guai_zhong_zu_fu_xing
+				}
+				NOT = {
+					focus_progress = {
+						focus = SEJ_yao_guai_zhong_zu_fu_xing
+						progress > 0.01
+					}
+				}
+			}
+			unlock_national_focus = SEJ_jian_chi_xia_ke_shang_dao_lu
+			country_event = sej.129
+		}
+	}
+}
+
+# 叛乱同盟的现状
+country_event = {
+	id = sej.129
+	title = sej.129.t
+	desc = sej.129.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.129.1
+		effect_tooltip = {
+			unlock_national_focus = SEJ_jian_chi_xia_ke_shang_dao_lu
+		}
+	}
+}
+
+# news 叛乱同盟爆发内战
+news_event = {
+	id = sej.130
+	title = sej.130.t
+	desc = sej.130.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SEJ
+	option = {
+		name = sej.130.1
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+
+	# 激进
+	option = {
+		name = sej.130.2
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			has_government = fandong
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.130.3
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			NOT = {
+				has_government = fandong
+			}
+		}
+	}
+}
+
+# SEO 工厂遭到破坏
+country_event = {
+	id = sej.131
+	title = sej.131.t
+	desc = sej.131.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.131.1
+		random_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+		random_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+		}
+		random_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = arms_factory
+					level > 0
+				}
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+		random_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = arms_factory
+					level > 0
+				}
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+	}
+}
+
+# news 妖怪种族主义者赢得叛乱同盟内战
+news_event = {
+	id = sej.132
+	title = sej.132.t
+	desc = sej.132.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SEJ
+	option = {
+		name = sej.132.1
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+
+	# 激进
+	option = {
+		name = sej.132.2
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			has_government = fandong
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.132.3
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			NOT = {
+				has_government = fandong
+			}
+		}
+	}
+}
+
+# 下克上领导人的出逃
+country_event = {
+	id = sej.133
+	title = sej.133.t
+	desc = sej.133.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.133.1
+	}
+}
+
+# news 下克上革命党赢得叛乱同盟内战
+news_event = {
+	id = sej.134
+	title = sej.134.t
+	desc = sej.134.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SEJ
+	option = {
+		name = sej.134.1
+		trigger = {
+			original_tag = SEJ
+		}
+	}
+
+	# 激进
+	option = {
+		name = sej.134.2
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			has_government = fandong
+		}
+	}
+
+	# 其他
+	option = {
+		name = sej.134.3
+		trigger = {
+			NOT = {
+				original_tag = SEJ
+			}
+			NOT = {
+				has_government = fandong
+			}
+		}
+	}
+}
+
+# 种族主义叛乱领导人的处置
+country_event = {
+	id = sej.135
+	title = sej.135.t
+	desc = sej.135.d
+	is_triggered_only = yes
+
+	# 我们可以给她们改过自新的机会
+	option = {
+		name = sej.135.1
+		add_political_power = -100
+		custom_effect_tooltip = SEJ_rumia_and_wriggle_join_tt
+		hidden_effect = {
+			XXX = {
+				set_nationality = {
+					target_country = ROOT
+					character = RMI_rmi
+				}
+				set_nationality = {
+					target_country = ROOT
+					character = NIB_nib
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 同盟不需要叛徒！
+	option = {
+		name = sej.135.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# SEJ呼吁对support_target的支援
+country_event = {
+	id = sej.136
+	title = sej.136.t
+	desc = sej.136.d
+	is_triggered_only = yes
+
+	# 我们将为她们提供武器支援-灵力
+	option = {
+		name = sej.136.1
+		trigger = {
+			SEJ = {
+				var:support_target = {
+					has_tech = lingben
+				}
+			}
+			has_equipment = {
+				magic_focus_a > 100
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = magic_focus_a
+			amount = -100
+		}
+		hidden_effect = {
+			add_to_variable = {
+				SEJ.support_magic_weapon = 100
+			}
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+
+	# 我们将为她们提供武器支援-外界
+	option = {
+		name = sej.136.2
+		trigger = {
+			SEJ = {
+				var:support_target = {
+					has_tech = waike
+				}
+			}
+			has_equipment = {
+				gun_a > 100
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = -100
+		}
+		hidden_effect = {
+			add_to_variable = {
+				SEJ.support_science_weapon = 100
+			}
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+
+	# 我们将组织志愿者
+	option = {
+		name = sej.136.3
+		hidden_effect = {
+			add_to_variable = {
+				SEJ.support_manpower = 20
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# 我们将派遣军事顾问
+	option = {
+		name = sej.136.4
+		trigger = {
+			is_major = yes
+		}
+		hidden_effect = {
+			add_to_variable = {
+				SEJ.support_xp = 5
+			}
+		}
+		ai_chance = {
+			base = 2000
+		}
+	}
+
+	# 我们恐怕无能为力
+	option = {
+		name = sej.136.5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# 来自SEJ.GetFactionName的支援
+country_event = {
+	id = sej.137
+	title = sej.137.t
+	desc = sej.137.d
+	is_triggered_only = yes
+
+	option = {
+		name = sej.137.1
+		if = {
+			limit = {
+				check_variable = {
+					SEJ.support_science_weapon > 0
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun_a
+				amount = var:SEJ.support_science_weapon
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SEJ.support_magic_weapon > 0
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = var:SEJ.support_magic_weapon
+			}
+		}
+		add_manpower = var:SEJ.support_manpower
+		army_experience = var:SEJ.support_xp
+		ai_chance = {
+			base = 1
+		}
+	}
+}

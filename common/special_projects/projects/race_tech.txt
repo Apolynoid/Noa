@@ -1,0 +1,207 @@
+# 妖兽
+sp_race_norcturnal_intuition = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_norcturnal_intuition
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = Beast
+				has_country_flag = can_research_beast_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = Beast
+				has_country_flag = can_research_beast_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_ye_jian_zhi_jue_idea
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
+# 草根妖怪
+sp_race_aggressive_nature = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_aggressive_nature
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = Pri_youkai
+				has_country_flag = can_research_pri_youkai_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = Pri_youkai
+				has_country_flag = can_research_pri_youkai_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_qin_lve_tian_xing_idea
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
+# 神明
+sp_race_deification = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_deification
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = God
+				has_country_flag = can_research_god_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = God
+				has_country_flag = can_research_god_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_shen_ge_xian_xian_idea
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
+# 妖精
+sp_race_nature_intergration = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_nature_intergration
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = Fairy
+				has_country_flag = can_research_fairy_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = Fairy
+				has_country_flag = can_research_fairy_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_zi_ran_rong_he_idea
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}

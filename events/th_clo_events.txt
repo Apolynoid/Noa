@@ -1,0 +1,1005 @@
+﻿add_namespace = clo
+country_event = { #妖精鼓励法案(1->2)
+	id = clo.1
+	title = clo.1.t
+	desc = clo.1.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan1_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.1.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan1_idea
+			add_idea = CLO_yaojinggulifaan2_idea
+		}
+	}
+}
+country_event = { #妖精鼓励法案(2->3)
+	id = clo.2
+	title = clo.2.t
+	desc = clo.2.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan2_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.2.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan2_idea
+			add_idea = CLO_yaojinggulifaan3_idea
+		}
+	}
+}
+country_event = { #妖精鼓励法案(3->4)
+	id = clo.3
+	title = clo.3.t
+	desc = clo.3.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan3_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.3.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan3_idea
+			add_idea = CLO_yaojinggulifaan4_idea
+		}
+	}
+}
+country_event = { #妖精鼓励法案(4->5)
+	id = clo.4
+	title = clo.4.t
+	desc = clo.4.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan4_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.4.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan4_idea
+			add_idea = CLO_yaojinggulifaan5_idea
+		}
+	}
+}
+country_event = { #妖精鼓励法案(5->6)
+	id = clo.5
+	title = clo.5.t
+	desc = clo.5.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan5_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.5.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan5_idea
+			add_idea = CLO_yaojinggulifaan6_idea
+		}
+	}
+}
+country_event = { #妖精鼓励法案(6->7) 
+	id = clo.6
+	title = clo.6.t
+	desc = clo.6.d
+	# picture = GFX
+	# major = yes
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = CLO
+		has_idea = CLO_yaojinggulifaan6_idea
+	}
+	mean_time_to_happen = {
+		days = 730
+		modifier = {
+			not = {
+				has_idea = Tribal
+			}
+			factor = 0.9
+		}
+		modifier = {
+			has_idea = Town
+			factor = 0.7
+		}
+		modifier = {
+			or = {
+				has_idea = Country
+				has_idea = Empire
+			}
+			factor = 0.6
+		}
+		modifier = {
+			has_idea = World
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = clo.6.1 
+		swap_ideas = {
+			remove_idea = CLO_yaojinggulifaan6_idea
+			add_idea = CLO_yaojinggulifaan7_idea
+		}
+	}
+}
+news_event = { #新地狱(新闻)
+	id = clo.7
+	title = clo.7.t
+	desc = clo.7.d
+	picture = GFX_news_event_clo.7
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = clo.7.1 
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = clo.7.2
+		trigger = {
+			is_subject = yes
+			or = {
+				has_idea = Fairy
+				has_idea = Ghost
+			}
+			not = {
+				tag = CIR
+				tag = CLO
+			}
+		}
+	}
+	option = {
+		name = clo.7.3
+		trigger = {
+			tag = CIR
+			has_government = neworder
+		}
+	}
+	option = {
+		name = clo.7.4
+		trigger = {
+			tag = CIR
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = clo.7.5
+		trigger = {
+			tag = CIR
+			has_government = fandong
+		}
+	}
+	option = {
+		name = clo.7.6
+		trigger = {
+			tag = SCA
+			not = {
+				has_government = qinwai
+			}
+		}
+	}
+	option = {
+		name = clo.7.7
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = clo.7.8
+		trigger = {
+			tag = OKI
+		}
+	}
+	option = {
+		name = clo.7.9
+		trigger = {
+			tag = KAS
+		}
+	}
+	option = {
+		name = clo.7.10
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = CLO
+				tag = CIR
+				tag = KAS
+				tag = YKR
+				tag = OKI
+				tag = SCA
+				and = {
+					is_subject = yes
+					or = {
+						has_idea = Fairy
+						has_idea = Ghost
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = clo.7.11
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = CLO
+				tag = CIR
+				tag = KAS
+				tag = YKR
+				tag = OKI
+				and = {
+					is_subject = yes
+					or = {
+						has_idea = Fairy
+						has_idea = Ghost
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = clo.7.12
+		trigger = {
+			has_government = guli
+			not = {
+				tag = CLO
+				tag = CIR
+				tag = KAS
+				tag = YKR
+				tag = OKI
+				tag = SCA
+				and = {
+					is_subject = yes
+					or = {
+						has_idea = Fairy
+						has_idea = Ghost
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = clo.7.13
+		trigger = {
+			or = {
+				has_government = guli
+				has_government = neworder
+			}
+			not = {
+				tag = CLO
+				tag = CIR
+				tag = KAS
+				tag = YKR
+				tag = OKI
+				tag = SCA
+				and = {
+					is_subject = yes
+					or = {
+						has_idea = Fairy
+						has_idea = Ghost
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #要求剩余势力屈服 剩余势力
+	id = clo.8
+	title = clo.8.t
+	desc = clo.8.d
+	picture = GFX_news_event_clo.8
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = clo.8.1 
+		FROM = {
+			ROOT = {
+				subject_level1 = yes
+			}
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_idea = none_theory
+				factor = 3
+			}
+			modifier = {
+				is_major = yes
+				factor = 0.1
+			}
+		}
+	}
+	option = {
+		name = clo.8.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+country_event = { #建立新地狱法案 事件
+	id = clo.9
+	title = clo.9.t
+	desc = clo.9.d
+	# picture = GFX
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 60
+	}
+	trigger = {
+		tag = CLO
+		has_completed_focus = CLO_xindiyufaan
+		any_owned_state = {
+			is_on_continent = Hell
+			has_dynamic_modifier = {
+				modifier = different_race_rebel
+			}
+			or = {
+				is_core_of = ROOT
+				compliance > 50
+			}
+		}
+	}
+	option = {
+		name = clo.9.1 
+		every_owned_state = {
+			limit = {
+				is_on_continent = Hell
+				has_dynamic_modifier = {
+					modifier = different_race_rebel
+				}
+				or = {
+					is_core_of = ROOT
+					compliance > 50
+				}
+			}
+			ST_race_penalty_remove = yes
+		}
+	}
+}
+country_event = { #要求南方幽灵加入新秩序 幽灵 事件
+	id = clo.10
+	title = clo.10.t
+	desc = clo.10.d
+	picture = GFX_news_event_clo.10
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = clo.10.1 
+		FROM = {
+			ROOT = {
+				subject_level2 = yes
+			}
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = clo.10.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = { #邀请中转站加入新秩序 事件
+	id = clo.11
+	title = clo.11.t
+	desc = clo.11.d
+	picture = GFX_news_event_clo.11
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = clo.11.1 
+		FROM = {
+			ROOT = {
+				subject_level1 = yes
+			}
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = clo.11.2
+		FROM = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+news_event = { #被骗了！(新闻)
+	id = clo.12
+	title = clo.12.t
+	desc = clo.12.d
+	picture = GFX_news_event_clo.12	 
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = clo.12.1 
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = clo.12.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = CLO
+				tag = SKI
+			}
+		}
+	}
+	option = {
+		name = clo.12.3
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = clo.12.4
+		trigger = {
+			has_government = guli
+			not = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = EET
+			}
+		}
+	}
+	option = {
+		name = clo.12.5
+		trigger = {
+			or = {
+				has_government = neworder
+				has_government = oldorder
+			}
+			not = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = EET
+			}
+		}
+	}
+	option = {
+		name = clo.12.6
+		trigger = {
+			has_government = fandong
+			not = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = EET
+			}
+		}
+	}
+	option = {
+		name = clo.12.7
+		trigger = {
+			has_government = qinwai
+			not = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = EET
+			}
+		}
+	}
+	option = {
+		name = clo.12.8
+		trigger = {
+			or = {
+				tag = OKI
+				tag = KAS
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = clo.12.9
+		trigger = {
+			tag = EET
+		}
+	}
+	option = {
+		name = clo.12.1
+	}
+}
+news_event = { #正如计划！(新闻)
+	id = clo.13
+	title = clo.13.t
+	desc = clo.13.d
+	picture = GFX_news_event_clo.13	 
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = clo.13.1 
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = clo.13.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = clo.13.3
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = SKI
+				tag = CLO
+			}
+		}
+	}
+	option = {
+		name = clo.13.4
+		trigger = {
+			capital_scope = {
+				not = { is_on_continent = Hell }
+			}
+			has_idea = Ghost
+		}
+	}
+	option = {
+		name = clo.13.5
+		trigger = {
+			tag = CIR
+		}
+	}
+	option = {
+		name = clo.13.6
+		trigger = {
+			has_idea = Fairy
+			not = {
+				tag = CIR
+				tag = SCA
+				tag = CLO
+			}
+		}
+	}
+	option = {
+		name = clo.13.7
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = clo.13.8
+		trigger = {
+			or = {
+				tag = KAS
+				tag = OKI
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = clo.13.9
+		trigger = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			or = {
+				has_government = qinwai
+				has_government = guli
+				has_government = fandong
+				has_government = oldorder
+			}
+			not = {
+				has_idea = Ghost
+				tag = CIR
+				tag = SCA
+				tag = KAS
+				tag = OKI
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = clo.13.10
+		trigger = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			has_government = neworder
+			not = {
+				has_idea = Ghost
+				tag = CIR
+				tag = SCA
+				tag = KAS
+				tag = OKI
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = clo.13.11
+		trigger = {
+			not = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+				capital_scope = {
+					is_on_continent = Hell
+				}
+				has_idea = Ghost
+			}
+		}
+	}
+	option = {
+		name = clo.13.1
+	}
+}
+news_event = { #意料之外，情理之中。(新闻)
+	id = clo.14
+	title = clo.14.t
+	desc = clo.14.d
+	picture = GFX_news_event_clo.14
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = clo.14.1 
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = clo.14.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = CLO
+				tag = KEK
+				tag = SKI
+			}
+		}
+	}
+	option = {
+		name = clo.14.3
+		trigger = {
+			tag = KEK
+		}
+	}
+	option = {
+		name = clo.14.4
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = clo.14.5
+		trigger = {
+			has_idea = Fairy
+			not = {
+				tag = CLO
+				tag = SCA
+				tag = CIR
+			}
+		}
+	}
+	option = {
+		name = clo.14.6
+		trigger = {
+			tag = CIR
+		}
+	}
+	option = {
+		name = clo.14.7
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = clo.14.8
+		trigger = {
+			or = {
+				tag = OKI
+				tag = KAS
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = clo.14.9
+		trigger = {
+			or = {
+				has_government = oldorder
+				has_government = guli
+				has_government = qinwai
+			}
+			not = {
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = SCA
+				tag = CIR
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+	option = {
+		name = clo.14.10
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = SCA
+				tag = CIR
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+	option = {
+		name = clo.14.11
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = OKI
+				tag = KAS
+				tag = YKR
+				tag = SCA
+				tag = CIR
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = clo.15
+	hidden = yes
+	trigger = {
+		# CLO = {
+		# 	or = {
+		# 		has_completed_focus = CLO_yaojingchedishuncong
+		# 		has_completed_focus = CLO_fahuizhongzuyoushi
+		# 	}
+		# }
+		not = {
+			tag = CLO
+		}
+		any_controlled_state = {
+			or = {
+				has_dynamic_modifier = {
+					modifier = CLO_yaojingchedishuncong_modifier
+				}
+				has_dynamic_modifier = {
+					modifier = CLO_fahuiyoushi_modifier
+				}	
+			}
+		}
+	}
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	immediate = {
+		every_controlled_state = {
+			limit = {
+				or = {
+					has_dynamic_modifier = {
+						modifier = CLO_yaojingchedishuncong_modifier
+					}
+					has_dynamic_modifier = {
+						modifier = CLO_fahuiyoushi_modifier
+					}	
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = CLO_yaojingchedishuncong_modifier
+			}
+			remove_dynamic_modifier = {
+				modifier = CLO_fahuiyoushi_modifier
+			}
+		}
+	}
+	option = {
+		
+	}
+}

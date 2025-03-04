@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_modifiers_hum_human_exile"
+		textureFile = "gfx/interface/state_modifiers/modifiers_hum_human_exile.png"
+	}
+}

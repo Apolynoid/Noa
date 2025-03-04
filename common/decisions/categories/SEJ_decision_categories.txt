@@ -1,0 +1,57 @@
+# 处理反对派
+SEJ_chu_li_fan_dui_pai = {
+	icon = power_struggle
+
+	priority = 96
+
+	allowed = {
+		original_tag = SEJ
+	}
+
+	visible = {
+		OR = {
+			has_idea = SEJ_fan_dui_pai_bu_he_zuo_idea
+			has_idea = SEJ_fan_dui_pai_bu_he_zuo_a_idea
+			has_idea = SEJ_fan_dui_pai_bu_he_zuo_b_idea
+		}
+	}
+
+	visible_when_empty = yes
+}
+
+# 下克上同盟
+SEJ_xia_ke_shang_tong_meng = {
+	icon = generic_gekokujyoism
+
+	priority = 95
+
+	allowed = {
+		original_tag = SEJ
+	}
+
+	visible = {
+		has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+	}
+
+	visible_when_empty = yes
+}
+
+# 叛乱同盟内战
+SEJ_pan_luan_tong_meng_nei_zhan = {
+	icon = border_conflicts
+
+	priority = 97
+
+	allowed = {
+		original_tag = SEJ
+	}
+
+	visible = {
+		has_completed_focus = SEJ_yao_guai_zhong_zu_fu_xing
+		NOT = {
+			has_country_flag = SEJ_civil_war_begun_flag
+		}
+	}
+
+	visible_when_empty = yes
+}

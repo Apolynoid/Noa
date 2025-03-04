@@ -1,0 +1,540 @@
+# 处理反对派
+SEJ_chu_li_fan_dui_pai = {
+    # 向反对派适当让步
+    SEJ_xiang_fan_dui_pai_shi_dang_rang_bu = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = generic_political_discourse
+
+        fire_only_once = yes
+
+        days_remove = 50
+
+        cost = 30
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        complete_effect = {
+            add_stability = -0.1
+            hidden_effect = {
+                set_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        remove_effect = {
+            SEJ_reduce_opposition_power = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+        }
+    }
+
+    # 边缘化军队中的反对派
+    SEJ_bian_yuan_hua_jun_dui_zhong_de_fan_dui_pai = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = generic_military
+
+        fire_only_once = yes
+
+        days_remove = 50
+
+        custom_cost_text = SEJ_100_command_power
+
+        custom_cost_trigger = {
+            command_power > 99
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                add_command_power = -100
+                set_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        remove_effect = {
+            SEJ_reduce_opposition_power = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+        }
+    }
+
+    # 在政治局安插忠诚人员
+    SEJ_zai_zheng_zhi_ju_an_cha_zhong_cheng_ren_yuan = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = SWI_no_elected_president
+
+        fire_only_once = yes
+
+        days_remove = 50
+
+        cost = 100
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        remove_effect = {
+            SEJ_reduce_opposition_power = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+        }
+    }
+
+    # 控制反对派活动力度
+    SEJ_kong_zhi_fan_dui_pai_huo_dong_li_du = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = generic_police_action
+
+        fire_only_once = yes
+
+        days_remove = 50
+
+        cost = 30
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        complete_effect = {
+            add_war_support = -0.1
+            hidden_effect = {
+                set_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        remove_effect = {
+            SEJ_reduce_opposition_power = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+        }
+    }
+
+    # 组织忠诚派别游行
+    SEJ_zu_zhi_zhong_cheng_pai_bie_you_xing = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = generic_political_rally
+
+        fire_only_once = yes
+
+        days_remove = 50
+
+        cost = 10
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+            num_of_civilian_factories_available_for_projects > 3
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        modifier = {
+            civilian_factory_use = 4
+        }
+
+        remove_effect = {
+            SEJ_reduce_opposition_power = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        ai_will_do = {
+            base = 50000
+        }
+    }
+
+    # 揭露反对派与紫的密会
+    SEJ_jie_lu_fan_dui_pai_yu_zi_de_mi_hui = {
+        allowed = {
+            original_tag = SEJ
+        }
+
+        icon = sej_against_sukuna
+
+        fire_only_once = yes
+
+        cost = 10
+
+        visible = {
+            has_country_leader = {
+                character = SEJ_sej
+                ruling_only = yes
+            }
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = SEJ_lowering_opposition_power_flag
+            }
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = SEJ_sukuna_leave_tt
+            hidden_effect = {
+                set_nationality = {
+                    target_country = XXX
+                    character = SEJ_smm
+                }
+                EET = {
+                    country_event = {
+                        id = sej.103
+                        days = 7
+                    }
+                }
+            }
+            SEJ_remove_opposition_power = yes
+        }
+
+        ai_will_do = {
+            base = -1000
+        }
+    }
+
+}
+
+# 下克上同盟
+SEJ_xia_ke_shang_tong_meng = {
+    # 支援MRS
+    SEJ_zhi_yuan_MRS = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        targets = {MRS}
+        targets_dynamic = yes
+        target_trigger = {
+            has_global_flag = MRS_civil_war_prepare_flag
+            NOT = {
+                has_global_flag = MRS_civil_war_end_flag
+            }
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+            }
+        }
+        available = {
+            has_war = no
+        }
+        icon = generic_industry
+        fire_only_once = yes
+        days_remove = 15
+        complete_effect = {
+            set_variable = {
+                support_target = MRS
+            }
+            custom_effect_tooltip = SEJ_support_MRS_tt
+            SEJ_support_init_and_trigger = yes
+        }
+        remove_effect = {
+            MRS = {
+                country_event = sej.137
+            }
+        }
+    }
+
+    # 支援NAR
+    SEJ_zhi_yuan_NAR = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        targets = {NAR}
+        targets_dynamic = yes
+        target_trigger = {
+            has_global_flag = MRS_civil_war_prepare_flag
+            NOT = {
+                has_global_flag = MRS_civil_war_end_flag
+            }
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+            }
+        }
+        available = {
+            has_war = no
+        }
+        icon = generic_industry
+        fire_only_once = yes
+        days_remove = 15
+        complete_effect = {
+            set_variable = {
+                support_target = NAR
+            }
+            custom_effect_tooltip = SEJ_support_NAR_tt
+            SEJ_support_init_and_trigger = yes
+        }
+        remove_effect = {
+            NAR = {
+                country_event = sej.137
+            }
+        }
+    }
+
+    # 支援KNA
+    SEJ_zhi_yuan_KNA = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        targets = {KNA}
+        targets_dynamic = yes
+        target_trigger = {
+            has_global_flag = YYK_netherworld_civil_war_begun_flag
+            NOT = {
+                has_global_flag = YYK_netherworld_civil_war_ended_flag
+            }
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+            }
+        }
+        available = {
+            has_war = no
+        }
+        icon = generic_industry
+        fire_only_once = yes
+        days_remove = 15
+        complete_effect = {
+            set_variable = {
+                support_target = KNA
+            }
+            custom_effect_tooltip = SEJ_support_KNA_tt
+            SEJ_support_init_and_trigger = yes
+        }
+        remove_effect = {
+            KNA = {
+                country_event = sej.137
+            }
+        }
+    }
+
+    # 与FROM进行联合军事演习
+    SEJ_yu_FROM_jin_xing_lian_he_jun_shi_yan_xi = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_qiang_hua_ge_ming_tong_meng
+        }
+        target_array = faction_members
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                NOT = {
+                    has_country_flag = SEJ_has_exercised_flag
+                }
+            }
+        }
+        available = {
+            has_war = no
+            FROM = {
+                has_war = no
+            }
+        }
+        icon = generic_military
+        cost = 100
+        days_re_enable = 90
+        complete_effect = {
+            FROM = {
+                country_event = sej.104
+            }
+            custom_effect_tooltip = if_they_accept_tt
+            effect_tooltip = {
+                army_experience = 5
+                FROM = {
+                    army_experience = 10
+                }
+            }
+        }
+    }
+
+    # 邀请FROM加入科技互助委员会
+    SEJ_yao_qing_FROM_jia_ru_ke_ji_hu_zhu_wei_yuan_hui = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        target_array = faction_members
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                exists = yes
+                NOT = {
+                    is_in_tech_sharing_group = gekokujyo_tech_mutual_aid_committee
+                }
+            }
+        }
+        icon = generic_research
+        cost = 30
+        days_re_enable = 90
+        complete_effect = {
+            FROM = {
+                country_event = sej.111
+            }
+            custom_effect_tooltip = if_they_accept_tt
+            effect_tooltip = {
+                FROM = {
+                    add_to_tech_sharing_group = gekokujyo_tech_mutual_aid_committee
+                }
+            }
+        }
+    }
+}
+
+SEJ_pan_luan_tong_meng_nei_zhan = {
+    # 即将到来的激进派镇压
+    SEJ_ji_jiang_dao_lai_de_ji_jin_pai_zhen_ya = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            has_country_flag = SEJ_civil_war_begun_flag
+        }
+        icon = oppression
+        days_mission_timeout = 180
+        selectable_mission = no
+        timeout_effect = {
+            add_popularity = {
+                ideology = neworder
+                popularity = -0.2
+            }
+            SEJ_army_infiltration_minus_20 = yes
+            SEJ_trigger_civil_war = yes
+        }
+    }
+
+    # 宣传妖怪复兴主义
+    SEJ_xuan_chuan_yao_guai_fu_xing_zhu_yi = {
+        allowed = {
+            original_tag = SEJ
+        }
+        visible = {
+            has_completed_focus = SEJ_yao_guai_zhong_zu_fu_xing
+        }
+        cost = 30
+        days_re_enable = 1
+        days_remove = 30
+        available = {
+            NOT = {
+                has_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        cancel_trigger = {
+            has_country_flag = SEJ_civil_war_ended_flag
+        }
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        modifier = {
+            neworder_drift = 0.1
+        }
+        remove_effect = {
+            hidden_effect = {
+                clr_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        icon = eng_propaganda_campaigns
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    # 争取军队支持
+    SEJ_zheng_qu_jun_dui_zhi_chi = {
+        allowed = {
+            original_tag = SEJ
+        }
+        visible = {
+            has_completed_focus = SEJ_shen_tou_jun_dui
+        }
+        cost = 30
+        days_re_enable = 1
+        days_remove = 30
+        available = {
+            NOT = {
+                has_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        cancel_trigger = {
+            has_country_flag = SEJ_civil_war_ended_flag
+        }
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        remove_effect = {
+            SEJ_army_infiltration_add_5 = yes
+            hidden_effect = {
+                clr_country_flag = SEJ_preparing_for_civil_war_flag
+            }
+        }
+        icon = generic_army_support
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+}

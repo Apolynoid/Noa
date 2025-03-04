@@ -1,0 +1,177 @@
+﻿capital = 299
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        
+        
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
+        
+        #辅助
+        mortar1 = 1
+        #专用辅助
+        zhiyuanzhuangbei = 1
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+        sc_shield1 = 1
+
+        #陆军学说
+
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        yunshudui140 = 1
+        yunshucheliang146 = 1
+        ziyuankaifa130 = 1
+        ziyuankaifa140 = 1
+            
+        #专用工业
+
+        #种族
+        
+    }
+    
+}
+146.1.1={
+    HUM = { give_military_access = TKM }
+    
+    add_manpower = 500
+    oob = "TKM_146"
+    set_major = yes
+
+    add_ideas = {
+        Pri_youkai
+        type3_manpowerlv2
+        Village
+        limit_magic
+        open1
+        dove1
+    }
+    add_ideas = {
+        hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
+        TKM_bu_wen_ding_de_xin_sheng_zheng_quan_idea
+        TKM_ren_lei_de_bao_hu_zhe_idea
+        TKM_bo_ruo_de_gong_ye_idea
+    }
+
+    set_country_flag = TKM_auto_sp_bead_conversion_flag
+    set_variable = {
+        TKM_energy_per_sp_bead = 500
+    }
+    set_variable = {
+        TKM_sp_bead_num = 0
+    }
+    set_variable = {
+        TKM_sp_bead_storage = 15
+    }
+    set_variable = {
+        TKM_industrial_feature_level = 0
+    }
+    set_variable = {
+        TKM_military_feature_level = 0
+    }
+    set_variable = {
+        TKM_industrial_feature_upper_bound = 0
+    }
+    set_variable = {
+        TKM_military_feature_upper_bound = 0
+    }
+    set_variable = {
+        TKM_monthly_sp_bead_cost = 0
+    }
+    TKM_do_calc_feature = yes
+
+    add_dynamic_modifier = {
+        modifier = TKM_fu_sang_shen_ling_li_te_dian_idea
+    }
+    add_dynamic_modifier = {
+        modifier = TKM_shou_xian_zhi_de_gao_neng_ling_qi_mao_yi_idea
+    }
+    recruit_character = TKM_kog
+    recruit_character = TKM_raiko
+    recruit_character = TKM_kokoro
+    recruit_character = TKM_yatsuhashi
+    recruit_character = TKM_benben
+
+    promote_character = {
+        character = TKM_raiko
+        ideology = qinwai_type
+    }
+    #########局势修改
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 50
+        guli = 3
+        neworder = 10
+        oldorder = 1
+        fandong = 35
+        oldgenso = 1
+    }
+
+    set_truce = {target = NMS days = 730}
+
+    add_to_array = {
+        TKM_trade_limit_list = KRD
+    }
+    add_to_array = {
+        TKM_trade_limit_list = YAW
+    }
+    add_to_array = {
+        TKM_trade_limit_list = GRS
+    }
+    add_to_array = {
+        TKM_trade_limit_list = MRS
+    }
+    add_to_array = {
+        TKM_trade_limit_list = ALI
+    }
+    add_to_array = {
+        TKM_trade_limit_list = NAR
+    }
+    add_to_array = {
+        TKM_trade_limit_list = ZYD
+    }
+    add_to_array = {
+        TKM_trade_limit_list = MEL
+    }
+    add_to_array = {
+        TKM_trade_limit_list = SGS
+    }
+    add_to_array = {
+        TKM_trade_limit_list = KAS
+    }
+    add_to_array = {
+        TKM_trade_limit_list = HUM
+    }
+    add_to_array = {
+        TKM_trade_limit_list = SBK
+    }
+    add_to_array = {
+        TKM_trade_limit_list = SEJ
+    }
+}

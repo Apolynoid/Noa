@@ -1,0 +1,197 @@
+on_actions = {
+	on_weekly_NMS = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = NMS_reformists_lost_power_flag
+				}
+				add_to_variable = {
+					NMS_faction_res = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_res
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_st = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_st
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_bs = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_bs
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_ic = 0.03
+				}
+				clamp_variable = {
+					var = NMS_faction_ic
+					min = -1
+					max = 0
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = NMS_racists_lost_power_flag
+				}
+				add_to_variable = {
+					NMS_faction_ws = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_ws
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_eg = 0.03
+				}
+				clamp_variable = {
+					var = NMS_faction_eg
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_atk = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_atk
+					min = -1
+					max = 0
+				}
+				add_to_variable = {
+					NMS_faction_def = 0.02
+				}
+				clamp_variable = {
+					var = NMS_faction_def
+					min = -1
+					max = 0
+				}
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = NMS
+					}
+				}
+				# drop cosmetic tag
+				ROOT = {
+					if = {
+						limit = {
+							has_country_flag = NMS_civil_war_flag
+						}
+						drop_cosmetic_tag = yes
+					}
+				}
+				# lost side lose all characters
+				FROM = {
+					if = {
+						limit = {
+							has_character = NMS_bkr
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_bkr
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_kumoi
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_kumoi
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_kyouko
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_kyouko
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_mouse
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_mouse
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_murasa
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_murasa
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_nue
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_nue
+						}
+					}
+					if = {
+						limit = {
+							has_character = NMS_syou
+						}
+						set_nationality = {
+							target_country = XXX
+							character = NMS_syou
+						}
+					}
+				}
+				# victory event
+				ROOT = {
+					country_event = {
+						id = nms.104
+						days = 4
+					}
+				}
+				# news
+				if = {
+					limit = {
+						ROOT = {
+							has_government = oldgenso
+						}
+					}
+					news_event = {
+						id = nms.120
+						days = 7
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_government = neworder
+						}
+					}
+					news_event = {
+						id = nms.121
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}

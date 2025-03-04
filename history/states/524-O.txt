@@ -1,0 +1,28 @@
+state={
+	id=524
+	name="STATE_524"
+	provinces={
+		6567 6576 6579 6593 6597 
+	}
+	resources={
+		powder = 7.0
+		metal = 5.0
+		gas=2.000
+		crystal=0.000
+	}
+	history={
+		146.1.1 = {
+			owner = EET
+			add_core_of = EET
+			buildings = {
+				infrastructure = 8
+				industrial_complex = 8
+				arms_factory = 1
+			}
+		}
+	}
+	state_category=s12
+	local_supplies=2.5
+	manpower=1688
+	buildings_max_level_factor=1.000
+}

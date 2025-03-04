@@ -1,0 +1,597 @@
+# 军事线 military
+
+# 军事现状
+shared_focus = {
+  id = SCA_puppet_jun_shi_xian_zhuang
+  icon = GFX_goal_generic_axis_build_infantry
+  cost = 7
+  x = 10
+  y = 1
+
+  available = {
+    has_global_flag = main_scenario
+  }
+
+  completion_reward = {
+    army_experience = 20
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 总结战争经验
+shared_focus = {
+  id = SCA_puppet_zong_jie_zhan_zheng_jing_yan
+  icon = GFX_focus_army_experience
+  cost = 7
+  x = -2
+  y = 1
+
+  relative_position_id = SCA_puppet_jun_shi_xian_zhuang
+
+  prerequisite = {
+    focus = SCA_puppet_jun_shi_xian_zhuang
+  }
+
+  completion_reward = {
+    army_experience = 10
+    add_tech_bonus = {
+      bonus = 1.0
+      uses = 1
+      category = military
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 集中剩余装备
+shared_focus = {
+  id = SCA_puppet_ji_zhong_sheng_yu_zhuang_bei
+  icon = GFX_focus_secret_rearmament
+  cost = 7
+  x = -2
+  y = 1
+
+  relative_position_id = SCA_puppet_zong_jie_zhan_zheng_jing_yan
+
+  prerequisite = {
+    focus = SCA_puppet_zong_jie_zhan_zheng_jing_yan
+  }
+
+  completion_reward = {
+    if = {
+      limit = {
+        has_tech = waike
+      }
+      add_equipment_to_stockpile = {
+        type = gun_a
+        amount = 600
+      }
+    }
+    else = {
+      add_equipment_to_stockpile = {
+        type = magic_core_a
+        amount = 600
+      }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 设立参谋处
+shared_focus = {
+  id = SCA_puppet_she_li_can_mou_chu
+  icon = GFX_focus_generic_military_mission
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_zong_jie_zhan_zheng_jing_yan
+
+  prerequisite = {
+    focus = SCA_puppet_zong_jie_zhan_zheng_jing_yan
+  }
+
+  completion_reward = {
+    add_ideas = SCA_puppet_can_mou_chu_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 堑壕战
+shared_focus = {
+  id = SCA_puppet_qian_hao_zhan
+  icon = GFX_focus_trench_warfare
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_she_li_can_mou_chu
+
+  prerequisite = {
+    focus = SCA_puppet_she_li_can_mou_chu
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = SCA_puppet_can_mou_chu_idea
+      add_idea = SCA_puppet_can_mou_chu_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 新战术探索
+shared_focus = {
+  id = SCA_puppet_xin_zhan_shu_tan_suo
+  icon = GFX_goal_generic_army_doctrines
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_qian_hao_zhan
+
+  prerequisite = {
+    focus = SCA_puppet_qian_hao_zhan
+  }
+
+  completion_reward = {
+    add_doctrine_cost_reduction = {
+      cost_reduction = 0.5
+      uses = 1
+      category = land_doctrine
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 新型武器研究
+shared_focus = {
+  id = SCA_puppet_xin_xing_wu_qi_yan_jiu
+  icon = GFX_goal_generic_small_arms
+  cost = 7
+  x = 2
+  y = 1
+
+  relative_position_id = SCA_puppet_jun_shi_xian_zhuang
+
+  prerequisite = {
+    focus = SCA_puppet_jun_shi_xian_zhuang
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.0
+      ahead_reduction = 0.5
+      uses = 1
+      category = military
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 近战武器研究
+shared_focus = {
+  id = SCA_puppet_jin_zhan_wu_qi_yan_jiu
+  icon = GFX_focus_ICE_thungur_hnifur
+  cost = 7
+  x = 2
+  y = 1
+
+  relative_position_id = SCA_puppet_xin_xing_wu_qi_yan_jiu
+
+  prerequisite = {
+    focus = SCA_puppet_xin_xing_wu_qi_yan_jiu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 2.0
+      ahead_reduction = 1.0
+      uses = 1
+      category = melee
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 基础武器研究
+shared_focus = {
+  id = SCA_puppet_ji_chu_wu_qi_yan_jiu
+  icon = GFX_focus_focus_fra_maquis
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_xin_xing_wu_qi_yan_jiu
+
+  prerequisite = {
+    focus = SCA_puppet_xin_xing_wu_qi_yan_jiu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.5
+      ahead_reduction = 0.5
+      uses = 1
+      category = primary_weapons
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 重火力研究
+shared_focus = {
+  id = SCA_puppet_zhong_huo_li_yan_jiu
+  icon = GFX_goal_generic_army_artillery2
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_ji_chu_wu_qi_yan_jiu
+
+  prerequisite = {
+    focus = SCA_puppet_ji_chu_wu_qi_yan_jiu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.5
+      ahead_reduction = 0.5
+      uses = 1
+      category = artillery_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 实验性装甲部队
+shared_focus = {
+  id = SCA_puppet_shi_yan_xing_zhuang_jia_bu_dui
+  icon = GFX_goal_generic_build_tank
+  cost = 12
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_zhong_huo_li_yan_jiu
+
+  prerequisite = {
+    focus = SCA_puppet_zhong_huo_li_yan_jiu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.0
+      ahead_reduction = 0.5
+      uses = 1
+      category = shield_weapons
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 工业线 industry
+
+# 经济现状
+shared_focus = {
+  id = SCA_puppet_jing_ji_xian_zhuang
+  icon = GFX_goal_generic_production2
+  cost = 7
+  x = 0
+  y = 6
+
+  relative_position_id = SCA_puppet_jun_shi_xian_zhuang
+
+  available = {
+    has_global_flag = main_scenario
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.75
+      uses = 1
+      category = industrys
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 制订经济规划
+shared_focus = {
+  id = SCA_puppet_zhi_ding_jing_ji_gui_hua
+  icon = GFX_focus_generic_industry_2
+  cost = 7
+  x = 0
+  y = 1
+
+  relative_position_id = SCA_puppet_jing_ji_xian_zhuang
+
+  prerequisite = {
+    focus = SCA_puppet_jing_ji_xian_zhuang
+  }
+
+  completion_reward = {
+    add_ideas = SCA_puppet_jing_ji_gui_hua_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 基础设施建设
+shared_focus = {
+  id = SCA_puppet_ji_chu_she_shi_jian_she
+  icon = GFX_goal_generic_construct_infrastructure
+  cost = 12
+  x = -2
+  y = 1
+
+  relative_position_id = SCA_puppet_zhi_ding_jing_ji_gui_hua
+
+  prerequisite = {
+    focus = SCA_puppet_zhi_ding_jing_ji_gui_hua
+  }
+
+  completion_reward = {
+    every_core_state = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 设立铁路总局
+shared_focus = {
+  id = SCA_puppet_she_li_tie_lu_zong_ju
+  icon = GFX_focus_generic_railroad
+  cost = 7
+  x = -1
+  y = 1
+
+  relative_position_id = SCA_puppet_ji_chu_she_shi_jian_she
+
+  prerequisite = {
+    focus = SCA_puppet_ji_chu_she_shi_jian_she
+  }
+
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = SCA_puppet_jing_ji_gui_hua_idea
+      add_idea = SCA_puppet_jing_ji_gui_hua_a_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 注重资源获取
+shared_focus = {
+  id = SCA_puppet_zhu_zhong_zi_yuan_huo_qu
+  icon = GFX_goal_generic_construction2
+  cost = 7
+  x = 1
+  y = 1
+
+  relative_position_id = SCA_puppet_ji_chu_she_shi_jian_she
+
+  prerequisite = {
+    focus = SCA_puppet_ji_chu_she_shi_jian_she
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.0
+      uses = 1
+      category = resource
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 鼓励本地工业
+shared_focus = {
+  id = SCA_puppet_gu_li_ben_di_gong_ye
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 12
+  x = 0
+  y = 2
+
+  relative_position_id = SCA_puppet_ji_chu_she_shi_jian_she
+
+  prerequisite = {
+    focus = SCA_puppet_she_li_tie_lu_zong_ju
+  }
+
+  prerequisite = {
+    focus = SCA_puppet_zhu_zhong_zi_yuan_huo_qu
+  }
+
+  completion_reward = {
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = industrial_complex
+          level = 1
+          instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+      add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = arms_factory
+          level = 1
+          instant_build = yes
+        }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 教育体系改革
+shared_focus = {
+  id = SCA_puppet_jiao_yu_ti_xi_gai_ge
+  icon = GFX_focus_research
+  cost = 7
+  x = 2
+  y = 1
+
+  relative_position_id = SCA_puppet_zhi_ding_jing_ji_gui_hua
+
+  prerequisite = {
+    focus = SCA_puppet_zhi_ding_jing_ji_gui_hua
+  }
+
+  completion_reward = {
+    add_ideas = SCA_puppet_jiao_yu_gai_ge_idea
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 基础科学研究
+shared_focus = {
+  id = SCA_puppet_ji_chu_ke_xue_yan_jiu
+  icon = GFX_focus_basic_science
+  cost = 7
+  x = -1
+  y = 1
+
+  relative_position_id = SCA_puppet_jiao_yu_ti_xi_gai_ge
+
+  prerequisite = {
+    focus = SCA_puppet_jiao_yu_ti_xi_gai_ge
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.5
+      ahead_reduction = 1.0
+      uses = 1
+      category = math
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 应用科学研究
+shared_focus = {
+  id = SCA_puppet_ying_yong_ke_xue_yan_jiu
+  icon = GFX_goal_generic_construct_civilian
+  cost = 7
+  x = 1
+  y = 1
+
+  relative_position_id = SCA_puppet_jiao_yu_ti_xi_gai_ge
+
+  prerequisite = {
+    focus = SCA_puppet_jiao_yu_ti_xi_gai_ge
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.0
+      ahead_reduction = 0.75
+      uses = 1
+      category = industrys
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}
+
+# 种族科技研究
+shared_focus = {
+  id = SCA_puppet_zhong_zu_ke_ji_yan_jiu
+  icon = GFX_focus_racial_science
+  cost = 7
+  x = 0
+  y = 2
+
+  relative_position_id = SCA_puppet_jiao_yu_ti_xi_gai_ge
+
+  prerequisite = {
+    focus = SCA_puppet_ji_chu_ke_xue_yan_jiu
+  }
+  
+  prerequisite = {
+    focus = SCA_puppet_ying_yong_ke_xue_yan_jiu
+  }
+
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.5
+      uses = 1
+      category = race
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+}

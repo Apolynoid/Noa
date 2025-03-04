@@ -1,0 +1,11 @@
+should_have_special_materiel_manufacturers = {
+	always = no
+}
+
+should_have_special_tank_manufacturers = {
+	always = no
+}
+
+should_have_special_aircraft_manufacturers = {
+	always = no
+}

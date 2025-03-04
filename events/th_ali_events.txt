@@ -1,0 +1,218 @@
+﻿add_namespace = ali
+# 魔界化 选择领导人
+country_event = {
+	id = ali.101
+	title = ali.101.t
+	desc = ali.101.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 爱丽丝
+	option = {
+		name = ali.101.1
+	}
+
+	# 神绮
+	option = {
+		name = ali.101.2
+		promote_character = {
+			character = ALI_ski
+			ideology = oldorder
+		}
+		custom_effect_tooltip = ALI_other_country_dissatisfied_tt
+		hidden_effect = {
+			every_country = {
+				add_opinion_modifier = {
+					target = ALI
+					modifier = ALI_shinki_as_leader_op
+				}
+			}
+		}
+	}
+}
+
+# 新魔界宣称雄心
+news_event = {
+	id = ali.102
+	title = ali.102.t
+	desc = ali.102.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.102.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.102.2#非本人
+		trigger = {
+			NOT = { 
+				tag = ALI
+			}
+		}
+	}
+}
+
+# TEG ALI请求加入同盟
+country_event = {
+	id = ali.103
+	title = ali.103.t
+	desc = ali.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.103.1
+		ai_chance = {
+			base = 10
+		}
+		TEG = {
+			add_to_faction = ALI
+		}
+		ALI = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = ali.103.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			ALI = {
+				country_event = ali.104
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = ali.104
+	title = ali.104.t
+	desc = ali.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = ALI_yu_tian_gou_jie_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = ALI_you_hao_er_du_li
+		}
+	}
+
+	option = {
+		name = ali.104.1
+	}
+}
+
+# 厌战度降低
+country_event = {
+	id = ali.106
+	title = ali.106.t
+	desc = ali.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.106.1
+		EXHC_exhaustion_minus25 = yes
+	}
+}
+
+# 幻想乡的唯一霸权
+news_event = {
+	id = ali.107
+	title = ali.107.t
+	desc = ali.107.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.107.1#本人
+		trigger = {
+			tag = ALI
+		}
+	}
+
+	option = {
+		name = ali.107.2#非本人
+		trigger = {
+			NOT = { 
+				tag = ALI
+			}
+		}
+	}
+}
+
+# TKM ALI请求加入同盟
+country_event = {
+	id = ali.108
+	title = ali.108.t
+	desc = ali.108.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ali.108.1
+		ai_chance = {
+			base = 10
+		}
+		TKM = {
+			add_to_faction = ALI
+		}
+		ALI = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = ali.108.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			ALI = {
+				country_event = ali.109
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = ali.109
+	title = ali.109.t
+	desc = ali.109.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = ALI_jie_jiao_fu_sang_shen
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = ALI_you_hao_er_du_li
+		}
+	}
+
+	option = {
+		name = ali.109.1
+	}
+}
