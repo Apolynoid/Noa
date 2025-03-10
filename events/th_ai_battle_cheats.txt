@@ -1,0 +1,1148 @@
+﻿add_namespace = acb
+############normal cheats
+country_event = { 
+	id = acb.1
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_1
+		}
+		date > 146.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_1
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			set_technology = {
+				mortar1 = 1
+			}
+			else = {
+				set_technology = {
+					magic_energy1 = 1
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.2
+	title = acb.2.t
+	desc = acb.2.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_2
+		}
+		date > 147.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_2
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "步兵加强编制1"
+				regiments = {
+					melee_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					melee_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+				}
+				support = {
+				}
+			}
+			else = {
+				division_template = {
+					name = "步兵加强编制1"
+					regiments = {
+						melee_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						melee_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+					}
+					support = {
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.3
+	title = acb.3.t
+	desc = acb.3.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_3
+		}
+		date > 147.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_3
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "步兵加强编制2"
+				regiments = {
+					melee_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					melee_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_mortar_brigade = { x = 1 y = 4}
+				}
+				support = {
+				}
+			}
+			else = {
+				division_template = {
+					name = "步兵加强编制2"
+					regiments = {
+						melee_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						melee_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_magic_energy_brigade = { x = 1 y = 4}
+					}
+					support = {
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.4
+	title = acb.4.t
+	desc = acb.4.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_4
+		}
+		date > 148.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_4
+		set_technology = {
+			zhiyuanzhuangbei = 1
+			zhihuixiaodui146 = 1
+			duzhanxiaodui146 = 1
+			zhanchanggongbing146 = 1
+			houfangyiliao146 = 1
+		}
+	}
+}
+country_event = { #
+	id = acb.5
+	title = acb.5.t
+	desc = acb.5.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_5
+		}
+		date > 149.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_5
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "步兵加强编制3"
+				regiments = {
+					melee_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					melee_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_mortar_brigade = { x = 1 y = 4}
+					sc_infantry = { x = 2 y = 0 }
+					sc_infantry = { x = 2 y = 1 }
+					sc_mortar_brigade = { x = 2 y = 2}
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+				}
+			}
+			else = {
+				division_template = {
+					name = "步兵加强编制3"
+					regiments = {
+						melee_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						melee_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_magic_energy_brigade = { x = 1 y = 4}
+						ma_infantry = { x = 2 y = 0 }
+						ma_infantry = { x = 2 y = 1 }
+						ma_magic_energy_brigade = { x = 2 y = 2}
+						
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.6
+	title = acb.6.t
+	desc = acb.6.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_6
+		}
+		date > 150.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_6
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			set_technology = {
+				wunvzhiyuan149 = 1
+				gongjianpao149 = 1
+				sc_shield1 = 1
+			}
+			division_template = {
+				name = "步兵加强编制4"
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_mortar_brigade = { x = 1 y = 4}
+					sc_infantry = { x = 2 y = 0 }
+					sc_infantry = { x = 2 y = 1 }
+					sc_mortar_brigade = { x = 2 y = 2}
+					melee_cavalry = { x = 3 y = 0 }
+					melee_cavalry = { x = 3 y = 1 }
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+					sp_wunv = { x = 0 y = 3}
+					sp_gongjianpao = { x = 0 y = 4}
+				}
+			}
+			else = {
+				set_technology = {
+					linglijiejie149 = 1
+					feixingzhencha149 = 1
+					ma_shield1 = 1
+				}	
+				division_template = {
+					name = "步兵加强编制4"
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_magic_energy_brigade = { x = 1 y = 4}
+						ma_infantry = { x = 2 y = 0 }
+						ma_infantry = { x = 2 y = 1 }
+						ma_magic_energy_brigade = { x = 2 y = 2}
+						melee_cavalry = { x = 3 y = 0 }
+						melee_cavalry = { x = 3 y = 1 }
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+						sp_jiaqiangban = { x = 0 y = 3}
+						sp_feixingzhencha = { x = 0 y = 4}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.7
+	title = acb.7.t
+	desc = acb.7.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_7
+		}
+		date > 152.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_7
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			set_technology = {
+				special_shield1 = 1
+				anti_shield1 = 1
+			}
+			division_template = {
+				name = "步兵加强编制5"
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_mortar_brigade = { x = 1 y = 3}
+					sc_mortar_brigade = { x = 1 y = 4}
+					sc_anti_shield_brigade = { x = 2 y = 0}
+					melee_cavalry = { x = 3 y = 0 }
+					melee_cavalry = { x = 3 y = 1 }
+					melee_cavalry = { x = 3 y = 2 }
+					sc_shield_infantry = { x = 4 y = 0}
+					sc_shield_infantry = { x = 4 y = 1}
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+					sp_wunv = { x = 0 y = 3}
+					sp_gongjianpao = { x = 0 y = 4}
+				}
+			}
+			else = {
+				set_technology = {
+					special_shield1 = 1
+					core_shield1 = 1
+				}
+				division_template = {
+					name = "步兵加强编制5"
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_magic_energy_brigade = { x = 1 y = 3}
+						ma_magic_energy_brigade = { x = 1 y = 4}
+						ma_magic_focus_brigade = { x = 2 y = 0}
+						melee_cavalry = { x = 3 y = 0 }
+						melee_cavalry = { x = 3 y = 1 }
+						melee_cavalry = { x = 3 y = 2 }
+						ma_shield_infantry = { x = 4 y = 0}
+						ma_shield_infantry = { x = 4 y = 1}
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+						sp_jiaqiangban = { x = 0 y = 3}
+						sp_feixingzhencha = { x = 0 y = 4}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.8
+	title = acb.8.t
+	desc = acb.8.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 1
+		is_ai = yes
+		not = {
+			has_country_flag = acb_8
+		}
+		date > 156.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_8
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "步兵加强编制6"
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4}
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_mortar_brigade = { x = 1 y = 4}
+					sc_infantry = { x = 2 y = 0 }
+					sc_mortar_brigade = { x = 2 y = 1}
+					sc_mortar_brigade = { x = 2 y = 2}
+					sc_anti_shield_brigade = { x = 2 y = 3}
+					melee_cavalry = { x = 3 y = 0 }
+					melee_cavalry = { x = 3 y = 1 }
+					melee_cavalry = { x = 3 y = 2 }
+					sc_shield_infantry = { x = 4 y = 0}
+					sc_shield_infantry = { x = 4 y = 1}
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+					sp_wunv = { x = 0 y = 3}
+					sp_gongjianpao = { x = 0 y = 4}
+				}
+			}
+			else = {
+				division_template = {
+					name = "步兵加强编制6"
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_magic_energy_brigade = { x = 0 y = 4}
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_magic_energy_brigade = { x = 1 y = 4}
+						ma_infantry = { x = 2 y = 0 }
+						ma_magic_energy_brigade = { x = 2 y = 1}
+						ma_magic_energy_brigade = { x = 2 y = 2}
+						ma_magic_focus_brigade = { x = 2 y = 3}
+						melee_cavalry = { x = 3 y = 0 }
+						melee_cavalry = { x = 3 y = 1 }
+						melee_cavalry = { x = 3 y = 2 }
+						ma_shield_infantry = { x = 4 y = 0}
+						ma_shield_infantry = { x = 4 y = 1}
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+						sp_jiaqiangban = { x = 0 y = 3}
+						sp_feixingzhencha = { x = 0 y = 4}
+					}
+				}
+			}
+		}
+	}
+}
+
+############hard cheats
+country_event = { #
+	id = acb.10
+	title = acb.10.t
+	desc = acb.10.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 2
+		is_ai = yes
+		not = {
+			has_country_flag = acb_10
+		}
+		date > 152.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_10
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			set_technology = {
+				jijia1 = 1
+			}
+			else = {
+				set_technology = {
+					zhanshujiejiehexin1 = 1
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.11
+	title = acb.11.t
+	desc = acb.11.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 2
+		is_ai = yes
+		not = {
+			has_country_flag = acb_11
+		}
+		date > 153.6.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_11
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "装甲加强编制1"
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_infantry = { x = 0 y = 4 }
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_infantry = { x = 1 y = 4 }
+					sc_infantry = { x = 2 y = 0 }
+					sc_infantry = { x = 2 y = 1 }
+					sc_shield_tank = { x = 3 y = 0}
+					sc_shield_tank = { x = 3 y = 1}
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+					sp_wunv = { x = 0 y = 3}
+					sp_gongjianpao = { x = 0 y = 4}
+				}
+			}
+			else = {
+				division_template = {
+					name = "装甲加强编制1"
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_infantry = { x = 0 y = 4 }
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_infantry = { x = 1 y = 4 }
+						ma_infantry = { x = 2 y = 0 }
+						ma_infantry = { x = 2 y = 1 }
+						ma_shield_tank = { x = 3 y = 0}
+						ma_shield_tank = { x = 3 y = 1}
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+						sp_jiaqiangban = { x = 0 y = 3}
+						sp_feixingzhencha = { x = 0 y = 4}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #
+	id = acb.12
+	title = acb.12.t
+	desc = acb.12.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 2
+		is_ai = yes
+		not = {
+			has_country_flag = acb_12
+		}
+		date > 156.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_12
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			division_template = {
+				name = "装甲加强编制2"
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_infantry = { x = 0 y = 3 }
+					sc_infantry = { x = 0 y = 4 }
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
+					sc_infantry = { x = 1 y = 4 }
+					sc_infantry = { x = 2 y = 0 }
+					sc_infantry = { x = 2 y = 1 }
+					sc_infantry = { x = 2 y = 2 }
+					sc_infantry = { x = 2 y = 3 }
+					sc_shield_tank = { x = 3 y = 0}
+					sc_shield_tank = { x = 3 y = 1}
+					sc_shield_tank = { x = 3 y = 2}
+					sc_shield_tank = { x = 3 y = 3}
+				}
+				support = {
+					sp_zhihuidui = { x = 0 y = 0 }
+					sp_duzhanxiaodui = { x = 0 y = 1 }
+					sp_zhanchanggongbing = { x = 0 y = 2 }
+					sp_wunv = { x = 0 y = 3}
+					sp_gongjianpao = { x = 0 y = 4}
+				}
+			}
+			else = {
+				division_template = {
+					name = "装甲加强编制2"
+					regiments = {
+						ma_infantry = { x = 0 y = 0 }
+						ma_infantry = { x = 0 y = 1 }
+						ma_infantry = { x = 0 y = 2 }
+						ma_infantry = { x = 0 y = 3 }
+						ma_infantry = { x = 0 y = 4 }
+						ma_infantry = { x = 1 y = 0 }
+						ma_infantry = { x = 1 y = 1 }
+						ma_infantry = { x = 1 y = 2 }
+						ma_infantry = { x = 1 y = 3 }
+						ma_infantry = { x = 1 y = 4 }
+						ma_infantry = { x = 2 y = 0 }
+						ma_infantry = { x = 2 y = 1 }
+						ma_infantry = { x = 2 y = 2 }
+						ma_infantry = { x = 2 y = 3 }
+						ma_shield_tank = { x = 3 y = 0}
+						ma_shield_tank = { x = 3 y = 1}
+						ma_shield_tank = { x = 3 y = 2}
+						ma_shield_tank = { x = 3 y = 3}
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }
+						sp_duzhanxiaodui = { x = 0 y = 1 }
+						sp_zhanchanggongbing = { x = 0 y = 2 }
+						sp_jiaqiangban = { x = 0 y = 3}
+						sp_feixingzhencha = { x = 0 y = 4}
+					}
+				}
+			}
+		}
+	}
+}
+
+############lunatic cheats
+country_event = { ####
+	id = acb.14
+	title = acb.14.t
+	desc = acb.14.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_14
+		}
+		date > 147.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_14
+		add_research_slot = 1
+		if = {
+			limit = {
+				has_tech = waike
+			}
+			set_technology = {
+				sc_fighter1 = 1
+				sc_bomber1 = 1
+				sc_st_bomber1 = 1
+			}
+			else = {
+				set_technology = {
+					ma_fighter1 = 1
+					ma_bomber1 = 1
+					ma_st_bomber1 = 1
+				}
+			}
+		}
+	}
+}
+country_event = { ####
+	id = acb.15
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_15
+		}
+		date > 146.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_15
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+}
+country_event = { ####
+	id = acb.16
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_16
+		}
+		date > 147.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_16
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+}
+country_event = { ####
+	id = acb.17
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_17
+		}
+		date > 148.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_17
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+}
+country_event = { ####
+	id = acb.18
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_18
+		}
+		date > 149.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_18
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+}
+country_event = { ####
+	id = acb.19
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_19
+		}
+		date > 150.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_19
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+}
+country_event = { ####
+	id = acb.20
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		not = {
+			has_country_flag = acb_20
+		}
+		date > 150.1.1
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		set_country_flag = acb_20
+		add_offsite_building = {
+			type = arms_factory
+			level = 3
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 3
+		}
+	}
+}
+country_event = { ####
+	id = acb.21
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_15
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_15
+		add_offsite_building = {
+			type = arms_factory
+			level = -2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -2
+		}
+	}
+}
+country_event = { ####
+	id = acb.22
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_16
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_16
+		add_offsite_building = {
+			type = arms_factory
+			level = -2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -2
+		}
+	}
+}
+country_event = { ####
+	id = acb.23
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_17
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_17
+		add_offsite_building = {
+			type = arms_factory
+			level = -2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -2
+		}
+	}
+}
+country_event = { ####
+	id = acb.24
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_18
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_18
+		add_offsite_building = {
+			type = arms_factory
+			level = -2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -2
+		}
+	}
+}
+country_event = { ####
+	id = acb.25
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_19
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_19
+		add_offsite_building = {
+			type = arms_factory
+			level = -2
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -2
+		}
+	}
+}
+country_event = { ####
+	id = acb.26
+	title = acb.1.t
+	desc = acb.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		difficulty > 3
+		is_ai = yes
+		has_country_flag = acb_20
+		OVERLORD = {
+			is_ai = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = acb.test
+		clr_country_flag = acb_20
+		add_offsite_building = {
+			type = arms_factory
+			level = -3
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = -3
+		}
+	}
+}

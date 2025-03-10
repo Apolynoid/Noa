@@ -1142,6 +1142,13 @@ country_event = {
 			transfer_state_to = SBK
 		}
 		puppet = SBK
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				original_tag = TKM
+			}
+		}
 	}
 
 	# 维持军事占领

@@ -1,7 +1,7 @@
-main_force_SEJ = {
+main_force_TKM = {
 
 	available_for = {
-		SEJ
+		TKM
 	}
 
 	role = main_force
@@ -11,11 +11,11 @@ main_force_SEJ = {
 
 		modifier = {
 			factor = 0
-			has_tech = waike
+			has_tech = lingben
 		}
 	}
 	
-	main_force_basic_SEJ = {		
+	main_force_basic_TKM = {		
 		upgrade_prio = {
 			factor = 2
 		}
@@ -28,17 +28,17 @@ main_force_SEJ = {
 
 			
 			regiments = {
-				ma_infantry = 5
-				ma_magic_energy_brigade = 1
+				sc_infantry = 5
+				sc_mortar_brigade = 1
 			}
 		}
 
 		replace_at_match = 0.4
-		replace_with = main_force_improved_SEJ
+		replace_with = main_force_improved_TKM
 		target_min_match = 0.5
 	}
 
-	main_force_improved_SEJ = {
+	main_force_improved_TKM = {
 	
 		upgrade_prio = {
 			factor = 5
@@ -48,13 +48,13 @@ main_force_SEJ = {
 			
 			support = {
 				sp_zhihuidui = 1
-				sp_jiaqiangban = 1
+				sp_wunv = 1
 			}
 
 			
 			regiments = {
-				ma_infantry = 6
-				ma_magic_energy_brigade = 3
+				sc_infantry = 6
+				sc_mortar_brigade = 3
 			}
 		}
 	}

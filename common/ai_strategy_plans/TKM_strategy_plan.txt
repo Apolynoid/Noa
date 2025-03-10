@@ -1,0 +1,91 @@
+TKM_focus = {
+	name = "TKM focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = TKM
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		TKM_146_ji_dao_ju_zheng_zhi_hui_yi
+		TKM_ku_chuan_lei_gu_de_ji_hua
+		TKM_dao_ju_fa_zhan_ju
+		TKM_ji_zhong_dao_ju_gong_fang
+		TKM_dao_ju_zhan_zheng_zhai_quan
+		# get human energy asap
+		# since you will lose it after 148
+		TKM_ying_dui_dong_dang_de_huan_xiang_xiang
+		TKM_ren_li_mao_yi_xie_ding
+		# energy factory first
+		TKM_li_yong_fu_sang_shen_de_te_dian
+		TKM_sheng_chan_gong_ju_fu_sang_shen_hua
+		TKM_gao_neng_ling_qi_zi_ji_ji_hua
+		TKM_gao_neng_ling_qi_chang_jian_she
+		# do industrial
+		TKM_guo_jia_jian_she_ji_hua
+		# do industrial again
+		TKM_dao_ju_gao_su_gong_lu
+		TKM_tou_zi_qing_gong_ye
+		TKM_zhan_lve_tie_lu_gui_hua
+		TKM_jun_shi_gong_ye_jian_she
+		# now ready the weapon
+		TKM_wu_qi_fu_sang_shen_hua
+		# attack SBK asap
+		TKM_jiu_shi_jiu_kuo_jun_ji_hua
+		TKM_duo_qu_yao_guai_xiao_zhen
+		TKM_jian_li_fan_yao_guai_ren_tong
+		# turn back to industrial
+		TKM_gong_ye_yu_suan_qing_xie
+		TKM_sheng_chan_jie_gou_tiao_zheng
+		TKM_min_yong_gong_chang_jian_she	
+		# energy
+		TKM_zhan_lve_zi_yuan_kai_fa
+		TKM_gao_neng_ling_qi_chu_xu
+		TKM_ti_gao_ling_qi_li_yong_lv
+		TKM_xian_jin_gong_ye_ling_li_yun_yong
+		TKM_gao_neng_ling_qi_te_bie_kai_fa_qu
+		# military
+		TKM_guo_jia_dong_yuan_ji_hua
+		TKM_jian_li_dao_ju_can_mou_bu
+		TKM_zong_jie_zhan_zheng_jing_yan
+		TKM_xin_jun_shi_li_lun_tan_suo
+		# attack NMS asap
+		TKM_xiao_mie_dui_dao_ju_de_wei_xie
+		TKM_jin_gong_ming_lian_si
+		# back to military
+		TKM_jiu_shi_jiu_jun_shi_gai_ge
+		TKM_xian_jin_jun_shi_ling_li_yun_yong
+		TKM_pei_yang_ji_ceng_shi_guan
+		TKM_ren_yong_li_lun_pai_jun_guan
+		TKM_wei_tuo_shi_zhi_hui
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

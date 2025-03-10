@@ -316,7 +316,17 @@ TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
+			modifier = {
+				add = 10000
+				check_variable = {
+					TKM_industrial_feature_level < TKM_AI_industrial_level
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = no
+			}
 		}
 	}
 	
@@ -354,7 +364,17 @@ TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
+			modifier = {
+				add = 10000
+				check_variable = {
+					TKM_industrial_feature_level > TKM_AI_industrial_level
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 
@@ -392,7 +412,17 @@ TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
+			modifier = {
+				add = 10000
+				check_variable = {
+					TKM_military_feature_level < TKM_AI_military_level
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
 		}
 	}
 	
@@ -430,7 +460,17 @@ TKM_fu_sang_shen_gao_neng_ling_qi_te_xing = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
+			modifier = {
+				add = 10000
+				check_variable = {
+					TKM_military_feature_level > TKM_AI_military_level
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = no
+			}
 		}
 	}
 

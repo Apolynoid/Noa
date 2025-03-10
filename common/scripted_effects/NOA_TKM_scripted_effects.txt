@@ -421,6 +421,154 @@ TKM_do_calc_feature = {
     add_to_variable = {
         TKM_monthly_sp_bead_cost = t
     }
+    # AI calc
+    set_variable = {
+        TKM_reserved_sp_bead = fuel_k
+    }
+    multiply_variable = {
+        TKM_reserved_sp_bead = 1000
+    }
+    divide_variable = {
+        TKM_reserved_sp_bead = TKM_energy_per_sp_bead
+    }
+    add_to_variable = {
+        TKM_reserved_sp_bead = TKM_sp_bead_num
+    }
+    # now decide the level
+    set_temp_variable = {
+        t_low_level = 0
+    }
+    set_temp_variable = {
+        t_high_level = 0
+    }
+    if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 104
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 4
+        }
+        set_temp_variable = {
+            t_low_level = 4
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 72
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 4
+        }
+        set_temp_variable = {
+            t_low_level = 3
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 47
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 3
+        }
+        set_temp_variable = {
+            t_low_level = 3
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 29
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 3
+        }
+        set_temp_variable = {
+            t_low_level = 2
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 16
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 2
+        }
+        set_temp_variable = {
+            t_low_level = 2
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 8
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 2
+        }
+        set_temp_variable = {
+            t_low_level = 1
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 3
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 1
+        }
+        set_temp_variable = {
+            t_low_level = 1
+        }
+    } else_if = {
+        limit = {
+            check_variable = {
+                TKM_reserved_sp_bead > 1
+            }
+        }
+        set_temp_variable = {
+            t_high_level = 1
+        }
+        set_temp_variable = {
+            t_low_level = 0
+        }
+    }
+    if = {
+        limit = {
+            OR = {
+                has_war = yes
+                date > 148.1.1
+            }
+            OR = {
+                SCA = {
+                    exists = yes
+                    is_subject = no
+                }
+                NMS = {
+                    exists = yes
+                    is_subject = no
+                }
+            }
+        }
+        set_variable = {
+            TKM_AI_military_level = t_high_level
+        }
+        set_variable = {
+            TKM_AI_industrial_level = t_low_level
+        }
+    } else = {
+        set_variable = {
+            TKM_AI_military_level = t_low_level
+        }
+        set_variable = {
+            TKM_AI_industrial_level = t_high_level
+        }
+    }
 }
 
 TKM_industrial_level_increase_tooltip = {

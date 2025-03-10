@@ -27,6 +27,7 @@
         sc_shield1 = 1
 
         #陆军学说
+        fire_support = 1
 
         #工程学 
         jichushuxue = 1

@@ -1216,10 +1216,362 @@ country_event = {
 }
 
 # 战火蔓延南雾之湖 TKM vs NMS-SCA
+news_event = {
+	id = tkm.138
+	title = tkm.138.t
+	desc = tkm.138.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+		NOT = {
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+		TKM = {
+			OR = {
+				has_war_with = SCA
+				has_war_with = NMS
+			}
+		}
+		NMS = {
+			is_in_faction_with = SCA
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TKM_south_misty_lake_war_SCA_flag
+			set_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = tkm.138.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# NMS
+	option = {
+		name = tkm.138.2
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# TKM
+	option = {
+		name = tkm.138.3
+		trigger = {
+			original_tag = TKM
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.138.4
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+					original_tag = TKM
+				}
+			}
+		}
+	}
+}
 
 # 战火蔓延南雾之湖/南雾之湖战争扩大 TKM vs NMS
+news_event = {
+	id = tkm.139
+	title = {
+		text = tkm.139.t_esclation
+		trigger = {
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+	title = {
+		text = tkm.139.t
+	}
+
+	desc = {
+		text = tkm.139.d_esclation
+		trigger = {
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+	desc = {
+		text = tkm.139.d
+	}
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+		TKM = {
+			has_war_with = NMS
+		}
+		NMS = {
+			NOT = {
+				is_in_faction_with = SCA
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = tkm.139.1
+		trigger = {
+			original_tag = SCA
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_SCA_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.139.2
+		trigger = {
+			original_tag = SCA
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+
+	# NMS
+	option = {
+		name = tkm.139.3
+		trigger = {
+			original_tag = NMS
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_SCA_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.139.4
+		trigger = {
+			original_tag = NMS
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+
+	# TKM
+	option = {
+		name = tkm.139.5
+		trigger = {
+			original_tag = TKM
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_SCA_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.139.6
+		trigger = {
+			original_tag = TKM
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.139.7
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+					original_tag = TKM
+				}
+			}
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_SCA_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.139.8
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+					original_tag = TKM
+				}
+			}
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+}
 
 # 战火蔓延南雾之湖/南雾之湖战争扩大 TKM vs SCA
+news_event = {
+	id = tkm.140
+	title = {
+		text = tkm.140.t_esclation
+		trigger = {
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+	title = {
+		text = tkm.140.t
+	}
+
+	desc = {
+		text = tkm.140.d_esclation
+		trigger = {
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+	desc = {
+		text = tkm.140.d
+	}
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+		TKM = {
+			has_war_with = SCA
+		}
+		SCA = {
+			NOT = {
+				is_in_faction_with = NMS
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TKM_south_misty_lake_war_SCA_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = tkm.140.1
+		trigger = {
+			original_tag = SCA
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_NMS_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.140.2
+		trigger = {
+			original_tag = SCA
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+
+	# NMS
+	option = {
+		name = tkm.140.3
+		trigger = {
+			original_tag = NMS
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_NMS_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.140.4
+		trigger = {
+			original_tag = NMS
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+
+	# TKM
+	option = {
+		name = tkm.140.5
+		trigger = {
+			original_tag = TKM
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_NMS_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.140.6
+		trigger = {
+			original_tag = TKM
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+
+	# 其他
+	option = {
+		name = tkm.140.7
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+					original_tag = TKM
+				}
+			}
+			NOT = {
+				has_global_flag = TKM_south_misty_lake_war_NMS_flag
+			}
+		}
+	}
+
+	option = {
+		name = tkm.140.8
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = CIR
+					original_tag = TKM
+				}
+			}
+			has_global_flag = TKM_south_misty_lake_war_NMS_flag
+		}
+	}
+}
 
 # 魔力转换装置故障
 country_event = {

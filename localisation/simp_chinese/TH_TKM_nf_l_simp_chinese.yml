@@ -298,6 +298,6 @@ TKM_not_enough_sp_bead_tt:0 "$TKM_sp_bead_icon$不足，魔力转换装置将会
 TKM_auto_conversion_num_tt:0 "将自动转换得到[?t_final_conversion_num]颗$TKM_sp_bead_icon$。"
 TKM_energy_level_0_tt:0 "工业与军事灵力珠投入等级变为§R0§!。"
 
-TKM_energy_debug_line_tt:0 "debug_info:\nTKM_sp_bead_num:[?TKM_sp_bead_num]\nt_count:[?t_count]\nt_sp_bead_desired:[?t_sp_bead_desired]\nt_extra_sp_bead_num:[?t_extra_sp_bead_num]\nt_max_possible_bead:[?t_max_possible_bead]"
+TKM_energy_debug_line_tt:0 "debug_info:\nTKM_sp_bead_num:[?TKM_sp_bead_num]\nt_count:[?t_count]\nt_sp_bead_desired:[?t_sp_bead_desired]\nt_extra_sp_bead_num:[?t_extra_sp_bead_num]\nt_max_possible_bead:[?t_max_possible_bead]\nTKM_AI:[?TKM_AI_industrial_level]/[?TKM_AI_military_level]\nTKM_reserved_sp_bead:[?TKM_reserved_sp_bead]"
 
 TKM_south_misty_lake_revolution_alliance:0 "南雾之湖革命同盟"

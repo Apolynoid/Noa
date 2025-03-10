@@ -48,937 +48,6 @@ TKM_North_has_nothing_to_do_with_us = {
 
 }
 
-TKM_Tonight_is_an_elegant_militarist = {
-	enable = {
-		tag = TKM
-	}
-
-	abort = { 
-		or = {
-			has_war = yes
-			date > 148.4.1
-		}
-	}
-
-	ai_strategy = {
-		type = building_target
-		id = arms_factory
-		value = 75
-	}
-}
-
-prepare_for_war_TKM = {
-	enable = {
-    has_country_flag = TKM_war_preparation_TKM_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = TKM
-      NOT = { has_country_flag = TKM_war_preparation_TKM_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-TKM_prepare_for_war_WAK = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_WAK_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = WAK
-      NOT = { has_country_flag = TKM_prepare_for_war_WAK_flag }
-	  }
-	}
-
- 	ai_strategy = {
- 		type = antagonize
- 		id = "WAK"			
- 		value = 200
-	}	
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "WAK"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_NMS = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_NMS_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = NMS
-      NOT = { has_country_flag = TKM_prepare_for_war_NMS_flag }
-	  }
-	}
-
- 	ai_strategy = {
- 		type = antagonize
- 		id = "NMS"			
- 		value = 200
-	}	
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "NMS"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_HUM = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_HUM_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = HUM
-      NOT = { has_country_flag = TKM_prepare_for_war_HUM_flag }
-	  }
-	}
-
- 	ai_strategy = {
- 		type = antagonize
- 		id = "HUM"			
- 		value = 200
-	}	
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HUM"
-		value = 1000
-	}
-
- 	ai_strategy = {
- 		type = antagonize
- 		id = "HKR"			
- 		value = 200
-	}	
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HKR"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_KAG = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_KAG_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = KAG
-      NOT = { has_country_flag = TKM_prepare_for_war_KAG_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "KAG"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_INB = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_INB_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = INB
-      NOT = { has_country_flag = TKM_prepare_for_war_INB_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "INB"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_EET = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_EET_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = EET
-      NOT = { has_country_flag = TKM_prepare_for_war_EET_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "EET"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_MSD = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_MSD_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = MSD
-      NOT = { has_country_flag = TKM_prepare_for_war_MSD_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HKR"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "MSD"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_HKR = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_HKR_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = HKR
-      NOT = { has_country_flag = TKM_prepare_for_war_HKR_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HKR"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_SBK = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_SBK_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = SBK
-      NOT = { has_country_flag = TKM_prepare_for_war_SBK_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "MRS"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "ALI"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HKR"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "MSD"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "SBK"
-		value = 1000
-	}
-
-}
-
-TKM_prepare_for_war_MRS = {
-	enable = {
-		tag = TKM
-    has_country_flag = TKM_prepare_for_war_MRS_flag
-	}
-	
-	abort = {
-	  or = {
-		  has_war_with = MRS
-		  has_war_with = ALI
-      NOT = { has_country_flag = TKM_prepare_for_war_MRS_flag }
-	  }
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "MRS"
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "ALI"
-		value = 1000
-	}
-
-}
-
-TKM_The_eastern_buffer_zone_is_in_hurry_2 = {
-	enable = {
-		tag = TKM
-	  AND = {
-      country_exists = KAG
-      KAG = { is_subject = no }
-	  }
-	  AND = {
-      country_exists = INB
-      INB = { is_subject = no }
-	  }
-	  AND = {
-      country_exists = MSD
-      MSD = { is_subject = no }
-	  }
-    KAG = { surrender_progress > 0.25 }
-	}
-	
-	abort = {
-	  or = {
-		  NOT = { country_exists = KAG }
-		  NOT = { country_exists = INB }
-      NOT = { country_exists = MSD }
-      KAG = { is_subject = yes }
-      INB = { is_subject = yes }
-      MSD = { is_subject = yes }
-	  }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "KAG"			
-		value = 50
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "KAG"			
-		value = 100
-	}
-
-	ai_strategy = {
-		type = support
-		id = "KAG"			
-		value = 100
-	}
-
-}
-
-TKM_concentrate_fire_on_MRS = {
-	enable = {
-		tag = TKM
-    has_war_with = MRS
-		OR = {
-			is_in_faction_with = SBK
-		SBK = { is_subject_of = TKM }
-		}
-	}
-	abort = {
-		OR = {
-	    	MRS = { has_capitulated = yes }
-			  NOT = { country_exists = MRS }
-	    	MRS = { is_subject = yes }
-		}
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "SBK"
-		value = 100
-	}
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "KAG"
-		value = 100
-	}
-}
-
-TKM_concentrate_fire_on_ALI = {
-	enable = {
-		tag = TKM
-    has_war_with = ALI
-		OR = {
-			is_in_faction_with = SBK
-		SBK = { is_subject_of = TKM }
-		}
-	}
-	abort = {
-		OR = {
-	    	ALI = { has_capitulated = yes }
-			  NOT = { country_exists = ALI }
-	    	ALI = { is_subject = yes }
-		}
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "SBK"
-		value = 100
-	}
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "KAG"
-		value = 100
-	}
-}
-
-TKM_concentrate_fire_on_NMS = {
-	enable = {
-		tag = TKM
-    has_war_with = NMS
-		OR = {
-		 	OR = {
-		 		is_in_faction_with = SRB
-     		SRB = { is_subject_of = TKM }
-		 	}
-		 	OR = {
-		 		is_in_faction_with = HUM
-     		HUM = { is_subject_of = TKM }
-		 	}
-		}
-	}
-	abort = {
-		OR = {
-	    	NMS = { has_capitulated = yes }
-			  NOT = { country_exists = NMS }
-	    	NMS = { is_subject = yes }
-		}
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "SRB"
-		value = 100
-	}
-
-
-}
-
-TKM_my_teacher = {
-	enable = {
-		tag = TKM
-    has_government = fandong
-	  AND = {
-      country_exists = SEJ
-      SEJ = { has_government = fandong }
-      SEJ = { has_war = yes }
-	  }
-	}
-	
-	abort = {
-	  or = {
-      NOT = { has_government = fandong }
-      NOT = { SEJ = { has_government = fandong } }
-	  }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "SEJ"			
-		value = 50
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SEJ"			
-		value = 100
-	}
-
-	ai_strategy = {
-		type = support
-		id = "SEJ"			
-		value = 100
-	}
-
-}
-
-SBK_help_for_TKM = {
-	enable = {
-		tag = SBK
-		TKM = { has_war = yes }
-		SBK = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-    NOT = { 
-      any_country = {
-        has_war_with = SBK
-        or = {
-          is_neighbor_of = SBK
-          any_neighbor_country = {
-            is_subject_of = SBK
-          }
-        }
-      }
-    }
-	}
-	abort = {
-	  or = {
-      TKM = { has_war = no }
-      NOT = { SBK = { is_in_faction_with = TKM } }
-      any_country = {
-        has_war_with = SBK
-        or = {
-          is_neighbor_of = SBK
-          any_neighbor_country = {
-            is_subject_of = SBK
-          }
-        }
-      }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "TKM"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-MRS_help_for_TKM = {
-	enable = {
-		tag = MRS
-		TKM = { has_war = yes }
-		MRS = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-	}
-	abort = {
-	  or = {
-      TKM = { has_war = no }
-      NOT = { MRS = { is_in_faction_with = TKM } }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "TKM"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-ALI_help_for_TKM = {
-	enable = {
-		tag = ALI
-		TKM = { has_war = yes }
-		ALI = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-	}
-	abort = {
-	  or = {
-      TKM = { has_war = no }
-      NOT = { ALI = { is_in_faction_with = TKM } }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "TKM"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-WAK_help_for_TKM = {
-	enable = {
-		tag = WAK
-		TKM = { has_war = yes }
-		WAK = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-	}
-	abort = {
-	  or = {
-      TKM = { has_war = no }
-      NOT = { WAK = { is_in_faction_with = TKM } }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "TKM"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-HUM_help_for_TKM = {
-	enable = {
-		tag = HUM
-		TKM = { has_war = yes }
-		HUM = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-	}
-	abort = {
-	  or = {
-      TKM = { has_war = no }
-      NOT = { HUM = { is_in_faction_with = TKM } }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "TKM"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "TKM"
-		value = 100
-	}
-
-}
-
-TKM_help_for_NMS_neworder = {
-	enable = {
-		tag = TKM
-		NMS = { has_war_with = SCA }
-		NMS = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-    TKM = { has_government = neworder }
-    NMS = { has_government = neworder }
-    NOT = { WAK = { has_full_control_of_state = 158 } }
-    NOT = { PRI = { has_full_control_of_state = 319 } }
-    NOT = { 
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-    }
-	}
-	abort = {
-	  or = {
-      NMS = { has_war = no }
-      NOT = { NMS = { is_in_faction_with = TKM } }
-      WAK = { has_full_control_of_state = 158 }
-      PRI = { has_full_control_of_state = 319 }
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "NMS"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "NMS"
-		value = 100
-	}
-
-}
-
-TKM_not_help_for_NMS_qinwai = {
-	enable = {
-		tag = TKM
-		NMS = { has_war_with = SCA }
-		NOT = { NMS = { is_in_faction_with = TKM } }
-    TKM = { is_faction_leader = yes }
-    TKM = { has_government = qinwai }
-    NMS = { surrender_progress > 0.30 }
-    NOT = { WAK = { has_full_control_of_state = 158 } }
-    NOT = { PRI = { has_full_control_of_state = 319 } }
-    NOT = { 
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-    }
-	}
-	abort = {
-	  or = {
-      NOT = { NMS = { surrender_progress > 0.30 } }
-      NMS = { is_in_faction_with = TKM } 
-	  }
-	}	
-	
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "NMS"
-		value = 100
-	}
-
-}
-
-TKM_help_for_CIR_neworder = {
-	enable = {
-		tag = TKM
-		CIR = { has_war_with = SCA }
-		CIR = { is_in_faction_with = TKM }
-    TKM = { is_faction_leader = yes }
-    TKM = { has_government = neworder }
-    CIR = { has_government = neworder }
-    NOT = { WAK = { has_full_control_of_state = 158 } }
-    NOT = { PRI = { has_full_control_of_state = 319 } }
-    NOT = { 
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-    }
-	}
-	abort = {
-	  or = {
-      CIR = { has_war = no }
-      NOT = { CIR = { is_in_faction_with = TKM } }
-      WAK = { has_full_control_of_state = 158 }
-      PRI = { has_full_control_of_state = 319 }
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "CIR"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "CIR"
-		value = 100
-	}
-
-}
-
-TKM_help_for_CIR_red = {
-	enable = {
-		tag = TKM
-		CIR = { has_war_with = SCA }
-		CIR = { is_in_faction_with = TKM }
-    TKM = { has_government = fandong }
-    CIR = { has_government = fandong }
-    NOT = { WAK = { has_full_control_of_state = 158 } }
-    NOT = { PRI = { has_full_control_of_state = 319 } }
-    NOT = { 
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-    }
-	}
-	abort = {
-	  or = {
-      NOT = { CIR = { has_war_with = SCA }}
-      NOT = { CIR = { is_in_faction_with = TKM } }
-      WAK = { has_full_control_of_state = 158 }
-      PRI = { has_full_control_of_state = 319 }
-      any_country = {
-        or = {
-          tag = HUM
-          tag = HKR
-          tag = MRS 
-          tag = ALI 
-          tag = NMS 
-          tag = SCA 
-          tag = WAK 
-          tag = PRI
-          is_major = yes
-        }
-        has_war_with = TKM
-        or = {
-          is_neighbor_of = TKM
-          any_neighbor_country = {
-            is_subject_of = TKM
-          }
-        }
-      }
-	  }
-	}	
-
-	ai_strategy = {
-		type = befriend
-		id = "CIR"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = "CIR"
-		value = 100
-	}
-
-}
-
 dont_take_claims_on_MSD_KAG_we_got_HUM = {
 	enable = {
 		tag = TKM
@@ -1015,114 +84,6 @@ dont_take_claims_on_MSD_KAG_we_got_HUM = {
 		id = "HKR"			
 		value = 1
 	}		
-
-}
-
-Dont_delay_the_big_thing = {
-	enable = {
-		tag = TKM
-    has_completed_focus = TKM_Progressive_leader
-    NOT = { TKM = { has_full_control_of_state = 177 } }
-    country_exists = MSD
-    MSD = { is_subject = no }
-    OR = {
-      AND = {
-        SEJ = { has_government = fandong }
-        SEJ = { is_faction_leader = yes } 
-        SEJ = { is_in_faction_with = CIR }
-      }
-      AND = {
-        MRS = { has_government = fandong }
-        MRS = { is_subject = no }
-        OR = {
-          AND = {
-            SEJ = { has_government = fandong }
-            SEJ = { is_faction_leader = yes } 
-            SEJ = { is_in_faction_with = CIR }
-          }
-          AND = {
-            CIR = { has_government = fandong }
-            CIR = { is_faction_leader = yes } 
-          }
-        }
-      }
-    }
-	}
-
-	abort = {
-    OR = {
-      TKM = { has_full_control_of_state = 177 }
-      NOT = { country_exists = MSD }
-      MSD = { is_subject = yes }
-    }
-	}
-	
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "MSD"			
-		value = -100
-	}
-
-	ai_strategy = {
-		type = support
-		id = "MSD"			
-		value = -100
-	}
-
- 	ai_strategy = {
- 		type = protect
- 		id = "MSD"			
- 		value = -200
- 	}
- 	ai_strategy = {
- 		type = alliance
- 		id = "MSD"			
- 		value = -200
- 	}
-
-}
-
-TKM_The_west_buffer_zone_is_in_hurry_1 = {
-	enable = {
-		tag = TKM
-	  AND = {
-      country_exists = HU3
-      HU3 = { is_subject = no }
-	  }
-	  AND = {
-      country_exists = SGS
-      SGS = { is_subject = no }
-	  }
-	  AND = {
-      country_exists = MEL
-      MEL = { is_subject = no }
-	  }
-    MEL = { surrender_progress > 0.40 }
-	}
-	
-	abort = {
-	  or = {
-		  NOT = { country_exists = HU3 }
-		  NOT = { country_exists = SGS }
-      NOT = { country_exists = MEL }
-      HU3 = { is_subject = yes }
-      SGS = { is_subject = yes }
-      MEL = { is_subject = yes }
-      NOT = { MEL = { surrender_progress > 0.40 } }
-	  }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "MEL"			
-		value = 50
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "MEL"			
-		value = 100
-	}
 
 }
 
@@ -1223,5 +184,128 @@ CIR_want_to_invade_SCA_without_TKM = {
 		id = TKM
 		target_country = GRS
 		value = 500
+	}
+}
+
+### NOA part
+TKM_no_civilian_construction_under_debuff = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		OR = {
+			has_idea = TKM_bo_ruo_de_gong_ye_idea
+			has_idea = TKM_bo_ruo_de_gong_ye_c_idea
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 100
+	}
+}
+
+TKM_military_construction_first = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		always = yes
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 50
+	}
+}
+
+TKM_more_mils_under_war_bond = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		has_dynamic_modifier = {
+			modifier = TKM_dao_ju_zhan_zheng_zhai_quan_idea
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 50
+	}
+}
+
+TKM_research_144_math_tool_quick = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		always = yes
+	}
+
+	abort = {
+		has_tech = jisuangongju144
+	}
+
+	ai_strategy = {
+		type = research_weight_factor
+		id = jisuangongju144
+		value = 2000
+	}
+}
+
+TKM_build_refinery_when_buffed = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		has_completed_focus = TKM_gao_neng_ling_qi_chang_jian_she
+	}
+
+	abort = {
+		has_tech = advanced_energy_plant
+	}
+
+	ai_strategy = {
+		type = research_weight_factor
+		id = gaonenglingqichang
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = research_weight_factor
+		id = advanced_energy_plant
+		value = 2000
+	}
+}
+
+TKM_4_refinery_will_be_good_enough = {
+	allowed = {
+		original_tag = TKM
+	}
+
+	enable = {
+		has_completed_focus = TKM_gao_neng_ling_qi_chang_jian_she
+	}
+
+	abort = {
+		energy_factory > 4
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = energy_factory
+		value = 10000
 	}
 }

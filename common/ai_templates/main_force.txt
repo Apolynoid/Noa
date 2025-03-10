@@ -3,6 +3,7 @@ ma_infantry_generic = {
 	blocked_for = {
 		SEJ
 		TEG
+		TKM
 	}
 
 	role = main_force
