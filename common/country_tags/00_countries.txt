@@ -8,7 +8,6 @@ NMN = "countries/nmn.txt"		#####欢姐 //待定
 KAS = "countries/kas.txt"         #####华扇
 ZYD = "countries/zyd.txt"     ####中有之道
 UNA = "countries/una.txt"			#####风洞
-HU7 = "countries/hu7.txt"	####村落#new
 NTR = "countries/ntr.txt"  ####河童
 YAW = "countries/yaw.txt"  ####山童
 KRD = "countries/krd.txt"  ####虹龙洞
@@ -51,10 +50,6 @@ SRB = "countries/srb.txt"	#####神灵庙
 #----------西南----------
 MEL = "countries/mel.txt"     #毒人偶
 LIL = "countries/lil.txt"         #春
-HU1 = "countries/hu1.txt"          #村落
-HU2 = "countries/hu2.txt"          #村落
-HU3 = "countries/hu3.txt"          #村落
-HU4 = "countries/hu4.txt"          #村落
 OKI = "countries/oki.txt"           #Okina
 #----------旧地狱地域----------
 YMM = "countries/ymm.txt"		#山女#new

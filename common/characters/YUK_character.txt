@@ -1,0 +1,321 @@
+characters={
+	YUK_elly ={
+		name = YUK_elly
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_elly.dds"
+				small="gfx/leaders/YUK/YUK_elly_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_elly.dds"
+				small="gfx/leaders/YUK/YUK_elly_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_jijiacaokongzhe }
+			skill = 7
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 4
+			logistics_skill = 6
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_elly
+		# 	name = YUK_elly
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_gengetsu ={
+		name = YUK_gengetsu
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_gengetsu.dds"
+				small="gfx/leaders/YUK/YUK_gengetsu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_gengetsu.dds"
+				small="gfx/leaders/YUK/YUK_gengetsu_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_tezhongzhuanjia }
+			skill = 9
+			attack_skill = 10
+			defense_skill = 7
+			planning_skill = 9
+			logistics_skill = 9
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_gengetsu
+		# 	name = YUK_gengetsu
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_kurumi ={
+		name = YUK_kurumi
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_kurumi.dds"
+				small="gfx/leaders/YUK/YUK_kurumi_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_kurumi.dds"
+				small="gfx/leaders/YUK/YUK_kurumi_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_huoqiangzhuanjia }
+			skill = 5
+			attack_skill = 8
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_kurumi
+		# 	name = YUK_kurumi
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_mugetsu ={
+		name = YUK_mugetsu
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_mugetsu.dds"
+				small="gfx/leaders/YUK/YUK_mugetsu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_mugetsu.dds"
+				small="gfx/leaders/YUK/YUK_mugetsu_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_tezhongzhuanjia }
+			skill = 9
+			attack_skill = 9
+			defense_skill = 8
+			planning_skill = 6
+			logistics_skill = 12
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_mugetsu
+		# 	name = YUK_mugetsu
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_orange ={
+		name = YUK_orange
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_orange.dds"
+				small="gfx/leaders/YUK/YUK_orange_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_orange.dds"
+				small="gfx/leaders/YUK/YUK_orange_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_trait_chongjizhuanjia }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_orange
+		# 	name = YUK_orange
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_yuk_98 ={
+		name = YUK_yuk_98
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_yuk_98.dds"
+				small="gfx/leaders/YUK/YUK_yuk_98_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_yuk_98.dds"
+				small="gfx/leaders/YUK/YUK_yuk_98_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		# advisor = {
+		# 	slot = character_coop
+		# 	idea_token = YUK_yuk_98
+		# 	name = YUK_yuk_98
+		# 	cost = 200
+		# 	modifier = {
+		# 		
+		# 	}
+		# 	ai_will_do = {
+		# 		factor = 1
+		# 	}
+		# }
+	}
+	YUK_yuk ={
+		name = YUK_yuk
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_yuk.dds"
+				small="gfx/leaders/YUK/YUK_yuk_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_yuk.dds"
+				small="gfx/leaders/YUK/YUK_yuk_small.dds"
+			}
+		}
+		field_marshal = {
+            traits = {  th_original_character th_character  th_trait_qianxianzhandou th_trait_dayaoguai th_trait_chongjizhuanjia }
+            attack_skill = 8
+            defense_skill = 8
+            planning_skill = 1
+            logistics_skill = 3
+            
+            skill = 11
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = YUK_yuk
+			name = YUK_yuk
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				artillery_tech = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	YUK_larva ={
+		name = YUK_larva
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_larva.dds"
+				small="gfx/leaders/YUK/YUK_larva_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_larva.dds"
+				small="gfx/leaders/YUK/YUK_larva_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  th_trait_yinyangshi  }
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 3
+            
+            skill = 4
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = YUK_larva
+			name = YUK_larva
+			cost = 200
+			modifier = {
+				PO_good_influence_factor = 0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	YUK_yuk_leader ={
+		name = YUK_yuk_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_yuk.dds"
+				small="gfx/leaders/YUK/YUK_yuk_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_yuk.dds"
+				small="gfx/leaders/YUK/YUK_yuk_small.dds"
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+	YUK_larva_leader ={
+		name = YUK_larva_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/YUK/YUK_larva.dds"
+				small="gfx/leaders/YUK/YUK_larva_small.dds"
+			}
+			army = {
+				large="gfx/leaders/YUK/YUK_larva.dds"
+				small="gfx/leaders/YUK/YUK_larva_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+}

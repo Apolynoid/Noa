@@ -19,6 +19,8 @@ ideas = {
 			cost = 0
 			
 			cancel_if_invalid = no
+
+			
 		}
 		
 		Human = {
@@ -44,6 +46,8 @@ ideas = {
 			cost = 0
 			
 			cancel_if_invalid = no
+
+			
 		}
 		
 		Pri_youkai = {
@@ -63,6 +67,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 		Youkai = {
@@ -85,6 +91,8 @@ ideas = {
 			cost = 0
 			cancel_if_invalid = no
 			default = yes
+
+			
 		}
 
 		Magician = {
@@ -108,6 +116,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 		Kappa = {
@@ -127,6 +137,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 		Tenggu = {
@@ -152,6 +164,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 		God = {
@@ -172,6 +186,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 
@@ -202,6 +218,8 @@ ideas = {
 			cost = 0
 			
 			cancel_if_invalid = no
+
+			
 		}
 		
 		Ghost = {
@@ -228,6 +246,8 @@ ideas = {
 			}
 			cost = 0
 			cancel_if_invalid = no
+
+			
 		}
 
 		No = {

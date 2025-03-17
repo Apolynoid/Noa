@@ -229,7 +229,7 @@ ideas = {
 		TKM_dao_ju_sheng_chan_guan_li_idea = {
 			picture = generic_production_bonus
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 

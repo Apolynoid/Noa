@@ -1,0 +1,168 @@
+characters={
+	SGS_sun ={
+		name = SGS_sun
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_sun.dds"
+				small="gfx/leaders/SGS/SGS_sun_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_sun.dds"
+				small="gfx/leaders/SGS/SGS_sun_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  trait_reckless th_trait_huolizhuanjia }
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+            
+            skill = 3
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = SGS_sun
+			name = SGS_sun
+			cost = 200
+			modifier = {
+				encryption = 2
+				modifier_army_sub_unit_ma_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_ma_infantry_defence_factor = 0.075
+				modifier_army_sub_unit_sc_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_sc_infantry_defence_factor = 0.075
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	SGS_lunar ={
+		name = SGS_lunar
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_lunar.dds"
+				small="gfx/leaders/SGS/SGS_lunar_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_lunar.dds"
+				small="gfx/leaders/SGS/SGS_lunar_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  trait_cautious  }
+            attack_skill = 3
+            defense_skill = 5
+            planning_skill = 1
+            logistics_skill = 2
+            
+            skill = 3
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = SGS_lunar
+			name = SGS_lunar
+			cost = 200
+			modifier = {
+				encryption = 2
+				army_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	SGS_star ={
+		name = SGS_star
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_star.dds"
+				small="gfx/leaders/SGS/SGS_star_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_star.dds"
+				small="gfx/leaders/SGS/SGS_star_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  th_trait_moulvedashi th_trait_yinyangshi }
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 1
+            skill = 3
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = SGS_star
+			name = SGS_star
+			cost = 200
+			modifier = {
+				decryption = 5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	SGS_sun_leader ={
+		name = SGS_sun_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_sun.dds"
+				small="gfx/leaders/SGS/SGS_sun_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_sun.dds"
+				small="gfx/leaders/SGS/SGS_sun_small.dds"
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+	SGS_lunar_leader ={
+		name = SGS_lunar_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_lunar.dds"
+				small="gfx/leaders/SGS/SGS_lunar_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_lunar.dds"
+				small="gfx/leaders/SGS/SGS_lunar_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}		
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+	}
+	SGS_star_leader ={
+		name = SGS_star_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/SGS/SGS_star.dds"
+				small="gfx/leaders/SGS/SGS_star_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SGS/SGS_star.dds"
+				small="gfx/leaders/SGS/SGS_star_small.dds"
+			}
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+	}
+}

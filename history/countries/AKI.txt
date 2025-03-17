@@ -2,8 +2,6 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        
-        
         gun1 = 1
         linglizhufu = 1
         linglicunchu = 1
@@ -21,17 +19,17 @@
         #陆军学说
 
         #工程学 
-            jichushuxue = 1
-            shuxuegongju = 1
-            lingben = 1
-            jiami137 = 1
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        jiami137 = 1
 
-            lingliganying147 = 1
+        lingliganying147 = 1
         #专用工程学
 
         #工业
-            production_theory = 1
-            org_production = 1
+        production_theory = 1
+        org_production = 1
         #专用工业
 
         #种族
@@ -42,19 +40,8 @@
 
 146.1.1={
     oob = "AKI_146"
-    
-    HU1 = {
-        subject_level3 = yes
-    }
-    HU2 = {
-        subject_level3 = yes
-    }
-    HU4 = {
-        subject_level4= yes
-    }
 
-    set_country_flag = bunengsuiyiqiehuanzhengti
-    give_guarantee = HU3      
+    set_country_flag = bunengsuiyiqiehuanzhengti   
     
     add_ideas = {
     God
@@ -81,5 +68,7 @@
         oldorder = 0
         fandong = 5
     }
-    
+    recruit_character = AKI_hin
+    recruit_character = AKI_szh
+    recruit_character = AKI_sizuha
 }

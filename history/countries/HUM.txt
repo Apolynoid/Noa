@@ -123,6 +123,12 @@
         }
     }
 
+    498 = {
+        add_dynamic_modifier = {
+            modifier = HUM_ren_lei_liu_wang_zhe_state_idea
+        }
+    }
+
     country_event = {
         id = tkm.201
         days = 730

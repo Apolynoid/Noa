@@ -1,0 +1,73 @@
+characters={
+	MEL_mel ={
+		name = MEL_mel
+		portraits={
+			civilian={
+				large="gfx/leaders/MEL/MEL_mel.dds"
+				small="gfx/leaders/MEL/MEL_mel_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MEL/MEL_mel.dds"
+				small="gfx/leaders/MEL/MEL_mel_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  th_trait_huoqiangzhuanjia trait_reckless }
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 3
+            
+            skill = 4
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = MEL_mel
+			name = MEL_mel
+			cost = 200
+			modifier = {
+				required_garrison_factor = -0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	MEL_mel_leader ={
+		name = MEL_mel_leader
+		portraits={
+			civilian={
+				large="gfx/leaders/MEL/MEL_mel.dds"
+				small="gfx/leaders/MEL/MEL_mel_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MEL/MEL_mel.dds"
+				small="gfx/leaders/MEL/MEL_mel_small.dds"
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}

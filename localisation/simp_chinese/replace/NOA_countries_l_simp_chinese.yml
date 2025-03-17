@@ -1,4 +1,23 @@
 ﻿l_simp_chinese:
+ SCA_qinwai:0 "雾之湖共和国"
+ SCA_qinwai_ADJ:0 "雾之湖共和国"
+ SCA_qinwai_DEF:0 "雾之湖共和国"
+ SCA_neworder:0 "斯卡蕾特帝国"
+ SCA_neworder_ADJ:0 "斯卡蕾特帝国"
+ SCA_neworder_DEF:0 "斯卡蕾特帝国"
+ SCA_guli:0 "斯卡蕾特帝国"
+ SCA_guli_ADJ:0 "斯卡蕾特帝国"
+ SCA_guli_DEF:0 "斯卡蕾特帝国"
+ SCA_oldorder:0 "斯卡蕾特帝国"
+ SCA_oldorder_ADJ:0 "斯卡蕾特帝国"
+ SCA_oldorder_DEF:0 "斯卡蕾特帝国"
+ SCA_fandong:0 "雾之湖共和国"
+ SCA_fandong_ADJ:0 "雾之湖共和国"
+ SCA_fandong_DEF:0 "雾之湖共和国"
+ SCA_oldgenso:0 "斯卡蕾特帝国"
+ SCA_oldgenso_ADJ:0 "斯卡蕾特帝国"
+ SCA_oldgenso_DEF:0 "斯卡蕾特帝国"
+
  NMS_KYK:0 "命莲寺改良派"
  NMS_MNM:0 "命莲寺种族派"
 

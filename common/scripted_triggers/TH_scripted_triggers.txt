@@ -150,25 +150,6 @@ Fairy_country_with_fairy_leader = {
 		}
 	}
 }
-# is_pure_waike_tech = {
-#     OR = {
-#         is_researching_technology = waike
-#         has_tech = waike
-#     }
-#     NOT = {has_tech = lingkejiehe154}
-# }
-
-# is_pure_lingben_tech = {
-#     OR = {
-#         is_researching_technology = lingben
-#         has_tech = lingben
-#     }
-#     NOT = {has_tech = lingkejiehe154}  
-# }
-
-# is_combined_tech = {
-#     has_tech = lingkejiehe154
-# }
 
 bypass_declare_war = {
 	or = {
@@ -629,7 +610,6 @@ youkai_mountain_country = {
 
 SW_country = {
 	or = {
-		tag = HU3
 		tag = ZYD
 		tag = MEL
 		tag = SGS
@@ -675,14 +655,8 @@ Fairy_country = {
 Human_country = {
 	or = {
 		#6
-		# tag = HKR
 		tag = HUM
-		tag = HU1
-		tag = HU2
-		tag = HU3
-		tag = HU4
 		tag = EMB
-		tag = HU7
 		tag = HU8
 	}
 }
@@ -1159,144 +1133,6 @@ JOIN_FACTION = {
 		}
 	}
 	or = {
-		##########接壤判定
-		# custom_trigger_tooltip = {
-		# 	tooltip = join_faction_tt
-		# 	FROM = {
-		# 		if = {
-		# 			limit = {
-		# 				is_subject = yes
-		# 			}
-		# 			OVERLORD = {
-		# 				or = {
-		# 					is_neighbor_of = ROOT
-		# 					any_neighbor_country = {
-		# 						is_subject_of = ROOT
-		# 					}
-		# 					any_neighbor_country = {
-		# 						is_in_faction_with = ROOT
-		# 					}
-
-		# 					any_allied_country = {
-		# 						is_neighbor_of = ROOT
-		# 					}
-		# 					any_allied_country = {
-		# 						any_neighbor_country = {
-		# 							is_subject_of = ROOT
-		# 						}
-		# 					}
-		# 					any_allied_country = {
-		# 						any_neighbor_country = {
-		# 							is_in_faction_with = ROOT
-		# 						}
-		# 					}
-
-		# 					any_country = {
-		# 						is_subject_of = PREV
-		# 						is_neighbor_of = ROOT
-		# 					}
-		# 					any_country = {
-		# 						is_subject_of = PREV
-		# 						any_neighbor_country = {
-		# 							is_subject_of = ROOT
-		# 						}
-		# 					}
-		# 					any_country = {
-		# 						is_subject_of = PREV
-		# 						any_neighbor_country = {
-		# 							is_in_faction_with = ROOT
-		# 						}
-		# 					}
-
-		# 					any_country = {
-		# 						is_in_faction_with = PREV
-		# 						is_neighbor_of = ROOT
-		# 					}
-		# 					any_country = {
-		# 						is_in_faction_with = PREV
-		# 						any_neighbor_country = {
-		# 							is_subject_of = ROOT
-		# 						}
-		# 					}
-		# 					any_country = {
-		# 						is_in_faction_with = PREV
-		# 						any_neighbor_country = {
-		# 							is_in_faction_with = ROOT
-		# 						}
-		# 					}
-
-		# 				}
-		# 				has_opinion = {
-		# 					target = ROOT
-		# 					value > -10
-		# 				}
-		# 			}
-		# 		}
-		# 		else = {
-		# 			or = {
-		# 				is_neighbor_of = ROOT
-		# 				any_neighbor_country = {
-		# 					is_subject_of = ROOT
-		# 				}
-		# 				any_neighbor_country = {
-		# 					is_in_faction_with = ROOT
-		# 				}
-
-		# 				any_allied_country = {
-		# 					is_neighbor_of = ROOT
-		# 				}
-		# 				any_allied_country = {
-		# 					any_neighbor_country = {
-		# 						is_subject_of = ROOT
-		# 					}
-		# 				}
-		# 				any_allied_country = {
-		# 					any_neighbor_country = {
-		# 						is_in_faction_with = ROOT
-		# 					}
-		# 				}
-
-		# 				any_country = {
-		# 					is_subject_of = PREV
-		# 					is_neighbor_of = ROOT
-		# 				}
-		# 				any_country = {
-		# 					is_subject_of = PREV
-		# 					any_neighbor_country = {
-		# 						is_subject_of = ROOT
-		# 					}
-		# 				}
-		# 				any_country = {
-		# 					is_subject_of = PREV
-		# 					any_neighbor_country = {
-		# 						is_in_faction_with = ROOT
-		# 					}
-		# 				}
-
-		# 				any_country = {
-		# 					is_in_faction_with = PREV
-		# 					is_neighbor_of = ROOT
-		# 				}
-		# 				any_country = {
-		# 					is_in_faction_with = PREV
-		# 					any_neighbor_country = {
-		# 						is_subject_of = ROOT
-		# 					}
-		# 				}
-		# 				any_country = {
-		# 					is_in_faction_with = PREV
-		# 					any_neighbor_country = {
-		# 						is_in_faction_with = ROOT
-		# 					}
-		# 				}
-		# 			}
-		# 			has_opinion = {
-		# 				target = ROOT
-		# 				value > -10
-		# 			}
-		# 		}
-		# 	}
-		# }
 		########观点判定
 		if = {
 			limit = {
@@ -1536,66 +1372,6 @@ controlled_by_subject_or_you = {
 		OR = {
 			tag = ROOT
 			is_subject_of = ROOT
-		}
-	}
-}
-
-is_MAF = {
-	custom_trigger_tooltip = {
-		tooltip = is_MAF_tt
-		has_country_flag = MAF_united
-	}
-}
-
-MAF_is_subject = {
-	custom_trigger_tooltip = {
-		tooltip = MAF_is_subject_tt
-		any_country = {
-			has_country_flag = MAF_united
-			is_subject = yes
-		}
-		
-	}
-}
-
-MAF_is_created = {
-	custom_trigger_tooltip = {
-		tooltip = MAF_is_created_tt
-		any_country = {
-			has_country_flag = MAF_united
-		}
-		
-	}
-}
-
-is_subject_of_MAF = {
-	custom_trigger_tooltip = {
-		tooltip = is_subject_of_MAF_tt
-		any_country = {
-			has_country_flag = MAF_united
-			PREV = {
-				is_subject_of = PREV
-			}
-		}
-	}
-}
-
-MAF_is_subject_of_ROOT = {
-	custom_trigger_tooltip = {
-		tooltip = MAF_is_subject_of_ROOT_tt
-		any_country = {
-			has_country_flag = MAF_united
-			is_subject_of = ROOT
-		}
-	}
-}
-
-has_war_with_MAF = {
-	custom_trigger_tooltip = {
-		tooltip = has_war_with_MAF_tt
-		any_country = {
-			has_country_flag = MAF_united
-			has_war_with = PREV
 		}
 	}
 }

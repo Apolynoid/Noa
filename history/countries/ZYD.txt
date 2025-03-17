@@ -1,16 +1,4 @@
 ﻿capital = 142
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -65,15 +53,16 @@
     }
     
     set_politics = {
-    	ruling_party = guli
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 2
-        guli = 94
+        qinwai = 94
+        guli = 2
         neworder = 0
         oldorder = 0
         fandong = 4
     }
+    recruit_character = ZYD_commerce_committee
 }

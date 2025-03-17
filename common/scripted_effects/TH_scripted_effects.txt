@@ -451,13 +451,6 @@ subject_situation_change_list = {
     }
     if = {
         limit = {
-            tag = HU3
-            is_subject = yes
-        }
-        drop_cosmetic_tag = yes
-    }
-    if = {
-        limit = {
             tag = MRY
             is_subject = yes
         }
@@ -715,22 +708,6 @@ declare_war_events = {
         }
         if = {
             limit = {
-                FROM = {tag = HU3}
-                AKI = {has_government = qinwai}
-                HU3 = {is_subject = no}
-            }
-            news_event = { id = aki.62 days = 2}
-        }
-        if = {
-            limit = {
-                FROM = {tag = HU3}
-                AKI = {has_government = neworder}
-                HU3 = {is_subject = no}
-            }
-            news_event = { id = aki.91 days = 2}
-        }
-        if = {
-            limit = {
                 FROM = {tag = ZYD}
                 AKI = {has_government = neworder}
                 ZYD = {is_subject = no}
@@ -946,14 +923,6 @@ startup_opinion = {
             }
         }
     }
-    HU3 = {
-        MEL = {
-            background_enemy = yes
-            HU3 = {
-                background_enemy = yes
-            }
-        }
-    }
     UUG = {
         UNL = {
             background_enemy = yes
@@ -1063,10 +1032,6 @@ startup_outlook = {
     YKR = {
         set_variable = { OL_view_type = 0}
         set_variable = { OL_view_value = 90}
-    }
-    HU7 = {
-        set_variable = { OL_view_type = 1}
-        set_variable = { OL_view_value = 0}
     }
 
     #SE

@@ -1,0 +1,42 @@
+characters={
+	ZYD_commerce_committee ={
+		name = ZYD_commerce_committee
+		portraits={
+			civilian={
+				large="gfx/leaders/ZYD/ZYD_commerce_committee.png"
+				small="gfx/leaders/ZYD/ZYD_commerce_committee_small.png"
+			}
+			army = {
+				large="gfx/leaders/ZYD/ZYD_commerce_committee.png"
+				small="gfx/leaders/ZYD/ZYD_commerce_committee_small.png"
+			}
+		}
+		country_leader = {
+			ideology = fandong_type
+			id = -1
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				collective_leadership
+			}
+			id=-1
+		}
+		country_leader = {
+			ideology = neworder_type
+			id = -1
+		}
+		country_leader = {
+			ideology = guli_type
+			id = -1
+		}
+		country_leader = {
+			ideology = oldorder_type
+			id = -1
+		}
+		country_leader = {
+			ideology = oldgenso_type
+			id = -1
+		}
+	}
+}

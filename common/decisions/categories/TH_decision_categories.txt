@@ -160,9 +160,6 @@ AKI_tongyiwuyuanzhong_category = {
 AKI_kaifawuyuanzhong_category = {
 	priority = 20
 }
-HU3_category = {
-	priority = 20
-}
 CLO_gongye_category = {
 	priority = 20
 }

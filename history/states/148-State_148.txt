@@ -1,0 +1,36 @@
+
+state={
+	id=148
+	name="STATE_148"
+	resources={
+
+		powder = 6.0
+		metal = 1.0
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			add_core_of = MEL
+			add_core_of = ZYD
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		488 636 1218 2767 4942 4949 4951 4960 4968 4980 4982 4994 
+	}
+	manpower=595.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

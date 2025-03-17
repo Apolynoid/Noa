@@ -32,6 +32,8 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			
 		}
 		
 		civilian_economy = {
@@ -57,6 +59,8 @@ ideas = {
 			default = yes
 			
 			cancel_if_invalid = no
+
+			
 		}
 		
 		low_economic_mobilisation = {
@@ -86,6 +90,8 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			
 
 			ai_will_do = {
    				factor = 400
@@ -126,6 +132,8 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			
 
 			ai_will_do = {
    				factor = 400
@@ -171,6 +179,8 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			
 			
 			ai_will_do = {
    				factor = 1000
@@ -233,6 +243,8 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+
+			
 		}
 		#赌场经济
 		duchang_jingji = {
@@ -260,141 +272,8 @@ ideas = {
 				always = no
 			}
 			cancel_if_invalid = no
+
+			
 		}
 	}
-	
-	# trade_laws = { 
-	# 	law = yes
-
-	# 	free_trade = {
-			
-	# 		available = {
-	# 	       has_country_flag = {
-	# 	          flag = openvalue
-	# 	          value > 1
-	# 	       }
-	# 	    }
-
-	# 		cost = 150
-	# 		removal_cost = -1
-	# 		level = 1
-	# 		modifier = {
-	# 			min_export = 0.2
-	# 			industrial_capacity_factory = 0.15
-	# 			production_speed_buildings_factor = 0.15
-	# 			consumer_goods_factor = 0.04
-	# 		}
-			
-	# 		cancel_if_invalid = no
-	# 	}
-		
-	# 	export_focus = {
-			
-			
-	# 		cost = 150
-	# 		removal_cost = -1
-	# 		level = 2
-			
-	# 		modifier = {
-	# 			min_export = 0.1
-	# 			industrial_capacity_factory = 0.075
-	# 			production_speed_buildings_factor = 0.075
-	# 			consumer_goods_factor = 0.02
-	# 		}
-			
-	# 		default = yes
-			
-	# 		cancel_if_invalid = no
-	# 	}
-		
-	# 	limited_exports = {
-			
-			
-	# 		available = {
-	# 			OR = {
-	# 			    has_government = oldorder
-				    
-	# 				AND = {
-	# 					OR = {
-	# 						has_idea = partial_economic_mobilisation
-	# 						has_idea = war_economy
-	# 						has_idea = tot_economic_mobilisation
-	# 					}
-	# 				}				
-	# 	            custom_trigger_tooltip = { 
-	# 	             tooltip = openvaluelessthanzero
-	# 	             has_country_flag = {
-	# 	               flag = openvalue
-	# 	               value < 0
-	# 	             }
-	# 	            }
-	# 			}
-	# 		}
-		
-	# 		cost = 150
-	# 		removal_cost = -1
-	# 		level = 3
-			
-	# 		modifier = {
-	# 			consumer_goods_factor = -0.01
-	# 		}
-			
-	# 		cancel_if_invalid = no
-
-	# 		ai_will_do = {
- #   				factor = 1
-
- #   				modifier = {
-	# 				factor = 0
-					
-	# 				is_major = no
-	# 				is_in_faction = yes
-	# 				has_war = yes
-	# 			}
- #   			}
-	# 	}
-		
-	# 	closed_economy = {
-			
-			
-	# 		available = {
-	# 		   OR = {
-	# 		     has_war = yes
-	# 		     has_government = oldorder
-	# 	         has_country_flag = {
-	# 	           flag = openvalue
-	# 	           value < -2
-	# 	         }
-	# 		   }
-	# 		}
-			
-	# 		cost = 150
-	# 		level = 4
-	# 		removal_cost = -1
-			
-			
-	# 		modifier = {
-	# 			min_export = -0.15
-	# 			consumer_goods_factor = -0.03
-	# 		}
-			
-	# 		on_add = {
-	# 			custom_effect_tooltip = closed_economy_TT
-	# 		}
-			
-	# 		cancel_if_invalid = no
-
-	# 		ai_will_do = {
- #   				factor = 1
-
- #   				modifier = {
-	# 				factor = 0
-					
-	# 				is_major = no
-	# 				is_in_faction = yes
-	# 				has_war = yes
-	# 			}
- #   			}
-	# 	}
-	# }
 }

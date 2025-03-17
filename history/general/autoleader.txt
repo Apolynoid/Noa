@@ -178,13 +178,7 @@ every_possible_country = { #random leader
 }
 every_possible_country = { #村委会
 	limit = {
-		or = {
-			tag = HU1
-			tag = HU2
-			tag = HU3
-			tag = HU4
-			tag = UNA
-		}
+		tag = UNA
 	}
 	generate_character = {
 		token_base = village_leader
@@ -227,10 +221,7 @@ every_possible_country = { #村委会
 }
 every_possible_country = { #流亡委员会
 	limit = {
-		or = {
-			tag = HU7
-			tag = HU8
-		}
+		tag = HU8
 	}
 	generate_character = {
 		token_base = HUM_leader
@@ -374,49 +365,6 @@ every_possible_country = { #KAP 长老会
 			army = {
 				large="gfx/leaders/KAP/KAP_council.dds"
 				small="gfx/leaders/KAP/KAP_council_small.dds"
-			}
-		}
-		country_leader={
-			ideology=qinwai_type
-			id=-1
-		}
-		country_leader={
-			ideology=guli_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldorder_type
-			id=-1
-		}
-		country_leader={
-			ideology=fandong_type
-			id=-1
-		}
-		country_leader={
-			ideology=neworder_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldgenso_type
-			id=-1
-		}
-	}
-}
-every_possible_country = { #ZYD 商业委员会
-	limit = {
-		tag = ZYD
-	}
-	generate_character = {
-		token_base = ZYD_leader
-		name = ZYD_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/ZYD/ZYD_council.dds"
-				small="gfx/leaders/ZYD/ZYD_council_small.dds"
-			}
-			army = {
-				large="gfx/leaders/ZYD/ZYD_council.dds"
-				small="gfx/leaders/ZYD/ZYD_council_small.dds"
 			}
 		}
 		country_leader={

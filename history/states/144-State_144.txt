@@ -1,0 +1,36 @@
+
+state={
+	id=144
+	name="STATE_144"
+	resources={
+
+		powder = 9.0
+		metal = 5.0
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			add_core_of = ZYD
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 4
+				arms_factory = 6
+				
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		57 576 1105 1559 2034 2514 4965 4973 4976 4977 4986 4995 4998 5002 5008 5014 5017 
+	}
+	manpower=13670.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

@@ -829,17 +829,6 @@ on_startup = {
 	on_release_as_puppet = {
 		effect = {
 			ROOT = {
-				if = {
-					limit = {
-						or = {
-							is_ai = no
-							has_idea = none_theory
-						}
-					}
-					set_technology = {
-						tech_changed = 1 #
-					}
-				}
 				country_value_calculator_and_manpower_gainer = yes
 				subject_situation_change_list = yes
 				if = {
@@ -857,17 +846,6 @@ on_startup = {
 	on_release_as_free = {
 		effect = {
 			ROOT = {
-				if = {
-					limit = {
-						or = {
-							is_ai = no
-							has_idea = none_theory
-						}
-					}
-					set_technology = {
-						tech_changed = 1 #
-					}
-				}
 				country_value_calculator_and_manpower_gainer = yes
 				subject_situation_change_list = yes
 				if = {

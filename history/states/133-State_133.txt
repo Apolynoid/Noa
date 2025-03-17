@@ -1,0 +1,35 @@
+
+state={
+	id=133
+	name="STATE_133"
+	resources={
+
+		powder = 6.0
+		metal = 21.0
+		gas=2.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = AKI
+			add_core_of = AKI
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		144 486 654 2755 4173 4174 4175 4176 4177 4179 
+	}
+	manpower=3680.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

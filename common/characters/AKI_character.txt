@@ -1,0 +1,137 @@
+characters={
+	AKI_hin ={
+		name = AKI_hin
+		portraits={
+			civilian={
+				large="gfx/leaders/AKI/AKI_hin.dds"
+				small="gfx/leaders/AKI/AKI_hin_small.dds"
+			}
+			army = {
+				large="gfx/leaders/AKI/AKI_hin.dds"
+				small="gfx/leaders/AKI/AKI_hin_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character trait_cautious }
+			attack_skill = 5
+			defense_skill = 7
+			planning_skill = 5
+			logistics_skill = 5
+			skill = 6
+			# id = 23
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = AKI_hin
+			name = AKI_hin
+			cost = 200
+			modifier = {
+				# character_coop_cost_factor = -0.15 在这里无效
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.02
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+	AKI_sizuha ={
+		name = AKI_sizuha
+		portraits={
+			civilian={
+				large="gfx/leaders/AKI/AKI_sizuha.dds"
+				small="gfx/leaders/AKI/AKI_sizuha_small.dds"
+			}
+			army = {
+				large="gfx/leaders/AKI/AKI_sizuha.dds"
+				small="gfx/leaders/AKI/AKI_sizuha_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  harsh_leader  }
+			attack_skill = 5
+			defense_skill = 6
+			planning_skill = 2
+			logistics_skill = 3
+			# id = 22
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = AKI_sizuha
+			name = AKI_sizuha
+			cost = 200
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			traits = {
+				AKI_diao_ling_zhi_shen
+			}
+			id=-1
+		}
+	}
+	AKI_szh ={
+		name = AKI_szh
+		portraits={
+			civilian={
+				large="gfx/leaders/AKI/AKI_szh.dds"
+				small="gfx/leaders/AKI/AKI_szh_small.dds"
+			}
+			army = {
+				large="gfx/leaders/AKI/AKI_szh.dds"
+				small="gfx/leaders/AKI/AKI_szh_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  old_guard  }
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 5
+			# id = 21
+			skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = AKI_szh
+			name = AKI_szh
+			cost = 200
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		country_leader={
+			ideology=guli_type
+			traits = {
+				AKI_feng_shou_zhi_shen
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+}

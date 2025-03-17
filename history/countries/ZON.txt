@@ -29,14 +29,6 @@ XXX = { #same in initial_leader_setting(scripted_effects) only to decrease error
     recruit_character = UND_luize
 
 }
-AKI = {
-    recruit_character = AKI_hin
-    recruit_character = AKI_szh
-    recruit_character = AKI_sizuha
-    recruit_character = AKI_hin_leader
-    recruit_character = AKI_szh_leader
-    recruit_character = AKI_sizuha_leader
-}
 CHE = {
     recruit_character = CHE_che
     recruit_character = CHE_che_leader

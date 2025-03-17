@@ -14,6 +14,21 @@ leader_traits = {
 			factor = -5
 		}
 	}
+
+	# 集体领导
+	collective_leadership = {
+		random = no
+		
+		defensive_war_stability_factor = 0.1
+		mobilization_laws_cost_factor = -0.2
+		economy_cost_factor = -0.2
+		character_coop_cost_factor = -0.2
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	# HKR
 	# 赤色杀人魔
 	HKR_chi_se_sha_ren_mo = {
@@ -341,6 +356,33 @@ leader_traits = {
 		stability_factor = 0.1
 		production_speed_buildings_factor = 0.1
 		industrial_capacity_factory = 0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	#AKI
+	# 丰收之神
+	AKI_feng_shou_zhi_shen = {
+		random = no
+
+		stability_factor = 0.15
+		consumer_goods_factor = -0.15
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 凋零之神
+	AKI_diao_ling_zhi_shen = {
+		random = no
+
+		political_power_gain = 0.2
+		offensive_war_stability_factor = 0.1
+		justify_war_goal_time = -0.1
+		resistance_damage_to_garrison = -0.25
 
 		ai_will_do = {
 			factor = -5
