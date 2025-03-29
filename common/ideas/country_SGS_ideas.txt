@@ -1,0 +1,1100 @@
+ideas = {
+	country = {
+	SGS_guojiabeishiyetuankongzhi_idea = {
+		picture = tur_etatism_bonus
+		available = {
+			check_variable = {
+				SGS_yaojingshiyetuan > 69.99 
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.3
+			political_power_gain = -0.5
+			stability_weekly = -0.001
+			industrial_capacity_factory = -0.3
+			consumer_goods_factor = 0.2
+		}
+	}
+	SGS_yaojingwailiu_idea = {
+		available = {
+			country_exists = SGS
+			SGS = {is_subject = no}
+		}
+		picture = prc_the_long_march
+		modifier = {
+			industrial_capacity_factory = -0.05
+			research_speed_factor = -0.05
+			weekly_manpower = -7
+		}
+	}
+	SGS_yimingdeyaojing2_idea = {
+		picture = hol_expand_the_colonial_army
+		modifier = {
+			industrial_capacity_factory = 0.05
+			research_speed_factor = 0.05
+			weekly_manpower = 15
+		}
+	}
+	SGS_yimingdeyaojing_idea = {
+		picture = hol_expand_the_colonial_army
+		modifier = {
+			weekly_manpower = 10
+		}
+	}
+	SGS_weilegengmeihaodeweilai_idea = {
+		picture = trotskyite_plot_purged
+		modifier = {
+			stability_factor = 0.1
+			production_speed_infrastructure_factor = 0.15
+		}
+	}
+	SGS_yaojingjingjifaan2_idea = {
+		picture = sgs_gongyefaan
+		modifier = {
+			production_speed_infrastructure_factor = 0.1
+			production_speed_buildings_factor = 0.15
+			consumer_goods_factor = -0.03
+			conscription_factor = 0.1
+			industrial_capacity_factory = 0.05
+		}
+	}
+	
+	SGS_yaojingdewuqi_idea = {
+		picture = sgs_yaojingdewuqi
+		equipment_bonus = {
+			magic_core_a = {
+				soft_attack = 0.1
+				reliability = 0.05
+			instant = yes
+			}
+			magic_energy_a = {
+				soft_attack = 0.1
+				reliability = 0.05
+			instant = yes
+			}
+		}
+	}
+	SGS_yaojingjingjifaan_idea = {
+		picture = sgs_gongyefaan
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			conscription_factor = 0.1
+			industrial_capacity_factory = 0.05
+		}
+	}
+	SGS_yangguangxianfa5_idea = {
+		modifier = {
+			political_power_factor = 0.05
+			mobilization_laws_cost_factor = -0.1
+			resistance_growth = -0.2
+			CO_core_resistance_required = -20
+			ST_race_penalty_all_factor = -0.1
+			compliance_growth = 0.1
+			production_speed_infrastructure_factor = 0.2
+		}
+	}
+	SGS_qingweikangju_idea = {
+		picture = scw_intervention_republicans_focus
+		modifier = {
+			political_power_factor = -0.1
+			stability_weekly = 0.001
+		}
+	}
+	SGS_zhengzaiyanjiuxianfa_idea = {
+		picture = generic_constitutional_guarantees
+		modifier = {
+			political_power_factor = -0.25
+			stability_weekly = 0.002
+		}
+	}
+	SGS_daguimotourudasha_idea = {
+		picture = generic_exploit_mines
+		modifier = {
+			production_speed_buildings_factor = -0.15
+		}
+	}
+	SGS_suoguo_idea = {
+		picture = generic_wall_line
+		modifier = {
+			generate_wargoal_tension = 0.5
+			justify_war_goal_time =  0.5
+			army_core_defence_factor = 0.1
+			army_core_attack_factor = 0.1
+			production_speed_bunker_factor = 0.3
+		}
+	}
+	SGS_anxingfazhan_idea = {
+		picture = generic_economic_increase
+		modifier = {
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 0.1
+			local_building_slots_factor = 0.1
+		}
+	}
+	SGS_dajixianzhe_idea = {
+		picture = spa_crusade_against_democracy
+		targeted_modifier = {
+		tag = OKI
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+	}
+	SGS_duiwaikuozhang_idea = {
+		picture = mex_callistas
+		modifier = {
+			generate_wargoal_tension = -0.3
+			justify_war_goal_time =  -0.3
+		}
+	}
+	SGS_zanshifangxiamaodun_idea = {
+		picture = caproni
+	}
+	SGS_lianmengjun_idea = {
+		picture = generic_reserve_divisions
+		modifier = {
+			army_infantry_attack_factor = 0.1
+			conscription = 0.015
+		}
+	}
+	
+	SGS_guojiarentong_idea = {
+		picture = generic_manpower_bonus
+		modifier = {
+			resistance_target = -0.1
+		}
+	}
+	SGS_yueguangbaoshe_idea = {
+		picture = hol_the_foundations_of_defense
+		modifier = {
+			political_power_gain = 0.1
+			stability_weekly = 0.001
+			war_support_weekly = 0.001
+		}
+	}
+	SGS_fanrongdemaoyi_idea = {
+		picture = can_wartime_prices_and_trade_board
+		modifier = {
+			consumer_goods_factor = -0.1
+			industrial_capacity_factory = 0.1
+			stability_factor = 0.05		
+		}
+	}
+	SGS_jiaoyukaizhi_idea = {
+		picture = generic_foreign_capital
+		modifier = {
+			consumer_goods_factor = 0.1
+		}
+	}
+	SGS_fuyudejiaoyuzijing_idea = {
+		picture = generic_economic_increase
+		modifier = {
+			research_speed_factor = 0.1
+		}
+	}
+	SGS_yaojingzhicheng_idea = {
+		picture = sgs_yaojingzhicheng2
+		modifier = {
+			research_speed_factor = 0.1
+			political_power_factor = 0.15
+			stability_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
+			industrial_capacity_factory = 0.1
+		}
+	}
+	SGS_nongyeqiji_idea = {
+		picture  = fra_market_dynamism
+		modifier = {
+			stability_factor = 0.1
+			monthly_population = 0.5
+		}
+	}
+	SGS_tiaozhenggongyezhong_idea = {
+		picture = generic_flexible_foreign_policy
+		modifier = {
+			political_power_cost = 0.1
+			production_speed_buildings_factor = -0.1
+			stability_weekly = 0.002
+			industrial_capacity_factory = -0.1
+		}
+	}
+	SGS_jixingdejingji2_idea = {
+		picture = chi_hyper_inflation2
+		modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.15
+			production_speed_buildings_factor =  -0.15
+		}
+	}
+	SGS_jixingdejingji3_idea = {
+		picture = chi_hyper_inflation3
+		modifier = {
+			consumer_goods_factor = 0.1
+			stability_factor = -0.1
+			production_speed_buildings_factor =  -0.1
+		}
+	}
+	SGS_jixingdejingji4_idea = {
+		picture = chi_hyper_inflation4
+		modifier = {
+			stability_factor = -0.05
+			production_speed_buildings_factor =  -0.05
+		}
+	}
+	SGS_fadadejingji_idea = {
+		picture = chi_hyper_inflation5
+		modifier = {
+			consumer_goods_factor = -0.05
+			stability_factor = 0.05
+			production_speed_buildings_factor =  0.05
+		}
+	}
+	SGS_yaojingpingmingchixie_idea = {
+		picture = chi_army_corruption2
+		modifier = {
+			required_garrison_factor = -0.2
+			resistance_target_on_our_occupied_states = 0.2
+			resistance_decay = 0.2
+			conscription_factor = 0.1
+			stability_factor = -0.15
+		}
+	}
+	SGS_kongzhishengchanziliao_idea = {
+		picture = tur_etatism
+		modifier = {
+			resistance_target = 0.1
+			compliance_growth = 0.2
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = -0.05
+		}	
+	}
+	SGS_gongzuodui_idea = {
+		picture = prc_low_popular_support3
+		modifier = {
+			compliance_growth = 0.2
+		}
+	}
+	SGS_junguantuan_idea = {
+		picture = tur_kemalist_officers
+		modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
+			max_planning = 0.1
+			planning_speed = 0.2
+			army_org_factor = 0.15
+			army_morale_factor = 0.2
+		}
+	}
+	
+	SGS_dazirandejundui_idea = {
+		picture = SGS_dazirandejundui
+		modifier = {
+			terrain_penalty_reduction = 0.30
+		}
+	}
+	
+	SGS_waijiejunshisixiang_idea = {
+		picture = spa_la_division_azul
+		modifier = {
+			org_loss_when_moving = -0.1
+			attrition = -0.05
+			army_speed_factor = 0.1
+		}
+	}
+	SGS_fenjianhuanruwupingzhong_idea = {
+		picture = man_five_year_plan_industry
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+	}
+	SGS_yingshenzhanshu_idea = {
+		picture = SGS_yingshenzhanzhu
+		modifier = {
+			breakthrough_factor = 0.1
+		}
+	}
+	SGS_xingguangzhenchawangluo_idea = {
+		picture = sgs_xingguangzhengchawangluo
+		modifier = {
+			recon_factor = 0.1
+			planning_speed = 0.1
+			army_intel_factor = 0.1
+		}
+	}
+	SGS_jixingdejingji_idea = {
+		picture = chi_hyper_inflation
+		modifier = {
+			consumer_goods_factor = 0.3
+			stability_factor = -0.2
+			production_speed_buildings_factor =  -0.2
+		}
+	}
+	MEL_junduihunluan_idea = {
+		picture = chi_incompetent_officers
+		modifier = {
+			army_org_factor = -0.1
+			army_morale_factor = -0.2
+			land_reinforce_rate = -0.2
+			planning_speed = -0.3
+			max_planning = -0.3
+		}
+	}
+	SGS_zhengguijun_idea = {
+
+	    	picture = generic_intel_bonus
+			modifier = {
+				army_org_factor = 0.10
+	    		army_morale_factor = 0.10
+				org_loss_when_moving = -0.10
+				conscription = 0.02
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				conscription_factor = 0.1
+				
+				
+			}
+      }	
+	SGS_yaojingyoujidui_idea = {
+
+	    	picture = generic_intel_bonus
+			removal_cost = -1
+        
+			modifier = {
+				army_org_factor = -0.10
+	    		army_morale_factor = -0.10
+				org_loss_when_moving = -0.2
+	    		army_core_attack_factor = 0.25
+	    		army_core_defence_factor = 0.25
+				resistance_growth_on_our_occupied_states = 0.25
+				pocket_penalty = -0.25
+				supply_consumption_factor = -0.2
+				out_of_supply_factor = -0.5
+				no_supply_grace = 72
+				conscription_factor = 0.2
+			}
+      }
+	SGS_yunshudui_idea = {
+		picture = prc_low_popular_support3
+		modifier = {
+			supply_node_range = 0.2
+		}
+	}
+	SGS_canmoubu_idea ={
+		picture = chi_wargaming_division
+		modifier = {
+			command_power_gain_mult = 0.2
+			max_command_power = 40
+			max_planning = 0.15
+			planning_speed = 0.3
+		}
+	}
+	
+	SGS_liangchanhuopao_idea = {
+		picture = sgs_liangchanhuopao
+		equipment_bonus = {
+			magic_energy_a = {
+				build_cost_ic = -0.15
+				instant = yes
+			}
+		}
+	}
+	
+	SGS_tiaowanghuanxiangxiang_idea = {
+		picture = _hol_gateway_to_europe
+		modifier = {
+			justify_war_goal_time = -0.3
+			generate_wargoal_tension = -0.3
+		}
+	}
+	SGS_zhanhouguihua_idea = {
+		picture = generic_political_support
+		modifier = {
+			production_speed_buildings_factor = 0.10
+			stability_weekly = 0.002
+			production_speed_infrastructure_factor = 0.5
+			industry_free_repair_factor = 1
+		}
+	}
+	SGS_pangdadeguanliaoxitong_idea = {
+		picture = generic_pp_unity_bonus
+		modifier = {
+			LS_subject_level_low_time_factor = -0.3
+			political_power_factor = -0.1
+		}
+	}
+	SGS_yihaozuozhan_idea = {
+		picture = FRA_scw_intervention_nationalists_focus
+		targeted_modifier = {
+			tag = AKI
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+		targeted_modifier = {
+			tag = GH2
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+		targeted_modifier = {
+			tag = GH3
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+		targeted_modifier = {
+			tag = HU3
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+		targeted_modifier = {
+			tag = MEL
+			attack_bonus_against = 0.2
+			defense_bonus_against = 0.2
+		}
+	}
+	 CIR_sanyuejingdeqiankuan_idea = {
+			picture = SPR_seize_the_gold_reserves
+
+		}
+		CIR_shoukuan_idea = {
+			picture = generic_foreign_capital
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		CIR_zhiyuansanyuejing_idea = {
+			picture = tur_balkan_central_bank_wealthy_greece
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+	 YUK_yaojingdebangzhu_idea = {
+        
+		picture = SPA_duty_to_work
+
+        available = {
+			YUK = {is_subject = no}
+			NOT = {has_war_with = SGS}
+			SGS = {is_subject = no}
+		}
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+
+	    	modifier = {
+          production_speed_buildings_factor = 0.05
+	    	}
+      }
+	SGS_jianhuafukashengchan_idea = {
+		picture = sgs_jianhuafukashengchan
+		equipment_bonus = {
+			magic_core_a = {
+				build_cost_ic = -0.2
+				reliability = -0.05
+				instant = yes
+			}
+		}	
+	}
+	SGS_mingbingxunlianfaan_idea = {
+		picture = generic_manpower_bonus
+		available = {
+			num_of_factories < 50
+		}
+		modifier = {
+			conscription = 0.02
+			training_time_army_factor = -0.1
+		}
+	}
+	SGS_pingmingyunshudui_idea = {
+		picture = prc_low_popular_support3
+		available = {
+			num_of_factories < 40
+		}
+		modifier = {
+			supply_node_range = 0.5
+		}
+	}
+	SGS_zhanzhengguihuaju_idea = {
+		picture = sgs_zhanzhengguihuaju
+		modifier = {
+			attrition = -0.05
+			production_speed_arms_factory_factor = 0.05
+			mobilization_speed = 0.1
+			
+		}
+	}
+	SGS_lingshicanmoubu_idea = {
+		picture = chi_wargaming_division
+		modifier = {
+			command_power_gain_mult = 0.2
+			max_command_power = 30
+			max_planning = 0.1
+			planning_speed = 0.2
+		}
+	}
+	SGS_pushedaolu_idea = {
+		picture = generic_exploit_mines
+		modifier = {
+			production_speed_buildings_factor = -0.8
+		}
+	}
+	SGS_yaojinglingxiu_idea ={
+		picture = vittoria_mutilata
+		modifier = {
+			war_support_factor = 0.2
+			justify_war_goal_time = -0.3
+			surrender_limit = 0.2
+		
+		}
+		rule = {
+			can_create_factions = yes
+		}
+	}
+	SGS_zhenyayizu_idea = {
+		picture = generic_oppression
+		modifier = {
+			resistance_target = -0.2
+			resistance_decay = 0.3
+			stability_factor = -0.1
+		}
+	}
+	SGS_yaojingweidui_idea = {
+		picture = chi_army_corruption3
+		modifier = {
+			army_org_factor = 0.1
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.05
+		}
+	}
+	
+	SGS_yaojingwansui_idea = {
+		picture = generic_fascism_drift_2
+		modifier = {
+			consumer_goods_factor = -0.05
+			monthly_population = 0.2
+			neworder_drift = 0.15
+			conscription_factor = -0.1
+			
+		}
+	}
+	
+	SGS_huankuan_idea = {
+		picture = sgs_huankuan
+		modifier = {
+			consumer_goods_factor = 0.2
+		}
+	}
+	SGS_qiankuan_idea = {
+		picture = sgs_qiankuan
+		modifier = {
+			
+		}
+	}
+	SGS_gaishanjiaotong_idea = {
+		
+		picture = FRA_motorized_focus
+		
+		modifier = {
+			industrial_capacity_factory = 0.05
+			production_speed_infrastructure_factor = 0.2
+		}
+	}
+	SGS_zhengzaikaifadetudi_idea = {
+		
+		picture = sgs_zhengzaikaifadetudi
+		
+		modifier = {
+		global_building_slots_factor = 0.10
+		}
+		
+		}
+
+		
+
+		SGS_yuanshidetudi_idea = {
+		
+			picture = sgs_shangweikaifadetudi
+		
+			modifier = {
+				global_building_slots_factor = -0.10
+				stability_factor = 0.1
+			}
+		
+		}
+		
+		SGS_zhiyejiaoyu_idea = {
+		
+			picture = generic_production_bonus
+		
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		SGS_gaodengjiaoyu_idea = {
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				research_speed_factor = 0.15
+	    	}
+	    }
+		SGS_jichujiaoyu_idea = {
+
+			picture = sgs_kaizhangjiaoyu
+
+			modifier = {
+				research_speed_factor = 0.05
+	    	}
+	    }
+		SGS_tuanjiexieding_idea = {
+	    	picture = HUN_treaty_of_triannon
+	    	allowed = {
+				always = no
+			}
+
+			available = {
+				is_subject = no
+				NOT = { SGS = { has_war_with = MEL } }
+				country_exists = SGS
+				country_exists = MEL
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = 0.10
+				surrender_limit = 0.10
+			}
+
+	    }
+
+      SGS_fa_guerrillas_idea = {
+
+	    	picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+
+			available = {
+          
+			}
+
+			allowed_civil_war = {
+			}
+        
+			removal_cost = -1
+        
+			modifier = {
+				army_org_factor = -0.10
+	    		army_morale_factor = -0.10
+				org_loss_when_moving = -0.10
+	    		army_core_attack_factor = 0.25
+	    		army_core_defence_factor = 0.25
+				resistance_growth_on_our_occupied_states = 0.25
+				pocket_penalty = -0.25
+				supply_consumption_factor = -0.10
+				out_of_supply_factor = -0.5
+				no_supply_grace = 48
+				conscription_factor = 0.2
+			}
+      }	
+
+    
+
+		SGS_captanul_idea = {
+			picture = vittoria_mutilata
+	    	allowed = {
+				always = no
+			}
+
+			
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = 0.25
+
+			}
+			research_bonus = {
+
+			}
+		}
+		
+	}
+	
+	hidden_ideas = {
+		SGS_shizhanhuaezuoju_idea = {
+			modifier = {
+				army_defence_factor = 0.1
+			}
+		}
+		SGS_yaojingdewenhua_idea = {
+			modifier = {
+				CONV_convert_cost_factor = -0.1
+			}
+		}
+		SGS_yaojingsixiangyanjiu_idea = {
+			modifier = {
+				OL_daily_gain = -0.1
+			}
+		}
+		SGS_jingjigongyefaan_idea = {
+			modifier = {
+				conscription_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				industry_free_repair_factor = 0.15
+				industrial_capacity_factory = 0.1
+			}	
+		}
+		SGS_xuanchuangongshi_idea = {
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
+		SGS_shiyongyaojingliliang_idea = {
+			modifier = {
+				conscription_factor = -0.05
+			}
+		}
+		SGS_jianjieganshe_idea = {
+			modifier = {
+				send_volunteer_size = 4
+			}
+		}
+		SGS_zhanzhengdongyuan_idea = {
+			available = {
+				num_of_factories < 40
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		SGS_xinanhuanxiangxiangzhiguang_idea = {
+			modifier = {
+				PO_RULE_no_bad_influence = 1
+			}
+		}
+		
+		SGS_qianyimohua_idea = {
+			modifier = {
+				compliance_growth = 0.1
+				political_power_factor = -0.05
+				stability_weekly = 0.001
+			}
+		}
+		SGS_xinaoyizu_idea = {
+			modifier = {
+				resistance_target = 0.1
+				compliance_growth = 0.15
+			}
+		}
+		SGS_jiejishehui_idea = {
+			modifier = {
+				ST_race_penalty_all_factor = 0.10
+				stability_factor = 0.1
+				resistance_growth = 0.1
+			}
+		}
+		 SGS_kaicaiziyuan_idea = {
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		SGS_linglitongxunxitong_idea = {
+			modifier = {
+				land_reinforce_rate = 0.02
+			}
+		}
+		SGS_saomangyundong_idea = {
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		SGS_waizi_idea = {
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		SGS_zhongzhulianhe_idea = {
+			modifier = {
+				CONV_RULE_cannot_convert = 1
+			}
+		}
+		SGS_caogenyaoguai_idea = {
+			modifier = {
+				army_morale_factor = 0.1
+				mobilization_speed = 0.1
+				training_time_army_factor = -0.05
+			}
+		}
+		SGS_shenming_idea = {
+			modifier = {
+				supply_consumption_factor = -0.05
+				attrition = -0.05
+			}
+		}
+		SGS_tiangou_idea = {
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+		SGS_hetong_idea = {
+			modifier = {
+				research_speed_factor = 0.08
+			}
+		}
+		SGS_yaoguai_idea = {
+			modifier = {
+				army_infantry_attack_factor = 0.07
+				army_infantry_defence_factor = 0.07
+			}
+		}
+		SGS_youling_idea = {
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		SGS_fashi_idea = {
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_artillery_attack_factor = 0.05
+			}
+		}
+		SGS_renlei_idea = {
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		SGS_yaoshou_idea = {
+			modifier = {
+				land_night_attack = 0.15
+			}
+		}
+		SGS_shenhuapingdenglinian_idea = {
+			modifier = {
+				ST_race_penalty_all_factor = -0.15
+			}	
+		}
+		
+		SGS_wanquanlianhecaogenyaogai_idea = {
+			modifier = {
+				CO_auto_core_Pri_youkai = 1
+			}
+		}
+		SGS_wanquanlianheshenming_idea = {
+			modifier = {
+				CO_auto_core_God = 1
+			}
+		}
+		SGS_wanquanlianhetiangou_idea = {
+			modifier = {
+				CO_auto_core_Tengu = 1
+			}
+		}
+		SGS_wanquanlianhehetong_idea = {
+			modifier = {
+				CO_auto_core_Kappa = 1
+			}
+		}
+		SGS_wanquanlianheyaoguai_idea = {
+			modifier = {
+				CO_auto_core_Youkai = 1
+			}
+		}
+		SGS_wanquanlianheyaojing_idea = {
+			modifier = {
+				CO_auto_core_Fairy = 1
+			}
+		}
+		SGS_wanquanlianheyouling_idea = {
+			modifier = {
+				CO_auto_core_Ghost = 1
+			}
+		}
+		SGS_wanquanlianhefashi_idea = {
+			modifier = {
+				CO_auto_core_Magician = 1
+			}
+		}
+		SGS_wanquanlianherenlei_idea = {
+			modifier = {
+				CO_auto_core_Human = 1
+			}
+		}
+		SGS_wanquanlianheyaoshou_idea = {
+			modifier = {
+				CO_auto_core_Beast = 1
+			}
+		}
+		SGS_xiudashaxiaoguo_1_idea = {
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.08
+				stability_factor = 0.1
+			}
+		}
+		SGS_xiudashaxiaoguo_2_idea = {
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.08
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				resistance_decay = 0.1
+				compliance_growth = 0.1
+				mobilization_laws_cost_factor = -0.15
+				economy_cost_factor = -0.15
+			}
+		}
+		SGS_xiudashaxiaoguo_3_idea = {
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.08
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				resistance_decay = 0.1
+				compliance_growth = 0.1
+				mobilization_laws_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+		SGS_zenjiayaojinjueyiceng_idea = {
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		SGS_yaojingzhengbingfaan_idea = {
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.15
+				consumer_goods_factor = 0.08
+			}
+		}
+		
+		SGS_jingjijingling_idea = {
+			modifier = {
+				stability_factor = 0.15
+				conscription_factor = -0.15
+				industrial_capacity_factory = -0.05
+				resistance_decay = 0.25
+				resistance_target = -0.05
+				
+			}
+		}
+		SGS_zhengshoufaan_idea = {
+			modifier = {
+				political_power_factor = -0.25
+				consumer_goods_factor = -0.08
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = 0.1
+				supply_node_range = 0.2
+			}
+		}
+		SGS_yaojinggeminghuiyi_idea = {
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		SGS_zhengzhijizhongfaan_idea = {
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.25
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+		SGS_yurenleijiaohao_idea = {
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.15
+				HMIF_daily_base = 0.03
+				
+			}
+		}
+		SGS_zhenghekongzhiqu_idea = {
+			modifier = {
+				LS_subject_level_low_time_factor = -0.5
+				LS_subject_level_low_pp_cost = -0.5
+			}
+		}
+		SGS_yaojingzhixuzongguanju_idea = {
+			modifier = {
+				political_power_gain = -0.05
+			}
+		}
+		SGS_jingbiaocaigouzhi_idea = {
+			modifier = {
+				industrial_capacity_factory = 0.03
+			}
+		}
+		SGS_jiquandu_1_idea = {
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SGS_jiquandu_2_idea = {
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = 0.10
+				production_speed_buildings_factor = 0.1
+				compliance_growth = 0.1
+				army_org_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SGS_jiquandu_3_idea = {
+			modifier = {
+				political_power_factor = 0.3
+				stability_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				compliance_growth = 0.15
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		SGS_tianxiandui_idea = {
+			modifier = {
+				local_resources_factor = 0.05
+			}
+		}
+		SGS_lianxizhanlingquyaojing_idea = {
+			modifier = {
+				political_power_gain = -0.2
+			}
+		}
+		SGS_zhaomuhetong_idea = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SGS_ewaizhaomuhetong_idea = {
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SGS_zhongzujvjv_idea = {
+			modifier = {
+				ST_race_penalty_all_factor = 0.05
+			}
+		}
+		SGS_zhongzujiaocuozajv_idea = {
+			modifier = {
+				ST_race_penalty_all_factor = -0.05
+			}
+		}
+		SGS_fuzadexingdong_idea = {
+			modifier = {
+				stability_weekly = -0.001
+			}
+		}
+}

@@ -3,4 +3,14 @@ spriteTypes = {
 		name = "GFX_modifiers_hum_human_exile"
 		textureFile = "gfx/interface/state_modifiers/modifiers_hum_human_exile.png"
 	}
+
+	spriteType = {
+		name = "GFX_modifiers_sw_undeveloped_land"
+		textureFile = "gfx/interface/state_modifiers/modifiers_sw_undeveloped_land.png"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_sw_unexplored_land"
+		textureFile = "gfx/interface/state_modifiers/modifiers_sw_unexplored_land.png"
+	}
 }

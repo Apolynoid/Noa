@@ -1,0 +1,1075 @@
+ideas = {
+  country = {
+  
+    MEL_Establish_General_Staff_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Establish_General_Staff
+      #desc = MEL_Establish_General_Staff_desc
+			removal_cost = -1
+
+			picture = general_staff
+      
+      modifier = {
+        planning_speed = 0.25
+        max_command_power = 15
+        command_power_gain_mult = 0.05
+      }
+    }
+    
+    MEL_Establish_General_Staff_idea_2 = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Establish_General_Staff
+      #desc = MEL_Establish_General_Staff_desc
+			removal_cost = -1
+
+			picture = general_staff
+      
+      modifier = {
+        planning_speed = 0.25
+        max_command_power = 25
+        command_power_gain_mult = 0.15
+        land_reinforce_rate = 0.05
+        army_leader_start_planning_level = 1
+        army_leader_start_logistics_level = 1
+      }
+    }
+    
+    MEL_Medicine_Arms_Complex_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Medicine_Arms_Complex
+      #desc = MEL_Medicine_Arms_Complex_desc
+      available = {
+        is_subject = no
+      }
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+      
+      modifier = {
+        conscription_factor = -0.05
+        production_speed_arms_factory_factor = 0.10
+        production_speed_bunker_factor = 0.05
+        production_speed_infrastructure_factor = 0.05
+        production_speed_air_base_factor = 0.05
+      }
+      
+      research_bonus = {
+				build = 0.05
+        jiegou = 0.05
+        primary_weapons = 0.05
+        primary_weapons = 0.05
+        mortar = 0.05
+        mortar = 0.05
+			}
+    }
+    
+    MEL_Medicine_Arms_Complex_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Medicine_Arms_Complex
+      #desc = MEL_Medicine_Arms_Complex_desc
+      available = {
+        is_subject = no
+      }
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+      
+      modifier = {
+        production_speed_arms_factory_factor = 0.10
+        production_speed_bunker_factor = 0.05
+        production_speed_infrastructure_factor = 0.05
+        production_speed_air_base_factor = 0.05
+        weekly_manpower = 2
+      }
+      
+      research_bonus = {
+				build = 0.05
+        jiegou = 0.05
+        primary_weapons = 0.05
+        primary_weapons = 0.05
+        mortar = 0.05
+        mortar = 0.05
+			}
+    }
+    
+    MEL_Credit_Bank_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Credit_Bank
+      #desc = MEL_Credit_Bank_desc
+      
+      available = {
+        is_subject = no
+      }
+
+			removal_cost = -1
+
+			picture = SPR_seize_the_gold_reserves
+      
+      modifier = {
+        consumer_goods_factor = -0.03
+        political_power_gain = 0.10
+      }
+      
+      research_bonus = {
+				main = 0.05
+        fuzhu = 0.05
+			}
+    }
+  
+    ####
+      
+    MEL_messy_economy_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_messy_economy
+      #desc = MEL_messy_economy_desc
+			removal_cost = -1
+
+			picture = SPA_national_recovery
+      
+      modifier = {
+        production_speed_industrial_complex_factor = -0.15
+        industrial_capacity_factory = -0.10
+        political_power_factor = -0.10
+        stability_factor = -0.10
+      }
+    
+    }
+    
+    MEL_messy_economy_idea_1 = {
+      allowed = {
+				always = no
+			}
+      name = MEL_messy_economy
+      #desc = MEL_messy_economy_desc
+			removal_cost = -1
+
+			picture = SPA_national_recovery
+      
+      modifier = {
+        production_speed_industrial_complex_factor = -0.05
+        industrial_capacity_factory = -0.10
+        political_power_factor = -0.10
+      }
+    
+    }
+    
+    MEL_convallariae_Plant_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_convallariae_Plant
+      #desc = MEL_convallariae_Plant_desc
+			removal_cost = -1
+
+			picture = generic_local_self_management
+      
+      modifier = {
+        consumer_goods_factor = -0.025
+        global_building_slots_factor = 0.15
+        local_resources_factor = 0.10
+      }
+    
+    }
+    
+    MEL_Opium_Plant_idea = {
+      allowed = {
+				always = no
+			}
+			removal_cost = -1
+      name = MEL_Opium_Plant
+      #desc = MEL_Opium_Plant_desc
+
+			picture = prc_permit_opium_trade
+      
+      modifier = {
+        consumer_goods_factor = -0.10
+        army_org_factor = -0.05
+        political_power_factor = -0.10
+      }
+    }
+    
+    MEL_Stimulant_idea = {
+      allowed = {
+				always = no
+			}
+			removal_cost = -1
+      name = MEL_Stimulant
+      #desc = MEL_Stimulant_desc
+
+			picture = generic_flexible_foreign_policy
+      
+      modifier = {
+        army_attack_factor = 0.10
+        army_defence_factor = 0.05
+        supply_consumption_factor = 0.05
+        attrition = 0.03
+      }
+    }
+      
+    #### 
+    
+    MEL_infiltration_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_infiltration
+      #desc = MEL_infiltration_desc
+      removal_cost = -1
+
+			picture = generic_secret_police
+
+			modifier = {
+         operative_slot = 1
+         resistance_damage_to_garrison = -0.20
+			}
+    }
+    
+    
+    MEL_Shatter_the_Revolution_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Shatter_the_Revolution
+      #desc = MEL_Shatter_the_Revolution_desc
+      removal_cost = -1
+
+			picture = SPR_crush_the_revolution
+      
+      targeted_modifier = {
+        tag = GH1
+        attack_bonus_against = 0.20
+      }
+      targeted_modifier = {
+        tag = GH1
+        defense_bonus_against = 0.20
+      }
+      
+      targeted_modifier = {
+        tag = GH2
+        attack_bonus_against = 0.20
+      }
+      targeted_modifier = {
+        tag = GH2
+        defense_bonus_against = 0.20
+      }
+      
+      targeted_modifier = {
+        tag = GH3
+        attack_bonus_against = 0.20
+      }
+      targeted_modifier = {
+        tag = GH3
+        defense_bonus_against = 0.20
+      }
+    }
+    
+    MEL_cannon_on_position_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_cannon_on_position
+      #desc = MEL_cannon_on_position_desc
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+      
+      equipment_bonus = {
+				mortar_a = {
+					build_cost_ic = -0.1 instant = yes
+          reliability = 0.05
+				}
+			}
+    
+    }
+    
+    MEL_Small_Arms_Focus_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Small_Arms_Focus
+      #desc = MEL_Small_Arms_Focus_desc
+			removal_cost = -1
+
+			picture = HUN_secret_rearmament
+      
+      equipment_bonus = {
+				gun_a = {
+					build_cost_ic = -0.1 instant = yes
+          reliability = 0.05
+				}
+        magic_core_a = {
+          build_cost_ic = -0.1 instant = yes
+          reliability = 0.05
+        }
+			}
+    
+    }
+    
+    MEL_Defeat_Imperialism_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Defeat_Imperialism
+      #desc = MEL_Defeat_Imperialism_desc
+			removal_cost = -1
+
+			picture = SPR_anti_fascist_crusade
+      
+      targeted_modifier = {
+        tag = HU3
+        attack_bonus_against = 0.20
+      }
+      targeted_modifier = {
+        tag = HU3
+        defense_bonus_against = 0.20
+      }
+    }
+  
+    MEL_Ingredients_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Ingredients
+      #desc = MEL_Ingredients_desc
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+         trade_opinion_factor = 0.25
+         justify_war_goal_time = -0.20
+			}
+    }
+  
+    MEL_Infrastructure_Committee_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Infrastructure_Committee
+      #desc = MEL_Infrastructure_Committee_desc
+			removal_cost = -1
+
+			picture = por_hydroelectric_power
+
+			modifier = {
+         production_speed_infrastructure_factor = 0.10
+         political_power_gain = -0.10
+			}
+    }
+    
+    MEL_Infrastructure_Committee_idea_2 = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Infrastructure_Committee
+      #desc = MEL_Infrastructure_Committee_desc
+			removal_cost = -1
+
+			picture = por_hydroelectric_power
+
+			modifier = {
+         production_speed_infrastructure_factor = 0.20
+         global_building_slots_factor = 0.20
+         consumer_goods_factor = 0.025
+         political_power_gain = -0.15
+			}
+    }
+  
+    MEL_Chemistry_Lab_idea = { 
+      allowed = {
+				always = no
+			}
+      name = MEL_Chemistry_Lab
+      #desc = MEL_Chemistry_Lab_desc
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+
+			modifier = {
+         research_speed_factor = 0.05
+			}
+    }
+    
+    MEL_Chemistry_Lab_Enhancement_idea = { 
+      allowed = {
+				always = no
+			}
+      name = MEL_Chemistry_Lab
+      #desc = MEL_Chemistry_Lab_desc
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+
+			modifier = {
+         research_speed_factor = 0.05
+         training_time_army_factor = -0.20
+			}
+    }
+    
+    MEL_Chemistry_Lab_Physical_idea = { 
+      allowed = {
+				always = no
+			}
+      name = MEL_Chemistry_Lab
+      #desc = MEL_Chemistry_Lab_desc
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+
+			modifier = {
+         research_speed_factor = 0.05
+         production_speed_arms_factory_factor = 0.075
+			}
+    }
+    
+    MEL_Chemistry_Lab_Mental_idea = { 
+      allowed = {
+				always = no
+			}
+      name = MEL_Chemistry_Lab
+      #desc = MEL_Chemistry_Lab_desc
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+
+			modifier = {
+         research_speed_factor = 0.05
+         consumer_goods_factor = -0.05
+			}
+    }
+    
+    MEL_mustard_gas_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_mustard_gas
+      #desc = MEL_mustard_gas_desc
+			removal_cost = -1
+
+			picture = the_long_lance
+
+			equipment_bonus = {
+				mortar_a = {
+					build_cost_ic = 0.10 instant = yes
+          soft_attack = 0.20
+				}
+        gun_a = {
+          soft_attack = 0.05
+          hard_attack = 0.05
+          instant = yes
+        }
+			}
+    }
+    
+    MEl_focus_youkai_hormone_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEl_focus_youkai_hormone
+      #desc = MEl_focus_youkai_hormone_desc
+			removal_cost = -1
+
+			picture = air_war_plans_division
+      
+      modifier = {
+        
+        army_org_factor = 0.15
+      }
+
+			# equipment_bonus = {
+   #      infantry = {
+   #        breakthrough = 0.15
+   #      }
+			# }
+    }
+    
+    MEL_hallucinogen_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_hallucinogen
+      #desc = MEL_hallucinogen_desc
+
+			removal_cost = -1
+
+			picture = vittoria_mutilata
+      
+      modifier = {
+        resistance_damage_to_garrison = -0.20
+        army_morale_factor = 0.15
+      }
+    }
+    
+    MEL_hallucinogen_idea_1 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_hallucinogen
+      #desc = MEL_hallucinogen_desc
+      
+			removal_cost = -1
+
+			picture = vittoria_mutilata
+      
+      modifier = {
+        resistance_damage_to_garrison = -0.20
+        army_morale_factor = 0.15
+        compliance_gain = 0.01
+        non_core_manpower = 0.002
+      }
+    }
+    
+    MEL_village_unification_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_village_unification
+      #desc = MEL_village_unification_desc
+			removal_cost = -1
+
+			picture = generic_production_bonus
+      
+      modifier = {
+        production_speed_industrial_complex_factor = 0.05
+        global_building_slots_factor = 0.1
+      }
+    }
+    
+    MEL_Prepare_for_Battle_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Prepare_for_Battle
+      #desc = MEL_Prepare_for_Battle_desc
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+      
+      modifier = {
+        training_time_factor = -0.20
+        minimum_training_level = -0.20
+      }
+    }
+    
+    MEL_State_Defence_Committee_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_State_Defence_Committee
+      #desc = MEL_State_Defence_Committee_desc
+			removal_cost = -1
+
+			picture = por_the_fifth_empire
+      
+      modifier = {
+        min_export = -0.20
+        army_core_attack_factor = 0.10
+        army_core_defence_factor = 0.20
+      }
+    }
+    
+    MEL_Levy_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_Levy
+      #desc = MEL_Levy_desc
+			removal_cost = -1
+
+			picture = chi_forced_conscription
+      
+      modifier = {
+        local_resources_factor = 0.25
+        # conscription_factor = 0.25
+        consumer_goods_factor = 0.03
+      }
+    }
+    
+    MEL_agriculture_pricing_committee_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_agriculture_pricing_committee
+      #desc = MEL_agriculture_pricing_committee_desc
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantee
+      
+      modifier = {
+        production_speed_industrial_complex_factor = 0.10
+        stability_factor = 0.10
+        political_power_gain = 0.25
+      }
+    }
+    
+    MEL_technology_reinforcement_99_idea = {
+      allowed = {
+        always = no
+      }
+      name = MEL_technology_reinforcement_99
+      #desc = MEL_technology_reinforcement_99_desc
+      removal_cost = -1
+
+      picture = generic_research_bonus
+      
+      research_bonus = {
+        primary_weapons = 0.15
+        primary_weapons = 0.05
+      }
+   }
+    
+   ######
+    MEL_unorganized_militia_idea = {  # 民兵团idea起始
+      allowed = {
+				always = no
+			}
+      name = MEL_militia_0
+      #desc = MEL_militia_0_desc
+			allowed_civil_war = {
+				 # has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = por_unstable_republic
+
+			modifier = {
+        conscription = 0.01
+        army_morale_factor = -0.10
+        army_org_factor = -0.10
+        army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.05
+			}
+    }
+    
+    MEL_militia_0_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_militia_0
+      #desc = MEL_militia_0_desc
+			allowed_civil_war = {
+				 # has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = por_unstable_republic
+
+			modifier = {
+          conscription = 0.05
+          army_morale_factor = -0.10
+					army_org_factor = -0.10
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
+			}
+    }
+    
+    MEL_militia_1_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_militia_0
+      #desc = MEL_militia_0_desc
+			allowed_civil_war = {
+				 # has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = por_unstable_republic
+
+			modifier = {
+          conscription = 0.05
+          mobilization_speed = 0.10
+          stability_factor = 0.10
+					army_org_factor = -0.10
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
+			}
+    }
+    
+    MEL_militia_2_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_militia_0
+      #desc = MEL_militia_0_desc
+			allowed_civil_war = {
+				 # has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = por_unstable_republic
+
+			modifier = {
+          conscription = 0.05
+          mobilization_speed = 0.15
+          stability_factor = 0.10
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
+          army_attack_factor = 0.05
+          army_defence_factor = 0.05
+          experience_gain_army_factor = 0.05
+			}
+    }
+    
+    MEL_militia_3_idea = {
+      allowed = {
+				always = no
+			}
+      name = MEL_militia_0
+      #desc = MEL_militia_0_desc
+			allowed_civil_war = {
+				 # has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = por_unstable_republic
+
+			modifier = {
+          conscription = 0.05
+          mobilization_speed = 0.15
+          stability_factor = 0.10
+          army_org_factor = 0.10
+          army_morale_factor = 0.10
+          army_attack_factor = 0.10
+          army_defence_factor = 0.10
+          experience_gain_army_factor = 0.10
+			}
+    }
+    
+    MEL_staggering_profits_idea = {
+      allowed = {
+				always = no
+			}
+      
+      available = { NOT = { has_war_with = MEL } }
+      
+      name = MEL_staggering_profits
+      
+			removal_cost = -1
+
+			picture = ger_mefo_bills_payment
+      
+      modifier = {
+        stability_factor = -0.05
+      }
+      
+      targeted_modifier = { 
+        tag = MEL 
+        extra_trade_to_target_factor = 0.30
+        trade_cost_for_target_factor = -0.50
+        cic_to_target_factor = 0.15
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      #desc = MEL_Shared_civil_refuse_collection_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.05
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      #desc = MEL_Shared_civil_refuse_collection_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.05
+        research_speed_factor = 0.02
+        local_resources_factor = 0.10
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_Methane_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      #desc = MEL_Shared_civil_refuse_collection_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.05
+        research_speed_factor = 0.05
+        local_resources_factor = 0.10
+        production_speed_gas_factory_factor = 0.15
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_Methane_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.05
+        research_speed_factor = 0.075
+        local_resources_factor = 0.10
+        production_speed_gas_factory_factor = 0.15
+        production_speed_fuel_silo_factor = 0.15
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_Crematory_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.075
+        research_speed_factor = 0.02
+        local_resources_factor = 0.10
+        production_speed_industrial_complex_factor = 0.10    
+      }
+    
+    }
+    
+    MEL_Shared_Refuse_Smoke_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_Refuse_Smoke
+      #desc = MEL_Shared_Refuse_Smoke_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+      
+      modifier = {
+        army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.10
+      }
+    }
+    
+    MEL_Shared_Refuse_Smoke_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_Simplified_Cl
+      #desc = MEL_Shared_Simplified_Cl_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+      
+      modifier = {
+        army_core_attack_factor = 0.10
+        army_core_defence_factor = 0.10
+      }
+      
+      equipment_bonus = {
+        infantry = { 
+          instant = yes
+          soft_attack = 0.10
+        }   
+      }
+    }
+    
+    MEL_Shared_civil_refuse_collection_Crematory_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_civil_refuse_collection
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = jap_zaibatsu
+      
+      modifier = {
+        consumer_goods_factor = -0.075
+        research_speed_factor = 0.02
+        local_resources_factor = 0.10
+        production_speed_industrial_complex_factor = 0.10 
+        industrial_capacity_factory = 0.10
+        production_factory_max_efficiency_factor = 0.05
+        line_change_production_efficiency_factor = 0.05
+      }
+    
+    }
+    
+    MEL_Shared_military_refuse_center_idea = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_military_refuse_center
+      #desc = MEL_Shared_military_refuse_center_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+      
+      modifier = {
+        custom_modifier_tooltip = MEL_daily_weapon_acquire_1
+      }
+    }
+    
+    MEL_Shared_military_refuse_center_idea_2 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_military_refuse_center
+      #desc = MEL_Shared_military_refuse_center_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+      
+      modifier = {
+        custom_modifier_tooltip = MEL_daily_weapon_acquire_2
+      }
+    }
+    
+    MEL_Shared_military_refuse_center_idea_3 = {
+      allowed = {
+				always = no
+			}
+      
+      name = MEL_Shared_military_refuse_center
+      #desc = MEL_Shared_military_refuse_center_desc
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+      
+      modifier = {
+        production_speed_arms_factory_factor = 0.10
+        custom_modifier_tooltip = MEL_daily_weapon_acquire_2
+      }
+    }
+    
+    MEL_Shared_Material_Science_idea = {
+      
+      available = { MEL_Pact_of_Union_Check = yes }
+
+			removal_cost = -1
+      
+      name = MEL_Shared_Material_Science
+
+			picture = generic_license_production
+      
+      equipment_bonus = {
+        gun_a = { 
+          soft_attack = 0.05
+          hard_attack = 0.35
+          reliability = 0.10
+        }
+        magic_core_a = { 
+          soft_attack = 0.05
+          hard_attack = 0.35
+          reliability = 0.10
+        }
+      }
+    }
+    MEL_Emergency_idea = {
+      name = MEL_Emergency
+      picture = FRA_national_mobilization_focus
+      modifier = {
+        EXHC_increase_period_factor = 0.2
+      }
+    }
+    MEL_War_Game_idea = {
+      name = MEL_War_Game
+      picture = FRA_national_mobilization_focus
+      modifier = {
+        EXHC_increase_period_factor = 0.2
+      }
+    }
+    MEL_Total_War_idea = {
+      name = MEL_Total_War
+      picture = FRA_national_mobilization_focus
+      modifier = {
+        EXHC_increase_period_factor = 0.2
+      }
+    }
+    MEL_Convallariae_Nationalism_idea = {
+      name = MEL_Convallariae_Nationalism
+      picture = FRA_national_mobilization_focus
+      modifier = {
+        EXHC_increase_period_factor = 0.2
+      }
+    }
+    
+  }
+}

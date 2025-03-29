@@ -70,4 +70,10 @@
         fandong = 5
         oldgenso = 95
     }
+
+    recruit_character = SKI_ski
+    recruit_character = SKI_nwt
+    recruit_character = KMC_elis
+    recruit_character = KMC_sariel
+    recruit_character = KMC_kmc
 }

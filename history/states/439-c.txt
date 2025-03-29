@@ -1,0 +1,30 @@
+state={
+	id=439
+	name="STATE_439"
+	provinces={
+		6079 6084 6090 6094 6099 6107 6109 6113 
+	}
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=3.000
+		crystal=1.000
+	}
+	history={
+		146.1.1 = {
+			owner = URM
+			add_core_of = URM	
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+	}
+	manpower=9677.0
+	state_category=s2
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

@@ -66,78 +66,11 @@ FAPO_situation = {
 	priority = 12
 }
 #20以上为国家特有
-SW_battle = { #
-	priority = 20
-}
 TH_bamboo = { #
 	priority = 20
 }
 YUK_dikanglinianchuanbo_category = {
 	priority = 20
-}
-SGS_jiefangyaojingtongbao_category = {
-	priority = 20
-}
-SGS_kaicaiziyaun_category = {
-	priority = 20
-}
-SGS_xinanhuanxiangxianggongyehua_category = {
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SGS_xinanhuanxiangxianggongyehua
-		tag = SGS
-	}
-	priority = 70
-}
-SGS_jiquandu_category = {
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SGS_qingzhuerxiadexingguang
-		tag = SGS
-	}
-	priority = 99
-}
-SGS_zhongzhinongzuowu_category = {
-	priority = 20
-}
-SGS_anliuyongdong_category = {
-	priority = 20
-}
-SGS_lingshifaan_category = {
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SGS_wanshanjingjiyufalv
-		tag = SGS
-	}
-	priority = 99
-}
-SGS_jianlixinanyihuidasha_category = {
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SGS_jianlixinanyihuidasha
-		tag = SGS
-	}
-	priority = 99
-}
-SGS_zhongzulianhe_category = {
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SGS_jingmideyueguang
-		tag = SGS
-	}
-	priority = 99
-}
-SGS_zaitaiyanghuatianhuodong_category = {
-	priority = 20
-}
-SGS_xinaoyizu_category = {
-	priority = 20
-}
-SGS_kaifatudi_category = {
-    priority = 20
-}
-SGS_jieshouyaojingnanmin_category = {
-    priority = 20
 }
 MRY_kejigexin = {
 	priority = 20
@@ -149,15 +82,6 @@ SRB_category = {
 	priority = 20
 }
 th_beasts_category = {
-	priority = 20
-}
-AKI_bingtongyiti_category = {
-	priority = 20
-}
-AKI_tongyiwuyuanzhong_category = {
-	priority = 20
-}
-AKI_kaifawuyuanzhong_category = {
 	priority = 20
 }
 CLO_gongye_category = {

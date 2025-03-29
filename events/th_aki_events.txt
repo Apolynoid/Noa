@@ -1,0 +1,172 @@
+﻿add_namespace = aki
+##########事件###########
+# 应对AKI的威胁
+country_event = {
+	id = aki.101
+	title = aki.101.t
+	desc = aki.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 我们必须团结一致
+	option = {
+		name = aki.101.1
+	}
+
+	# 我们自己就能应付
+	option = {
+		name = aki.101.2
+		hidden_effect = {
+			set_global_flag = AKI_union_break_flag
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = aki.102
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				has_global_flag = AKI_union_break_flag
+			}
+			# no union
+			SGS = {
+				country_event = aki.104
+			}
+			ZYD = {
+				country_event = aki.104
+			}
+			MEL = {
+				country_event = aki.104
+			}
+		} else = {
+			# create union
+			ZYD = {
+				create_faction = southwest_mutual_defense_treaty
+				add_to_faction = SGS
+				add_to_faction = MEL
+			}
+			news_event = {
+				id = aki.103
+			}
+		}
+	}
+}
+
+# news southwest_mutual_defense_treaty成立
+news_event = {
+	id = aki.103
+	title = aki.103.t
+	desc = aki.103.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# ZYD SGS MEL
+	option = {
+		name = aki.103.1
+		trigger = {
+			OR = {
+				original_tag = ZYD
+				original_tag = SGS
+				original_tag = MEL
+			}
+		}
+	}
+
+	# AKI
+	option = {
+		name = aki.103.2
+		trigger = {
+			original_tag = AKI
+		}
+	}
+
+	# 其他
+	option = {
+		name = aki.103.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = ZYD
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = AKI
+				}
+			}
+		}
+	}
+}
+
+# 协商破裂
+country_event = {
+	id = aki.104
+	title = aki.104.t
+	desc = aki.104.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = aki.104.1
+	}
+}
+
+country_event = {
+	id = aki.105
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				has_war = no
+			}
+			AKI_add_land_annexation_ic_debuff = yes
+		}
+	}
+}
+
+# 联盟丰收大会
+country_event = {
+	id = aki.106
+	title = aki.106.t
+	desc = aki.106.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 为信仰的胜利欢呼！
+	option = {
+		name = aki.106.1
+		complete_national_focus = AKI_shen_ming_xin_yang_kai_xuan
+	}
+
+	# 凋零者在大会上发动了政变！
+	option = {
+		name = aki.106.2
+		trigger = {
+			NOT = {
+				has_country_flag = AKI_SCA_view_improved_flag
+			}
+		}
+		hidden_effect = {
+			set_country_flag = AKI_blightcaller_came_to_power_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+		complete_national_focus = AKI_diao_ling_zhe_zheng_bian
+		set_politics = {
+			ruling_party = neworder
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}

@@ -46,30 +46,24 @@
     # set_research_slots = 3
     #declare_war_on = { target = MAM type = annex_everything}
     # Starting tech
-	   set_country_flag = bunengsuiyiqiehuanzhengti
-    set_technology = {
-    #步兵武器
-     #灵力
-    
-    #支援
-    #装甲
-
-    }
+	set_country_flag = bunengsuiyiqiehuanzhengti
     give_guarantee = MEL
     give_military_access = MEL
     add_ideas = {
-    Tribal
-	Fairy
-    open1
-    hawk1
-    free_magic
-    SGS_tuanjiexieding_idea 
-    SGS_fa_guerrillas_idea
-	SGS_yuanshidetudi_idea
-    SGS_captanul_idea
-    type1_manpowerlv3
-     
+        Tribal
+        Fairy
+        sub_Ghost
+        open1
+        hawk1
+        free_magic
+        SGS_tuanjiexieding_idea 
+        SGS_fa_guerrillas_idea
+        SGS_yuanshidetudi_idea
+        SGS_captanul_idea
+        type1_manpowerlv3
     }
+    SW_add_agrarian_society = yes
+    
     set_politics = {
     	ruling_party = fandong
     	election_frequency = 48
@@ -83,4 +77,21 @@
         fandong = 40
     }
     
+    383 = {
+        add_dynamic_modifier = {
+            modifier = SW_wei_kai_fa_de_tu_di_state_idea
+        }
+    }
+    384 = {
+        SW_add_unexplored_land = yes
+    }
+    385 = {
+        SW_add_unexplored_land = yes
+    }
+    386 = {
+        SW_add_unexplored_land = yes
+    }
+    393 = {
+        SW_add_unexplored_land = yes
+    }
 }

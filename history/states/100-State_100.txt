@@ -15,9 +15,9 @@ state={
 			owner = AKI
 			add_core_of = AKI
 			buildings = {
-				infrastructure =3
-				industrial_complex = 3
-				arms_factory = 0
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 1
 
 			}
 

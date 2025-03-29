@@ -1,0 +1,71 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				set_variable = {
+					SW_explored_land_develop_cost = 90
+				}
+				set_variable = {
+					SW_land_exploration_cost = 90
+				}
+			}
+		}
+	}
+
+	on_release_as_free = {
+		effect = {
+			ROOT = {
+				set_variable = {
+					SW_explored_land_develop_cost = 90
+				}
+				set_variable = {
+					SW_land_exploration_cost = 90
+				}
+			}
+		}
+	}
+
+	on_monthly_AKI = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SW_zhang_liang_tu_di
+				}
+				SW_monthly_auto_exploration_check = yes
+			}
+		}
+	}
+
+	on_monthly_SGS = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SW_zhang_liang_tu_di
+				}
+				SW_monthly_auto_exploration_check = yes
+			}
+		}
+	}
+
+	on_monthly_ZYD = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SW_zhang_liang_tu_di
+				}
+				SW_monthly_auto_exploration_check = yes
+			}
+		}
+	}
+
+	on_monthly_MEL = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = SW_zhang_liang_tu_di
+				}
+				SW_monthly_auto_exploration_check = yes
+			}
+		}
+	}
+}

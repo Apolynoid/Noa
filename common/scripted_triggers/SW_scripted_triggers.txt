@@ -1,0 +1,93 @@
+is_SW_countries = {
+	OR = {
+		original_tag = AKI
+		original_tag = ZYD
+		original_tag = SGS
+		original_tag = MEL
+	}
+}
+
+SW_no_unexplored_land = {
+	custom_trigger_tooltip = {
+		tooltip = SW_no_unexplored_land_tt
+		all_state = {
+			has_dynamic_modifier = {
+				modifier = SW_wei_kan_tan_de_tu_di_state_idea
+			}
+		}
+	}
+}
+
+SW_no_undeveloped_land = {
+	custom_trigger_tooltip = {
+		tooltip = SW_no_undeveloped_land_tt
+		all_state = {
+			has_dynamic_modifier = {
+				modifier = SW_wei_kai_fa_de_tu_di_state_idea
+			}
+		}
+	}
+}
+
+SW_undeveloped_unexplored_fully_controlled_state = {
+	is_fully_controlled_by = ROOT
+	has_dynamic_modifier = {
+		modifier = SW_wei_kan_tan_de_tu_di_state_idea
+	}
+	has_dynamic_modifier = {
+		modifier = SW_wei_kai_fa_de_tu_di_state_idea
+	}
+}
+
+SW_undeveloped_explored_fully_controlled_state = {
+	is_fully_controlled_by = ROOT
+	NOT = {
+		has_dynamic_modifier = {
+			modifier = SW_wei_kan_tan_de_tu_di_state_idea
+		}
+	}
+	has_dynamic_modifier = {
+		modifier = SW_wei_kai_fa_de_tu_di_state_idea
+	}
+	NOT = {
+		has_state_flag = SW_being_developed_flag
+	}
+}
+
+SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = {
+	custom_trigger_tooltip = {
+		tooltip = SW_own_and_fully_control_1_undeveloped_explored_land_tt
+		any_owned_state = {
+			SW_undeveloped_explored_fully_controlled_state = yes
+		}
+	}
+}
+
+SW_ROOT_own_and_fully_control_2_undeveloped_explored_land = {
+	custom_trigger_tooltip = {
+		tooltip = SW_own_and_fully_control_2_undeveloped_explored_land_tt
+		any_owned_state = {
+			count = 2
+			SW_undeveloped_explored_fully_controlled_state = yes
+		}
+	}
+}
+
+SW_has_core_of_all_southwest_state = {
+	custom_trigger_tooltip = {
+		tooltip = SW_has_core_of_all_SW_state_tt
+		all_state = {
+			OR = {
+				NOT = {
+					OR = {
+						is_core_of = AKI
+						is_core_of = SGS
+						is_core_of = ZYD
+						is_core_of = MEL
+					}
+				}
+				is_core_of = ROOT
+			}
+		}
+	}
+}

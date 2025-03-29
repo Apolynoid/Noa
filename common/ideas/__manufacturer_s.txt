@@ -317,41 +317,6 @@ ideas = {
 				factor = 5
 			}
 		}
-		KMC_manu2 = {
-		    picture = manufacturer_KMC
-		    available = {   
-		    	KMC = {
-		    		# manufacture_conditions = yes
-		    	}           	    
-		    }
-		    allowed = {
-		    	always = no
-		    }					
-			on_add = {
-			}
-			cancel_if_invalid = no
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = -0.04
-				army_speed_factor = 0.08
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.15
-			# 		instant = yes
-			# 	}
-			# 	ma_fighter_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     military = 0.15
-			# }
-			ai_will_do = {
-				factor = 5
-			}
-		}
 		SKI_manu2 = {
 		    picture = manufacturer_SKI
 		    available = {   

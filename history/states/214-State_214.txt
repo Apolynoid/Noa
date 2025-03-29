@@ -1,0 +1,35 @@
+
+state={
+	id=214
+	name="STATE_214"
+	resources={
+		energy=0.000
+		powder=2.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SKI
+			add_core_of = SKI
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		142 825 1279 2271 2539 3055 6015 6395 6397 6398 6399 6402 6413 6414 7150 
+	}
+	manpower=1234
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.500
+}

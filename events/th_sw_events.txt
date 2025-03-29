@@ -1,94 +1,4 @@
 ﻿add_namespace = swe
-news_event = { #GH1 2 3 VS MEL
-	id = swe.1
-	title = swe.1.t
-	desc = swe.1.d
-
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = swe.1.1
-		trigger = {
-			not = { tag = MEL}
-		}
-	}
-	option = {
-		name = swe.1.2
-		trigger = {
-			tag = MEL
-		}
-	}
-}
-
-news_event = { #SGS VS YUK
-	id = swe.2
-	title = swe.2.t
-	desc = swe.2.d
-
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = swe.2.1
-		trigger = {
-
-		}
-	}
-}
-
-country_event = { #NMS puppet MAM(trigger)
-	id = swe.3
-	title = swe.3.t
-	desc = swe.3.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = swe.3.1
-		ai_chance = {
-			base = 100
-		}
-
-		NMS = {
-			MAM = {
-				subject_level3 = yes
-			}
-		}
-		
-		
-	    hidden_effect = {
-			news_event = { days = 2 id = swe.4}	
-		}
-	}
-
-	option = {
-		name = swe.3.2
-		ai_chance = {
-			base = 0
-		}
-	}
-	
-}
-
-news_event = { #NMS puppet MAM
-	id = swe.4
-	title = swe.4.t
-	desc = swe.4.d
-
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = swe.4.1
-		trigger = {
-
-		}
-	}
-}
 
 country_event = { 
 	id = swe.5
@@ -260,26 +170,31 @@ news_event = {
 	}
 }
 
-news_event = { #称霸西南
-	id = swe.19
-	title = swe.19.t
-	desc = swe.19.d
+add_namespace = sw
 
-	major = yes
-	fire_only_once = no
+# 
+country_event = {
+	id = sw.101
+	title = sw.101.t
+	desc = sw.101.d
+
 	is_triggered_only = yes
-
-	option = {
-		name = swe.19.1
-		trigger = {
-			tag = FROM
+	
+	immediate = {
+		event_target:state_to_explore = {
+			remove_dynamic_modifier = {
+				modifier = SW_wei_kan_tan_de_tu_di_state_idea
+			}
 		}
 	}
+
 	option = {
-		name = swe.19.2
-		trigger = {
-			not = {
-				tag = FROM
+		name = sw.101.1
+		effect_tooltip = {
+			event_target:state_to_explore = {
+				remove_dynamic_modifier = {
+					modifier = SW_wei_kan_tan_de_tu_di_state_idea
+				}
 			}
 		}
 	}

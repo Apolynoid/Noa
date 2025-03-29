@@ -146,19 +146,6 @@ intelligence_agency = {
 }
 intelligence_agency = {
 
-	picture = GFX_intelligence_agency_agent_KMC
-	names = { "灵魂运输与审判组织" }
-	
-	available = { always = yes }
-	
-	default = { 
-		or = {
-			tag = KMC
-		}
-	} 
-}
-intelligence_agency = {
-
 	picture = GFX_intelligence_agency_agent_LIL
 	names = { "乐园情报局" }
 	

@@ -7,6 +7,9 @@ disband_militia_tt:0 "§R解散§!所有民兵单位"
 auto_complete_tt:0 "§G这项国策会随着游戏进程自动完成§!"
 occupation_law_introduce_tt:0 "§Y$integration_law$§!法案除去数值上的优势外，当在完全占领、拥有宣称且顺从度高于50的省份开启§Y$integration_law$§!法案时，会自动获得该省份的核心。"
 
+on_select_tt:0 "选择时："
+on_complete_tt:0 "完成时："
+
 already_highest_tt:0 "已经达到最高，无法进一步提高。"
 already_lowest_tt:0 "已经达到最低，无法进一步降低。"
 

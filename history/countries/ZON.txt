@@ -101,14 +101,6 @@ KEK = {
     recruit_character = KEK_kek
     recruit_character = KEK_kek_leader
 }
-KMC = {
-    recruit_character = KMC_elis
-    recruit_character = KMC_sariel
-    recruit_character = KMC_kmc
-    recruit_character = KMC_kmc_leader
-    recruit_character = KMC_elis_leader
-    recruit_character = KMC_sariel_leader
-}
 KRD = {
     recruit_character = KRD_misumaru
     recruit_character = KRD_momoyo
@@ -200,12 +192,6 @@ SGS = {
     recruit_character = SGS_sun_leader
     recruit_character = SGS_star
     recruit_character = SGS_star_leader
-}
-SKI = {
-    recruit_character = SKI_ski
-    recruit_character = SKI_ski_leader
-    recruit_character = SKI_nwt
-    recruit_character = SKI_nwt_leader
 }
 SRB = {
     recruit_character = SRB_mik

@@ -1,0 +1,2069 @@
+CLO_gongye_category = {
+    CLO_jihuohuoshan = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            has_completed_focus = CLO_jihuodiyuhuoshan
+        }
+        visible = {
+            FROM = {
+                is_fully_controlled_by = ROOT
+                is_owned_by = ROOT
+                not = {
+                    has_state_flag = CLO_beijihuodehuoshan
+                }
+            }
+        }
+        available = {
+            
+        }
+        target_trigger = {
+            FROM = {
+                is_fully_controlled_by = ROOT
+                is_owned_by = ROOT
+                not = {
+                    has_state_flag = CLO_beijihuodehuoshan
+                }
+            }
+        }
+        state_target = yes
+        targets = {
+            462 538 553 551 459 152 534 448
+        }
+
+        cost = 30
+        days_remove = 45
+
+
+        fire_only_once = no
+
+        remove_effect = {
+            FROM = {
+                damage_building = {
+                    type = infrastructure 
+                    damage = 1
+                }
+                damage_building = {
+                    type = arms_factory
+                    damage = 1
+                }
+                damage_building = {
+                    type = industrial_complex
+                    damage = 1
+                }
+                add_resource = {
+                    type = gas
+                    amount = 4
+                }
+                add_resource = {
+                    type = powder
+                    amount = 4
+                }
+                add_resource = {
+                    type = metal
+                    amount = 1
+                }
+                add_resource = {
+                    type = crystal
+                    amount = 1
+                }
+                set_state_flag = CLO_beijihuodehuoshan
+            }
+            add_to_variable = {
+                CLO_huoshanchulicishu = 1
+            }
+        }
+        ai_will_do = {
+            base = 100
+        }
+    }
+    CLO_fengcunhuoshan = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            has_completed_focus = CLO_fengcundiyuhuoshan
+        }
+        visible = {
+            FROM = {
+                is_fully_controlled_by = ROOT
+                is_owned_by = ROOT
+                not = {
+                    has_state_flag = CLO_beichulidehuoshan
+                }
+            }
+        }
+        available = {
+            
+        }
+        target_trigger = {
+            FROM = {
+                is_fully_controlled_by = ROOT
+                is_owned_by = ROOT
+                not = {
+                    has_state_flag = CLO_beichulidehuoshan
+                }
+            }
+        }
+        state_target = yes
+        targets = {
+            462 538 553 551 459 152 534 448
+        }
+
+        cost = 1
+        days_remove = 1
+
+
+        fire_only_once = no
+
+        remove_effect = {
+            FROM = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_manpower = 100
+                set_state_flag = CLO_beichulidehuoshan
+            }
+            add_to_variable = {
+                CLO_huoshanchulicishu = 1
+            }
+        }
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+CLO_battle = {
+    CLO_hell_war = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_pingdengdiyu
+        }
+        visible = {
+            FROM = {
+                exists = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_hell_war_flag
+            }
+            FROM = {
+                before_declare_war = yes
+            }
+        }
+        target_trigger = {
+            FROM = {
+                is_neighbor_of = ROOT
+                not = {
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+        }
+        targets = {
+            HUB AOO AKO HCT HGH CLO HB1 SAK KEK GYK YCE URM GH1 SKI
+        }
+
+        cost = 60
+        days_remove = 50
+
+        war_with_target_on_remove = yes
+
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_hell_war_flag
+                value = 1
+                days = 51
+            }
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = puppet_wargoal_focus
+            }
+        }
+        ai_will_do = {
+            base = 25
+            modifier = {
+                FROM = {
+                    tag = SKI
+                }
+                factor = 0.2
+            }
+            modifier = {
+                FROM = {
+                    tag = HCT
+                }
+                factor = 0.1
+            }
+            modifier = {
+                has_war = yes
+                factor = 0
+            }
+        }
+    }
+    CLO_out_hell_war = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_waijiechuanbosixiang
+        }
+        visible = {
+            FROM = {
+                exists = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_hell_war_flag
+                
+            }
+            FROM = {
+                not = {
+                    has_idea = Fairy
+                    has_government = ROOT
+                }
+            }
+            FROM = {
+                before_declare_war = yes
+            }
+        }
+        target_trigger = {
+            FROM = {
+                is_neighbor_of = ROOT
+                not = {
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                    has_idea = Fairy
+                    has_government = ROOT
+                }
+                capital_scope = {
+                    not = {
+                        is_on_continent = Hell
+                    }
+                }
+            }
+        }
+        target_array = neighbors
+
+        cost = 100
+        days_remove = 75
+
+        war_with_target_on_remove = yes
+
+        fire_only_once = no
+
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_hell_war_flag
+                value = 1
+                days = 76
+            }
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = puppet_wargoal_focus
+            }
+        }
+        ai_will_do = {
+            base = 10
+            modifier = {
+                has_war = yes
+                factor = 0
+            }
+        }
+    }
+}
+CLO_sixiang = {
+    CLO_diyusixiangchuanbo_d = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_diyurentong
+        }
+        visible = {
+            FROM = {
+                or = {
+                    not = {
+                        is_core_of = ROOT
+                    }
+                    has_dynamic_modifier = {
+                        modifier = different_race_rebel
+                    }
+                }
+            }
+        }
+        available = {
+            FROM = {
+                compliance > 35
+                or = {
+                    not = {
+                        is_core_of = ROOT
+                    }
+                    has_dynamic_modifier = {
+                        modifier = different_race_rebel
+                    }
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                or = {
+                    has_dynamic_modifier = {
+                        modifier = different_race_rebel
+                    }
+                    is_core_of = ROOT
+                }
+                is_on_continent = Hell
+            }
+        }
+        state_target = yes
+        target_array = owned_controlled_states
+        cost = 25
+        days_remove = 50
+        remove_effect = {
+            FROM = {
+                ST_race_penalty_remove = yes
+                add_core_of = ROOT
+            }
+        }
+    }
+    CLO_sixiangchuanbo = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_diyusixiangchuanbo
+        }
+        visible = {
+            FROM = {
+                is_owned_and_controlled_by = ROOT
+                has_dynamic_modifier = {
+                    modifier = different_race_rebel
+                }
+            }
+        }
+        available = {
+            FROM = {
+                or = {
+                    compliance > 55
+                    is_core_of = ROOT
+                }
+                has_dynamic_modifier = {
+                    modifier = different_race_rebel
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = different_race_rebel
+                }
+                not = {
+                    is_on_continent = Hell
+                }
+            }
+        }
+        state_target = yes
+        target_array = owned_controlled_states
+        cost = 50
+        days_remove = 100
+        complete_effect = {
+            
+        }
+        remove_effect = {
+            FROM = {
+                ST_race_penalty_remove = yes
+            }
+        }
+        cancel_trigger = {
+            FROM = {
+                not = {
+                    has_dynamic_modifier = {
+                        modifier = different_race_rebel
+                    }
+                }
+            }
+        }
+        cancel_effect = {
+            add_political_power = 50
+        }
+        ai_will_do = {
+            base = 20
+            modifier = {
+                FROM = {
+                    is_core_of = ROOT
+                }
+                factor = 50
+            }
+            modifier = {
+                FROM = {
+                    check_variable = {
+                        state_value > 99
+                    }
+                }
+                factor = 20
+            }
+        }
+    }
+}
+CLO_diyujianshe = {
+    CLO_chengshihua = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_xuexichushengjie
+        }
+        visible = {
+            FROM = {
+                is_owned_and_controlled_by = ROOT
+                infrastructure > 1
+            }
+        }
+        available = {
+            FROM = {
+                infrastructure > 2
+                ST_race_is_Fairy = yes
+            }
+        }
+        target_trigger = {
+            FROM = {
+                is_on_continent = Hell
+            }
+        }
+        state_target = yes
+        target_array = owned_controlled_states
+        fire_only_once = yes
+        cost = 60
+        days_remove = 60
+        remove_effect = {
+            FROM = {
+                add_manpower = 15000
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 500
+        }
+    }
+    CLO_zhiminsantuhe_d = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = CLO_zhiminsantuhe
+        }
+        visible = {
+            FROM = {
+                is_owned_and_controlled_by = ROOT
+                not = {
+                    ST_race_is_Fairy = yes
+                }
+            }
+        }
+        available = {
+            FROM = {
+                custom_trigger_tooltip = {
+                    tooltip = CLO_zhiminsantuhe_d_tt
+                    not = {
+                        ST_race_is_Fairy = yes
+                    }
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                region = 7
+                not = {
+                    ST_race_is_Fairy = yes
+                }
+            }
+        }
+        state_target = yes
+        target_array = owned_controlled_states
+        fire_only_once = yes
+        cost = 100
+        days_remove = 100
+        remove_effect = {
+            FROM = {
+                CONV_convert = yes
+                add_core_of = ROOT
+                add_manpower = 2000
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 200
+        }
+    }
+}
+CLO_xuanshang = {
+    CLO_fuyuyaojing = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 30
+        }
+        custom_cost_text = CLO_geiyulingli_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        modifier = {
+            stability_weekly_factor = 0.002
+            war_support_factor = 0.001
+        }
+        days_remove = 150
+        complete_effect = {
+            army_experience = -30
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 800
+            }
+            modifier = {
+                or = {
+                    has_stability > 1
+                    has_war_support > 1
+                }
+                factor = 0
+            }
+        }
+    }
+    CLO_geiyulingli = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 30
+        }
+        custom_cost_text = CLO_geiyulingli_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        modifier = {
+            PO_daily_gain = 0.02
+        }
+        days_remove = 150
+        complete_effect = {
+            army_experience = -30
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 50
+            }
+        }
+    }
+    CLO_kaihuayaojingzhihui = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 30
+        }
+        custom_cost_text = CLO_geiyulingli_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        available = {
+            has_stability > 0.75
+        }
+        modifier = {
+
+        }
+        days_remove = 150
+        remove_effect = {
+            add_research_slot = -1
+        }
+        complete_effect = {
+            add_research_slot = 1
+            army_experience = -30
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 1000
+            }
+        }
+    }
+    CLO_ziyouhuodong = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 30
+        }
+        custom_cost_text = CLO_geiyulingli_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        available = {
+            has_stability > 0.25
+        }
+        modifier = {
+            stability_weekly_factor = -0.001
+            monthly_population = 0.2
+            weekly_manpower = 1
+        }
+        days_remove = 150
+        complete_effect = {
+            army_experience = -30
+        }
+        
+        remove_effect = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_manpower = 100
+            }
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+                add_manpower = 100
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 50
+            }
+        }
+    }
+    CLO_yunxudafanweiyaojingjiaru = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 50
+        }
+        available = {
+            has_war_support > 0.75
+        }
+        custom_cost_text = CLO_yunxudafanweiyaojingjiaru_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        days_remove = 150
+        modifier = {
+            command_power_gain_mult = 0.25
+            army_leader_cost_factor = -0.5
+            max_planning = -0.05
+        }
+        complete_effect = {
+            army_experience = -50
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 100
+            }
+        }
+    }
+    CLO_yaojingcanzheng = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 50
+        }
+        available = {
+            has_stability > 1
+            has_completed_focus = CLO_yaojingchongguiheping
+        }
+        custom_cost_text = CLO_yunxudafanweiyaojingjiaru_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        days_remove = 150
+        modifier = {
+            political_power_factor = 0.35
+            stability_weekly_factor = -0.001
+        }
+        complete_effect = {
+            army_experience = -50
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 500
+            }
+        }
+    }
+    CLO_doctrine = {
+        allowed = {
+            tag = CLO
+        }
+        custom_cost_trigger = {
+            has_army_experience > 100
+        }
+        custom_cost_text = CLO_doctrine_cost
+        visible = {
+            has_completed_focus = CLO_yaojingcishang
+        }
+        complete_effect = {
+            army_experience = -100
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.95
+                uses = 3
+                category = basic_doctrine
+                category = land_doctrine 
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                has_army_experience > 99
+                add = 100
+            }
+        }
+    }
+}
+CLO_shentan = {
+    CLO_qidao_1 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu < 5
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 15
+        days_remove = 20
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 20
+            }
+        }
+        remove_effect = {
+            add_to_variable = {
+                CLO_qidaocishu = 1
+            }
+            random_list = {
+                15 = {
+                    CLO_clown = {
+                        add_attack = 1
+                    }
+                }
+                15 = {
+                    CLO_clown = {
+                        add_defense = 1
+                    }
+                }
+                15 = {
+                    CLO_clown = {
+                        add_planning = 1
+                    }
+                }
+                15 = {
+                    CLO_clown = {
+                        add_logistics = 1
+                    }
+                }
+                10 = {
+                    CLO_clown = {
+                        add_skill_level = 1
+                    }
+                }
+                30 = {
+
+                }
+            }
+        }
+        ai_will_do = {
+            base = 50
+        }
+    }
+    CLO_qidao_2 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu > 4
+            }
+            check_variable = {
+                CLO_qidaocishu < 10
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 20
+        days_remove = 25
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 25
+            }
+        }
+        remove_effect = {
+            add_to_variable = {
+                CLO_qidaocishu = 1
+            }
+            random_list = {
+                13 = {
+                    CLO_clown = {
+                        add_attack = 1
+                    }
+                }
+                13 = {
+                    CLO_clown = {
+                        add_defense = 1
+                    }
+                }
+                13 = {
+                    CLO_clown = {
+                        add_planning = 1
+                    }
+                }
+                13 = {
+                    CLO_clown = {
+                        add_logistics = 1
+                    }
+                }
+                8 = {
+                    CLO_clown = {
+                        add_skill_level = 1
+                    }
+                }
+                40 = {
+
+                }
+            }
+        }
+        ai_will_do = {
+            base = 10
+        }
+    }
+    CLO_qidao_3 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+
+            check_variable = {
+                CLO_qidaocishu > 9
+            }
+            check_variable = {
+                CLO_qidaocishu < 15
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 25
+        days_remove = 30
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 30
+            }
+        }
+        remove_effect = {
+            add_to_variable = {
+                CLO_qidaocishu = 1
+            }
+            random_list = {
+                11 = {
+                    CLO_clown = {
+                        add_attack = 1
+                    }
+                }
+                11 = {
+                    CLO_clown = {
+                        add_defense = 1
+                    }
+                }
+                11 = {
+                    CLO_clown = {
+                        add_planning = 1
+                    }
+                }
+                11 = {
+                    CLO_clown = {
+                        add_logistics = 1
+                    }
+                }
+                6 = {
+                    CLO_clown = {
+                        add_skill_level = 1
+                    }
+                }
+                50 = {
+
+                }
+            }
+        }
+        ai_will_do = {
+            base = 1
+        }
+    }
+    CLO_qidao_4 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu > 14
+            }
+            check_variable = {
+                CLO_qidaocishu < 20
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 30
+        days_remove = 35
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 35
+            }
+        } 
+        remove_effect = {
+            add_to_variable = {
+                CLO_qidaocishu = 1
+            }
+            random_list = {
+                9 = {
+                    CLO_clown = {
+                        add_attack = 1
+                    }
+                }
+                9 = {
+                    CLO_clown = {
+                        add_defense = 1
+                    }
+                }
+                9 = {
+                    CLO_clown = {
+                        add_planning = 1
+                    }
+                }
+                9 = {
+                    CLO_clown = {
+                        add_logistics = 1
+                    }
+                }
+                4 = {
+                    CLO_clown = {
+                        add_skill_level = 1
+                    }
+                }
+                60 = {
+
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+    CLO_qidao_5 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu > 19
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 35
+        days_remove = 40   
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 40
+            }
+        }     
+        remove_effect = {
+            add_to_variable = {
+                CLO_qidaocishu = 1
+            }
+            random_list = {
+                7 = {
+                    CLO_clown = {
+                        add_attack = 1
+                    }
+                }
+                7 = {
+                    CLO_clown = {
+                        add_defense = 1
+                    }
+                }
+                7 = {
+                    CLO_clown = {
+                        add_planning = 1
+                    }
+                }
+                7 = {
+                    CLO_clown = {
+                        add_logistics = 1
+                    }
+                }
+                2 = {
+                    CLO_clown = {
+                        add_skill_level = 1
+                    }
+                }
+                70 = {
+
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+    CLO_gongping_1 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu < 5
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 60
+        days_remove = 90
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 90
+            }
+            random_list = {
+                90 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping_idea
+                        days = 90
+                    }
+                }
+                10 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping1_idea
+                        days = 90
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 200
+        }
+    }
+    CLO_gongping_2 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu < 10
+            }
+            check_variable = {
+                CLO_qidaocishu > 4
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 70
+        days_remove = 90
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 90
+            }
+            random_list = {
+                80 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping_idea
+                        days = 90
+                    }
+                }
+                20 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping1_idea
+                        days = 90
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 100
+        }
+    }
+    CLO_gongping_3 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu < 15
+            }
+            check_variable = {
+                CLO_qidaocishu > 9
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 80
+        days_remove = 90
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 90
+            }
+            random_list = {
+                70 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping_idea
+                        days = 90
+                    }
+                }
+                30 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping1_idea
+                        days = 90
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 80
+        }
+    }
+    CLO_gongping_4 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu < 20
+            }
+            check_variable = {
+                CLO_qidaocishu > 14
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 90
+        days_remove = 90
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 90
+            }
+            random_list = {
+                60 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping_idea
+                        days = 90
+                    }
+                }
+                40 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping1_idea
+                        days = 90
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 40
+        }
+    }
+    CLO_gongping_5 = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+            check_variable = {
+                CLO_qidaocishu > 19
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 90
+        days_remove = 90
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 90
+            }
+            random_list = {
+                50 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping_idea
+                        days = 90
+                    }
+                }
+                50 = {
+                    add_timed_idea = {
+                        idea = CLO_gongping1_idea
+                        days = 90
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+    CLO_wanzhengqidao = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_shentandeliliang
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_shentan_flag
+            }
+        }
+        cost = 200
+        days_remove = 180
+        complete_effect = {
+            set_country_flag = {
+                flag = CLO_shentan_flag
+                value = 1
+                days = 180
+            }
+        }
+        modifier = {
+            research_speed_factor = 0.1
+            training_time_factor = -0.1
+            industrial_capacity_factory = 0.1
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                check_variable = {
+                    CLO_qidaocishu > 14
+                }
+                add = 20
+            }
+            modifier = {
+                check_variable = {
+                    CLO_qidaocishu > 19
+                }
+                add = 80
+            }
+        }
+    }
+}
+CLO_qiandu = {
+    CLO_qiandu_d = {
+        allowed = {
+            tag = CLO
+        }
+        target_root_trigger = {
+            has_completed_focus = CLO_diyudahan
+        }
+        visible = {
+            FROM = {
+                is_capital = no
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_qiandu_d_flag
+            }
+            FROM = {
+                all_neighbor_state = {
+                    is_fully_controlled_by = ROOT
+                    is_owned_by = ROOT
+                }
+            }
+        }
+        target_trigger = {
+            FROM = { is_owned_by = ROOT }
+        }
+        on_map_mode = map_only
+        state_target = yes
+        target_array = owned_controlled_states
+        days_remove = 182
+        complete_effect = {
+            set_country_flag = {
+                days = 182
+                value = 1
+                flag = CLO_qiandu_d_flag
+            }
+            set_capital = { state = FROM }
+            hidden_effect = {
+                every_state = {
+                    remove_dynamic_modifier = {
+                        modifier = CLO_xinhaohuoju_modifier
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = CLO_zhirebaolei_modifier
+                    }
+                }
+            }
+            FROM = {
+                add_dynamic_modifier = {
+                    modifier = CLO_zhirebaolei_modifier
+                }
+                if = {
+                    limit = {
+                        ROOT = {has_completed_focus = CLO_dahanhuoju }
+                    }
+                    every_neighbor_state = {
+                        add_dynamic_modifier = {
+                            modifier = CLO_xinhaohuoju_modifier
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+CLO_zhongzuyoushi = {
+    CLO_fahuiyoushi_Fairy = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Fairy = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            attrition = -0.12
+            supply_consumption_factor = -0.24
+            training_time_factor = -0.25
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Fairy = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Beast = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Beast = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            land_night_attack = 0.5
+            mobilization_laws_cost_factor = -0.1
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Beast = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Ghost = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Ghost = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            local_resources_factor = 0.1
+            army_morale_factor = 0.1
+            training_time_factor = -0.2
+            weekly_manpower = 2
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Ghost = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_God = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_God = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            encryption = 4
+            decryption = 4
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_God = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Pri_youkai = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Pri_youkai = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            land_night_attack = 0.1
+            army_morale_factor = 0.5
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Pri_youkai = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Youkai = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Youkai = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            land_night_attack = 0.2
+            experience_loss_factor = -0.2
+            army_infantry_attack_factor = 0.2
+            army_infantry_defence_factor = 0.2
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Youkai = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Human = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Human = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            stability_factor = 0.1
+            army_org_Factor = 0.4
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Human = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Magician = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Magician = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            army_infantry_attack_factor = 0.1
+            army_artillery_attack_factor = 0.05
+            research_speed_factor = 0.1
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Magician = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Kappa = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Kappa = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            army_org_Factor = 0.05
+            army_artillery_attack_factor = 0.025
+            research_speed_factor = 0.1
+            industrial_capacity_factory = 0.1
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Kappa = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+    CLO_fahuiyoushi_Tengu = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_fahuizhongzuyoushi
+            any_owned_state = {
+                is_core_of = ROOT
+                is_fully_controlled_by = ROOT
+                ST_race_is_Tengu = yes
+            }
+        }
+        available = {
+            not = {
+                has_country_flag = CLO_zhengzaifahuiyoushi
+            }
+        }
+        cost = 250
+        days_remove = 180
+        modifier = {
+            army_org_Factor = 0.1
+            war_support_factor = 0.1
+            army_infantry_attack_factor = 0.05
+            army_infantry_defence_factor = 0.05
+            army_speed_factor = 0.05
+        }
+        complete_effect = {
+            every_state = {
+                remove_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+            set_country_flag = {
+                flag = CLO_zhengzaifahuiyoushi
+                days = 180
+                value = 1
+            }
+            every_owned_state = {
+                limit = {
+                    ST_race_is_Tengu = yes
+                }
+                add_dynamic_modifier = {
+                    modifier = CLO_fahuiyoushi_modifier
+                }
+            }
+        }
+    }
+}
+CLO_lveduo = {
+    CLO_gulizhengtiyanjiu_Tribal = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = Tribal
+        }
+        modifier = {
+            research_speed_factor = 0.3
+        }
+        days_remove = 150
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_Tribal
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 15
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -15
+            }
+        }
+    }   
+    CLO_guliqianxianzhandouzhe_Tribal = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = Tribal
+        }
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+        }
+        days_remove = 90
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_Tribal
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 15
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -15
+            }
+        }
+    }   
+    CLO_gulijianshehoufang_Tribal = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = Tribal
+        }
+        modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.2
+        }
+        days_remove = 120
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_Tribal
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 15
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -15
+            }
+        }
+    }   
+    CLO_fafangyuguangdaminzhong_Tribal = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = Tribal
+        }
+        modifier = {
+            stability_weekly = 0.003
+        }
+        days_remove = 120
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_Tribal
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 15
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -15
+            }
+        }
+    }   
+
+    CLO_gulizhengtiyanjiu_World = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = World
+        }
+        modifier = {
+            research_speed_factor = 0.3
+        }
+        days_remove = 150
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_World
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 30
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -30
+            }
+        }
+    }   
+    CLO_guliqianxianzhandouzhe_World = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = World
+        }
+        modifier = {
+            army_attack_factor = 0.15
+            army_defence_factor = 0.15
+        }
+        days_remove = 90
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_World
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 30
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -30
+            }
+        }
+    }   
+    CLO_gulijianshehoufang_World = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = World
+        }
+        modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.2
+        }
+        days_remove = 120
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_World
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 30
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -30
+            }
+        }
+    }   
+    CLO_fafangyuguangdaminzhong_World = {
+        allowed = {
+            tag = CLO
+        }
+        visible = {
+            has_completed_focus = CLO_diyudahan
+            has_idea = World
+        }
+        modifier = {
+            stability_weekly = 0.003
+        }
+        days_remove = 120
+        days_re_enable = 30
+        custom_cost_text = CLO_lveduo_World
+        custom_cost_trigger = {
+            check_variable = {
+                LOOT_power > 30
+            }
+        }
+        complete_effect = {
+            add_to_variable = {
+                LOOT_power = -30
+            }
+        }
+    }   
+ 
+    
+}

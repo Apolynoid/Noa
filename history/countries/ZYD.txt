@@ -12,7 +12,7 @@
         #辅助
 
         #专用辅助
-
+        mortar1 = 1
         #专用基础
 
         #专用进阶
@@ -24,7 +24,7 @@
         #工程学 
         jichushuxue = 1
         shuxuegongju = 1
-
+        waike = 1
         #专用工程学
 
         #工业
@@ -42,15 +42,17 @@
     oob = "ZYD_146"
     
     add_ideas = {
-    Magician
-    Village
-    open1
-    dove1
-    limit_magic
-    type2_manpowerlv7
-    AKI_tudijiaoyisuode_idea
-    partial_economic_mobilisation
+        Magician
+        sub_Human
+        Village
+        open1
+        dove1
+        limit_magic
+        type2_manpowerlv2
+        AKI_tudijiaoyisuode_idea
+        partial_economic_mobilisation
     }
+    SW_add_agrarian_society = yes
     
     set_politics = {
     	ruling_party = qinwai
@@ -65,4 +67,22 @@
         fandong = 4
     }
     recruit_character = ZYD_commerce_committee
+
+    148 = {
+        SW_add_unexplored_land = yes
+    }
+    186 = {
+        SW_add_unexplored_land = yes
+    }
+    368 = {
+        add_dynamic_modifier = {
+            modifier = SW_wei_kai_fa_de_tu_di_state_idea
+        }
+    }
+    370 = {
+        SW_add_unexplored_land = yes
+    }
+    425 = {
+        SW_add_unexplored_land = yes
+    }
 }

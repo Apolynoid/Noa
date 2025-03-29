@@ -1,3 +1,6 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
 focus_tree = {
   id = SCA_puppet_focus
   country = {
@@ -235,7 +238,7 @@ focus_tree = {
   # 请求帝国武器支援
   focus = {
     id = SCA_puppet_qing_qiu_di_guo_wu_qi_zhi_yuan
-    icon = unknown
+    icon = SCA_focus_imperial_weapon_aid
     cost = 7
     x = 0
     y = 1

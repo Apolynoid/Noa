@@ -16,10 +16,9 @@ state={
 			add_core_of = MEL
 			add_core_of = ZYD
 			buildings = {
-				infrastructure =3
-				industrial_complex = 1
-				arms_factory = 1
-
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
 			}
 
 		}

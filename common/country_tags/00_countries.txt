@@ -74,7 +74,6 @@ OTG = "countries/otg.txt"       #####大天魔
 YYK = "countries/yyk.txt"#UUZ
 #-------彼岸------- 
 SKI = "countries/ski.txt" #四季
-KMC = "countries/kmc.txt" #等待区
 HUB = "countries/hub.txt"#中转枢纽
 HB1 = "countries/hb1.txt"#北枢纽
 URM = "countries/urm.txt"#三途he共和国

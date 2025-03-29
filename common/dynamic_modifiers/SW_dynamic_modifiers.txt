@@ -1,0 +1,59 @@
+# 农业社会
+SW_nong_ye_she_hui_idea = {
+	icon = GFX_idea_generic_agrarian_society
+
+	remove_trigger = {
+		check_variable = {
+			SW_agrarian_society_cons = 0
+		}
+		check_variable = {
+			SW_agrarian_society_ic = 0
+		}
+		check_variable = {
+			SW_agrarian_society_atk = 0
+		}
+		check_variable = {
+			SW_agrarian_society_def = 0
+		}
+		check_variable = {
+			SW_agrarian_society_cg = 0
+		}
+		check_variable = {
+			SW_agrarian_society_rs = 0
+		}
+		check_variable = {
+			SW_agrarian_society_infra = 0
+		}
+		check_variable = {
+			SW_agrarian_society_rail = 0
+		}
+	}
+
+	conscription_factor = SW_agrarian_society_cons
+	industrial_capacity_factory = SW_agrarian_society_ic
+	army_attack_factor = SW_agrarian_society_atk
+	army_defence_factor = SW_agrarian_society_def
+	consumer_goods_factor = SW_agrarian_society_cg
+	research_speed_factor = SW_agrarian_society_rs
+	production_speed_infrastructure_factor = SW_agrarian_society_infra
+	production_speed_rail_way_factor = SW_agrarian_society_rail
+}
+
+# 未开发的土地
+SW_wei_kai_fa_de_tu_di_state_idea = {
+	icon = GFX_modifiers_sw_undeveloped_land
+
+	attrition_for_controller = 0.1
+	local_factories = -0.5
+	local_manpower = -0.5
+	state_production_speed_buildings_factor = -0.5
+}
+
+# 未勘探的土地
+SW_wei_kan_tan_de_tu_di_state_idea = {
+	icon = GFX_modifiers_sw_unexplored_land
+
+	disable_strategic_redeployment = 1
+	attrition_for_controller = 0.1
+	local_resources = -0.5
+}

@@ -1,3 +1,6 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
 focus_tree = {
   id = NTR_focus
   country = {

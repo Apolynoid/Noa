@@ -13,9 +13,8 @@ state={
 	}
 	history={
 		146.1.1 = {
-			owner = KMC
-			add_core_of = KMC	
-			add_claim_by = URM
+			owner = URM
+			add_core_of = URM	
 			buildings = {
 				infrastructure = 2
 				industrial_complex = 0

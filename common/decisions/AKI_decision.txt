@@ -1,0 +1,58 @@
+SW_xi_nan_tu_di_kai_fa = {
+    # 分配FROM地区土地
+    AKI_fen_pei_FROM_di_qu_tu_di = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = AKI
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = AKI_ying_dui_tu_di_jian_bing
+                has_dynamic_modifier = {
+                    modifier = AKI_tu_di_jian_bing_idea
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                SW_undeveloped_explored_fully_controlled_state = yes
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_construction
+        cost = 50
+        days_remove = 90
+        days_re_enable = 15
+
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = SW_being_developed_flag
+                }
+            }    
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+                }
+            }
+            FROM = {
+                SW_remove_undeveloped_land = yes
+                AKI_decrease_land_annexation_level = yes
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+}

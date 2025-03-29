@@ -1,0 +1,37 @@
+
+state={
+	id=189
+	name="STATE_189"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 2.0
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = URM
+			add_core_of = URM
+			add_claim_by = URM
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		573 686 735 1225 1631 2199 2428 6432 6433 6435 6442 6446 
+	}
+	manpower=1033.0
+	state_category=s5
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

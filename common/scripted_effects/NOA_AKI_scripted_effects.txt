@@ -1,0 +1,55 @@
+AKI_calc_land_annexation = {
+    set_variable = {
+        AKI_land_annexation_sl = -0.025
+    }
+    multiply_variable = {
+        AKI_land_annexation_sl = AKI_land_annexation_level
+    }
+    set_variable = {
+        AKI_land_annexation_pp = -0.025
+    }
+    multiply_variable = {
+        AKI_land_annexation_pp = AKI_land_annexation_level
+    }
+    set_variable = {
+        AKI_land_annexation_sta = -0.05
+    }
+    multiply_variable = {
+        AKI_land_annexation_sta = AKI_land_annexation_level
+    }
+    if = {
+        limit = {
+            has_country_flag = AKI_no_land_annexation_ic_debuff_flag
+        }
+        set_variable = {
+            AKI_land_annexation_ic = 0
+        }
+    } else = {
+        set_variable = {
+            AKI_land_annexation_ic = -0.075
+        }
+        multiply_variable = {
+            AKI_land_annexation_ic = AKI_land_annexation_level
+        }
+    }
+}
+
+AKI_remove_land_annexation_ic_debuff = {
+    set_country_flag = AKI_no_land_annexation_ic_debuff_flag
+    AKI_calc_land_annexation = yes
+}
+
+AKI_add_land_annexation_ic_debuff = {
+    clr_country_flag = AKI_no_land_annexation_ic_debuff_flag
+    AKI_calc_land_annexation = yes
+}
+
+AKI_decrease_land_annexation_level = {
+    custom_effect_tooltip = AKI_decrease_land_annexation_level_tt
+    hidden_effect = {
+        subtract_from_variable = {
+            AKI_land_annexation_level = 1
+        }
+        AKI_calc_land_annexation = yes
+    }
+}

@@ -623,39 +623,6 @@ declare_war_events = {
 
     if = {
         limit = {
-            tag = URM
-        }
-        if = {
-            limit = {
-                FROM = {tag = KMC}
-            }
-            news_event = { days = 2 id = hel.2}
-        }
-    }
-    if = {
-        limit = {
-            tag = KMC
-        }
-        if = {
-            limit = {
-                FROM = {tag = SKI}
-            }
-            news_event = { days = 2 id = hel.25}
-        }
-    }
-    if = {
-        limit = {
-            tag = SKI
-        }
-        if = {
-            limit = {
-                FROM = {tag = KMC}
-            }
-            news_event = { days = 2 id = hel.9}
-        }
-    }
-    if = {
-        limit = {
             tag = HCT
         }
         if = {
@@ -1114,7 +1081,6 @@ startup_manu = {
     SAT = {add_ideas = SAT_manu2 }
     YYK = {add_ideas = YYK_manu2 }
     URM = {add_ideas = URM_manu2 }
-    KMC = {add_ideas = KMC_manu2 }
     SKI = {add_ideas = SKI_manu2 }
     HGH = {add_ideas = HGH_manu2 }
     HCT = {add_ideas = HCT_manu2 }

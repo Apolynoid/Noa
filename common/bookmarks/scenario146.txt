@@ -170,20 +170,18 @@ bookmarks = {
 #			}			
 #		}
 
-#		"AKI"={
-#		    minor = yes
-#			history = "AKI_DAWN_DESC"		#sca
-#			ideas={ 
-#            AKI_tudijianbing_idea
-#            AKI_jiduanzhuyiyundong_idea
-#            AKI_renyushendemohujiexian_idea
-#			}	
-#            focuses = {
-#            	AKI_cunluodalianhe
-#            	AKI_xirenlidechengli
-#            	AKI_tongyiwuyuanzhong
-#			}			
-#		}
+		"AKI"={
+		    minor = yes
+			history = "AKI_DAWN_DESC"		#sca
+			ideas={ 
+				AKI_ren_yu_shen_de_ge_he_idea
+				AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_idea
+				AKI_tu_di_jian_bing_tt_idea
+			}	
+            focuses = {
+ 
+			}			
+		}
     
 #    	"MEL"={
 #		    minor = yes

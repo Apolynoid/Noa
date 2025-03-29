@@ -63,6 +63,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_weapon_production"
+		texturefile = "gfx/interface/goals/focus_generic_weapon_production.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_energy_plant"
 		texturefile = "gfx/interface/goals/focus_generic_energy_plant.png"			
 	}
@@ -123,6 +128,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_military_plan"
+		texturefile = "gfx/interface/goals/focus_generic_military_plan.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_trench_warfare"
 		texturefile = "gfx/interface/goals/focus_generic_trench_warfare.png"			
 	}
@@ -138,8 +148,18 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_suppression"
+		texturefile = "gfx/interface/goals/focus_generic_suppression.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_purge"
 		texturefile = "gfx/interface/goals/focus_generic_purge.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ban_paramilitary"
+		texturefile = "gfx/interface/goals/focus_generic_ban_paramilitary.png"			
 	}
 
 	SpriteType = {
@@ -333,6 +353,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_immigration"
+		texturefile = "gfx/interface/goals/focus_generic_immigration.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_peace_propaganda"
 		texturefile = "gfx/interface/goals/focus_generic_peace_propaganda.dds"			
 	}
@@ -450,6 +475,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_attack_SRB"
 		texturefile = "gfx/interface/goals/focus_generic_attack_SRB.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_YUK"
+		texturefile = "gfx/interface/goals/focus_generic_attack_YUK.png"			
 	}
 
 	SpriteType = {
@@ -622,6 +652,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "SCA_focus_sphere_of_influence"
 		texturefile = "gfx/interface/goals/focus_SCA_sphere_of_influence.png"			
+	}
+
+	SpriteType = {
+		name = "SCA_focus_imperial_weapon_aid"
+		texturefile = "gfx/interface/goals/focus_SCA_imperial_weapon_aid.png"			
 	}
 
 	SpriteType = {
@@ -1179,6 +1214,33 @@ spriteTypes = {
 	SpriteType = {
 		name = "ALI_focus_the_only_hegemony_in_gensokyo"
 		texturefile = "gfx/interface/goals/focus_ALI_the_only_hegemony_in_gensokyo.dds"			
+	}
+
+	#### SW 西南
+	SpriteType = {
+		name = "SW_focus_soldiers_committee_of_land_distribution"
+		texturefile = "gfx/interface/goals/focus_SW_soldiers_committee_of_land_distribution.png"			
+	}
+
+	SpriteType = {
+		name = "SW_focus_military_grant"
+		texturefile = "gfx/interface/goals/focus_SW_military_grant.png"			
+	}
+
+	SpriteType = {
+		name = "SW_focus_public_land_grant"
+		texturefile = "gfx/interface/goals/focus_SW_public_land_grant.png"			
+	}
+
+	SpriteType = {
+		name = "SW_focus_educational_grant"
+		texturefile = "gfx/interface/goals/focus_SW_educational_grant.png"			
+	}
+
+	#### AKI 神明信仰联盟
+	SpriteType = {
+		name = "AKI_focus_union_harvest_assembly"
+		texturefile = "gfx/interface/goals/focus_AKI_union_harvest_assembly.png"			
 	}
 
 	#### YYK Saigyouji Yuyuko 白玉楼

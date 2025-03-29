@@ -1,0 +1,4882 @@
+#!gfx:interface\TH_focus.gfx
+#!gfx:interface\TH_SAT_focus.gfx
+focus_tree = {
+	id = SAT_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SAT
+		}
+	}
+	default = no
+	shared_focus = ty_medium_main
+	continuous_focus_position = { x = 50 y = 1800 }	
+	focus = {
+		id = SAT_ghost_insurrection
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5.00
+		x = 6
+		y = 0
+		available = {
+			has_idea = SAT_UUG_unrest
+			has_global_flag = main_scenario
+		}
+		bypass = {
+			has_idea = SAT_UUG_unrest
+			has_global_flag = main_scenario
+		}
+		completion_reward = {
+			custom_effect_tooltip =	SAT_Complaint_tt
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = SAT_stable_our_rudder
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 6.00
+		x = 30
+		y = 0
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_global_flag = main_scenario
+		}
+		completion_reward = {
+			# add_political_power = 50
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_chaos_of_Higan
+		icon = GFX_focus_SAT_fire_on_the_other_side
+		cost = 5.00
+		x = 16
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = wait_for_progress_tt
+				always = no
+			}
+		}
+		bypass = {
+			date > 146.8.1
+		}
+		completion_reward = {
+			add_stability = 0.025
+		}
+
+	}
+	focus = {
+		id = SAT_the_third_eye
+		icon = GFX_focus_SAT_generic_girls_third_eye
+		cost = 10.00
+		x = 22
+		y = 0
+		available = {
+			is_subject = no
+			has_global_flag = main_scenario
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_tooltip = {
+			add_ideas = SAT_Higan_Officers_2
+			add_ideas = { SAT_the_third_eye_idea }
+			if = {
+				limit = { has_country_flag = SAT_intel_established }
+				create_intelligence_agency = yes
+				upgrade_intelligence_agency = upgrade_form_department
+			}
+			if = {
+				limit = { has_country_flag = SAT_intel_upgraded }
+				upgrade_intelligence_agency = upgrade_passive_defense 
+				upgrade_intelligence_agency = upgrade_form_department
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					has_intelligence_agency = no 
+				}
+				create_intelligence_agency = yes
+				hidden_effect = {
+					set_country_flag = SAT_intel_established
+				}
+				else = {
+					upgrade_intelligence_agency = upgrade_passive_defense 
+					hidden_effect = {
+						set_country_flag = SAT_intel_upgraded
+					}
+				}
+			}
+			upgrade_intelligence_agency = upgrade_form_department
+			add_ideas = { SAT_the_third_eye_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_dive_in_the_library
+		icon = GFX_focus_SAT_sink_into_library
+		cost = 10.00
+		x = 44
+		y = 0
+		available = {
+			is_subject = no
+			has_global_flag = main_scenario
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			country_event = { id = sat.8 hours = 12 }
+			set_technology = {
+				# SAT_Kasha = 1
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_talk_with_Reiuji_Utsuho
+		icon = GFX_focus_SAT_Generic_Utsuho
+		cost = 5.00
+		prerequisite = {
+			focus = SAT_ghost_insurrection
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_ghost_insurrection
+		completion_reward = {
+			country_event = { id = sat.2 hours = 4 }
+		}
+
+
+	}
+	focus = {
+		id = SAT_reply_from_yukari
+		icon = GFX_focus_SAT_reply_from_Yukari
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_stable_our_rudder
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			has_country_flag = SAT_received_YKR_letter_flag
+		}
+		x = -4
+		y = 1
+		relative_position_id = SAT_stable_our_rudder
+		completion_reward = {
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_political_power = 30
+		}
+
+	}
+	focus = {
+		id = SAT_Yakumo_infrastructure
+		icon = GFX_focus_SAT_YKR_railway
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_reply_from_yukari
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		available = {
+			NOT = { has_completed_focus = SAT_self_defence_alliance }
+			NOT = { has_completed_focus = SAT_proclaim_our_past_role }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_reply_from_yukari
+		completion_reward = {
+			add_ideas = { SAT_Yakumo_infrastructure_idea }
+			add_popularity = {
+				popularity = 0.05
+				ideology = oldorder
+			}
+
+			add_tech_bonus = {
+				name = SAT_complete_yukari_missions
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 2
+				technology = jijianjianzao140
+				technology = jijianjianzao146
+				technology = jijianjianzao151
+				technology = jijianjianzao156
+				technology = jijianjianzao161
+			}
+
+			SAT_enhance_YKR_influence = yes
+		}
+
+	}
+	focus = {
+		id = SAT_letter_to_yakumo_yukari
+		icon = GFX_focus_SAT_letter_to_Yukari
+		cost = 5.00
+		prerequisite = {
+			focus = SAT_ghost_insurrection
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_ghost_insurrection
+		completion_reward = {
+			country_event = { id = sat.3 }
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					random_list = {
+						30 = {
+							set_country_flag = SAT_ai_isolationist_chosen_flag
+						}
+						30 = {
+							set_country_flag = SAT_ai_reformist_chosen_flag
+						}
+						30 = {
+							set_country_flag = SAT_ai_youkaism_chosen_flag
+						}
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_start_investigation
+		icon = GFX_focus_SAT_start_the_investigation
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_chaos_of_Higan
+		}
+		prerequisite = {
+			focus = SAT_the_third_eye
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_chaos_of_Higan
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			SAT_guard_level_up = yes
+			custom_effect_tooltip = SAT_effect_if_chirendan_volunteers_completed_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SAT_volunteer_idea
+					add_idea = SAT_volunteer_idea_2
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = SAT_volunteer_idea }
+					swap_ideas = {
+						remove_idea = SAT_volunteer_idea
+						add_idea = SAT_volunteer_idea_2
+					}
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SAT_Animal_Realm_insurrection
+		icon = GFX_focus_SAT_the_beast_war
+		cost = 7.00
+		prerequisite = {
+			focus = SAT_start_investigation
+		}
+		available = {
+			KEK = {
+				OR = {
+					has_war_with = SAK
+					has_war_with = YCE
+					has_war_with = GYK
+				}
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = SAT_start_investigation
+		completion_reward = {
+			SAT_guard_level_up = yes
+		}
+
+	}
+
+	focus = {
+		id = SAT_old_friend_kanako
+		icon = GFX_focus_SAT_old_pal_Kanako
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_stable_our_rudder
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			MRY = {
+				OR = {
+					has_completed_focus = MRY_shenmingyongyuanshishen
+					has_completed_focus = MRY_xindexinyanghezuojihua
+					has_completed_focus = MRY_suihuanxiangxiangdashibianhua
+				}
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = SAT_stable_our_rudder
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = MRY modifier = SAT_befriend_old_friend_op }
+			add_opinion_modifier = { target = MRY modifier = SAT_befriend_old_friend_op }
+		}
+	}
+
+	focus = {
+		id = SAT_kickstart_military_establishment
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_dive_in_the_library
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 3
+		y = 1
+		relative_position_id = SAT_dive_in_the_library
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				# name = SAT_kickstart_military_establishment
+				category = primary_weapons
+				ahead_reduction = 0.5
+				bonus = 1.0
+				uses = 2
+			}
+			add_tech_bonus = {
+				# name = SAT_kickstart_military_establishment
+				category = artillery_tech
+				ahead_reduction = 0.5
+				bonus = 1.0
+				uses = 1
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_a_new_army
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_kickstart_military_establishment
+		}
+		x = 5
+		y = 1
+		available = {
+			OR = {
+				is_ai = yes
+				AND = {
+					OR = {
+						has_tech = waike
+						has_tech = lingben
+					}
+					has_tech = lingliliushuixian
+				}
+			}
+			has_idea = SAT_beast_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		relative_position_id = SAT_kickstart_military_establishment
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAT_a_new_army
+				category = land_doctrine
+				cost_reduction = 0.75
+				uses = 1
+			}
+			add_tech_bonus = {
+				name = SAT_a_new_army
+				bonus = 3.0
+				ahead_reduction = 1.0
+				uses = 1
+				category = combined
+			}
+			swap_ideas = {
+				remove_idea = SAT_beast_army
+				add_idea = SAT_beast_army_2
+			}
+			unlock_decision_tooltip = SAT_army_reform_1
+		}
+
+	}
+	focus = {
+		id = SAT_investigation_committee
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 8.00
+		prerequisite = {
+			focus = SAT_reply_from_yukari
+			focus = SAT_old_friend_kanako
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 4
+		y = 1
+		relative_position_id = SAT_reply_from_yukari
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.05
+				ideology = guli
+			}
+			add_ideas = { SAT_trade_and_business_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_talk_with_Kaenbyou_Rin
+		icon = GFX_focus_SAT_Generic_Orin
+		cost = 5.00
+		prerequisite = {
+			focus = SAT_ghost_insurrection
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_ghost_insurrection
+		completion_reward = {
+			country_event = { id = sat.1 hours = 4 }
+		}
+
+	}
+	focus = {
+		id = SAT_start_our_agenda
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 7.00
+		prerequisite = {
+			focus = SAT_talk_with_Reiuji_Utsuho
+		}
+		prerequisite = {
+			focus = SAT_talk_with_Kaenbyou_Rin
+		}
+		prerequisite = {
+			focus = SAT_letter_to_yakumo_yukari
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		available = {
+			has_idea = SAT_Komeiji_Isolationism
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_talk_with_Reiuji_Utsuho
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_Komeiji_Isolationism
+				add_idea = SAT_Komeiji_Isolationism_enhanced
+			}
+			SAT_guard_level_up = yes
+		}
+
+	}
+	focus = {
+		id = SAT_Netherworld_insurrection
+		icon = GFX_focus_YYK_netherworld_bad_to_worse
+		cost = 7.00
+		prerequisite = {
+			focus = SAT_start_investigation
+		}
+		available = {
+			YYK = { has_country_flag = YYK_neizhanqianxi }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = -3
+		y = 1
+		relative_position_id = SAT_start_investigation
+		completion_reward = {
+			SAT_guard_level_up = yes
+			army_experience = 15
+		}
+		
+
+	}
+	focus = {
+		id = SAT_Shiki_Eiki_Deal
+		icon = GFX_focus_SAT_SKI_handshake
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_start_investigation
+		}
+		available = {
+			OR = {
+				has_global_flag = Hell_URM_KMC_war_started_flag
+				date > 147.10.1
+			}
+			NOT = { has_completed_focus = SAT_the_acknowledgement_of_yukari }
+			NOT = { has_completed_focus = SAT_proclaim_our_past_role }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_start_investigation
+		completion_reward = {
+			SAT_enhance_SKI_influence = yes
+			SKI = { 
+				country_event = { id = sat.13 }
+				custom_effect_tooltip = needs_approval
+			}
+			effect_tooltip = {
+				add_ideas = { SAT_SKI_pact_idea }
+				SKI = { add_ideas = { SAT_SKI_pact_idea } }
+			}
+		}
+	}
+
+	focus = {
+		id = SAT_Chireiden_Security_Bureau
+		icon = GFX_focus_SAT_Chireidan_Security_Bureau
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_third_eye
+		}
+		available = {
+			is_subject = no
+			OR = {
+				is_ai = yes
+				has_tech = waike
+				has_tech = lingben
+			}
+			has_idea = SAT_the_third_eye_idea
+			date > 147.6.1
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 500
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = SAT_the_third_eye
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_the_third_eye_idea
+				add_idea = SAT_the_third_eye_idea_2
+			}
+			upgrade_intelligence_agency = upgrade_passive_defense 
+			upgrade_intelligence_agency = upgrade_interrogation_techniques 
+		}
+
+	}
+	focus = {
+		id = SAT_the_pact_that_never_takes_effect
+		icon = GFX_focus_SAT_renew_the_treaty
+		cost = 6.00
+		prerequisite = {
+			focus = SAT_start_our_agenda
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		x = -4
+		y = 1
+		relative_position_id = SAT_start_our_agenda
+		completion_reward = {
+			YUG = { country_event = { id = und.9 hours = 5 } }
+		}
+
+	}
+	focus = {
+		id = SAT_lessons_from_wars
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Animal_Realm_insurrection
+		}
+		available = {
+			threat > 0.59
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Animal_Realm_insurrection
+		completion_reward = {
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = SAT_lessons_from_wars
+				category = land_doctrine
+				cost_reduction = 0.75
+				uses = 2
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_pacify_the_brotherhood
+		icon = GFX_goal_generic_major_war
+		cost = 5.00
+		prerequisite = {
+			focus = SAT_start_our_agenda
+		}
+		available = {
+			has_global_flag = UUG_unrest_global_flag
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		bypass = {
+			OR = {
+				UUG = { exists = no }
+				UUG = { is_subject = yes }
+			}
+		}
+
+		will_lead_to_war_with = UUG
+		x = 0
+		y = 1
+		relative_position_id = SAT_start_our_agenda
+		completion_reward = {
+			declare_war_on = {
+				target = UUG
+				type = annex_everything
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_defend_the_hub
+		icon = GFX_goal_generic_fortify_city
+		cost = 7.00
+		prerequisite = {
+			focus = SAT_start_our_agenda
+		}
+		available = {
+			53 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			102 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = SAT_start_our_agenda
+		completion_reward = {
+			53 = {
+				add_building_construction = {
+					type = bunker
+					province = 2706
+					level = 3
+					instant_build = yes
+				}
+			}
+			102 = {
+				add_building_construction = {
+					type = bunker
+					province = 6454
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 476
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1220
+					level = 3
+					instant_build = yes
+				}
+			}
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 890 93 1796 672 827 2111 917 521 2121 3058 }
+            }
+		}
+
+	}
+	focus = {
+		id = SAT_establish_yakumo_spirit_induction
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_reply_from_yukari
+		}
+		available = {
+			NOT = { has_completed_focus = SAT_self_defence_alliance }
+			NOT = { has_completed_focus = SAT_proclaim_our_past_role }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_reply_from_yukari
+		completion_reward = {
+			PO_add2 = yes
+			add_ideas = { SAT_yakumo_spirit_induction_facility_idea }
+			add_tech_bonus = {
+				name = SAT_establish_yakumo_spirit_induction
+				bonus = 0.5
+				ahead_reduction = 1.0
+				uses = 2.0
+				technology = linglishengchan140
+				technology = linglishengchan145
+				technology = linglishengchan150
+				technology = linglishengchan155
+				technology = linglishengchan160
+				technology = linglifuzhushengchan147
+				technology = linglifuzhushengchan152
+				technology = linglifuzhushengchan157
+				technology = linglifuzhushengchan162
+			}
+
+
+			SAT_enhance_YKR_influence = yes
+			MRY_influence_down_if_reformist = yes
+		}
+
+	}
+	focus = {
+		id = SAT_Spirit_Power_sharing
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_establish_yakumo_spirit_induction
+		}
+		prerequisite = {
+			focus = SAT_Yakumo_infrastructure
+		}
+		available = {
+			SAT_YKR_influence_is_no_less_than_LOW = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_reply_from_yukari
+		completion_reward = {
+			PO_add5 = yes
+			add_to_tech_sharing_group = SAT_YKR_joint_research
+			YKR = { add_to_tech_sharing_group = SAT_YKR_joint_research }
+			swap_ideas = {
+				remove_idea = SAT_yakumo_spirit_induction_facility_idea
+				add_idea = SAT_yakumo_spirit_induction_facility_2_idea
+			}
+
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.05
+			}
+			SAT_enhance_YKR_influence = yes
+			SAT_resist_SKI_influence = yes
+			MRY_influence_up_if_neworder = yes
+		}
+
+	}
+	focus = {
+		id = SAT_Spy_comes_in
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Spirit_Power_sharing
+		}
+		prerequisite = {
+			focus = SAT_Chireiden_Security_Bureau
+		}
+		available = {
+			SAT_YKR_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Spirit_Power_sharing
+		completion_reward = {
+			add_ideas = { SAT_Spy_comes_in_ideas }
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.075
+			}
+			upgrade_intelligence_agency = upgrade_passive_defense 
+
+			lobbyincrease = yes
+
+			SAT_enhance_YKR_influence = yes
+			MRY_influence_down_if_reformist = yes
+		}
+
+	}
+
+	focus = {
+		id = SAT_reinforce_yuyuko
+		icon = GFX_focus_SAT_deal_with_yuyuko
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Netherworld_insurrection
+		}
+		mutually_exclusive = {
+			focus = SAT_who_cares_about_yuyuko
+		}
+		available = {
+			YYK = { has_country_flag = YYK_neizhanqianxi }
+			NOT = { YYK = { has_country_flag = YYK_refused_SAT_support_flag } }
+			NOT = { has_completed_focus = SAT_military_intervene_proposal }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_Netherworld_insurrection
+		completion_reward = {
+			YYK = { country_event = { id = sat.14 hours = 4 } }
+		}
+
+	}
+
+	focus = {
+		id = SAT_who_cares_about_yuyuko
+		icon = GFX_focus_SAT_no_deal_with_yuyuko
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Netherworld_insurrection
+		}
+		mutually_exclusive = {
+			focus = SAT_reinforce_yuyuko
+		}
+		available = {
+			YYK = { has_country_flag = YYK_neizhanqianxi }
+		}
+		bypass = {
+			YYK = { has_country_flag = YYK_refused_SAT_support_flag }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_Netherworld_insurrection
+		completion_reward = {
+			add_timed_idea = {
+				idea = SAT_HUB_invasion_idea
+				days = 230
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_netiogation_with_yuyuko
+		icon = GFX_focus_SAT_puppet_HUB
+		cost = 8.00
+		prerequisite = {
+			focus = SAT_reinforce_yuyuko
+		}
+		prerequisite = {
+			focus = SAT_defend_the_hub
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_reinforce_yuyuko
+		completion_reward = {
+			HUB = { country_event = { id = sat.18  hours = 6 } }
+		}
+
+	}
+	focus = {
+		id = SAT_raid_the_hub
+		icon = GFX_focus_SAT_invade_HUB
+		cost = 6.00
+		prerequisite = {
+			focus = SAT_who_cares_about_yuyuko
+		}
+		will_lead_to_war_with = HUB
+		will_lead_to_war_with = YYK
+		will_lead_to_war_with = AOO
+		x = 0
+		y = 1
+		relative_position_id = SAT_who_cares_about_yuyuko
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = HUB
+				type = puppet_wargoal_focus
+			}
+			unlock_decision_tooltip = SAT_cease_fire_with_YYK
+			unlock_decision_tooltip = SAT_cease_fire_with_AOO
+		}
+
+	}
+	focus = {
+		id = SAT_Higan_Officers
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Shiki_Eiki_Deal
+		}
+		available = {
+			SAT_SKI_influence_is_no_less_than_LOW = yes
+			has_country_flag = SAT_alternative_solution_has_been_worked_out_tt
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Shiki_Eiki_Deal
+		completion_reward = {
+			PO_add2 = yes
+			OL_minus5 = yes
+			add_popularity = {
+				popularity = 0.05
+				ideology = qinwai
+			}
+			add_ideas = { SAT_Higan_Officers }
+
+			add_tech_bonus = {
+				name = SAT_Higan_Officers
+				bonus = 2.0
+				ahead_reduction = 3.0
+				uses = 2.0
+				technology = duzhanxiaodui146
+				technology = duzhanxiaodui151
+				technology = duzhanxiaodui156
+				technology = duzhanxiaodui161
+				technology = duzhanxiaodui166
+			}
+
+			conservativeincrease = yes
+			SAT_enhance_SKI_influence = yes
+			SAT_resist_YKR_influence = yes
+			MRY_influence_down_if_neworder = yes
+			# unlock_decision_tooltip = SAT_talk_with_ghost
+			
+		}
+
+	}
+	focus = {
+		id = SAT_hub_infrastructure
+		icon = GFX_focus_SAT_HUB_infrasturcture
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_raid_the_hub
+			focus = SAT_netiogation_with_yuyuko
+		}
+		available = {
+			554 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+            96 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+            127 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT} } }
+			SAT_no_civilian_factories_using = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 13
+		y = 5
+		completion_reward = {
+			554 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+				}
+			}
+			96 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			127 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3058 6456 6454 7116 7112 2225 624 6322 1715 1798 }
+            }
+		}
+
+	}
+	focus = {
+		id = SAT_try_to_talk_with_ghost
+		icon = GFX_focus_BUL_cooperate_with_the_zveno
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Higan_Officers
+		}
+		available = {
+			SAT_SKI_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Higan_Officers
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.05
+				ideology = qinwai
+			}
+			OL_minus5 = yes
+			unlock_decision_tooltip = SAT_talk_with_ghost
+			conservativeincrease = yes
+			SAT_enhance_SKI_influence = yes
+			MRY_influence_up_if_reformist = yes
+			# SAT_UUG_unrest_reduce = yes
+		}
+
+	}
+	focus = {
+		id = SAT_military_mutual_aid
+		icon = GFX_focus_SAT_deal_with_SKI_handshake
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Higan_Officers
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_Higan_Officers
+		available = {
+			SAT_SKI_influence_is_no_less_than_SLIGHTLY_LOW = yes
+			SAT_YKR_influence_is_less_than_SLIGHTLY_HIGH = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.05
+				ideology = qinwai
+			}
+			if = {
+				limit = { 
+					has_idea = SAT_SKI_pact_idea
+				}
+				swap_ideas = {
+					remove_idea = SAT_SKI_pact_idea
+					add_idea = SAT_SKI_pact_idea_2
+				}
+				if = {
+					limit = { SKI = { has_idea = SAT_SKI_pact_idea }  }
+					SKI = {
+						swap_ideas = {
+							remove_idea = SAT_SKI_pact_idea
+							add_idea = SAT_SKI_pact_idea_2
+						}
+					}
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SAT_Higan_Officers
+					add_idea = SAT_Higan_Officers_2
+				}
+			}
+			SAT_enhance_SKI_influence = yes
+			MRY_influence_down_if_neworder = yes
+			SAT_YUG_prestige_decrease_2 = yes
+			diplomatic_relation = {
+				country = YUG
+				relation = military_access
+				active = no
+			}
+			YUG = {
+				diplomatic_relation = {
+					country = SAT
+					relation = military_access
+					active = no
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SAT_reinit_old_facilities
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_military_mutual_aid
+		}
+		prerequisite = {
+			focus = SAT_try_to_talk_with_ghost
+		}
+		available = {
+			SAT_SKI_influence_is_no_less_than_MEDIUM = yes
+			has_completed_focus = SAT_dive_in_the_library
+			OR = {
+				has_idea = Town
+				has_idea = Country
+				has_idea = Empire
+				has_idea = World
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_try_to_talk_with_ghost
+		completion_reward = {
+			OL_minus5 = yes
+			custom_effect_tooltip = SAT_unlock_old_facilities_tt
+			SAT_enhance_SKI_influence = yes
+			SAT_resist_YKR_influence = yes
+		}
+
+	}
+
+	focus = {
+		id = SAT_proclaim_our_past_role
+		icon = GFX_focus_SAT_proclaim_our_past_role
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_reinit_old_facilities
+		}
+		prerequisite = {
+			focus = SAT_hub_infrastructure
+		}
+		mutually_exclusive = {
+			focus = SAT_the_acknowledgement_of_yukari
+			focus = SAT_self_defence_alliance
+		}
+		available = {
+			OR = {
+				SAT_GHOST_IMMIGRANT_REACH_20 = yes
+				AND = {
+					date > 151.1.1
+					SAT_GHOST_IMMIGRANT_REACH_10 = yes
+				}
+			}
+			SAT_SKI_influence_is_no_less_than_SLIGHTLY_HIGH = yes
+			qinwai > 0.34
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_reformist_chosen_flag
+			}
+		}
+		will_lead_to_war_with = YUG
+		will_lead_to_war_with = UNL
+		x = -2
+		y = 1
+		relative_position_id = SAT_reinit_old_facilities
+		completion_reward = {
+			OL_minus10 = yes
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.20 			
+			}
+			set_politics = {
+				ruling_party = qinwai
+			}
+
+			bianjiekaifang = yes
+			conservativeincrease = yes
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = YUG }
+					YUG = { NOT = { is_subject_of = ROOT } }
+					YUG = { exists = yes }
+				}
+				custom_effect_tooltip = SAT_this_means_war_with_YUG_tt
+				YUG = { country_event = { id = sat.22 hours = 3 } }
+			}
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = UNL }
+					UNL = { NOT = { is_subject_of = ROOT } }
+					UNL = { exists = yes }
+				}
+				custom_effect_tooltip = SAT_this_means_war_with_UNL_tt
+				UNL = { country_event = { id = sat.22 hours = 3 } }
+			}
+
+			SAT_resist_MRY_influence = yes
+			SAT_YKR_influence_clear_all = yes
+			
+		}
+	}
+
+	focus = {
+		id = SAT_complete_yukari_missions
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Spy_comes_in
+		}
+		available = {
+			OR = {
+				has_idea = Town
+				has_idea = Country
+				has_idea = Empire
+				has_idea = World
+			}
+			OR = {
+				SAT_GHOST_IMMIGRANT_REACH_20 = yes
+				AND = {
+					date > 151.1.1
+					SAT_GHOST_IMMIGRANT_REACH_10 = yes
+				}
+			}
+			SAT_YKR_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_Spy_comes_in
+		completion_reward = {
+			PO_add5 = yes
+			OL_add5 = yes
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				name = SAT_complete_yukari_missions
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 1
+				category = magic
+			}
+			lobbyincrease = yes
+			
+			SAT_enhance_YKR_influence = yes
+		}
+
+	}
+
+	focus = {
+		id = SAT_anti_ghost_weapons
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Spy_comes_in
+		}
+		available = {
+			SAT_YKR_influence_is_no_less_than_MEDIUM = yes
+			SAT_SKI_influence_is_less_than_SLIGHTLY_HIGH = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Spy_comes_in
+		completion_reward = {
+			OL_add3 = yes
+			add_popularity = {
+				popularity = 0.05
+				ideology = oldorder
+			}
+			unlock_decision_tooltip = SAT_cleanse_ghost
+			if = {
+				limit = { has_idea = SAT_Komeiji_Isolationism }
+				swap_ideas = {
+					remove_idea = SAT_Komeiji_Isolationism
+					add_idea = SAT_Komeiji_Isolationism_old_order
+				}
+			}
+			if = {
+				limit = { has_idea = SAT_Komeiji_Isolationism_enhanced }
+				swap_ideas = {
+					remove_idea = SAT_Komeiji_Isolationism_enhanced
+					add_idea = SAT_Komeiji_Isolationism_old_order_enhanced
+				}
+			}
+			lobbyincrease = yes
+
+			SAT_enhance_YKR_influence = yes
+			SAT_resist_SKI_influence = yes
+			MRY_influence_down_if_reformist = yes
+		}
+	}
+
+	focus = {
+		id = SAT_fortify_the_borders
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Spy_comes_in
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		available = {
+			SAT_YKR_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_Spy_comes_in
+		completion_reward = {
+			add_ideas = { SAT_fortify_the_borders_ideas }
+			conservativedecrease = yes
+		}
+
+	}
+
+	focus = {
+		id = SAT_the_acknowledgement_of_yukari
+		icon = GFX_focus_SAT_the_acknowledgement_of_yukari
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_anti_ghost_weapons
+		}
+		prerequisite = {
+			focus = SAT_complete_yukari_missions
+		}
+		prerequisite = {
+			focus = SAT_fortify_the_borders
+		}
+		mutually_exclusive = {
+			focus = SAT_proclaim_our_past_role
+			focus = SAT_self_defence_alliance
+		}
+		available = {
+			SAT_YKR_influence_is_no_less_than_SLIGHTLY_HIGH = yes
+			oldorder > 0.34
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_youkaism_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_anti_ghost_weapons
+		completion_reward = {
+			OL_add3 = yes
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.20 			
+			}
+			set_politics = {
+				ruling_party = oldorder
+			}
+			lobbyincrease = yes
+
+			custom_effect_tooltip = SAT_demand_YUG_puppet_tt
+			custom_effect_tooltip = SAT_war_with_YUG_still_possible_tt
+			SAT_resist_MRY_influence = yes
+			SAT_SKI_influence_clear_all = yes
+			
+		}
+
+	}
+	focus = {
+		id = SAT_connect_the_underworld
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_pacify_the_brotherhood
+		}
+		prerequisite = {
+			focus = SAT_the_pact_that_never_takes_effect
+		}
+		available = {
+			NOT = { has_war_with = YUG }
+			has_tech = jijianjianzao146
+			has_full_control_of_state = 81
+			39 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } } 
+			71 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } } 
+			SAT_no_civilian_factories_using = yes
+			has_completed_focus = SAT_dive_in_the_library
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_isolationist_chosen_flag
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_pacify_the_brotherhood
+		completion_reward = {
+			unlock_decision_tooltip = UUG_railway_first
+			unlock_decision_tooltip = UUG_railway_second
+			unlock_decision_tooltip = UUG_railway_third
+			unlock_decision_tooltip = UUG_railway_celebration
+			39 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			71 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 282 2684 1492 2349 2290 410 2628 1651 256 1435 }
+            }
+			add_timed_idea = {
+				idea = SAT_civil_industrial_cost_2
+				days = 100
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_zombie_fairies
+		text = SAT_zombie_fairies
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_pacify_the_brotherhood
+		}
+		available = {
+			UFA = { exists = yes }
+			UFA = { is_subject = no }
+		}
+		ai_will_do = {
+			factor = 5000
+		}
+		will_lead_to_war_with = UFA
+		x = 2
+		y = 1
+		relative_position_id = SAT_pacify_the_brotherhood
+		completion_reward = {
+			UFA = { country_event = { id = und.12 hours = 6 } }
+		}
+
+	}
+
+	focus = {
+		id = SAT_show_our_strength
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_connect_the_underworld
+		}
+		available = {
+			OR = {
+				strength_ratio = {
+					tag = YUG
+					ratio > 0.79
+				}
+				num_divisions > 49
+				has_army_manpower = {
+					size > 800
+				}
+			}
+			
+			OR = {
+				NOT = { has_war_with = YUG }
+				YUG = { exists = no }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_isolationist_chosen_flag
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_connect_the_underworld
+		completion_reward = {
+			unlock_decision_tooltip = Parade_Kyuuto_1
+		}
+
+	}
+
+	focus = {
+		id = SAT_drink
+		icon = GFX_focus_SAT_lets_drink
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_connect_the_underworld
+		}
+		available = {
+			num_of_factories > 49
+			OR = {
+				has_idea = Town
+				has_idea = Country
+				has_idea = Empire
+				has_idea = World
+			}
+			OR = {
+				NOT = { has_war_with = YUG }
+				YUG = { exists = no }
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_isolationist_chosen_flag
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_connect_the_underworld
+		completion_reward = {
+			PO_add2 = yes
+			SAT_YUG_prestige_increase = yes
+			add_ideas = { SAT_drink }
+		}
+	}
+
+	focus = {
+		id = SAT_order_in_the_underworld
+		icon = GFX_focus_GRE_resurrecting_the_megali_idea
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_pact_that_never_takes_effect
+		}
+		prerequisite = {
+			focus = SAT_pacify_the_brotherhood
+		}
+		available = {
+			threat > 0.29
+		}
+		bypass = {
+			OR = {
+				has_war_with = UNL
+				UNL = { is_in_faction_with = SAT }
+				UNL = { is_subject_of = SAT }
+				UNL = { exists = no }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_the_pact_that_never_takes_effect
+		completion_reward = {
+			country_event = { id = und.16  hours = 10 }
+		}
+
+	}
+	focus = {
+		id = SAT_secure_the_passages
+		icon = GFX_focus_TUR_reconfigure_turkish_foreign_policy
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_order_in_the_underworld
+		}
+		available = {
+			threat > 0.44
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_isolationist_chosen_flag
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_order_in_the_underworld
+		completion_reward = {
+
+			custom_effect_tooltip = SAT_unlock_puupet_tooltip_tt
+		}
+
+	}
+
+	focus = {
+		id = SAT_self_defence_alliance
+		icon = GFX_focus_SAT_underground_alliance_prereq
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_drink
+		}
+		prerequisite = {
+			focus = SAT_show_our_strength
+		}
+		mutually_exclusive = {
+			focus = SAT_proclaim_our_past_role
+			focus = SAT_the_acknowledgement_of_yukari
+		}
+		available = {
+			guli > 0.34
+			SAT_YUG_prestige_at_least_6 = yes
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_drink
+		completion_reward = {
+			# SAT_resist_MRY_influence = yes
+			add_ideas = { can_create_defense_faction_idea }
+			create_faction = SAT_self_defence_alliance
+			if = {
+				limit = { NOT = { has_government = guli } }
+				add_popularity = {
+					ideology = guli
+					popularity = 0.20 			
+				}
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.20
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					if = {
+						limit = { YUG = { is_in_faction = no is_subject = no } }
+						add_to_faction = YUG
+					}
+					if = {
+						limit = { PRS = { is_in_faction = no is_subject = no } }
+						add_to_faction = PRS
+					}
+				}
+			}
+			lobbydecrease = yes
+
+			SAT_YKR_influence_clear_all = yes
+			SAT_SKI_influence_clear_all = yes
+			
+		}
+	}
+
+	focus = {
+		id = SAT_military_intervene_proposal
+		icon = GFX_focus_TUR_the_montreux_convention
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_military_mutual_aid
+			focus = SAT_Spy_comes_in
+		}
+		available = {
+			NOT = { has_war_with = YYK }
+			OR = {
+				AND = {
+					SAT_YKR_influence_is_no_less_than_MEDIUM = yes
+					YKR = { NOT = { has_war_with = YYK } }
+				}
+				AND = {
+					SAT_SKI_influence_is_no_less_than_MEDIUM = yes
+					SKI = { NOT = { has_war_with = YYK } }
+				}
+			}
+
+		}
+		x = 3
+		y = 1
+		relative_position_id = SAT_military_mutual_aid
+		completion_reward = {
+			custom_effect_tooltip = SAT_defend_YYK_tt
+			if = {
+				limit = { SAT_YKR_influence_is_no_less_than_MEDIUM = yes }
+				YKR = { country_event = { id = sat.29 days = 2 } }
+				SAT_enhance_YKR_influence = yes
+			}
+			if = {
+				limit = { SAT_SKI_influence_is_no_less_than_MEDIUM = yes }
+				SKI = { country_event = { id = sat.29 days = 2 } }
+				SAT_enhance_SKI_influence = yes
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_Terrible_Souvenir
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Chireiden_Security_Bureau
+		}
+		available = {
+			OR = {
+				AND = { 
+					is_ai = yes
+					date > 149.1.1
+				}
+				has_tech = jisuangongju149
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Chireiden_Security_Bureau
+		completion_reward = {
+			add_tech_bonus = {
+				# name = SAT_Terrible_Souvenir
+				bonus = 3.0
+				ahead_reduction = 10.0
+				uses = 1
+				technology = jiemi137
+				technology = jiemi147
+				technology = jiemi157
+			}
+			add_tech_bonus = {
+				# name = SAT_Terrible_Souvenir
+				bonus = 3.0
+				ahead_reduction = 5.0
+				uses = 2
+				technology = jiami137
+				technology = jiami147
+				technology = jiami157
+			}
+			add_tech_bonus = {
+				# name = SAT_Terrible_Souvenir
+				bonus = 1.0
+				ahead_reduction = 10.0
+				uses = 2
+				technology = jiemigai149
+				technology = jiemigai154
+				technology = jiemigai159
+				technology = jiamigai149
+				technology = jiamigai154
+				technology = jiamigai159
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_underworld_conference
+		icon = GFX_focus_TUR_reform_the_balkan_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_proclaim_our_past_role
+			focus = SAT_self_defence_alliance
+			focus = SAT_the_acknowledgement_of_yukari
+		}
+		available = {
+			OR = {
+				NOT = { has_war_with = YUG }
+				YUG = { is_in_faction = yes }
+				YUG = { exists = no }
+			}
+			OR = {
+				NOT = { has_war_with = YUG }
+				PRS = { is_in_faction = yes }
+				PRS = { exists = no }
+			}
+			OR = {
+				NOT = { has_war_with = YUG }
+				UUG = { is_in_faction = yes }
+				UUG = { exists = no }
+			}
+			OR = {
+				NOT = { has_war_with = YUG }
+				YMM = { is_in_faction = yes }
+				YMM = { exists = no }
+			}
+			OR = {
+				NOT = { has_war_with = YUG }
+				UNL = { is_in_faction = yes }
+				UNL = { exists = no }
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_proclaim_our_past_role
+		completion_reward = {
+			UFA = { can_core = yes }
+			UUG = { can_core = yes }
+		}
+
+	}
+
+	focus = {
+		id = SAT_Restart_Energy_nagotiation
+		text = SAT_Restart_Energy_nagotiation
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_old_friend_kanako
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_old_friend_kanako
+		completion_reward = {
+			SAT_enhance_MRY_influence = yes
+			add_tech_bonus = {
+				name = SAT_Restart_Energy_nagotiation
+				bonus = 0.75
+				uses = 2.0
+				category = resource
+			}
+		}
+	}
+
+	focus = {
+		id = SAT_collabrate_technical_lab
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Restart_Energy_nagotiation
+		}
+		available = {
+			SAT_MRY_influence_is_no_less_than_LOW = yes
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_Restart_Energy_nagotiation
+		completion_reward = {	
+			add_to_tech_sharing_group = SAT_MRY_joint_research
+			MRY = { add_to_tech_sharing_group = SAT_MRY_joint_research }
+			# if = {
+				# limit = { KAP = { NOT = { has_war_with = MRY } } }
+				# KAP = { add_to_tech_sharing_group = SAT_MRY_joint_research }
+			# }
+			unlock_decision_tooltip = SAT_join_MRY_research
+
+			SAT_enhance_MRY_influence = yes
+		}
+	}
+
+	focus = {
+		id = SAT_import_Machines
+		icon = GFX_focus_SAT_MRY_machine_introduction
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Restart_Energy_nagotiation
+		}
+		available = {
+			SAT_MRY_influence_is_no_less_than_LOW = yes
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_Restart_Energy_nagotiation
+		completion_reward = {
+			PO_minus3 = yes
+			
+			add_tech_bonus = {
+				name = SAT_import_Machines
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 2.0
+				technology = fangwaijieshengchan140
+				technology = fangwaijieshengchan145
+				technology = fangwaijieshengchan150
+				technology = fangwaijieshengchan155
+				technology = fangwaijieshengchan160
+				technology = waijiefuzhushengchan147
+				technology = waijiefuzhushengchan152
+				technology = waijiefuzhushengchan157
+				technology = waijiefuzhushengchan162
+			}
+
+			SAT_enhance_MRY_influence = yes
+		}
+	}
+
+	focus = {
+		id = SAT_face_the_deity
+		icon = GFX_focus_SAT_face_the_deity
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Restart_Energy_nagotiation
+		}
+		available = {
+			NOT = { has_war_with = MRY }
+			SAT_MRY_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				SAT_MRY_influence_is_less_than_MEDIUM = yes
+			}
+		}
+		x = 4
+		y = 1
+		relative_position_id = SAT_Restart_Energy_nagotiation
+		completion_reward = {
+			set_variable = {
+				var = ROOT.SAT_NUCLEAR_COMPLETE_DAYS
+				value = 400 
+			}
+			MRY = { country_event = { id = sat.23 days = 3 } }
+			custom_effect_tooltip = SAT_bonus_if_agreement_has_been_reached_tt
+		}
+	}
+
+	focus = {
+		id = SAT_Moriya_Engineers
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_collabrate_technical_lab
+			focus = SAT_import_Machines
+		}
+		available = {
+			
+			SAT_MRY_influence_is_no_less_than_SLIGHTLY_LOW = yes
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_collabrate_technical_lab
+		completion_reward = {
+			PO_minus4 = yes
+			OL_minus3 = yes
+			add_ideas = { SAT_Moriya_Engineers_idea }
+			add_tech_bonus = {
+				# name = SAT_Moriya_Engineers
+				bonus = 1.5
+				ahead_reduction = 2.0
+				uses = 1
+				technology = wunvzhiyuan149
+				technology = wunvzhiyuan155
+				technology = wunvzhiyuan161
+			}
+
+			SAT_enhance_MRY_influence = yes
+		}
+
+	}
+	focus = {
+		id = SAT_ameliorate_figures
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_investigation_committee
+		}
+		available = {
+			threat > 0.39
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_investigation_committee
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_trade_and_business_idea
+				add_idea = SAT_trade_and_business_idea_2
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_Chirendan_Volunteers
+		icon = GFX_focus_eng_special_air_service
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_investigation_committee
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_investigation_committee
+		completion_reward = {
+			effect_tooltip = {
+				add_ideas = { SAT_volunteer_idea }
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_completed_focus = SAT_start_investigation } }
+					add_ideas = { SAT_volunteer_idea }
+				}
+			}
+			custom_effect_tooltip = SAT_effect_if_start_investigation_completed_tt
+			effect_tooltip = {
+				add_ideas = { SAT_volunteer_idea_2 }
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_completed_focus = SAT_start_investigation }
+					add_ideas = { SAT_volunteer_idea_2 }
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SAT_underworld_airplane_design
+		icon = GFX_focus_usa_escort_fighters
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Moriya_Engineers
+		}
+		available = {
+			SAT_MRY_influence_is_no_less_than_MEDIUM = yes
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_Moriya_Engineers
+		completion_reward = {
+			# SAT_enhance_MRY_influence = yes
+			add_tech_bonus = {
+				name = SAT_underworld_airplane_design
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 2
+				technology = sc_fighter1
+				technology = sc_fighter2
+				technology = sc_bomber1
+				technology = sc_bomber2
+				technology = sc_st_bomber1
+				technology = sc_st_bomber2
+			}
+			add_ideas = { SAT_underworld_airplane_design_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_minerals_that_we_have_not_notice
+		icon = GFX_focus_generic_tungsten
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Moriya_Engineers
+		}
+		available = {
+			SAT_MRY_influence_is_no_less_than_MEDIUM = yes
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_Moriya_Engineers
+		completion_reward = {
+			# SAT_enhance_MRY_influence = yes
+			add_tech_bonus = {
+				name = SAT_minerals_that_we_have_not_notice
+				bonus = 3.0
+				uses = 1.0
+				ahead_reduction = 3.0
+				category = resource
+			}
+			add_resource = {
+				type = gas
+				amount = 5
+				state = 99
+			}
+			add_resource = {
+				type = metal
+				amount = 5
+				state = 53
+			}
+			add_resource = {
+				type = powder
+				amount = 5
+				state = 53
+			}
+			add_resource = {
+				type = crystal
+				amount = 5
+				state = 53
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_reestimate_our_industry
+		icon = GFX_focus_SAT_assess_our_industries
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_dive_in_the_library
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = -3
+		y = 1
+		relative_position_id = SAT_dive_in_the_library
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_reestimate_our_industry
+				category = industrys
+				bonus = 0.5
+				uses = 2
+			}
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 2123 282 }
+            }
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 1733 1133 }
+            }
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 319 2248 962 }
+            }
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 890 }
+            }
+			add_timed_idea = {
+				idea = SAT_reestimate_our_industry
+				days = 350
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_the_lullaby
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_reestimate_our_industry
+		}
+		available = {
+			99 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			75 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			has_tech = jianzaojishu140
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_reestimate_our_industry
+		completion_reward = {
+			99 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 319 1379 717 1434 753 }
+            }
+			build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 962 2105 1379 2711 753 }
+            }
+			
+			unlock_decision_tooltip = SAT_lullaby_expand_control_center
+			unlock_decision_tooltip = SAT_artillery_casting_factory
+			unlock_decision_tooltip = SAT_power_matrix
+		}
+
+	}
+	focus = {
+		id = SAT_Chirendan_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_reestimate_our_industry
+		}
+		available = {
+			298 = { CONTROLLER = { tag = ROOT } }
+			has_full_control_of_state = 298
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_reestimate_our_industry
+		completion_reward = {
+			298 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = SAT_Chirendan_arms_our_alliance_tt
+		}
+
+	}
+	focus = {
+		id = SAT_Energy_source_center
+		icon = GFX_focus_generic_industry_1
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_lullaby
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		available = {
+			OR = {
+				is_ai = yes
+				AND = {
+					has_tech = jianzaojishu146
+					has_tech = jisuangongju144
+				}
+			}
+			75 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_the_lullaby
+		completion_reward = {
+			add_tech_bonus = {
+				# name = SAT_Energy_source_center
+				uses = 1
+				bonus = 2.0
+				technology = gaonenglingqichang
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = SAT_mineral_factories
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_lullaby
+		}
+		available = {
+			99 = {
+				CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } }
+			}
+			114 = {
+				CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } }
+			}
+		}
+		x = 3
+		y = 1
+		relative_position_id = SAT_the_lullaby
+		completion_reward = {
+			99 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = metal_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = rock_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			114 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_remodel_the_reactor
+		icon = GFX_focus_SAT_refactor_the_reactor
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Energy_source_center
+		}
+		prerequisite = {
+			focus = SAT_face_the_deity
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_Energy_source_center
+		completion_reward = {
+			unlock_decision_tooltip = SAT_stabilize_nuclear_fusion
+			custom_effect_tooltip = SAT_nuclear_could_be_stablized_tt
+		}
+	}
+
+	focus = {
+		id = SAT_Tokamak
+		icon = GFX_focus_SAT_tokamak
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_remodel_the_reactor
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_remodel_the_reactor
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_Tokamak
+				bonus = 1.5
+				uses = 1
+				technology = shiyanfanyingdui
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					set_technology = {
+						shiyanfanyingdui = 1
+					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = SAT_Pressurized_Water_Reactor
+		icon = GFX_focus_SAT_pressure_reactor
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_remodel_the_reactor
+		}
+		available = {
+			has_idea = SAT_nuclear_fusion_stabilized
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_remodel_the_reactor
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_nuclear_fusion_stabilized
+				add_idea = SAT_nuclear_fusion_stabilized_2
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_setup_crossboundary_pipeline
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_face_the_deity
+		}
+		available = {
+			MRY = { has_completed_focus = MRY_jianliNUC }
+			has_completed_focus = SAT_the_pact_that_never_takes_effect
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_face_the_deity
+		completion_reward = {
+			SAT_enhance_MRY_influence = yes
+			add_ideas = { SAT_crossboundary_pipeline_idea }
+			if = {
+				limit = { PRS = { has_idea = SAT_Chirendan_memorandum } }
+				add_ideas = { SAT_crossboundary_pipeline_idea }
+			}
+			if = {
+				limit = { YMM = { has_idea = SAT_Chirendan_memorandum } }
+				add_ideas = { SAT_crossboundary_pipeline_idea }
+			}
+			MRY = {
+				add_ideas = { SAT_crossboundary_pipeline_MRY_idea }
+			}
+			if = {
+				limit = { NUC = { exists = yes } }
+				NUC = { add_ideas = { SAT_crossboundary_pipeline_MRY_idea } }
+			}
+		}
+	}
+	focus = {
+		id = SAT_the_second_sun
+		icon = GFX_focus_TUR_the_sun_language_theory
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Pressurized_Water_Reactor
+		}
+		prerequisite = {
+			focus = SAT_Tokamak
+		}
+		available = {
+			has_tech = shiyanfanyingdui
+			OR = {
+				has_idea = SAT_nuclear_fusion_stabilized_2
+				has_idea = SAT_nuclear_fusion_stabilized
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_remodel_the_reactor
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = SAT_nuclear_fusion_stabilized_2
+				add_idea = SAT_nuclear_fusion_complete
+			}
+			set_technology = {
+				hedongliyinqing = 1
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_raid_Geyser
+		icon = GFX_focus_generic_aegean_sea_focus
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_second_sun
+		}
+		mutually_exclusive = {
+			focus = SAT_cooperate_on_Geyser
+		}
+		available = {
+			121 = { CONTROLLER = { owns_state = 121 } }
+			89 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			OR = {
+				has_government = oldorder
+				121 = { 
+					CONTROLLER = { 
+						has_completed_focus = SEJ_kongzhijianxiequan
+					} 
+				}
+				121 = { 
+					CONTROLLER = { 
+						has_added_tension_amount > 9
+					} 
+				}
+			}
+		}
+		will_lead_to_war_with = SEJ
+		will_lead_to_war_with = ONS
+		x = -1
+		y = 1
+		relative_position_id = SAT_the_second_sun
+		completion_reward = {
+			if = {
+				limit = { 
+					121 = { CONTROLLER = { OR = { tag = SEJ is_subject_of = SEJ } } }
+				}
+				declare_war_on = {
+					target = SEJ
+					type = take_state
+					generator = { 121 349 }
+				}
+			}
+			if = {
+				limit = { 
+					OR = {
+						SEJ = { exists = no }
+						AND = {
+							SEJ = { is_subject = yes }
+							NOT = { SEJ = { is_subject_of = SAT } }
+						}
+					}
+					121 = { CONTROLLER = { owns_state = 121 } }
+				}
+				121 = { 
+					CONTROLLER = { 
+						SAT = {
+							declare_war_on = {
+								target = PREV
+								type = take_state
+								generator = { 121 349 }
+							}
+						}
+					} 
+				}
+			}
+			if = {
+				limit = { 
+					121 = { CONTROLLER = { tag = ONS } }
+				}
+				declare_war_on = {
+					target = ONS
+					type = take_state
+					generator = { 121 349 }
+				}
+			}
+			unlock_decision_tooltip = SAT_cooling_tower_spa
+		}
+	}
+
+	focus = {
+		id = SAT_cooperate_on_Geyser
+		icon = GFX_focus_generic_aegean_sea_focus
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_the_second_sun
+		}
+		mutually_exclusive = {
+			focus = SAT_raid_Geyser
+		}
+		available = {
+			121 = { 
+				CONTROLLER = { 
+					owns_state = 121 
+				} 
+			}
+			89 = { CONTROLLER = { NOT = { tag = SEJ is_subject_of = SEJ } } }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_the_second_sun
+		completion_reward = {
+			SEJ = { 
+				country_event = { id = sat.28 days = 1 }
+				custom_effect_tooltip = needs_approval
+			}
+			unlock_decision_tooltip = SAT_cooling_tower_spa
+			add_tech_bonus = {
+				# name = SAT_SEJ_Pact_flag
+				bonus = 1.5
+				ahead_reduction = 1.0
+				uses = 2
+				category = resource
+			}
+			add_tech_bonus = {
+				# name = SAT_SEJ_Pact_flag
+				bonus = 1.5
+				ahead_reduction = 1.0
+				uses = 1
+				category = build
+			}
+			SEJ = {
+				add_tech_bonus = {
+					# name = SAT_SEJ_Pact_flag
+					bonus = 1.5
+					ahead_reduction = 1.0
+					uses = 2
+					category = resource
+				}
+				add_tech_bonus = {
+					# name = SAT_SEJ_Pact_flag
+					bonus = 1.5
+					ahead_reduction = 1.0
+					uses = 1
+					category = build
+				}
+			}
+		}
+	}
+
+	
+	focus = {
+		id = SAT_power_pipeline
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_mineral_factories
+		}
+		mutually_exclusive = {
+			focus = SAT_electricity_pipeline
+		}
+		available = {
+			53 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			83 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			81 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			98 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}  
+		x = -1
+		y = 1
+		relative_position_id = SAT_mineral_factories
+		completion_reward = {
+			53 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			83 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			81 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			98 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = SAT_plan_gorgolon
+					}
+					swap_ideas = {
+						remove_idea = SAT_plan_gorgolon
+						add_idea = SAT_plan_gorgolon_3
+					}
+				}
+			}
+			custom_effect_tooltip = SAT_effect_if_gordolon_completed_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SAT_plan_gorgolon
+					add_idea = SAT_plan_gorgolon_3
+				}
+			}
+		}
+
+
+	}
+	focus = {
+		id = SAT_electricity_pipeline
+		icon = GFX_focus_eng_organise_the_blackshirts
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_mineral_factories
+		}
+		mutually_exclusive = {
+			focus = SAT_power_pipeline
+		}
+		available = {
+			53 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			75 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			86 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			298 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_mineral_factories
+		completion_reward = {
+			53 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			75 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			86 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			298 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = SAT_plan_gorgolon
+					}
+					swap_ideas = {
+						remove_idea = SAT_plan_gorgolon
+						add_idea = SAT_plan_gorgolon_2
+					}
+				}
+			}
+			custom_effect_tooltip = SAT_effect_if_gordolon_completed_tt
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = SAT_plan_gorgolon
+					add_idea = SAT_plan_gorgolon_2
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_expand_gold_mine
+		icon = GFX_focus_SAT_expand_the_gold_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_electricity_pipeline
+			focus = SAT_power_pipeline
+		}
+		available = {
+			OR = {
+				OR = {
+					16 = { CONTROLLER = { tag = ROOT } }
+					16 = { CONTROLLER = { is_subject_of = ROOT } }
+				}
+				AND = {
+					OR = {
+						16 = { CONTROLLER = { tag = YUG } }
+						16 = { CONTROLLER = { is_subject_of = YUG } }
+					}
+					SAT_YUG_prestige_at_least_4 = yes
+					NOT = { has_war_with = YUG }
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_electricity_pipeline
+		completion_reward = {
+			16 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+				add_building_construction = {
+					type = metal_factory
+					level = 1
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_issue_Chirendan_currency
+		icon = GFX_focus_fra_devalue_the_franc
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_expand_gold_mine
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_expand_gold_mine
+		completion_reward = {
+			add_ideas = { SAT_Chireidan_currency_ideas }
+			every_country = {
+				limit = { is_in_faction_with = SAT }
+				add_ideas = { SAT_Chireidan_currency_others_ideas }
+			}
+			custom_effect_tooltip = SAT_could_invite_countries_into_currency_system_tt
+		}
+
+	}
+	focus = {
+		id = SAT_plan_gorgolon
+		icon = GFX_focus_SAT_gorgolon_plan
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_kickstart_military_establishment
+		}
+		prerequisite = {
+			focus = SAT_reestimate_our_industry
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_kickstart_military_establishment
+		completion_reward = {
+			custom_effect_tooltip = SAT_effect_changes_if_pipeline_completed_tt
+			add_ideas = { SAT_plan_gorgolon }
+			### TODO: Decisions
+		}
+
+	}
+	focus = {
+		id = SAT_industrilize_the_old_capital
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_plan_gorgolon
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				has_country_flag = SAT_ai_isolationist_chosen_flag
+			}
+		}
+		available = {
+			OR = {
+				OR = {
+					505 = { CONTROLLER = { tag = ROOT } }
+					505 = { CONTROLLER = { is_subject_of = ROOT } }
+				}
+				AND = {
+					OR = {
+						505 = { CONTROLLER = { tag = YUG } }
+						505 = { CONTROLLER = { is_subject_of = YUG } }
+					}
+					SAT_YUG_prestige_at_least_6 = yes
+					NOT = { has_war_with = YUG }
+				}
+			}
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = SAT_plan_gorgolon
+		completion_reward = {
+			505 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+				set_state_name = YUG_industry_area
+			}
+			SAT_YUG_prestige_increase_2 = yes
+			add_tech_bonus = {
+				name = SAT_industrilize_the_old_capital
+				bonus = 1
+				ahead_reduction = 1.0
+				uses = 2
+				category = industrys
+			}
+		}
+
+	}
+
+	focus = {
+		id = SAT_befriend_tenshi
+		icon = GFX_focus_usa_escort_fighters
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_kickstart_military_establishment
+		}
+		available = {
+			NOT = { has_war_with = TES }
+			TES = { is_subject = no }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_industrilize_the_old_capital
+		completion_reward = {
+			TES = {
+				country_event = { id = sat.33 days = 5 }
+				custom_effect_tooltip = needs_approval
+			}
+			effect_tooltip = {
+				SAT = { 
+					add_ideas = { SAT_TES_cooperation_idea }
+					add_tech_bonus = {
+						name = SAT_TES_cooperation
+						category = air_equipment
+						bonus = 0.75
+						ahead_reduction = 0.5
+						uses = 3
+					}
+				}
+				TES = { 
+					add_ideas = { SAT_TES_cooperation_TES_idea }
+					add_tech_bonus = {
+						name = SAT_TES_cooperation
+						category = resource
+						bonus = 0.75
+						ahead_reduction = 0.5
+						uses = 3
+					} 
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = SAT_passage_defence_HQ
+		icon = GFX_focus_por_estado_novo
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_kickstart_military_establishment
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_kickstart_military_establishment
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = { SAT_passage_defence_HQ_idea }
+			custom_effect_tooltip = SAT_if_memorandum_tt
+			if = {
+				limit = {
+					YMM = { has_idea = SAT_Chirendan_memorandum }
+				}
+				YMM = { add_ideas = SAT_passage_defence_HQ_idea }
+			}
+			if = {
+				limit = {
+					PRS = { has_idea = SAT_Chirendan_memorandum }
+				}
+				PRS = { add_ideas = SAT_passage_defence_HQ_idea }
+			}
+			unlock_decision_tooltip = PRS_invasion_ACE
+			unlock_decision_tooltip = SAT_PRS_railway_first
+			unlock_decision_tooltip = SAT_PRS_railway_second
+			unlock_decision_tooltip = SAT_YMM_railway_expansion
+		}
+	}
+
+	focus = {
+		id = SAT_Chirendan_defence
+		text = SAT_Chirendan_defence
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_passage_defence_HQ
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_passage_defence_HQ
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_Chirendan_inner_Office
+				bonus = 1.0
+				ahead_reduction = 0.5
+				uses = 1
+				category = build
+			}
+			swap_ideas = {
+				add_idea = SAT_passage_defence_HQ_2_idea
+				remove_idea = SAT_passage_defence_HQ_idea
+			}
+			unlock_decision_tooltip = SAT_hire_YMM_construction_company
+		}
+	}
+
+	focus = {
+		id = SAT_periphery_defence
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_passage_defence_HQ
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_passage_defence_HQ
+		completion_reward = {
+			unlock_decision_tooltip = YMM_fortress_first
+			unlock_decision_tooltip = YMM_fortress_second
+			unlock_decision_tooltip = PRS_fortress_north
+			unlock_decision_tooltip = PRS_fortress_south_in
+			unlock_decision_tooltip = PRS_fortress_south_out
+		}
+	}
+
+	focus = {
+		id = SAT_mountaineers
+		icon = GFX_focus_GRE_a_land_of_mountains
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_a_new_army
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_a_new_army
+		completion_reward = {
+			set_technology = {
+				SAT_Mountaineers = 1
+			}
+			custom_effect_tooltip = SAT_Mountaineers_cavalry_tt
+			custom_effect_tooltip = SAT_Mountaineers_infantry_tt
+		}
+
+	}
+	focus = {
+		id = SAT_innovative_logistics
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_a_new_army
+		}
+		available = {
+
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_a_new_army
+		completion_reward = {
+			every_army_leader = {
+				add_logistics = 1
+			}
+			add_ideas = { SAT_innovative_logistics_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_this_is_our_land
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_periphery_defence
+		}
+		prerequisite = {
+			focus = SAT_mountaineers
+		}
+		prerequisite = {
+			focus = SAT_Chirendan_defence
+		}
+		available = {
+			OR = {
+				threat > 0.59
+				has_defensive_war = yes
+				surrender_progress > 0.09
+			}
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = SAT_periphery_defence
+		completion_reward = {
+			SAT_guard_level_up = yes
+			army_experience = 25
+			swap_ideas = {
+				remove_idea = SAT_passage_defence_HQ_2_idea
+				add_idea = SAT_passage_defence_HQ_3_idea
+			}
+			every_country = {
+				limit = { 
+					has_idea = SAT_passage_defence_HQ_idea
+				}
+				swap_ideas = {
+					remove_idea = SAT_passage_defence_HQ_idea
+					add_idea = SAT_passage_defence_HQ_1_5_idea
+				}
+			}
+		}
+
+	}
+	
+	focus = {
+		id = SAT_special_artillery
+		icon = GFX_focus_SAT_special_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Moriya_Engineers
+		}
+		available = {
+			SAT_MRY_influence_is_no_less_than_MEDIUM = yes
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_Moriya_Engineers
+		completion_reward = {
+			# SAT_enhance_MRY_influence = yes
+			add_tech_bonus = {
+				name = SAT_special_artillery
+				bonus = 2.0
+				ahead_reduction = 5.0
+				uses = 1
+				technology = chuandunhuopao150
+				technology = chuandunhuopao160
+				technology = chuandunhuopao170
+			}
+			add_tech_bonus = {
+				name = SAT_special_artillery
+				bonus = 1.0
+				ahead_reduction = 2.0
+				uses = 1
+				technology = gongjianpao149
+				technology = gongjianpao155
+				technology = gongjianpao161
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_planning_center
+		icon = GFX_focus_por_remember_olivenca
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_dive_in_the_library
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 57
+		y = 1
+		completion_reward = {
+			add_ideas = { SAT_planning_center_idea }
+		}
+	}
+
+	focus = {
+		id = SAT_adaptive
+		icon = GFX_focus_spr_regional_defense_council_of_aragon
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_innovative_logistics
+		}
+		prerequisite = {
+			focus = SAT_mountaineers
+		}
+		prerequisite = {
+			focus = SAT_geology_committee
+		}
+		available = {
+			has_idea = SAT_innovative_logistics_idea
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_innovative_logistics
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_innovative_logistics_idea
+				add_idea = SAT_innovative_logistics_idea_2
+			}
+			add_tech_bonus = {
+				# name = SAT_Komeiji_triumph
+				category = race
+				# ahead_reduction = 1.0
+				bonus = 1
+				uses = 2
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_general_staff
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_planning_center
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			count_triggers = {
+				amount = 3
+				has_completed_focus = SAT_order_in_the_underworld
+				has_completed_focus = SAT_military_mutual_aid
+				has_completed_focus = SAT_anti_ghost_weapons
+				has_completed_focus = SAT_Moriya_Engineers
+				has_completed_focus = SAT_adaptive
+				date > 147.10.1
+				threat > 0.49
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = SAT_planning_center
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+			if = {
+				limit = {
+					has_idea = SAT_planning_center_idea
+				}
+				swap_ideas = {
+					add_idea = SAT_general_staff_idea
+					remove_idea = SAT_planning_center_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAT_planning_center_idea_2
+				}
+				swap_ideas = {
+					add_idea = SAT_general_staff_idea_2
+					remove_idea = SAT_planning_center_idea_2
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						add_idea = SAT_general_staff_idea
+						remove_idea = SAT_planning_center_idea
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_Komeiji_triumph
+		icon = GFX_focus_spa_fuse_the_parties
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_adaptive
+		}
+		prerequisite = {
+			focus = SAT_adaptive
+		}
+		prerequisite = {
+			focus = SAT_general_staff
+		}
+		available = {
+			threat > 0.39
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_adaptive
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAT_lessons_from_wars
+				category = land_doctrine
+				cost_reduction = 0.75
+				uses = 1
+			}
+			add_tech_bonus = {
+				# name = SAT_Komeiji_triumph
+				category = artillery_tech
+				ahead_reduction = 1.0
+				bonus = 1.0
+				uses = 2
+			}
+			add_tech_bonus = {
+				# name = SAT_Komeiji_triumph
+				category = shield_weapons
+				ahead_reduction = 1.0
+				bonus = 1.0
+				uses = 2
+			}
+			add_tech_bonus = {
+				# name = SAT_Komeiji_triumph
+				category = shield
+				ahead_reduction = 1.0
+				bonus = 1.0
+				uses = 2
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_Chirendan_inner_Office
+		icon = GFX_focus_jap_manchurian_project
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_planning_center
+		}
+		available = {
+			has_completed_focus = SAT_start_our_agenda
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_planning_center
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_Chirendan_inner_Office
+				bonus = 0.5
+				ahead_reduction = 0.5
+				uses = 1
+				category = civil
+			}
+			SAT_guard_level_up = yes
+			add_political_power = 100
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = SAT_geology_committee
+		icon = GFX_focus_por_the_pink_map
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Chirendan_inner_Office
+		}
+		available = {
+
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Chirendan_inner_Office
+		completion_reward = {
+			add_tech_bonus = {
+				# name = SAT_geology_committee
+				bonus = 1
+				uses = 1
+				technology = zhanchanggongbing146
+				technology = zhanchanggongbing151
+				technology = zhanchanggongbing156
+				technology = zhanchanggongbing161
+				technology = zhanchanggongbing166
+			}
+			add_tech_bonus = {
+				# name = SAT_geology_committee
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 2
+				technology = ziyuankaifa130
+				technology = ziyuankaifa140
+				technology = ziyuankaifa146
+				technology = ziyuankaifa150
+				technology = ziyuankaifa155
+				technology = ziyuankaifa160
+			}
+			if = {
+				limit = {
+					has_idea = SAT_planning_center_idea
+				}
+				swap_ideas = {
+					add_idea = SAT_planning_center_idea_2
+					remove_idea = SAT_planning_center_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAT_general_staff_idea
+				}
+				swap_ideas = {
+					add_idea = SAT_general_staff_idea_2
+					remove_idea = SAT_general_staff_idea
+				}
+			}
+			else = {
+				effect_tooltip = {
+					swap_ideas = {
+						add_idea = SAT_planning_center_idea_2
+						remove_idea = SAT_planning_center_idea
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_technology_committee
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_collabrate_technical_lab
+			focus = SAT_Spirit_Power_sharing
+		}
+		prerequisite = {
+			focus = SAT_investigation_committee
+		}
+		available = {
+			OR = {
+				SAT_MRY_influence_is_no_less_than_SLIGHTLY_HIGH = yes
+				SAT_YKR_influence_is_no_less_than_SLIGHTLY_HIGH = yes
+				SAT_SKI_influence_is_no_less_than_SLIGHTLY_HIGH = yes
+				is_faction_leader = yes
+			}
+			not = {
+				has_idea = Tribal
+				has_idea = Village
+			}
+		}
+		x = 30
+		y = 4
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = SAT_Komeiji_telephone_bureau
+		icon = GFX_Focus_SAT_koishi_phone_call
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_planning_center
+		}
+		available = {
+			OR = {
+				is_ai = yes
+				has_tech = lingliganying147
+				has_tech = wuxiandian147
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_planning_center
+		completion_reward = {
+			add_ideas = { SAT_Komeiji_telephone_bureau_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_association_center
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_Komeiji_telephone_bureau
+		}
+		available = {
+			OR = {
+				has_idea = Town
+				has_idea = Country
+				has_idea = Empire
+				has_idea = World
+			}
+			count_triggers = {
+				amount = 2
+				is_major = yes
+				has_completed_focus = SAT_innovative_logistics
+				has_completed_focus = SAT_lessons_from_wars
+				has_completed_focus = SAT_order_in_the_underworld
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_Komeiji_telephone_bureau
+		completion_reward = {
+			SAT_guard_level_up = yes
+			add_tech_bonus = {
+				name = SAT_association_center
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1.0
+				technology = zhihuixiaodui146
+				technology = zhihuixiaodui151
+				technology = zhihuixiaodui156
+				technology = zhihuixiaodui161
+				technology = zhihuixiaodui166
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_chirendan_corporate_state_congress
+		icon = GFX_focus_SAT_Chireiden_corporate_state_congress
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_conference
+		}
+		mutually_exclusive = {
+			focus = SAT_underworld_mutual_aid_pact
+			focus = SAT_chirendan_transform_alliance
+		}
+		available = {
+			has_government = oldorder
+		}
+		x = -6
+		y = 1
+		relative_position_id = SAT_underworld_conference
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.10
+				ideology = oldorder
+			}
+			add_ideas = { SAT_chirendan_corporate_state_congress_idea }
+			conservativedecrease = yes
+		}
+
+	}
+	focus = {
+		id = SAT_underworld_mutual_aid_pact
+		icon = GFX_focus_SAT_underground_alliance_2
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_conference
+		}
+		mutually_exclusive = {
+			focus = SAT_chirendan_transform_alliance
+			focus = SAT_chirendan_corporate_state_congress
+		}
+		available = {
+			has_government = guli
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_underworld_conference
+		completion_reward = {
+			add_popularity = {
+				ideology = guli
+				popularity = 0.10
+			}
+			lobbydecrease = yes
+
+			custom_effect_tooltip = focus_warning3
+			add_ideas = { SAT_underworld_mutual_aid_pact_idea }
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_ideas = { SAT_underworld_mutual_aid_pact_idea }
+			}
+		}
+	}
+
+	focus = {
+		id = SAT_chirendan_transform_alliance
+		icon = GFX_focus_SAT_Chireiden_transform_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_conference
+		}
+		mutually_exclusive = {
+			focus = SAT_underworld_mutual_aid_pact
+			focus = SAT_chirendan_corporate_state_congress
+		}
+		available = {
+			has_government = qinwai
+		}
+		x = 6
+		y = 1
+		relative_position_id = SAT_underworld_conference
+		completion_reward = {
+			add_ideas = { SAT_chirendan_transform_alliance_idea }
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.10
+			}
+			conservativeincrease = yes
+		}
+
+	}
+	focus = {
+		id = SAT_establish_refuges
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = SAT_chirendan_transform_alliance
+		}
+		available = {
+			19 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			33 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			298 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			114 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			9 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_chirendan_transform_alliance
+		cancel_if_invalid = yes
+		completion_reward = {
+			19 = {
+				add_extra_state_shared_building_slots = 4
+				add_manpower = 1500
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			33 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 500
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			298 = {
+				add_extra_state_shared_building_slots = 4
+				add_manpower = 1000
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			114 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 500
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 500
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_make_the_great_migration
+		icon = GFX_goal_support_democracy
+		cost = 15.00
+		prerequisite = {
+			focus = SAT_chirendan_transform_alliance
+		}
+		available = {
+			39 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			71 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			51 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			560 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			557 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+			561 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT has_idea = SAT_Chirendan_memorandum } } }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_chirendan_transform_alliance
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_stability = -0.10
+			UDG = {
+				add_state_core = 39
+				transfer_state = 39
+				hidden_effect = {
+					39 = { CONV_convert = yes }
+					39 = { add_manpower = 502654 }
+				}
+				add_state_core = 71
+				transfer_state = 71
+				hidden_effect = {
+					71 = { CONV_convert = yes }
+					71 = { add_manpower = 601586 }
+				}
+				add_state_core = 51
+				transfer_state = 51
+				hidden_effect = {
+					51 = { CONV_convert = yes }
+					51 = { add_manpower = 459635 }
+				}
+				add_state_core = 560
+				transfer_state = 560
+				hidden_effect = {
+					560 = { CONV_convert = yes }
+					560 = { add_manpower = 536452 }
+				}
+				add_state_core = 557
+				transfer_state = 557
+				hidden_effect = {
+					557 = { CONV_convert = yes }
+					557 = { add_manpower = 680260 }
+				}
+				add_state_core = 561
+				transfer_state = 561
+				hidden_effect = {
+					561 = { CONV_convert = yes }
+					561 = { add_manpower = 460850 }
+				}
+				hidden_effect = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 10
+					}
+					add_offsite_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+				SAT = {
+					PREV = { subject_level4 = yes }
+				}
+			}
+			if = {
+				limit = { 58 = { CONTROLLER = { tag = ROOT is_subject_of = ROOT } } }
+				58 = {
+					set_variable = { ST_present_race = 2 }
+					custom_effect_tooltip = CONV_convert_2_tt
+					hidden_effect = {
+						SAT_set_one_state_manpower_to_zero = yes
+					}
+					add_manpower = 1200
+				}
+			}
+			if = {
+				limit = { 50 = { CONTROLLER = { tag = ROOT is_subject_of = ROOT } } }
+				50 = {
+					set_variable = { ST_present_race = 2 }
+					custom_effect_tooltip = CONV_convert_2_tt
+					hidden_effect = {
+						SAT_set_one_state_manpower_to_zero = yes
+					}
+					add_manpower = 1540
+				}
+			}
+			if = {
+				limit = { 55 = { CONTROLLER = { tag = ROOT is_subject_of = ROOT } } }
+				55 = {
+					set_variable = { ST_present_race = 2 }
+					custom_effect_tooltip = CONV_convert_2_tt
+					hidden_effect = {
+						SAT_set_one_state_manpower_to_zero = yes
+					}
+					add_manpower = 880
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SAT_broadcast_to_the_dead
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_establish_refuges
+		}
+		prerequisite = {
+			focus = SAT_make_the_great_migration
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_chirendan_transform_alliance
+		completion_reward = {
+			add_timed_idea = {
+				days = 400
+				idea = SAT_broadcast_to_the_dead_idea
+			}
+			every_other_country = {
+				limit = { 
+					OR = {
+						is_subject_of = SAT
+						has_idea = SAT_Chirendan_memorandum
+					}
+				}
+				add_timed_idea = {
+					days = 400
+					idea = SAT_broadcast_to_the_dead_idea
+				}
+			}
+			add_tech_bonus = {
+				name = SAT_establish_yakumo_spirit_induction
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 2.0
+				technology = wuxiandian147
+				technology = wuxiandian152
+				technology = wuxiandian157
+				technology = wuxiandian162
+				technology = wuxiandian167
+				technology = lingliganying147
+				technology = lingliganying152
+				technology = lingliganying157
+				technology = lingliganying162
+				technology = lingliganying167
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_the_strong_alliance
+		icon = GFX_focus_SAT_a_strong_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_mutual_aid_pact
+		}
+		available = {
+			is_in_faction = yes
+			YUG = { is_in_faction = yes }
+		}
+		bypass = {
+			OR = {
+				has_war_with = YUG
+				YUG = { is_subject_of = SAT }
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_underworld_mutual_aid_pact
+		completion_reward = {
+			add_ideas = { SAT_the_strong_alliance_idea }
+			if = {
+				limit = { YUG = { is_in_faction_with = SAT } }
+				YUG = { add_ideas = SAT_the_strong_alliance_idea }
+			}
+			if = {
+				limit = { PRS = { is_in_faction_with = SAT } }
+				PRS = { add_ideas = SAT_the_strong_alliance_idea }
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_underworld_free_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_mutual_aid_pact
+		}
+		available = {
+			is_in_faction = yes
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_underworld_mutual_aid_pact
+		completion_reward = {
+			custom_effect_tooltip = focus_warning3
+			add_ideas = { SAT_underworld_free_trade_idea }
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_ideas = { SAT_underworld_free_trade_idea }
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_connect_the_country_and_city
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_free_trade
+		}
+		prerequisite = {
+			focus = SAT_the_strong_alliance
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_underworld_free_trade
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = SAT_the_strong_alliance_2_idea
+				remove_idea = SAT_the_strong_alliance_idea
+			}
+			if = {
+				limit = { YUG = { has_idea = SAT_the_strong_alliance_2_idea } }
+				YUG = {
+					swap_ideas = { 
+						add_idea = SAT_the_strong_alliance_2_idea
+						remove_idea = SAT_the_strong_alliance_idea
+					}
+				}
+			}
+			add_ideas = { Country }
+			UNL = {
+				can_core = yes
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_work_for_every_ghost
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_broadcast_to_the_dead
+		}
+		available = {
+			39 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			51 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			557 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_broadcast_to_the_dead
+		completion_reward = {
+			39 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			51 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			557 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_all_brothers_after_life
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_broadcast_to_the_dead
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_broadcast_to_the_dead
+		completion_reward = {
+			effect_tooltip = {
+				UDG = { add_stability = 0.15 low_puppet_level = yes }
+			}
+			hidden_effect = {
+				if = { 
+					limit = { UDG = { is_subject_of = ROOT } }
+				}
+				UDG = { add_stability = 0.15 low_puppet_level = yes }
+			}
+			
+			lobbydecrease = yes
+		}
+
+	}
+	focus = {
+		id = SAT_repress_youkai_dissent
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_broadcast_to_the_dead
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_broadcast_to_the_dead
+		completion_reward = {
+			add_ideas = { SAT_repress_youkai_dissent_idea }
+			custom_effect_tooltip = SAT_repress_youkai_dissent_tt
+			every_owned_state = {
+				limit = { ST_race_is_Youkai = yes  controller = { tag = ROOT } }
+				add_compliance = 35
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_establish_the_chireidan_government
+		icon = GFX_focus_SAT_form_Chireiden_Government
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_all_brothers_after_life
+		}
+		prerequisite = {
+			focus = SAT_repress_youkai_dissent
+		}
+		prerequisite = {
+			focus = SAT_work_for_every_ghost
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_all_brothers_after_life
+		completion_reward = {
+			UDG = { can_core = yes }
+			UDG = { low_puppet_level = yes }
+			swap_ideas = {
+				add_idea = SAT_establish_the_chireidan_government_idea
+				remove_idea = SAT_chirendan_transform_alliance_idea
+			}
+			add_ideas = { kaifangjiaqiang }
+			set_cosmetic_tag = SAT_state
+		}
+
+	}
+	focus = {
+		id = SAT_democracy_in_Chirendan
+		icon = GFX_focus_usa_union_representation_act
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_establish_the_chireidan_government
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_establish_the_chireidan_government
+		completion_reward = {
+			if = {
+				limit = { has_idea = SAT_establish_the_chireidan_government_idea }
+				swap_ideas = {
+					remove_idea = SAT_establish_the_chireidan_government_idea
+					add_idea = SAT_establish_the_chireidan_government_democratic_idea
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SAT_establish_the_chireidan_government_accoutable_idea
+						add_idea = SAT_establish_the_chireidan_government_accoutable_democratic_idea
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_chirendan_solidarity_fraternity_responsibility
+		icon = GFX_focus_eng_imperial_federation
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_establish_the_chireidan_government
+		}
+		prerequisite = {
+			focus = SAT_establish_the_chireidan_government
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_establish_the_chireidan_government
+		completion_reward = {
+			if = {
+				limit = { has_idea = SAT_establish_the_chireidan_government_idea }
+				swap_ideas = {
+					remove_idea = SAT_establish_the_chireidan_government_idea
+					add_idea = SAT_establish_the_chireidan_government_accoutable_idea
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SAT_establish_the_chireidan_government_democratic_idea
+						add_idea = SAT_establish_the_chireidan_government_accoutable_democratic_idea
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_neither_the_Netherworld_nor_Hell
+		icon = GFX_focus_SAT_state_of_roses
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_chirendan_solidarity_fraternity_responsibility
+		}
+		prerequisite = {
+			focus = SAT_democracy_in_Chirendan
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_establish_the_chireidan_government
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { has_idea = World } 
+					NOT = { has_idea = Country } 
+				}
+				add_ideas = { Country }
+			}
+			add_ideas = { qinwaijiaqiang }
+		}
+
+	}
+	focus = {
+		id = SAT_home_for_beasts
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_establish_refuges
+			focus = SAT_underworld_free_trade
+		}
+		available = {
+			has_full_control_of_state = 298
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_establish_refuges
+		completion_reward = {
+			298 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = { SAT_home_for_beasts_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_improve_working_condition
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_connect_the_country_and_city
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_connect_the_country_and_city
+		completion_reward = {
+			add_stability = 0.15
+			if = {
+				limit = { YUG = { is_in_faction_with = ROOT } }
+				YUG = { add_stability = 0.15 }
+			}
+			custom_effect_tooltip = focus_warning3
+			swap_ideas = {
+				add_idea = SAT_underworld_free_trade_2_idea
+				remove_idea = SAT_underworld_free_trade_idea
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				if = {
+					limit = { NOT = { has_idea = SAT_underworld_free_trade_idea } }
+					add_ideas = { SAT_underworld_free_trade_2_idea }
+					else = {
+						swap_ideas = {
+							add_idea = SAT_underworld_free_trade_2_idea
+							remove_idea = SAT_underworld_free_trade_idea
+						}
+					}
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SAT_expand_the_winery
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_connect_the_country_and_city
+		}
+		available = {
+			has_idea = SAT_drink
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_connect_the_country_and_city
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_drink
+				add_idea = SAT_winery_idea
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_defend_out_daily_life
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_expand_the_winery
+		}
+		prerequisite = {
+			focus = SAT_improve_working_condition
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_expand_the_winery
+		completion_reward = {
+			add_ideas = { gepaijiaqiang }
+			lobbydecrease = yes
+		}
+
+	}
+	focus = {
+		id = SAT_walls_on
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_defend_out_daily_life
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_defend_out_daily_life
+		completion_reward = {
+			custom_effect_tooltip = focus_warning3
+			swap_ideas = {
+				add_idea = SAT_underworld_mutual_aid_pact_2_idea
+				remove_idea = SAT_underworld_mutual_aid_pact_idea
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				if = {
+					limit = { has_idea = SAT_underworld_mutual_aid_pact_2_idea }
+					swap_ideas = {
+						add_idea = SAT_underworld_mutual_aid_pact_2_idea
+						remove_idea = SAT_underworld_mutual_aid_pact_idea
+					}
+					else = {
+						add_ideas = { SAT_underworld_mutual_aid_pact_2_idea } 
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_inner_cycle
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_defend_out_daily_life
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_defend_out_daily_life
+		completion_reward = {
+			if = {
+				limit = { YUG = { is_in_faction_with = ROOT } }
+				YUG = { add_stability = 0.15 }
+			}
+			custom_effect_tooltip = focus_warning3
+			swap_ideas = {
+				add_idea = SAT_underworld_free_trade_3_idea
+				remove_idea = SAT_underworld_free_trade_2_idea
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				if = {
+					limit = { has_idea = SAT_underworld_free_trade_2_idea }
+					swap_ideas = {
+						add_idea = SAT_underworld_free_trade_3_idea
+						remove_idea = SAT_underworld_free_trade_2_idea
+					}
+				}
+				else_if = {
+					limit = {  has_idea = SAT_underworld_free_trade_idea }
+					swap_ideas = {
+						add_idea = SAT_underworld_free_trade_3_idea
+						remove_idea = SAT_underworld_free_trade_idea
+					}
+				}
+				else = {
+					add_ideas = { SAT_underworld_free_trade_3_idea }
+				}
+				
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_all_road_to_peace
+		icon = GFX_focus_SAT_all_for_peace
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_inner_cycle
+		}
+		prerequisite = {
+			focus = SAT_walls_on
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_inner_cycle
+		completion_reward = {
+			custom_effect_tooltip = focus_warning3
+			swap_ideas = {
+				add_idea = SAT_underworld_mutual_aid_pact_3_idea
+				remove_idea = SAT_underworld_mutual_aid_pact_2_idea
+			}
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				if = {
+					limit = { has_idea = SAT_underworld_mutual_aid_pact_2_idea }
+					swap_ideas = {
+						add_idea = SAT_underworld_mutual_aid_pact_3_idea
+						remove_idea = SAT_underworld_mutual_aid_pact_2_idea
+					}
+				}
+				else_if = {
+					limit = {  has_idea = SAT_underworld_free_trade_idea }
+					swap_ideas = {
+						add_idea = SAT_underworld_mutual_aid_pact_3_idea
+						remove_idea = SAT_underworld_mutual_aid_pact_idea
+					}
+				}
+				else = {
+					add_ideas = { SAT_underworld_mutual_aid_pact_3_idea }
+				}
+			}
+
+			add_ideas = { gulijiaqiang }
+		}
+
+	}
+	focus = {
+		id = SAT_labour_in_plan
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_chirendan_corporate_state_congress
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_chirendan_corporate_state_congress
+		completion_reward = {
+			add_ideas = { SAT_labour_in_plan_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_appoint_youkai_bureaucrats
+		icon = GFX_focus_YUG_autonomous_transylvania
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_chirendan_corporate_state_congress
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_chirendan_corporate_state_congress
+		completion_reward = {
+			add_ideas = { SAT_appoint_youkai_bureaucrats_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_chirendan_national_guard
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_chirendan_corporate_state_congress
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_chirendan_corporate_state_congress
+		completion_reward = {
+			add_ideas = { SAT_chirendan_national_guard_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_power_comes_from_fear
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_appoint_youkai_bureaucrats
+		}
+		prerequisite = {
+			focus = SAT_labour_in_plan
+		}
+		prerequisite = {
+			focus = SAT_chirendan_national_guard
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_appoint_youkai_bureaucrats
+		completion_reward = {
+			remove_ideas = { SAT_chirendan_national_guard_idea }
+			remove_ideas = { SAT_appoint_youkai_bureaucrats_idea }
+			remove_ideas = { SAT_labour_in_plan_idea }
+			add_ideas = { SAT_Estado_Novo_idea }
+
+			conservativedecrease = yes
+			set_cosmetic_tag = SAT_state
+		}
+
+	}
+	focus = {
+		id = SAT_redesign_the_Kyuuto
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_power_comes_from_fear
+		}
+		available = {
+			19 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			33 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			9 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			16 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_power_comes_from_fear
+		completion_reward = {
+			19 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			33 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			16 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			YUG = { can_core = yes }
+			GOL = { can_core = yes }
+		}
+
+	}
+	focus = {
+		id = SAT_surveillance_network
+		icon = GFX_focus_SAT_surveillance_network
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_redesign_the_Kyuuto
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_redesign_the_Kyuuto
+		completion_reward = {
+			swap_ideas = {
+				add_idea = SAT_the_third_eye_idea_old_order
+				remove_idea = SAT_the_third_eye_idea_2
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SAT_necessities_management
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_power_comes_from_fear
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_power_comes_from_fear
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAT_chirendan_corporate_state_congress_idea
+				add_idea = SAT_chirendan_corporate_state_congress_2_idea
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_trade_authorization
+		icon = GFX_focus_SAT_trade_authorization
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_necessities_management
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_necessities_management
+		completion_reward = {
+			add_ideas = { SAT_trade_authorization_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_youkai_first
+		icon = GFX_focus_NUE_the_initial_ideal_of_youkais
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_surveillance_network
+		}
+		prerequisite = {
+			focus = SAT_trade_authorization
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_surveillance_network
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { has_idea = World } 
+					NOT = { has_idea = Empire } 
+				}
+				add_ideas = { Empire }
+			}
+			add_ideas = { Youkai }
+			custom_effect_tooltip = SAT_all_state_converted_to_youkai_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						ST_race_is_Beast = yes
+						is_fully_controlled_by = ROOT
+					}
+					CONV_convert = yes
+				}
+				set_technology = {
+					youkai_tech = 1
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SAT_all_hail_to_satori
+		icon = GFX_focus_komeiji_satori
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_youkai_first
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_youkai_first
+		completion_reward = {
+			add_ideas = { oldorderjiaqiang }
+		}
+
+	}
+	focus = {
+		id = SAT_expand_the_zoo
+		icon = GFX_focus_hol_united_netherlands
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_improve_working_condition
+			focus = SAT_redesign_the_Kyuuto
+		}
+		available = {
+			has_full_control_of_state = 98
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_improve_working_condition
+		completion_reward = {
+			98 = { 
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = { SAT_expand_the_zoo_idea }
+		}
+
+	}
+	focus = {
+		id = SAT_stone_sakura
+		icon = GFX_focus_YYK_a_defence_in_Hakugyokurou
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_conference
+		}
+		x = 3
+		y = 8
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = SAT_enhance_training
+		icon = GFX_focus_chi_army_reform
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_stone_sakura
+		}
+		x = -1
+		y = 1
+		relative_position_id = SAT_stone_sakura
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAT_enhance_training
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_refine_weapons
+		icon = GFX_focus_focus_fra_maquis
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_stone_sakura
+		}
+		x = 1
+		y = 1
+		relative_position_id = SAT_stone_sakura
+		completion_reward = {
+			add_ideas = { SAT_refine_weapons_idea }
+			# add_tech_bonus = {
+			# 	name = SAT_refine_weapons
+			# 	uses = 2
+			# 	ahead_reduction = 1.0
+			# 	bonus = 1.0
+			# 	category = infantry
+			# }
+			# add_tech_bonus = {
+			# 	name = SAT_refine_weapons
+			# 	uses = 1
+			# 	ahead_reduction = 1.0
+			# 	bonus = 1.0
+			# 	category = artillery_tech
+			# }
+		}
+
+	}
+	focus = {
+		id = SAT_assertive_defence
+		icon = GFX_focus_GRE_byzantine_themata
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_refine_weapons
+		}
+		prerequisite = {
+			focus = SAT_enhance_training
+		}
+		available = {
+			OR = {
+				has_completed_focus = SAT_defend_out_daily_life
+				has_completed_focus = SAT_establish_the_chireidan_government
+				has_completed_focus = SAT_youkai_first
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = SAT_stone_sakura
+		completion_reward = {
+			if = {
+				limit = { has_idea = SAT_Komeiji_Isolationism_old_order }
+				remove_ideas = SAT_Komeiji_Isolationism_old_order
+			}
+			else_if = {
+				limit = { has_idea = SAT_Komeiji_Isolationism_old_order_enhanced }
+				remove_ideas = SAT_Komeiji_Isolationism_old_order_enhanced
+			}
+			else_if = {
+				limit = { has_idea = SAT_Komeiji_Isolationism_enhanced }
+				remove_ideas = SAT_Komeiji_Isolationism_enhanced
+			}
+			else = {
+				remove_ideas = SAT_Komeiji_Isolationism
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_energy_structural_adjustment
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_underworld_conference
+		}
+		x = 14
+		y = 1
+		relative_position_id = SAT_underworld_conference
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_energy_structural_adjustment
+				uses = 1
+				bonus = 1.0
+				technology = fanyongdongliyinqing
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_facilitate_warm_pipeline
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_energy_structural_adjustment
+		}
+		x = -2
+		y = 1
+		relative_position_id = SAT_energy_structural_adjustment
+		completion_reward = {
+			add_ideas = { SAT_facilitate_warm_pipeline_idea } 
+		}
+
+	}
+	focus = {
+		id = SAT_spread_illumination_devices
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_energy_structural_adjustment
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_energy_structural_adjustment
+		completion_reward = {
+			add_ideas = { SAT_spread_illumination_devices_idea } 
+		}
+
+	}
+	focus = {
+		id = SAT_renew_the_machines
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_energy_structural_adjustment
+		}
+		x = 2
+		y = 1
+		relative_position_id = SAT_energy_structural_adjustment
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_renew_the_machines
+				# bonus = 1.0
+				ahead_reduction = 2.0
+				uses = 2
+				category = main
+				category = fuzhu
+			}
+		}
+
+	}
+	focus = {
+		id = SAT_new_aims
+		icon = GFX_focus_generic_africa_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SAT_spread_illumination_devices
+		}
+		prerequisite = {
+			focus = SAT_renew_the_machines
+		}
+		prerequisite = {
+			focus = SAT_facilitate_warm_pipeline
+		}
+		x = 0
+		y = 1
+		relative_position_id = SAT_spread_illumination_devices
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAT_new_aims
+				# bonus = 2.0
+				ahead_reduction = 2.0
+				uses = 1
+				category = industrys
+			}
+			add_tech_bonus = {
+				name = SAT_new_aims
+				# bonus = 2.0
+				ahead_reduction = 2.0
+				uses = 2
+				category = build
+			}
+		}
+
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=440
+	name="STATE_440"
+
+	history={
+		146.1.1 = {
+			owner = SKI
+			add_core_of = SKI
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		611 837 1131 1589 1795 2037 6021 6026 6029 6041 6400 6401 6403 6404 6407 6410 6412 
+	}
+	manpower=1433.0
+	state_category=s5
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

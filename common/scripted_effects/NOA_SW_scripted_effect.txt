@@ -1,0 +1,238 @@
+SW_add_agrarian_society = {
+	set_variable = {
+		SW_agrarian_society_cons = -0.2
+	}
+	set_variable = {
+		SW_agrarian_society_ic = -0.1
+	}
+	set_variable = {
+		SW_agrarian_society_atk = -0.1
+	}
+	set_variable = {
+		SW_agrarian_society_def = -0.2
+	}
+	set_variable = {
+		SW_agrarian_society_cg = 0.2
+	}
+	set_variable = {
+		SW_agrarian_society_rs = -0.2
+	}
+	set_variable = {
+		SW_agrarian_society_infra = -0.2
+	}
+	set_variable = {
+		SW_agrarian_society_rail = -0.1
+	}
+	add_dynamic_modifier = {
+		modifier = SW_nong_ye_she_hui_idea
+	}
+
+	set_variable = {
+		SW_auto_exploration_factor = 0.5
+	}
+}
+
+SW_add_unexplored_land = {
+	add_dynamic_modifier = {
+		modifier = SW_wei_kai_fa_de_tu_di_state_idea
+	}
+	add_dynamic_modifier = {
+		modifier = SW_wei_kan_tan_de_tu_di_state_idea
+	}
+}
+
+SW_remove_undeveloped_land = {
+	remove_dynamic_modifier = {
+		modifier = SW_wei_kai_fa_de_tu_di_state_idea
+	}
+}
+
+SW_remove_unexplored_land = {
+	remove_dynamic_modifier = {
+		modifier = SW_wei_kan_tan_de_tu_di_state_idea
+	}
+}
+
+SW_random_state_remove_unexplored_land = {
+	random_owned_controlled_state = {
+		limit = {
+			SW_undeveloped_explored_fully_controlled_state = yes
+			NOT = {
+				has_state_flag = SW_being_developed_flag
+			}
+		}
+		SW_remove_undeveloped_land = yes
+	}
+}
+
+SW_monthly_auto_exploration_check = {
+	# calc base score
+	every_owned_state = {
+		if = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			# calc
+			set_variable = {
+				base_exploration_weight = 0
+			}
+			set_temp_variable = {
+				t = infrastructure_level
+			}
+			add_to_variable = {
+				base_exploration_weight = t
+			}
+			set_temp_variable = {
+				t = arms_factory_level
+			}
+			multiply_temp_variable = {
+				t = 2
+			}
+			add_to_variable = {
+				base_exploration_weight = t
+			}
+			set_temp_variable = {
+				t = industrial_complex_level
+			}
+			multiply_temp_variable = {
+				t = 3
+			}
+			add_to_variable = {
+				base_exploration_weight = t
+			}
+		}
+		else = {
+			set_variable = {
+				base_exploration_weight = 0
+			}
+		}
+	}
+	# calc total score
+	every_owned_state = {
+		if = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			set_variable = {
+				total_exploration_weight = base_exploration_weight
+			}
+			every_neighbor_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				set_temp_variable = {
+					t = base_exploration_weight
+				}
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = SW_wei_kai_fa_de_tu_di_state_idea
+						}
+					}
+					multiply_temp_variable = {
+						t = 0.1
+					}
+				} else = {
+					multiply_temp_variable = {
+						t = 0.25
+					}
+				}
+				add_to_variable = {
+					PREV.total_exploration_weight = t
+				}
+			}
+		} else = {
+			set_variable = {
+				total_exploration_weight = 0
+			}
+		}
+	}
+	# weighting
+	every_owned_state = {
+		set_variable = {
+			SW_auto_exploration_chance = total_exploration_weight
+		}
+		multiply_variable = {
+			SW_auto_exploration_chance = ROOT.SW_auto_exploration_factor
+		}
+		# railway and supply node factor
+		if = {
+			limit = {
+				supply_node > 0
+			}
+			multiply_variable = {
+				SW_auto_exploration_chance = 1.5
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_railway_connection = {
+						build_only_on_allied = yes
+						start_state = ROOT.capital
+						target_state = THIS
+					}
+				}
+			}
+			multiply_variable = {
+				SW_auto_exploration_chance = 2
+			}
+		}
+	}
+	# exploration
+	every_owned_state = {
+		if = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				has_dynamic_modifier = {
+					modifier = SW_wei_kan_tan_de_tu_di_state_idea
+				}
+				NOT = {
+                    has_state_flag = SW_being_explored_flag
+                }
+			}
+			random = {
+				chance = SW_auto_exploration_chance
+				save_event_target_as = state_to_explore
+				ROOT = {
+					country_event = {
+						id = sw.101
+					}
+				}
+			}
+		}
+	}
+}
+
+SW_claim_on_every_southwest_state = {
+	custom_effect_tooltip = SW_claim_all_sw_state_tt
+	hidden_effect = {
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = AKI
+					is_core_of = SGS
+					is_core_of = ZYD
+					is_core_of = MEL
+				}
+			}
+			add_claim_by = ROOT
+		}
+	}
+}
+
+SW_can_integrate_southwest_state = {
+	custom_effect_tooltip = SW_allow_integration_of_SW_tt
+    custom_effect_tooltip = occupation_law_introduce_tt
+    hidden_effect = {
+        set_country_flag = can_integrate_flag_AKI
+        set_country_flag = can_integrate_flag_SGS
+		set_country_flag = can_integrate_flag_ZYD
+		set_country_flag = can_integrate_flag_MEL
+    }
+}
+
+d_SW_check = {
+	SW_monthly_auto_exploration_check = yes
+}

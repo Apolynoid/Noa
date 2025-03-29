@@ -15,9 +15,9 @@ state={
 			owner = MEL
 			add_core_of = MEL
 			buildings = {
-				infrastructure =0
-				industrial_complex = 1
-				arms_factory = 1
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
 
 			}
 

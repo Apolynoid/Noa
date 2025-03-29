@@ -692,7 +692,6 @@ God_country = {
 		tag = SKI
 		tag = TES
 		tag = CCA
-		tag = KMC
 		tag = HCT
 		tag = KEK
 	}

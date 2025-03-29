@@ -1,0 +1,123 @@
+ideas = {
+	country = {
+		# tt
+		SW_nong_ye_shei_hui_tt_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_1_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_2_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_3_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.2
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_4_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_5_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_6_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_7_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				production_speed_rail_way_factor = 0.1
+			}
+		}
+
+		SW_nong_ye_shei_hui_tt_8_idea = {
+			picture = generic_agrarian_society
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		# 西南建设计划
+		SW_xi_nan_jian_she_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		SW_xi_nan_jian_she_ji_hua_a_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		SW_xi_nan_jian_she_ji_hua_b_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		# 西南军事改革
+		SW_xi_nan_jun_shi_gai_ge_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		SW_xi_nan_jun_shi_gai_ge_a_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				org_loss_when_moving = -0.05
+				army_leader_cost_factor = -0.1
+				army_leader_start_planning_level = 1
+				max_command_power_mult = 0.1
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+			}
+		}
+	}
+}

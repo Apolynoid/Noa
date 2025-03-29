@@ -1,0 +1,16 @@
+﻿ l_simp_chinese:
+  #######决议
+  YUK_zhuibeixuanzhan_decision:0"准备开战"
+  YUK_zhuibeixuanzhan_decision_desc:0""
+  
+  YUK_xianfazhiren_decision:0"先发制人"
+  YUK_xianfazhiren_decision_desc:0"§R我们将直接攻击[SGS.GetName]来阻止他们§!"
+  
+  YUK_fanzhichuanbo_decision:0"抵抗理念传播"
+  YUK_fanzhichuanbo_decision_desc:0""
+
+  YUK_dikanglinianchuanbo_category:0"抵抗[SGS.GetName]传播理念"
+  YUK_dikanglinianchuanbo_category_desc:0"[SGS.GetName]在我国传播反动的理念会使妖精们骚动，导致社会动荡乃至分裂"
+  ############tt
+  YUK_linianshengfen_tt:0"有省份存在理念"
+  YUK_zhengzaifanzhichuanbo_tt:0"没有正在§Y抵抗理念传播§!" 

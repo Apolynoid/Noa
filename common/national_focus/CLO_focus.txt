@@ -2237,7 +2237,6 @@ focus_tree = {
 		will_lead_to_war_with = KEK
 		will_lead_to_war_with = YCE
 		will_lead_to_war_with = URM
-		will_lead_to_war_with = KMC
 		will_lead_to_war_with = SKI
 
 		completion_reward = {

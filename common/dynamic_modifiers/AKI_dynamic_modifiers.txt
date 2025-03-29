@@ -1,0 +1,13 @@
+AKI_tu_di_jian_bing_idea = {
+	icon = GFX_idea_POL_the_peasants_strike
+	remove_trigger = {
+		check_variable = {
+			AKI_land_annexation_level < 1
+		}
+	}
+	surrender_limit = AKI_land_annexation_sl
+	political_power_gain = AKI_land_annexation_pp
+	stability_factor = AKI_land_annexation_sta
+	industrial_capacity_factory = AKI_land_annexation_ic
+	custom_modifier_tooltip = AKI_land_annexation_level_tt
+}

@@ -15,11 +15,9 @@ state={
 			owner = ZYD
 			add_core_of = ZYD
 			buildings = {
-				infrastructure = 4
-				industrial_complex = 4
-				arms_factory = 6
-				
-
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
 			}
 
 		}

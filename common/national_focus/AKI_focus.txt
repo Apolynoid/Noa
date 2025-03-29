@@ -1,0 +1,1309 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+focus_tree = {
+	id = ALI_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AKI
+		}
+	}
+
+	continuous_focus_position = { x = 1400 y = 1700 }
+
+	shared_focus = SW_zhang_liang_tu_di
+	shared_focus = ty_medium_main 
+  
+	default = no
+
+	# 应对土地兼并
+	focus = {
+		id = AKI_ying_dui_tu_di_jian_bing
+		icon = GFX_focus_PER_stage_mass_protests
+		cost = 7
+		x = 30
+		y = 1
+
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			}
+		}
+
+		cancelable = no
+	
+		completion_reward = {
+			AKI_decrease_land_annexation_level = yes
+			custom_effect_tooltip = AKI_unlock_land_distribution_tt
+			add_timed_idea = {
+				idea = AKI_duo_qu_tu_di_de_re_qing_idea
+				days = 365
+			}
+			custom_effect_tooltip = AKI_other_sw_countries_alert_tt
+			hidden_effect = {
+				SGS = {
+					country_event = aki.101
+				}
+				ZYD = {
+					country_event = aki.101
+				}
+				MEL = {
+					country_event = aki.101
+				}
+				country_event = {
+					id = aki.102
+					days = 15
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整理武器库
+	focus = {
+		id = AKI_zheng_li_wu_qi_ku
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = AKI_ying_dui_tu_di_jian_bing
+
+		prerequisite = {
+			focus = AKI_ying_dui_tu_di_jian_bing
+		}
+	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				amount = 100
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 投资武器生产
+	focus = {
+		id = AKI_tou_zi_wu_qi_sheng_chan
+		icon = GFX_focus_weapon_production
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = AKI_ying_dui_tu_di_jian_bing
+
+		prerequisite = {
+			focus = AKI_ying_dui_tu_di_jian_bing
+		}
+
+		bypass = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		  	custom_effect_tooltip = AKI_90_days_ic_debuff_removal_tt
+			hidden_effect = {
+				AKI_remove_land_annexation_ic_debuff = yes
+				country_event = {
+					id = aki.105
+					days = 90
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 夺取西南土地
+	focus = {
+		id = AKI_duo_qu_xi_nan_tu_di
+		icon = GFX_goal_generic_territory_or_war
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = AKI_ying_dui_tu_di_jian_bing
+
+		prerequisite = {
+			focus = AKI_zheng_li_wu_qi_ku
+		}
+
+		prerequisite = {
+			focus = AKI_tou_zi_wu_qi_sheng_chan
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				SGS = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = SGS
+		  	}
+			OR = {
+				ZYD = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = ZYD
+		  	}
+			OR = {
+				MEL = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = MEL
+		  	}
+		}
+
+		will_lead_to_war_with = SGS
+		will_lead_to_war_with = ZYD
+		will_lead_to_war_with = MEL
+	
+		completion_reward = {
+			if = {
+				limit = {
+					SGS = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = SGS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ZYD = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = ZYD
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					MEL = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = MEL
+					type = annex_everything
+				}
+			}
+			add_named_threat = {
+				threat = 3
+				name = AKI_duo_qu_xi_nan_tu_di
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 调和人神矛盾
+	focus = {
+		id = AKI_tiao_he_ren_shen_mao_dun
+		icon = GFX_goal_generic_national_unity
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = AKI_duo_qu_xi_nan_tu_di
+
+		prerequisite = {
+			focus = AKI_duo_qu_xi_nan_tu_di
+		}
+	
+		completion_reward = {
+		  	swap_ideas = {
+				remove_idea = AKI_ren_yu_shen_de_ge_he_idea
+				add_idea = AKI_ren_yu_shen_de_ge_he_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 废除军队人神隔离
+	focus = {
+		id = AKI_fei_chu_jun_dui_ren_shen_ge_li
+		icon = GFX_focus_generic_manpower
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_tiao_he_ren_shen_mao_dun
+
+		prerequisite = {
+			focus = AKI_tiao_he_ren_shen_mao_dun
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AKI_ren_yu_shen_de_ge_he_a_idea
+				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视人类生产能力
+	focus = {
+		id = AKI_zhong_shi_ren_lei_sheng_chan_neng_li
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = AKI_fei_chu_jun_dui_ren_shen_ge_li
+
+		prerequisite = {
+			focus = AKI_fei_chu_jun_dui_ren_shen_ge_li
+		}
+
+		mutually_exclusive = {
+			focus = AKI_zhong_shi_shen_ming_yu_ce_neng_li
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_idea
+				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视神明预测能力
+	focus = {
+		id = AKI_zhong_shi_shen_ming_yu_ce_neng_li
+		icon = GFX_focus_military_plan
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = AKI_fei_chu_jun_dui_ren_shen_ge_li
+
+		prerequisite = {
+			focus = AKI_fei_chu_jun_dui_ren_shen_ge_li
+		}
+
+		mutually_exclusive = {
+			focus = AKI_zhong_shi_ren_lei_sheng_chan_neng_li
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_idea
+				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 斯卡蕾特武器援助
+	focus = {
+		id = AKI_scarlet_wu_qi_yuan_zhu
+		icon = SCA_focus_imperial_weapon_aid
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = AKI_duo_qu_xi_nan_tu_di
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = AKI_blightcaller_came_to_power_flag
+			}
+		}
+
+		prerequisite = {
+			focus = AKI_duo_qu_xi_nan_tu_di
+		}
+
+		available = {
+			SCA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = AKI_improve_SCA_view_tt
+			hidden_effect = {
+				set_country_flag = AKI_SCA_view_improved_flag
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				producer = SCA
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				producer = SCA
+				amount = 160
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 斯卡蕾特军事援助
+	focus = {
+		id = AKI_scarlet_jun_shi_yuan_zhu
+		icon = SCA_focus_imperial_military_aid
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_scarlet_wu_qi_yuan_zhu
+
+		prerequisite = {
+			focus = AKI_scarlet_wu_qi_yuan_zhu
+		}
+
+		available = {
+			SCA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 斯卡蕾特工业援助
+	focus = {
+		id = AKI_scarlet_gong_ye_yuan_zhu
+		icon = SCA_focus_imperial_industrial_aid
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_scarlet_jun_shi_yuan_zhu
+
+		prerequisite = {
+			focus = AKI_scarlet_jun_shi_yuan_zhu
+		}
+
+		available = {
+			SCA = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	
+		completion_reward = {
+		  	add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 联盟丰收大会
+	focus = {
+		id = AKI_lian_meng_feng_shou_da_hui
+		icon = AKI_focus_union_harvest_assembly
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = AKI_duo_qu_xi_nan_tu_di
+
+		prerequisite = {
+			focus = AKI_duo_qu_xi_nan_tu_di
+		}
+
+		available = {
+			is_subject = no
+			SGS = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+		  	add_political_power = 100
+			country_event = aki.106
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神明信仰凯旋
+	focus = {
+		id = AKI_shen_ming_xin_yang_kai_xuan
+		icon = unknown
+		cost = 1
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_lian_meng_feng_shou_da_hui
+
+		allow_branch = {
+			NOT = {
+				has_country_flag = AKI_blightcaller_came_to_power_flag
+			}
+		}
+
+		prerequisite = {
+			focus = AKI_lian_meng_feng_shou_da_hui
+		}
+
+		available = {
+			always = no
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = MRS_auto_complete_tt
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南重建计划
+	focus = {
+		id = AKI_xi_nan_chong_jian_ji_hua
+		icon = GFX_focus_reconstruction
+		cost = 12
+		x = -3
+		y = 1
+
+		relative_position_id = AKI_shen_ming_xin_yang_kai_xuan
+
+		prerequisite = {
+			focus = AKI_shen_ming_xin_yang_kai_xuan
+		}
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 宣布土地问题解决
+	focus = {
+		id = AKI_xuan_bu_tu_di_wen_ti_jie_jue
+		icon = GFX_focus_generic_treaty
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_shen_ming_xin_yang_kai_xuan
+
+		prerequisite = {
+			focus = AKI_shen_ming_xin_yang_kai_xuan
+		}
+
+		available = {
+			OR = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
+				}
+				SW_no_undeveloped_land = yes
+			}
+		}
+	
+		completion_reward = {
+		  	if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
+				}
+				# land annexation not solved, get punished
+				custom_effect_tooltip = AKI_land_annexation_punishment_tt
+				hidden_effect = {
+					set_temp_variable = {
+						t = AKI_land_annexation_level
+					}
+					multiply_temp_variable = {
+						t = -0.1
+					}
+				}
+				add_stability = t
+				remove_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			} else = {
+				# reward
+				add_political_power = 100
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 查禁凋零者
+	focus = {
+		id = AKI_cha_jin_diao_ling_zhe
+		icon = GFX_goal_generic_political_pressure
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = AKI_shen_ming_xin_yang_kai_xuan
+
+		prerequisite = {
+			focus = AKI_shen_ming_xin_yang_kai_xuan
+		}
+	
+		completion_reward = {
+		  	remove_ideas = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 传播神明信仰
+	focus = {
+		id = AKI_chuan_bo_shen_ming_xin_yang
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = AKI_shen_ming_xin_yang_kai_xuan
+
+		prerequisite = {
+			focus = AKI_xi_nan_chong_jian_ji_hua
+		}
+
+		prerequisite = {
+			focus = AKI_xuan_bu_tu_di_wen_ti_jie_jue
+		}
+
+		prerequisite = {
+			focus = AKI_cha_jin_diao_ling_zhe
+		}
+	
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+			SW_can_integrate_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 国防状态
+	focus = {
+		id = AKI_guo_fang_zhuang_tai
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = AKI_chuan_bo_shen_ming_xin_yang
+
+		prerequisite = {
+			focus = AKI_chuan_bo_shen_ming_xin_yang
+		}
+
+		mutually_exclusive = {
+			focus = AKI_xiao_mie_hua_tian_wei_xie
+		}
+
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+		}
+	
+		completion_reward = {
+		  	add_ideas = AKI_guo_fang_zhuang_tai_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 消灭花田威胁
+	focus = {
+		id = AKI_xiao_mie_hua_tian_wei_xie
+		icon = GFX_focus_attack_YUK
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = AKI_chuan_bo_shen_ming_xin_yang
+
+		prerequisite = {
+			focus = AKI_chuan_bo_shen_ming_xin_yang
+		}
+
+		mutually_exclusive = {
+			focus = AKI_guo_fang_zhuang_tai
+		}
+
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+			is_subject = no
+			YUK = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = YUK
+			}
+		}
+
+		will_lead_to_war_with = YUK
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YUK
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 花田防线
+	focus = {
+		id = AKI_hua_tian_fang_xian
+		icon = GFX_goal_generic_construct_military
+		cost = 18
+		x = -4
+		y = 1
+
+		relative_position_id = AKI_chuan_bo_shen_ming_xin_yang
+
+		prerequisite = {
+			focus = AKI_chuan_bo_shen_ming_xin_yang
+		}
+
+		available = {
+			has_tech = jianzaojishu130
+			has_full_control_of_state = 384
+			has_full_control_of_state = 393
+			has_full_control_of_state = 179
+			has_full_control_of_state = 337
+		}
+	
+		completion_reward = {
+			384 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 943
+						id = 4749
+						id = 4752
+						id = 4751
+						id = 2842
+						id = 4764
+					}
+				}
+			}
+			393 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 4748
+						id = 4742
+						id = 4734
+						id = 4722
+						id = 4716
+						id = 4697
+					}
+				}
+			}
+			179 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 2864
+						id = 4676
+						id = 4659
+						id = 4654
+						id = 4647
+					}
+				}
+			}
+			337 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 4638
+						id = 4629
+						id = 3449
+						id = 2031
+						id = 4609
+						id = 865
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学准备
+	focus = {
+		id = AKI_shen_mi_xue_zhun_bei
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 4
+		y = 1
+
+		relative_position_id = AKI_chuan_bo_shen_ming_xin_yang
+
+		prerequisite = {
+			focus = AKI_chuan_bo_shen_ming_xin_yang
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 3
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	## hidden
+	# 战争工业动员
+	focus = {
+		id = AKI_zhan_zheng_gong_ye_dong_yuan
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = 3
+		y = 1
+
+		relative_position_id = AKI_duo_qu_xi_nan_tu_di
+
+		allow_branch = {
+			has_country_flag = AKI_blightcaller_came_to_power_flag
+		}
+
+		prerequisite = {
+			focus = AKI_duo_qu_xi_nan_tu_di
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 针对恶魔的弱点
+	focus = {
+		id = AKI_zhen_dui_e_mo_de_ruo_dian
+		icon = CIR_focus_aim_at_weakness_of_the_devil
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_zhan_zheng_gong_ye_dong_yuan
+
+		prerequisite = {
+			focus = AKI_zhan_zheng_gong_ye_dong_yuan
+		}
+	
+		completion_reward = {
+			add_ideas = AKI_zhen_dui_e_mo_de_ruo_dian_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 向恶魔复仇
+	focus = {
+		id = AKI_xiang_e_mo_fu_chou
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_zhen_dui_e_mo_de_ruo_dian
+
+		prerequisite = {
+			focus = AKI_zhen_dui_e_mo_de_ruo_dian
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+			  	SCA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+			  	}
+			  	has_war_with = SCA
+			}
+		}
+
+		continue_if_invalid = yes
+
+		cancelable = no
+
+		will_lead_to_war_with = SCA
+	
+		completion_reward = {
+			declare_war_on = {
+				target = SCA
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 凋零者政变
+	focus = {
+		id = AKI_diao_ling_zhe_zheng_bian
+		icon = GFX_focus_RAJ_a_private_military
+		cost = 1
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_lian_meng_feng_shou_da_hui
+
+		allow_branch = {
+			has_country_flag = AKI_blightcaller_came_to_power_flag
+		}
+
+		prerequisite = {
+			focus = AKI_lian_meng_feng_shou_da_hui
+		}
+	
+		available = {
+			always = no
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = MRS_auto_complete_tt
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 扩编凋零者
+	focus = {
+		id = AKI_kuo_bian_diao_ling_zhe
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = AKI_diao_ling_zhe_zheng_bian
+
+		prerequisite = {
+			focus = AKI_diao_ling_zhe_zheng_bian
+		}
+
+		mutually_exclusive = {
+			focus = AKI_zheng_gui_hua_diao_ling_zhe
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_a_idea
+				add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 正规化凋零者
+	focus = {
+		id = AKI_zheng_gui_hua_diao_ling_zhe
+		icon = GFX_focus_army_dicipline
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = AKI_diao_ling_zhe_zheng_bian
+
+		prerequisite = {
+			focus = AKI_diao_ling_zhe_zheng_bian
+		}
+
+		mutually_exclusive = {
+			focus = AKI_kuo_bian_diao_ling_zhe
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_a_idea
+				add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_e_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强制执行土地分配
+	focus = {
+		id = AKI_qiang_zhi_zhi_xing_tu_di_fen_pei
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_kuo_bian_diao_ling_zhe
+
+		prerequisite = {
+			focus = AKI_kuo_bian_diao_ling_zhe
+			focus = AKI_zheng_gui_hua_diao_ling_zhe
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
+				}
+				# land annexation not solved, get punished
+				custom_effect_tooltip = AKI_land_annexation_punishment_tt
+				hidden_effect = {
+					set_temp_variable = {
+						t = AKI_land_annexation_level
+					}
+					multiply_temp_variable = {
+						t = -0.1
+					}
+				}
+				add_stability = t
+				remove_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			} else = {
+				# reward
+				add_political_power = 100
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 夺取花田土地
+	focus = {
+		id = AKI_duo_qu_hua_tian_tu_di
+		icon = GFX_focus_attack_YUK
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = AKI_qiang_zhi_zhi_xing_tu_di_fen_pei
+
+		prerequisite = {
+			focus = AKI_qiang_zhi_zhi_xing_tu_di_fen_pei
+		}
+	
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				YUK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+				has_war_with = YUK
+		  	}
+		}
+
+		will_lead_to_war_with = YUK
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YUK
+				type = annex_everything
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 占领区卫戍部队
+	focus = {
+		id = AKI_zhan_ling_qu_wei_shu_bu_dui
+		icon = GFX_focus_suppression
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = AKI_qiang_zhi_zhi_xing_tu_di_fen_pei
+
+		prerequisite = {
+			focus = AKI_qiang_zhi_zhi_xing_tu_di_fen_pei
+		}
+	
+		completion_reward = {
+			add_ideas = AKI_wei_shu_bu_dui_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 死亡崇拜
+	focus = {
+		id = AKI_si_wang_chong_bai
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = AKI_zheng_gui_hua_diao_ling_zhe
+
+		prerequisite = {
+			focus = AKI_kuo_bian_diao_ling_zhe
+			focus = AKI_zheng_gui_hua_diao_ling_zhe
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_b_idea
+				}
+				swap_ideas = {
+					remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_b_idea
+					add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_e_idea
+					add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_f_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战斗狂热
+	focus = {
+		id = AKI_zhan_dou_kuang_re
+		icon = GFX_goal_generic_wolf_pack
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = AKI_si_wang_chong_bai
+
+		prerequisite = {
+			focus = AKI_si_wang_chong_bai
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_c_idea
+				}
+				swap_ideas = {
+					remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_c_idea
+					add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_d_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_f_idea
+					add_idea = AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_g_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = AKI_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = AKI_si_wang_chong_bai
+
+		prerequisite = {
+			focus = AKI_si_wang_chong_bai
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 3
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}

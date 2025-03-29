@@ -1,0 +1,20 @@
+# 西南土地开发
+SW_xi_nan_tu_di_kai_fa = {
+	icon = generic_position_army
+
+	priority = 90
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		any_owned_state = {
+			has_dynamic_modifier = {
+				modifier = SW_wei_kai_fa_de_tu_di_state_idea
+			}
+		}
+	}
+
+	visible_when_empty = no
+}

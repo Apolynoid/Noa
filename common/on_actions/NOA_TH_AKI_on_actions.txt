@@ -1,0 +1,26 @@
+on_actions = {
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = AKI
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
+				}
+				AKI_remove_land_annexation_ic_debuff = yes
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = AKI
+				}
+				AKI_add_land_annexation_ic_debuff = yes
+			}
+		}
+	}
+}

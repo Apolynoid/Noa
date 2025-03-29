@@ -13,6 +13,7 @@
         #辅助
 
         #专用辅助
+        mortar1 = 1
 
         #专用基础
 
@@ -57,6 +58,7 @@
         MEL_messy_economy_idea
         MEL_unorganized_militia_idea
     }
+    SW_add_agrarian_society = yes
     
     set_politics = {
     	ruling_party = guli
@@ -69,5 +71,30 @@
         neworder = 8
         oldorder = 0
         fandong = 5
+    }
+
+    160 = {
+        SW_add_unexplored_land = yes
+    }
+    179 = {
+        SW_add_unexplored_land = yes
+    }
+    337 = {
+        SW_add_unexplored_land = yes
+    }
+    338 = {
+        SW_add_unexplored_land = yes
+    }
+    342 = {
+        SW_add_unexplored_land = yes
+    }
+    379 = {
+        SW_add_unexplored_land = yes
+    }
+    380 = {
+        SW_add_unexplored_land = yes
+    }
+    381 = {
+        SW_add_unexplored_land = yes
     }
 }

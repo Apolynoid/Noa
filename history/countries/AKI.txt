@@ -9,7 +9,7 @@
         #辅助
 
         #专用辅助
-
+        magic_energy1 = 1
         #专用基础
 
         #专用进阶
@@ -44,18 +44,26 @@
     set_country_flag = bunengsuiyiqiehuanzhengti   
     
     add_ideas = {
-    God
-    sub_Human
-    Village
-    dove2
-    open1
-    sc_rule
-    AKI_tudijianbing_idea
-    AKI_jiduanzhuyiyundong_idea
-    AKI_zhanlipin_idea
-    AKI_renyushendemohujiexian_idea
-    AKI_zhuanzhuneibu_idea
+        God
+        sub_Human
+        Town
+        dove2
+        open1
+        sc_rule
     }
+    add_ideas = {
+        AKI_ren_yu_shen_de_ge_he_idea
+        AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_idea
+    }
+    set_variable = {
+        AKI_land_annexation_level = 6
+    }
+    AKI_calc_land_annexation = yes
+    add_dynamic_modifier = {
+        modifier = AKI_tu_di_jian_bing_idea
+    }
+    SW_add_agrarian_society = yes
+
     set_politics = {
         ruling_party = guli
         election_frequency = 48
@@ -71,4 +79,26 @@
     recruit_character = AKI_hin
     recruit_character = AKI_szh
     recruit_character = AKI_sizuha
+    105 = {
+        SW_add_unexplored_land = yes
+    }
+    109 = {
+        add_dynamic_modifier = {
+            modifier = SW_wei_kai_fa_de_tu_di_state_idea
+        }
+    }
+    139 = {
+        SW_add_unexplored_land = yes
+    }
+    376 = {
+        SW_add_unexplored_land = yes
+    }
+    395 = {
+        SW_add_unexplored_land = yes
+    }
+    396 = {
+        add_dynamic_modifier = {
+            modifier = SW_wei_kai_fa_de_tu_di_state_idea
+        }
+    }
 }

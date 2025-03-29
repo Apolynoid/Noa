@@ -1,0 +1,6429 @@
+shared_focus = {
+	id = TES.1
+	icon = GFX_focus_TES_tianzidejihua
+	cost = 12
+	x = 5
+	y = 1
+
+	allow_branch = {
+		NOT = { has_country_flag = kaiqizhuxian }
+	}
+	completion_reward = {
+		add_political_power = 150	
+	}
+}
+shared_focus = {
+	id = TES.2
+	icon = GFX_focus_TES_qingqiutiantingdebangzhu
+	cost = 7
+	prerequisite = {
+		focus = TES.1
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 2
+	y = 2
+	completion_reward = {
+		add_ideas = TES_tianting_yuanzhu
+		62 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		359 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		575 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+		360 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.3
+	icon = GFX_focus_TES_gongchang
+	cost = 5
+	prerequisite = {
+		focus = TES.2
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 1
+	y = 3
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1.0
+			ahead_reduction = 1.0
+			uses = 2.0
+			technology = linglishengchan140
+			technology = linglishengchan145
+			technology = linglishengchan150
+			technology = linglishengchan155
+			technology = linglishengchan160
+			technology = linglifuzhushengchan147
+			technology = linglifuzhushengchan152
+			technology = linglifuzhushengchan157
+			technology = linglifuzhushengchan162
+		}
+		62 = {
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.4
+	icon = GFX_focus_TES_wuqi
+	cost = 5
+	prerequisite = {
+		focus = TES.2
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 3
+	y = 3
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = gun141
+			amount = 1000
+			producer = CCA
+		} 
+		add_equipment_to_stockpile = {
+			type = magic_core141
+			amount = 3000
+			producer = CCA
+		} 
+		add_equipment_to_stockpile = {
+			type = melee141
+			amount = 1000
+			producer = CCA
+		} 
+	}
+}
+shared_focus = {
+	id = TES.5
+	icon = GFX_focus_TES_xunlianjundui
+	cost = 6
+	prerequisite = {
+		focus = TES.3
+	}
+	prerequisite = {
+		focus = TES.4
+	}
+	mutually_exclusive = {
+
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			has_country_flag = yaojingpanluankaishi
+			factor = 0
+		}
+	}
+	x = 2
+	y = 4
+	completion_reward = {
+		random_owned_controlled_state = {
+		prioritize = { 62 }
+	    	create_unit = {
+	   	    division = "division_template = \"有顶天陆战队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+		    owner = TES
+	     	prioritize_location = 1641
+	 	    allow_spawning_on_enemy_provs = yes 
+     	   }
+       }
+	   random_owned_controlled_state = {
+		prioritize = { 62 }
+	    	create_unit = {
+	   	    division = "division_template = \"有顶天陆战队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+		    owner = TES
+	     	prioritize_location = 1805
+	 	    allow_spawning_on_enemy_provs = yes 
+     	   }
+       }
+	   random_owned_controlled_state = {
+		prioritize = { 575 }
+	    	create_unit = {
+	   	    division = "division_template = \"有顶天陆战队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+		    owner = TES
+	     	prioritize_location = 2042
+	 	    allow_spawning_on_enemy_provs = yes 
+     	   }
+       }
+	}
+}
+shared_focus = {
+	id = TES.6
+	icon = GFX_focus_TES_kuojiantaoyuan
+	cost = 7
+	prerequisite = {
+		focus = TES.1
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 8
+	y = 2
+	completion_reward = {
+		add_ideas = TES_kuojiantaoyuan
+		CCA = {
+			362 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = no
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.7
+	icon = GFX_focus_TES_jianshetoazijiagongchang
+	cost = 5
+	prerequisite = {
+		focus = TES.6
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 9
+	y = 3
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.8
+	icon = GFX_focus_TES_yitishicaizhaiji
+	cost = 5
+	prerequisite = {
+		focus = TES.6
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		NOT = {
+			has_war_with = CCA
+		}
+		country_exists = CCA
+	}
+	x = 7
+	y = 3
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.9
+	icon = GFX_focus_TES_zhaomuyuangong
+	cost = 6
+	prerequisite = {
+		focus = TES.7
+	}
+	prerequisite = {
+		focus = TES.8
+	}
+	mutually_exclusive = {
+
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			has_country_flag = yaojingpanluankaishi
+			factor = 0
+		}
+	}
+	x = 8
+	y = 4
+	completion_reward = {
+		add_tech_bonus = {
+			category = primary_weapons 
+			ahead_reduction = 0.5
+			bonus = 1
+			uses = 2
+		}
+		add_tech_bonus = {
+			category = artillery_tech
+			ahead_reduction = 0.5
+			bonus = 1.0
+			uses = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.10
+	icon = GFX_focus_TES_lianhedehenengxing
+	cost = 6
+	prerequisite = {
+		focus = TES.1
+	}
+	mutually_exclusive = {
+
+	}
+	available = {
+		has_country_flag = keyiheyaojinghezuo
+		NOT = {
+			has_country_flag = yaojingpanluankaishi
+			has_completed_focus = TES.11
+		}
+	}
+	x = 5
+	y = 3
+	allow_branch = {
+	   NOT = { 
+		has_country_flag = kaiqizhuxian
+		has_country_flag = yaojingpanluankaishi 
+		}
+	}
+	completion_reward = {
+		country_event = { id = ten.7 days = 2}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+shared_focus = {
+	id = TES.11
+	icon = GFX_focus_TES_xunqiuhezuo
+	cost = 6
+	prerequisite = {
+		focus = TES.5
+		focus = TES.9
+	}
+	mutually_exclusive = {
+
+	}
+	x = 5
+	y = 5
+	allow_branch = {
+		NOT = { 
+			has_country_flag = heyaojinghezuo
+			has_country_flag = kaiqizhuxian
+		}
+	}
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = TES.12
+	icon = GFX_focus_TES_wozijilai
+	cost = 6
+	prerequisite = {
+		focus = TES.11
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	mutually_exclusive = {
+		focus = TES.14
+		focus = TES.13
+	}
+	x = 5
+	y = 6
+	completion_reward = {
+		country_event = { id = ten.33 days = 1 }
+		custom_effect_tooltip = TES_12_13_14_10_xiaoguo
+	}
+}
+shared_focus = {
+	id = TES.13
+	icon = GFX_focus_TES_tianvhuzhu
+	cost = 6
+	prerequisite = {
+		focus = TES.11
+	}
+	mutually_exclusive = {
+		focus = TES.12
+		focus = TES.14
+	}
+	x = 3
+	y = 6
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		country_event = { id = ten.22 days = 1 }
+		custom_effect_tooltip = TES_12_13_14_10_xiaoguo
+	}
+}
+shared_focus = {
+	id = TES.14
+	icon = GFX_focus_TES_tianmohuzhu
+	cost = 6
+	prerequisite = {
+		focus = TES.11
+	}
+	mutually_exclusive = {
+		focus = TES.12
+		focus = TES.13
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	x = 7
+	y = 6
+	completion_reward = {
+		set_country_flag = tianmohuzhu
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.05 			
+		}
+		add_ideas = TES_tianmohuzhu2_idea
+		OTG = {
+			add_ideas = TES_huzhu_idea
+			jiemeng = yes
+		}
+		custom_effect_tooltip = TES_12_13_14_10_xiaoguo
+	}
+}
+shared_focus = {
+	id = TES.15
+	icon = GFX_focus_TES_yaojinpanluan
+	cost = 2
+	prerequisite = {
+		focus = TES.12
+		focus = TES.13
+		focus = TES.14
+	}
+	mutually_exclusive = {
+		
+	}
+	allow_branch = {
+		NOT = { has_country_flag = kaiqizhuxian }
+		has_country_flag = yaojingpanluankaishi
+    }
+	x = 5
+	y = 7
+	completion_reward = {
+		army_experience = 20
+	}
+}
+shared_focus = {
+	id = TES.16
+	icon = GFX_focus_TES_zuihaodepengyou
+	cost = 6
+	prerequisite = {
+		focus = TES.5
+		focus = TES.9
+	}
+	mutually_exclusive = {
+		
+	}
+	allow_branch = {
+		NOT = { has_country_flag = kaiqizhuxian }
+		has_country_flag = heyaojinghezuo
+	}
+	x = 5
+	y = 5
+	completion_reward = {
+		add_ideas = TES_heyaojinghezuo
+		CFA = {
+			add_ideas = TES_huzhu_idea
+		}
+	}
+}
+shared_focus = {
+	id = TES.17
+	icon = GFX_focus_SOV_organize_wreckers
+	cost = 2
+	prerequisite = {
+		focus = TES.16
+		focus = TES.15
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 5
+	y = 8
+	completion_reward = {
+		swap_ruler_traits = {
+			remove = gaoguidetianren_1
+			add = gaoguidetianren_2
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES.12
+			}
+			add_war_support = 0.15
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES.13
+			}
+			add_stability = 0.15
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES.14
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES.10
+			}
+			add_stability = 0.1
+		}
+		if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			swap_ideas = {
+				remove_idea = civilian_economy
+				add_idea = low_economic_mobilisation
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			swap_ideas = {
+				remove_idea = low_economic_mobilisation
+				add_idea = partial_economic_mobilisation
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			swap_ideas = {
+				remove_idea = partial_economic_mobilisation
+				add_idea = war_economy
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.18
+	icon = GFX_focus_TES_longluorenxin
+	cost = 6
+	prerequisite = {
+		focus = TES.17
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	x = 8
+	y = 9
+	completion_reward = {
+		add_political_power = 100
+		
+	}
+}
+shared_focus = {
+	id = TES.19
+	icon = GFX_focus_TES_yunshushigu
+	cost = 6
+	prerequisite = {
+		focus = TES.18
+	}
+	mutually_exclusive = {
+		
+	}
+	available = {
+		NOT = {
+			has_completed_focus = TES.30
+		}
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	x = 7
+	y = 10
+	completion_reward = {
+		set_country_flag = yunshushigu
+		custom_effect_tooltip = TES_19_xiaoguo
+	}
+}
+shared_focus = {
+	id = TES.20
+	icon = GFX_focus_TES_junduidejinyang
+	cost = 7
+	prerequisite = {
+		focus = TES.18
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 9
+	y = 10
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = TES.21
+	icon = GFX_focus_TES_kuobianweidui
+	cost = 6
+	prerequisite = {
+		focus = TES.25
+	}
+	mutually_exclusive = {
+		
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = -2
+	y = 10
+	completion_reward = {
+		add_manpower = 1500
+		army_experience = 20
+	}
+}
+shared_focus = {
+	id = TES.22
+	icon = GFX_focus_ITA_moschettieri_del_duce
+	cost = 6
+	prerequisite = {
+		focus = TES.21
+	}
+	mutually_exclusive = {
+		focus = TES.23
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -3
+	y = 11
+	completion_reward = {
+		division_template = {
+			name = "家丁卫队"
+			regiments = {
+				ma_infantry = { x = 0 y = 0 }
+				ma_infantry = { x = 0 y = 1 }
+				ma_infantry = { x = 0 y = 2 }
+				ma_infantry = { x = 0 y = 3 }
+				ma_infantry = { x = 0 y = 4 }
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 575 }
+				create_unit = {
+				   division = "division_template = \"家丁卫队\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 2042
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 360 }
+				create_unit = {
+				   division = "division_template = \"家丁卫队\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1244
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 360 }
+				create_unit = {
+				   division = "division_template = \"家丁卫队\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1691
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 359 }
+				create_unit = {
+				   division = "division_template = \"家丁卫队\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 700
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.23
+	icon = GFX_focus_ETH_freedom_at_gunpoint
+	cost = 6
+	prerequisite = {
+		focus = TES.21
+	}
+	mutually_exclusive = {
+		focus = TES.22
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -1
+	y = 11
+	completion_reward = {
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 358 }
+				create_unit = {
+				   division = "division_template = \"云上军团\" start_experience_factor = 0.2 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 456
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.24
+	icon = GFX_focus_TES_zhongchengzhixin
+	cost = 7
+	prerequisite = {
+		focus = TES.22
+		focus = TES.23
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	x = -2
+	y = 12
+	completion_reward = {
+		add_ideas = TES_zhongchengzhixing
+	}
+}
+shared_focus = {
+	id = TES.25
+	icon = GFX_focus_TES_zhanshidongyuan
+	cost = 4
+	prerequisite = {
+		focus = TES.17
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 9
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = type4_manpowerlv2
+			}
+			swap_ideas = {
+				remove_idea  = type4_manpowerlv2
+				add_idea  = type4_manpowerlv3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = type4_manpowerlv3
+			}
+			swap_ideas = {
+				remove_idea  = type4_manpowerlv3
+				add_idea  = type4_manpowerlv4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = type4_manpowerlv4
+			}
+			swap_ideas = {
+				remove_idea  = type4_manpowerlv4
+				add_idea  = type4_manpowerlv5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = type2_manpowerlv3
+			}
+			swap_ideas = {
+				remove_idea  = type2_manpowerlv3
+				add_idea  = type4_manpowerlv4
+			}
+		}
+		else = {
+			add_political_power = 120
+		}
+	}
+}
+shared_focus = {
+	id = TES.26
+	icon = GFX_focus_TES_lvren
+	cost = 6
+	prerequisite = {
+		focus = TES.25
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	x = 2
+	y = 10
+	completion_reward = {
+		army_experience = 20
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.25
+			uses = 1
+			category = basic_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = TES.27
+	icon = GFX_focus_TES_xue
+	cost = 6
+	prerequisite = {
+		focus = TES.26
+	}
+	mutually_exclusive = {
+		focus = TES.28
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	x = 1
+	y = 11
+	completion_reward = {
+		add_ideas = TES_xuedezhanshu
+	}
+}
+shared_focus = {
+	id = TES.28
+	icon = GFX_focus_TES_wu
+	cost = 6
+	prerequisite = {
+		focus = TES.26
+	}
+	mutually_exclusive = {
+		focus = TES.27
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 3
+	y = 11
+	completion_reward = {
+		add_ideas = TES_wudezhanshu
+	}
+}
+shared_focus = {
+	id = TES.29
+	icon = GFX_focus_TES_zhenduitiantingdezhanshu
+	cost = 7
+	prerequisite = {
+		focus = TES.27
+		focus = TES.28
+	}
+	mutually_exclusive = {
+	
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 2
+	y = 12
+	completion_reward = {
+		add_ideas = TES_tiantingruodian_idea
+	}
+}
+shared_focus = {
+	id = TES.30
+	icon = GFX_focus_TES_chong
+	cost = 4
+	prerequisite = {
+		focus = TES.17
+	}
+	mutually_exclusive = {
+	
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES_30_qianti
+			date > 147.7.1
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+	will_lead_to_war_with = CCA
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 5
+	y = 10
+	completion_reward = {
+		mark_focus_tree_layout_dirty = yes
+		CCA = {
+			end_puppet = TES
+		}
+		  declare_war_on = {
+			  type = duli_wargoal
+			  target = CCA
+		  }
+		if = {
+			limit = {
+				has_country_flag = heyaojinghezuo
+			}
+			CFA = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = CCA
+				}
+			}
+			set_country_flag = tescfavscca
+		}
+		  hidden_effect = {
+			news_event = { id = ten.5 days = 2}
+			if = {
+				limit = {
+					has_country_flag = yunshushigu
+				}
+				CCA = {
+					add_equipment_to_stockpile = {
+						type = gun141
+						amount = -2000
+						producer = CCA
+					} 
+					add_equipment_to_stockpile = {
+						type = magic_core141
+						amount = -4000
+						producer = CCA
+					} 
+					add_equipment_to_stockpile = {
+						type = melee141
+						amount = -2000
+						producer = CCA
+					} 
+				}
+				TES = {
+					add_equipment_to_stockpile = {
+						type = gun141
+						amount = 2000
+						producer = CCA
+					} 
+					add_equipment_to_stockpile = {
+						type = magic_core141
+						amount = 4000
+						producer = CCA
+					} 
+					add_equipment_to_stockpile = {
+						type = melee141
+						amount = 2000
+						producer = CCA
+					} 
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.31
+	icon = GFX_focus_SWI_establish_pro_helvetia	
+	cost = 5
+	prerequisite = {
+		focus = TES.30
+	}
+	mutually_exclusive = {
+	
+	}
+	available = {
+		OR = {
+			NOT = {
+				country_exists = CCA
+			}
+			CCA = {
+				is_puppet = yes
+			}
+		}
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 5
+	y = 12
+	completion_reward = {
+		add_state_core = 361
+		add_state_core = 14 
+		add_state_core = 49 
+		add_state_core = 36 
+		add_state_core = 362
+		hidden_effect = {
+			annex_country = {
+				target = CCA
+				transfer_troops = no
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+shared_focus = {
+	id = TES.32
+	icon = GFX_focus_TES_xuanju
+	cost = 5
+	prerequisite = {
+		focus = TES.31
+	}
+	mutually_exclusive = {
+	
+	}
+	ai_will_do = {
+		factor = 500
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	allow_branch = {
+		NOT = { has_country_flag = kaiqizhuxian }
+		has_completed_focus = TES.30
+    }
+	x = 5
+	y = 14
+	completion_reward = {
+		custom_effect_tooltip = TES_32_jueyi
+		add_political_power = 100
+		set_country_flag = kaiqixuanju
+		add_to_variable = {
+			Tenshi_yxl_meizhou = 5
+		}
+		add_to_variable = {
+			iku_yxl_meizhou = 5
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = TES.12
+				}
+				random_list = {
+					50 = {
+						add_to_variable = {
+							Tenshi_yxl = 72
+						}
+						add_to_variable = {
+							iku_yxl = 31
+						}
+					}
+					50 = {
+						add_to_variable = {
+							Tenshi_yxl = 63
+						}
+						add_to_variable = {
+							iku_yxl = 33
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = TES.13
+				}
+				random_list = {
+					50 = {
+						add_to_variable = {
+							Tenshi_yxl = 66
+						}
+						add_to_variable = {
+							iku_yxl = 52
+						}
+					}
+					50 = {
+						add_to_variable = {
+							Tenshi_yxl = 62
+						}
+						add_to_variable = {
+							iku_yxl = 58
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_completed_focus = TES.14
+						has_completed_focus = TES.10
+					}
+				}
+				add_to_variable = {
+					Tenshi_yxl = 70
+				}
+				add_to_variable = {
+					iku_yxl = 50
+				}
+			} 
+		}
+	}
+}
+shared_focus = {
+	id = TES.33
+	icon = GFX_focus_TES_anliuyongdong
+	cost = 5
+	prerequisite = {
+		focus = TES.32
+	}
+	mutually_exclusive = {
+		
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES.33_TT
+			always = no
+		}
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	allow_branch = {
+		NOT = { 
+			has_completed_focus = TES.13 
+			has_country_flag = kaiqizhuxian
+			has_completed_focus = TES.12
+		}
+		has_completed_focus = TES.30
+	}
+	x = 5
+	y = 15
+	ai_will_do = {
+		factor = 500
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = guli
+			popularity = 0.20			
+		}
+		lobbydecrease = yes
+		if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl < iku_yxl
+				}
+			}
+			add_to_variable = {
+				iku_yxl = -15
+			}
+			add_to_variable = {
+				iku_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = iku_jiangdi_15
+			custom_effect_tooltip = iku_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl > iku_yxl
+				}
+			}
+			add_to_variable = {
+				Tenshi_yxl = -15
+			}
+			add_to_variable = {
+				Tenshi_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = tenshi_jiangdi_15
+			custom_effect_tooltip = tenshi_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl = iku_yxl
+				}
+			}
+			add_political_power = 100
+		}
+	}
+}
+shared_focus = {
+	id = TES.34
+	icon = GFX_focus_TES_yichang
+	cost = 8
+	prerequisite = {
+		focus = TES.33
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 4
+	y = 16
+	completion_reward = {
+		add_stability = -0.05 
+		add_popularity = {
+			ideology = guli
+			popularity = 0.10			
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl < iku_yxl
+				}
+			}
+			add_to_variable = {
+				iku_yxl = -15
+			}
+			add_to_variable = {
+				iku_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = iku_jiangdi_15
+			custom_effect_tooltip = iku_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl > iku_yxl
+				}
+			}
+			add_to_variable = {
+				Tenshi_yxl = -15
+			}
+			add_to_variable = {
+				Tenshi_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = tenshi_jiangdi_15
+			custom_effect_tooltip = tenshi_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl = iku_yxl
+				}
+			}
+			add_political_power = 100
+		}
+	}
+}
+shared_focus = {
+	id = TES.35
+	icon = GFX_focus_TES_dichu
+	cost = 8
+	prerequisite = {
+		focus = TES.33
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 6
+	y = 16
+	completion_reward = { 
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = guli
+			popularity = 0.05			
+		}
+		if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl < iku_yxl
+				}
+			}
+			add_to_variable = {
+				iku_yxl = -15
+			}
+			add_to_variable = {
+				iku_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = iku_jiangdi_15
+			custom_effect_tooltip = iku_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl > iku_yxl
+				}
+			}
+			add_to_variable = {
+				Tenshi_yxl = -15
+			}
+			add_to_variable = {
+				Tenshi_yxl_meizhou = -1
+			}
+			custom_effect_tooltip = tenshi_jiangdi_15
+			custom_effect_tooltip = tenshi_jiangdi_1_meizhou
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					Tenshi_yxl = iku_yxl
+				}
+			}
+			add_political_power = 100
+		}
+	}
+}
+shared_focus = {
+	id = TES.36
+	icon = GFX_focus_TES_fujiuruchu
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES_36_qianti
+			has_government = guli
+		}
+	}
+	prerequisite = {
+		focus = TES.35
+	}
+	prerequisite = {
+		focus = TES.34
+	}
+	mutually_exclusive = {
+		
+	}
+	available = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 5
+	y = 17
+	completion_reward = {
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = kaiqizhuxian
+		add_ideas = TES_tianting_tongzhi_idea
+	}
+}
+shared_focus = {
+	id = TES.37
+	icon = GFX_focus_TES_zuichudeliniang
+	cost = 5
+	prerequisite = {
+		focus = TES.32
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	available = {
+		has_country_flag = xuanzetianzi
+	}
+	ai_will_do = {
+		factor = 500
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = 3
+		y = 0
+	}
+	x = 0
+	y = 15
+	completion_reward = {
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05 			
+		}
+		lobbyincrease = yes
+		add_to_variable = {
+			Tenshi_yxl = 20
+		}
+		add_to_variable = {
+			Tenshi_yxl_meizhou = 2
+		}
+		custom_effect_tooltip = tenshi_tigao_20
+		custom_effect_tooltip = tenshi_tigao_2_meizhou
+	}
+}
+shared_focus = {
+	id = TES.38
+	icon = GFX_focus_TES_yongyuanbuwang
+	cost = 8
+	prerequisite = {
+		focus = TES.37
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = 3
+		y = 0
+	}
+	x = -1
+	y = 16
+	completion_reward = {
+		OL_add5 = yes
+		custom_effect_tooltip = tenshi_tigao_1_meizhou
+		add_to_variable = {
+			Tenshi_yxl_meizhou = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.39
+	icon = GFX_focus_TES_xuanchengtianwang
+	cost = 8
+	prerequisite = {
+		focus = TES.37
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = 3
+		y = 0
+	}
+	x = 1
+	y = 16
+	completion_reward = {
+		swap_ruler_traits = {
+			remove = gaoguidetianren_2
+			add = gaoguidetianren_3
+		}
+		add_stability = 0.1 
+		add_war_support = 0.1
+		custom_effect_tooltip = tenshi_tigao_1_meizhou
+		add_to_variable = {
+			Tenshi_yxl_meizhou = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.40
+	icon = GFX_focus_TES_lisuoyindang
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES_40_qianti
+			has_government = neworder
+			has_country_flag = TES_tianzi_juxu_zhizheng
+		}
+	}
+	prerequisite = {
+		focus = TES.38
+	}
+	prerequisite = {
+		focus = TES.39
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = 3
+		y = 0
+	}
+	x = 0
+	y = 17
+	completion_reward = {
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = kaiqizhuxian
+		set_country_flag = tianzixian 
+		country_event = {
+			id = ten.55
+			days = 1
+		}
+		hidden_effect = {
+			complete_national_focus = TES.89
+		}
+	}
+}
+shared_focus = {
+	id = TES.41
+	icon = GFX_focus_TES_xinshidaixinliniang
+	cost = 5
+	prerequisite = {
+		focus = TES.32
+	}
+	mutually_exclusive = {
+		
+	}
+	ai_will_do = {
+		factor = 500
+	}
+	available = {
+		has_country_flag = xuanzeiku
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = -3
+		y = 0
+	}
+	x = 10
+	y = 15
+	completion_reward = {
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.15 			
+		}
+		lobbydecrease = yes
+		custom_effect_tooltip = iku_tigao_20
+		custom_effect_tooltip = iku_tigao_2_meizhou
+		add_to_variable = {
+			iku_yxl = 20
+		}
+		add_to_variable = {
+			iku_yxl_meizhou = 2
+		}
+	}
+}
+shared_focus = {
+	id = TES.42
+	icon = GFX_focus_TES_dajiaderenke
+	cost = 8
+	prerequisite = {
+		focus = TES.41
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = -3
+		y = 0
+	}
+	x = 9
+	y = 16
+	completion_reward = {
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.10 			
+		}
+		custom_effect_tooltip = iku_tigao_1_meizhou
+		add_to_variable = {
+			iku_yxl_meizhou = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.43
+	icon = GFX_focus_TES_waibuzhichi
+	cost = 8
+	prerequisite = {
+		focus = TES.41
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = -3
+		y = 0
+	}
+	x = 11
+	y = 16
+	completion_reward = {
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.10 			
+		}
+		add_stability = 0.05 
+		custom_effect_tooltip = iku_tigao_20
+		add_to_variable = {
+			iku_yxl = 20
+		}
+	}
+}
+shared_focus = {
+	id = TES.44
+	icon = GFX_focus_TES_zoxiangfangrong
+	cost = 5
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES_44_qianti
+			has_government = qinwai
+		}
+	}
+	prerequisite = {
+		focus = TES.43
+	}
+	prerequisite = {
+		focus = TES.42
+	}
+	mutually_exclusive = {
+	
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	offset = {
+		trigger = {
+			OR = {
+				has_completed_focus = TES.12
+				has_completed_focus = TES.13
+			}
+		}
+		x = -3
+		y = 0
+	}
+	x = 10
+	y = 17
+	completion_reward = {
+		hidden_effect = {
+			complete_national_focus = TES.135
+		}
+		country_event = {
+			id = ten.56
+			days = 1
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_country_flag = yijiuxian
+		set_country_flag = kaiqizhuxian
+	}
+}
+shared_focus = {
+	id = TES.45
+	icon = GFX_focus_generic_Melee_Weapons
+	cost = 12
+	prerequisite = {
+		focus = TES.20
+		focus = TES.19
+	}
+	mutually_exclusive = {
+		
+	}
+	offset = {
+		trigger = {
+			has_country_flag = heyaojinghezuo
+		}
+		x = 0
+		y = -2
+	}
+	x = 8
+	y = 11
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 400
+			OR = {
+				NOT = {
+					country_exists = CCA
+				}
+				CCA = {
+					is_puppet = yes
+				}
+			}
+		}
+	}
+	completion_reward = {
+		PO_add3 = yes
+		add_tech_bonus = {
+			category = primary_weapons
+			ahead_reduction = 1.5
+			uses = 1
+			bonus = 1
+		}
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.75
+			uses = 1
+			category = land_doctrine
+		}
+		army_experience = 30
+		custom_effect_tooltip = TES.45_xiaoguo_tishi_1
+		effect_tooltip = {
+			TES_yuki = {
+				add_attack = 2
+				add_planning = 1
+			}
+			TES_tes = {
+				add_skill_level = 1
+				add_attack = 2
+				add_defense = 1
+				add_logistics = 1
+				add_planning = 1
+			}
+		}
+		custom_effect_tooltip = TES.45_xiaoguo_tishi_2
+		effect_tooltip = {
+			TES_mai = {
+				add_defense = 2
+				add_logistics = 1
+			}
+			TES_tes = {
+				add_skill_level = 1
+				add_attack = 1
+				add_defense = 2
+				add_logistics = 1
+				add_planning = 1
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = TES.27
+				}
+				TES_yuki = {
+					add_attack = 2
+					add_planning = 1
+				}
+				TES_tes = {
+					add_skill_level = 1
+					add_attack = 2
+					add_defense = 1
+					add_logistics = 1
+					add_planning = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = TES.28
+				}
+				TES_mai = {
+					add_defense = 2
+					add_logistics = 1
+				}
+				TES_tes = {
+					add_skill_level = 1
+					add_attack = 1
+					add_defense = 2
+					add_logistics = 1
+					add_planning = 1
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.46
+	icon = GFX_focus_TES_gongyezhanlue
+	cost = 2
+	available = {
+		
+	}
+	prerequisite = {
+		
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 20
+	y = 1
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+	}
+	completion_reward = {
+		add_political_power = 50
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.47
+	icon = GFX_focus_TES_bentuzhanlue
+	cost = 7
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES.47_tishi
+			NOT = {
+				has_country_flag = TES_xuanzedaolu
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.46
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 15
+	y = 2
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		add_ideas = TES_zhuzhong_bentu_idea
+		set_country_flag = TES_xuanzedaolu
+	}
+}
+shared_focus = {
+	id = TES.48
+	icon = GFX_focus_TES_kuojiantiangong
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.47
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 13
+	y = 3
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		49 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.49
+	icon = GFX_focus_TES_tiangongsholeichang
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.48
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 12
+	y = 4
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		49 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+			}
+		}
+		add_resource = {
+			type = gas
+			amount = 10
+			state = 49
+		}
+	}
+}
+shared_focus = {
+	id = TES.50
+	icon = GFX_focus_TES_fangxinggongyuqu
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.48
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 14
+	y = 4
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		14 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.51
+	icon = GFX_focus_TES_tiangongyoudingtiandaolv
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.50
+	}
+	prerequisite = {
+		focus = TES.49
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 13
+	y = 5
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		build_railway = {
+			level = 2
+			path = { 1641 151 1124 1509 1660 }
+		}
+	}
+}
+shared_focus = {
+	id = TES.52
+	icon = GFX_focus_TES_yongjiangjungongchanng
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.47
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 17
+	y = 3
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		13 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.53
+	icon = GFX_focus_generic_Artillery_Weapons
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.52
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 16
+	y = 4
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			category = artillery_tech
+			uses = 2
+			bonus = 2
+			ahead_reduction = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.54
+	icon = GFX_focus_TES_gaishangdianlisheshi
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.52
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 18
+	y = 4
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		13 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.55
+	icon = GFX_focus_TES_feiliaohuisho
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.53
+	}
+	prerequisite = {
+		focus = TES.54
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 17
+	y = 5
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		add_resource = {
+			type = metal
+			amount = 10
+			state = 13
+		}
+	}
+}
+shared_focus = {
+	id = TES.56
+	icon = GFX_focus_TES_tianjieleyuan
+	cost = 14
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.51
+	}
+	prerequisite = {
+		focus = TES.55
+	}
+	mutually_exclusive = {
+	
+	}
+
+	x = 15
+	y = 6
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		add_ideas = TES_tianjieleyuan_idea
+		remove_ideas = TES_zhuzhong_bentu_idea
+		custom_effect_tooltip = TES_56_jueyi
+		clr_country_flag = TES_xuanzedaolu
+	}
+}
+shared_focus = {
+	id = TES.57
+	icon = GFX_focus_TES_daolianzhanlue
+	cost = 7
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = TES.57_tishi
+			NOT = {
+				has_country_flag = TES_xuanzedaolu
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.46
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 25
+	y = 2
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		add_ideas = TES_zhuzhong_daoyu_idea
+		set_country_flag = TES_xuanzedaolu
+	}
+}
+shared_focus = {
+	id = TES.58
+	icon = GFX_focus_TES_shenghuajieko
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.57
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 23
+	y = 3
+	allow_branch = {
+		
+	}
+	completion_reward = {
+		95 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 6458
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 1496
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 1102
+				instant_build = yes
+			}
+		}
+		68 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 2099
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.59
+	icon = GFX_focus_TES_shenghuafangxian
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.58
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 22
+	y = 4
+	completion_reward = {
+		95 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 6458
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 1496
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 1102
+				instant_build = yes
+			}
+		}
+		68 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 2099
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.60
+	icon = GFX_focus_TES_jingshenzhexinkecheng
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.58
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 24
+	y = 4
+	completion_reward = {
+		add_ideas = TES_xinkecheng_idea
+	}
+}
+shared_focus = {
+	id = TES.61
+	icon = GFX_focus_TES_xuanyunhai
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.57
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 27
+	y = 3
+	completion_reward = {
+		if = {
+			limit = {
+				country_exists = IKU
+			}
+			IKU = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = TEG 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 2
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = OTG 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 2
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = MRY 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 2
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = TEG 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 2
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = OTG 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 2
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = MRY 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 2
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.62
+	icon = GFX_focus_TES_tiannvgongzuo
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.61
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 26
+	y = 4
+	completion_reward = {
+		add_ideas = TES_xingongzuo_idea
+	}
+}
+shared_focus = {
+	id = TES.63
+	icon = GFX_focus_TES_xuanyunfangxian
+	cost = 7
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.61
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 28
+	y = 4
+	completion_reward = {
+		if = {
+			limit = {
+				country_exists = IKU
+			}
+			IKU = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = TEG 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 5
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = OTG 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 5
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = MRY 
+						}
+					}
+					add_building_construction = {
+					  type = bunker
+					  level = 5
+					  instant_build = yes
+					  province = {
+						  all_provinces = yes
+						  limit_to_border = yes
+					  }
+				  }
+				}
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = TEG 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 5
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = OTG 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 5
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = MRY 
+					}
+				}
+				add_building_construction = {
+				  type = bunker
+				  level = 5
+				  instant_build = yes
+				  province = {
+					  all_provinces = yes
+					  limit_to_border = yes
+				  }
+			  }
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.64
+	icon = GFX_focus_TES_gongchang
+	cost = 5
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.59
+	}
+	prerequisite = {
+		focus = TES.60
+	}
+	prerequisite = {
+		focus = TES.62
+	}
+	prerequisite = {
+		focus = TES.63
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 25
+	y = 5
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.65
+	icon = GFX_focus_TES_buchendeqianxian
+	cost = 14
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.64
+	}
+	mutually_exclusive = {
+		
+	}
+
+	x = 25
+	y = 6
+	completion_reward = {
+		remove_ideas = TES_zhuzhong_daoyu_idea
+		add_ideas = TES_bucheng_fangxian_idea
+		clr_country_flag = TES_xuanzedaolu
+	}
+}
+shared_focus = {
+	id = TES.66
+	icon = GFX_focus_TES_liren
+	cost = 12
+	available = {
+		has_idea = TES_xuedezhanshu
+	}
+	prerequisite = {
+		
+	}
+	mutually_exclusive = {
+		focus = TES.67
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+	}
+	x = 13
+	y = 8
+	completion_reward = {
+		army_experience = 30
+	}
+}
+shared_focus = {
+	id = TES.67
+	icon = GFX_focus_TES_jiandun
+	cost = 12
+	available = {
+		has_idea = TES_wudezhanshu
+	}
+	prerequisite = {
+		
+	}
+	mutually_exclusive = {
+		focus = TES.66
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+	}
+	x = 27
+	y = 8
+	completion_reward = {
+		army_experience = 30
+	}
+}
+shared_focus = {
+	id = TES.68
+	icon = GFX_focus_TES_molijianren
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.66
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 13
+	y = 9
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_xuedezhanshu
+			add_idea = TES_molijianren_1
+		}
+	}
+}
+shared_focus = {
+	id = TES.69
+	icon = GFX_focus_TES_xunzhaopozhan
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.68
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 13
+	y = 10
+	completion_reward = {
+		custom_effect_tooltip = TES.69_xiaoguo
+	}
+}
+shared_focus = {
+	id = TES.70
+	icon = GFX_focus_TES_xunsuchuqiao
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.69
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 13
+	y = 11
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_molijianren_1
+			add_idea = TES_molijianren_2
+		}
+	}
+}
+shared_focus = {
+	id = TES.71
+	icon = GFX_focus_TES_xue
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.70
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 13
+	y = 12
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_molijianren_2
+			add_idea = TES_molijianren_3
+		}
+	}
+}
+shared_focus = {
+	id = TES.72
+	icon = GFX_focus_TES_zaicikuobianweidui
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.66
+		focus = TES.67
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 23
+	y = 9
+	completion_reward = {
+		army_experience = 30
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.50
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = TES.73
+	icon = GFX_focus_TES_tianjiekeyansuo
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.66
+		focus = TES.67
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 17
+	y = 9
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+shared_focus = {
+	id = TES.74
+	icon = GFX_focus_TES_gaijingbentuwuqi
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.73
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 16
+	y = 10
+	completion_reward = {
+		add_tech_bonus = {
+			category = primary_weapons 
+			ahead_reduction = 1
+			bonus = 1
+			uses = 2
+		}
+	}
+}
+shared_focus = {
+	id = TES.75
+	icon = GFX_focus_TES_fangzhiwailaiwuqi
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.73
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 18
+	y = 10
+	completion_reward = {
+		add_tech_bonus = {
+			category = artillery_tech
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 2
+		}
+	}
+}
+shared_focus = {
+	id = TES.76
+	icon = GFX_focus_TES_jishutupo
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.75
+	}
+	prerequisite = {
+		focus = TES.74
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 17
+	y = 11
+	completion_reward = {
+		add_tech_bonus = {
+			category = heavy
+			ahead_reduction = 2
+			bonus = 2.0
+			uses = 1
+		}
+		add_ideas = TES_jishutupo
+	}
+}
+shared_focus = {
+	id = TES.77
+	icon = GFX_focus_TES_zujianhongzhaxiaodui
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.72
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 22
+	y = 10
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_idea = TES_feixingxiaodui_2
+				}
+			}
+			add_ideas = TES_feixingxiaodui_1
+		}
+		else_if = {
+			limit = {
+				has_idea = TES_feixingxiaodui_2
+			}
+			swap_ideas = {
+				remove_idea = TES_feixingxiaodui_2
+				add_idea = TES_feixingxiaodui_3
+			}
+		}
+		air_experience = 20
+		add_tech_bonus = {
+			category = bomber
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.78
+	icon = GFX_focus_TES_zujianfeixingxiaodui
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.72
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 24
+	y = 10
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_idea = TES_feixingxiaodui_1
+				}
+			}
+			add_ideas = TES_feixingxiaodui_2
+		}
+		else_if = {
+			limit = {
+				has_idea = TES_feixingxiaodui_1
+			}
+			swap_ideas = {
+				remove_idea = TES_feixingxiaodui_1
+				add_idea = TES_feixingxiaodui_3
+			}
+		}
+		air_experience = 20
+		add_tech_bonus = {
+			category = fighter
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.79
+	icon = GFX_focus_TES_molishibing
+	cost = 6
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.77
+	}
+	prerequisite = {
+		focus = TES.78
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 23
+	y = 11
+	completion_reward = {
+		add_ideas = TES_moli_shibing
+	}
+}
+shared_focus = {
+	id = TES.80
+	icon = GFX_focus_generic_spirit_power_research
+	cost = 12
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.79
+	}
+	prerequisite = {
+		focus = TES.76
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 20
+	y = 12
+	completion_reward = {
+		add_political_power = -150
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			ahead_reduction = 1
+			category = magic
+		}
+	}
+}
+shared_focus = {
+	id = TES.81
+	icon = GFX_focus_TES_renxingcailiao
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.67
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 27
+	y = 9
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_wudezhanshu
+			add_idea = TES_jiandun_1
+		}
+	}
+}
+shared_focus = {
+	id = TES.82
+	icon = GFX_focus_TES_bailianchenggang
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.81
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 27
+	y = 10
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_jiandun_1
+			add_idea = TES_jiandun_2
+		}
+	}
+}
+shared_focus = {
+	id = TES.83
+	icon = GFX_focus_TES_xianfazhiren
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.82
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 27
+	y = 11
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_jiandun_2
+			add_idea = TES_jiandun_3
+		}
+	}
+}
+shared_focus = {
+	id = TES.84
+	icon = GFX_focus_TES_wu
+	cost = 8
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.83
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 27
+	y = 12
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = TES_jiandun_3
+			add_idea = TES_jiandun_4
+		}
+	}
+}
+shared_focus = {#绯想之剑
+	id = TES.85
+	icon = GFX_focus_TES_feixianzhijian
+	cost = 14
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.80
+	}
+	prerequisite = {
+		focus = TES.71
+		focus = TES.84
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+		has_government = neworder
+		has_idea = TES_xuedezhanshu
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 20
+	y = 13
+	completion_reward = {
+		custom_effect_tooltip = TES.85_xiaoguo
+		add_ideas = TES_feixiangzhijian
+	}
+}
+shared_focus = {#要石
+	id = TES.86
+	icon = GFX_focus_TES_yaoshi
+	cost = 14
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.80
+	}
+	prerequisite = {
+		focus = TES.71
+		focus = TES.84
+	}
+	offset = {
+		trigger = {
+			has_government = neworder
+			has_idea = TES_wudezhanshu
+		}
+		x = -1
+		y = 0
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+		has_government = neworder
+		has_idea = TES_wudezhanshu
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 21
+	y = 13
+	completion_reward = {
+		add_ideas = TES_yaoshi
+	}
+}
+shared_focus = {#龙神之怒
+	id = TES.87
+	icon = GFX_focus_TES_longshenzhinu
+	cost = 14
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.80
+	}
+	prerequisite = {
+		focus = TES.71
+		focus = TES.84
+	}
+	offset = {
+		trigger = {
+			has_government = qinwai
+		}
+		x = -2
+		y = 0
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+	    has_government = qinwai
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 22
+	y = 13
+	completion_reward = {
+		add_ideas = TES_longshenzhinu
+	}
+}
+shared_focus = {#解开天人的枷锁
+	id = TES.88
+	icon = GFX_focus_TES_jiekaitianrendejiasuo
+	cost = 14
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.80
+	}
+	prerequisite = {
+		focus = TES.71
+		focus = TES.84
+	}
+	offset = {
+		trigger = {
+			has_government = guli
+		}
+		x = 1
+		y = 0
+	}
+	allow_branch = {
+		has_country_flag = kaiqizhuxian
+		has_government = guli
+	}
+	mutually_exclusive = {
+		
+	}
+	x = 19
+	y = 13
+	completion_reward = {
+		add_ideas = TES_jiekaitianren_jiasuo_1
+		custom_effect_tooltip = TES.88_xiaoguo
+		hidden_effect = {
+			country_event = {
+				id = ten.18
+				days = 365
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.89
+	icon = GFX_focus_TES_lisuoyindang
+	cost = 5
+	x = 42
+	y = 1
+	available = {
+
+	}
+	prerequisite = {
+		
+	}
+	mutually_exclusive = {
+		
+	}
+	allow_branch = {
+		has_country_flag = tianzixian
+	}
+	completion_reward = { 
+
+	}
+}
+shared_focus = {
+	id = TES.90
+	icon = GFX_focus_TES_liniandewenti
+	cost = 5
+	x = 42
+	y = 2
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.89
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = TES.91
+	icon = GFX_focus_TES_yiweixinrendejiaru
+	cost = 5
+	x = 40
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.90
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.91_xiaoguo
+		hidden_effect = {
+			XXX = {
+				TES_singyoku =  {
+					set_nationality = ROOT
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.92
+	icon = GFX_focus_TES_ziyuandejianyi
+	cost = 5
+	x = 42
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.90
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = TES.93
+	icon = GFX_focus_TES_qiutongcunyi
+	cost = 5
+	x = 44
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.90
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.10
+		}
+		add_stability = 0.151
+	}
+}
+shared_focus = {
+	id = TES.94
+	icon = GFX_focus_TES_zuichudeliniang
+	cost = 5
+	x = 42
+	y = 4
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.91
+	}
+	prerequisite = {
+		focus = TES.92
+	}
+	prerequisite = {
+		focus = TES.93
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ruler_traits = {
+			remove = gaoguidetianren_3
+			add = gaoguidetianren_4
+		}
+		add_dynamic_modifier = { modifier = gerongchongbai_dy } 
+		add_to_variable = {
+			TES_chongbai_du = 50
+		}
+		clamp_variable = { var = TES_chongbai_du min = 0 max = 100 }
+		custom_effect_tooltip = TES.94_jueyi
+	}
+}
+shared_focus = {
+	id = TES.95
+	icon = GFX_focus_TES_chulitiantingcanyushili
+	cost = 5
+	x = 34
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.94
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		country_event = {
+			id = ten.58
+			days = 2
+		}
+		add_political_power = 150
+	}
+}
+shared_focus = {
+	id = TES.97
+	icon = GFX_focus_TES_longluorenxin
+	cost = 5
+	x = 33
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.95
+	}
+	mutually_exclusive = {
+		focus = TES.98
+	}
+	completion_reward = { 
+		remove_ideas = TES_tianting_yunie_idea
+		add_timed_idea = { idea = TES_tianting_yunie_idea days = 80 }
+	}
+}
+shared_focus = {
+	id = TES.98
+	icon = GFX_focus_TES_buliuhuolu
+	cost = 5
+	x = 35
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.95
+	}
+	mutually_exclusive = {
+		focus = TES.97
+	}
+	completion_reward = { 
+		remove_ideas = TES_tianting_yunie_idea
+		add_stability = -0.05
+		add_political_power = -15
+		add_timed_idea = { idea = TES_tianting_yunie_idea days = 40 }
+	}
+}
+shared_focus = {
+	id = TES.99
+	icon = GFX_focus_TES_chongguipingjing
+	cost = 5
+	x = 34
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.97
+		focus = TES.98
+	}
+	mutually_exclusive = {
+	
+	}
+	completion_reward = { 
+		add_ideas = TES_pingjingeryouxianghedetianjie
+	}
+}
+shared_focus = {
+	id = TES.100
+	icon = GFX_focus_TES_lisuoyindang
+	cost = 5
+	x = 42
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.94
+	}
+	mutually_exclusive = {
+	
+	}
+	completion_reward = { 
+		create_faction = "帝国公约"
+	}
+}
+shared_focus = {
+	id = TES.101
+	icon = GFX_focus_TES_womengdelaopengyou
+	cost = 5
+	x = 39
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.100
+	}
+	mutually_exclusive = {
+		focus = TES.102
+	}
+	completion_reward = { 
+		OTG = {
+			country_event = { id = ten.20 days = 2}
+		}
+	}
+}
+shared_focus = {
+	id = TES.102
+	icon = GFX_focus_TES_xindemengyou
+	cost = 5
+	x = 45
+	y = 6
+	available = {
+		NOT = {
+			has_country_flag = tianmohuzhu
+		}
+	}
+	prerequisite = {
+		focus = TES.100
+	}
+	mutually_exclusive = {
+		focus = TES.101
+	}
+	completion_reward = { 
+		MRY = {
+			country_event =  ten.21
+		}
+	}
+}
+shared_focus = {
+	id = TES.103
+	icon = GFX_focus_TES_zhongjiegonghe
+	cost = 5
+	x = 42
+	y = 7
+	available = {
+		TEG = {
+			before_declare_war = yes
+		}
+	}
+	bypass = {
+		TEG = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.101
+		focus = TES.102
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = TEG
+		}
+	}
+}
+shared_focus = {
+	id = TES.104
+	icon = GFX_focus_TES_duoquxinyang
+	cost = 5
+	x = 39
+	y = 7
+	available = {
+		MRY = {
+			before_declare_war = yes
+		}
+	}
+	bypass = {
+		MRY = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.101
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = MRY
+		}
+	}
+}
+shared_focus = {
+	id = TES.105
+	icon = GFX_focus_TES_dihuozhimie
+	cost = 5
+	x = 45
+	y = 7
+	available = {
+		OTG = {
+			before_declare_war = yes
+		}
+	}
+	bypass = {
+		OTG = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.102
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = OTG
+		}
+	}
+}
+shared_focus = {
+	id = TES.107
+	icon = GFX_focus_TES_tianjiedezhongzu
+	cost = 5
+	x = 50
+	y = 5
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.94
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_sanzuzhuyi
+	}
+}
+shared_focus = {
+	id = TES.108
+	icon = GFX_focus_TES_zuihaodepengyou
+	cost = 5
+	x = 48
+	y = 6
+	available = {
+		has_idea = TES_sanzuzhuyi
+	}
+	prerequisite = {
+		focus = TES.107
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ideas = {
+			add_idea = TES_sanzuzhuyi_1
+			remove_idea = TES_sanzuzhuyi
+		}
+	}
+}
+shared_focus = {
+	id = TES.109
+	icon = GFX_focus_TES_wozijilai
+	cost = 5
+	x = 50
+	y = 6
+	available = {
+		has_idea = TES_sanzuzhuyi_1
+	}
+	prerequisite = {
+		focus = TES.107
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ideas = {
+			add_idea = TES_sanzuzhuyi_2
+			remove_idea = TES_sanzuzhuyi_1
+		}
+	}
+}
+shared_focus = {
+	id = TES.110
+	icon = GFX_focus_TES_tianvhuzhu
+	cost = 5
+	x = 52
+	y = 6
+	available = {
+		has_idea = TES_sanzuzhuyi_2
+	}
+	prerequisite = {
+		focus = TES.107
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ideas = {
+			add_idea = TES_sanzuzhuyi_3
+			remove_idea = TES_sanzuzhuyi_2
+		}
+	}
+}
+shared_focus = {
+	id = TES.111
+	icon = GFX_focus_TES_xietongfazhan
+	cost = 5
+	x = 50
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.108
+	}
+	prerequisite = {
+		focus = TES.109
+	}
+	prerequisite = {
+		focus = TES.110
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ideas = {
+			add_idea = TES_sanzuzhuyi_4
+			remove_idea = TES_sanzuzhuyi_3
+		}
+	}
+}
+shared_focus = {
+	id = TES.112
+	icon = GFX_focus_TES_zhenzhengdetianjiezhizhu
+	cost = 5
+	x = 42
+	y = 9
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.99
+	}
+	prerequisite = {
+		focus = TES.111
+	}
+	prerequisite = {
+		focus = TES.104
+		focus = TES.105
+		focus = TES.103
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		set_cosmetic_tag = TES_empire
+	}
+}
+shared_focus = {
+	id = TES.113
+	icon = GFX_focus_TES_qudezaidiyudetiaoban
+	cost = 5
+	x = 37
+	y = 10
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.112
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		every_country = {
+			limit = {
+				controls_state = 456
+			}
+			country_event = { id = ten.23 days = 2 }
+		}
+	}
+}
+shared_focus = {
+	id = TES.114
+	icon = GFX_focus_TES_yudilingdianjiechu
+	cost = 5
+	x = 35
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.113
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_opinion_modifier = {
+			target = SAT modifier = jiemeng_TES
+		}
+		SAT = {
+			add_opinion_modifier = {
+				target = TES modifier = jiemeng_TES
+			}
+			can_use = yes
+			ROOT = {
+				can_use = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.115
+	icon = GFX_focus_SAT_deal_with_yuyuko
+	cost = 5
+	x = 39
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.113
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_opinion_modifier = {
+			target = YYK modifier = jiemeng_TES
+		}
+		YYK = {
+			add_opinion_modifier = {
+				target = TES modifier = jiemeng_TES
+			}
+			can_use = yes
+			ROOT = {
+				can_use = yes
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.116
+	icon = GFX_focus_TES_yitongguafengdiyu
+	cost = 5
+	x = 39
+	y = 12
+	available = {
+		OR = {
+	    	YYK = {
+				has_completed_focus = YYK_weiUUZ
+			}
+			YYK = {
+				has_completed_focus = YYK_xuanbutuolidiyu
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.115
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		set_country_flag = TES_YYK_mengyue
+		add_to_faction = YYK
+		hidden_effect = {
+			YYK = {
+				declare_war_on = {
+					type = annex_everything
+					target = HUB
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = AOO
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = AKO
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = CLO
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = HGH
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = SKI
+				}
+			}
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = HUB
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = AOO
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = AKO
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = CLO
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = HGH
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = SKI
+		}
+		
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			has_war = yes
+			factor = -100
+		}
+	}
+}
+shared_focus = {
+	id = TES.117
+	icon = GFX_focus_Komeiji_Satori_Treaty
+	cost = 5
+	x = 35
+	y = 12
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.114
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		SAT = {
+			jiemeng = yes
+		}
+	}
+}
+shared_focus = {
+	id = TES.118
+	icon = GFX_focus_TES_duochuchushenjie
+	cost = 5
+	x = 37
+	y = 12
+	available = {
+		OR = {
+			SAK = {
+				before_declare_war = yes
+			}
+			KEK = {
+				before_declare_war = yes
+			}
+			GYK = {
+				before_declare_war = yes
+			}
+			YCE = {
+				before_declare_war = yes
+			}
+		}	
+	}
+	bypass = {
+			SAK = {
+				bypass_declare_war = yes
+			}
+			KEK = {
+				bypass_declare_war = yes
+			}
+			GYK = {
+				bypass_declare_war = yes
+			}
+			YCE = {
+				bypass_declare_war = yes
+			}
+	}
+	prerequisite = {
+		focus = TES.114
+		focus = TES.115
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = SAK
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = KEK
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = GYK
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = YCE
+		}
+	}
+}
+shared_focus = {
+	id = TES.119
+	icon = GFX_focus_YYK_invade_Sanzu_River
+	cost = 5
+	x = 37
+	y = 13
+	available = {
+		always = yes
+	}
+	prerequisite = {
+		focus = TES.118
+	}
+	bypass = {
+		always = yes
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = URM
+		}
+	}
+}
+shared_focus = {
+	id = TES.120
+	icon = GFX_focus_TES_sandashililianhe
+	cost = 5
+	x = 47
+	y = 10
+	available = {
+
+	}
+	bypass = {
+		SCA = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.112
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		SCA = {
+			country_event = ten.31
+		}
+	}
+}
+shared_focus = {
+	id = TES.121
+	icon = GFX_focus_ITA_subdue_the_sentinels
+	cost = 5
+	x = 47
+	y = 11
+	available = {
+		OR = {
+			KAS = {
+				before_declare_war = yes
+			}
+			AKI = {
+				before_declare_war = yes
+			}
+		}	
+	}
+	bypass = {
+		KAS = {
+			bypass_declare_war = yes
+		}
+		AKI = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.120
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = KAS
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = AKI
+		}
+	}
+}
+shared_focus = {
+	id = TES.122
+	icon = GFX_focus_TES_hohuayuanzhimeng
+	cost = 5
+	x = 47
+	y = 12
+	available = {
+		OR = {
+			MEL = {
+				before_declare_war = yes
+			}
+			SGS = {
+				before_declare_war = yes
+			}
+			YUK = {
+				before_declare_war = yes
+			}
+		}	
+	}
+	prerequisite = {
+		focus = TES.121
+	}
+	bypass = {
+		MEL = {
+			bypass_declare_war = yes
+			}
+		SGS = {
+			bypass_declare_war = yes
+		}
+		YUK = {
+			bypass_declare_war = yes
+		}
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = MEL
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = SGS
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = YUK
+		}
+	}
+}
+shared_focus = {
+	id = TES.123
+	icon = GFX_focus_TES_datongzhongyouzhidao
+	cost = 5
+	x = 47
+	y = 13
+	available = {
+		ZYD = {
+			before_declare_war = yes
+		}
+	}
+	bypass = {
+		ZYD = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.122
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = ZYD
+		}
+	}
+}
+shared_focus = {
+	id = TES.124
+	icon = GFX_focus_TES_xiangyaojingkaifangminge
+	cost = 5
+	x = 49
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.120
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_xiangyaojingkaifeng
+	}
+}
+shared_focus = {
+	id = TES.125
+	icon = GFX_focus_TES_yaojingjuntuan
+	cost = 5
+	x = 49
+	y = 12
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.124
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = TES_xiangyaojingkaifeng
+			add_idea = TES_yaojinjuntuan
+		}
+	}
+}
+shared_focus = {
+	id = TES.126
+	icon = GFX_focus_TES_hetongdejishu
+	cost = 5
+	x = 45
+	y = 12
+	available = {
+		NTR = {
+			all_core_state = {
+				owner = {
+					or = {
+						tag = TES
+						is_subject_of = TES
+						is_in_faction_with = TES
+					}
+				}
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.121
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_hetongdejishu
+	}
+}
+shared_focus = {
+	id = TES.127
+	icon = GFX_focus_TES_wozijilai
+	cost = 5
+	x = 42
+	y = 15
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.134
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		country_event = {
+			id = ten.57
+			days = 2
+		}
+		swap_ruler_traits = {
+			remove = gaoguidetianren_4
+			add = gaoguidetianren_5
+		}
+	}
+}
+shared_focus = {
+	id = TES.128
+	icon = GFX_focus_SCA_jianliyaojingjiandiewang
+	cost = 5
+	x = 55
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.94
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		create_intelligence_agency = yes
+	}
+}
+shared_focus = {
+	id = TES.129
+	icon = GFX_focus_TES_guojiabaoanzongbu
+	cost = 5
+	x = 55
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.128
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_guojiaanquanbaoweibu
+	}
+}
+shared_focus = {
+	id = TES.130
+	icon = GFX_focus_TES_quanweibeiho
+	cost = 5
+	x = 54
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.129
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_to_variable = {
+			TES_chongbai_du = 10 
+		}
+		custom_effect_tooltip = weirenguanyuanxuannchuang_tt
+		swap_ideas = {
+			remove_idea = TES_guojiaanquanbaoweibu
+			add_idea = TES_guojiaanquanbaoweibu_2
+		}
+	}
+}
+shared_focus = {
+	id = TES.131
+	icon = GFX_focus_TES_kuobianweidui
+	cost = 5
+	x = 56
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.129
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+		   random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+		   random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+		   random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+		   random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+		   random_owned_controlled_state = {
+			prioritize = { 62 }
+				create_unit = {
+				   division = "division_template = \"天人安全卫队\" start_experience_factor = 0.9 start_equipment_factor = 1"
+				owner = TES
+				 prioritize_location = 1641
+				 allow_spawning_on_enemy_provs = yes 
+				}
+		   }
+	}
+}
+shared_focus = {
+	id = TES.132
+	icon = GFX_focus_TES_xuanchengtianwang
+	cost = 5
+	x = 55
+	y = 8
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.130
+	}
+	prerequisite = {
+		focus = TES.131
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_to_variable = {
+			TES_chongbai_du = 10 
+		}
+		custom_effect_tooltip = weirenguanyuanxuannchuang_tt
+		add_to_variable = {
+			TES_chongbai_du = 10 
+		}
+		custom_effect_tooltip = weirenguanyuanxuannchuang_tt
+	}
+}
+shared_focus = {
+	id = TES.133
+	icon = GFX_focus_TES_jingjiqiji
+	cost = 12
+	x = 20
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.56
+	}
+	prerequisite = {
+		focus = TES.65
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_jingjiqiji
+	}
+}
+shared_focus = {
+	id = TES.134
+	icon = GFX_focus_generic_court
+	cost = 5
+	x = 42
+	y = 14
+	available = {
+		OKI = {
+			before_declare_war = yes
+		}
+	}
+	bypass = {
+		OKI = {
+			bypass_declare_war = yes
+		}
+	}
+	prerequisite = {
+		focus = TES.119
+	}
+	prerequisite = {
+		focus = TES.123
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		declare_war_on = {
+			type = annex_everything
+			target = OKI
+		}
+	}
+}
+shared_focus = {
+	id = TES.135
+	icon = GFX_focus_TES_zoxiangfangrong
+	cost = 5
+	x = 42
+	y = 1
+	available = {
+
+	}
+	prerequisite = {
+		
+	}
+	mutually_exclusive = {
+		
+	}
+	allow_branch = {
+		has_country_flag = yijiuxian
+	}
+	completion_reward = { 
+
+	}
+}
+shared_focus = {
+	id = TES.136
+	icon = GFX_focus_TES_xinhangxiandeqidian
+	cost = 5
+	x = 42
+	y = 2
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.135
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_political_power = 100
+		add_ideas = TES_hepingzhuyi_3
+		set_country_flag = yijiuxian
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.1			
+		}	
+	}
+}
+shared_focus = {
+	id = TES.137
+	icon = GFX_focus_TES_chulilinianbutongzhe
+	cost = 5
+	x = 39
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.136
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_timed_idea = { idea = chulilinianutongzhe days = 180 }
+	}
+}
+shared_focus = {
+	id = TES.138
+	icon = GFX_focus_TES_anfujijingpai
+	cost = 5
+	x = 37
+	y = 4
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.137
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_popularity = {
+			ideology = neworder
+			popularity = -0.1			
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		lobbydecrease = yes
+	}
+}
+shared_focus = {
+	id = TES.139
+	icon = GFX_focus_TES_tianzizazijiaoyu
+	cost = 5
+	x = 37
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.138
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		country_event = {
+			id = ten.50
+			days = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.140
+	icon = GFX_focus_TES_jiaohualaoguangu
+	cost = 5
+	x = 41
+	y = 4
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.137
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_popularity = {
+			ideology = oldgenso
+			popularity = -0.1			
+		}
+		swap_ideas = {
+			remove_idea = TES_tianting_qianzhi_idea
+			add_idea = TES_tianting_qianzhi_idea_2
+		}
+	}
+}
+shared_focus = {
+	id = TES.141
+	icon = GFX_focus_TES_tiantinyihui
+	cost = 5
+	x = 41
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.140
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		remove_ideas = TES_tianting_qianzhi_idea_2
+		add_ideas = TES_tianting_qianzhi_idea_3
+		conservativeincrease = yes
+	}
+}
+shared_focus = {
+	id = TES.142
+	icon = GFX_focus_TES_tianjianxianfa
+	cost = 5
+	x = 39
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.139
+	}
+	prerequisite = {
+		focus = TES.141
+	}
+	mutually_exclusive = {
+		focus = TES.148
+	}
+	completion_reward = { 
+		add_political_power = -100
+		hepingzhuyi_shang = yes
+		add_ideas = TES_tianjianxianfa_idea
+		every_country = {
+			limit = {
+					is_puppet_of = TES
+				}
+			add_ideas = TES_tianjianxianfa_idea
+		}
+	}
+
+}
+shared_focus = {
+	id = TES.143
+	icon = GFX_focus_TES_zhongzujiaoliuhui
+	cost = 5
+	x = 45
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.136
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.143_jueyi
+		add_political_power = -100
+		set_variable = {
+			tianren_guanxi = 4
+		}
+		set_variable = {
+			tianren_shili = 4
+		}
+		set_variable = {
+			tianjieyaoguai_guanxi = 4
+		}
+		set_variable = {
+			tianjieyaoguai_shili = 3
+		}
+		set_variable = {
+			yaojing_guanxi = 2
+		}
+		set_variable = {
+			yaojing_shili = 2
+		}
+		hidden_effect = {
+		add_dynamic_modifier = { modifier = tianren_dy } 
+		add_dynamic_modifier = { modifier = tianjieyaoguai_dy } 
+		add_dynamic_modifier = { modifier = yaojing_dy } 
+		}
+	}
+}
+shared_focus = {
+	id = TES.144
+	icon = GFX_focus_TES_xuanbugezupingdeng
+	cost = 5
+	x = 43
+	y = 4
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.143
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		country_event = ten.49
+		add_stability = 0.05
+		tianjieyaoguai_guanxi_shang = yes
+		yaojing_guanxi_shang = yes
+	}
+}
+shared_focus = {
+	id = TES.145
+	icon = GFX_focus_TES_zizhifaan
+	cost = 5
+	x = 43
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.144
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.145_jueyi
+		add_political_power = -100
+	}
+}
+shared_focus = {
+	id = TES.146
+	icon = GFX_focus_TES_xuanbugezupingdeng
+	cost = 5
+	x = 47
+	y = 4
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.143
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_gezupinngdeng_idea
+		tianjieyaoguai_guanxi_shang = yes
+		yaojing_guanxi_shang = yes
+	}
+}
+shared_focus = {
+	id = TES.147
+	icon = GFX_focus_TES_gongpinglaodongtiaoyue
+	cost = 5
+	x = 47
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.146
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_stability = -0.1  
+		tianren_shili_jiang = yes
+		add_ideas = TES_gongpinglaodongtiaoli_idea
+	}
+}
+shared_focus = {
+	id = TES.148
+	icon = GFX_focus_ETH_re-convene_the_parliament
+	cost = 5
+	x = 45
+	y = 6
+	available = {
+		has_stability > 0.5
+		custom_trigger_tooltip = {
+			check_variable = {
+				tianren_guanxi > 2
+			}
+			check_variable = {
+				tianjieyaoguai_guanxi > 2
+			}
+			check_variable = {
+				yaojing_guanxi > 2
+			}
+			tooltip = TES.148_tiaojian_2
+		}
+		custom_trigger_tooltip = {
+			check_variable = {
+				tianren_shili > 2
+			}
+			check_variable = {
+				tianjieyaoguai_shili > 2
+			}
+			check_variable = {
+				yaojing_shili > 2
+			}
+			tooltip = TES.148_tiaojian_1
+		}
+	}
+	prerequisite = {
+		focus = TES.145
+	}
+	prerequisite = {
+		focus = TES.147
+	}
+	mutually_exclusive = {
+		focus = TES.142
+	}
+	completion_reward = { 
+		tianren_guanxi_jiang = yes
+		tianren_shili_jiang = yes
+		hepingzhuyi_shang = yes
+		add_timed_idea = {
+			idea = TES_zhengfumoheqi_idea
+			days = 90
+		}
+		add_ideas = TES_gezulianhezhongfu_idea
+	}
+}
+shared_focus = {
+	id = TES.149
+	icon = GFX_focus_TES_tianjielianheti
+	cost = 5
+	x = 45
+	y = 8
+	available = {
+		NOT = {
+			has_idea = TES_zhengfumoheqi_idea
+		}
+		custom_trigger_tooltip = {
+			check_variable = {
+				tianren_guanxi > 3
+			}
+			check_variable = {
+				tianjieyaoguai_guanxi > 3
+			}
+			check_variable = {
+				yaojing_guanxi > 3
+			}
+			tooltip = TES.148_tiaojian_3
+		}
+		custom_trigger_tooltip = {
+			check_variable = {
+				tianren_shili > 2
+			}
+			check_variable = {
+				tianjieyaoguai_shili > 2
+			}
+			check_variable = {
+				yaojing_shili > 2
+			}
+			tooltip = TES.148_tiaojian_1
+		}
+	}
+	prerequisite = {
+		focus = TES.148
+	}
+	mutually_exclusive = {
+		focus = TES.150
+		focus = TES.151
+	}
+	completion_reward = { 
+		set_cosmetic_tag = TES_lianhe
+		remove_ideas = TES_gezupinngdeng_idea
+		remove_ideas = TES_gezulianhezhongfu_idea
+		remove_ideas = TES_gongpinglaodongtiaoli_idea
+		add_ideas = TES_zhenzhengdezhongzulianhe_idea
+	}
+}
+shared_focus = {
+	id = TES.150
+	icon = GFX_focus_TES_tianjiegongheguo
+	cost = 5
+	x = 42
+	y = 8
+	available = {
+		qinwai > 0.7
+		OR = {
+			has_idea = TES_hepingzhuyi_5
+			has_idea = TES_hepingzhuyi_6
+		}
+	}
+	prerequisite = {
+		focus = TES.142
+		focus = TES.148
+	}
+	mutually_exclusive = {
+		focus = TES.149
+		focus = TES.151
+	}
+	completion_reward = { 
+		set_cosmetic_tag = TES_gonghe
+		add_stability = 0.05
+		conservativeincrease = yes
+		add_ideas = TES_gongheyihui_idea
+		add_opinion_modifier = {
+			target = TEG modifier = gonghe_TES
+		}
+		TEG = {
+			add_opinion_modifier = {
+				target = TES modifier = gonghe_TES
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.151
+	icon = GFX_focus_TES_chongjianzhixu
+	cost = 5
+	x = 39
+	y = 8
+	available = {
+		custom_trigger_tooltip = {
+			check_variable = {
+				tianren_shili = 4
+			}
+			tooltip = TES.151_tiaojian_1
+		}
+	}
+	prerequisite = {
+		focus = TES.142
+	}
+	mutually_exclusive = {
+		focus = TES.150
+		focus = TES.149
+	}
+	completion_reward = { 
+		set_cosmetic_tag = TES_tianting
+		add_stability = 0.2
+		tianren_guanxi_shang = yes
+		add_ideas = TES_xuancehngtianting_idea
+	}
+}
+shared_focus = {
+	id = TES.152
+	icon = GFX_focus_TES_yaoguaishangwaijiao
+	cost = 5
+	x = 33
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.136
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = TES.153
+	icon = GFX_focus_TES_yushoshihezuo
+	cost = 5
+	x = 33
+	y = 4
+	available = {
+		NOT=  {
+			has_country_flag = heyaouaishanjiemeng
+			MRY = {
+				has_government = neworder
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.152
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		hidden_effect = {
+			MRY = {
+				country_event = ten.36
+			}
+		}
+		custom_effect_tooltip = TES.155_xiaoguo
+		effect_tooltip =  {
+			give_guarantee = MRY
+			give_military_access  = MRY
+			TES = {
+				MRY = {
+					give_guarantee = PREV
+					give_military_access  = PREV
+					jiemeng = yes
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.154
+	icon = GFX_focus_TES_xuanbubaohutianmo
+	cost = 5
+	x = 35
+	y = 4
+	available = {
+		NOT=  {
+			has_country_flag = heyaouaishanjiemeng
+		}
+	}
+	prerequisite = {
+		focus = TES.152
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		hidden_effect = {
+			OTG = {
+				country_event = ten.37
+			}
+		}
+		custom_effect_tooltip = TES.155_xiaoguo
+		effect_tooltip =  {
+			give_guarantee = OTG
+			give_military_access  = OTG
+			TES = {
+				OTG = {
+					give_guarantee = PREV
+					give_military_access  = PREV
+					jiemeng = yes
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.155
+	icon = GFX_focus_TES_zhchigonghe
+	cost = 5
+	x = 31
+	y = 4
+	available = {
+		NOT=  {
+			has_country_flag = tianmohuzhu
+			has_country_flag = heyaouaishanjiemeng
+			TEG = {
+				has_government = fandong
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.152
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		hidden_effect = {
+			TEG = {
+				country_event = ten.34
+			}
+		}
+		custom_effect_tooltip = TES.155_xiaoguo
+		effect_tooltip =  {
+			TES = {
+				give_guarantee = TEG
+				give_military_access  = TEG
+			}
+			TES = {
+				TEG = {
+					give_guarantee = PREV
+					give_military_access  = PREV
+					jiemeng = yes
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.156
+	icon = GFX_focus_TES_hexiehuzhutiaoyue
+	cost = 5
+	x = 33
+	y = 5
+	available = {
+		has_country_flag = heyaouaishanjiemeng
+	}
+	prerequisite = {
+		focus = TES.153
+		focus = TES.154
+		focus = TES.155
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		create_faction = "和谐互助条约"
+		if = {
+			limit = {
+				has_country_flag = TEG_jiemeng
+			}
+			add_to_faction = TEG
+			add_to_faction = NTR
+		}
+		if = {
+			limit = {
+				has_country_flag = MRY_jiemeng
+			}
+			add_to_faction = MRY
+		}
+		if = {
+			limit = {
+				has_country_flag = OTG_jiemeng
+			}
+			add_to_faction = OTG
+		}
+	}
+}
+shared_focus = {
+	id = TES.157
+	icon = GFX_focus_TES_gongtongjinbu
+	cost = 5
+	x = 33
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.156
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_ideas = TES_hexiehuhzu_1_idea
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = TES
+					is_puppet_of = TES
+				}
+				}
+			add_ideas = TES_hexiehuhzu_1_idea
+		}
+	}
+}
+shared_focus = {
+	id = TES.158
+	icon = GFX_focus_jap_manchurian_project
+	cost = 5
+	x = 33
+	y = 7
+	available = {
+		has_idea = TES_hexiehuhzu_2_idea
+	}
+	prerequisite = {
+		focus = TES.157
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = -100
+		swap_ideas = {
+			remove_idea = TES_hexiehuhzu_2_idea
+			add_idea = TES_hexiehuhzu_3_idea
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = TES
+					is_puppet_of = TES
+				}
+				}
+				swap_ideas = {
+					remove_idea = TES_hexiehuhzu_2_idea
+					add_idea = TES_hexiehuhzu_3_idea
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.159
+	icon = GFX_focus_spa_the_spanish_miracle
+	cost = 5
+	x = 35
+	y = 7
+	available = {
+		has_idea = TES_hexiehuhzu_3_idea
+	}
+	prerequisite = {
+		focus = TES.157
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = -100
+		swap_ideas = {
+			remove_idea = TES_hexiehuhzu_3_idea
+			add_idea = TES_hexiehuhzu_4_idea
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = TES
+					is_puppet_of = TES
+				}
+				}
+				swap_ideas = {
+					remove_idea = TES_hexiehuhzu_3_idea
+					add_idea = TES_hexiehuhzu_4_idea
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.160
+	icon = GFX_focus_hol_the_foundations_of_defense
+	cost = 5
+	x = 31
+	y = 7
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.157
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = TES_hexiehuhzu_1_idea
+			add_idea = TES_hexiehuhzu_2_idea
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = TES
+					is_puppet_of = TES
+				}
+				}
+				swap_ideas = {
+					remove_idea = TES_hexiehuhzu_1_idea
+					add_idea = TES_hexiehuhzu_2_idea
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.161
+	icon = GFX_focus_spr_torchbearers_of_tomorrow
+	cost = 5
+	x = 33
+	y = 8
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.159
+	}
+	prerequisite = {
+		focus = TES.158
+	}
+	prerequisite = {
+		focus = TES.160
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = TES_hexiehuhzu_4_idea
+			add_idea = TES_hexiehuhzu_5_idea
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_ally_with = TES
+					is_puppet_of = TES
+				}
+				}
+				swap_ideas = {
+					remove_idea = TES_hexiehuhzu_4_idea
+					add_idea = TES_hexiehuhzu_5_idea
+				}
+		}
+	}
+}
+shared_focus = {
+	id = TES.162
+	icon = GFX_focus_TES_longshendeyichang
+	cost = 5
+	x = 52
+	y = 3
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.136
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = -100
+		add_tech_bonus = {
+			category = industrys 
+			ahead_reduction = 1
+			bonus = 1
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = math
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = secret
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.163
+	icon = GFX_focus_generic_improve_the_administration
+	cost = 5
+	x = 52
+	y = 5
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.162
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_ideas = TES_longgongshi_1_idea
+	}
+}
+shared_focus = {
+	id = TES.164
+	icon = GFX_focus_generic_railway_gun
+	cost = 5
+	x = 52
+	y = 7
+	available = {
+		has_tech = lingganleida142
+	}
+	prerequisite = {
+		focus = TES.163
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_ideas = TES_longshenzhili_idea
+	}
+}
+shared_focus = {
+	id = TES.165
+	icon = GFX_focus_generic_self_propelled_gun
+	cost = 5
+	x = 52
+	y = 11
+	available = {
+	#	has_tech = core_shield1
+	}
+	prerequisite = {
+		focus = TES.164
+	}
+	prerequisite = {
+		focus = TES.180
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		division_template = {
+			name = "龙神近卫军团"
+			regiments = {
+				ma_infantry = { x = 0 y = 0 }
+				ma_infantry = { x = 0 y = 1 }
+				ma_infantry = { x = 0 y = 2 }
+				ma_infantry = { x = 0 y = 3 }
+				ma_infantry = { x = 0 y = 4 }
+				ma_shield_infantry = { x = 1 y = 1 }
+				ma_shield_infantry = { x = 1 y = 2 }
+				ma_shield_infantry = { x = 1 y = 0 }
+				ma_shield_infantry = { x = 1 y = 3 }
+				ma_shield_infantry = { x = 1 y = 4 }
+			}
+			support = {
+				sp_zhihuidui= { x = 0 y = 0 }
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 62 }
+			create_unit = {
+				division = "division_template = \"龙神近卫军团\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = TES
+				prioritize_location = 1641
+				allow_spawning_on_enemy_provs = no 
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 62 }
+			create_unit = {
+				division = "division_template = \"龙神近卫军团\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = TES
+				prioritize_location = 1641
+				allow_spawning_on_enemy_provs = no 
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 62 }
+			create_unit = {
+				division = "division_template = \"龙神近卫军团\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = TES
+				prioritize_location = 1641
+				allow_spawning_on_enemy_provs = no 
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 62 }
+			create_unit = {
+				division = "division_template = \"龙神近卫军团\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = TES
+				prioritize_location = 1641
+				allow_spawning_on_enemy_provs = no 
+			}
+		}
+		add_to_variable = {
+			TES_185_tiaojian = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.166
+	icon = GFX_focus_generic_population_growth
+	cost = 5
+	x = 50
+	y = 6
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.163
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = -100
+		add_ideas = TES_pihurenlei_idea
+		set_country_flag = TES.166_flag
+	}
+}
+shared_focus = {
+	id = TES.167
+	icon = GFX_focus_TES_shobianrenleikexuejia
+	cost = 5
+	x = 50
+	y = 8
+	available = {
+		has_country_flag = {
+			flag = TES.166_flag
+			days > 360
+		}
+		custom_trigger_tooltip = {
+			tooltip = TES.166_flag_days_tt
+			has_country_flag = {
+				flag = TES.166_flag
+				days > 360
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.166
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_tech_bonus = {
+			category = industrys 
+			ahead_reduction = 1
+			bonus = 1
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = math
+			ahead_reduction = 1
+			bonus = 1.0
+			uses = 1
+		}
+		add_ideas = TES_renleikexxuejia_idea
+	}
+}
+shared_focus = {
+	id = TES.168
+	icon = GFX_focus_TES_longshendedaiyangren
+	cost = 5
+	x = 54
+	y = 8
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.164
+	}
+	mutually_exclusive = {
+
+	}
+	completion_reward = { 
+		add_political_power = -200
+		swap_ideas = {
+			remove_idea = TES_longgongshi_1_idea
+			add_idea = TES_longgongshi_2_idea
+		}
+		KAS = {
+			add_opinion_modifier = {
+				target = TES modifier = xuanchengloongshen_TES
+			}
+		}
+		YKR = {
+			add_opinion_modifier = {
+				target = TES modifier = xuanchengloongshen_TES
+			}
+		}
+		OKI = {
+			add_opinion_modifier = {
+				target = TES modifier = xuanchengloongshen_TES
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.169
+	icon = GFX_focus_TES_xuanyanghepingzhuyi
+	cost = 5
+	x = 39
+	y = 9
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.151
+		focus = TES.150
+		focus = TES.149
+	}
+	prerequisite = {
+		focus = TES.161
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = qinwaijiaqiang
+		hepingzhuyi_shang = yes
+		lobbydecrease = yes
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.1			
+		}
+	}
+}
+shared_focus = {
+	id = TES.170
+	icon = GFX_focus_TES_chuanpowmdln
+	cost = 5
+	x = 39
+	y = 10
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.169
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		every_country = {
+			limit = {
+				OR = {
+					has_government = guli
+					has_government = qinwai
+				}
+			}
+			add_opinion_modifier = {
+				target = TES modifier = hepingzhuyi_xuanchuanng_TES
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.171
+	icon = GFX_focus_generic_dovish
+	cost = 5
+	x = 39
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.170
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.171_jueyi
+	}
+}
+shared_focus = {
+	id = TES.172
+	icon = GFX_focus_SAT_reply_from_Yukari
+	cost = 5
+	x = 41
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.170
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		KAS = {
+			country_event = { id = ten.42 days = 1 }
+		}
+		OKI = {
+			country_event = { id = ten.42 days = 1 }
+		}
+		YKR = {
+			country_event = { id = ten.42 days = 1 }
+		}
+	}
+}
+shared_focus = {
+	id = TES.173
+	icon = GFX_focus_TES_yudilingdianjiechu
+	cost = 5
+	x = 37
+	y = 11
+	available = {
+		SAT = {
+			is_neighbor_of = TES
+		}
+	}
+	prerequisite = {
+		focus = TES.170
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		SAT = {
+			country_event = { id = ten.41 days = 1 }
+		}
+	}
+}
+shared_focus = {
+	id = TES.174
+	icon = GFX_focus_SWI_issue_war_bonds
+	cost = 5
+	x = 39
+	y = 12
+	available = {
+	#	num_faction_members > 4
+	}
+	prerequisite = {
+		focus = TES.171
+		focus = TES.172
+		focus = TES.173
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_political_power = 100
+		swap_ideas = {
+			remove_idea = TES_hexiehuhzu_5_idea
+			add_idea = TES_hexiehuhzu_6_idea
+		}
+	}
+}
+shared_focus = {
+	id = TES.175
+	icon = GFX_focus_TES_kanxiangdiyu
+	cost = 5
+	x = 33
+	y = 10
+	available = {
+		
+	}
+	prerequisite = {
+		focus = TES.169
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		every_country = {
+			limit = {
+				controls_state = 456
+			}
+			country_event = { id = ten.23 days = 2 }
+		}
+	}
+}
+shared_focus = {
+	id = TES.176
+	icon = GFX_focus_SAT_deal_with_SKI_handshake
+	cost = 5
+	x = 34
+	y = 11
+	available = {
+		country_exists = SKI
+		NOT = {
+			SKI = {
+				has_government = fandong
+			}
+			SKI = {
+				has_government = neworder
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.175
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		SKI = {
+			country_event = { id = ten.38 days = 2}
+		}
+	}
+}
+shared_focus = {
+	id = TES.177
+	icon = GFX_focus_TES_zhichizaoxingshen
+	cost = 5
+	x = 32
+	y = 11
+	available = {
+		country_exists = KEK
+		NOT = {
+			KEK = {
+				has_government = fandong
+			}
+			KEK = {
+				has_government = neworder
+			}
+		}
+	}
+	prerequisite = {
+		focus = TES.175
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		KEK = {
+			country_event = { id = ten.38 days = 2}
+		}
+	}
+}
+shared_focus = {
+	id = TES.178
+	icon = GFX_focus_TES_pingxidiyuzhanluan
+	cost = 5
+	x = 33
+	y = 12
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = diyuheping_TES
+			AOO = {
+				has_war =  no
+			}
+			AKO = {
+				has_war =  no
+			}
+			CLO = {
+				has_war =  no
+			}
+			HGH = {
+				has_war =  no
+			}
+			SKI = {
+				has_war =  no
+			}
+			GYK = {
+				has_war =  no
+			}
+			KEK = {
+				has_war =  no
+			}
+			YCE = {
+				has_war =  no
+			}
+			URM = {
+				has_war =  no
+			}
+			SAK = {
+				has_war =  no
+			}
+		}	
+	}
+	prerequisite = {
+		focus = TES.176
+		focus = TES.177
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = yaoqiang_Fei_jijinng_xingui
+		every_country = {
+			limit = {
+				any_owned_state = {
+					is_on_continent = Hell
+				}
+				NOT = {
+					has_government = fandong
+					has_government = neworder
+				}
+			}
+			country_event = { id = ten.41 days = 2}
+		}
+	}
+}
+shared_focus = {
+	id = TES.179
+	icon = GFX_focus_focus_fra_maquis
+	cost = 5
+	x = 46
+	y = 10
+	available = {
+		OR = {
+			has_idea = TES_molijianren_3
+			has_idea = TES_jiandun_4
+		}
+		custom_trigger_tooltip = {
+			tooltip = TES_179_tishi
+		}
+	}
+	prerequisite = {
+		focus = TES.169
+	}
+	mutually_exclusive = {
+		focus = TES.180
+	}
+	completion_reward = { 
+		add_political_power = -150
+		hepingzhuyi_shang = yes
+		if = {
+			limit = {
+				has_idea = TES_molijianren_3
+			}
+			swap_ideas = {
+				remove_idea = TES_molijianren_3
+				add_idea = TES_molijianren_4
+			}
+		}
+		if = {
+			limit = {
+				has_idea = TES_jiandun_4
+			}
+			swap_ideas = {
+				remove_idea = TES_jiandun_4
+				add_idea = TES_jiandun_5
+			}
+		}
+	}
+}
+shared_focus = {
+	id = TES.180
+	icon = GFX_focus_generic_infiltration
+	cost = 5
+	x = 50
+	y = 10
+	available = {
+		OR = {
+			has_idea = TES_molijianren_3
+			has_idea = TES_jiandun_4
+		}
+		custom_trigger_tooltip = {
+			tooltip = TES_179_tishi
+		}
+	}
+	prerequisite = {
+		focus = TES.169
+	}
+	mutually_exclusive = {
+		focus = TES.179
+	}
+	completion_reward = { 
+		add_ideas = TES_tianjiefangweijun_idea
+	}
+}
+shared_focus = {
+	id = TES.181
+	icon = GFX_focus_TES_zhihuixitong
+	cost = 5
+	x = 50
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.180
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_lianhecanmouu_idea
+		add_to_variable = {
+			TES_185_tiaojian = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.182
+	icon = GFX_focus_generic_multi_role_aircraft
+	cost = 5
+	x = 48
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.180
+		focus = TES.179
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_to_variable = {
+			TES_185_tiaojian = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.183
+	icon = GFX_focus_ETH_peacekeeping_forces
+	cost = 5
+	x = 46
+	y = 11
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.179
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_tezhongzuozhann_idea
+		add_to_variable = {
+			TES_185_tiaojian = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.184
+	icon = GFX_focus_TES_zhangwotianqi
+	cost = 5
+	x = 44
+	y = 11
+	available = {
+	
+	}
+	prerequisite = {
+		focus = TES.179
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_zhangwotianqi_idea
+		add_to_variable = {
+			TES_185_tiaojian = 1
+		}
+	}
+}
+shared_focus = {
+	id = TES.185
+	icon = GFX_focus_TES_shoowangheping
+	cost = 5
+	x = 48
+	y = 12
+	available = {
+		custom_trigger_tooltip = {
+			check_variable = {
+				TES_185_tiaojian > 1
+			}
+			tooltip = TES_185_tiaojian_tt
+		}
+	}
+	prerequisite = {
+		focus = TES.181
+		focus = TES.182
+		focus = TES.183
+		focus = TES.184
+		focus = TES.165
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		add_ideas = TES_showanghepingg_idea
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = TES.186
+	icon = GFX_focus_TES_tianjianzhizhi
+	cost = 5
+	x = 39
+	y = 13
+	available = {
+		has_country_flag = mimitiaoyue_TES
+		num_of_factories > 200
+	}
+	prerequisite = {
+		focus = TES.178
+		focus = TES.174
+	}
+	prerequisite = {
+		focus = TES.185
+	}
+	mutually_exclusive = {
+		focus = TES.187
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.186_jueyi
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			has_country_flag = mimitiaoyue_TES
+			factor = 100
+		}
+	}
+}
+shared_focus = {
+	id = TES.187
+	icon = GFX_focus_TES_yonghengzhihuo
+	cost = 5
+	x = 44
+	y = 13
+	available = {
+		NOT = {
+			has_country_flag = mimitiaoyue_TES
+		}
+	}
+	prerequisite = {
+		focus = TES.178
+		focus = TES.174
+	}
+	prerequisite = {
+		focus = TES.185
+	}
+	mutually_exclusive = {
+		focus = TES.186
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.187_tt
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+shared_focus = {
+	id = TES.188
+	icon = GFX_focus_TES_yongyuandeheping
+	cost = 5
+	x = 44
+	y = 14
+	available = {
+		has_war = no
+		#custom_trigger_tooltip = {
+		#	OR = {
+		#		controls_state = 246
+		#		any_allied_country  = {
+		#			controls_state = 246
+		#		}
+		#	}
+		#	tooltip = TES.188_tt
+		#}
+	}
+	prerequisite = {
+		focus = TES.187
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		country_event = {
+			id = ten.54
+		}
+	}
+}
+shared_focus = {
+	id = TES.189
+	icon = GFX_focus_TES_xinshiyitianzhidi
+	cost = 5
+	x = 39
+	y = 14
+	available = {
+
+	}
+	prerequisite = {
+		focus = TES.186
+	}
+	mutually_exclusive = {
+		
+	}
+	completion_reward = { 
+		custom_effect_tooltip = TES.189_jueyi
+		country_event = {
+			id = ten.52
+		}
+	}
+}

@@ -202,7 +202,7 @@ focus_tree = {
   # 大选
   focus = {
     id = TEG_da_xuan
-    icon = GFX_focus_election
+    icon = GFX_focus_NOR_restore_public_trust_in_the_storting
     cost = 3
     x = 14
     y = 0

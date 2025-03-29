@@ -1,0 +1,1101 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+# agricultural
+
+# 丈量土地
+shared_focus = {
+	id = SW_zhang_liang_tu_di
+	icon = GFX_goal_generic_position_armies
+	cost = 7
+	x = 15
+	y = 1
+
+	bypass = {
+		SW_no_unexplored_land = yes
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SW_unlock_land_exploration_tt
+		custom_effect_tooltip = SW_auto_land_exploration_tt
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 士兵土地分配委员会
+shared_focus = {
+	id = SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+	icon = SW_focus_soldiers_committee_of_land_distribution
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = SW_zhang_liang_tu_di
+
+	prerequisite = {
+		focus = SW_zhang_liang_tu_di
+	}
+
+	available = {
+		if = {
+			limit = {
+				SW_no_undeveloped_land = yes
+			}
+			always = yes
+		} else = {
+			SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
+		}
+	}
+
+	bypass = {
+		SW_no_undeveloped_land = yes
+	}
+
+	completion_reward = {
+		add_war_support = 0.1
+		SW_random_state_remove_unexplored_land = yes
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			}
+			AKI_decrease_land_annexation_level = yes
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事授地
+shared_focus = {
+	id = SW_jun_shi_shou_di
+	icon = SW_focus_military_grant
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+
+	prerequisite = {
+		focus = SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+	}
+
+	available = {
+		if = {
+			limit = {
+				OR = {
+					SW_no_undeveloped_land = yes
+					has_country_flag = SW_military_investment_flag
+				}
+			}
+			always = yes
+		} else = {
+			SW_ROOT_own_and_fully_control_2_undeveloped_explored_land = yes
+			NOT = {
+				has_country_flag = SW_doing_military_investment_flag
+			}
+		}
+	}
+
+	bypass = {
+		OR = {
+			SW_no_undeveloped_land = yes
+			has_country_flag = SW_military_investment_flag
+		}
+	}
+
+	continue_if_invalid = yes
+
+	select_effect = {
+		SW_random_state_remove_unexplored_land = yes
+		SW_random_state_remove_unexplored_land = yes
+		hidden_effect = {
+			set_country_flag = SW_doing_military_investment_flag
+		}
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SW_develop_2_random_state_tt
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_cons = 0.2
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_1_idea
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = SW_doing_military_investment_flag
+			set_country_flag = SW_military_investment_flag
+		}
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = AKI_tu_di_jian_bing_idea
+				}
+			}
+			AKI_decrease_land_annexation_level = yes
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 退役军人协会
+shared_focus = {
+	id = SW_tui_yi_jun_ren_xie_hui
+	icon = GFX_focus_army_experience
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_jun_shi_shou_di
+
+	prerequisite = {
+		focus = SW_jun_shi_shou_di
+	}
+
+	completion_reward = {
+		army_experience = 30
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 制式武器
+shared_focus = {
+	id = SW_zhi_shi_wu_qi
+	icon = GFX_goal_generic_small_arms
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_tui_yi_jun_ren_xie_hui
+
+	prerequisite = {
+		focus = SW_tui_yi_jun_ren_xie_hui
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_ic = 0.1
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_2_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 陆军正规化
+shared_focus = {
+	id = SW_lu_jun_zheng_gui_hua
+	icon = GFX_focus_generic_military_mission
+	cost = 12
+	x = 0
+	y = 1
+
+	relative_position_id = SW_zhi_shi_wu_qi
+
+	prerequisite = {
+		focus = SW_zhi_shi_wu_qi
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_atk = 0.1
+			}
+			add_to_variable = {
+				SW_agrarian_society_def = 0.2
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_3_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 公共土地赠予
+shared_focus = {
+	id = SW_gong_gong_tu_di_zeng_yu
+	icon = SW_focus_public_land_grant
+	cost = 7
+	x = 2
+	y = 1
+
+	relative_position_id = SW_zhang_liang_tu_di
+
+	prerequisite = {
+		focus = SW_zhang_liang_tu_di
+	}
+
+	available = {
+		if = {
+			limit = {
+				SW_no_undeveloped_land = yes
+			}
+			always = yes
+		} else = {
+			SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
+		}
+	}
+
+	bypass = {
+		SW_no_undeveloped_land = yes
+	}
+
+	completion_reward = {
+		add_political_power = 150
+		SW_random_state_remove_unexplored_land = yes
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 教育赠地
+shared_focus = {
+	id = SW_jiao_yu_zeng_di
+	icon = SW_focus_educational_grant
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = SW_gong_gong_tu_di_zeng_yu
+
+	prerequisite = {
+		focus = SW_gong_gong_tu_di_zeng_yu
+	}
+
+	available = {
+		if = {
+			limit = {
+				OR = {
+					SW_no_undeveloped_land = yes
+					has_country_flag = SW_education_investment_flag
+				}
+			}
+			always = yes
+		} else = {
+			SW_ROOT_own_and_fully_control_2_undeveloped_explored_land = yes
+			NOT = {
+				has_country_flag = SW_doing_education_investment_flag
+			}
+		}
+	}
+
+	bypass = {
+		OR = {
+			SW_no_undeveloped_land = yes
+			has_country_flag = SW_education_investment_flag
+		}
+	}
+
+	continue_if_invalid = yes
+
+	select_effect = {
+		SW_random_state_remove_unexplored_land = yes
+		SW_random_state_remove_unexplored_land = yes
+		hidden_effect = {
+			set_country_flag = SW_doing_education_investment_flag
+		}
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SW_develop_2_random_state_tt
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_rs = 0.05
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_4_idea
+			}
+		}
+		hidden_effect = {
+			clr_country_flag = SW_doing_education_investment_flag
+			set_country_flag = SW_education_investment_flag
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 农业学校
+shared_focus = {
+	id = SW_nong_ye_xue_xiao
+	icon = GFX_focus_education
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_jiao_yu_zeng_di
+
+	prerequisite = {
+		focus = SW_jiao_yu_zeng_di
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_rs = 0.05
+			}
+			add_to_variable = {
+				SW_agrarian_society_cg = -0.05
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_5_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 农业技术革新
+shared_focus = {
+	id = SW_nong_ye_ji_shu_ge_xin
+	icon = GFX_focus_SOV_breadbasket_of_the_union
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_nong_ye_xue_xiao
+
+	prerequisite = {
+		focus = SW_nong_ye_xue_xiao
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_cg = -0.15
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_6_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 农业机械制造厂
+shared_focus = {
+	id = SW_nong_ye_ji_xie_zhi_zao_chang
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 12
+	x = 0
+	y = 1
+
+	relative_position_id = SW_nong_ye_ji_shu_ge_xin
+
+	prerequisite = {
+		focus = SW_nong_ye_ji_shu_ge_xin
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 鼓励拓荒移民
+shared_focus = {
+	id = SW_gu_li_tuo_huang_yi_min
+	icon = GFX_focus_immigration
+	cost = 7
+	x = 0
+	y = 2
+
+	relative_position_id = SW_zhang_liang_tu_di
+
+	prerequisite = {
+		focus = SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+	}
+
+	prerequisite = {
+		focus = SW_gong_gong_tu_di_zeng_yu
+	}
+
+	completion_reward = {
+		add_political_power = 50
+		custom_effect_tooltip = SW_reduce_exploration_and_development_cost_tt
+		custom_effect_tooltip = SW_auto_land_exploration_increase_tt
+		hidden_effect = {
+			set_variable = {
+				SW_explored_land_develop_cost = 45
+			}
+			set_variable = {
+				SW_land_exploration_cost = 45
+			}
+			set_variable = {
+				SW_auto_exploration_factor = 1
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 交通系统建设
+shared_focus = {
+	id = SW_jiao_tong_xi_tong_jian_she
+	icon = GFX_focus_generic_improve_roads
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_gu_li_tuo_huang_yi_min
+
+	prerequisite = {
+		focus = SW_gu_li_tuo_huang_yi_min
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_infra = 0.2
+			}
+			add_to_variable = {
+				SW_agrarian_society_rail = 0.1
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_7_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# [TAG.capital.GetName]兵工厂
+shared_focus = {
+	id = SW_capital_bing_gong_chang
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 12
+	x = -1
+	y = 1
+
+	relative_position_id = SW_jiao_tong_xi_tong_jian_she
+
+	dynamic = yes
+
+	prerequisite = {
+		focus = SW_jiao_tong_xi_tong_jian_she
+	}
+
+	prerequisite = {
+		focus = SW_tui_yi_jun_ren_xie_hui
+	}
+
+	available = {
+		has_full_control_of_state = capital
+	}
+
+	completion_reward = {
+		var:capital = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 义务教育
+shared_focus = {
+	id = SW_yi_wu_jiao_yu
+	icon = GFX_focus_research
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = SW_jiao_tong_xi_tong_jian_she
+
+	dynamic = yes
+
+	prerequisite = {
+		focus = SW_jiao_tong_xi_tong_jian_she
+	}
+
+	prerequisite = {
+		focus = SW_nong_ye_xue_xiao
+	}
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				SW_agrarian_society_rs = 0.1
+			}
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = SW_nong_ye_shei_hui_tt_idea
+				add_idea = SW_nong_ye_shei_hui_tt_8_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# industrial-military
+# 西南建设计划
+shared_focus = {
+	id = SW_xi_nan_jian_she_ji_hua
+	icon = GFX_focus_generic_industry_2
+	cost = 7
+	x = 0
+	y = 2
+
+	relative_position_id = SW_jiao_tong_xi_tong_jian_she
+
+	prerequisite = {
+		focus = SW_capital_bing_gong_chang
+		focus = SW_yi_wu_jiao_yu
+	}
+
+	available = {
+		num_of_owned_factories > 35
+	}
+
+	completion_reward = {
+		add_ideas = SW_xi_nan_jian_she_ji_hua_idea
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事建设
+shared_focus = {
+	id = SW_jun_shi_jian_she
+	icon = GFX_goal_generic_axis_build_infantry
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = SW_xi_nan_jian_she_ji_hua
+
+	prerequisite = {
+		focus = SW_xi_nan_jian_she_ji_hua
+	}
+
+	completion_reward = {
+		army_experience = 10
+		add_tech_bonus = {
+			bonus = 0.6
+			uses = 2
+			category = military
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 轻武器研究
+shared_focus = {
+	id = SW_qing_wu_qi_yan_jiu
+	icon = GFX_focus_focus_fra_maquis
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_jun_shi_jian_she
+
+	prerequisite = {
+		focus = SW_jun_shi_jian_she
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事改革
+shared_focus = {
+	id = SW_jun_shi_gai_ge
+	icon = GFX_focus_chi_army_reform
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = SW_jun_shi_jian_she
+
+	prerequisite = {
+		focus = SW_jun_shi_jian_she
+	}
+
+	prerequisite = {
+		focus = SW_lu_jun_zheng_gui_hua
+	}
+
+	completion_reward = {
+		add_ideas = SW_xi_nan_jun_shi_gai_ge_idea
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事学院
+shared_focus = {
+	id = SW_jun_shi_xue_yuan
+	icon = GFX_focus_generic_military_academy
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = SW_jun_shi_gai_ge
+
+	prerequisite = {
+		focus = SW_jun_shi_gai_ge
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SW_xi_nan_jun_shi_gai_ge_idea
+			add_idea = SW_xi_nan_jun_shi_gai_ge_a_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事理论探索
+shared_focus = {
+	id = SW_jun_shi_li_lun_tan_suo
+	icon = GFX_goal_generic_army_doctrines
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_jun_shi_xue_yuan
+
+	prerequisite = {
+		focus = SW_jun_shi_xue_yuan
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 重火力研究
+shared_focus = {
+	id = SW_zhong_huo_li_yan_jiu
+	icon = GFX_goal_generic_army_artillery2
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = SW_jun_shi_gai_ge
+
+	prerequisite = {
+		focus = SW_jun_shi_gai_ge
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = artillery_tech
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 工业建设
+shared_focus = {
+	id = SW_gong_ye_jian_she
+	icon = GFX_goal_generic_production2
+	cost = 7
+	x = 2
+	y = 1
+
+	relative_position_id = SW_xi_nan_jian_she_ji_hua
+
+	prerequisite = {
+		focus = SW_xi_nan_jian_she_ji_hua
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.6
+			uses = 2
+			category = industrys
+			category = build
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 理论科学研究
+shared_focus = {
+	id = SW_li_lun_ke_xue_yan_jiu
+	icon = GFX_focus_basic_science
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = SW_gong_ye_jian_she
+
+	prerequisite = {
+		focus = SW_gong_ye_jian_she
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.8
+			uses = 2
+			category = math
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 基础设施建设
+shared_focus = {
+	id = SW_ji_chu_she_shi_jian_she
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 12
+	x = 2
+	y = 1
+
+	relative_position_id = SW_gong_ye_jian_she
+
+	prerequisite = {
+		focus = SW_gong_ye_jian_she
+	}
+
+	prerequisite = {
+		focus = SW_nong_ye_ji_xie_zhi_zao_chang
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = SW_infrastructure_for_every_core_state_tt
+		hidden_effect = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 培训技术工人
+shared_focus = {
+	id = SW_pei_xun_ji_shu_gong_ren
+	icon = GFX_focus_generic_workers
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = SW_ji_chu_she_shi_jian_she
+
+	prerequisite = {
+		focus = SW_ji_chu_she_shi_jian_she
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SW_xi_nan_jian_she_ji_hua_idea
+			add_idea = SW_xi_nan_jian_she_ji_hua_a_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 扩大生产规模
+shared_focus = {
+	id = SW_kuo_da_sheng_chan_gui_mo
+	icon = GFX_focus_mass_production_NOA
+	cost = 12
+	x = -1
+	y = 1
+
+	relative_position_id = SW_pei_xun_ji_shu_gong_ren
+
+	prerequisite = {
+		focus = SW_pei_xun_ji_shu_gong_ren
+	}
+
+	mutually_exclusive = {
+		focus = SW_you_hua_sheng_chan_liu_cheng
+	}
+
+	completion_reward = {
+		add_offsite_building = {
+			type = arms_factory
+			level = 3
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 优化生产流程
+shared_focus = {
+	id = SW_you_hua_sheng_chan_liu_cheng
+	icon = GFX_focus_production
+	cost = 12
+	x = 1
+	y = 1
+
+	relative_position_id = SW_pei_xun_ji_shu_gong_ren
+
+	prerequisite = {
+		focus = SW_pei_xun_ji_shu_gong_ren
+	}
+
+	mutually_exclusive = {
+		focus = SW_kuo_da_sheng_chan_gui_mo
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SW_xi_nan_jian_she_ji_hua_a_idea
+			add_idea = SW_xi_nan_jian_she_ji_hua_b_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 应用科学研究
+shared_focus = {
+	id = SW_ying_yong_ke_xue_yan_jiu
+	icon = GFX_goal_generic_construct_civilian
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = SW_ji_chu_she_shi_jian_she
+
+	prerequisite = {
+		focus = SW_ji_chu_she_shi_jian_she
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.8
+			uses = 2
+			category = industrys
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 军事工业准备
+shared_focus = {
+	id = SW_jun_shi_gong_ye_zhun_bei
+	icon = GFX_focus_generic_military_industry
+	cost = 12
+	x = 0
+	y = 2
+
+	relative_position_id = SW_xi_nan_jian_she_ji_hua
+
+	prerequisite = {
+		focus = SW_jun_shi_jian_she
+	}
+
+	prerequisite = {
+		focus = SW_gong_ye_jian_she
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+# 建立国家科学院
+shared_focus = {
+	id = SW_jian_li_guo_jia_ke_xue_yuan
+	icon = GFX_focus_science_institute
+	cost = 7
+	x = 0
+	y = 4
+
+	relative_position_id = SW_xi_nan_jian_she_ji_hua
+
+	prerequisite = {
+		focus = SW_qing_wu_qi_yan_jiu
+		focus = SW_zhong_huo_li_yan_jiu
+	}
+
+	prerequisite = {
+		focus = SW_li_lun_ke_xue_yan_jiu
+		focus = SW_ying_yong_ke_xue_yan_jiu
+	}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+	ai_will_do = {
+		factor = 5
+	}
+}

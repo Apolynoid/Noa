@@ -142,6 +142,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_suppression"
+		texturefile = "gfx/interface/ideas/generic_suppression.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_army_doctrine"
 		texturefile = "gfx/interface/ideas/generic_army_doctrine.dds"
 	}
@@ -488,6 +493,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ALI_the_only_hegemony_in_gensokyo"
 		texturefile = "gfx/interface/ideas/ali_the_only_hegemony_in_gensokyo.png"
+	}
+
+	#### AKI 神明信仰联盟
+	spriteType = {
+		name = "GFX_idea_AKI_barrier_between_human_and_god"
+		texturefile = "gfx/interface/ideas/aki_barrier_between_human_and_god.png"
 	}
 
 	#### YYK Saigyouji Yuyuko 白玉楼
