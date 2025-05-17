@@ -111,9 +111,6 @@
     SRB = {
         give_guarantee = EMB
     }
-    MAM = {
-        give_guarantee = EMB
-    }
     SBK = {
         give_guarantee = EMB
     }

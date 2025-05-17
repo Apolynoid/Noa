@@ -84,4 +84,28 @@ leader_traits = {
 			factor = -5
 		}
 	}
+
+	# 军需品标准化制造商
+	standardized_production_material_trait = {
+		random = no
+
+		equipment_bonus = {
+			magic_core_a = {
+				build_cost_ic = -0.08
+			}
+
+			melee_a = {
+				build_cost_ic = -0.05
+			}
+
+			support_equipment = {
+				build_cost_ic = -0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 }

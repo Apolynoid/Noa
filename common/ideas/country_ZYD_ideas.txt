@@ -1,0 +1,104 @@
+ideas = {
+	country = {
+		# 西南贸易中心
+		ZYD_xi_nan_mao_yi_zhong_xin_idea = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		ZYD_xi_nan_mao_yi_zhong_xin_a_idea = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		ZYD_xi_nan_mao_yi_zhong_xin_b_idea = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		# 低效的政府
+		ZYD_di_xiao_de_zheng_fu_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.1
+			}
+		}
+
+		ZYD_di_xiao_de_zheng_fu_a_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+
+		# 腐败问题
+		ZYD_fu_bai_wen_ti_idea = {
+			picture = ETH_corrupt_bureaucracy
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		ZYD_fu_bai_wen_ti_a_idea = {
+			picture = ETH_corrupt_bureaucracy
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		# 中有之道警卫队
+		ZYD_zhong_you_zhi_dao_jing_wei_dui_idea = {
+			picture = chi_army_corruption3
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+
+		ZYD_zhong_you_zhi_dao_jing_wei_dui_a_idea = {
+			picture = chi_army_corruption3
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.02
+			}
+		}
+
+		ZYD_zhong_you_zhi_dao_jing_wei_dui_b_idea = {
+			picture = chi_army_corruption3
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.02
+				max_planning_factor = 0.2
+			}
+		}
+
+		# 研究投资
+		ZYD_yan_jiu_tou_zi_idea = {
+			picture = generic_research
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		# 国防状态
+		ZYD_guo_fang_ji_hua_idea = {
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				army_core_attack_factor = 0.08
+				army_core_defence_factor = 0.08
+			}
+		}
+	}
+}

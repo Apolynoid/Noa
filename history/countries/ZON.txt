@@ -17,9 +17,7 @@ XXX = { #same in initial_leader_setting(scripted_effects) only to decrease error
     recruit_character = HKR_mima
     recruit_character = HKR_ruukoto
 
-    recruit_character = YUK_elly
     recruit_character = YUK_gengetsu
-    recruit_character = YUK_kurumi
     recruit_character = YUK_mugetsu
     recruit_character = YUK_orange
 
@@ -48,6 +46,8 @@ EET = {
 EMB = {
     recruit_character = EMB_may
     recruit_character = EMB_may_leader
+    recruit_character = MAM_mam
+    recruit_character = MAM_mam_leader
 }
 GYK = {
     recruit_character = GYK_yuma
@@ -110,14 +110,6 @@ KRD = {
 LIL = {
     recruit_character = LIL_lil
     recruit_character = LIL_lil_leader
-}
-MAM = {
-    recruit_character = MAM_mam
-    recruit_character = MAM_mam_leader
-}
-MEL = {
-    recruit_character = MEL_mel
-    recruit_character = MEL_mel_leader
 }
 MOK = {
     recruit_character = MOK_mokou
@@ -184,14 +176,6 @@ SAT = {
 SBK = {
     recruit_character = SBK_sek
     recruit_character = SBK_sek_leader
-}
-SGS = {
-    recruit_character = SGS_lunar
-    recruit_character = SGS_lunar_leader
-    recruit_character = SGS_sun
-    recruit_character = SGS_sun_leader
-    recruit_character = SGS_star
-    recruit_character = SGS_star_leader
 }
 SRB = {
     recruit_character = SRB_mik
@@ -267,12 +251,6 @@ YUG = {
 
     recruit_character = YUG_yug
     recruit_character = YUG_yug_leader
-}
-YUK = {
-    recruit_character = YUK_yuk
-    recruit_character = YUK_yuk_leader
-    recruit_character = YUK_larva
-    recruit_character = YUK_larva_leader
 }
 146.1.1 = {
     set_technology = {

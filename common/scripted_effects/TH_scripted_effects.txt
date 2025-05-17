@@ -603,12 +603,6 @@ declare_war_events = {
         }
         if = {
             limit = {
-                FROM = {tag = MAM}
-            }
-            news_event = { id = srb.19 days = 2}
-        }
-        if = {
-            limit = {
                 FROM = {tag = NMS}
             }
             news_event = { id = srb.21 days = 2}
@@ -1116,7 +1110,6 @@ startup_manu = {
     RGO = {add_ideas = RGO_manu2 }
     SRB = {add_ideas = SRB_manu2 }
     NMS = {add_ideas = NMS_manu2 }
-    MAM = {add_ideas = MAM_manu2 }
     YUK = {add_ideas = YUK_manu2 }
     SGS = {add_ideas = SGS_manu2 }
     MEL = {add_ideas = MEL_manu2 }

@@ -1,0 +1,76 @@
+﻿add_namespace = zyd
+# [state_to_develop.GetName]得到开发
+country_event = {
+	id = zyd.101
+	title = zyd.101.t
+	desc = zyd.101.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			event_target:state_to_develop = {
+				remove_dynamic_modifier = {
+					modifier = SW_wei_kai_fa_de_tu_di_state_idea
+				}
+			}
+		}
+	}
+
+	option = {
+		name = zyd.101.1
+		event_target:state_to_develop = {
+			effect_tooltip = {
+				remove_dynamic_modifier = {
+					modifier = SW_wei_kai_fa_de_tu_di_state_idea
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# [ZYD.GetName]成立
+news_event = {
+	id = zyd.102
+	title = zyd.102.t
+	desc = zyd.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 激进
+	option = {
+		name = zyd.102.1
+		trigger = {
+			has_government = fandong
+		}
+	}
+
+	# 改良
+	option = {
+		name = zyd.102.2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+
+	# 其他
+	option = {
+		name = zyd.102.3
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}

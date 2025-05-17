@@ -17,10 +17,25 @@ mio_cat_eq_all_infantry_weapons = {
 	}
 }
 
+mio_cat_eq_ma_infantry_weapons = {
+	equipment_type = {
+		magic_core_a
+		melee_a
+		support_equipment
+	}
+}
+
 mio_cat_eq_all_artillery = {
 	equipment_type = {
 		mortar_a
 		anti_shield_a
+		magic_energy_a
+		magic_focus_a
+	}
+}
+
+mio_cat_eq_ma_artillery = {
+	equipment_type = {
 		magic_energy_a
 		magic_focus_a
 	}

@@ -78,7 +78,6 @@
     set_truce = {target = MSD days = 1095}
     set_truce = {target = PRI days = 1095}
     set_truce = {target = SBK days = 1095}
-    set_truce = {target = MAM days = 1095}
     set_truce = {target = YKR days = 1095}
     set_truce = {target = YYK days = 1095}
     set_truce = {target = SAT days = 1095}

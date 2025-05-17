@@ -32,19 +32,6 @@ characters={
 				factor = 1
 			}
 		}
-	}
-	MEL_mel_leader ={
-		name = MEL_mel_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/MEL/MEL_mel.dds"
-				small="gfx/leaders/MEL/MEL_mel_small.dds"
-			}
-			army = {
-				large="gfx/leaders/MEL/MEL_mel.dds"
-				small="gfx/leaders/MEL/MEL_mel_small.dds"
-			}
-		}
 		country_leader={
 			ideology=qinwai_type
 			id=-1

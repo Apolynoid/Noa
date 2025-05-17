@@ -1,0 +1,435 @@
+ideas = {
+	country = {
+		# 妖精骚动
+		YUK_yao_jing_sao_dong_idea = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_factor = -0.4
+				stability_factor = -0.4
+				custom_modifier_tooltip = army_locked_tt
+				custom_modifier_tooltip = YUK_civil_war_on_offence_tt
+			}
+
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+		}
+
+		YUK_yao_jing_sao_dong_a_idea = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.3
+				custom_modifier_tooltip = YUK_civil_war_on_offence_tt
+			}
+		}
+
+		YUK_yao_jing_sao_dong_b_idea = {
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+				custom_modifier_tooltip = YUK_civil_war_on_offence_tt
+			}
+		}
+
+		YUK_yao_jing_sao_dong_c_idea = {
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				custom_modifier_tooltip = YUK_civil_war_on_offence_tt
+			}
+		}
+
+		# 预算倾斜-均衡
+		YUK_yu_suan_qing_xie_jun_heng_idea = {
+			picture = generic_balanced_leaning
+			modifier = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_yu_suan_qing_xie_jun_heng_a_idea = {
+			picture = generic_balanced_leaning
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				army_morale_factor = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		## 倾向工业
+		YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea = {
+			picture = generic_industry_leaning
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				industrial_capacity_factory = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea = {
+			picture = generic_industry_leaning
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		## 工业支配
+		YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea = {
+			picture = generic_industry_dominant
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = -0.2
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea = {
+			picture = generic_industry_dominant
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		## 倾向军事
+		YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea = {
+			picture = generic_military_leaning
+			modifier = {
+				industrial_capacity_factory = 0.1
+				army_morale_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea = {
+			picture = generic_military_leaning
+			modifier = {
+				industrial_capacity_factory = 0.1
+				army_morale_factor = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		## 军事支配
+		YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea = {
+			picture = generic_military_dominant
+			modifier = {
+				industrial_capacity_factory = 0.2
+				army_morale_factor = 0.2
+				production_speed_buildings_factor = -0.2
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea = {
+			picture = generic_military_dominant
+			modifier = {
+				industrial_capacity_factory = 0.2
+				army_morale_factor = 0.2
+				production_speed_buildings_factor = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 落后的生产模式
+		YUK_luo_hou_de_sheng_chan_mo_shi_idea = {
+			picture = backward_production
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 花田势力圈
+		YUK_hua_tian_shi_li_quan_idea = {
+	    	picture = SCA_Puppet_scarlet_sphere
+			cancel = {
+				NOT = {
+					is_puppet_of = YUK
+				}
+			}
+			modifier = {
+				surrender_limit = 0.5
+			}
+			targeted_modifier = {
+				tag = YUK
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
+			}
+	    }
+
+		# 农业改革
+		YUK_nong_ye_gai_ge_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 花田建设计划
+		YUK_hua_tian_jian_she_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_jian_she_ji_hua_a_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 花田防卫军
+		YUK_hua_tian_fang_wei_jun_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_fang_wei_jun_a_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_fang_wei_jun_b_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_fang_wei_jun_c_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				experience_gain_army_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_fang_wei_jun_d_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				promote_cost_factor = -0.25
+				army_leader_cost_factor = -0.25
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		YUK_hua_tian_fang_wei_jun_e_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				promote_cost_factor = -0.25
+				army_leader_cost_factor = -0.25
+				max_planning_factor = 0.2
+				planning_speed = 0.1
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+	
+		YUK_hua_tian_fang_wei_jun_f_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_org_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				promote_cost_factor = -0.25
+				army_leader_cost_factor = -0.25
+				max_planning_factor = 0.2
+				planning_speed = 0.1
+				resistance_damage_to_garrison = -0.25
+				resistance_growth = -0.15
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+
+		# 内战伤痕
+		YUK_nei_zhan_shang_hen_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.3
+				army_morale_factor = -0.2
+			}
+		}
+
+		# 革命经费
+		YUK_ge_ming_jing_fei_idea = {
+			picture = unknown
+			modifier = {
+				training_time_army_factor = -0.3
+			}
+		}
+
+		# 下克上军事顾问
+		YUK_xia_ke_shang_jun_shi_gu_wen_idea = {
+			picture = generic_gekokujyo_military_advisor
+			modifier = {
+				experience_gain_army_factor = 0.1
+				max_dig_in_factor = 0.1
+				max_planning_factor = 0.1
+			}
+
+			cancel = {
+				GEK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+
+		# 受宣传影响
+		YUK_shou_xuan_chuan_ying_xiang_idea = {
+			picture = generic_propaganda_campaign
+			modifier = {
+				army_morale_factor = -0.1
+				army_attack_factor = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		# 改进型魔炮
+		YUK_gai_jin_xing_mo_pao_idea = {
+			picture = SWE_let_fly_all_guns
+			equipment_bonus = {
+				magic_energy_a = {
+					instant = yes
+					soft_attack = 0.1
+					hard_attack = 0.1
+				}
+			}
+		}
+
+		# 武器生产投资
+		YUK_wu_qi_sheng_chan_tou_zi_idea = {
+			picture = generic_war_preparation
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.3
+			}
+		}
+	}
+}

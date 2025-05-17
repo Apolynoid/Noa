@@ -36,6 +36,10 @@ characters={
 				factor = 1
 			}
 		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
 	}
 	SGS_lunar ={
 		name = SGS_lunar
@@ -71,6 +75,14 @@ characters={
 				factor = 1
 			}
 		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}		
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
 	}
 	SGS_star ={
 		name = SGS_star
@@ -102,62 +114,6 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1
-			}
-		}
-	}
-	SGS_sun_leader ={
-		name = SGS_sun_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/SGS/SGS_sun.dds"
-				small="gfx/leaders/SGS/SGS_sun_small.dds"
-			}
-			army = {
-				large="gfx/leaders/SGS/SGS_sun.dds"
-				small="gfx/leaders/SGS/SGS_sun_small.dds"
-			}
-		}
-		country_leader={
-			ideology=fandong_type
-			id=-1
-		}
-	}
-	SGS_lunar_leader ={
-		name = SGS_lunar_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/SGS/SGS_lunar.dds"
-				small="gfx/leaders/SGS/SGS_lunar_small.dds"
-			}
-			army = {
-				large="gfx/leaders/SGS/SGS_lunar.dds"
-				small="gfx/leaders/SGS/SGS_lunar_small.dds"
-			}
-		}
-		country_leader={
-			ideology=qinwai_type
-			id=-1
-		}		
-		country_leader={
-			ideology=guli_type
-			id=-1
-		}
-		
-		country_leader={
-			ideology=oldorder_type
-			id=-1
-		}
-	}
-	SGS_star_leader ={
-		name = SGS_star_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/SGS/SGS_star.dds"
-				small="gfx/leaders/SGS/SGS_star_small.dds"
-			}
-			army = {
-				large="gfx/leaders/SGS/SGS_star.dds"
-				small="gfx/leaders/SGS/SGS_star_small.dds"
 			}
 		}
 		country_leader={

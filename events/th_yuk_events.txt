@@ -1,0 +1,487 @@
+﻿add_namespace = yuk
+
+# 与妖精的商谈
+country_event = {
+	id = yuk.101
+	title = yuk.101.t
+	desc = yuk.101.d
+
+	is_triggered_only = yes
+
+	# 商谈达成了初步合作意向
+	option = {
+		name = yuk.101.1
+		complete_national_focus = YUK_chu_li_yao_jing_bu_man
+	}
+
+	# 商谈未能取得有效结果
+	option = {
+		name = yuk.101.2
+		complete_national_focus = YUK_yao_jing_ge_ming
+		activate_mission = YUK_xiao_zhong_pai_de_zhen_ya
+		hidden_effect = {
+			set_variable = {
+				YUK_loyalists_army_ratio = 0.8
+			}
+			set_variable = {
+				YUK_loyalists_land_ratio = 0.8
+			}
+		}
+	}
+}
+
+# news 花田内战爆发
+news_event = {
+	id = yuk.102
+	title = yuk.102.t
+	desc = yuk.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YUK
+	option = {
+		name = yuk.102.1
+		trigger = {
+			original_tag = YUK
+		}
+	}
+
+	# 其他
+	option = {
+		name = yuk.102.2
+		trigger = {
+			NOT = {
+				original_tag = YUK
+			}
+		}
+	}
+}
+
+# news 激进派赢得花田内战胜利
+news_event = {
+	id = yuk.103
+	title = yuk.103.t
+	desc = yuk.103.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YUK
+	option = {
+		name = yuk.103.1
+		trigger = {
+			original_tag = YUK
+		}
+	}
+
+	# changemaker
+	option = {
+		name = yuk.102.2
+		trigger = {
+			NOT = {
+				original_tag = YUK
+			}
+			is_changemaker = yes
+		}
+	}
+
+	# 其他
+	option = {
+		name = yuk.103.2
+		trigger = {
+			NOT = {
+				original_tag = YUK
+			}
+			is_changemaker = no
+		}
+	}
+}
+
+# news 效忠派赢得花田内战胜利
+news_event = {
+	id = yuk.104
+	title = yuk.104.t
+	desc = yuk.104.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# YUK
+	option = {
+		name = yuk.104.1
+		trigger = {
+			original_tag = YUK
+		}
+	}
+
+	# 其他
+	option = {
+		name = yuk.104.2
+		trigger = {
+			NOT = {
+				original_tag = YUK
+			}
+		}
+	}
+}
+
+# 叛乱领袖的处置
+country_event = {
+	id = yuk.105
+	title = yuk.105.t
+	desc = yuk.105.d
+	is_triggered_only = yes
+
+	# 她们也许还有用
+	option = {
+		name = yuk.105.1
+		add_political_power = -100
+		custom_effect_tooltip = YUK_larva_join_tt
+		hidden_effect = {
+			XXX = {
+				set_nationality = {
+					target_country = ROOT
+					character = YUK_larva
+				}
+			}
+			promote_character = {
+				character = YUK_larva
+				ideology = fandong_type
+			}
+			promote_character = {
+				character = YUK_larva
+				ideology = qinwai_type
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 我们不需要叛徒！
+	option = {
+		name = yuk.105.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# 效忠派领袖的处置
+country_event = {
+	id = yuk.106
+	title = yuk.106.t
+	desc = yuk.106.d
+	is_triggered_only = yes
+
+	# 共和国也许需要她们
+	option = {
+		name = yuk.106.1
+		add_political_power = -100
+		custom_effect_tooltip = YUK_loyalists_join_tt
+		hidden_effect = {
+			XXX = {
+				set_nationality = {
+					target_country = ROOT
+					character = YUK_elly
+				}
+				set_nationality = {
+					target_country = ROOT
+					character = YUK_kurumi
+				}
+				set_nationality = {
+					target_country = ROOT
+					character = YUK_yuk
+				}
+			}
+			promote_character = {
+				character = YUK_yuk
+				ideology = oldorder_type
+			}
+			promote_character = {
+				character = YUK_yuk
+				ideology = oldgenso_type
+			}
+			promote_character = {
+				character = YUK_elly
+				ideology = neworder_type
+			}
+			promote_character = {
+				character = YUK_kurumi
+				ideology = guli_type
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# 共和国不需要她们
+	option = {
+		name = yuk.106.2
+		add_political_power = 100
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# 内战伤痕
+country_event = {
+	id = yuk.107
+	title = yuk.107.t
+	desc = yuk.107.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = YUK_nei_zhan_shang_hen_idea
+				days = 365
+			}
+		}
+	}
+
+	option = {
+		name = yuk.107.1
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = YUK_nei_zhan_shang_hen_idea
+				days = 365
+			}
+		}
+	}
+}
+
+# KZM 叛乱分子的宣传攻势
+country_event = {
+	id = yuk.108
+	title = yuk.108.t
+	desc = yuk.108.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = YUK_shou_xuan_chuan_ying_xiang_idea
+				days = 180
+			}
+		}
+	}
+
+	option = {
+		name = yuk.108.1
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = YUK_shou_xuan_chuan_ying_xiang_idea
+				days = 180
+			}
+		}
+	}
+}
+
+# SEJ YUK请求加入同盟
+country_event = {
+	id = yuk.109
+	title = yuk.109.t
+	desc = yuk.109.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yuk.109.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = YUK
+		}
+		YUK = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = yuk.109.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			YUK = {
+				country_event = yuk.110
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = yuk.110
+	title = yuk.110.t
+	desc = yuk.110.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yuk.110.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = YUK_jia_ru_xia_ke_shang_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = YUK_xi_nan_ge_ming_zhen_xian
+		}
+	}
+}
+
+# 经济建设承诺完成
+country_event = {
+	id = yuk.111
+	title = yuk.111.t
+	desc = yuk.111.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = YUK
+		has_country_flag = YUK_economy_promise_flag
+		check_variable = {
+			YUK_ic_target < num_of_civilian_factories
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = yuk.111.1
+		YUK_placate_fairy_discontent = yes
+		hidden_effect = {
+			clr_country_flag = YUK_economy_promise_flag
+		}
+	}
+}
+
+# 社会稳定承诺完成
+country_event = {
+	id = yuk.112
+	title = yuk.112.t
+	desc = yuk.112.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = YUK
+		has_country_flag = YUK_stability_promise_flag
+		check_variable = {
+			YUK_st_target < stability
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = yuk.112.1
+		YUK_placate_fairy_discontent = yes
+		hidden_effect = {
+			clr_country_flag = YUK_stability_promise_flag
+		}
+	}
+}
+
+# 生产优化承诺完成
+country_event = {
+	id = yuk.113
+	title = yuk.113.t
+	desc = yuk.113.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = YUK
+		has_country_flag = YUK_production_promise_flag
+		NOT = {
+			has_idea = YUK_luo_hou_de_sheng_chan_mo_shi_idea
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = yuk.113.1
+		YUK_placate_fairy_discontent = yes
+		hidden_effect = {
+			clr_country_flag = YUK_production_promise_flag
+		}
+	}
+}
+
+# 科技进步承诺完成
+country_event = {
+	id = yuk.114
+	title = yuk.114.t
+	desc = yuk.114.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = YUK
+		has_country_flag = YUK_technology_promise_flag
+		has_tech = jisuangongju149
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = yuk.114.1
+		YUK_placate_fairy_discontent = yes
+		hidden_effect = {
+			clr_country_flag = YUK_technology_promise_flag
+		}
+	}
+}
+
+# 激进派发动了内战
+country_event = {
+	id = yuk.115
+	title = yuk.115.t
+	desc = yuk.115.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = YUK
+		YUK_fairy_discontent_placated = no
+		has_offensive_war = yes
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			YUK_civil_war_loyalists = yes
+		}
+	}
+
+	option = {
+		name = yuk.115.1
+	}
+}

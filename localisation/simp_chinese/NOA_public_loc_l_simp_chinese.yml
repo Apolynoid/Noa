@@ -10,6 +10,8 @@ occupation_law_introduce_tt:0 "§Y$integration_law$§!法案除去数值上的�
 on_select_tt:0 "选择时："
 on_complete_tt:0 "完成时："
 
+after_civil_war_begins_tt:0 "内战开始后："
+
 already_highest_tt:0 "已经达到最高，无法进一步提高。"
 already_lowest_tt:0 "已经达到最低，无法进一步降低。"
 

@@ -1,0 +1,452 @@
+YUK_leaning_industry = {
+	if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+		}
+		custom_effect_tooltip = YUK_cant_leaning_industry_tt
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+			add_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea
+		}
+		custom_effect_tooltip = YUK_cant_leaning_industry_tt
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+			add_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+		}
+	} 
+}
+
+YUK_leaning_military = {
+	if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+		}
+		custom_effect_tooltip = YUK_cant_leaning_military_tt
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea
+		}
+		custom_effect_tooltip = YUK_cant_leaning_military_tt
+	} 
+}
+
+YUK_improve_budget = {
+	if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_idea
+			add_idea = YUK_yu_suan_qing_xie_gong_ye_zhi_pei_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_gong_ye_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_heng_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_heng_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_idea
+			add_idea = YUK_yu_suan_qing_xie_qing_xiang_jun_shi_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_idea
+			add_idea = YUK_yu_suan_qing_xie_jun_shi_zhi_pei_a_idea
+		}
+	}
+}
+
+YUK_civil_war_character_move = {
+	LAV = {
+		if = {
+			limit = {
+				has_character = YUK_elly
+			}
+			set_nationality = {
+				target_country = KZM
+				character = YUK_elly
+			}
+		}
+		if = {
+			limit = {
+				has_character = YUK_kurumi
+			}
+			set_nationality = {
+				target_country = KZM
+				character = YUK_kurumi
+			}
+		}
+		if = {
+			limit = {
+				has_character = YUK_yuk
+			}
+			set_nationality = {
+				target_country = KZM
+				character = YUK_yuk
+			}
+		}
+	}
+	KZM = {
+		promote_character = {
+			character = YUK_yuk
+			ideology = oldorder_type
+		}
+		promote_character = {
+			character = YUK_yuk
+			ideology = oldgenso_type
+		}
+		promote_character = {
+			character = YUK_elly
+			ideology = neworder_type
+		}
+		promote_character = {
+			character = YUK_kurumi
+			ideology = guli_type
+		}
+	}
+	KZM = {
+		if = {
+			limit = {
+				has_character = YUK_larva
+			}
+			set_nationality = {
+				target_country = LAV
+				character = YUK_larva
+			}
+		}
+	}
+	LAV = {
+		promote_character = {
+			character = YUK_larva
+			ideology = fandong_type
+		}
+		promote_character = {
+			character = YUK_larva
+			ideology = qinwai_type
+		}
+	}
+}
+
+YUK_civil_war_radicalists = {
+	custom_effect_tooltip = YUK_trigger_civil_war_against_loyalists_tt
+	hidden_effect = {
+		set_global_flag = YUK_civil_war_flag
+		set_capital = {
+			state = 263
+		}
+		start_civil_war = {
+			ruling_party = fandong
+			ideology = oldgenso
+			size = YUK_loyalists_land_ratio
+			army_ratio = YUK_loyalists_army_ratio
+			capital = 339
+
+			set_country_flag = YUK_loyalists_flag
+		}
+		set_country_flag = YUK_rebellions_flag
+		add_popularity = {
+			ideology = fandong
+			popularity = 40
+		}
+		YUK_civil_war_character_move = yes
+		KZM = {
+			load_focus_tree = {
+				tree = YUK_focus
+				copy_completed_from = LAV
+			}
+			uncomplete_national_focus = {
+				focus = YUK_yu_yao_jing_de_shang_tan
+				uncomplete_children = yes
+			}
+			unlock_national_focus = YUK_yu_yao_jing_de_shang_tan
+			unlock_national_focus = YUK_chu_li_yao_jing_bu_man
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = YUK_revolt_suppressed_flag
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = YUK_duo_qu_wu_qi_ku
+				}
+				add_equipment_to_stockpile = {
+					type = magic_core_a
+					amount = 1000
+				}
+				add_equipment_to_stockpile = {
+					type = magic_energy_a
+					amount = 200
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = YUK_chou_ji_zi_jin
+				}
+				add_timed_idea = {
+					idea = YUK_ge_ming_jing_fei_idea
+					days = 180
+				}
+			}
+		}
+		news_event = {
+			id = yuk.102
+			days = 5
+		}
+	}
+}
+
+YUK_civil_war_loyalists = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = YUK_yao_jing_sao_dong_idea
+			}
+			set_temp_variable = {
+				YUK_rebellion_size = 0.4
+			}
+		} else_if = {
+			limit = {
+				has_idea = YUK_yao_jing_sao_dong_a_idea
+			}
+			set_temp_variable = {
+				YUK_rebellion_size = 0.3
+			}
+		} else_if = {
+			limit = {
+				has_idea = YUK_yao_jing_sao_dong_b_idea
+			}
+			set_temp_variable = {
+				YUK_rebellion_size = 0.2
+			}
+		} else_if = {
+			limit = {
+				has_idea = YUK_yao_jing_sao_dong_c_idea
+			}
+			set_temp_variable = {
+				YUK_rebellion_size = 0.1
+			}
+		}
+		set_global_flag = YUK_civil_war_flag
+		start_civil_war = {
+			ideology = fandong
+			size = YUK_rebellion_size
+			capital = 263
+
+			set_country_flag = YUK_rebellions_flag
+		}
+		set_country_flag = YUK_loyalists_flag
+		add_popularity = {
+			ideology = fandong
+			popularity = -100
+		}
+		YUK_civil_war_character_move = yes
+		LAV = {
+			load_focus_tree = {
+				tree = YUK_focus
+				copy_completed_from = KZM
+			}
+			uncomplete_national_focus = {
+				focus = YUK_yu_yao_jing_de_shang_tan
+				uncomplete_children = yes
+			}
+			unlock_national_focus = YUK_yu_yao_jing_de_shang_tan
+			unlock_national_focus = YUK_yao_jing_ge_ming
+		}
+		news_event = {
+			id = yuk.102
+			days = 5
+		}
+	}
+}
+
+YUK_placate_fairy_discontent = {
+	if = {
+		limit = {
+			has_idea = YUK_yao_jing_sao_dong_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yao_jing_sao_dong_idea
+			add_idea = YUK_yao_jing_sao_dong_a_idea
+		}
+	} else_if = {
+		limit = { 
+			has_idea = YUK_yao_jing_sao_dong_a_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yao_jing_sao_dong_a_idea
+			add_idea = YUK_yao_jing_sao_dong_b_idea
+		}
+	} else_if = {
+		limit = { 
+			has_idea = YUK_yao_jing_sao_dong_b_idea
+		}
+		swap_ideas = {
+			remove_idea = YUK_yao_jing_sao_dong_b_idea
+			add_idea = YUK_yao_jing_sao_dong_c_idea
+		}
+	} else_if = {
+		limit = { 
+			has_idea = YUK_yao_jing_sao_dong_c_idea
+		}
+		remove_ideas = YUK_yao_jing_sao_dong_c_idea
+	} else = {
+		add_political_power = 150
+	}
+}
+
+d_YUK_rad_cw = {
+	YUK_civil_war_radicalists = yes
+}
+
+d_YUK_ic_lean = {
+	YUK_leaning_industry = yes
+}
+
+d_YUK_mil_lean = {
+	YUK_leaning_military = yes
+}
+

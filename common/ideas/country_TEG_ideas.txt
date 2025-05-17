@@ -487,5 +487,18 @@ ideas = {
 				}
 			}
 		}
+
+		# MRY 信仰的胜利
+		MRY_xin_yang_de_sheng_li_idea = {
+			picture = generic_faith
+			modifier = {
+				political_power_gain = 1.0
+				monthly_population = 0.15
+				drift_defence_factor = 0.5
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				compliance_growth = 0.1
+			}
+		}
 	}
 }

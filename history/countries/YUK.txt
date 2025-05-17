@@ -22,6 +22,7 @@
         #工程学 
         jichushuxue = 1
         shuxuegongju = 1
+        lingben = 1
 
         #专用工程学
 
@@ -38,26 +39,38 @@
 }
 146.1.1={
     oob = "YUK_146"
+
+    country_lock_all_division_template = yes
     
     add_ideas = {
-    manpowerlv1
-    isolation  
-    Village
-	Fairy
-    close2
-    hawk0
-    sc_rule
+        manpowerlv1
+        civilian_economy  
+        Village
+        Fairy
+        close2
+        hawk0
+        sc_rule
+    }
+    add_ideas = {
+        YUK_yao_jing_sao_dong_idea
+        YUK_yu_suan_qing_xie_jun_heng_idea
+        YUK_luo_hou_de_sheng_chan_mo_shi_idea
     }
     set_politics = {
-    	ruling_party = guli
+    	ruling_party = oldgenso
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 2
-        guli = 86
-        neworder = 5
-        oldorder = 0
-        fandong = 7
+        qinwai = 1
+        guli = 2
+        neworder = 1
+        oldorder = 1
+        fandong = 40
+        oldgenso = 55
     }
+    recruit_character = YUK_yuk
+    recruit_character = YUK_larva
+    recruit_character = YUK_kurumi
+    recruit_character = YUK_elly
 }

@@ -1,0 +1,35 @@
+MEL_decrease_political_collapse = {
+	if = {
+		limit = {
+			has_idea = MEL_zheng_zhi_beng_kui_idea
+		}
+		swap_ideas = {
+			remove_idea = MEL_zheng_zhi_beng_kui_idea
+			add_idea = MEL_zheng_zhi_beng_kui_a_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = MEL_zheng_zhi_beng_kui_a_idea
+		}
+		swap_ideas = {
+			remove_idea = MEL_zheng_zhi_beng_kui_a_idea
+			add_idea = MEL_zheng_zhi_beng_kui_b_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = MEL_zheng_zhi_beng_kui_b_idea
+		}
+		swap_ideas = {
+			remove_idea = MEL_zheng_zhi_beng_kui_b_idea
+			add_idea = MEL_zheng_zhi_beng_kui_c_idea
+		}
+	} else_if = {
+		limit = {
+			has_idea = MEL_zheng_zhi_beng_kui_c_idea
+		}
+		remove_ideas = MEL_zheng_zhi_beng_kui_c_idea
+	} else = {
+		# shouldn't happen but in case anyway
+		add_political_power = 150
+	}
+}

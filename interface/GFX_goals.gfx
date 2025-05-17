@@ -68,6 +68,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_industry_move"
+		texturefile = "gfx/interface/goals/focus_generic_industry_move.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_energy_plant"
 		texturefile = "gfx/interface/goals/focus_generic_energy_plant.png"			
 	}
@@ -303,6 +308,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_stability"
+		texturefile = "gfx/interface/goals/focus_generic_stability.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_technocracy"
 		texturefile = "gfx/interface/goals/focus_generic_technocracy.png"			
 	}
@@ -320,6 +330,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_revanchism"
 		texturefile = "gfx/interface/goals/focus_generic_revanchism.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_bushido"
+		texturefile = "gfx/interface/goals/focus_generic_bushido.png"			
 	}
 
 	SpriteType = {
@@ -370,6 +385,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_revolution_propaganda"
 		texturefile = "gfx/interface/goals/focus_generic_revolution_propaganda.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_military_department"
+		texturefile = "gfx/interface/goals/focus_generic_military_department.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_industry_department"
+		texturefile = "gfx/interface/goals/focus_generic_industry_department.png"			
 	}
 
 	SpriteType = {
@@ -448,6 +473,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_OKI"
+		texturefile = "gfx/interface/goals/focus_generic_attack_OKI.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_OTG"
 		texturefile = "gfx/interface/goals/focus_generic_attack_OTG.png"			
 	}
@@ -475,6 +505,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_attack_SRB"
 		texturefile = "gfx/interface/goals/focus_generic_attack_SRB.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_AKI"
+		texturefile = "gfx/interface/goals/focus_generic_attack_AKI.png"			
 	}
 
 	SpriteType = {
@@ -583,6 +618,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_TEG_weapon_aid"
+		texturefile = "gfx/interface/goals/focus_generic_TEG_weapon_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_gekokujyo_military_advisor"
+		texturefile = "gfx/interface/goals/focus_generic_gekokujyo_military_advisor.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_SEJ_military_aid"
 		texturefile = "gfx/interface/goals/focus_generic_SEJ_military_aid.png"			
 	}
@@ -590,6 +635,21 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_SEJ_industrial_aid"
 		texturefile = "gfx/interface/goals/focus_generic_SEJ_industrial_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_CIR_weapon_aid"
+		texturefile = "gfx/interface/goals/focus_generic_CIR_weapon_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_CIR_military_aid"
+		texturefile = "gfx/interface/goals/focus_generic_CIR_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_CIR_industrial_aid"
+		texturefile = "gfx/interface/goals/focus_generic_CIR_industrial_aid.png"			
 	}
 
 	SpriteType = {
@@ -1241,6 +1301,49 @@ spriteTypes = {
 	SpriteType = {
 		name = "AKI_focus_union_harvest_assembly"
 		texturefile = "gfx/interface/goals/focus_AKI_union_harvest_assembly.png"			
+	}
+
+	#### SGS 西南妖精联合
+	SpriteType = {
+		name = "SGS_focus_southwest_fairy_emergency_meeting"
+		texturefile = "gfx/interface/goals/focus_SGS_southwest_fairy_emergency_meeting.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_southwest_revolutionary_federation"
+		texturefile = "gfx/interface/goals/focus_SGS_southwest_revolutionary_federation.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_southwest_federation"
+		texturefile = "gfx/interface/goals/focus_SGS_southwest_federation.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_fairy_militarism"
+		texturefile = "gfx/interface/goals/focus_SGS_fairy_militarism.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_fairys_strength_in_numbers"
+		texturefile = "gfx/interface/goals/focus_SGS_fairys_strength_in_numbers.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_state_of_fairies"
+		texturefile = "gfx/interface/goals/focus_SGS_state_of_fairies.png"			
+	}
+
+	#### ZYD 中有之道贸易区
+	SpriteType = {
+		name = "ZYD_focus_republic_of_nakayuunomichi"
+		texturefile = "gfx/interface/goals/focus_ZYD_republic_of_nakayuunomichi.png"			
+	}
+
+	#### YUK 太阳花田
+	SpriteType = {
+		name = "YUK_focus_southwest_revolutionary_front"
+		texturefile = "gfx/interface/goals/focus_YUK_southwest_revolutionary_front.png"			
 	}
 
 	#### YYK Saigyouji Yuyuko 白玉楼

@@ -72,7 +72,6 @@
 
                 tag = TKM
                 tag = NMS
-                tag = MAM
 
                 tag = SBK
                 tag = KAG
@@ -119,9 +118,6 @@
         add_ideas = great_presige_idea
     }
     OKI = {
-        add_ideas = great_presige_idea
-    }
-    YUK = {
         add_ideas = great_presige_idea
     }
     EET = {

@@ -69,9 +69,6 @@ FAPO_situation = {
 TH_bamboo = { #
 	priority = 20
 }
-YUK_dikanglinianchuanbo_category = {
-	priority = 20
-}
 MRY_kejigexin = {
 	priority = 20
 }

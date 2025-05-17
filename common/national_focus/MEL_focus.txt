@@ -1,0 +1,647 @@
+focus_tree = {
+	id = MEL_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MEL
+		}
+	}
+
+	continuous_focus_position = { x = 1400 y = 1700 }
+
+	shared_focus = SW_zhang_liang_tu_di
+	shared_focus = ty_medium_main 
+  
+	default = no
+
+	# 强化梅蒂欣权威
+	focus = {
+		id = MEL_qiang_hua_mei_di_xin_quan_wei
+		icon = GFX_goal_generic_political_pressure
+		cost = 7
+		x = 28
+		y = 1
+	
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视军事组织
+	focus = {
+		id = MEL_zhong_shi_jun_shi_zu_zhi
+		icon = GFX_focus_generic_full_social_mobilization
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = MEL_qiang_hua_mei_di_xin_quan_wei
+
+		prerequisite = {
+			focus = MEL_qiang_hua_mei_di_xin_quan_wei
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MEL_ling_lan_jun_guo_zhu_yi_idea
+				add_idea = MEL_ling_lan_jun_guo_zhu_yi_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争计划处
+	focus = {
+		id = MEL_zhan_zheng_ji_hua_chu
+		icon = GFX_focus_staff
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MEL_zhong_shi_jun_shi_zu_zhi
+
+		prerequisite = {
+			focus = MEL_zhong_shi_jun_shi_zu_zhi
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MEL_ling_lan_jun_guo_zhu_yi_a_idea
+				add_idea = MEL_ling_lan_jun_guo_zhu_yi_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争工业
+	focus = {
+		id = MEL_zhan_zheng_gong_ye
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = MEL_zhan_zheng_ji_hua_chu
+
+		prerequisite = {
+			focus = MEL_zhan_zheng_ji_hua_chu
+		}
+	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整肃内政
+	focus = {
+		id = MEL_zheng_su_nei_zheng
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = MEL_qiang_hua_mei_di_xin_quan_wei
+
+		prerequisite = {
+			focus = MEL_qiang_hua_mei_di_xin_quan_wei
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			MEL_decrease_political_collapse = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 清洗反对派
+	focus = {
+		id = MEL_qing_xi_fan_dui_pai
+		icon = GFX_focus_purge
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MEL_zheng_su_nei_zheng
+
+		prerequisite = {
+			focus = MEL_zheng_su_nei_zheng
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = fandong
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = -0.15
+			}
+			MEL_decrease_political_collapse = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 调整产业结构
+	focus = {
+		id = MEL_tiao_zheng_chan_ye_jie_gou
+		icon = GFX_goal_generic_production
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = MEL_qing_xi_fan_dui_pai
+
+		prerequisite = {
+			focus = MEL_qing_xi_fan_dui_pai
+		}
+	
+		completion_reward = {
+			remove_ideas = MEL_bo_ruo_de_min_yong_gong_ye_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 先发制人
+	focus = {
+		id = MEL_xian_fa_zhi_ren
+		icon = GFX_focus_attack_AKI
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = MEL_qiang_hua_mei_di_xin_quan_wei
+
+		prerequisite = {
+			focus = MEL_zhan_zheng_ji_hua_chu
+		}
+
+		prerequisite = {
+			focus = MEL_qing_xi_fan_dui_pai
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = AKI
+			}
+		}
+
+		will_lead_to_war_with = AKI
+	
+		completion_reward = {
+			create_wargoal = {
+				target = AKI
+				type = annex_everything
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 继续军事独裁
+	focus = {
+		id = MEL_ji_xu_jun_shi_du_cai
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = MEL_zhan_zheng_gong_ye
+
+		prerequisite = {
+			focus = MEL_zhan_zheng_gong_ye
+		}
+
+		mutually_exclusive = {
+			focus = MEL_fu_quan_wen_guan_zheng_fu
+		}
+	
+		completion_reward = {
+			add_war_support = 0.1
+			MEL_decrease_political_collapse = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 赋权文官政府
+	focus = {
+		id = MEL_fu_quan_wen_guan_zheng_fu
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = MEL_tiao_zheng_chan_ye_jie_gou
+
+		prerequisite = {
+			focus = MEL_tiao_zheng_chan_ye_jie_gou
+		}
+
+		mutually_exclusive = {
+			focus = MEL_ji_xu_jun_shi_du_cai
+		}
+	
+		completion_reward = {
+			add_stability = 0.1
+			MEL_decrease_political_collapse = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 特殊作物种植场
+	focus = {
+		id = MEL_te_shu_zuo_wu_zhong_zhi_chang
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MEL_xian_fa_zhi_ren
+
+		prerequisite = {
+			focus = MEL_ji_xu_jun_shi_du_cai
+			focus = MEL_fu_quan_wen_guan_zheng_fu
+		}
+
+		available = {
+			has_completed_focus = SW_zhang_liang_tu_di
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 种植毒性作物
+	focus = {
+		id = MEL_zhong_zhi_du_xing_zuo_wu
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MEL_te_shu_zuo_wu_zhong_zhi_chang
+
+		prerequisite = {
+			focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 种植药用作物
+	focus = {
+		id = MEL_zhong_zhi_yao_yong_zuo_wu
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+    	relative_position_id = MEL_te_shu_zuo_wu_zhong_zhi_chang
+
+		prerequisite = {
+			focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争税
+	focus = {
+		id = MEL_zhan_zheng_shui
+		icon = GFX_focus_SWI_issue_war_bonds
+		cost = 7
+		x = -2
+		y = 2
+
+		relative_position_id = MEL_ji_xu_jun_shi_du_cai
+
+		prerequisite = {
+			focus = MEL_ji_xu_jun_shi_du_cai
+		}
+	
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = MEL_zhan_zheng_shui_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 增加国防预算
+	focus = {
+		id = MEL_zeng_jia_guo_fang_yu_suan
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = 2
+		y = 2
+
+    	relative_position_id = MEL_fu_quan_wen_guan_zheng_fu
+
+		prerequisite = {
+			focus = MEL_fu_quan_wen_guan_zheng_fu
+		}
+	
+		completion_reward = {
+			add_ideas = MEL_guo_fang_yu_suan_zeng_jia_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+  	# 在西南的胜利
+  	focus = {
+		id = MEL_zai_xi_nan_de_sheng_li
+		icon = GFX_focus_glory
+		cost = 7
+		x = 0
+		y = 2
+
+    	relative_position_id = MEL_te_shu_zuo_wu_zhong_zhi_chang
+
+		prerequisite = {
+			focus = MEL_zhan_zheng_shui
+			focus = MEL_zeng_jia_guo_fang_yu_suan
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			SGS = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			add_political_power = 150
+			MEL_decrease_political_collapse = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+  	# 西南单一制
+  	focus = {
+		id = MEL_xi_nan_dan_yi_zhi
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = MEL_zai_xi_nan_de_sheng_li
+
+		prerequisite = {
+			focus = MEL_zai_xi_nan_de_sheng_li
+		}
+	
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+			SW_can_integrate_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视进攻
+	focus = {
+		id = MEL_zhong_shi_jin_gong
+		icon = GFX_goal_generic_wolf_pack
+		cost = 12
+		x = -3
+		y = 1
+
+		relative_position_id = MEL_zai_xi_nan_de_sheng_li
+
+		prerequisite = {
+			focus = MEL_zai_xi_nan_de_sheng_li
+		}
+
+		available = {
+			has_completed_focus = MEL_zhan_zheng_ji_hua_chu
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MEL_ling_lan_jun_guo_zhu_yi_b_idea
+				add_idea = MEL_ling_lan_jun_guo_zhu_yi_c_idea
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+  	# 进攻花田
+  	focus = {
+		id = MEL_jin_gong_hua_tian
+		icon = GFX_focus_attack_YUK
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = MEL_xi_nan_dan_yi_zhi
+
+		prerequisite = {
+			focus = MEL_xi_nan_dan_yi_zhi
+		}
+
+		prerequisite = {
+			focus = MEL_zhong_shi_jin_gong
+		}
+	
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+			is_subject = no
+			YUK = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = YUK
+			}
+		}
+
+		will_lead_to_war_with = YUK
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YUK
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+  	# 神秘学准备
+  	focus = {
+		id = MEL_shen_mi_xue_zhun_bei
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 3
+		y = 1
+
+    	relative_position_id = MEL_zai_xi_nan_de_sheng_li
+
+		prerequisite = {
+			focus = MEL_zai_xi_nan_de_sheng_li
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 3
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+  	# 挑战秘神
+  	focus = {
+		id = MEL_tiao_zhan_mi_shen
+		icon = GFX_focus_attack_OKI
+		cost = 12
+		x = 2
+		y = 1
+
+    	relative_position_id = MEL_xi_nan_dan_yi_zhi
+
+		prerequisite = {
+			focus = MEL_xi_nan_dan_yi_zhi
+		}
+
+		prerequisite = {
+			focus = MEL_shen_mi_xue_zhun_bei
+		}
+	
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+			is_subject = no
+			OKI = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = OKI
+			}
+		}
+
+		will_lead_to_war_with = OKI
+	
+		completion_reward = {
+			create_wargoal = {
+				target = OKI
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}

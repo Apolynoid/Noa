@@ -1,0 +1,38 @@
+defined_text = { 
+	name = YUK_current_promise_stt
+	text = {
+		trigger = {
+			YUK = {
+				has_country_flag = YUK_economy_promise_flag
+			}
+		}
+		localization_key = YUK_current_economy_promise_tt
+	}
+	text = {
+		trigger = {
+			YUK = {
+				has_country_flag = YUK_stability_promise_flag
+			}
+		}
+		localization_key = YUK_current_stability_promise_tt
+	}
+	text = {
+		trigger = {
+			YUK = {
+				has_country_flag = YUK_production_promise_flag
+			}
+		}
+		localization_key = YUK_current_production_promise_tt
+	}
+	text = {
+		trigger = {
+			YUK = {
+				has_country_flag = YUK_technology_promise_flag
+			}
+		}
+		localization_key = YUK_current_technology_promise_tt
+	}
+	text = {
+		localization_key = YUK_current_no_promise_tt
+	}
+}

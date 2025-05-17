@@ -217,6 +217,10 @@ TKM_military_construction_first = {
 		always = yes
 	}
 
+	abort = {
+		always = no
+	}
+
 	ai_strategy = {
 		type = building_target
 		id = arms_factory

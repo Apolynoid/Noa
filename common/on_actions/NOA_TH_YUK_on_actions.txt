@@ -1,0 +1,85 @@
+on_actions = {
+	on_weekly_YUK = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = YUK_zheng_he_fu_yong_jing_ji
+				}
+				every_subject_country = {
+					limit = {
+						NOT = {
+							has_idea = YUK_hua_tian_shi_li_quan_idea
+						}
+					}
+					add_ideas = YUK_hua_tian_shi_li_quan_idea
+				}
+			}
+		}
+	}
+
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = YUK
+					}
+				}
+				ROOT = {
+					country_event = yuk.107
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = fandong
+						}
+					}
+					# radicalists win
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = YUK_elly
+						}
+						set_nationality = {
+							target_country = XXX
+							character = YUK_kurumi
+						}
+						set_nationality = {
+							target_country = XXX
+							character = YUK_yuk
+						}
+					}
+					ROOT = {
+						news_event = {
+							id = yuk.103
+							days = 3
+						}
+						country_event = {
+							id = yuk.106
+							days = 7
+						}
+					}
+				}
+				else = {
+					# loyalists win
+					FROM = {
+						set_nationality = {
+							target_country = XXX
+							character = YUK_larva
+						}
+					}
+					ROOT = {
+						news_event = {
+							id = yuk.104
+							days = 3
+						}
+						country_event = {
+							id = yuk.105
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}

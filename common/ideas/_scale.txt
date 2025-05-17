@@ -1,0 +1,138 @@
+ideas = {
+
+	scale = { 
+		law = yes
+
+		Tribal = {
+			allowed_to_remove = {
+				always = no
+			}
+			cost = 0
+			cancel_if_invalid = no
+			modifier = {
+				conscription_factor = 0.2
+				mobilization_speed = 0.1
+				army_org_factor = -0.2
+				PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.1
+				industrial_capacity_factory = -0.15
+				research_speed_factor = -0.1
+				army_attack_factor = 0.1
+				stability_factor = -0.15
+
+				enemy_justify_war_goal_time = -0.1
+				generate_wargoal_tension = -0.15
+			}
+			default = yes
+		}
+				
+		Shrine = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				conscription_factor = 0.1
+				CONSUMER_GOODS_FACTOR = -0.05
+				PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.15
+				industrial_capacity_factory = -0.15
+				TRAINING_TIME_ARMY_FACTOR = -0.2
+				army_org_factor = 0.25
+				ARMY_MORALE_factor = 0.15
+				research_speed_factor = -0.1
+				stability_factor = 0.35
+				war_support_factor = 0.05
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Village = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.05
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Town = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				stability_factor = 0.1
+				conscription_factor = 0.05
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		
+		Country = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				TRAINING_TIME_FACTOR = -0.05
+				POLITICAL_POWER_GAIN = 0.1
+				army_org_factor = 0.1
+				stability_factor = 0.15
+				conscription_factor = 0.1
+				operative_slot = 1
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		
+		Empire = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				POLITICAL_POWER_GAIN = 0.35
+				TRAINING_TIME_FACTOR = -0.05
+				stability_factor = 0.25
+				army_org_factor = 0.1
+				conscription_factor = 0.15
+				operative_slot = 1
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		World = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				POLITICAL_POWER_GAIN = 0.5
+				TRAINING_TIME_FACTOR = -0.1
+				stability_factor = 0.3
+				army_org_factor = 0.15
+				conscription_factor = 0.15
+				operative_slot = 3
+				compliance_growth = 0.01
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+	}
+}

@@ -739,7 +739,6 @@ Youkai_country = {
 		tag = IKU
 		
 		tag = YUG
-		tag = MAM
 		tag = PRS
 		# tag = ONI
 		tag = NMN

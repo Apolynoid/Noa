@@ -1,5 +1,7 @@
 should_have_special_materiel_manufacturers = {
-	always = no
+	OR = {
+		original_tag = CIR
+	}
 }
 
 should_have_special_tank_manufacturers = {

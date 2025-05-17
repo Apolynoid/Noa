@@ -1,0 +1,599 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+focus_tree = {
+	id = ZYD_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ZYD
+		}
+	}
+
+	continuous_focus_position = { x = 1400 y = 1700 }
+
+	shared_focus = SW_zhang_liang_tu_di
+	shared_focus = ty_medium_main 
+  
+	default = no
+
+	# 继续发展贸易
+	focus = {
+		id = ZYD_ji_xu_fa_zhan_mao_yi
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7
+		x = 28
+		y = 1
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ZYD_xi_nan_mao_yi_zhong_xin_idea
+				add_idea = ZYD_xi_nan_mao_yi_zhong_xin_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 政治改革
+	focus = {
+		id = ZYD_zheng_zhi_gai_ge
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_ji_xu_fa_zhan_mao_yi
+
+		prerequisite = {
+			focus = ZYD_ji_xu_fa_zhan_mao_yi
+		}
+	
+		completion_reward = {
+			modify_timed_idea = {
+				idea = ZYD_di_xiao_de_zheng_fu_idea
+				days = -1460
+			}
+			swap_ideas = {
+				remove_idea = ZYD_di_xiao_de_zheng_fu_idea
+				add_idea = ZYD_di_xiao_de_zheng_fu_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 学习天狗政治制度
+	focus = {
+		id = ZYD_xue_xi_tian_gou_zheng_zhi_zhi_du
+		icon = NTR_focus_study_political_system_of_TEG
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_zheng_zhi_gai_ge
+
+		prerequisite = {
+			focus = ZYD_zheng_zhi_gai_ge
+		}
+
+		available = {
+			TEG = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	
+		completion_reward = {
+			remove_ideas = ZYD_di_xiao_de_zheng_fu_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 中有之道警卫队
+	focus = {
+		id = ZYD_zhong_you_zhi_dao_jing_wei_dui
+		icon = GFX_focus_generic_manpower
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = ZYD_zheng_zhi_gai_ge
+
+		prerequisite = {
+			focus = ZYD_zheng_zhi_gai_ge
+		}
+	
+		completion_reward = {
+			add_ideas = ZYD_zhong_you_zhi_dao_jing_wei_dui_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗武器援助
+	focus = {
+		id = ZYD_tian_gou_wu_qi_yuan_zhu
+		icon = GFX_focus_TEG_weapon_aid
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = ZYD_zhong_you_zhi_dao_jing_wei_dui
+
+		prerequisite = {
+			focus = ZYD_zhong_you_zhi_dao_jing_wei_dui
+		}
+	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = gun_a
+				producer = TEG
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = mortar_a
+				producer = TEG
+				amount = 160
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗军事援助
+	focus = {
+		id = ZYD_tian_gou_jun_shi_yuan_zhu
+		icon = NTR_focus_military_cooperation_with_TEG
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_tian_gou_wu_qi_yuan_zhu
+
+		prerequisite = {
+			focus = ZYD_tian_gou_wu_qi_yuan_zhu
+		}
+
+		bypass = {
+			TEG = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 打击腐败问题
+	focus = {
+		id = ZYD_da_ji_fu_bai_wen_ti
+		icon = GFX_focus_ARG_crackdown_on_corruption
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_tian_gou_jun_shi_yuan_zhu
+
+		prerequisite = {
+			focus = ZYD_tian_gou_jun_shi_yuan_zhu
+		}
+
+		mutually_exclusive = {
+			focus = ZYD_mo_xu_fu_bai_fa_zhan
+		}
+	
+		completion_reward = {
+			remove_ideas = ZYD_fu_bai_wen_ti_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 邀请天狗投资者
+	focus = {
+		id = ZYD_yao_qing_tian_gou_tou_zi_zhe
+		icon = GFX_focus_mex_privatisation
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = ZYD_zheng_zhi_gai_ge
+
+		prerequisite = {
+			focus = ZYD_zheng_zhi_gai_ge
+		}
+
+		bypass = {
+			TEG = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ZYD_xi_nan_mao_yi_zhong_xin_a_idea
+				add_idea = ZYD_xi_nan_mao_yi_zhong_xin_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗工业援助
+	focus = {
+		id = ZYD_tian_gou_gong_ye_yuan_zhu
+		icon = NTR_focus_economic_cooperation_with_TEG
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = ZYD_yao_qing_tian_gou_tou_zi_zhe
+
+		prerequisite = {
+			focus = ZYD_yao_qing_tian_gou_tou_zi_zhe
+		}
+
+		bypass = {
+			TEG = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 授权私人土地开发
+	focus = {
+		id = ZYD_shou_quan_si_ren_tu_di_kai_fa
+		icon = GFX_goal_generic_construction
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_tian_gou_gong_ye_yuan_zhu
+
+		prerequisite = {
+			focus = ZYD_tian_gou_gong_ye_yuan_zhu
+		}
+	
+		completion_reward = {
+			custom_effect_tooltip = ZYD_auto_development_tt
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 默许腐败发展
+	focus = {
+		id = ZYD_mo_xu_fu_bai_fa_zhan
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_shou_quan_si_ren_tu_di_kai_fa
+
+		prerequisite = {
+			focus = ZYD_shou_quan_si_ren_tu_di_kai_fa
+		}
+
+		mutually_exclusive = {
+			focus = ZYD_da_ji_fu_bai_wen_ti
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			modify_timed_idea = {
+				idea = ZYD_fu_bai_wen_ti_idea
+				days = -2555
+			}
+			swap_ideas = {
+				remove_idea = ZYD_fu_bai_wen_ti_idea
+				add_idea = ZYD_fu_bai_wen_ti_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 中有之道共和国
+	focus = {
+		id = ZYD_zhong_you_zhi_dao_gong_he_guo
+		icon = ZYD_focus_republic_of_nakayuunomichi
+		cost = 7
+		x = 0
+		y = 5
+
+		relative_position_id = ZYD_zheng_zhi_gai_ge
+
+		prerequisite = {
+			focus = ZYD_da_ji_fu_bai_wen_ti
+			focus = ZYD_mo_xu_fu_bai_fa_zhan
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = ZYD_republic
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = Country
+							has_idea = Empire
+							has_idea = World
+						}
+					}
+				}
+				add_ideas = Country
+			}
+			hidden_effect = {
+				news_event = {
+					id = zyd.102
+					days = 5
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 扩大征兵范围
+	focus = {
+		id = ZYD_kuo_da_zheng_bing_fan_wei
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = ZYD_zhong_you_zhi_dao_gong_he_guo
+
+		prerequisite = {
+			focus = ZYD_zhong_you_zhi_dao_gong_he_guo
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ZYD_zhong_you_zhi_dao_jing_wei_dui_idea
+				add_idea = ZYD_zhong_you_zhi_dao_jing_wei_dui_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 设立参谋部
+	focus = {
+		id = ZYD_she_li_can_mou_bu
+		icon = GFX_focus_staff
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = ZYD_kuo_da_zheng_bing_fan_wei
+
+		prerequisite = {
+			focus = ZYD_kuo_da_zheng_bing_fan_wei
+		}
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ZYD_zhong_you_zhi_dao_jing_wei_dui_a_idea
+				add_idea = ZYD_zhong_you_zhi_dao_jing_wei_dui_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 资助研究团队
+	focus = {
+		id = ZYD_zi_zhu_yan_jiu_tuan_dui
+		icon = GFX_focus_research2
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = ZYD_zhong_you_zhi_dao_gong_he_guo
+
+		prerequisite = {
+			focus = ZYD_zhong_you_zhi_dao_gong_he_guo
+		}
+	
+		completion_reward = {
+			add_ideas = ZYD_yan_jiu_tou_zi_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = ZYD_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = ZYD_zi_zhu_yan_jiu_tuan_dui
+
+		prerequisite = {
+			focus = ZYD_zi_zhu_yan_jiu_tuan_dui
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 3
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 地区自治法案
+	focus = {
+		id = ZYD_di_qu_zi_zhi_fa_an
+		icon = GFX_focus_generic_treaty
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = ZYD_zhong_you_zhi_dao_gong_he_guo
+
+		prerequisite = {
+			focus = ZYD_kuo_da_zheng_bing_fan_wei
+		}
+
+		prerequisite = {
+			focus = ZYD_zi_zhu_yan_jiu_tuan_dui
+		}
+	
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+			SW_can_integrate_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国国防计划
+	focus = {
+		id = ZYD_gong_he_guo_guo_fang_ji_hua
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = ZYD_di_qu_zi_zhi_fa_an
+
+		prerequisite = {
+			focus = ZYD_di_qu_zi_zhi_fa_an
+		}
+
+		prerequisite = {
+			focus = ZYD_she_li_can_mou_bu
+		}
+
+		mutually_exclusive = {
+			focus = ZYD_dui_hua_tian_de_zhan_zheng
+		}
+
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+		}
+	
+		completion_reward = {
+			add_ideas = ZYD_guo_fang_ji_hua_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 对花田的战争
+	focus = {
+		id = ZYD_dui_hua_tian_de_zhan_zheng
+		icon = GFX_focus_attack_YUK
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = ZYD_di_qu_zi_zhi_fa_an
+
+		prerequisite = {
+			focus = ZYD_di_qu_zi_zhi_fa_an
+		}
+
+		prerequisite = {
+			focus = ZYD_shen_mi_xue_yan_jiu
+		}
+
+		mutually_exclusive = {
+			focus = ZYD_gong_he_guo_guo_fang_ji_hua
+		}
+	
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+			is_subject = no
+			YUK = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = YUK
+			}
+		}
+
+		will_lead_to_war_with = YUK
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YUK
+				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+}

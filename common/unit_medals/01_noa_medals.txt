@@ -23,6 +23,7 @@
 # max_dig_in_factor
 
 @cost = 30
+@special_cost = 50
 
 unit_medals = {
 	
@@ -61,6 +62,24 @@ unit_medals = {
 		cost = @cost
 		unit_modifiers = {
 			breakthrough_factor = 0.1
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+
+	### SEJ
+	guard_badge = {
+		available = { 
+			original_tag = SEJ 
+			has_completed_focus = SEJ_yi_shi_xing_tai_kuang_re
+		}
+		frame = 5
+		icon = "GFX_medal_icon_sej"
+		cost = @special_cost
+		unit_modifiers = {
+			army_attack_factor = 0.1
+			army_morale_factor = 0.1
 		}
 		one_time_effect = {
 			add_divisional_commander_xp = 100

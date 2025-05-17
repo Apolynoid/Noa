@@ -1,0 +1,1399 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+focus_tree = {
+	id = SGS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SGS
+		}
+	}
+
+	continuous_focus_position = { x = 1400 y = 1700 }
+
+	shared_focus = SW_zhang_liang_tu_di
+	shared_focus = ty_medium_main 
+  
+	default = no
+
+	# 西南妖精紧急会议
+	focus = {
+		id = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+		icon = SGS_focus_southwest_fairy_emergency_meeting
+		cost = 7
+		x = 31
+		y = 1
+
+		offset = {
+			x = -2
+			trigger = {
+				OR = {
+					has_completed_focus = SGS_yao_jing_ji_jin_pai
+					has_completed_focus = SGS_yao_jing_gai_ge_pai
+					has_completed_focus = SGS_yao_jing_zhong_zu_pai
+				}
+			}
+		}
+
+		completion_reward = {
+			country_event = sgs.101
+			swap_ideas = {
+				remove_idea = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_idea
+				add_idea = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精激进派
+	focus = {
+		id = SGS_yao_jing_ji_jin_pai
+		icon = unknown
+		cost = 1
+		x = -7
+		y = 1
+
+		relative_position_id = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SGS_yao_jing_gai_ge_pai
+			}
+			NOT = {
+				has_completed_focus = SGS_yao_jing_zhong_zu_pai
+			}
+		}
+
+		offset = {
+			x = 7
+			trigger = {
+				has_completed_focus = SGS_yao_jing_ji_jin_pai
+			}
+		}
+
+		prerequisite = {
+			focus = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yao_jing_gai_ge_pai
+			focus = SGS_yao_jing_zhong_zu_pai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 革命宣传
+	focus = {
+		id = SGS_ge_ming_xuan_chuan
+		icon = GFX_focus_revolution_propaganda
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_yao_jing_ji_jin_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_ji_jin_pai
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = SGS_zhan_zheng_de_yin_ying_idea
+				add_idea = SGS_zhan_zheng_de_yin_ying_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 激发革命热情
+	focus = {
+		id = SGS_ji_fa_ge_ming_re_qing
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_ge_ming_xuan_chuan
+
+		prerequisite = {
+			focus = SGS_ge_ming_xuan_chuan
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			remove_ideas = SGS_zhan_zheng_de_yin_ying_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 组织生产运动
+	focus = {
+		id = SGS_zu_zhi_sheng_chan_yun_dong
+		icon = GFX_goal_generic_production
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_yao_jing_ji_jin_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_ji_jin_pai
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南革命联邦
+	focus = {
+		id = SGS_xi_nan_ge_ming_lian_bang
+		icon = SGS_focus_southwest_revolutionary_federation
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_zu_zhi_sheng_chan_yun_dong
+
+		prerequisite = {
+			focus = SGS_zu_zhi_sheng_chan_yun_dong
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+			SW_can_integrate_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南的未来
+	focus = {
+		id = SGS_xi_nan_de_wei_lai
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = SGS_yao_jing_ji_jin_pai
+
+		prerequisite = {
+			focus = SGS_ge_ming_xuan_chuan
+		}
+
+		prerequisite = {
+			focus = SGS_zu_zhi_sheng_chan_yun_dong
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入下克上运动
+	focus = {
+		id = SGS_jia_ru_xia_ke_shang_yun_dong
+		icon = GFX_focus_gekokujyo_movement
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_xi_nan_de_wei_lai
+
+		prerequisite = {
+			focus = SGS_xi_nan_de_wei_lai
+		}
+
+		prerequisite = {
+			focus = SGS_ji_fa_ge_ming_re_qing
+		}
+
+		mutually_exclusive = {
+			focus = SGS_xi_nan_ge_ming_dao_lu
+		}
+
+		available = {
+			NOT = {
+				GEK = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			GEK = {
+				country_event = sgs.105
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南革命道路
+	focus = {
+		id = SGS_xi_nan_ge_ming_dao_lu
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_xi_nan_de_wei_lai
+
+		prerequisite = {
+			focus = SGS_xi_nan_de_wei_lai
+		}
+
+		prerequisite = {
+			focus = SGS_xi_nan_ge_ming_lian_bang
+		}
+
+		mutually_exclusive = {
+			focus = SGS_jia_ru_xia_ke_shang_yun_dong
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精改革派
+	focus = {
+		id = SGS_yao_jing_gai_ge_pai
+		icon = unknown
+		cost = 1
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SGS_yao_jing_ji_jin_pai
+			}
+			NOT = {
+				has_completed_focus = SGS_yao_jing_zhong_zu_pai
+			}
+		}
+
+		prerequisite = {
+			focus = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yao_jing_ji_jin_pai
+			focus = SGS_yao_jing_zhong_zu_pai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 和平宣传
+	focus = {
+		id = SGS_he_ping_xuan_chuan
+		icon = GFX_focus_peace_propaganda
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = SGS_yao_jing_gai_ge_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_gai_ge_pai
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与中有之道的协议
+	focus = {
+		id = SGS_yu_zhong_you_zhi_dao_de_xie_yi
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_he_ping_xuan_chuan
+
+		prerequisite = {
+			focus = SGS_he_ping_xuan_chuan
+		}
+
+		mutually_exclusive = {
+			focus = SGS_tong_yi_xi_nan_de_xiong_xin
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗工业援助
+	focus = {
+		id = SGS_tian_gou_gong_ye_yuan_zhu
+		icon = NTR_focus_economic_cooperation_with_TEG
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_yu_zhong_you_zhi_dao_de_xie_yi
+
+		prerequisite = {
+			focus = SGS_yu_zhong_you_zhi_dao_de_xie_yi
+		}
+
+		available = {
+			TEG = {
+				exists = yes
+				is_subject = no
+			}
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			remove_ideas = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 保卫和平的准备
+	focus = {
+		id = SGS_bao_wei_he_ping_de_zhun_bei
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_yao_jing_gai_ge_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_gai_ge_pai
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			if = {
+				limit = {
+					has_idea = SGS_zhan_zheng_de_yin_ying_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_zhan_zheng_de_yin_ying_idea
+					add_idea = SGS_zhan_zheng_de_yin_ying_a_idea
+				}
+			} else = {
+				remove_ideas = SGS_zhan_zheng_de_yin_ying_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 国防动员
+	focus = {
+		id = SGS_guo_fang_dong_yuan
+		icon = GFX_focus_generic_little_entente
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = SGS_yao_jing_gai_ge_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_gai_ge_pai
+		}
+
+		completion_reward = {
+			add_manpower = 200
+			if = {
+				limit = {
+					has_idea = SGS_zhan_zheng_de_yin_ying_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_zhan_zheng_de_yin_ying_idea
+					add_idea = SGS_zhan_zheng_de_yin_ying_b_idea
+				}
+			} else = {
+				remove_ideas = SGS_zhan_zheng_de_yin_ying_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 统一西南的雄心
+	focus = {
+		id = SGS_tong_yi_xi_nan_de_xiong_xin
+		icon = GFX_goal_generic_political_pressure
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_guo_fang_dong_yuan
+
+		prerequisite = {
+			focus = SGS_guo_fang_dong_yuan
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yu_zhong_you_zhi_dao_de_xie_yi
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 促进和解
+	focus = {
+		id = SGS_cu_jin_he_jie
+		icon = GFX_goal_generic_national_unity
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_tong_yi_xi_nan_de_xiong_xin
+
+		prerequisite = {
+			focus = SGS_tong_yi_xi_nan_de_xiong_xin
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SGS_add_20_compliance_tt
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_compliance = 20
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南联邦
+	focus = {
+		id = SGS_xi_nan_lian_bang
+		icon = SGS_focus_southwest_federation
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = SGS_yao_jing_gai_ge_pai
+
+		prerequisite = {
+			focus = SGS_yu_zhong_you_zhi_dao_de_xie_yi
+			focus = SGS_tong_yi_xi_nan_de_xiong_xin
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_in_faction_with = ROOT
+					has_non_aggression_pact_with = ROOT
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+			SW_can_integrate_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精种族派
+	focus = {
+		id = SGS_yao_jing_zhong_zu_pai
+		icon = unknown
+		cost = 1
+		x = 7
+		y = 1
+
+		relative_position_id = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = SGS_yao_jing_ji_jin_pai
+			}
+			NOT = {
+				has_completed_focus = SGS_yao_jing_gai_ge_pai
+			}
+		}
+
+		offset = {
+			x = -7
+			trigger = {
+				has_completed_focus = SGS_yao_jing_zhong_zu_pai
+			}
+		}
+
+		prerequisite = {
+			focus = SGS_xi_nan_yao_jing_jin_ji_hui_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yao_jing_ji_jin_pai
+			focus = SGS_yao_jing_gai_ge_pai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争宣传
+	focus = {
+		id = SGS_zhan_zheng_xuan_chuan
+		icon = GFX_focus_war_propaganda
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_yao_jing_zhong_zu_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_zhong_zu_pai
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = SGS_zhan_zheng_de_yin_ying_idea
+				add_idea = SGS_zhan_zheng_de_yin_ying_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精军国主义
+	focus = {
+		id = SGS_yao_jing_jun_guo_zhu_yi
+		icon = SGS_focus_fairy_militarism
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_xuan_chuan
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_xuan_chuan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_zhan_zheng_de_yin_ying_a_idea
+				add_idea = SGS_yao_jing_jun_guo_zhu_yi_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战斗狂热
+	focus = {
+		id = SGS_zhan_dou_kuang_re
+		icon = GFX_goal_generic_wolf_pack
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_yao_jing_jun_guo_zhu_yi
+
+		prerequisite = {
+			focus = SGS_yao_jing_jun_guo_zhu_yi
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_yao_jing_jun_guo_zhu_yi_idea
+				add_idea = SGS_yao_jing_jun_guo_zhu_yi_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 属于妖精的西南
+	focus = {
+		id = SGS_shu_yu_yao_jing_de_xi_nan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_xuan_chuan
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_xuan_chuan
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			SW_claim_on_every_southwest_state = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精数量优势
+	focus = {
+		id = SGS_yao_jing_shu_liang_you_shi
+		icon = SGS_focus_fairys_strength_in_numbers
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_xuan_chuan
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_xuan_chuan
+		}
+
+		completion_reward = {
+			add_ideas = SGS_yao_jing_shu_liang_you_shi_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖精国家
+	focus = {
+		id = SGS_yao_jing_guo_jia
+		icon = SGS_focus_state_of_fairies
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_yao_jing_shu_liang_you_shi
+
+		prerequisite = {
+			focus = SGS_yao_jing_shu_liang_you_shi
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
+			}
+		}
+
+		completion_reward = {
+			remove_ideas = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争准备
+	focus = {
+		id = SGS_zhan_zheng_zhun_bei
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = 29
+		y = 6
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = 500
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争工业动员
+	focus = {
+		id = SGS_zhan_zheng_gong_ye_dong_yuan
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_zhun_bei
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_zhun_bei
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 超新星计划
+	focus = {
+		id = SGS_chao_xin_xing_ji_hua
+		icon = unknown
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_gong_ye_dong_yuan
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_gong_ye_dong_yuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加快建设速度
+	focus = {
+		id = SGS_jia_kuai_jian_she_su_du
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_chao_xin_xing_ji_hua
+
+		prerequisite = {
+			focus = SGS_chao_xin_xing_ji_hua
+		}
+
+		mutually_exclusive = {
+			focus = SGS_zhu_zhong_sheng_chan_an_quan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 注重生产安全
+	focus = {
+		id = SGS_zhu_zhong_sheng_chan_an_quan
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_chao_xin_xing_ji_hua
+
+		prerequisite = {
+			focus = SGS_chao_xin_xing_ji_hua
+		}
+
+		mutually_exclusive = {
+			focus = SGS_jia_kuai_jian_she_su_du
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 雾之湖武器援助
+	focus = {
+		id = SGS_wu_zhi_hu_wu_qi_yuan_zhu
+		icon = GFX_focus_CIR_weapon_aid
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_zhun_bei
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_zhun_bei
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				producer = CIR
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				producer = CIR
+				amount = 160
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整编西南革命军
+	focus = {
+		id = SGS_zheng_bian_xi_nan_ge_ming_jun
+		icon = GFX_focus_army_dicipline
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = SGS_zhan_zheng_zhun_bei
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_zhun_bei
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_xi_nan_yao_jing_ge_ming_jun_idea
+				add_idea = SGS_xi_nan_yao_jing_ge_ming_jun_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 隐蔽战术
+	focus = {
+		id = SGS_yin_bi_zhan_shu
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_zheng_bian_xi_nan_ge_ming_jun
+
+		prerequisite = {
+			focus = SGS_zheng_bian_xi_nan_ge_ming_jun
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_xi_nan_yao_jing_ge_ming_jun_a_idea
+				add_idea = SGS_xi_nan_yao_jing_ge_ming_jun_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 堑壕战
+	focus = {
+		id = SGS_qian_hao_zhan
+		icon = GFX_focus_trench_warfare
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_yin_bi_zhan_shu
+
+		prerequisite = {
+			focus = SGS_yin_bi_zhan_shu
+		}
+
+		mutually_exclusive = {
+			focus = SGS_you_ji_zhan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_xi_nan_yao_jing_ge_ming_jun_b_idea
+				add_idea = SGS_xi_nan_yao_jing_ge_ming_jun_c_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 游击战
+	focus = {
+		id = SGS_you_ji_zhan
+		icon = GFX_focus_prc_infiltration
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_yin_bi_zhan_shu
+
+		prerequisite = {
+			focus = SGS_yin_bi_zhan_shu
+		}
+
+		mutually_exclusive = {
+			focus = SGS_qian_hao_zhan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SGS_xi_nan_yao_jing_ge_ming_jun_b_idea
+				add_idea = SGS_xi_nan_yao_jing_ge_ming_jun_d_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 雾之湖工业援助
+	focus = {
+		id = SGS_wu_zhi_hu_gong_ye_yuan_zhu
+		icon = GFX_focus_CIR_industrial_aid
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = SGS_wu_zhi_hu_wu_qi_yuan_zhu
+
+		prerequisite = {
+			focus = SGS_wu_zhi_hu_wu_qi_yuan_zhu
+		}
+
+		prerequisite = {
+			focus = SGS_zhan_zheng_gong_ye_dong_yuan
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 雾之湖军事援助
+	focus = {
+		id = SGS_wu_zhi_hu_jun_shi_yuan_zhu
+		icon = GFX_focus_CIR_military_aid
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = SGS_wu_zhi_hu_wu_qi_yuan_zhu
+
+		prerequisite = {
+			focus = SGS_wu_zhi_hu_wu_qi_yuan_zhu
+		}
+
+		prerequisite = {
+			focus = SGS_zheng_bian_xi_nan_ge_ming_jun
+		}
+
+		available = {
+			has_tech = magic_energy1
+			has_full_control_of_state = 248
+		}
+
+		completion_reward = {
+			army_experience = 30
+			custom_effect_tooltip = SGS_test_artillery_company_tt
+			hidden_effect = {
+				# no cheating
+				delete_unit_template_and_units = {
+					division_template = "试验型聚能核心单位"
+					disband = yes
+				}
+				load_oob = "SGS_test_artillery_company"
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南统一
+	focus = {
+		id = SGS_xi_nan_tong_yi
+		icon = GFX_focus_glory
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = SGS_zhan_zheng_zhun_bei
+
+		available = {
+			SW_has_core_of_all_southwest_state = yes
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与花田妖精合作
+	focus = {
+		id = SGS_yu_hua_tian_yao_jing_he_zuo
+		icon = unknown
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = SGS_xi_nan_tong_yi
+
+		prerequisite = {
+			focus = SGS_xi_nan_tong_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_xi_nan_fang_yu_ji_hua
+			focus = SGS_jie_jue_hua_tian_wei_xie
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 西南防御计划
+	focus = {
+		id = SGS_xi_nan_fang_yu_ji_hua
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_xi_nan_tong_yi
+
+		prerequisite = {
+			focus = SGS_xi_nan_tong_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yu_hua_tian_yao_jing_he_zuo
+			focus = SGS_jie_jue_hua_tian_wei_xie
+		}
+
+		completion_reward = {
+			add_ideas = SGS_xi_nan_fang_yu_ji_hua_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 解决花田威胁
+	focus = {
+		id = SGS_jie_jue_hua_tian_wei_xie
+		icon = GFX_focus_attack_YUK
+		cost = 7
+		x = 3
+		y = 1
+
+		relative_position_id = SGS_xi_nan_tong_yi
+
+		prerequisite = {
+			focus = SGS_xi_nan_tong_yi
+		}
+
+		mutually_exclusive = {
+			focus = SGS_yu_hua_tian_yao_jing_he_zuo
+			focus = SGS_xi_nan_fang_yu_ji_hua
+		}
+
+		available = {
+			is_subject = no
+			YUK = {
+				exists = yes
+				is_subject = no
+			}
+			NOT = {
+				has_war_with = YUK
+			}
+		}
+
+		will_lead_to_war_with = YUK
+	
+		completion_reward = {
+			create_wargoal = {
+				target = YUK
+				type = topple_government
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+}

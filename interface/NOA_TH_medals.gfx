@@ -31,6 +31,18 @@ spriteTypes = {
     }
 
 	spriteType = {
+		name = "GFX_medal_icon_sej"
+		texturefile = "gfx/interface/medals/sej_medal_strip.png"
+		noOfFrames = 5
+    }
+	
+	spriteType = {
+		name = "GFX_medal_icon_sej_large"
+		texturefile = "gfx/interface/medals/sej_medal_strip_large.png"
+		noOfFrames = 5
+    }
+
+	spriteType = {
 		name = "GFX_generic_medal_1"
 		texturefile = "gfx/interface/medals/generic_medal_1.png"
 	}

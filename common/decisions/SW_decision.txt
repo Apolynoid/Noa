@@ -91,7 +91,7 @@ SW_xi_nan_tu_di_kai_fa = {
 
         available = {
             ROOT = {
-                num_of_available_civilian_factories > 2
+                num_of_civilian_factories_available_for_projects > 2
             }
             FROM = {
                 NOT = {
@@ -153,7 +153,7 @@ SW_xi_nan_tu_di_kai_fa = {
 
         available = {
             ROOT = {
-                num_of_available_civilian_factories > 4
+                num_of_civilian_factories_available_for_projects > 4
             }
             FROM = {
                 NOT = {
@@ -235,7 +235,7 @@ domestic_affair_management = {
             NOT = {
                 has_country_flag = SW_military_investment_flag
             }
-            num_of_available_civilian_factories > 4
+            num_of_civilian_factories_available_for_projects > 4
         }
 
         modifier = {
@@ -301,7 +301,7 @@ domestic_affair_management = {
             NOT = {
                 has_country_flag = SW_education_investment_flag
             }
-            num_of_available_civilian_factories > 2
+            num_of_civilian_factories_available_for_projects > 2
         }
 
         modifier = {

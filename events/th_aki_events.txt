@@ -147,6 +147,12 @@ country_event = {
 	option = {
 		name = aki.106.1
 		complete_national_focus = AKI_shen_ming_xin_yang_kai_xuan
+		hidden_effect = {
+			news_event = {
+				id = aki.107
+				days = 5
+			}
+		}
 	}
 
 	# 凋零者在大会上发动了政变！
@@ -165,8 +171,83 @@ country_event = {
 		set_politics = {
 			ruling_party = neworder
 		}
+		hidden_effect = {
+			news_event = {
+				id = aki.108
+				days = 5
+			}
+		}
 		ai_chance = {
 			base = 0
+		}
+	}
+}
+
+# AKI举行联盟丰收大会
+news_event = {
+	id = aki.107
+	title = aki.107.t
+	desc = aki.107.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 其他
+	option = {
+		name = aki.107.1
+		trigger = {
+			NOT = {
+				original_tag = AKI
+			}
+		}
+	}
+
+	# AKI
+	option = {
+		name = aki.107.2
+		trigger = {
+			original_tag = AKI
+		}
+	}
+}
+
+# 联盟丰收大会上的政变
+news_event = {
+	id = aki.108
+	title = aki.108.t
+	desc = aki.108.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 其他
+	option = {
+		name = aki.108.1
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = AKI
+					original_tag = SCA
+				}
+			}
+		}
+	}
+
+	# AKI
+	option = {
+		name = aki.108.2
+		trigger = {
+			original_tag = AKI
+		}
+	}
+
+	# SCA
+	option = {
+		name = aki.108.3
+		trigger = {
+			original_tag = SCA
 		}
 	}
 }

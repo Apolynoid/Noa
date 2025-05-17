@@ -1,0 +1,29 @@
+YUK_fairy_discontent_placated = {
+	custom_trigger_tooltip = {
+		tooltip = YUK_fairy_discontent_placated_tt
+		NOT = {
+			has_idea = YUK_yao_jing_sao_dong_idea
+			has_idea = YUK_yao_jing_sao_dong_a_idea
+			has_idea = YUK_yao_jing_sao_dong_b_idea
+			has_idea = YUK_yao_jing_sao_dong_c_idea
+		}
+	}
+}
+
+YUK_not_in_promise = {
+	custom_trigger_tooltip = {
+		tooltip = YUK_not_in_promise_tt
+		NOT = {
+			has_country_flag = YUK_economy_promise_flag
+		}
+		NOT = {
+			has_country_flag = YUK_stability_promise_flag
+		}
+		NOT = {
+			has_country_flag = YUK_production_promise_flag
+		}
+		NOT = {
+			has_country_flag = YUK_technology_promise_flag
+		}
+	}
+}

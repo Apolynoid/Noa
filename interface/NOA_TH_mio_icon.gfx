@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_CIR_union_arsenal_no_9"
+		textureFile = "gfx/interface/ideas/mio/cir_union_arsenal_no_9.png"
+	}
+}

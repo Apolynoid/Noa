@@ -172,7 +172,7 @@ news_event = {
 
 add_namespace = sw
 
-# 
+# [state_to_explore.GetName]得到自发勘探
 country_event = {
 	id = sw.101
 	title = sw.101.t
@@ -181,9 +181,11 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		event_target:state_to_explore = {
-			remove_dynamic_modifier = {
-				modifier = SW_wei_kan_tan_de_tu_di_state_idea
+		hidden_effect = {
+			event_target:state_to_explore = {
+				remove_dynamic_modifier = {
+					modifier = SW_wei_kan_tan_de_tu_di_state_idea
+				}
 			}
 		}
 	}

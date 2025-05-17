@@ -1,6 +1,8 @@
 ﻿l_simp_chinese:
 mio_cat_eq_all_infantry_weapons:0 "所有步兵武器"
+mio_cat_eq_ma_infantry_weapons:0 "灵力步兵武器"
 mio_cat_eq_all_artillery:0 "所有火炮"
+mio_cat_eq_ma_artillery:0 "魔导核心"
 mio_cat_eq_all_armor:0 "所有装甲装备"
 mio_cat_eq_all_aircraft:0 "所有飞行单位"
 mio_cat_eq_all_st_bombers:0 "所有战略轰炸机"
@@ -8,6 +10,8 @@ mio_cat_eq_all_st_bombers:0 "所有战略轰炸机"
 generic_mio_initial_trait_generic_materiel:0 "通用军需品制造商"
 generic_mio_initial_trait_generic_armor:0 "通用装甲制造商"
 generic_mio_initial_trait_generic_aircraft:0 "通用飞行单位制造商"
+
+template_mio_initial_trait_standardized_production_material:0 "军需品标准化制造商"
 
 mio_header_infantry_weapons:0 "步兵武器"
 mio_header_artillery:0 "火炮"

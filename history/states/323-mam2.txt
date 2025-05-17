@@ -1,0 +1,35 @@
+
+state={
+	id=323
+	name="STATE_323"
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SRB
+			add_core_of = SRB
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		856 1070 1558 2889 2905 3161 3601 3604 5640 5658 5673 5682 
+	}
+	manpower=393.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

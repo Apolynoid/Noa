@@ -1,0 +1,221 @@
+add_namespace = sgs
+# 西南妖精紧急会议
+country_event = {
+	id = sgs.101
+	title = sgs.101.t
+	desc = sgs.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	# 激进派在会议上维持优势
+	option = {
+		name = sgs.101.1
+		ai_chance = {
+			base = 7
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.2
+		}
+		hidden_effect = {
+			complete_national_focus = SGS_yao_jing_ji_jin_pai
+			mark_focus_tree_layout_dirty = yes
+			news_event = {
+				id = sgs.102
+				days = 5
+			}
+		}
+	}
+
+	# 改革派得到了更多认同
+	option = {
+		name = sgs.101.2
+		ai_chance = {
+			base = 0
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = qinwai
+			elections_allowed = no
+		}
+		hidden_effect = {
+			complete_national_focus = SGS_yao_jing_gai_ge_pai
+			mark_focus_tree_layout_dirty = yes
+			news_event = {
+				id = sgs.103
+				days = 5
+			}
+		}
+	}
+
+	# 种族派掌控了会议走向
+	option = {
+		name = sgs.101.3
+		ai_chance = {
+			base = 0
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.3
+		}
+		set_politics = {
+			ruling_party = neworder
+			elections_allowed = no
+		}
+		hidden_effect = {
+			complete_national_focus = SGS_yao_jing_zhong_zu_pai
+			mark_focus_tree_layout_dirty = yes
+			news_event = {
+				id = sgs.104
+				days = 5
+			}
+		}
+	}
+}
+
+# 激进派掌控SGS政治
+news_event = {
+	id = sgs.102
+	title = sgs.102.t
+	desc = sgs.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SGS
+	option = {
+		name = sgs.102.1
+		trigger = {
+			original_tag = SGS
+		}
+	}
+
+	# 其他
+	option = {
+		name = sgs.102.2
+		trigger = {
+			NOT = {
+				original_tag = SGS
+			}
+		}
+	}
+}
+
+# 改革派掌控SGS政治
+news_event = {
+	id = sgs.103
+	title = sgs.103.t
+	desc = sgs.103.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SGS
+	option = {
+		name = sgs.103.1
+		trigger = {
+			original_tag = SGS
+		}
+	}
+
+	# 其他
+	option = {
+		name = sgs.103.2
+		trigger = {
+			NOT = {
+				original_tag = SGS
+			}
+		}
+	}
+}
+
+# 种族派掌控SGS政治
+news_event = {
+	id = sgs.104
+	title = sgs.104.t
+	desc = sgs.104.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SGS
+	option = {
+		name = sgs.104.1
+		trigger = {
+			original_tag = SGS
+		}
+	}
+
+	# 其他
+	option = {
+		name = sgs.104.2
+		trigger = {
+			NOT = {
+				original_tag = SGS
+			}
+		}
+	}
+}
+
+# SEJ SGS请求加入同盟
+country_event = {
+	id = sgs.105
+	title = sgs.105.t
+	desc = sgs.105.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sgs.105.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			add_to_faction = SGS
+		}
+		SGS = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = sgs.105.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			SGS = {
+				country_event = sgs.106
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = sgs.106
+	title = sgs.106.t
+	desc = sgs.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sgs.106.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SGS_jia_ru_xia_ke_shang_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = SGS_xi_nan_ge_ming_dao_lu
+		}
+	}
+}

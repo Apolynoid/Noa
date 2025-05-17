@@ -272,3 +272,6 @@ TEG_yu_FROM_de_jing_ji_he_zuo:0 "与[FROM.GetFlag][FROM.GetName]的经济合作"
 TEG_is_aiding_flag:0 "有正在进行的援助项目"
 TEG_has_contacted_flag:0 "已经接触过"
 TEG_accepted_cooperation_flag:0 "同意合作"
+
+MRY_xin_yang_de_sheng_li_idea:0 "信仰的胜利"
+MRY_xin_yang_de_sheng_li_idea_desc:0 "终于，在我们成功粉碎了妖怪山的共和分子后，我们不仅成为了妖怪山的霸主，还成功的向幻想乡证明了信仰的强大力量，再也没有人敢于挑战守矢的地位。"

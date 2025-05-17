@@ -44,11 +44,8 @@
     add_manpower = 800
     oob = "SGS_146"
     # set_research_slots = 3
-    #declare_war_on = { target = MAM type = annex_everything}
     # Starting tech
 	set_country_flag = bunengsuiyiqiehuanzhengti
-    give_guarantee = MEL
-    give_military_access = MEL
     add_ideas = {
         Tribal
         Fairy
@@ -56,11 +53,12 @@
         open1
         hawk1
         free_magic
-        SGS_tuanjiexieding_idea 
-        SGS_fa_guerrillas_idea
-        SGS_yuanshidetudi_idea
-        SGS_captanul_idea
         type1_manpowerlv3
+    }
+    add_ideas = {
+        SGS_zhan_zheng_de_yin_ying_idea
+        SGS_bu_shou_huan_ying_de_wai_lai_shi_li_idea
+        SGS_xi_nan_yao_jing_ge_ming_jun_idea
     }
     SW_add_agrarian_society = yes
     
@@ -70,12 +68,16 @@
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 10
-        guli = 30
-        neworder = 20
+        qinwai = 25
+        guli = 10
+        neworder = 25
         oldorder = 0
         fandong = 40
+        oldgenso = 0
     }
+    recruit_character = SGS_lunar
+    recruit_character = SGS_sun
+    recruit_character = SGS_star
     
     383 = {
         add_dynamic_modifier = {

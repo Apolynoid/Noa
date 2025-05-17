@@ -136,8 +136,8 @@ bookmarks = {
 				mrs_fen_lie_de_mo_fa_shi_idea
 				mrs_hun_luan_de_zhi_hui_xi_tong_idea
 			}	
-           focuses = {
-           	MRS_zhao_kai_mo_nv_da_hui
+           	focuses = {
+           		MRS_zhao_kai_mo_nv_da_hui
 				MRS_chen_ai_luo_ding
 				MRS_mo_fa_zhi_sen_de_li_ming
 			}			
@@ -179,24 +179,52 @@ bookmarks = {
 				AKI_tu_di_jian_bing_tt_idea
 			}	
             focuses = {
- 
+				AKI_ying_dui_tu_di_jian_bing
+				AKI_duo_qu_xi_nan_tu_di
+				AKI_lian_meng_feng_shou_da_hui
 			}			
 		}
+
+		"SGS"={
+		    minor = yes
+			history = "SGS_DAWN_DESC"		#sgs
+			ideas={ 
+				SGS_zhan_zheng_de_yin_ying_idea
+				SGS_bu_shou_huan_ying_de_wai_lai_shi_li_idea
+				SGS_xi_nan_yao_jing_ge_ming_jun_idea
+			}	
+            focuses = {
+				
+			}			
+		} 
     
-#    	"MEL"={
-#		    minor = yes
-#			history = "MEL_DAWN_DESC"		#sca
-#			ideas={ 
-#	            SGS_tuanjiexieding_idea
-#	            MEL_messy_economy_idea
-#	            MEL_unorganized_militia_idea
-#			}	
-#            focuses = {
-#            	MEL_BiAnHua_Plant
-#            	MEL_mustard_gas
-#              	MEL_Liberation
-#			}			
-#		}
+    	"MEL"={
+		    minor = yes
+			history = "MEL_DAWN_DESC"		#sca
+			ideas={ 
+	            MEL_zheng_zhi_beng_kui_idea
+				MEL_ling_lan_jun_guo_zhu_yi_idea
+				MEL_bo_ruo_de_min_yong_gong_ye_idea
+			}	
+            focuses = {
+            	
+			}			
+		}
+
+		"YUK"={
+		    minor = yes
+			history = "YUK_DAWN_DESC"		#sca
+			ideas={ 
+				YUK_yao_jing_sao_dong_idea
+	            YUK_yu_suan_qing_xie_jun_heng_idea
+				YUK_luo_hou_de_sheng_chan_mo_shi_idea
+			}	
+            focuses = {
+				YUK_yu_yao_jing_de_shang_tan
+				YUK_yu_suan_qing_xie
+            	YUK_zheng_he_fu_yong_jing_ji
+			}			
+		}
 
 		"YYK"={
 		    minor = yes
@@ -242,21 +270,6 @@ bookmarks = {
 #				SAT_the_second_sun
 #			}			
 #		}  
-
-#		"SGS"={
-#		    minor = yes
-#			history = "SGS_DAWN_DESC"		#sgs
-#			ideas={ 
-#				SGS_tuanjiexieding_idea
-#				SGS_yaojingyoujidui_idea
-#				SGS_captanul_idea
-#			}	
-#            focuses = {
-#				SGS_xinanhuanxiangxianggongyehua
-#				SGS_xinanhuanxiangxiangzhiguang
-#				SGS_xinanzhanluan
-#			}			
-#		} 
 
 #		"MSD" = {
 #			minor = yes

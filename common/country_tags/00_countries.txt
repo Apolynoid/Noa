@@ -41,7 +41,6 @@ RGO = "countries/rgo.txt"	#月兔部落	#new
 BYA = "countries/bya.txt"	#new	竹林妖怪联盟
 EET = "countries/eet.txt"       #####永远亭
 #-----------雾之湖南------------
-MAM = "countries/mam.txt"       #####多啦A梦
 WAK = "countries/wak.txt"      #####美人鱼
 YUK = "countries/yuk.txt"         #####幽香
 SGS = "countries/sgs.txt"         #####USA

@@ -1,0 +1,2624 @@
+AKI_bingtongyiti_category = {
+    AKI_zhanshidongyuan = {
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+            has_completed_focus = AKI_bingtongyiti
+        }
+
+        available = {
+            has_idea = AKI_tuntian_idea
+              
+        }
+
+        cost = 0
+
+        fire_only_once = no
+
+        complete_effect = {
+            swap_ideas = { remove_idea = AKI_tuntian_idea add_idea = AKI_zhengmu_idea }
+        }
+
+        ai_will_do = {
+           factor = 1000
+           modifier = {
+               has_war = no
+               factor = 0
+           }
+        }
+    }
+
+    AKI_huiquganhuo = {
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+            has_completed_focus = AKI_bingtongyiti
+        }
+
+        available = {
+            has_idea = AKI_zhengmu_idea
+              
+        }
+
+        cost = 0
+
+        fire_only_once = no
+
+        complete_effect = {
+            swap_ideas = { remove_idea = AKI_zhengmu_idea add_idea = AKI_tuntian_idea }
+        }
+
+        ai_will_do = {
+           factor = 1000
+           modifier = {
+               has_war = yes
+               factor = 0
+           }
+        }
+    }
+
+}
+
+AKI_tongyiwuyuanzhong_category = {
+
+	AKI_SGS_attack = {
+		war_with_on_remove = SGS
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = SGS
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			SGS = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		SGS = { country_event = { id = aki.19 days = 1 } }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        set_country_flag = AKI_jingong_SGS_flag
+
+		}
+
+		remove_effect = {
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "SGS"
+			value = 200
+		}
+
+
+			AKI = {
+				declare_war_on = {
+					type = annex_everything
+					target = SGS
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+	AKI_MEL_attack = {
+		war_with_on_remove = MEL
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = MEL
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			MEL = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		MEL = { country_event = { id = aki.19 days = 1 } }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        set_country_flag = AKI_jingong_MEL_flag
+
+		}
+
+		remove_effect = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "MEL"
+				value = 200
+			}
+			AKI = {
+				declare_war_on = {
+					type = annex_everything
+					target = MEL
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+	AKI_GH1_attack = {
+		war_with_on_remove = GH1
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GH1
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			GH1 = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+				has_country_flag = SW_xinanluanzhan
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		GH1 = { country_event = { id = aki.19 days = 1 } }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        set_country_flag = AKI_jingong_GH1_flag
+
+		}
+
+		remove_effect = {
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "GH1"
+			value = 200
+		}
+
+
+			AKI = {
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = GH1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+	AKI_GH2_attack = {
+		war_with_on_remove = GH2
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GH2
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			GH2 = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		GH2 = { country_event = { id = aki.19 days = 1 }  }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        	set_country_flag = AKI_jingong_GH2_flag
+
+		}
+
+		remove_effect = {
+
+			add_ai_strategy = {
+				type = antagonize
+				id = "GH2"
+				value = 200
+			}
+
+
+			AKI = {
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = GH2
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+	AKI_GH3_attack = {
+		war_with_on_remove = GH3
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = GH3
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			GH3 = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		GH3 = { country_event = { id = aki.19 days = 1 }  }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        set_country_flag = AKI_jingong_GH3_flag
+
+		}
+
+		remove_effect = {
+			add_ai_strategy = {
+				type = antagonize
+				id = "GH3"
+				value = 200
+			}
+			AKI = {
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = GH3
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+	AKI_HU6_attack = {
+		war_with_on_remove = HU6
+		icon = generic_decision
+
+		target_trigger = {
+			FROM = {
+				tag = HU6
+			}
+		}
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+            has_completed_focus = AKI_tongyiwuyuanzhong
+            NOT = { has_country_flag = AKI_zhunbeijingong_flag }
+		}
+
+		visible = {
+			is_subject = no
+	    	original_tag = AKI
+			HU6 = {
+				exists = yes
+				NOT = {
+					is_in_faction_with = AKI
+				}
+				NOT = {
+					has_war_with = AKI
+				}
+				NOT = {
+					is_subject_of = AKI
+				}
+			}
+			FROM = {
+				any_neighbor_country = {
+					OR = {
+						is_subject_of = AKI
+						is_in_faction_with = AKI
+						tag = AKI
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		
+		days_remove = 60
+
+        cost = 0
+
+		complete_effect = {
+
+	 	  	hidden_effect = {
+	 	  		HU6 = { country_event = { id = aki.19 days = 1 } }
+	 	  	}
+
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = AKI_zhunbeijingong_flag
+			}
+
+        set_country_flag = AKI_jingong_HU6_flag
+
+		}
+
+		remove_effect = {
+
+			add_ai_strategy = {
+				type = antagonize
+				id = "HU6"
+				value = 200
+			}
+			every_state = {
+				limit = { 
+					is_core_of = HU6 
+				}
+				add_claim_by = AKI
+			}
+
+			AKI = {
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = HU6
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+			    has_war = yes					
+			}
+		}
+	}
+
+}
+
+AKI_kaifawuyuanzhong_category = {
+    AKI_kaifayingguaidao = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 105 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 105
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 105 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 105
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			105 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 100
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayingtongletu = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 139
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 139 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 139
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 139 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 139
+				}
+			} 
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			139 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 100
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifanaxuan = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 375
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 375 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 375
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 375 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 375
+				}
+			}
+
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			375 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 100
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaqianqu = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 385
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 385 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 385
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 385 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 385
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			385 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifalujiu = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 383
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 383 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 383
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 383 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 383
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			383 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifadangbie = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 386
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 386 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 386
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 386 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 386
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			386 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaxingguangxiaojing = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 248
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 248 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 248
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 248 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 248
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			248 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifariguanghuayuan = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 279
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 279 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 279
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 279 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 279
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			279 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayueguangsenlin = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 272
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 272 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 272
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 272 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 272
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			272 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifazhanguan = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 396
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 396 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 396
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 396 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 396
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			396 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayingzhuang = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 395
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 395 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 395
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 395 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 395
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			395 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifahuiting = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 381
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 381 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 381
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 381 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 381
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			381 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifashihe = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 380
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 380 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 380
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 380 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 380
+				}
+			}
+
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			380 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaguangru = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 384
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 384 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 384
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 384 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 384
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			384 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifajinjin = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 393
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 393 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 393
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 393 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 393
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			393 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayongfu = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 394
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 394 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 394
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 394 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 394
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			394 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifafeiqihuatian = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 179
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 179 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 179
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 179 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 179
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			179 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifamuyuanling = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 342
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 342 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 342
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 342 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 342
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			342 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifafeiqicaishichang = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 219 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 219
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 219 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 219
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			219 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifanaoguimofang = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 233
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 233 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 233
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 233 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 233
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			233 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifazhongqihuahai = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 371
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 371 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 371
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 371 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 371
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			371 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifafubaihuatian = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 337
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 337 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 337
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 337 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 337
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			337 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifamanhuangjiaojie = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 334
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 334 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 334
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 334 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 334
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			334 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayanzouwutai = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 388
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 388 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 388
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 388 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 388
+				}
+			}  
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			388 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaxiangrikuilin = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 255
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 255 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 255
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 255 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 255
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			255 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifayianrizhidi = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 410
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 410 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 410
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 410 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 410
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			410 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifajinrizhidi = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 235
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 235 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 235
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 235 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 235
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			235 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaererliui = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 226
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 226 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 226
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 226 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 226
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			226 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifahuazhongcangku = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 341
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 341 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 341
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 341 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 341
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			341 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifadongxiangrikuilin = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 216
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 216 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 216
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 216 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 216
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			216 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifafeiliaoduijichang = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 392
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 392 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 392
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 392 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 392
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			392 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifahuatianguaiquandi = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 390
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 390 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 390
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 390 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 390
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			390 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifalaerwa = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 389
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 389 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 389
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 389 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 389
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			389 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifaxiaojing = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 391
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 391 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 391
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 391 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 391
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			391 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+    AKI_kaifalubiao = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 209
+			}
+		}
+		allowed = {
+			tag = AKI
+		}
+        visible = {
+			OR = {
+				AKI = { owns_state = 209 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 209
+				}
+			}
+        }
+
+        available = {
+			OR = {
+				AKI = { owns_state = 209 }
+				any_other_country = {
+					is_subject_of = AKI
+					owns_state = 209
+				}
+			}
+        }
+
+        cost = 30
+
+        days_remove = 60
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+			209 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+
+        ai_will_do = {
+           factor = 50
+           modifier = {
+               has_war = yes
+               factor = 2
+           }
+        }
+    }
+
+}

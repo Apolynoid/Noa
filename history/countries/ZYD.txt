@@ -49,8 +49,18 @@
         dove1
         limit_magic
         type2_manpowerlv2
-        AKI_tudijiaoyisuode_idea
         partial_economic_mobilisation
+    }
+    add_ideas = {
+        ZYD_xi_nan_mao_yi_zhong_xin_idea
+    }
+    add_timed_idea = {
+        idea = ZYD_di_xiao_de_zheng_fu_idea
+        days = 3650
+    }
+    add_timed_idea = {
+        idea = ZYD_fu_bai_wen_ti_idea
+        days = 3650
     }
     SW_add_agrarian_society = yes
     

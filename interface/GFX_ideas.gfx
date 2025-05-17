@@ -3,7 +3,7 @@ spriteTypes = {
 	### generic 通用
 	spriteType = {
 		name = "GFX_idea_backward_production"
-		texturefile = "gfx/interface/ideas/generic_backward_production.dds"
+		texturefile = "gfx/interface/ideas/generic_backward_production.png"
 	}
 
 	spriteType = {
@@ -82,6 +82,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_faith"
+		texturefile = "gfx/interface/ideas/generic_faith.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_youkai_nature"
 		texturefile = "gfx/interface/ideas/generic_youkai_nature.png"
 	}
@@ -89,6 +94,31 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_cooperation"
 		texturefile = "gfx/interface/ideas/generic_cooperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_industry_dominant"
+		texturefile = "gfx/interface/ideas/generic_industry_dominant.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_industry_leaning"
+		texturefile = "gfx/interface/ideas/generic_industry_leaning.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_balanced_leaning"
+		texturefile = "gfx/interface/ideas/generic_balanced_leaning.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_military_leaning"
+		texturefile = "gfx/interface/ideas/generic_military_leaning.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_military_dominant"
+		texturefile = "gfx/interface/ideas/generic_military_dominant.png"
 	}
 
 	spriteType = {
@@ -164,6 +194,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_TEG_support"
 		texturefile = "gfx/interface/ideas/generic_TEG_support.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_generic_gekokujyo_military_advisor"
+		texturefile = "gfx/interface/ideas/generic_gekokujyo_military_advisor.png"
 	}	
 
 	#### SCA Remilia Scarlet 斯卡蕾特帝国
@@ -499,6 +534,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AKI_barrier_between_human_and_god"
 		texturefile = "gfx/interface/ideas/aki_barrier_between_human_and_god.png"
+	}
+
+	#### MEL 铃兰部落
+	spriteType = {
+		name = "GFX_idea_MEL_political_collapse"
+		texturefile = "gfx/interface/ideas/mel_political_collapse.png"
 	}
 
 	#### YYK Saigyouji Yuyuko 白玉楼

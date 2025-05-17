@@ -81,6 +81,16 @@ SEO = {
 	has_country_flag = SEJ_original_tag_flag
 }
 
+LAV = {
+	original_tag = YUK
+	has_country_flag = YUK_rebellions_flag
+}
+
+KZM = {
+	original_tag = YUK
+	has_country_flag = YUK_loyalists_flag
+}
+
 KNA = {
 	original_tag = YYK
 	has_country_flag = YYK_KNA_flag

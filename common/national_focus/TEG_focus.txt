@@ -97,14 +97,13 @@ focus_tree = {
       }
       add_tech_bonus = {
         bonus = 1
-        uses = 2
-        category = race
-      }
-      add_tech_bonus = {
-        bonus = 1
         uses = 1
         category = secret
       }
+      add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_race
+			}
     }
 
     ai_will_do = {
@@ -2171,11 +2170,10 @@ focus_tree = {
     }
 
     completion_reward = {
-      add_tech_bonus = {
-        bonus = 1.0
-        uses = 2
-        category = race
-      }
+      add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_race
+			}
     }
 
     ai_will_do = {

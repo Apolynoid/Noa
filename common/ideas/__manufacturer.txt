@@ -1860,48 +1860,6 @@ ideas = {
 				factor = 5
 			}
 		}
-		MAM_manu = {
-		    picture = manufacturer_MAM
-			visible = {
-				MAM = {
-					manufacture_visible_conditions = yes
-				}
-			}
-		    available = {   
-		    	MAM = {
-		    		manufacture_conditions = yes
-		    	}           	    
-		    }
-		    # allowed = {
-		    # 	always = no
-		    # }						
-			on_add = {
-			}
-			cancel_if_invalid = yes
-			removal_cost = 0
-			modifier = {
-				encryption_factor = 0.15
-			}
-			# equipment_bonus = {
-			# 	gun_a = {
-			# 		soft_attack = 0.1
-			# 		hard_attack = 0.1
-			# 		instant = yes
-			# 	}
-			# 	magic_core_a = {
-			# 		soft_attack = 0.1
-			# 		hard_attack = 0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     science = 0.2
-			# }
-			
-			ai_will_do = {
-				factor = 5
-			}
-		}
 		YUK_manu = {
 		    picture = manufacturer_YUK
 			visible = {

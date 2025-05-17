@@ -1,0 +1,16 @@
+# 预算调节
+YUK_yu_suan_tiao_jie = {
+	icon = generic_economy
+
+	priority = 90
+
+	allowed = {
+		original_tag = YUK
+	}
+
+	visible = {
+		has_completed_focus = YUK_yu_suan_qing_xie
+	}
+
+	visible_when_empty = no
+}

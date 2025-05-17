@@ -387,6 +387,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				custom_effect_tooltip = SEJ_guard_badge_tt
+			}
 			swap_ideas = {
 				remove_idea = SEJ_xia_ke_shang_she_hui_jiao_yu_idea
 				add_idea = SEJ_xia_ke_shang_she_hui_jiao_yu_a_idea
@@ -2829,10 +2835,9 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 2
-				category = race
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_race
 			}
 		}
 	

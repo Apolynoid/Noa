@@ -702,25 +702,13 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 5 }
 		set_variable = { ST_present_race = 5 }
 	}
-	322 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
-	}
 	282 = {
 		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
-	}
-	277 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
-	}
-	323 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_present_race = 6 }
 	}
 	263 = {
 		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_present_race = 6 }
 	}
 
 	#KYK WAK
@@ -794,10 +782,6 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 6 }
 		set_variable = { ST_present_race = 6 }
 	}
-	394 = {
-		set_variable = { ST_origin_race = 6 }
-		set_variable = { ST_present_race = 7 }
-	}
 
 	#OKI
 	every_state = {
@@ -822,11 +806,27 @@ Ge_race_setting = {
 	}
 	233 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 1 }
 	}
 	219 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+	334 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 6 }
+	}
+	337 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+	342 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
+	}
+	371 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 1 }
 	}
 
 	#ZYD GH1	
@@ -850,13 +850,9 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 1 }
 		set_variable = { ST_present_race = 1 }
 	}
-	179 = {
-		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
-	}
 	393 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 6 }
 	}
 	279 = {
 		set_variable = { ST_origin_race = 1 }
@@ -873,10 +869,6 @@ Ge_race_setting = {
 		}
 		set_variable = { ST_origin_race = 4 }
 		set_variable = { ST_present_race = 6 }
-	}
-	384 = {
-		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 7 }
 	}
 	167 = {
 		set_variable = { ST_origin_race = 4 }
@@ -895,10 +887,6 @@ Ge_race_setting = {
 			}
 		}
 		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 4 }
-	}
-	148 = {
-		set_variable = { ST_origin_race = 1 }
 		set_variable = { ST_present_race = 4 }
 	}
 	160 = {

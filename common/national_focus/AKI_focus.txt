@@ -2,7 +2,7 @@
 #!gfx:interface\replace\NOA_GFX_goals.gfx
 
 focus_tree = {
-	id = ALI_focus
+	id = AKI_focus
 	country = {
 		factor = 0
 		modifier = {
@@ -525,7 +525,7 @@ focus_tree = {
 	# 神明信仰凯旋
 	focus = {
 		id = AKI_shen_ming_xin_yang_kai_xuan
-		icon = unknown
+		icon = GFX_focus_glory
 		cost = 1
 		x = 0
 		y = 1
@@ -1210,7 +1210,7 @@ focus_tree = {
 	# 死亡崇拜
 	focus = {
 		id = AKI_si_wang_chong_bai
-		icon = unknown
+		icon = GFX_focus_bushido
 		cost = 7
 		x = 0
 		y = 1

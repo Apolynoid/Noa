@@ -1,0 +1,26 @@
+on_actions = {
+	on_monthly_ZYD = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = ZYD_shou_quan_si_ren_tu_di_kai_fa
+				}
+				# development
+				every_owned_state = {
+					if = {
+						limit = {
+							SW_undeveloped_explored_fully_controlled_state = yes
+						}
+						random = {
+							chance = 10
+							save_event_target_as = state_to_develop
+							ROOT = {
+								country_event = zyd.101
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -143,7 +143,7 @@ focus_tree = {
   # 尝试稳定政局
   focus = {
     id = SCA_puppet_chang_shi_wen_ding_zheng_ju
-    icon = unknown
+    icon = GFX_focus_stability
     cost = 7
     x = 0
     y = 1
@@ -530,7 +530,7 @@ focus_tree = {
   # 要求更高自治权
   focus = {
     id = SCA_puppet_yao_qiu_geng_gao_zi_zhi_quan
-    icon = unknown
+    icon = GFX_focus_generic_self_management
     cost = 7
     x = 0
     y = 3

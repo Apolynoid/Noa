@@ -44,8 +44,6 @@
 }
 146.1.1={
     oob = "MEL_146"
-    give_guarantee = SGS
-    give_military_access = SGS
     add_ideas = {
         type3_manpowerlv2
         Pri_youkai
@@ -53,25 +51,27 @@
         close1
         hawk1
         sc_rule
-        SGS_tuanjiexieding_idea
-        
-        MEL_messy_economy_idea
-        MEL_unorganized_militia_idea
+    }
+    add_ideas = {
+        MEL_zheng_zhi_beng_kui_idea
+        MEL_ling_lan_jun_guo_zhu_yi_idea
+        MEL_bo_ruo_de_min_yong_gong_ye_idea
     }
     SW_add_agrarian_society = yes
     
     set_politics = {
-    	ruling_party = guli
+    	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 0
-        guli = 87
-        neworder = 8
+        qinwai = 20
+        guli = 5
+        neworder = 55
         oldorder = 0
-        fandong = 5
+        fandong = 20
     }
+    recruit_character = MEL_mel
 
     160 = {
         SW_add_unexplored_land = yes

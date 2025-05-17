@@ -587,10 +587,9 @@ shared_focus = {
   }
 
   completion_reward = {
-    add_tech_bonus = {
-      bonus = 1.5
-      uses = 1
-      category = race
+    add_breakthrough_progress = {
+      value = 1
+      specialization = specialization_race
     }
   }
 

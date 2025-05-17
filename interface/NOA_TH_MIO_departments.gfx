@@ -5,8 +5,18 @@ spriteTypes = {
 	}	
 
 	spriteType = {
+		name = "GFX_mio_cat_eq_ma_infantry_weapons"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ma_infantry_weapons.png"
+	}	
+
+	spriteType = {
 		name = "GFX_mio_cat_eq_all_artillery"
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_all_artillery.png"
+	}
+
+	spriteType = {
+		name = "GFX_mio_cat_eq_ma_artillery"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ma_artillery.png"
 	}
 
 	spriteType = {
