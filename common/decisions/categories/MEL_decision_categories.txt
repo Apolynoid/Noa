@@ -1,0 +1,16 @@
+# 特殊作物应用
+MEL_te_shu_zuo_wu_ying_yong = {
+	icon = generic_crops
+
+	priority = 96
+
+	allowed = {
+		original_tag = MEL
+	}
+
+	visible = {
+		has_completed_focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+	}
+
+	visible_when_empty = yes
+}

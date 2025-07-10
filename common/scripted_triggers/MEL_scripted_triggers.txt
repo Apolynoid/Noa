@@ -1,0 +1,10 @@
+MEL_no_crop_farm = {
+	NOT = {
+		has_dynamic_modifier = {
+			modifier = MEL_du_xing_zuo_wu_zhong_zhi_qu_idea
+		}
+		has_dynamic_modifier = {
+			modifier = MEL_yao_yong_zuo_wu_zhong_zhi_qu_idea
+		}
+	}
+}

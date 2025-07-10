@@ -1,3 +1,5 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
 focus_tree = {
 	id = MEL_focus
 	country = {
@@ -311,7 +313,7 @@ focus_tree = {
 	# 特殊作物种植场
 	focus = {
 		id = MEL_te_shu_zuo_wu_zhong_zhi_chang
-		icon = unknown
+		icon = MEL_focus_special_crop_plantation
 		cost = 7
 		x = 0
 		y = 2
@@ -328,7 +330,24 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			
+			add_political_power = 100
+			unlock_decision_category_tooltip = MEL_te_shu_zuo_wu_ying_yong
+			hidden_effect = {
+				set_variable = {
+					MEL_toxic_crop_num = 0
+				}
+				set_variable = {
+					MEL_medicinal_crop_num = 0
+				}
+			}
+			set_temp_variable = {
+				MEL_crop_increase = 2
+			}
+			MEL_add__MEL_crop_increase__toxic_crop = yes
+			MEL_add__MEL_crop_increase__medicinal_crop = yes
+			hidden_effect = {
+				activate_mission = MEL_te_shu_zuo_wu_shou_huo
+			}
 		}
 	
 		ai_will_do = {
@@ -339,7 +358,7 @@ focus_tree = {
 	# 种植毒性作物
 	focus = {
 		id = MEL_zhong_zhi_du_xing_zuo_wu
-		icon = unknown
+		icon = MEL_focus_cultivate_toxic_crop
 		cost = 7
 		x = -1
 		y = 1
@@ -351,7 +370,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			
+			unlock_decision_tooltip = MEL_zai_FROM_jian_she_du_xing_zuo_wu_zhong_zhi_chang_undeveloped
 		}
 	
 		ai_will_do = {
@@ -362,7 +381,7 @@ focus_tree = {
 	# 种植药用作物
 	focus = {
 		id = MEL_zhong_zhi_yao_yong_zuo_wu
-		icon = unknown
+		icon = MEL_focus_cultivate_medicinal_crop
 		cost = 7
 		x = 1
 		y = 1
@@ -374,7 +393,7 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			
+			unlock_decision_tooltip = MEL_zai_FROM_jian_she_yao_yong_zuo_wu_zhong_zhi_chang_undeveloped
 		}
 	
 		ai_will_do = {

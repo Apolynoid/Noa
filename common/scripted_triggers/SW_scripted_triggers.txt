@@ -49,9 +49,6 @@ SW_undeveloped_explored_fully_controlled_state = {
 	has_dynamic_modifier = {
 		modifier = SW_wei_kai_fa_de_tu_di_state_idea
 	}
-	NOT = {
-		has_state_flag = SW_being_developed_flag
-	}
 }
 
 SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = {

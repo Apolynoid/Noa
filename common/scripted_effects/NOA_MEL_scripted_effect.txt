@@ -33,3 +33,17 @@ MEL_decrease_political_collapse = {
 		add_political_power = 150
 	}
 }
+
+MEL_add__MEL_crop_increase__toxic_crop = {
+	add_to_variable = {
+		MEL_toxic_crop_num = MEL_crop_increase
+	}
+	custom_effect_tooltip = MEL_add__MEL_crop_increase__toxic_crop_tt
+}
+
+MEL_add__MEL_crop_increase__medicinal_crop = {
+	add_to_variable = {
+		MEL_medicinal_crop_num = MEL_crop_increase
+	}
+	custom_effect_tooltip = MEL_add__MEL_crop_increase__medicinal_crop_tt
+}

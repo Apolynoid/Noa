@@ -1,0 +1,56 @@
+log_2__x__in_half_to_one_as__res = {
+	# calc z = (x-1) / (x+1)
+	set_temp_variable = {
+		up = x
+	}
+	set_temp_variable = {
+		down = x
+	}
+	subtract_from_temp_variable = {
+		up = 1
+	}
+	multiply_temp_variable = {
+		up = 2000
+	}
+	add_to_temp_variable = {
+		down = 1
+	}
+	set_temp_variable = {
+		z = up
+	}
+	divide_temp_variable = {
+		z = down
+	}
+
+	set_temp_variable = {
+		z_sq = z
+	}
+	multiply_temp_variable = {
+		z_sq = z
+	}
+	divide_temp_variable = {
+		z_sq = 10
+	}
+
+	set_temp_variable = {
+		res = z_sq
+	}
+	divide_temp_variable = {
+		res = 3
+	}
+	add_to_temp_variable = {
+		res = 400000
+	}
+	divide_temp_variable = {
+		res = 400000
+	}
+	multiply_temp_variable = {
+		res = 1442.695
+	}
+	multiply_temp_variable = {
+		res = z
+	}
+	divide_temp_variable = {
+		res = 1000000
+	}
+}

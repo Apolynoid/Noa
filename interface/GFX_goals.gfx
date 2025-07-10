@@ -1334,6 +1334,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_SGS_state_of_fairies.png"			
 	}
 
+	#### MEL 铃兰部落
+	SpriteType = {
+		name = "MEL_focus_special_crop_plantation"
+		texturefile = "gfx/interface/goals/focus_MEL_special_crop_plantation.png"			
+	}
+
+	SpriteType = {
+		name = "MEL_focus_cultivate_toxic_crop"
+		texturefile = "gfx/interface/goals/focus_MEL_cultivate_toxic_crop.png"			
+	}
+
+	SpriteType = {
+		name = "MEL_focus_cultivate_medicinal_crop"
+		texturefile = "gfx/interface/goals/focus_MEL_cultivate_medicinal_crop.png"			
+	}
+
 	#### ZYD 中有之道贸易区
 	SpriteType = {
 		name = "ZYD_focus_republic_of_nakayuunomichi"

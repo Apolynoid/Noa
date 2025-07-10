@@ -1,0 +1,421 @@
+# 特殊作物应用
+MEL_te_shu_zuo_wu_ying_yong = {
+	# 应用毒性作物
+	MEL_ying_yong_du_xing_zuo_wu = {
+		state_target = yes
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+            has_completed_focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+        }
+        target_trigger = {
+            FROM = {
+                controller = {
+					has_war_with = ROOT
+				}
+				NOT = {
+					is_fully_controlled_by = ROOT
+				}
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+            }
+        }
+        available = {
+            NOT = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = MEL_tou_ru_du_xing_zuo_wu_state_idea
+					}
+					has_dynamic_modifier = {
+						modifier = MEL_tou_ru_yao_yong_zuo_wu_state_idea
+					}
+				}
+			}
+        }
+        on_map_mode = map_only
+        icon = mel_toxic_crops
+		custom_cost_text = MEL_2_toxic_crops
+		custom_cost_trigger = {
+			check_variable = {
+				MEL_toxic_crop_num > 1
+			}
+		}
+        days_re_enable = 15
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					MEL_toxic_crop_num = 2
+				}
+			}
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = MEL_tou_ru_du_xing_zuo_wu_state_idea
+					scope = MEL
+					days = 180
+				}
+			}
+		}
+        ai_will_do = {
+            base = 100
+        }
+	}
+
+	# 应用药用作物
+	MEL_ying_yong_yao_yong_zuo_wu = {
+		state_target = yes
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+			has_completed_focus = MEL_te_shu_zuo_wu_zhong_zhi_chang        
+		}
+        target_trigger = {
+            FROM = {
+				is_fully_controlled_by = ROOT
+            }
+        }
+        available = {
+            NOT = {
+				OR = {
+					has_dynamic_modifier = {
+						modifier = MEL_tou_ru_du_xing_zuo_wu_state_idea
+					}
+					has_dynamic_modifier = {
+						modifier = MEL_tou_ru_yao_yong_zuo_wu_state_idea
+					}
+				}
+			}
+        }
+        on_map_mode = map_only
+        icon = mel_medicinal_crops
+		custom_cost_text = MEL_2_medicinal_crops
+		custom_cost_trigger = {
+			check_variable = {
+				MEL_medicinal_crop_num > 1
+			}
+		}
+        days_re_enable = 15
+		complete_effect = {
+			hidden_effect = {
+				subtract_from_variable = {
+					MEL_medicinal_crop_num = 2
+				}
+			}
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = MEL_tou_ru_yao_yong_zuo_wu_state_idea
+					scope = MEL
+					days = 180
+				}
+			}
+		}
+        ai_will_do = {
+            base = 100
+        }
+	}
+
+	# 在FROM建设毒性作物种植场 - 未开发
+	MEL_zai_FROM_jian_she_du_xing_zuo_wu_zhong_zhi_chang_undeveloped = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = MEL_zhong_zhi_du_xing_zuo_wu
+            }
+        }
+        target_trigger = {
+            FROM = {
+                SW_undeveloped_explored_fully_controlled_state = yes
+				MEL_no_crop_farm = yes
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = mel_toxic_farm
+        cost = 50
+        days_remove = 90
+        days_re_enable = 15
+
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = SW_being_developed_flag
+                }
+            }    
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+                }
+            }
+            FROM = {
+                SW_remove_undeveloped_land = yes
+                add_dynamic_modifier = {
+					modifier = MEL_du_xing_zuo_wu_zhong_zhi_qu_idea
+				}
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+
+	# 建设毒性作物种植场
+	MEL_zai_FROM_jian_she_du_xing_zuo_wu_zhong_zhi_chang = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = MEL_zhong_zhi_du_xing_zuo_wu
+            }
+        }
+        target_trigger = {
+            FROM = {
+				region = 43
+                NOT = {
+					has_dynamic_modifier = {
+						modifier = SW_wei_kai_fa_de_tu_di_state_idea
+					}
+				}
+				MEL_no_crop_farm = yes
+            }
+        }
+        on_map_mode = map_only
+        icon = mel_toxic_farm
+        cost = 100
+        days_remove = 90
+        days_re_enable = 15
+
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = MEL_building_farm_flag
+                }
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = MEL_building_farm_flag
+                }
+            }
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = MEL_building_farm_flag
+                }
+            }
+            FROM = {
+                add_dynamic_modifier = {
+					modifier = MEL_du_xing_zuo_wu_zhong_zhi_qu_idea
+				}
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+	# 在FROM建设药用作物种植场 - 未开发
+	MEL_zai_FROM_jian_she_yao_yong_zuo_wu_zhong_zhi_chang_undeveloped = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = MEL_zhong_zhi_yao_yong_zuo_wu
+            }
+        }
+        target_trigger = {
+            FROM = {
+                SW_undeveloped_explored_fully_controlled_state = yes
+				MEL_no_crop_farm = yes
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = mel_medicinal_farm
+        cost = 50
+        days_remove = 90
+        days_re_enable = 15
+
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = SW_being_developed_flag
+                }
+            }    
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+                }
+            }
+            FROM = {
+                SW_remove_undeveloped_land = yes
+                add_dynamic_modifier = {
+					modifier = MEL_yao_yong_zuo_wu_zhong_zhi_qu_idea
+				}
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+	# 建设药用作物种植场
+	MEL_zai_FROM_jian_she_yao_yong_zuo_wu_zhong_zhi_chang = {
+        state_target = any_owned_state
+        allowed = {
+            original_tag = MEL
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = MEL_zhong_zhi_yao_yong_zuo_wu
+            }
+        }
+        target_trigger = {
+            FROM = {
+				region = 43
+                NOT = {
+					has_dynamic_modifier = {
+						modifier = SW_wei_kai_fa_de_tu_di_state_idea
+					}
+				}
+				MEL_no_crop_farm = yes
+            }
+        }
+        on_map_mode = map_only
+        icon = mel_medicinal_farm
+        cost = 100
+        days_remove = 90
+        days_re_enable = 15
+
+        available = {
+            FROM = {
+                NOT = {
+                    has_state_flag = MEL_building_farm_flag
+                }
+            }
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = MEL_building_farm_flag
+                }
+            }
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = MEL_building_farm_flag
+                }
+            }
+            FROM = {
+                add_dynamic_modifier = {
+					modifier = MEL_yao_yong_zuo_wu_zhong_zhi_qu_idea
+				}
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+	# 特殊作物收获
+	MEL_te_shu_zuo_wu_shou_huo = {
+        activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			always = no
+		}
+
+		icon = generic_plant
+		is_good = yes
+		days_mission_timeout = 120
+		selectable_mission = no
+
+		timeout_effect = {
+			set_temp_variable = {
+				MEL_toxic_crop_gain = 0
+			}
+			set_temp_variable = {
+				MEL_medicinal_crop_gain = 0
+			}
+			hidden_effect = {
+                if = {
+                    limit = {
+                        all_controlled_state = {
+                            if = {
+                                limit = {
+                                    has_dynamic_modifier = {
+                                        modifier = MEL_du_xing_zuo_wu_zhong_zhi_qu_idea
+                                    }
+                                }
+                                add_to_temp_variable = {
+                                    MEL_toxic_crop_gain = 1
+                                }
+                            }
+                            if = {
+                                limit = {
+                                    has_dynamic_modifier = {
+                                        modifier = MEL_yao_yong_zuo_wu_zhong_zhi_qu_idea
+                                    }
+                                }
+                                add_to_temp_variable = {
+                                    MEL_medicinal_crop_gain = 1
+                                }
+                            }
+                            always = yes
+                        }
+                    }
+                    log = "MEL crop gain [?MEL_toxic_crop_gain] [?MEL_medicinal_crop_gain]"
+                }
+				add_to_variable = {
+					MEL_toxic_crop_num = MEL_toxic_crop_gain
+				}
+				add_to_variable = {
+					MEL_medicinal_crop_num = MEL_medicinal_crop_gain
+				}
+			}
+			custom_effect_tooltip = MEL_crop_gain_tt
+			hidden_effect = {
+				activate_mission = MEL_te_shu_zuo_wu_shou_huo
+			}
+		}
+    }
+}

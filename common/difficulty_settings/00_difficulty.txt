@@ -1,0 +1,57 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_teg"
+		modifier = diff_strong_ai_generic
+		countries = { TEG }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_ysk"
+		modifier = diff_strong_ai_generic
+		countries = { MRY }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_sca"
+		modifier = diff_strong_ai_generic
+		countries = { SCA GRS WAK PRI}
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_cir"
+		modifier = diff_strong_ai_generic
+		countries = { CIR }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_sei"
+		modifier = diff_strong_ai_generic
+		countries = { SEJ }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_nms"
+		modifier = diff_strong_ai_generic
+		countries = { NMS }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_kog"
+		modifier = diff_strong_ai_generic
+		countries = { TKM }
+		multiplier = 2.0
+	}
+
+	difficulty_setting = {
+		key = "custom_diff_strong_sage"
+		modifier = diff_strong_ai_generic
+		countries = { YKR OKI KAS }
+		multiplier = 2.0
+	}
+}

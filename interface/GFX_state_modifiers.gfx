@@ -13,4 +13,24 @@ spriteTypes = {
 		name = "GFX_modifiers_sw_unexplored_land"
 		textureFile = "gfx/interface/state_modifiers/modifiers_sw_unexplored_land.png"
 	}
+
+	spriteType = {
+		name = "GFX_modifiers_mel_use_toxic_crop"
+		textureFile = "gfx/interface/state_modifiers/modifiers_mel_use_toxic_crop.png"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_mel_use_medicinal_crop"
+		textureFile = "gfx/interface/state_modifiers/modifiers_mel_use_medicinal_crop.png"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_mel_toxic_crop_farm"
+		textureFile = "gfx/interface/state_modifiers/modifiers_mel_toxic_crop_farm.png"
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_mel_medicinal_crop_farm"
+		textureFile = "gfx/interface/state_modifiers/modifiers_mel_medicinal_crop_farm.png"
+	}
 }

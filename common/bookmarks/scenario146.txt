@@ -207,7 +207,9 @@ bookmarks = {
 				MEL_bo_ruo_de_min_yong_gong_ye_idea
 			}	
             focuses = {
-            	
+            	MEL_qiang_hua_mei_di_xin_quan_wei
+				MEL_te_shu_zuo_wu_zhong_zhi_chang
+				MEL_zai_xi_nan_de_sheng_li
 			}			
 		}
 

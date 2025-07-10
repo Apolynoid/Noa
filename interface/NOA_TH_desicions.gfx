@@ -20,6 +20,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_category_generic_crops"
+		texturefile = "gfx/interface/decisions/decision_category_generic_crops.png"
+	}
+
+	spriteType = {
 		name = "GFX_decision_category_tkm_tskumogami_spiritual_power_feature"
 		texturefile = "gfx/interface/decisions/decision_category_tkm_tskumogami_spiritual_power_feature.png"
 	}
@@ -66,6 +71,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_generic_plant"
+		texturefile = "gfx/interface/decisions/decision_generic_plant.png"
+	}
+
+	spriteType = {
 		name = "GFX_decision_tkm_turn_on_sp_bead_auto_conversion"
 		texturefile = "gfx/interface/decisions/decision_tkm_turn_on_sp_bead_auto_conversion.png"
 	}
@@ -83,6 +93,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_tkm_energy_feature_settlement"
 		texturefile = "gfx/interface/decisions/decision_tkm_energy_feature_settlement.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mel_toxic_crops"
+		texturefile = "gfx/interface/decisions/decision_mel_toxic_crops.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mel_medicinal_crops"
+		texturefile = "gfx/interface/decisions/decision_mel_medicinal_crops.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mel_toxic_farm"
+		texturefile = "gfx/interface/decisions/decision_mel_toxic_farm.png"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mel_medicinal_farm"
+		texturefile = "gfx/interface/decisions/decision_mel_medicinal_farm.png"
 	}
 
 	spriteType = {

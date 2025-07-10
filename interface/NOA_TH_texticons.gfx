@@ -13,6 +13,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_toxic_crops_texticon"
+		texturefile = "gfx/texticons/toxic_crops.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_medicinal_crops_texticon"
+		texturefile = "gfx/texticons/medicinal_crops.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_KNA_flag_texticon"
 		texturefile = "gfx/texticons/KNA.png"
 		legacy_lazy_load = no
