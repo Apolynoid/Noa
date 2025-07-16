@@ -38,6 +38,8 @@ ZYD_gong_he_guo_guo_fang_ji_hua:0 "共和国国防计划"
 ZYD_gong_he_guo_guo_fang_ji_hua_desc:0 ""
 ZYD_dui_hua_tian_de_zhan_zheng:0 "对花田的战争"
 ZYD_dui_hua_tian_de_zhan_zheng_desc:0 ""
+ZYD_jia_ru_min_zhu_tong_meng:0 "加入民主同盟"
+ZYD_jia_ru_min_zhu_tong_meng_desc:0 ""
 
 # idea
 ZYD_xi_nan_mao_yi_zhong_xin_idea:0 "西南贸易中心"
@@ -48,6 +50,8 @@ ZYD_di_xiao_de_zheng_fu_a_idea:0 "$ZYD_di_xiao_de_zheng_fu_idea$"
 ZYD_fu_bai_wen_ti_idea:0 "腐败问题"
 ZYD_fu_bai_wen_ti_a_idea:0 "$ZYD_fu_bai_wen_ti_idea$"
 ZYD_zhong_you_zhi_dao_jing_wei_dui_idea:0 "中有之道警卫队"
+ZYD_zhong_you_zhi_dao_jing_wei_dui_a_idea:0 "中有之道警卫队"
+ZYD_zhong_you_zhi_dao_jing_wei_dui_b_idea:0 "中有之道警卫队"
 ZYD_yan_jiu_tou_zi_idea:0 "研究投资"
 ZYD_guo_fang_ji_hua_idea:0 "国防计划"
 

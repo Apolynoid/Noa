@@ -2,7 +2,7 @@
 #########################
 # national focus
 SGS_xi_nan_yao_jing_jin_ji_hui_yi:0 "西南妖精紧急会议"
-SGS_xi_nan_yao_jing_jin_ji_hui_yi_desc:0 ""
+SGS_xi_nan_yao_jing_jin_ji_hui_yi_desc:0 "我国的大部分居民都是为了躲避战争才流亡西南，希望在此地找到一处安居之所。然而，随着幻想乡局势的恶化，西南也开始动荡不安。我们必须尽快确定未来的发展方向，才能在此处生存下去。"
 SGS_yao_jing_ji_jin_pai:0 "妖精激进派"
 SGS_yao_jing_ji_jin_pai_desc:0 ""
 SGS_ge_ming_xuan_chuan:0 "革命宣传"
@@ -21,14 +21,12 @@ SGS_xi_nan_ge_ming_dao_lu:0 "西南革命道路"
 SGS_xi_nan_ge_ming_dao_lu_desc:0 ""
 SGS_yao_jing_gai_ge_pai:0 "妖精改革派"
 SGS_yao_jing_gai_ge_pai_desc:0 ""
-SGS_he_ping_xuan_chuan:0 "和平宣传"
-SGS_he_ping_xuan_chuan_desc:0 ""
+SGS_bao_wei_he_ping_de_zhun_bei:0 "保卫和平的准备"
+SGS_bao_wei_he_ping_de_zhun_bei_desc:0 ""
 SGS_yu_zhong_you_zhi_dao_de_xie_yi:0 "与中有之道的协议"
 SGS_yu_zhong_you_zhi_dao_de_xie_yi_desc:0 ""
 SGS_tian_gou_gong_ye_yuan_zhu:0 "天狗工业援助"
 SGS_tian_gou_gong_ye_yuan_zhu_desc:0 ""
-SGS_bao_wei_he_ping_de_zhun_bei:0 "保卫和平的准备"
-SGS_bao_wei_he_ping_de_zhun_bei_desc:0 ""
 SGS_guo_fang_dong_yuan:0 "国防动员"
 SGS_guo_fang_dong_yuan_desc:0 ""
 SGS_tong_yi_xi_nan_de_xiong_xin:0 "统一西南的雄心"
@@ -37,6 +35,8 @@ SGS_cu_jin_he_jie:0 "促进和解"
 SGS_cu_jin_he_jie_desc:0 ""
 SGS_xi_nan_lian_bang:0 "西南联邦"
 SGS_xi_nan_lian_bang_desc:0 ""
+SGS_yu_tian_gou_de_tong_meng:0 "与天狗的同盟"
+SGS_yu_tian_gou_de_tong_meng_desc:0 ""
 SGS_yao_jing_zhong_zu_pai:0 "妖精种族派"
 SGS_yao_jing_zhong_zu_pai_desc:0 ""
 SGS_zhan_zheng_xuan_chuan:0 "战争宣传"
@@ -52,11 +52,11 @@ SGS_yao_jing_shu_liang_you_shi_desc:0 ""
 SGS_yao_jing_guo_jia:0 "妖精国家"
 SGS_yao_jing_guo_jia_desc:0 ""
 SGS_zhan_zheng_zhun_bei:0 "战争准备"
-SGS_zhan_zheng_zhun_bei_desc:0 ""
+SGS_zhan_zheng_zhun_bei_desc:0 "无论我们多么厌恶战争，西南不稳定的局势使得下一场战争注定要到来，战争的阴影始终笼罩在我们上空。我们必须尽快做好战争准备，才能在未来可能的战争中生存下来。"
 SGS_zhan_zheng_gong_ye_dong_yuan:0 "战争工业动员"
 SGS_zhan_zheng_gong_ye_dong_yuan_desc:0 ""
 SGS_chao_xin_xing_ji_hua:0 "超新星计划"
-SGS_chao_xin_xing_ji_hua_desc:0 ""
+SGS_chao_xin_xing_ji_hua_desc:0 "我国糟糕的工业水平完全无法应对西南的严峻形势。通过从预备役抽调人力用于一系列工业建设计划，我们能在最短时间内提升我国的工业水平，作为未来进一步工业发展的基础。然而，毫无疑问的，这样的快速建设会带来远超常规建设的伤亡……"
 SGS_jia_kuai_jian_she_su_du:0 "加快建设速度"
 SGS_jia_kuai_jian_she_su_du_desc:0 ""
 SGS_zhu_zhong_sheng_chan_an_quan:0 "注重生产安全"
@@ -114,343 +114,29 @@ SGS_xi_nan_fang_yu_ji_hua_idea:0 "西南防御计划"
 SGS_test_artillery_company_tt:0 "在首都创建两个§Y试验型§!炮兵单位。"
 SGS_add_20_compliance_tt:0 "所有被我们控制的地区增加§Y20§!顺从度。"
 
+SGS_ZYD_transfer_to_NMS_tt:0 "§Y作为[SGS.GetName]继续游戏§!"
+SGS_ZYD_game_over_warning_tt:0 "§R[SGS.GetName]吞并[ZYD.GetName]，游戏结束§!"
+
+SGS_allow_integration_of_ZYD_tt:0 "允许对占领的[ZYD.GetNameWithFlag]地区开启§Y$integration_law$§!法案。"
+
+SGS_decrease_construction_time_tt:0 "§G降低§!超新星计划项目建设时间至§Y60§!天。"
+SGS_decrease_casualty_rate_tt:0 "§G降低§!超新星计划项目建设过程中的伤亡率。"
+SGS_refund_manpower_tt:0 "这些人力在项目完成后将会返回，但在项目建设过程中可能§R遭受损失§!。"
+SGS_manpower_loss_tt:0 "我们在建设过程中损失了§Y[?event_target:SGS_construction_finish_state.SGS_local_injury_num]§!人。"
+SGS_public_discontent_increase_tt:0 "§R公众不满§!增加§Y[?SGS_public_discontent]§!。"
+SGS_workers_return_tt:0 "参与建设的工人将会§G返回§!。"
+SGS_stop_plan_supernova_tt:0 "超新星计划§Y结束§!。"
+
+SGS_plan_supernova_flag:0 "超新星计划仍在进行"
+
+
 #decision
-SGS_jiefangyaojingtongbao_category:0"解放妖精同胞"
-SGS_jiefangyaojingtongbao_category_desc:0"在西南，我们妖精已经翻身做了主人，建立了自己的国家。但是在幻想乡的其他地方，还有广大的妖精同胞在受到压迫，我们将解放幻想乡的所有妖精，完成妖精统一的大业。"
+SGS_chao_xin_xing_ji_hua_category:0 "超新星计划"
+SGS_chao_xin_xing_ji_hua_category_desc:0 "§Y超新星计划§!是旨在改善我国工业能力薄弱现状的一系列建设计划的总称。计划通过从预备役中抽调一部分人力用于工业建设，快速建立起基本的工业体系，从而为进一步的工业发展打下基础。建设计划只能在已经得到§Y充分勘探§!的地区执行。\n然而，计划紧凑的工期与我国基础建设能力的薄弱两者结合，导致建设过程中可能出现远超常规建设过程的§R伤亡率§!。由于这一计划成为了我国经济的焦点，公众会对建设过程中的伤亡感到§R不满§!，且随着每次建设过程中的伤亡人数增加而§R急剧增加§!。\n幸运的是，对于已经得到勘探而§Y未充分发展§!的地区，公众更能理解在这些地区建设所带来的伤亡。在这些地区的建设不仅造成的不满§G更低§!，而且还能改善当地的发展状况。\n\n当公众不满超过§Y100§!时，计划将迫于公众压力而中止。中止计划将§R同时中止§!所有正在进行中的建设计划。\n因公众不满导致计划中止时，还会造成§R稳定度损失§!。\n当前§R公众不满§!：§Y[?SGS_total_public_discontent]§!"
+SGS_zai_FROM_jian_she_min_yong_gong_chang_undeveloped:0 "在[FROM.GetName]建设民用工厂"
+SGS_zai_FROM_jian_she_min_yong_gong_chang:0 "在[FROM.GetName]建设民用工厂"
+SGS_zhong_zhi_chao_xin_xing_ji_hua:0 "中止超新星计划"
 
-SGS_jiefangyaojingtongbao_decision:0"解放[FROM.GetName]的同胞"
-SGS_jiefangyaojingtongbao_decision_desc:0""
-
-SGS_kaicaiziyaun_category:0"开采资源"
-SGS_kaicaiziyaun_category_desc:0""
-
-SGS_kaicailingqi_decision:0"在§Y[FROM.GetName]§!开采§Y灵气§!"
-SGS_kaicailingqi_decision_desc:0""
-
-SGS_kaicaiyaoshi_decision:0"在§Y[FROM.GetName]§!开采§Y妖石§!"
-SGS_kaicaiyaoshi_decision_desc:0""
-
-SGS_xinanhuanxiangxianggongyehua_category:0"西南幻想乡工业化"
-SGS_xinanhuanxiangxianggongyehua_category_desc:0"经过不懈的努力，我们妖精终于成为了西南唯一的政权。为了确保西南不在回到从前各方割据乱战的时代，我们必须确保自己拥有足够的实力，西南一直都是一片荒凉的土地，除了大片大片的原始土地以外一无所有，而对于一个强大的国家来说工业化是无法避免的问题。现如今国家处于内忧外患当中，建立属于我们的工业化只能靠我们自己。恰好的是在我们控制下的无缘冢有不少从外界流落来的工业废品，我们可以尝试收集并修复它们，以此来扩充我们的工业。\n\n目前工业化阶段：§Y[GetSGS_gongyehuanjieduan]§!\n[GetSGS_gongyehuajingdu]\n\n§C电量§!：§Y[?SGS_dianliang]§!\n\n§O废品量§!：§Y[?SGS_feipingliang]§!\n§g工业机械储备§!：§Y[?SGS_gongyejixie]§!"
-
-SGS_linglifadianchang1_decision:0"建造灵力发电厂"
-SGS_linglifadianchang1_decision_desc:0""
-
-SGS_linglifadianchang2_decision:0"建造灵力发电厂"
-SGS_linglifadianchang2_decision_desc:0""
-
-SGS_linglifadianchang3_decision:0"建造灵力发电厂"
-SGS_linglifadianchang3_decision_desc:0""
-
-SGS_linglifadianchang4_decision:0"建造灵力发电厂"
-SGS_linglifadianchang4_decision_desc:0""
-
-SGS_shuilifadianchang_decision:0"在§Y[FROM.GetName]§!建造水力发电厂"
-SGS_shuilifadianchang_decision_desc:0""
-
-SGS_gongyehuajianzao3_decision:0"在§Y[FROM.GetName]§!新建大厂房，配置工业化机床（工业化）"
-SGS_gongyehuajianzao3_decision_desc:0""
-
-SGS_gongyehuajianzao2_decision:0"在§Y[FROM.GetName]§!扩建厂房，配置早期机床（工业化）"
-SGS_gongyehuajianzao2_decision_desc:0""
-
-SGS_gongyehuajianzao1_decision:0"在§Y[FROM.GetName]§!整合作坊，配置早期工业工具（工业化）"
-SGS_gongyehuajianzao1_decision_desc:0""
-
-SGS_jingruxiayijieduan1_decision:0"进入下一工业化阶段"
-SGS_jingruxiayijieduan1_decision_desc:0""
-
-SGS_jingruxiayijieduan2_decision:0"进入下一工业化阶段"
-SGS_jingruxiayijieduan2_decision_desc:0""
-
-SGS_jingruxiayijieduan3_decision:0"进入下一工业化阶段"
-SGS_jingruxiayijieduan3_decision_desc:0""
-
-SGS_shengchangongyejixie1_decision:0"生产§g工业机械§!"
-SGS_shengchangongyejixie1_decision_desc:0""
-
-SGS_shengchangongyejixie2_decision:0"生产§g工业机械§!"
-SGS_shengchangongyejixie2_decision_desc:0""
-
-SGS_shengchangongyejixie3_decision:0"生产§g工业机械§!"
-SGS_shengchangongyejixie3_decision_desc:0""
-
-SGS_shengchangongyejixie4_decision:0"生产§g工业机械§!"
-SGS_shengchangongyejixie4_decision_desc:0""
-
-SGS_weixiufeiping_decision:0"小规模维修§O废品§!"
-SGS_weixiufeiping_decision_desc:0""
-
-SGS_weixiufeiping2_decision:0"大规模维修§O废品§!"
-SGS_weixiufeiping2_decision_desc:0""
-
-SGS_souxunfeiping_decision:0"小规模搜寻§O废品§!"
-SGS_souxunfeiping_decision_desc:0""
-
-SGS_souxunfeiping2_decision:0"大规模搜寻§O废品§!"
-SGS_souxunfeiping2_decision_desc:0""
-
-SGS_jiquandu_category:0"集权"
-SGS_jiquandu_category_desc:0"虽然妖精之间是平等的，但是每个妖精都有不同的行事准则，为了确保权力的集中，我们不得不与其他的派系展开合作。虽然我们妖精至上党在政府中话语权更高，妖精实业派所掌握的资本力量更不容小觑，与其合作虽然能有效集中权力，但使她们逐渐掌握权力的风险不亚于与虎谋皮。我们在与其合作时需要注意不让其掌握太多的力量。\n\n影响力：\n§g妖精至上党§!：§Y[?SGS_yaojingzhishangdang]§!%\n§C妖精实业团§!：§Y[?SGS_yaojingshiyetuan]§!%\n\n每周集权度增加：§Y[?SGS_jiquandu_meizhou]§!%\n\n集权度：§Y[?SGS_jiquandu]§!%\n\n目前集权度带来的效果：\n[GetSGS_jiquanxiaoguo]"
-
-SGS_daibuweifashiyetuan_decision:0"逮捕违法实业团成员"
-SGS_daibuweifashiyetuan_decision_desc:0""
-
-SGS_caiyongjingbiao_decision:0"采用竞标采购制"
-SGS_caiyongjingbiao_decision_desc:0""
-
-SGS_jiyumaoyitequan_decision:0"给予妖精实业团国内贸易特权"
-SGS_jiyumaoyitequan_decision_desc:0""
-
-SGS_guoyouhuabufenqiye_decision:0"国有化部分企业"
-SGS_guoyouhuabufenqiye_decision_desc:0""
-
-SGS_qudiyihui_decision:0"取缔议会"
-SGS_qudiyihui_decision_desc:0""
-
-SGS_shoumaiyiyuan_decision:0"让妖精实业团收买议员"
-SGS_shoumaiyiyuan_decision_desc:0""
-
-SGS_shelliyaojingzhixuzongguanju_decision:0"设立妖精秩序总管局"
-SGS_shelliyaojingzhixuzongguanju_decision_desc:0""
-
-SGS_yunxushiyetuanjianzaojungongchang_decision:0"允许妖精实业团投资军工厂"
-SGS_yunxushiyetuanjianzaojungongchang_decision_desc:0""
-
-SGS_sheliquanguojingjihesuan_decision:0"设立全国经济核算委员会"
-SGS_sheliquanguojingjihesuan_decision_desc:0""
-
-SGS_zhaomuxingzhengrenyuanrudang_decision:0"招募行政人员入党"
-SGS_zhaomuxingzhengrenyuanrudang_decision_Desc:0""
-
-SGS_zhongzhinongzuowu_category:0"种植农作物"
-SGS_zhongzhinongzuowu_category_desc:0""
-
-SGS_zhongzhinongzuowu_decision:0"在§Y[FROM.GetName]§!种植农作物"
-SGS_zhongzhinongzuowu_decision_desc:0""
-
-SGS_kaifahuangdi_decision:0"开发§Y[FROM.GetName]§!"
-SGS_kaifahuangdi_decision_desc:0""
-
-SGS_jieshounanming_decision:0"在§Y[FROM.GetName]§!接收难民"
-SGS_jieshounanming_decision_desc:0""
-
-SGS_yurenleijiaohao_decision:0"与人类交好"
-SGS_yurenleijiaohao_decision_desc:0"我们需要更多的影响人类来帮助我们，我们现在要集中一些政治资源来进行外交工作。"
-
-SGS_yurenleijiaohao2_decision:0"取消与人类交好"
-SGS_yurenleijiaohao2_decision_desc:0""
-
-SGS_zhengzhijizhongfaan_decision:0"政治集中法案"
-SGS_zhengzhijizhongfaan_decision_desc:0"我们现在的政治改革无法迅速实行，我们应该寻找一个办法来加速改革，我们需要更多的人力来帮忙参与政治"
-
-SGS_zhengzhijizhongfaan2_decision:0"取消政治集中法案"
-SGS_zhengzhijizhongfaan2_decision_desc:0""
-
-SGS_zhengshoufaan_decision:0"征收法案"
-SGS_zhengshoufaan_decision_desc:0"咱们最近需要征用一些东西来达成咱们的工业目标，但是为了防止他们有一些意见，因此咱们要把很多的事情用来处理他们的问题，让他们不会因为我们的一些财政紧缩挨饿或者是被其他妖精欺负。"
-
-SGS_zhengshoufaan2_decision:0"取消征收法案"
-SGS_zhengshoufaan2_decision_desc:0""
-
-SGS_jingjijingling_decision:0"紧急禁令"
-SGS_jingjijingling_decision_desc:0"在咱们的领土里有一些坏蛋再搞破坏，一些人建议我们要戒严，比如让他们晚上禁止出栏什么什么的，来让那群家伙难以搞破坏和伤人。"
-
-SGS_jingjijingling2_decision:0"取消紧急禁令"
-SGS_jingjijingling2_decision_desc:0""
-
-SGS_jingjigongyefaan_decision:0"紧急工业法案"
-SGS_jingjigongyefaan_decision_desc:0"咱们的工厂现在出现了一些人员短缺，咱们现在需要添加一些工厂的妖精，但是这样的话咱们就要牺牲一些其他的东西了。"
-
-SGS_jingjigongyefaan2_decision:0"取消紧急工业法案"
-SGS_jingjigongyefaan2_decision_desc:0""
-
-SGS_yaojingzhengbangfaan_decision:0"妖精征兵法案"
-SGS_yaojingzhengbangfaan_decision_desc:0"咱们的兵员暂时性不足了，咱们要紧急的填充一些妖精来进入我们这里，但是条件不好就没有妖精想要进入，所以在法案生效期间，咱们要给他们很多福利与补贴。"
-
-SGS_yaojingzhengbangfaan2_decision:0"取消妖精征兵法案"
-SGS_yaojingzhengbangfaan2_decision_desc:0""
-
-SGS_lingshifaan_category:0"临时法案"
-SGS_lingshifaan_category_desc:0"我们可以根据实际情况来启用§Y临时法案§!来帮助我们的国家发展。\n\n只能同时存在两个§Y临时法案§!，§Y临时法案§!可以取消与启用\n\n目前法案及效果：[GetSGS_lingshifaanzhengbing][GetSGS_lingshifaangongye][GetSGS_jingjijingling][GetSGS_zhengshoufaan][GetSGS_zhengzhijizhongfaan][GetSGS_yurenleijiaohao]"
-
-SGS_rangyaojingshiyongziranzhili_decision:0"让妖精使用妖精之力"
-SGS_rangyaojingshiyongziranzhili_decision_desc:0""
-
-SGS_yaoqingyaoshou_decision:0"邀请妖怪帮忙运输"
-SGS_yaoqingyaoshou_decision_desc:0""
-
-SGS_yaoqinghetong_decision:0"邀请河童工程师"
-SGS_yaoqinghetong_decision_desc:0""
-
-SGS_jianlixinanyihuidasha_category:0"修建西南国会大厦"
-SGS_jianlixinanyihuidasha_category_desc:0"固然，在军事意义上，我们已经统一了西南，但在过度扩张之后，我们的行政效率低下致使地方叛乱不断。当下，我们迫切地需要一个行政总部来巩固西南妖精联合在这一地区的行政影响力。不过，那个“日耳曼尼亚大厦”的大小实在过于夸张了，当下要建造如此巨大的工程对我们来说是不切实际的，但我们出色的工程师已经成功地将图纸缩小到了原来的五分之一，这使得我们的建造计划在理论上可以进行，而且，纵使这一建筑被等比例缩小了，但其规模对于幻想乡来说依然堪称奇观。当我们的国会大厦建成之后，整个西南，不，整个幻想乡都将以敬畏的姿态仰慕着我们伟大的事业\n\n修建进度：§Y[?SGS_jiandasha]§!%\n\n目前每周修建§Y[?SGS_jiandasha_meizhou]§!%\n\n目前增益效果：\n[GetSGS_xiudashaxiaoguo]"
-
-SGS_anliuyongdong_category:0"暗流涌动"
-SGS_anliuyongdong_category_desc:0""
-
-SGS_xiangMELxuanzhan_decision:0"向[FROM.GetName]宣战"
-SGS_xiangMELxuanzhan_decision_desc:0""
-
-SGS_wanquanlianheyaoshou_decision:0"完全联合§Y妖兽§!"
-SGS_wanquanlianheyaoshou_decision_desc:0""
-
-SGS_wanquanlianherenlei_decision:0"完全联合§Y人类§!"
-SGS_wanquanlianherenlei_decision_desc:0""
-
-SGS_wanquanlianhefashi_decision:0"完全联合§Y法师§!"
-SGS_wanquanlianhefashi_decision_desc:0""
-
-SGS_wanquanlianheyouling_decision:0"完全联合§Y幽灵§!"
-SGS_wanquanlianheyouling_decision_desc:0""
-
-SGS_wanquanlianheyaojing_decision:0"完全联合§Y妖精§!"
-SGS_wanquanlianheyaojing_decision_desc:0""
-
-SGS_wanquanlianheyaoguai_decision:0"完全联合§Y妖怪§!"
-SGS_wanquanlianheyaoguai_decision_desc:0""
-
-SGS_wanquanlianhehetong_decision:0"完全联合§Y河童§!"
-SGS_wanquanlianhehetong_decision_desc:0""
-
-SGS_wanquanlianhetiangou_decision:0"完全联合§Y天狗§!"
-SGS_wanquanlianhetiangou_decision_desc:0""
-
-SGS_wanquanlianheshenming_decision:0"完全联合§Y神明§!"
-SGS_wanquanlianheshenming_decision_desc:0""
-
-SGS_wanquanlianhecaogenyaogai_decision:0"完全联合§Y草根妖怪§!"
-SGS_wanquanlianhecaogenyaogai_decision_desc:0""
-
-SGS_fahuiyaoshoudetechang_decision:0"发挥§Y妖兽§!的特长"
-SGS_fahuiyaoshoudetechang_decision_desc:0""
-
-SGS_fahuirenleidetechang_decision:0"发挥§Y人类§!的特长"
-SGS_fahuirenleidetechang_decision_desc:0""
-
-SGS_fahuifashidetechang_decision:0"发挥§Y法师§!的特长"
-SGS_fahuifashidetechang_decision_desc:0""
-
-SGS_fahuiyoulingidetechang_decision:0"发挥§Y幽灵§!的特长"
-SGS_fahuiyoulingidetechang_decision_desc:0""
-
-SGS_fahuiyaoguaidetechang_decision:0"发挥§Y妖怪§!的特长"
-SGS_fahuiyaoguaidetechang_decision_desc:0""
-
-SGS_fahuihetongdetechang_decision:0"发挥§Y河童§!的特长"
-SGS_fahuihetongdetechang_decision_desc:0""
-
-SGS_fahuitiangoudetechang_decision:0"发挥§Y天狗§!的特长"
-SGS_fahuitiangoudetechang_decision_desc:0""
-
-SGS_fahuishenmingdetechang_decision:0"发挥§Y神明§!的特长"
-SGS_fahuishenmingdetechang_decision_desc:0""
-
-SGS_fahuicaogenyaoguaidetechang_decision:0"发挥§Y草根妖怪§!的特长"
-SGS_fahuicaogenyaoguaidetechang_decision_desc:0""
-
-SGS_jingxingtuanjiexuanchuan_decision:0"进行团结宣传"
-SGS_jingxingtuanjiexuanchuan_decision_desc:0""
-
-SGS_tuidongfaanpuji_decision:0"推动法案普及"
-SGS_tuidongfaanpuji_decision_desc:0""
-
-SGS_jiadafaandezhixinglidu_decision:0"加大法案的执行力度"
-SGS_jiadafaandezhixinglidu_decision_desc:0""
-
-SGS_xinagezhouzujingrubumen_decision:0"吸纳各种族进入政府部门"
-SGS_xinagezhouzujingrubumen_decision_desc:0""
-
-SGS_zhongzulianhe_category:0"种族联合"
-SGS_zhongzulianhe_category_desc:0"在幻想乡中，单纯的妖精力量是远远不够的。而在西南，我们妖精群体始终是少数。为了更快速的统一西南，我们可以将部分其余种族的人才吸纳进政府部门，发挥他们的特长，以此来表达我们对种族平等的决心。联合西南所有的种族，成为一个国家，一个种族。\n\n各种族联合度：\n\n§Y草根妖怪：§G[?SGS_caogenyaoguai]%§!§!\n§Y神明：§G[?SGS_shenming]%§!§!\n§Y天狗：§G[?SGS_tiangou]%§!§!\n§Y河童：§G[?SGS_hetong]%§!§!\n§Y妖怪：§G[?SGS_yaoguai]%§!§!\n§Y妖精：§G[?SGS_yaojing]%§!§!\n§Y幽灵：§G[?SGS_youling]%§!§!\n§Y法师：§G[?SGS_fashi]%§!§!\n§Y人类：§G[?SGS_renlei]%§!§!\n§Y妖兽：§G[?SGS_yaoshou]%§!§!"
-
-SGS_jianjieganshe_decision:0"间接干涉"
-SGS_jianjieganshe_decision_desc:0""
-
-SGS_zhijieganshe_decision:0"直接干涉"
-SGS_zhijieganshe_decision_desc:0""
-
-SGS_kaishipanluan_decision:0"让[YS1.GetName]§R开始叛乱§!"
-SGS_kaishipanluan_decision_desc:0""
-
-SGS_shongjunguan_decision:0"派遣§Y军官团§!到[YS1.GetName]"
-SGS_shongjunguan_decision_desc:0"可§G增加§![YS1.GetName]的§Y作战能力§!"
-
-SGS_shongfuka_decision:0"援助[YS1.GetName]§Y符卡§!"
-SGS_shongfuka_decision_desc:0"援助§Y符卡§!将为[YS1.GetName]组建2支§G精锐部队§!"
-
-SGS_shongjingzhan_decision:0"援助[YS1.GetName]§Y近战武器§!"
-SGS_shongjingzhan_decision_desc:0"援助§Y近战武器§!将为[YS1.GetName]组建2支§G民兵部队§!"
-
-SGS_zaitaiyanghuatianhuodong_category:0"在[YUK.GetName]的活动"
-SGS_zaitaiyanghuatianhuodong_category_desc:0"统一西南幻想乡后，我们必须继续增强妖精在这片地区的影响力，从而扩大妖精的生存空间，并获取我们所需的资源、人力，与我们最迫切需要的“政治盟友”。[SGS.GetLeader]元首已经决定将扩张目标选定为太阳花田，我们所进行的每次行动都会帮助起义军在战斗开始的时候更具有优势，但这也会花费相当的资源——为了妖精的未来，这都是值当的。\n\n已有理念省份数量最大为§Y5§!，目前已有理念省份数量为§Y[?SGS_linianshengfen]§!\n\n可支援[YS1.GetName]§Y12§!支部队，目前已支援§Y[?SGS_junduishuliang]§!支部队"
-
-SGS_chuanbolinian_decision:0"在§Y[FROM.GetName]§!传播理念"
-SGS_chuanbolinian_decision_desc:0"向[YUK.GetName]国内传播我们的理念，同时[YUK.GetName]可以抵制传播。\n\n拥有§Y理念§!的地块将在未来我们挑起的起义中§G站在起义军一方§!"
-
-SGS_xinaoyizu_category:0"对国内异族进行洗脑宣传"
-SGS_xinaoyizu_category_desc:0"即便妖精已经统一西南幻想乡，我们的内部依然有不少势力对[SGS.GetLeader]元首的政策指手画脚，我们需要将这些异见者的思想掰正，并使他们的存在与言论对我们的治理更加有利，当然，至于用什么手段就不那么重要了。"
-
-SGS_xinaoyizu_decision:0"洗脑§Y[FROM.GetName]§!的异族"
-SGS_xinaoyizu_decision_desc:0""
-
-SGS_kaifatudi_category:0"开发西南幻想乡的土地"
-SGS_kaifatudi_category_desc:0""
-
-SGS_jieshouyaojingnanmin_category:0"接收妖精难民"
-SGS_jieshouyaojingnanmin_category_desc:0""
-
-
-
-view_to_weixin2:0"切换为唯心世界观"
-view_to_pingheng3:0"切换为平衡世界观"
-view_to_weiwu2:0"切换为唯物世界观"
-
-
-####特殊###########
-yunshucheliang146:0"运输车辆146型"
-SGS_xinanyaojinglianmeng_fandong:0"西南妖精联合"
-SGS_xinanyaojinglianmeng_fandong_DEF:0"西南妖精联合"
-SGS_xinanyaojinglianmeng_qinwai:0"西南妖精联盟"
-SGS_xinanyaojinglianmeng_qinwai_DEF:0"西南妖精联盟"
-SGS_xinanyaojinglianmeng_neworder:0"妖精帝国"
-SGS_xinanyaojinglianmeng_neworder_DEF:0"妖精帝国"
-SGS_xinanyaojinglianmeng_guli:0"西南妖精联盟"
-SGS_xinanyaojinglianmeng_guli_DEF:0"西南妖精联合"
-SGS_xinanyaojinglianmeng_oldorder:0"西南妖精联合"
-SGS_xinanyaojinglianmeng_oldorder_DEF:0"西南妖精联合"
-SGS_zhiziling_fandong:0"妖精自治领"
-SGS_zhiziling_fandong_DEF:0"妖精自治领"
-SGS_zhiziling_qinwai:0"妖精自治领"
-SGS_zhiziling_qinwai_EDF:0"妖精自治领"
-SGS_zhiziling_neworder:0"妖精自治领"
-SGS_zhiziling_neworder_DEF:0"妖精自治领"
-SGS_zhiziling_guli:0"妖精自治领"
-SGS_zhiziling_guli_DEF:0"妖精自治领"
-SGS_zhiziling_oldorder:0"妖精自治领"
-SGS_zhiziling_oldorder_DEF:0"妖精自治领"
-###########flag#####
-SGS_zhijieganshe_flag:0""
-SGS_womencaishilingxiu_flag:0"'§Y我们才是领袖§!'"
-SW_xinanluanzhan:0"§R西南已经开始动乱§!"
-SGS_weikaizhan2_flag:0"§R未与[SGS.GetName]开战§!"
-############opinion_modifiers#################
-SGS_yaojingwenhua_op:0"妖精文化"
-SGS_anliuyongdong_op:0"暗流涌动"
-SGS_fangxiazhengduan_op:0"放下争端"
-SGS_sihuixieding_op:0"撕毁协定"
-SGS_jiujuelexieyi_op:0"拒绝了协议"
-SGS_tongyilexieyi_op:0"同意了协议"
-SGS_zhongzuzhuyizhe_op:0"种族主义者"
-SGS_tongyiyuanzhu_op:0"同意援助"
-SGS_jujueyuanzhu_op:0"拒绝援助"
-SGS_youtiaojiandeyuanzhu_op:0"有条件的援助"
-SGS_jujuehuankuan_op:0"拒绝还款"
-SGS_gansheneizheng_op:0"干涉内政"
-SGS_shanziyihe_op:0"擅自议和"
-SGS_xinanyihuidasha_op:0"西南议会大厦"
-SGS_jujuelexieyi_op:0"拒绝协议"
-SGS_gemingtongmeng_op:0"革命同盟"
 ##特殊###########
 CO_auto_core_Fairy:0"§Y妖精§!种族的省份将自动获得核心"
 SGS_xinantongyizhanxian:0"统一战线"
@@ -460,35 +146,3 @@ SGS_path_qinwai:0"露娜·切露德(改良)"
 SGS_path_fandong:0"桑尼·米尔克(激进)"
 SGS_path_neworder:0"斯塔·萨菲亚(新规)"
 SGS_DAWN_DESC:0"来自魔法森林的三月精，在战争毁了她们的家园后，被迫走上流亡的道路，并且在途中结实了不少“志同道合”的同胞。利用擅长的恶作剧占领了一处人类村落之后，内部却对将来的策划产生了新的分歧。在她们的周围，作为邻居的铃兰部落主动抛出同盟的橄榄枝，而不远处的神明信仰联盟正在疯狂扩张。独立的人类军阀，不安分的幽灵，每一个势力都盘算着在这混乱的时刻将对方的地盘纳为己有……这群独处异乡的妖精们正在迎来一个危机四伏的未来。"
-
-############动态文本
-GetSGS_lingshifaanshuliang_1:0""
-GetSGS_lingshifaanshuliang_2:0"§R需要启用法案未满两个§!"
-GetSGS_xiudashaxiaoguo_1:0""
-GetSGS_xiudashaxiaoguo_2:"政治点数：§G+5%§!\n科研速度：§G+8%§!\n稳定度：§G+10%§!"
-GetSGS_xiudashaxiaoguo_3:"政治点数：§G+5%§!\n科研速度：§G+8%§!\n稳定度：§G+10%§!\n顺从度增长速度：§G+10%§!\n抵抗下降速度：§G-10%§!\n战争支持度：§G+20%§!\n经济法案切换花费：§G-15%§!\n征兵法案切换花费：§G-15%§!"
-GetSGS_xiudashaxiaoguo_4:"政治点数：§G+5%§!\n科研速度：§G+8%§!\n稳定度：§G+10%§!\n顺从度增长速度：§G+10%§!\n抵抗下降速度：§G-10%§!\n战争支持度：§G+20%§!\n经济法案切换花费：§G-15%§!\n征兵法案切换花费：§G-15%§!\n修建速度：§G+15%§!\n工厂产出：§G+15%§!\n所有国家对你的评价：§G+20§!"
-GetSGS_lingshifaanzhengbing_1:0"\n§Y妖精征兵法案§!\n咱们的兵员暂时性不足了，咱们要紧急的填充一些妖精来进入我们这里，但是条件不好就没有妖精想要进入，所以在法案生效期间，咱们要给他们很多福利与补贴\n\n生活消费品工厂：§Y+8.0%§!\n适役人口修正：§G+15%§!\n适役人口：§Y1.00%§!"
-GetSGS_lingshifaanzhengbing_2:0""
-GetSGS_lingshifaangongye_1:0"\n§Y紧急工业法案§!\n咱们的工厂现在出现了一些人员短缺，咱们现在需要添加一些工厂的妖精，但是这样的话咱们就要牺牲一些其他的东西了\n\n适役人口修正：§R-15%§!\n工厂产出：§G+10.00%§!\n§Y民用工厂§!修建速度：§G+10.00%§!\n免费维修速度：§G+15.00%§!"
-GetSGS_lingshifaangongye_2:0""
-GetSGS_jingjijingling_1:0"\n§Y紧急禁令§!\n在咱们的领土里有一些坏蛋再搞破坏，一些人建议我们要戒严，比如让他们晚上禁止出栏什么什么的，来让那群家伙难以搞破坏和伤人\n\n适役人口修正：§R-15%§!\n工厂产出：§R-5.00%§!\n稳定度：§G+15.00%§!\n抵抗目标：§G-5%§!\n抵抗下降速度：§G+25%§!"
-GetSGS_jingjijingling_2:0""
-GetSGS_zhengshoufaan_1:0"\n§Y征收法案§!\n咱们最近需要征用一些东西来达成咱们的工业目标，但是为了防止他们有一些意见，因此咱们要把很多的事情用来处理他们的问题，让他们不会因为我们的一些财政紧缩挨饿或者是被其他妖精欺负\n\n稳定度：§G-5.00%§!\n生活消费品工厂：§Y-8.0%§!\n政治点数：§R-25%§!\n补给范围：§G+20%§!\n§Y基础设施§!修建速度：§G+10.00%§!"
-GetSGS_zhengshoufaan_2:0""
-GetSGS_zhengzhijizhongfaan_1:0"\n§Y政治集中法案§!\n我们现在的政治改革无法迅速实行，我们应该寻找一个办法来加速改革，我们需要更多的人力来帮忙参与政治...\n\n稳定度：§G+5.00%§!\n生活消费品工厂：§Y+2.0%§!\n政治点数：§G+25%§!\n适役人口修正：§R-10%§!"
-GetSGS_zhengzhijizhongfaan_2:0""
-GetSGS_yurenleijiaohao_1:0"\n§Y与人类交好§!\n我们需要更多的影响人类来帮助我们，我们现在要集中一些政治资源来进行外交工作\n\n稳定度：§R-5.00%§!\n政治点数：§R-5%§!\n每日人类影响力基础变化：§G0.03§!"
-GetSGS_yurenleijiaohao_2:0""
-GetSGS_jiquanxiaoguo_1:0""
-GetSGS_jiquanxiaoguo_2:0"政治点数：§G+10%§!\n稳定度：§G5.00%§!\n建造速度：§G+5.00%§!"
-GetSGS_jiquanxiaoguo_3:0"政治点数：§G+20%§!\n稳定度：§G10.00%§!\n建造速度：§G+10.00%§!\n顺从度增长速度：§G+10%§!\n陆军组织度：§G+10.0%§!\n工厂产出：§G+5.00%§!"
-GetSGS_jiquanxiaoguo_4:0"政治点数：§G+30%§!\n稳定度：§G20.00%§!\n建造速度：§G+15.00%§!\n顺从度增长速度：§G+15%§!\n陆军组织度：§G+15.0%§!\n工厂产出：§G+10.00%§!"
-GetSGS_gongyehuanjieduan_1:0"手工作坊主导"
-GetSGS_gongyehuanjieduan_2:0"早期工业化生产工具主导"
-GetSGS_gongyehuanjieduan_3:0"小型机床主导"
-GetSGS_gongyehuanjieduan_4:0"大型半自动化机床主导"
-GetSGS_gongyehuajingdu_1:0"当前阶段工业化进度：§Y[?SGS_gongyehuajingdu1]§!"
-GetSGS_gongyehuajingdu_2:0"当前阶段工业化进度：§Y[?SGS_gongyehuajingdu2]§!"
-GetSGS_gongyehuajingdu_3:0"当前阶段工业化进度：§Y[?SGS_gongyehuajingdu3]§!"
-GetSGS_gongyehuajingdu_4:0""

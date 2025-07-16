@@ -119,5 +119,16 @@ ideas = {
 				planning_speed = 0.1
 			}
 		}
+
+		# 西南统一战争
+		SW_xi_nan_tong_yi_zhan_zheng_idea = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				army_morale_factor = 0.1
+				surrender_limit = -0.1
+			}
+		}
 	}
 }

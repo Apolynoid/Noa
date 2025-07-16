@@ -593,6 +593,16 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_befriend_ZYD"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_ZYD.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_YUK_radicalists"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_YUK_radicalists.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_SBK"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_SBK.png"			
 	}
@@ -1307,6 +1317,21 @@ spriteTypes = {
 	SpriteType = {
 		name = "SGS_focus_southwest_fairy_emergency_meeting"
 		texturefile = "gfx/interface/goals/focus_SGS_southwest_fairy_emergency_meeting.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_fairy_radicalists"
+		texturefile = "gfx/interface/goals/focus_SGS_fairy_radicalists.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_fairy_reformists"
+		texturefile = "gfx/interface/goals/focus_SGS_fairy_reformists.png"			
+	}
+
+	SpriteType = {
+		name = "SGS_focus_fairy_racists"
+		texturefile = "gfx/interface/goals/focus_SGS_fairy_racists.png"			
 	}
 
 	SpriteType = {

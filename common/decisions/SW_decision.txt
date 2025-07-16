@@ -336,4 +336,89 @@ domestic_affair_management = {
             base = 0
         }
     }
+
+    # 西南霸权争夺
+    SW_xi_nan_ba_quan_zheng_duo = {
+		allowed = {
+            OR = {
+                original_tag = SGS
+                original_tag = MEL
+                original_tag = ZYD
+            }
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        cancel_trigger = {
+            OR = {
+                has_war_with = SGS
+                has_war_with = MEL
+                has_war_with = ZYD
+            }
+        }
+
+        icon = generic_ignite_civil_war
+
+        selectable_mission = no
+
+        days_mission_timeout = 120
+
+        is_good = no
+
+        timeout_effect = {
+            effect_tooltip = {
+                if = {
+                    limit = {
+                        NOT = {
+                            original_tag = SGS
+                            SGS = {
+                                exists = yes
+                                is_subject = no
+                            }
+                        }
+                    }
+                    declare_war_on = {
+                        target = SGS
+                        type = annex_everything
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            original_tag = MEL
+                            MEL = {
+                                exists = yes
+                                is_subject = no
+                            }
+                        }
+                    }
+                    declare_war_on = {
+                        target = MEL
+                        type = annex_everything
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            original_tag = ZYD
+                            ZYD = {
+                                exists = yes
+                                is_subject = no
+                            }
+                        }
+                    }
+                    declare_war_on = {
+                        target = ZYD
+                        type = annex_everything
+                    }
+                }
+            }
+        }
+    }
 }

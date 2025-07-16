@@ -1,0 +1,76 @@
+SGS_get_500_injury_num_rate_10_as__SGS_injury_num = {
+	set_temp_variable = {
+		res = 0
+	}
+	normal_distribution_as__res = yes
+	set_temp_variable = {
+		SGS_injury_num = res
+	}
+	multiply_temp_variable = {
+		SGS_injury_num = 6.708
+	}
+	add_to_temp_variable = {
+		SGS_injury_num = 50
+	}
+	clamp_temp_variable = {
+		var = SGS_injury_num
+		min = 0
+		max = 100 # already a huge disaster
+	}
+	round_temp_variable = SGS_injury_num
+}
+
+SGS_get_500_injury_num_rate_7_as__SGS_injury_num = {
+	set_temp_variable = {
+		res = 0
+	}
+	normal_distribution_as__res = yes
+	set_temp_variable = {
+		SGS_injury_num = res
+	}
+	multiply_temp_variable = {
+		SGS_injury_num = 5.705
+	}
+	add_to_temp_variable = {
+		SGS_injury_num = 35
+	}
+	clamp_temp_variable = {
+		var = SGS_injury_num
+		min = 0
+		max = 100 # already a huge disaster
+	}
+	round_temp_variable = SGS_injury_num
+}
+
+SGS_get_injury_num_as__SGS_injury_num = {
+	if = {
+		limit = {
+			SGS = {
+				has_completed_focus = SGS_zhu_zhong_sheng_chan_an_quan
+			}
+		}
+		SGS_get_500_injury_num_rate_7_as__SGS_injury_num = yes
+	} else = {
+		SGS_get_500_injury_num_rate_10_as__SGS_injury_num = yes
+	}
+	round_temp_variable = SGS_injury_num
+}
+
+SGS_public_discontent_increase_at__SGS_public_discontent = {
+	hidden_effect = {
+		add_to_variable = {
+			SGS_total_public_discontent = SGS_public_discontent
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = SGS_total_public_discontent
+					value = 100
+					compare = greater_than_or_equals
+				}
+			}
+			country_event = sgs.111
+		}
+	}
+	custom_effect_tooltip = SGS_public_discontent_increase_tt
+}

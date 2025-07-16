@@ -53,7 +53,7 @@ focus_tree = {
 	# 妖精激进派
 	focus = {
 		id = SGS_yao_jing_ji_jin_pai
-		icon = unknown
+		icon = SGS_focus_fairy_radicalists
 		cost = 1
 		x = -7
 		y = 1
@@ -85,8 +85,12 @@ focus_tree = {
 			focus = SGS_yao_jing_zhong_zu_pai
 		}
 
+		available = {
+			always = no
+		}
+	
 		completion_reward = {
-			
+			custom_effect_tooltip = auto_complete_tt
 		}
 	
 		ai_will_do = {
@@ -345,7 +349,7 @@ focus_tree = {
 	# 妖精改革派
 	focus = {
 		id = SGS_yao_jing_gai_ge_pai
-		icon = unknown
+		icon = SGS_focus_fairy_reformists
 		cost = 1
 		x = 0
 		y = 1
@@ -370,8 +374,12 @@ focus_tree = {
 			focus = SGS_yao_jing_zhong_zu_pai
 		}
 
+		available = {
+			always = no
+		}
+	
 		completion_reward = {
-			
+			custom_effect_tooltip = auto_complete_tt
 		}
 	
 		ai_will_do = {
@@ -379,10 +387,10 @@ focus_tree = {
 		}
 	}
 
-	# 和平宣传
+	# 保卫和平的准备
 	focus = {
-		id = SGS_he_ping_xuan_chuan
-		icon = GFX_focus_peace_propaganda
+		id = SGS_bao_wei_he_ping_de_zhun_bei
+		icon = GFX_focus_SWE_refuge_from_war
 		cost = 7
 		x = -2
 		y = 1
@@ -394,8 +402,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.1
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			if = {
+				limit = {
+					has_idea = SGS_zhan_zheng_de_yin_ying_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_zhan_zheng_de_yin_ying_idea
+					add_idea = SGS_zhan_zheng_de_yin_ying_a_idea
+				}
+			} else = {
+				remove_ideas = SGS_zhan_zheng_de_yin_ying_b_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -406,23 +427,31 @@ focus_tree = {
 	# 与中有之道的协议
 	focus = {
 		id = SGS_yu_zhong_you_zhi_dao_de_xie_yi
-		icon = unknown
+		icon = GFX_focus_befriend_ZYD
 		cost = 7
 		x = 1
 		y = 1
 
-		relative_position_id = SGS_he_ping_xuan_chuan
+		relative_position_id = SGS_bao_wei_he_ping_de_zhun_bei
 
 		prerequisite = {
-			focus = SGS_he_ping_xuan_chuan
+			focus = SGS_bao_wei_he_ping_de_zhun_bei
 		}
 
 		mutually_exclusive = {
 			focus = SGS_tong_yi_xi_nan_de_xiong_xin
 		}
 
+		available = {
+			NOT = {
+				has_global_flag = SW_southwest_war_phase_2_flag
+			}
+		}
+
 		completion_reward = {
-			
+			ZYD = {
+				country_event = sgs.107
+			}
 		}
 	
 		ai_will_do = {
@@ -457,43 +486,6 @@ focus_tree = {
 				level = 2
 			}
 			remove_ideas = SGS_bu_shou_huan_ying_de_wai_lai_shi_li_a_idea
-		}
-	
-		ai_will_do = {
-		  	factor = 1
-		}
-	}
-
-	# 保卫和平的准备
-	focus = {
-		id = SGS_bao_wei_he_ping_de_zhun_bei
-		icon = GFX_focus_SWE_refuge_from_war
-		cost = 7
-		x = 0
-		y = 1
-
-		relative_position_id = SGS_yao_jing_gai_ge_pai
-
-		prerequisite = {
-			focus = SGS_yao_jing_gai_ge_pai
-		}
-
-		completion_reward = {
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			if = {
-				limit = {
-					has_idea = SGS_zhan_zheng_de_yin_ying_idea
-				}
-				swap_ideas = {
-					remove_idea = SGS_zhan_zheng_de_yin_ying_idea
-					add_idea = SGS_zhan_zheng_de_yin_ying_a_idea
-				}
-			} else = {
-				remove_ideas = SGS_zhan_zheng_de_yin_ying_b_idea
-			}
 		}
 	
 		ai_will_do = {
@@ -667,10 +659,67 @@ focus_tree = {
 		}
 	}
 
+	# 与天狗的同盟
+	focus = {
+		id = SGS_yu_tian_gou_de_tong_meng
+		icon = GFX_focus_befriend_TEG
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = SGS_yao_jing_gai_ge_pai
+
+		prerequisite = {
+			focus = SGS_yao_jing_gai_ge_pai
+		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			ZYD = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_in_faction_with = ROOT
+					has_non_aggression_pact_with = ROOT
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			NOT = {
+				TEG = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			TEG = {
+				country_event = noa_gen.106
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
 	# 妖精种族派
 	focus = {
 		id = SGS_yao_jing_zhong_zu_pai
-		icon = unknown
+		icon = SGS_focus_fairy_racists
 		cost = 1
 		x = 7
 		y = 1
@@ -702,8 +751,12 @@ focus_tree = {
 			focus = SGS_yao_jing_gai_ge_pai
 		}
 
+		available = {
+			always = no
+		}
+	
 		completion_reward = {
-			
+			custom_effect_tooltip = auto_complete_tt
 		}
 	
 		ai_will_do = {
@@ -983,7 +1036,7 @@ focus_tree = {
 	# 超新星计划
 	focus = {
 		id = SGS_chao_xin_xing_ji_hua
-		icon = unknown
+		icon = GFX_focus_generic_industry_3
 		cost = 12
 		x = -1
 		y = 1
@@ -995,7 +1048,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			unlock_decision_category_tooltip = SGS_chao_xin_xing_ji_hua_category
+			hidden_effect = {
+				set_country_flag = SGS_plan_supernova_flag
+				set_variable = {
+					SGS_supernova_construction_days = 120
+				}
+				set_variable = {
+					SGS_total_public_discontent = 0
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -1006,7 +1068,7 @@ focus_tree = {
 	# 加快建设速度
 	focus = {
 		id = SGS_jia_kuai_jian_she_su_du
-		icon = unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 7
 		x = -1
 		y = 1
@@ -1021,8 +1083,17 @@ focus_tree = {
 			focus = SGS_zhu_zhong_sheng_chan_an_quan
 		}
 
+		available = {
+			has_country_flag = SGS_plan_supernova_flag
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = SGS_decrease_construction_time_tt
+			hidden_effect = {
+				set_variable = {
+					SGS_supernova_construction_days = 60
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -1033,7 +1104,7 @@ focus_tree = {
 	# 注重生产安全
 	focus = {
 		id = SGS_zhu_zhong_sheng_chan_an_quan
-		icon = unknown
+		icon = GFX_focus_generic_treaty
 		cost = 7
 		x = 1
 		y = 1
@@ -1048,8 +1119,12 @@ focus_tree = {
 			focus = SGS_jia_kuai_jian_she_su_du
 		}
 
+		available = {
+			has_country_flag = SGS_plan_supernova_flag
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = SGS_decrease_casualty_rate_tt
 		}
 	
 		ai_will_do = {
@@ -1299,7 +1374,7 @@ focus_tree = {
 	# 与花田妖精合作
 	focus = {
 		id = SGS_yu_hua_tian_yao_jing_he_zuo
-		icon = unknown
+		icon = GFX_focus_befriend_YUK_radicalists
 		cost = 7
 		x = -3
 		y = 1
@@ -1315,8 +1390,27 @@ focus_tree = {
 			focus = SGS_jie_jue_hua_tian_wei_xie
 		}
 
+		available = {
+			has_government = fandong
+			YUK = {
+				has_government = fandong
+				is_faction_leader = yes
+			}
+			is_subject = no
+			NOT = {
+				YUK = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
 		completion_reward = {
-			
+			YUK = {
+				country_event = noa_gen.106
+			}
 		}
 	
 		ai_will_do = {

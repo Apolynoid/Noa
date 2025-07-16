@@ -1,0 +1,16 @@
+# 超新星计划
+SGS_chao_xin_xing_ji_hua_category = {
+	icon = generic_industry
+
+	priority = 96
+
+	allowed = {
+		original_tag = SGS
+	}
+
+	visible = {
+		has_country_flag = SGS_plan_supernova_flag
+	}
+
+	visible_when_empty = yes
+}

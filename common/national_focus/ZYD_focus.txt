@@ -354,6 +354,28 @@ focus_tree = {
 			focus = ZYD_da_ji_fu_bai_wen_ti
 			focus = ZYD_mo_xu_fu_bai_fa_zhan
 		}
+
+		available = {
+			is_subject = no
+			AKI = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			SGS = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+			MEL = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
 	
 		completion_reward = {
 			add_political_power = 100
@@ -588,6 +610,42 @@ focus_tree = {
 			create_wargoal = {
 				target = YUK
 				type = puppet_wargoal_focus
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入民主同盟
+	focus = {
+		id = ZYD_jia_ru_min_zhu_tong_meng
+		icon = GFX_focus_befriend_TEG
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = ZYD_zhong_you_zhi_dao_gong_he_guo
+
+		prerequisite = {
+			focus = ZYD_zhong_you_zhi_dao_gong_he_guo
+		}
+	
+		available = {
+			NOT = {
+				TEG = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			TEG = {
+				country_event = noa_gen.106
 			}
 		}
 	

@@ -201,3 +201,493 @@ country_event = {
 		}
 	}
 }
+
+# news 西南爆发冲突
+news_event = {
+	id = sw.102
+	title = sw.102.t
+	desc = sw.102.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_1_flag
+		}
+		AKI = {
+			OR = {
+				has_war_with = SGS
+				has_war_with = MEL
+				has_war_with = ZYD
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_1_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# AKI
+	option = {
+		name = sw.102.1
+		trigger = {
+			original_tag = AKI
+		}
+	}
+
+	# MEL ZYD SGS
+	option = {
+		name = sw.102.2
+		trigger = {
+			has_war_with = AKI
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.102.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = AKI
+					has_war_with = AKI
+				}
+			}
+		}
+	}
+}
+
+# news AKI赢得西南冲突
+news_event = {
+	id = sw.103
+	title = sw.103.t
+	desc = sw.103.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_1_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_1_end_flag
+		}
+		AKI = {
+			has_war = no
+			is_subject = no
+			exists = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_1_end_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# AKI
+	option = {
+		name = sw.103.1
+		trigger = {
+			original_tag = AKI
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.103.2
+		trigger = {
+			NOT = {
+				original_tag = AKI
+			}
+		}
+	}
+}
+
+# news 反秋神联盟赢得西南冲突
+news_event = {
+	id = sw.104
+	title = sw.104.t
+	desc = sw.104.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_1_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_1_end_flag
+		}
+		OR = {
+			SGS = {
+				exists = yes
+				is_subject = no
+			}
+			MEL = {
+				exists = yes
+				is_subject = no
+			}
+			ZYD = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		SGS = {
+			has_war = no
+		}
+		MEL = {
+			has_war = no
+		}
+		ZYD = {
+			has_war = no
+		}
+		AKI = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_1_end_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SGS MEL ZYD
+	option = {
+		name = sw.104.1
+		trigger = {
+			OR = {
+				original_tag = SGS
+				original_tag = MEL
+				original_tag = ZYD
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.104.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = ZYD
+				}
+			}
+		}
+	}
+}
+
+# $southwest_mutual_defense_treaty$解散 hidden
+country_event = {
+	id = sw.105
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_1_end_flag
+		OR = {
+			original_tag = ZYD
+			original_tag = MEL
+			original_tag = SGS
+		}
+		is_faction_leader = yes
+	}
+
+	option = {
+		every_allied_country = {
+			country_event = sw.106
+		}
+		dismantle_faction = yes
+		news_event = {
+			id = sw.107
+			days = 7
+		}
+	}
+}
+
+# $southwest_mutual_defense_treaty$解散
+country_event = {
+	id = sw.106
+	title = sw.106.t
+	desc = sw.106.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sw.106.1
+	}
+}
+
+# news $southwest_mutual_defense_treaty$解散
+news_event = {
+	id = sw.107
+	title = sw.107.t
+	desc = sw.107.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SGS MEL ZYD
+	option = {
+		name = sw.107.1
+		trigger = {
+			OR = {
+				original_tag = SGS
+				original_tag = MEL
+				original_tag = ZYD
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.107.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = ZYD
+				}
+			}
+		}
+	}
+}
+
+# 西南霸权争夺 hidden
+country_event = {
+	id = sw.108
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_1_end_flag
+		OR = {
+			original_tag = ZYD
+			original_tag = MEL
+			original_tag = SGS
+		}
+		SGS = {
+			is_in_faction = no
+		}
+		MEL = {
+			is_in_faction = no
+		}
+		ZYD = {
+			is_in_faction = no
+		}
+		exists = yes
+		is_subject = no
+	}
+
+	option = {
+		SGS = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+				}
+				activate_mission = SW_xi_nan_ba_quan_zheng_duo
+				country_event = sw.109
+			}
+		}
+		MEL = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+				}
+				activate_mission = SW_xi_nan_ba_quan_zheng_duo
+				country_event = sw.109
+			}
+		}
+		ZYD = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+				}
+				activate_mission = SW_xi_nan_ba_quan_zheng_duo
+				country_event = sw.109
+			}
+		}
+		country_event = {
+			id = sw.110
+			days = 120
+		}
+	}
+}
+
+# 西南霸权争夺
+country_event = {
+	id = sw.109
+	title = sw.109.t
+	desc = sw.109.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sw.109.1
+		activate_mission_tooltip = SW_xi_nan_ba_quan_zheng_duo
+		add_ideas = SW_xi_nan_tong_yi_zhan_zheng_idea
+	}
+}
+
+# 混战 hidden
+country_event = {
+	id = sw.110
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		MEL = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+				}
+				if = {
+					limit = {
+						SGS = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					declare_war_on = {
+						target = SGS
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = {
+						ZYD = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					declare_war_on = {
+						target = ZYD
+						type = annex_everything
+					}
+				}
+			}
+		}
+		SGS = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+				}
+				if = {
+					limit = {
+						ZYD = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					declare_war_on = {
+						target = ZYD
+						type = annex_everything
+					}
+				}
+			}
+		}
+		news_event = {
+			id = sw.111
+			days = 5
+		}
+	}
+}
+
+# news 西南冲突扩大化
+news_event = {
+	id = sw.111
+	title = sw.111.t
+	desc = sw.111.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_2_flag
+		}
+	}
+
+	# SGS MEL ZYD
+	option = {
+		name = sw.111.1
+		trigger = {
+			OR = {
+				original_tag = SGS
+				original_tag = MEL
+				original_tag = ZYD
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.111.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = ZYD
+				}
+			}
+		}
+	}
+}
+
+# news SGS赢得西南霸权
+
+# news ZYD赢得西南霸权
+
+# news MEL赢得西南霸权
+
+# news YUK介入西南
+
+# news YUK在西南取得胜利
+
+# news [西南统一者]击败YUK
+
+# OKI要求土地
+
+# OKI FROM同意了我们的领土要求
+
+# OKI FROM拒绝了我们的领土要求
+
+# OKI宣布西南领土的所有权
+
+# OKI成功征服西南
+
+# [西南统一者]击败OKI

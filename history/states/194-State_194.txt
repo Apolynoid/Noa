@@ -16,8 +16,8 @@ state={
 			add_core_of = MEL
 			buildings = {
 				infrastructure = 4
-				industrial_complex = 1
-				arms_factory = 2
+				industrial_complex = 3
+				arms_factory = 0
 
 			}
 

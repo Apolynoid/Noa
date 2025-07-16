@@ -1,0 +1,237 @@
+# 超新星计划
+SGS_chao_xin_xing_ji_hua_category = {
+	# 在FROM建设民用工厂 - 未开发
+	SGS_zai_FROM_jian_she_min_yong_gong_chang_undeveloped = {
+        state_target = any_owned_state
+        priority = 30
+        allowed = {
+            original_tag = SGS
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_country_flag = SGS_plan_supernova_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                SW_undeveloped_explored_fully_controlled_state = yes
+				NOT = {
+					has_state_flag = SGS_plan_supernova_developed_flag
+				}
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_factory
+        cost = 30
+        days_remove = SGS_supernova_construction_days
+        days_re_enable = 15
+
+        available = {
+			ROOT = {
+				has_manpower > 500
+			}
+            FROM = {
+				is_fully_controlled_by = ROOT
+                NOT = {
+                    has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+		cancel_trigger = {
+			OR = {
+                FROM = {
+                    NOT = {
+                        is_fully_controlled_by = ROOT
+                    }
+                }
+                ROOT = {
+                    NOT = {
+                        has_country_flag = SGS_plan_supernova_flag
+                    }
+                }
+            }
+		}
+
+		cancel_effect = {
+			ROOT = {
+				add_manpower = 500
+			}
+			FROM = {
+				clr_state_flag = SW_being_developed_flag
+			}
+		}
+
+        complete_effect = {
+			ROOT = {
+				add_manpower = -500
+				custom_effect_tooltip = SGS_refund_manpower_tt
+			}
+            hidden_effect = {
+                FROM = {
+                    set_state_flag = SW_being_developed_flag
+                }
+            }    
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+					set_state_flag = SGS_plan_supernova_developed_flag
+                    set_temp_variable = {
+                        SGS_injury_num = 0
+                    }
+                    SGS_get_injury_num_as__SGS_injury_num = yes
+                    round_temp_variable = SGS_injury_num
+                    set_variable = {
+                        SGS_local_injury_num = SGS_injury_num
+                    }
+                    set_state_flag = SGS_undeveloped_construction_flag
+                    save_event_target_as = SGS_construction_finish_state
+                }
+				ROOT = {
+					country_event = sgs.110
+				}
+            }
+            FROM = {
+                SW_remove_undeveloped_land = yes
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+            }
+            custom_effect_tooltip = SGS_workers_return_tt
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+
+	# 在FROM建设民用工厂 - 已开发
+    SGS_zai_FROM_jian_she_min_yong_gong_chang = {
+        state_target = any_owned_state
+        priority = 20
+        allowed = {
+            original_tag = SGS
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_country_flag = SGS_plan_supernova_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                NOT = {
+					has_dynamic_modifier = {
+						modifier = SW_wei_kai_fa_de_tu_di_state_idea
+					}
+				}
+				NOT = {
+					has_state_flag = SGS_plan_supernova_developed_flag
+				}
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_factory
+        cost = 40
+        days_remove = SGS_supernova_construction_days
+        days_re_enable = 15
+
+        available = {
+			ROOT = {
+				has_manpower > 500
+			}
+            FROM = {
+				is_fully_controlled_by = ROOT
+            }
+        }
+
+		cancel_trigger = {
+            OR = {
+                FROM = {
+                    NOT = {
+                        is_fully_controlled_by = ROOT
+                    }
+                }
+                ROOT = {
+                    NOT = {
+                        has_country_flag = SGS_plan_supernova_flag
+                    }
+                }
+            }
+		}
+
+		cancel_effect = {
+			ROOT = {
+				add_manpower = 500
+			}
+		}
+
+        complete_effect = {
+			ROOT = {
+				add_manpower = -500
+				custom_effect_tooltip = SGS_refund_manpower_tt
+			}   
+        }
+
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+					set_state_flag = SGS_plan_supernova_developed_flag
+                    set_temp_variable = {
+                        SGS_injury_num = 0
+                    }
+                    SGS_get_injury_num_as__SGS_injury_num = yes
+                    round_temp_variable = SGS_injury_num
+                    set_variable = {
+                        SGS_local_injury_num = SGS_injury_num
+                    }
+                    save_event_target_as = SGS_construction_finish_state
+                }
+				ROOT = {
+					country_event = sgs.110
+				}
+            }
+            FROM = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+            }
+            custom_effect_tooltip = SGS_workers_return_tt
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    # 中止超新星计划
+    SGS_zhong_zhi_chao_xin_xing_ji_hua = {
+        allowed = {
+            original_tag = SGS
+        }
+        priority = 10
+
+        available = {
+            has_country_flag = SGS_plan_supernova_flag
+        }
+
+        icon = generic_decision
+
+        complete_effect = {
+            hidden_effect = {
+                clr_country_flag = SGS_plan_supernova_flag
+            }
+            custom_effect_tooltip = SGS_stop_plan_supernova_tt
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+}

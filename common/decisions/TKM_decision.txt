@@ -907,6 +907,9 @@ domestic_affair_management = {
 
 	# 战争债券延期
 	TKM_zhan_zheng_zhai_quan_yan_qi = {
+		allowed = {
+            original_tag = TKM
+        }
         activation = {
             always = no
         }

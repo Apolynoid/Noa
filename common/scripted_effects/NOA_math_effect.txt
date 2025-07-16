@@ -54,3 +54,30 @@ log_2__x__in_half_to_one_as__res = {
 		res = 1000000
 	}
 }
+
+normal_distribution_as__res = {
+	set_temp_variable = {
+		res = 0
+	}
+	for_loop_effect = {
+		end = 12
+		set_temp_variable_to_random = t
+		add_to_temp_variable = {
+			res = t
+		}
+	}
+	subtract_from_temp_variable = {
+		res = 6
+	}
+}
+
+d_math_test = {
+	for_loop_effect = {
+		end = 1000
+		set_temp_variable = {
+			res = 0
+		}
+		normal_distribution_as__res = yes
+		log = "res= [?res]"
+	}
+}

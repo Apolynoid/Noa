@@ -19,3 +19,12 @@ noa_gen.104.1:0 "我们将在风暴中同舟共济"
 noa_gen.105.t:0 "[FROM.GetName]拒绝了我们的邀请"
 noa_gen.105.d:0 "来自[FROM.GetName]的消息，她们拒绝了我们的邀请。"
 noa_gen.105.1:0 "可惜"
+
+noa_gen.106.t:0 "[FROM.GetName]希望加入我们的阵营"
+noa_gen.106.d:0 "来自[FROM.GetName]的消息，考虑到幻想乡的动荡局势，[FROM.GetName]希望能够加入我们的阵营。"
+noa_gen.106.1:0 "我们的同盟将更加强大"
+noa_gen.106.2:0 "这份同盟太危险了"
+
+noa_gen.107.t:0 "[FROM.GetName]拒绝了我们加入阵营的请求"
+noa_gen.107.d:0 "来自[FROM.GetName]的消息，[FROM.GetName]拒绝了我们加入阵营的请求。"
+noa_gen.107.1:0 "可惜"

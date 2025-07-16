@@ -100,3 +100,50 @@ country_event = {
 		name = noa_gen.105.1
 	}
 }
+
+# FROM希望加入我们的阵营
+country_event = {
+	id = noa_gen.106
+	title = noa_gen.106.t
+	desc = noa_gen.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = noa_gen.106.1
+		ai_chance = {
+			base = 10
+		}
+		ROOT = {
+			add_to_faction = FROM
+		}
+		FROM = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = noa_gen.106.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = noa_gen.107
+			}
+		}
+	}
+}
+
+# FROM拒绝了我们加入阵营的请求
+country_event = {
+	id = noa_gen.107
+	title = noa_gen.107.t
+	desc = noa_gen.107.d
+	is_triggered_only = yes
+
+	option = {
+		name = noa_gen.107.1
+	}
+}

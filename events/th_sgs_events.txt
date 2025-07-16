@@ -219,3 +219,202 @@ country_event = {
 		}
 	}
 }
+
+# ZYD SGS希望与我们合并
+country_event = {
+	id = sgs.107
+	title = sgs.107.t
+	desc = sgs.107.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sgs.107.1
+		ai_chance = {
+			base = 10
+		}
+		if = {
+			limit = {
+				SGS = {
+					is_ai = yes
+				}
+			}
+			custom_effect_tooltip = SGS_ZYD_transfer_to_NMS_tt
+			hidden_effect = {
+				SGS = {
+					change_tag_from = ROOT
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = SGS_ZYD_game_over_warning_tt
+		}
+		hidden_effect = {
+			SGS = {
+				country_event = sgs.108
+			}
+			# 将领移交
+			ZYD = {
+				every_character = {
+					set_nationality = SGS
+				}
+			}
+			# 造核
+			ZYD = {
+				every_core_state = {
+					add_claim_by = SGS
+				}
+			}
+			SGS = {
+				custom_effect_tooltip = SGS_allow_integration_of_ZYD_tt
+				custom_effect_tooltip = occupation_law_introduce_tt
+				hidden_effect = {
+					set_country_flag = can_integrate_flag_ZYD
+				}
+			}
+			# 吞并
+			SGS = {
+				annex_country = {
+					target = ZYD
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sgs.107.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			SGS = {
+				country_event = sgs.109
+			}
+		}
+	}
+}
+
+# 合并请求被接受
+country_event = {
+	id = sgs.108
+	title = sgs.108.t
+	desc = sgs.108.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sgs.108.1
+	}
+}
+
+# 合并请求被拒绝
+country_event = {
+	id = sgs.109
+	title = sgs.109.t
+	desc = sgs.109.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sgs.109.1
+	}
+}
+
+# 项目建设完成
+country_event = {
+	id = sgs.110
+	title = sgs.110.t
+	desc = sgs.110.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = {
+				SGS_public_discontent = event_target:SGS_construction_finish_state.SGS_local_injury_num
+			}
+			multiply_temp_variable = {
+				SGS_public_discontent = SGS_public_discontent
+			}
+			divide_temp_variable = {
+				SGS_public_discontent = 250
+			}
+			if = {
+				limit = {
+					event_target:SGS_construction_finish_state = {
+						has_state_flag = SGS_undeveloped_construction_flag
+					}
+				}
+				multiply_temp_variable = {
+					SGS_public_discontent = 0.5
+				}
+			}
+			SGS_public_discontent_increase_at__SGS_public_discontent = yes
+		}
+	}
+
+	option = {
+		name = sgs.110.1
+		hidden_effect = {
+			set_temp_variable = {
+				SGS_return_manpower = 500
+			}
+			subtract_from_temp_variable = {
+				SGS_return_manpower = event_target:SGS_construction_finish_state.SGS_local_injury_num
+			}
+		}
+		custom_effect_tooltip = SGS_manpower_loss_tt
+		add_manpower = SGS_return_manpower
+		effect_tooltip = {
+			hidden_effect = {
+				set_temp_variable = {
+					SGS_public_discontent = event_target:SGS_construction_finish_state.SGS_local_injury_num
+				}
+				multiply_temp_variable = {
+					SGS_public_discontent = SGS_public_discontent
+				}
+				divide_temp_variable = {
+					SGS_public_discontent = 250
+				}
+				if = {
+					limit = {
+						event_target:SGS_construction_finish_state = {
+							has_state_flag = SGS_undeveloped_construction_flag
+						}
+					}
+					multiply_temp_variable = {
+						SGS_public_discontent = 0.5
+					}
+				}
+			}
+			SGS_public_discontent_increase_at__SGS_public_discontent = yes
+		}
+	}
+}
+
+# 超新星计划被迫中止
+country_event = {
+	id = sgs.111
+	title = sgs.111.t
+	desc = sgs.111.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = SGS_plan_supernova_flag
+		}
+	}
+
+	option = {
+		name = sgs.111.1
+		add_stability = -0.1
+		custom_effect_tooltip = SGS_stop_plan_supernova_tt
+	}
+}

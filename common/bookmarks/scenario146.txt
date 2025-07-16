@@ -194,7 +194,9 @@ bookmarks = {
 				SGS_xi_nan_yao_jing_ge_ming_jun_idea
 			}	
             focuses = {
-				
+				SGS_xi_nan_yao_jing_jin_ji_hui_yi
+				SGS_zhan_zheng_zhun_bei
+				SGS_chao_xin_xing_ji_hua
 			}			
 		} 
     

@@ -514,6 +514,495 @@ generic_materiel_mio = {
 	}
 }
 
+generic_magic_materiel_mio = {
+	name = generic_magic_materiel_manufacturer_idea
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	allowed = {
+		always = no
+	}
+	equipment_type = {
+		mio_cat_eq_ma_infantry_weapons
+		mio_cat_eq_ma_artillery
+	}
+	research_categories = {
+		primary_weapons
+		melee
+		support_tech
+		artillery_tech
+	}
+
+	tree_header_text = {
+		text = mio_header_infantry_weapons
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_header_artillery
+		x = 6
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_generic_materiel
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+	}
+
+	# 增加弹幕精度
+	trait = {
+		token = generic_mio_trait_increase_barrage_accuracy
+		name = generic_mio_trait_increase_barrage_accuracy
+		icon = GFX_generic_mio_department_icon_infantry_offense
+
+		position = {
+			x = 1
+			y = 0
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_increase_barrage_density
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	# 增强弹幕密度
+	trait = {
+		token = generic_mio_trait_increase_barrage_density
+		name = generic_mio_trait_increase_barrage_density
+		icon = GFX_generic_mio_department_icon_tank_general_weapons
+
+		position = {
+			x = 3
+			y = 0
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_increase_barrage_accuracy
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			breakthrough = 0.05
+		}
+	}
+
+	# 灵力稳定器
+	trait = {
+		token = generic_mio_trait_spirit_power_stabilizer
+		name = generic_mio_trait_spirit_power_stabilizer
+		icon = GFX_generic_mio_department_icon_infantry_quality
+
+		position = {
+			x = 2
+			y = 1
+		}
+
+		any_parent = {
+			generic_mio_trait_increase_barrage_accuracy
+			generic_mio_trait_increase_barrage_density
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	# 灵力穿甲弹幕
+	trait = {
+		token = generic_mio_trait_spirit_power_armor_piercing_barrage
+		name = generic_mio_trait_spirit_power_armor_piercing_barrage
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		relative_position_id = generic_mio_trait_spirit_power_stabilizer
+
+		position = {
+			x = -1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_spirit_power_stabilizer
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_general_barrage_design
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.25
+		}
+	}
+
+	# 通用弹幕设计
+	trait = {
+		token = generic_mio_trait_general_barrage_design
+		name = generic_mio_trait_general_barrage_design
+		icon = GFX_generic_mio_department_icon_infantry_production
+
+		relative_position_id = generic_mio_trait_spirit_power_stabilizer
+
+		position = {
+			x = 1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_spirit_power_stabilizer
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_spirit_power_armor_piercing_barrage
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		equipment_bonus = {
+			reliability = 0.03
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	# 支援装备流水线
+	trait = {
+		token = generic_mio_trait_support_equipment_assembly_line
+		name = generic_mio_trait_support_equipment_assembly_line
+		icon = GFX_generic_mio_department_icon_support_line_efficiency
+
+		relative_position_id = generic_mio_trait_spirit_power_stabilizer
+		position = {
+			x = -2
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_spirit_power_stabilizer
+		}
+
+		limit_to_equipment_type = { 
+			support_equipment
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+	# 灵力资源精炼
+	trait = {
+		token = generic_mio_trait_spirit_power_resource_refinement
+		name = generic_mio_trait_spirit_power_resource_refinement
+		icon = GFX_generic_mio_department_icon_infantry_materials
+
+		relative_position_id = generic_mio_trait_spirit_power_armor_piercing_barrage
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			generic_mio_trait_spirit_power_armor_piercing_barrage
+			generic_mio_trait_general_barrage_design
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_simplified_barrage_production
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		production_bonus = {
+			production_resource_need_factor = -0.2
+		}
+	}
+
+	# 简化弹幕生产
+	trait = {
+		token = generic_mio_trait_simplified_barrage_production
+		name = generic_mio_trait_simplified_barrage_production
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+
+		relative_position_id = generic_mio_trait_general_barrage_design
+		position = {
+			x = 0
+			y = 1
+		}
+		any_parent = {
+			generic_mio_trait_spirit_power_armor_piercing_barrage
+			generic_mio_trait_general_barrage_design
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_spirit_power_resource_refinement
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_infantry_weapons
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+
+	# 研究团队
+	trait = {
+		token = generic_mio_trait_research_team
+		name = generic_mio_trait_research_team
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = {
+			x = 4
+			y = 0
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.06
+		}
+	}
+
+	# 聚能核心轻量化
+	trait = {
+		token = generic_mio_trait_lightweight_energy_core
+		name = generic_mio_trait_lightweight_energy_core
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = {
+			x = 6
+			y = 0
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_ma_artillery
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+	}
+
+	# 增加聚焦能量密度
+	trait = {
+		token = generic_mio_trait_increase_focused_energy_density
+		name = generic_mio_trait_increase_focused_energy_density
+		icon = GFX_generic_mio_department_icon_tank_general_at
+
+		relative_position_id = generic_mio_trait_lightweight_energy_core
+		position = {
+			x = 2
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_lightweight_energy_core
+		}
+
+		limit_to_equipment_type = { 
+			magic_focus_a
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	# 自引导能量流
+	trait = {
+		token = generic_mio_trait_self_guided_energy_stream
+		name = generic_mio_trait_self_guided_energy_stream
+		icon = GFX_generic_mio_department_icon_tank_general_aa
+
+		relative_position_id = generic_mio_trait_increase_focused_energy_density
+		position = {
+			x = 0
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_increase_focused_energy_density
+		}
+
+		limit_to_equipment_type = { 
+			magic_focus_a
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+			anti_air_attack = 0.05
+		}
+	}
+
+	# 超量充能预警器
+	trait = {
+		token = generic_mio_trait_overcharge_alarm
+		name = generic_mio_trait_overcharge_alarm
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		relative_position_id = generic_mio_trait_lightweight_energy_core
+		position = {
+			x = 0
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_lightweight_energy_core
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_artillery
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	# 快速充能
+	trait = {
+		token = generic_mio_trait_quick_charge
+		name = generic_mio_trait_quick_charge
+		icon = GFX_generic_mio_trait_icon_defense
+
+		relative_position_id = generic_mio_trait_overcharge_alarm
+		position = {
+			x = -1
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_overcharge_alarm
+		}
+		mutually_exclusive = {
+			generic_mio_trait_increase_charge_limit
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_artillery
+		}
+
+		equipment_bonus = {
+			defense = 0.15
+			breakthrough = 0.1
+		}
+	}
+
+	# 增加充能上限
+	trait = {
+		token = generic_mio_trait_increase_charge_limit
+		name = generic_mio_trait_increase_charge_limit
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		relative_position_id = generic_mio_trait_overcharge_alarm
+		position = {
+			x = 1
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_overcharge_alarm
+		}
+		mutually_exclusive = {
+			generic_mio_trait_quick_charge
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_artillery
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.08
+		}
+	}
+
+	# 标准化能量装填
+	trait = {
+		token = generic_mio_trait_standardized_energy_refill
+		name = generic_mio_trait_standardized_energy_refill
+		icon = GFX_generic_mio_department_icon_artillery_production
+
+		relative_position_id = generic_mio_trait_overcharge_alarm
+		position = {
+			x = 0
+			y = 2
+		}
+		any_parent = {
+			generic_mio_trait_quick_charge
+			generic_mio_trait_increase_charge_limit
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_ma_artillery
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.03
+			reliability = 0.03
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+		}
+	}
+
+	# 标准化生产车间
+	trait = {
+		token = generic_mio_trait_standardized_production_workshop
+		name = generic_mio_trait_standardized_production_workshop
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		relative_position_id = generic_mio_trait_research_team
+		position = {
+			x = 0
+			y = 4
+		}
+		any_parent = {
+			generic_mio_trait_spirit_power_resource_refinement
+			generic_mio_trait_simplified_barrage_production
+			generic_mio_trait_standardized_energy_refill
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.2
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.2
+		}
+	}
+}
+
 ##       ####  ######  ########     #######  ########     ######  ########    ###    ########  ######
 ##        ##  ##    ##    ##       ##     ## ##          ##    ##    ##      ## ##      ##    ##    ##
 ##        ##  ##          ##       ##     ## ##          ##          ##     ##   ##     ##    ##

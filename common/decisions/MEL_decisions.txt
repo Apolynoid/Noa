@@ -354,6 +354,9 @@ MEL_te_shu_zuo_wu_ying_yong = {
 
 	# 特殊作物收获
 	MEL_te_shu_zuo_wu_shou_huo = {
+        allowed = {
+            original_tag = MEL
+        }
         activation = {
 			always = no
 		}

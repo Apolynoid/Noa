@@ -78,6 +78,7 @@ SW_xi_nan_jian_she_ji_hua_a_idea:0 "西南建设计划"
 SW_xi_nan_jian_she_ji_hua_b_idea:0 "西南建设计划"
 SW_xi_nan_jun_shi_gai_ge_idea:0 "西南军事改革"
 SW_xi_nan_jun_shi_gai_ge_a_idea:0 "西南军事改革"
+SW_xi_nan_tong_yi_zhan_zheng_idea:0 "西南统一战争"
 
 SW_nong_ye_she_hui_idea:0 "农业社会"
 
@@ -117,6 +118,7 @@ SW_kai_fa_FROM_unexplored:0 "开发[FROM.GetName]"
 
 SW_tou_zi_jun_shi:0 "投资军事"
 SW_tou_zi_jiao_yu:0 "投资教育"
+SW_xi_nan_ba_quan_zheng_duo:0 "西南霸权争夺"
 
 # flag
 SW_being_explored_flag:0 "正在被探索"
@@ -125,6 +127,8 @@ SW_military_investment_flag:0 "已经进行过军事投资。"
 SW_doing_military_investment_flag:0 "正在进行军事投资"
 SW_education_investment_flag:0 "已经进行过教育投资。"
 SW_doing_education_investment_flag:0 "正在进行教育投资"
+SW_southwest_war_phase_1_end_flag:0 "与秋神的战争结束了"
+SW_southwest_war_phase_2_flag:0 "西南混战开始了"
  #other
 
 southwest_mutual_defense_treaty:0 "西南共同防御条约"

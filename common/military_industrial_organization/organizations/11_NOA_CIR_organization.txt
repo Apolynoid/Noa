@@ -56,4 +56,6 @@ CIR_union_arsenal_no_9_mio = {
 			production_cost_factor = -0.05
 		}
 	}
+
+	include = generic_magic_materiel_mio
 }
