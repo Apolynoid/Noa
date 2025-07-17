@@ -28,7 +28,7 @@ characters={
 			modifier = {
 				# character_coop_cost_factor = -0.15 在这里无效
 				political_power_gain = 0.2
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 			}
 			ai_will_do = {
 				factor = 1

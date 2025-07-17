@@ -669,10 +669,187 @@ news_event = {
 }
 
 # news SGS赢得西南霸权
+news_event = {
+	id = sw.112
+	title = sw.112.t
+	desc = sw.112.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_2_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+		SGS = {
+			has_war = no
+		}
+		SGS = {
+			exists = yes
+			is_subject = no
+		}
+		MEL = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+		ZYD = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+	}
+
+	# SGS
+	option = {
+		name = sw.112.1
+		trigger = {
+			original_tag = SGS
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.112.2
+		trigger = {
+			NOT = {
+				original_tag = SGS
+			}
+		}
+	}
+}
 
 # news ZYD赢得西南霸权
+news_event = {
+	id = sw.113
+	title = sw.113.t
+	desc = sw.113.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_2_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+		ZYD = {
+			has_war = no
+		}
+		ZYD = {
+			exists = yes
+			is_subject = no
+		}
+		SGS = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+		MEL = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+	}
+
+	# ZYD
+	option = {
+		name = sw.113.1
+		trigger = {
+			original_tag = ZYD
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.113.2
+		trigger = {
+			NOT = {
+				original_tag = ZYD
+			}
+		}
+	}
+}
 
 # news MEL赢得西南霸权
+news_event = {
+	id = sw.114
+	title = sw.114.t
+	desc = sw.114.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_2_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+		MEL = {
+			has_war = no
+		}
+		MEL = {
+			exists = yes
+			is_subject = no
+		}
+		SGS = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+		ZYD = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_2_end_flag
+		}
+	}
+
+	# MEL
+	option = {
+		name = sw.114.1
+		trigger = {
+			original_tag = MEL
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.114.2
+		trigger = {
+			NOT = {
+				original_tag = MEL
+			}
+		}
+	}
+}
 
 # news YUK介入西南
 

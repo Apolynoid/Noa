@@ -7,7 +7,8 @@
         linglicunchu = 1
         spell_card2 = 1
         #辅助
-
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
         #专用辅助
         magic_energy1 = 1
         #专用基础

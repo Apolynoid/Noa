@@ -50,6 +50,9 @@ characters={
 		}
 		country_leader={
 			ideology=neworder_type
+			traits = {
+				hawk
+			}
 			id=-1
 		}
 		country_leader={

@@ -1,0 +1,480 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "神明支援编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "神明主力编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_magic_energy_brigade = { x = 2 y = 0 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "神明近卫军"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+		ma_magic_energy_brigade = { x = 2 y = 0 }
+		ma_magic_energy_brigade = { x = 2 y = 1 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 } 
+	}
+}
+units = {
+	division = {
+		name = "神明近卫军"
+		location = 61
+		division_template = "神明近卫军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明近卫军"
+		location = 61
+		division_template = "神明近卫军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 61
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 61
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明主力编制"
+		location = 1075
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明近卫军"
+		location = 484
+		division_template = "神明近卫军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 484
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 484
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 484
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 484
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明主力编制"
+		location = 5054
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明主力编制"
+		location = 5054
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5054
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明主力编制"
+		location = 4974
+		division_template = "神明主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 4974
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明支援编制"
+		location = 173
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 173
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 173
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明支援编制"
+		location = 2771
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "神明支援编制"
+		location = 5032
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "神明支援编制"
+		location = 5032
+		division_template = "神明支援编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}

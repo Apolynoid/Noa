@@ -161,7 +161,7 @@ characters={
 		country_leader={
 			ideology=fandong_type
 			traits = {
-				KNA_li_xiang_zhu_yi_sao_ling_ge_ming_zhe
+				idealistic_revolutionary
 			}
 			id=-1
 		}

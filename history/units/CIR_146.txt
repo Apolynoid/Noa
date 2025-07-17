@@ -1,0 +1,384 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "妖精革命编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_magic_energy_brigade = { x = 0 y = 3 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+		
+	}
+	support = {
+		sp_duzhanxiaodui = { x = 0 y = 0 } 
+		sp_zhihuidui = { x = 0 y = 1 } 
+	}
+}
+
+
+division_template = {
+	name = "妖精后方编制"
+	is_locked = no
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 1 y = 0 }
+	}
+	support = {
+
+	}
+}
+
+######################
+units = {
+	division = {
+		name = "妖精革命编制"
+		location = 1602
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1602
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1602
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 213
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 213
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 213
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 243
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 243
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 243
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 243
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 243
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 2716
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 2716
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 2716
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 1267
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1267
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1267
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1267
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 1267
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 2222
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 2222
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 2222
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 1167
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精革命编制"
+		location = 726
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 726
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 726
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精革命编制"
+		location = 913
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 913
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精革命编制"
+		location = 913
+		division_template = "妖精革命编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖精后方编制"
+		location = 2020
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精后方编制"
+		location = 2020
+		division_template = "妖精后方编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+}

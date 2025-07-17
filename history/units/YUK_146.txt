@@ -1,0 +1,346 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "花田护卫编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_magic_energy_brigade = { x = 2 y = 0 }
+	}
+	
+	support = {
+	}
+}
+division_template = {
+	name = "边界警戒编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+units = {
+	division = {
+		name = "边界警戒编制"
+		location = 1888
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1888
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1888
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "边界警戒编制"
+		location = 4715
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4715
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4715
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "边界警戒编制"
+		location = 4651
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4651
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4651
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "边界警戒编制"
+		location = 4611
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4611
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4611
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "边界警戒编制"
+		location = 4616
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4616
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4616
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 4613
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4613
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4613
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 138
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 138
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 138
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 1662
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1662
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1662
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 4591
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4591
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4591
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 1135
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1135
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1135
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 4578
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4578
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4578
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 4565
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4565
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4565
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "花田护卫编制"
+		location = 1254
+		division_template = "花田护卫编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1254
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 1254
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = { 
+		name = "边界警戒编制"
+		location = 4558
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4558
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = { 
+		name = "边界警戒编制"
+		location = 4558
+		division_template = "边界警戒编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+}

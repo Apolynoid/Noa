@@ -38,6 +38,9 @@ characters={
 		}
 		country_leader={
 			ideology=fandong_type
+			traits = {
+				idealistic_revolutionary
+			}
 			id=-1
 		}
 	}
@@ -67,9 +70,8 @@ characters={
 			idea_token = SGS_lunar
 			name = SGS_lunar
 			cost = 200
-			modifier = {
-				encryption = 2
-				army_speed_factor = 0.05
+			traits = {
+				silent_workhorse
 			}
 			ai_will_do = {
 				factor = 1
@@ -77,6 +79,9 @@ characters={
 		}
 		country_leader={
 			ideology=qinwai_type
+			traits = {
+				SGS_yao_jing_wen_hua_de_bao_wei_zhe
+			}
 			id=-1
 		}		
 		country_leader={
@@ -109,8 +114,8 @@ characters={
 			idea_token = SGS_star
 			name = SGS_star
 			cost = 200
-			modifier = {
-				decryption = 5
+			traits = {
+				princess_of_terror
 			}
 			ai_will_do = {
 				factor = 1
@@ -118,6 +123,9 @@ characters={
 		}
 		country_leader={
 			ideology=neworder_type
+			traits = {
+				SGS_shen_mi_de_yao_jing_jian_shi_zhe
+			}
 			id=-1
 		}
 	}

@@ -102,7 +102,7 @@ characters={
 		country_leader={
 			ideology=neworder_type
 			traits = {
-				SCA_ying_pai_jun_zhu
+				hawk
 			}
 			id=-1
 		}

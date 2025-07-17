@@ -1,0 +1,254 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "警卫编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "铃兰防卫军"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_mortar_brigade = { x = 2 y = 0 }
+	}
+	support = {
+	}
+}
+units = {
+	division = {
+		name = "铃兰防卫军"
+		location = 4818
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4818
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4818	
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4818	
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "铃兰防卫军"
+		location = 4887
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4887	
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "铃兰防卫军"
+		location = 4895
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4895
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4895	
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "铃兰防卫军"
+		location = 4864
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4864
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4864
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "看护编制"
+		location = 4838
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "看护编制"
+		location = 4719
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4719
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4719
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4719
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "铃兰防卫军"
+		location = 4802
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4802
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4802
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "铃兰防卫军"
+		location = 4769
+		division_template = "铃兰防卫军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警卫编制"
+		location = 4769
+		division_template = "警卫编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "看护编制"
+		location = 4769
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}
