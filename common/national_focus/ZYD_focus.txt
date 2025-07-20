@@ -633,6 +633,12 @@ focus_tree = {
 		}
 	
 		available = {
+			YUK = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
 			NOT = {
 				TEG = {
 					OR = {

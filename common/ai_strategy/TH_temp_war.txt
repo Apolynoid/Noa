@@ -1,0 +1,267 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+Underground_alliance = {
+
+	reversed = yes
+
+	enable = {
+		has_government = guli
+		capital_scope = {
+			is_on_continent = Underground
+		}
+	}
+	abort = {
+		not = {
+			has_government = guli
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SAT"			
+		value = 50
+	}
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+Underground_alliance2 = {
+
+	# reversed = yes
+
+	enable = {
+		has_government = guli
+		capital_scope = {
+			is_on_continent = Underground
+		}
+	}
+	abort = {
+		not = {
+			has_government = guli
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SAT"			
+		value = 50
+	}
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+SEJ_MSD_help_temp_war1 = {
+
+	# reversed = yes
+
+	enable = {
+		tag = SEJ
+		MSD = { has_war_with = MRS }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "MSD"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "MSD"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+HKR_MSD_help_temp_war1 = {
+
+	# reversed = yes
+
+	enable = {
+		tag = HKR
+		MRS = {
+			has_war = yes
+		}
+		
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "MRS"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "MRS"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+TKM_N_NMS_KAG_help_temp_war2 = {
+
+	# reversed = yes
+
+	enable = {
+		or = {
+			tag = TKM
+			tag = NMS
+		}
+		
+		EET = { has_war_with = KAG }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "KAG"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "KAG"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+
+EET_WAR_KAG_temp_war2 = {
+
+	# reversed = yes
+
+	enable = {
+		or = {
+			tag = EET
+			tag = UDO
+		}
+		EET = { has_war_with = KAG }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "INB"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "INB"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+CIR_SGS_help_temp_war3 = {
+
+	# reversed = yes
+
+	enable = {
+		tag = CIR
+		
+		YUK = { has_war_with = SGS }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "SGS"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "SGS"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+HUM_HKR_help_temp_war4 = {
+
+	# reversed = yes
+
+	enable = {
+		tag = HUM
+		
+		HKR = { has_war_with = YKR }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "HKR"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "HKR"			
+		value = 100
+	}		
+	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}

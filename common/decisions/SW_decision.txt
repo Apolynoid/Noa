@@ -3,6 +3,7 @@ SW_xi_nan_tu_di_kai_fa = {
     # 探测FROM地形
     SW_tan_ce_FROM_di_xing = {
         state_target = any_owned_state
+        priority = 20
         allowed = {
             is_SW_countries = yes
         }
@@ -27,8 +28,25 @@ SW_xi_nan_tu_di_kai_fa = {
                 has_manpower > 100
             }
             FROM = {
+                is_fully_controlled_by = ROOT
                 NOT = {
                     has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+        cancel_trigger = {
+            FROM = {
+                NOT = {
+                    is_fully_controlled_by = ROOT
+                }
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_explored_flag
                 }
             }
         }
@@ -72,6 +90,7 @@ SW_xi_nan_tu_di_kai_fa = {
     # 开发FROM - 已勘探
     SW_kai_fa_FROM_explored = {
         state_target = any_owned_state
+        priority = 15
         allowed = {
             always = yes
         }
@@ -94,6 +113,7 @@ SW_xi_nan_tu_di_kai_fa = {
                 num_of_civilian_factories_available_for_projects > 2
             }
             FROM = {
+                is_fully_controlled_by = ROOT
                 NOT = {
                     has_state_flag = SW_being_developed_flag
                 }
@@ -102,6 +122,22 @@ SW_xi_nan_tu_di_kai_fa = {
 
         modifier = {
             civilian_factory_use = 3
+        }
+
+        cancel_trigger = {
+            FROM = {
+                NOT = {
+                    is_fully_controlled_by = ROOT
+                }
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+                }
+            }
         }
 
         complete_effect = {
@@ -134,6 +170,7 @@ SW_xi_nan_tu_di_kai_fa = {
     # 开发FROM - 未勘探
     SW_kai_fa_FROM_unexplored = {
         state_target = any_owned_state
+        priority = 10
         allowed = {
             always = yes
         }
@@ -156,6 +193,7 @@ SW_xi_nan_tu_di_kai_fa = {
                 num_of_civilian_factories_available_for_projects > 4
             }
             FROM = {
+                is_fully_controlled_by = ROOT
                 NOT = {
                     has_state_flag = SW_being_explored_flag
                 }
@@ -167,6 +205,22 @@ SW_xi_nan_tu_di_kai_fa = {
 
         modifier = {
             civilian_factory_use = 5
+        }
+
+        cancel_trigger = {
+            FROM = {
+                NOT = {
+                    is_fully_controlled_by = ROOT
+                }
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
+                }
+            }
         }
 
         complete_effect = {

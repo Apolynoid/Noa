@@ -1,0 +1,36 @@
+SW_dont_leave_defense_faction_till_dissolve_event = {
+	allowed = {
+		OR = {
+			original_tag = SGS
+			original_tag = MEL
+			original_tag = ZYD
+		}
+	}
+
+	enable = {
+		has_global_flag = SW_defense_faction_flag
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ZYD
+		value = -1000
+		target = leave_faction
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = MEL
+		value = -1000
+		target = leave_faction
+	}
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SGS
+		value = -1000
+		target = leave_faction
+	}
+}

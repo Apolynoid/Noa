@@ -478,3 +478,8 @@ units = {
 		start_equipment_factor = 1
 	}
 }
+
+focus = {
+	current = "AKI_ying_dui_tu_di_jian_bing"
+	progress = 0
+}

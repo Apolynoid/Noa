@@ -28,3 +28,21 @@ noa_gen.106.2:0 "这份同盟太危险了"
 noa_gen.107.t:0 "[FROM.GetName]拒绝了我们加入阵营的请求"
 noa_gen.107.d:0 "来自[FROM.GetName]的消息，[FROM.GetName]拒绝了我们加入阵营的请求。"
 noa_gen.107.1:0 "可惜"
+
+noa_gen.108.t:0 "向[NOA_winner_target.GetName]提出和平提议？"
+noa_gen.108.d:0 "随着我们阵营中的所有主要成员的投降，战争的天平完全向不利于我们的方向发展了。我们是否应该向[NOA_winner_target.GetName]提出和平提议，以终止不必要的流血？"
+noa_gen.108.1:0 "我们必须承认失败"
+noa_gen.108.2:0 "战斗还没有结束！"
+
+noa_gen.109.t:0 "[FROM.GetName]的和平提议？"
+noa_gen.109.d:0 "[FROM.GetName]希望与我们签署白和协议，终止不必要的流血。"
+noa_gen.109.1:0 "没必要继续流血了"
+noa_gen.109.2:0 "我们只接受完全胜利"
+
+noa_gen.110.t:0 "和平提议被接受"
+noa_gen.110.d:0 "[FROM.GetName]同意了我们的和平提议，我们之间的敌对关系结束了。"
+noa_gen.110.1:0 "这是当下最好的结果了"
+
+noa_gen.111.t:0 "和平提议被拒绝"
+noa_gen.111.d:0 "[FROM.GetName]拒绝了我们的和平提议，战争将继续下去。"
+noa_gen.111.1:0 "那么战争只好继续"

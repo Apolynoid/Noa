@@ -1,0 +1,71 @@
+helpKAP = {
+	enable = {
+		has_global_flag = main_scenario
+		has_country_flag = bangzhuzhanglaohui
+		KAP = {
+			has_war_with = NTR
+		}
+	}
+	abort = {
+		KAP = {
+			not = { has_war_with = NTR }
+		}
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KAP"			
+		value = 150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NTR"			
+		value = 150
+	}
+}
+
+helpNTR = {
+	enable = {
+		has_global_flag = main_scenario
+		has_country_flag = bangzhugongheguo
+		NTR = {
+			has_war_with = KAP
+		}
+	}
+	abort = {
+		NTR = {
+			not = { has_war_with = KAP }
+		}
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NTR"			
+		value = 150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KAP"			
+		value = 150
+	}
+}
+
+UTH_rebel = {
+	enable = {
+		tag = UUG
+		UTH = {
+			has_war_with = SAT
+		}
+	}
+	abort = {
+		UTH = {
+			is_subject_of = SAT
+		}
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UTH"			
+		value = 100
+	}
+}

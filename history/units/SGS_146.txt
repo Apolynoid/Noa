@@ -285,3 +285,8 @@ units = {
 	}
 	
 }
+
+focus = {
+	current = "SGS_xi_nan_yao_jing_jin_ji_hui_yi"
+	progress = 0
+}

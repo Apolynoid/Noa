@@ -425,6 +425,9 @@ country_event = {
 			id = sw.107
 			days = 7
 		}
+		hidden_effect = {
+			clr_global_flag = SW_defense_faction_flag
+		}
 	}
 }
 

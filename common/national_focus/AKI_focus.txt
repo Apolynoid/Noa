@@ -321,7 +321,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_idea
-				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_a_idea
+				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_b_idea
 			}
 		}
 	
@@ -351,7 +351,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_idea
-				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_b_idea
+				add_idea = AKI_chong_xin_shen_shi_ren_shen_guan_xi_a_idea
 			}
 		}
 	

@@ -1,6 +1,9 @@
 YKR_dont_kick_SEJ_from_faction = {
-	enable = {
+	allowed = {
 		original_tag = YKR
+	}
+
+	enable = {
 		SEJ = {
 			has_completed_focus = SEJ_cheng_ren_xi_jian_ling_dao_di_wei
 		}

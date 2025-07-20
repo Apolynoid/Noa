@@ -2,6 +2,7 @@ SW_xi_nan_tu_di_kai_fa = {
     # 分配FROM地区土地
     AKI_fen_pei_FROM_di_qu_tu_di = {
         state_target = any_owned_state
+        priority = 30
         allowed = {
             original_tag = AKI
         }
@@ -26,8 +27,25 @@ SW_xi_nan_tu_di_kai_fa = {
 
         available = {
             FROM = {
+                is_fully_controlled_by = ROOT
                 NOT = {
                     has_state_flag = SW_being_developed_flag
+                }
+            }
+        }
+
+        cancel_trigger = {
+            FROM = {
+                NOT = {
+                    is_fully_controlled_by = ROOT
+                }
+            }
+        }
+
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_state_flag = SW_being_developed_flag
                 }
             }
         }
@@ -48,6 +66,8 @@ SW_xi_nan_tu_di_kai_fa = {
             }
             FROM = {
                 SW_remove_undeveloped_land = yes
+            }
+            ROOT = {
                 AKI_decrease_land_annexation_level = yes
             }
         }

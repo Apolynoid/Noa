@@ -1,0 +1,26 @@
+d_test1 = {
+	SEJ = {
+		add_ideas = cap_imm
+		add_to_faction = YYK
+		delete_unit = {}
+	}
+	CIR = {
+		add_ideas = cap_imm
+		delete_unit = {}
+	}
+	LIL = {
+		delete_unit = {}
+	}
+	SCA = {
+		declare_war_on = {
+			target = SEJ
+			type = annex_everything
+		}
+	}
+	NMS = {
+		declare_war_on = {
+			target = SEJ
+			type = annex_everything
+		}
+	}
+}

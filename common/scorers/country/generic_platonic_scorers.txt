@@ -1,3 +1,42 @@
+most_powerful_country = {
+	# Valid example of mission scorer:
+	targets = {
+		# describe the target to consider
+		targets_dynamic = no
+		target_non_existing = no
+		#target_array = global.majors
+		target_array = global.countries
+		# MTTH like score description
+		# THIS is a target
+		# FROM is the initiator
+		score = {
+			base = 1       
+			# Add total number of Divisions 
+			modifier = {
+				always = yes 
+				add = num_armies
+			}
+			# add factories
+			modifier = {
+				always = yes 
+				add = num_of_factories
+			}
+			modifier = {
+				is_major = yes
+				add = 100
+			}
+			modifier = {
+				is_faction_leader = yes 
+				add = 50
+			}
+			modifier = {
+				exists = no 
+				factor = 0
+			}
+		}
+	}
+}
+
 fascist_major_scorer = { #Finds biggest Fascist
     # Valid example of mission scorer:
 	targets = {

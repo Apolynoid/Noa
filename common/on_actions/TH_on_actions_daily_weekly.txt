@@ -16,45 +16,6 @@ on_actions = {
 			}
 		}
 	}
-  	### MEL effect
-  	on_weekly_MEL = {
-		effect = {
-			if = {
-				limit = {
-					has_idea = MEL_Shared_military_refuse_center_idea
-				}
-				add_equipment_to_stockpile = {
-		            type = gun147
-		            amount = 50
-		            producer = MEL
-		        }
-		        add_equipment_to_stockpile = {
-		            type = mortar143
-		            amount = 2
-		            producer = MEL
-		        }
-			}
-      		if = {
-				limit = {
-			          OR = {
-			            has_idea = MEL_Shared_military_refuse_center_idea_2
-			            has_idea = MEL_Shared_military_refuse_center_idea_3
-			          }
-					
-				}
-				add_equipment_to_stockpile = {
-		            type = gun147
-		            amount = 75
-		            producer = MEL
-		        }
-		        add_equipment_to_stockpile = {
-		            type = mortar143
-		            amount = 3
-		            producer = MEL
-		        }
-			}
-		}
-	}
 	on_daily = {
 		effect = {
 			##################only one country check

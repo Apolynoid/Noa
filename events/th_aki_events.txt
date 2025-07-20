@@ -47,6 +47,9 @@ country_event = {
 				country_event = aki.104
 			}
 		} else = {
+			hidden_effect = {
+				set_global_flag = SW_defense_faction_flag
+			}
 			# create union
 			ZYD = {
 				create_faction = southwest_mutual_defense_treaty

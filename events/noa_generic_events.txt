@@ -147,3 +147,131 @@ country_event = {
 		name = noa_gen.107.1
 	}
 }
+
+# 向NOA_winner_target提出和平提议？
+country_event = {
+	id = noa_gen.108
+	title = noa_gen.108.t
+	desc = noa_gen.108.d
+	is_triggered_only = yes
+
+	# 我们必须承认失败
+	option = {
+		name = noa_gen.108.1
+		event_target:NOA_winner_target = {
+			country_event = noa_gen.109
+		}
+	}
+
+	# 战斗还没有结束！
+	option = {
+		name = noa_gen.108.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+# FROM的和平提议？
+country_event = {
+	id = noa_gen.109
+	title = noa_gen.109.t
+	desc = noa_gen.109.d
+	is_triggered_only = yes
+
+	# 没必要继续流血了
+	option = {
+		name = noa_gen.109.1
+		FROM = {
+			every_enemy_country = {
+				white_peace = FROM
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = noa_gen.110
+			}
+		}
+	}
+
+	# 我们只接受完全胜利
+	option = {
+		name = noa_gen.109.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = noa_gen.111
+			}
+		}
+	}
+}
+
+# 和平提议被接受
+country_event = {
+	id = noa_gen.110
+	title = noa_gen.110.t
+	desc = noa_gen.110.d
+	is_triggered_only = yes
+
+	option = {
+		name = noa_gen.110.1
+	}
+}
+
+# 和平提议被拒绝
+country_event = {
+	id = noa_gen.111
+	title = noa_gen.111.t
+	desc = noa_gen.111.d
+	is_triggered_only = yes
+
+	option = {
+		name = noa_gen.111.1
+	}
+}
+
+# hidden 和平提议
+country_event = {
+	id = noa_gen.112
+	hidden = yes
+	is_triggered_only = no
+
+	trigger = {
+		has_country_flag = NOA_faction_collapse_flag
+	}
+
+	immediate = {
+		clr_country_flag = NOA_faction_collapse_flag
+	}
+
+	option = {
+		# search for negotiate target
+		get_sorted_scored_countries_temp = {
+			scorer = most_powerful_country
+			array = power_list
+		}
+		for_loop_effect = {
+			end = power_list^num
+			value = s
+			break = t_break
+			var:power_list^s = {
+				if = {
+					limit = {
+						has_war_with = ROOT
+						is_subject = no
+						OR = {
+							is_in_faction = no
+							is_faction_leader = yes
+						}
+					}
+					save_event_target_as = NOA_winner_target
+					ROOT = {
+						country_event = noa_gen.108
+					}
+				}
+			}
+		}
+	}
+}

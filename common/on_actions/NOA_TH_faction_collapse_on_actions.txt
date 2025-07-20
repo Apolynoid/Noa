@@ -1,0 +1,42 @@
+on_actions = {
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						# FROM is the loser
+						original_tag = YYK
+						is_major = no
+						is_subject = no
+						is_in_faction = yes
+						all_neighbor_country = {
+							NOT = {
+								has_war_with = FROM
+							}
+						}
+						all_enemy_country = {
+							all_controlled_state = {
+								all_neighbor_state = {
+									NOT = {
+										OR = {
+											is_controlled_by = FROM
+											FROM = {
+												any_subject_country = {
+													controls_state = PREV.PREV
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				FROM = {
+					leave_faction = yes
+					set_country_flag = NOA_faction_collapse_flag
+				}
+			}
+		}
+	}
+}
