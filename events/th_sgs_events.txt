@@ -273,11 +273,25 @@ country_event = {
 					set_country_flag = can_integrate_flag_ZYD
 				}
 			}
+			# 附庸转移
+			ZYD = {
+				every_subject_country = {
+					SGS = {
+						puppet = PREV
+					}
+				}
+			}
 			# 吞并
 			SGS = {
 				annex_country = {
 					target = ZYD
 					transfer_troops = yes
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = ZYD
+					}
+					add_compliance = 30
 				}
 			}
 		}

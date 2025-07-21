@@ -344,3 +344,8 @@ units = {
 	}
 
 }
+
+focus = {
+	current = "YUK_yu_yao_jing_de_shang_tan"
+	progress = 0
+}

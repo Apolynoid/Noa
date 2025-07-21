@@ -10,6 +10,8 @@ GEK_support_radicalist_MRS = {
 		is_in_faction_with = GEK	
 		# special triggers
 		MRS = {
+			exists = yes
+			is_subject = no
 			has_government = fandong
 		}	
 	}
@@ -38,6 +40,31 @@ GEK_support_NAR = {
 	ai_strategy = {
 		type = support
 		id = NAR
+		value = 100
+	}
+}
+
+GEK_support_radicalist_SGS = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = GEK	
+		# special triggers
+		SGS = {
+			exists = yes
+			is_subject = no
+			has_government = fandong
+		}	
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = SGS
 		value = 100
 	}
 }

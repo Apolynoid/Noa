@@ -855,10 +855,208 @@ news_event = {
 }
 
 # news YUK介入西南
+news_event = {
+	id = sw.115
+	title = sw.115.t
+	desc = sw.115.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_3_flag
+		}
+		YUK = {
+			OR = {
+				has_war_with = AKI
+				has_war_with = SGS
+				has_war_with = MEL
+				has_war_with = ZYD
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_3_flag
+		}
+	}
+
+	# YUK
+	option = {
+		name = sw.115.1
+		trigger = {
+			original_tag = YUK
+		}
+	}
+
+	# AKI SGS MEL ZYD
+	option = {
+		name = sw.115.2
+		trigger = {
+			OR = {
+				original_tag = AKI
+				original_tag = SGS
+				original_tag = MEL
+				original_tag = ZYD
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.115.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = YUK
+					original_tag = AKI
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = ZYD
+				}
+			}
+			
+		}
+	}
+}
 
 # news YUK在西南取得胜利
+news_event = {
+	id = sw.116
+	title = sw.116.t
+	desc = sw.116.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_3_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+		YUK = {
+			has_war = no
+			is_subject = no
+			exists = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+	}
+
+	# YUK
+	option = {
+		name = sw.116.1
+		trigger = {
+			original_tag = YUK
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.116.2
+		trigger = {
+			NOT = {
+				original_tag = YUK
+			}
+		}
+	}
+}
 
 # news [西南统一者]击败YUK
+news_event = {
+	id = sw.117
+	title = sw.117.t
+	desc = sw.117.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = SW_southwest_war_phase_3_flag
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+		OR = {
+			AKI = {
+				exists = yes
+				is_subject = no
+			}
+			SGS = {
+				exists = yes
+				is_subject = no
+			}
+			MEL = {
+				exists = yes
+				is_subject = no
+			}
+			ZYD = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		AKI = {
+			has_war = no
+		}
+		SGS = {
+			has_war = no
+		}
+		MEL = {
+			has_war = no
+		}
+		ZYD = {
+			has_war = no
+		}
+		YUK = {
+			OR = {
+				exists = no
+				is_subject = yes
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+	}
+
+	# AKI SGS MEL ZYD
+	option = {
+		name = sw.117.1
+		trigger = {
+			OR = {
+				original_tag = AKI
+				original_tag = SGS
+				original_tag = MEL
+				original_tag = ZYD
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = sw.117.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = AKI
+					original_tag = SGS
+					original_tag = MEL
+					original_tag = ZYD
+				}
+			}
+		}
+	}
+}
 
 # OKI要求土地
 

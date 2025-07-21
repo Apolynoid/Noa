@@ -17,6 +17,9 @@ country_event = {
 	# 商谈未能取得有效结果
 	option = {
 		name = yuk.101.2
+		ai_chance = {
+			base = 0
+		}
 		complete_national_focus = YUK_yao_jing_ge_ming
 		activate_mission = YUK_xiao_zhong_pai_de_zhen_ya
 		hidden_effect = {
@@ -368,6 +371,9 @@ country_event = {
 		YUK_placate_fairy_discontent = yes
 		hidden_effect = {
 			clr_country_flag = YUK_economy_promise_flag
+			add_to_variable = {
+				YUK_promise_count = 1
+			}
 		}
 	}
 }
@@ -397,6 +403,11 @@ country_event = {
 		YUK_placate_fairy_discontent = yes
 		hidden_effect = {
 			clr_country_flag = YUK_stability_promise_flag
+			add_to_variable = {
+				YUK_promise_count = 1
+			}
+			# AI modify
+			clr_country_flag = NOA_desperately_need_stability_flag
 		}
 	}
 }
@@ -426,6 +437,9 @@ country_event = {
 		YUK_placate_fairy_discontent = yes
 		hidden_effect = {
 			clr_country_flag = YUK_production_promise_flag
+			add_to_variable = {
+				YUK_promise_count = 1
+			}
 		}
 	}
 }
@@ -453,6 +467,9 @@ country_event = {
 		YUK_placate_fairy_discontent = yes
 		hidden_effect = {
 			clr_country_flag = YUK_technology_promise_flag
+			add_to_variable = {
+				YUK_promise_count = 1
+			}
 		}
 	}
 }

@@ -85,38 +85,6 @@ SCA_generic_zhichi = {
 	}
 }
 
-SCA_generic_zhichi2 = {
-	
-	reversed = yes
-
-	enable = {
-		or = {
-			has_opinion_modifier = zhichiweiquan
-			has_opinion_modifier = NMS_hongmoguanyouhao_op
-		}
-		SCA = { is_subject = no }
-	}
-	abort = {
-		has_global_flag = xinshidai
-	}
-
-	ai_strategy = {
-		type = support
-		id = "SCA"			
-		value = 10
-	}
-	ai_strategy = {
-		type = alliance
-		id = "SCA"			
-		value = 25
-	}
-	ai_strategy = {
-		type = befriend
-		id = "SCA"			
-		value = 10
-	}
-}
-
 SCA_generic_zhichi3 = {
 
 	enable = {

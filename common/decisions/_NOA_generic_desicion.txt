@@ -36,6 +36,10 @@ domestic_affair_management = {
 				has_stability < 0.6
 				has_political_power > 155 #Spend on other things first
 			}
+			modifier = {
+				add = 10000
+				has_country_flag = NOA_desperately_need_stability_flag
+			}
 		}
 	}
 

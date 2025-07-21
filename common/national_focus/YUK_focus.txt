@@ -1958,6 +1958,8 @@ focus_tree = {
 					var = YUK_st_target
 					max = 1.0
 				}
+				# AI modify
+				set_country_flag = NOA_desperately_need_stability_flag
 			}
 		}
 	
@@ -2279,6 +2281,10 @@ focus_tree = {
 	
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				factor = 0
+				YUK_fairy_discontent_placated = no
+			}
 		}
 	}
 

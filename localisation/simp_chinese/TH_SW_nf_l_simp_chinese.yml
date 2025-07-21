@@ -108,6 +108,8 @@ SW_has_core_of_all_SW_state_tt:0 "拥有西南§Y所有地区§!的核心"
 
 SW_auto_exploration_debug_line_tt:0 "debug info:\nbase_exploration_weight:[?FROM.base_exploration_weight]\ntotal_exploration_weight:[?FROM.total_exploration_weight]\nSW_auto_exploration_chance:[?FROM.SW_auto_exploration_chance]"
 
+SW_final_survivor_default_tt:0 "西南"
+
  #decision
 SW_xi_nan_tu_di_kai_fa:0 "西南土地开发"
 SW_xi_nan_tu_di_kai_fa_desc:0 "幻想乡西南地区的土地相较于其他地区尚未得到充分开发，使得在这里建设工业建筑十分困难。通过投入资源与时间，我们可以逐步改善西南的建设条件，为我国工业的进一步发展做准备。\n\n西南的部分地区拥有§Y“$SW_wei_kan_tan_de_tu_di_state_idea$”§!与§Y“$SW_wei_kai_fa_de_tu_di_state_idea$”§!两个地区修正。完成国策§Y“$SW_zhang_liang_tu_di$”§!可以对地区进行勘探，得到勘探的地区在后续开发时需要投入的资源§G更少§!。此外，某些§Y特殊决议§!要求只能对§Y已勘探而未开发§!的地区执行，或相较于得到完全开发的地区执行成本§G更低§!。这些决议通常也能§Y开发§!对应地区。"

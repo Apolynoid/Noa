@@ -1,0 +1,42 @@
+defined_text = { 
+	name = SW_final_survivor
+	text = {
+		trigger = {
+			AKI = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		localization_key = "[AKI.GetName]"
+	}
+	text = {
+		trigger = {
+			SGS = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		localization_key = "[SGS.GetName]"
+	}
+	text = {
+		trigger = {
+			MEL = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		localization_key = "[MEL.GetName]"
+	}
+	text = {
+		trigger = {
+			ZYD = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		localization_key = "[ZYD.GetName]"
+	}
+	text = {
+		localization_key = SW_final_survivor_default_tt
+	}
+}

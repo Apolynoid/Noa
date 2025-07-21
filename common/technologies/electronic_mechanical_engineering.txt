@@ -52,10 +52,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1000
-			modifier = {
-				has_tech = lingben
-				factor = -1
-			}
 		}
 		
 		categories = {	

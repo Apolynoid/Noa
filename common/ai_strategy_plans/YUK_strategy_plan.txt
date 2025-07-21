@@ -1,0 +1,123 @@
+YUK_attack_now = {
+	name = "YUK attack"
+	desc = "attack since fairies are satisfied"
+
+	allowed = {
+		original_tag = YUK
+	}
+	enable = {
+		YUK_fairy_discontent_placated = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		YUK_xiao_chu_xi_nan_wei_xie
+	}
+
+	weight = {
+		factor = 20.0
+	}
+}
+
+YUK_research_math = {
+	name = "YUK research math"
+	desc = "research math to handle promise"
+
+	allowed = {
+		original_tag = YUK
+	}
+	enable = {
+		NOT = {
+			has_tech = jisuangongju149
+		}
+	}
+	abort = {
+		has_tech = jisuangongju149
+	}
+
+	research = {
+		math = 100
+	}
+}
+
+YUK_focus = {
+	name = "YUK focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = YUK
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		YUK_yu_yao_jing_de_shang_tan
+		YUK_chu_li_yao_jing_bu_man
+		YUK_zuo_chu_rang_bu_cheng_nuo
+		YUK_qiang_hua_you_xiang_wei_wang
+		# just a begin for economic-military branch
+		YUK_yu_suan_qing_xie
+		# handle fairy discontent here
+		YUK_cheng_nuo_jing_ji_fa_zhan
+		YUK_cheng_nuo_she_hui_wen_ding
+		YUK_guo_ying_chu_ban_she
+		YUK_cheng_nuo_sheng_chan_you_hua
+		YUK_cheng_nuo_ke_ji_jin_bu
+		# economy
+		YUK_gong_ye_tou_zi
+		YUK_she_li_gong_ye_fa_zhan_bu
+		YUK_yan_jiu_tou_zi
+		YUK_sheng_chan_ji_shu_yan_jiu
+		YUK_jian_zhu_ji_shu_yan_jiu
+		YUK_hua_tian_yan_jiu_yuan
+		YUK_hua_tian_gong_lu_wang
+		YUK_nong_ye_gai_ge
+		YUK_fa_zhan_hua_xue_gong_ye
+		YUK_hua_tian_jian_she_ji_hua
+		# military
+		YUK_jun_shi_tou_zi
+		YUK_jun_shi_zheng_gui_hua
+		YUK_kuo_bian_hua_tian_fang_wei_jun
+		YUK_liu_shui_xian_you_hua
+		# economy again
+		YUK_pei_yang_ji_shu_gong_ren
+		YUK_hua_tian_gong_ye_qi_ji
+		# military
+		YUK_she_li_zhan_zheng_bu
+		YUK_jun_shi_gong_ye_jian_she
+		# ready to attack
+		YUK_ying_dui_huan_xiang_xiang_de_bian_hua
+		YUK_tou_zi_wu_qi_sheng_chan
+		YUK_gai_jin_xing_mo_pao
+		YUK_zhan_zheng_jing_yan_zong_jie
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+
+}
+

@@ -1,0 +1,66 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+SCA_support_isolationist_AKI = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		SCA = {
+			is_faction_leader = yes
+		}
+		# only for gekokujyo members
+		is_in_faction_with = SCA	
+		# special triggers
+		AKI = {
+			exists = yes
+			is_subject = no
+			has_government = guli
+		}	
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = AKI
+		value = 100
+	}
+}
+
+SCA_support_YUK_when_AKI_falls = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		SCA = {
+			is_faction_leader = yes
+		}
+		# only for gekokujyo members
+		is_in_faction_with = SCA	
+		# special triggers
+		AKI = {
+			OR = {
+				exists = no
+				is_subject = yes
+				NOT = {
+					has_government = guli
+				}
+			}
+		}	
+		YUK = {
+			exists = yes
+			is_subject = no
+			has_government = oldgenso
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = YUK
+		value = 100
+	}
+}

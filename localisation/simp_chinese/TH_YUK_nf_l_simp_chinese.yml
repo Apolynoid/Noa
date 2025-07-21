@@ -221,7 +221,7 @@ YUK_production_promise_tt:0 "国策完成后，通过移除§Y$YUK_luo_hou_de_sh
 YUK_technology_promise_tt:0 "国策完成后，通过研究§Y$jisuangongju149$§!科技实现承诺。"
 YUK_current_promise_tt:0 "当前承诺：[YUK_current_promise_stt]"
 YUK_current_economy_promise_tt:0 "建设§Y10§!座以上§Y民用工厂§!（至§Y[?YUK.YUK_ic_target]§!座）"
-YUK_current_stability_promise_tt:0 "将§Y稳定度§!提高§Y20%§!以上或达到§Y100%§!（至§Y[?YUK.YUK_st_target]§!）"
+YUK_current_stability_promise_tt:0 "将§Y稳定度§!提高§Y20%§!以上或达到§Y100%§!（至§Y[?YUK.YUK_st_target|%]§!）"
 YUK_current_production_promise_tt:0 "移除§Y$YUK_luo_hou_de_sheng_chan_mo_shi_idea$§!精神"
 YUK_current_technology_promise_tt:0 "研究§Y$jisuangongju149$§!科技"
 YUK_current_no_promise_tt:0 "当前没有未完成的承诺"

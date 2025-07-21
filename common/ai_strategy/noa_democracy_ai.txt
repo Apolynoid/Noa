@@ -1,0 +1,28 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+DEM_support_ZYD = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		TEG = {
+			is_faction_leader = yes
+		}
+		# only for gekokujyo members
+		is_in_faction_with = TEG	
+		# special triggers
+		ZYD = {
+			exists = yes
+			is_subject = no
+		}	
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = ZYD
+		value = 100
+	}
+}

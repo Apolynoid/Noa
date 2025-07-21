@@ -1,0 +1,17 @@
+YUK_fulfill_the_ecomonic_promise = {
+	allowed = {
+		original_tag = YUK
+	}
+
+	enable = {
+		has_country_flag = YUK_economy_promise_flag
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}
