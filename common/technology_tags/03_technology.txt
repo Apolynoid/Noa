@@ -109,18 +109,6 @@ technology_folders = {
 			always = yes
 		}
 	}
-	industry_sc_folder = {
-		ledger = civilian
-		available = {
-			has_tech = waike
-		}
-	}
-	industry_ma_folder = {
-		ledger = civilian
-		available = {
-			has_tech = lingben
-		}
-	}
 
 	secret_folder = {
 		ledger = civilian

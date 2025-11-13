@@ -48,6 +48,99 @@
 # 48 [14983] dont_defend_ally_borders
 # 49 [14984] force_defend_ally_borders
 
+AKI_prepare_for_the_war_early = {
+	allowed = {
+		original_tag = AKI
+	}
+
+	enable = {
+		OR = {
+			SGS = {
+				exists = yes
+				is_subject = no
+			}
+			MEL = {
+				exists = yes
+				is_subject = no
+			}
+			ZYD = {
+				exists = yes
+				is_subject = no
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = SGS
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = MEL
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = ZYD
+		value = 100
+	}
+}
+
+AKI_fight_SGS_when_get_buffed = {
+	allowed = {
+		original_tag = AKI
+	}
+
+	enable = {
+		has_idea = AKI_duo_qu_tu_di_de_re_qing_idea
+		SGS = {
+			exists = yes
+			is_subject = no
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = SGS
+		value = 45
+	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = SGS
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = SGS
+		tag = MEL
+		tag = ZYD
+		priority = 20
+		ordertype = front
+		execution_type = rush_weak
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 385
+		value = 60
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 248
+		value = 60
+	}
+}
+
 MEL_dont_defend_ally_borders_for_SGS = {
 	enable = {
 		tag = MEL

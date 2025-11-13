@@ -414,7 +414,7 @@ country_event = {  ##AOO希望和AKO一起进攻HCT(ako)
 		ai_chance = {
 			base = 40
 			modifier = {
-				HCT = { has_war = YES}
+				HCT = { has_war = yes}
 				factor = 0
 			}
 		}
@@ -749,10 +749,6 @@ country_event = { #易者被四季附庸 易者
 		}
 		SKI = { 
 			has_war = no
-		}
-		YYK = {
-			is_ai = no
-			has_completed_focus = YYK_jiashenyubayunzidelianxi
 		}
 	}
 	mean_time_to_happen = {

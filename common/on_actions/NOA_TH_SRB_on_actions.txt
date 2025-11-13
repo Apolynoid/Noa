@@ -1,0 +1,67 @@
+on_actions = {
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = SRB
+					has_country_flag = SRB_shadow_plan_flag
+				}
+				clr_country_flag = SRB_shadow_plan_flag
+				country_event = srb.101
+			}
+		}
+	}
+
+	on_monthly_SRB = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = SRB_diplomacy_end_flag
+					}
+				}
+				# add influence
+				set_variable = {
+					SRB_still_investment_count = 0
+				}
+				every_other_country = {
+					limit = {
+						SRB_is_possible_investor = yes
+						NOT = {
+							has_country_flag = SRB_cancelled_investment_flag
+						}
+					}
+					add_to_variable = {
+						SRB.SRB_still_investment_count = 1
+					}
+				}
+				set_temp_variable = {
+					SRB_influence_plus = 6
+				}
+				divide_temp_variable = {
+					SRB_influence_plus = SRB_still_investment_count
+				}
+				if = {
+					limit = {
+						has_idea = SRB_jun_bei_xian_zhi_tiao_yue_idea
+					}
+					multiply_temp_variable = {
+						SRB_influence_plus = 2
+					}
+				}
+				every_other_country = {
+					limit = {
+						SRB_is_possible_investor = yes
+						NOT = {
+							has_country_flag = SRB_cancelled_investment_flag
+						}
+						NOT = {
+							has_country_flag = SRB_no_influence_gain_flag
+						}
+					}
+					SRB_add__SRB_influence_plus__influence = yes
+				}
+			}
+		}
+	}
+}

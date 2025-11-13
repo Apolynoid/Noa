@@ -1,0 +1,619 @@
+﻿add_namespace = srb
+##########焦点事件###########
+# 影子计划的成果
+country_event = {
+	id = srb.101
+	title = srb.101.t
+	desc = srb.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.101.1
+		add_offsite_building = {
+			type = arms_factory
+			level = 3
+		}
+	}
+}
+
+# HUM SRB请求合并
+country_event = {
+	id = srb.102
+	title = srb.102.t
+	desc = srb.102.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.102.1
+		ai_chance = {
+			base = 10
+			# power
+			modifier = {
+				add = -1
+				strength_ratio = {
+					tag = SRB
+					ratio > 2
+				}
+			}
+			modifier = {
+				add = -9
+				strength_ratio = {
+					tag = SRB
+					ratio > 1
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = SRB
+					ratio < 0.5
+				}
+			}
+			# opinion
+			modifier = {
+				factor = 2
+				is_in_faction_with = SRB
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = THIS
+					value > 30
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = THIS
+					value > 70
+				}
+			}
+		}
+		if = {
+			limit = {
+				SRB = {
+					is_ai = yes
+				}
+			}
+			custom_effect_tooltip = SRB_HUM_transfer_to_SRB_tt
+			hidden_effect = {
+				SRB = {
+					change_tag_from = ROOT
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = SRB_HUM_game_over_warning_tt
+		}
+		hidden_effect = {
+			SRB = {
+				country_event = srb.104
+				news_event = {
+					id = srb.105
+					days = 5
+				}
+			}
+			# 将领移交
+			HUM = {
+				every_character = {
+					set_nationality = SRB
+					clr_character_flag = nationality_HUM
+            		set_character_flag = nationality_SRB
+				}
+			}
+			# 造核
+			HUM = {
+				every_core_state = {
+					add_core_of = SRB
+				}
+			}
+			# 吞并
+			SRB = {
+				annex_country = {
+					target = HUM
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = srb.102.2
+		ai_chance = {
+			base = 1
+			# if guaranteed, much less likely to be annexed
+			modifier = {
+				add = 100
+				SRB = {
+					any_other_country = {
+						has_guaranteed = HUM
+					}
+				}
+			}
+			# faction can stop annexation
+			modifier = {
+				factor = 5
+				is_in_faction = yes
+				NOT = {
+					is_in_faction_with = SRB
+				}
+			}
+		}
+		hidden_effect = {
+			SRB = {
+				country_event = srb.103
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = srb.103
+	title = srb.103.t
+	desc = srb.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.103.1
+		create_wargoal = {
+			target = HUM
+			type = annex_everything
+		}
+	}
+}
+
+# 合并请求被同意
+country_event = {
+	id = srb.104
+	title = srb.104.t
+	desc = srb.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.104.1
+	}
+}
+
+# 神灵庙和平进驻人里
+news_event = {
+	id = srb.105
+	title = srb.105.t
+	desc = srb.105.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SRB
+	option = {
+		name = srb.105.1
+		trigger = {
+			original_tag = SRB
+		}
+	}
+
+	# 其他
+	option = {
+		name = srb.105.2
+		trigger = {
+			NOT = {
+				original_tag = SRB
+			}
+		}
+	}
+}
+
+# hidden 内战或投降取消投资
+country_event = {
+	id = srb.106
+	title = srb.106.t
+	desc = srb.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		SRB_is_possible_investor = yes
+		OR = {
+			NOA_is_independent = no
+			has_civil_war = yes
+		}
+	}
+
+	option = {
+		SRB_cancel_investment = yes
+		SRB = {
+			country_event = srb.107
+		}
+	}
+}
+
+# FROM取消投资
+country_event = {
+	id = srb.107
+	title = srb.107.t
+	desc = srb.107.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.107.1
+		effect_tooltip = {
+			FROM = {
+				SRB_cancel_investment = yes
+			}
+		}
+	}
+}
+
+# SRB_influencial_overlord掌控我国经济
+country_event = {
+	id = srb.108
+	title = srb.108.t
+	desc = srb.108.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			event_target:SRB_influencial_overlord = {
+				puppet = SRB
+			}
+			every_country = {
+				limit = {
+					SRB_is_possible_investor = yes
+					NOT = {
+						tag = event_target:SRB_influencial_overlord
+					}
+				}
+				SRB_cancel_investment = yes
+			}
+		}
+	}
+
+	option = {
+		name = srb.108.1
+		effect_tooltip = {
+			event_target:SRB_influencial_overlord = {
+				puppet = SRB
+			}
+		}
+	}
+}
+
+# 掌控SRB经济
+country_event = {
+	id = srb.109
+	title = srb.109.t
+	desc = srb.109.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.109.1
+		effect_tooltip = {
+			puppet = SRB
+		}
+	}
+}
+
+# 与SRB的贸易
+country_event = {
+	id = srb.110
+	title = srb.110.t
+	desc = srb.110.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.110.1
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = SRB_yu_SRB_de_mao_yi_idea
+				days = 180
+			}
+		}
+	}
+}
+
+# SRB全面倒向我们
+country_event = {
+	id = srb.111
+	title = srb.111.t
+	desc = srb.111.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.111.1
+		effect_tooltip = {
+			add_ideas = SRB_yu_SRB_de_mao_yi_idea
+		}
+	}
+}
+
+# news SRB倒向SRB_relying_country
+news_event = {
+	id = srb.112
+	title = srb.112.t
+	desc = srb.112.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SRB
+	option = {
+		name = srb.112.1
+		trigger = {
+			original_tag = SRB
+		}
+	}
+
+	option = {
+		name = srb.112.2
+		trigger = {
+			tag = event_target:SRB_relying_country
+		}
+	}
+
+	# 其他
+	option = {
+		name = srb.112.3
+		trigger = {
+			NOT = {
+				original_tag = SRB
+			}
+			NOT = {
+				tag = event_target:SRB_relying_country
+			}
+		}
+	}
+}
+
+# news SRB保持中立
+news_event = {
+	id = srb.113
+	title = srb.113.t
+	desc = srb.113.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SRB
+	option = {
+		name = srb.113.1
+		trigger = {
+			original_tag = SRB
+		}
+	}
+
+	# 其他
+	option = {
+		name = srb.113.2
+		trigger = {
+			NOT = {
+				original_tag = SRB
+			}
+		}
+	}
+}
+
+# SCA SRB请求加入Faction
+country_event = {
+	id = srb.114
+	title = srb.114.t
+	desc = srb.114.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.114.1
+		ai_chance = {
+			base = 10
+		}
+		SCA = {
+			add_to_faction = SRB
+		}
+		SRB = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = srb.114.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			SRB = {
+				country_event = srb.115
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = srb.115
+	title = srb.115.t
+	desc = srb.115.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.115.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SRB_jia_ru_fei_hong_ti_xi
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = SRB_nan_huan_xiang_xiang_fang_yu_tiao_yue
+		}
+	}
+}
+
+# GEK SRB请求加入同盟
+country_event = {
+	id = srb.116
+	title = srb.116.t
+	desc = srb.116.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.116.1
+		ai_chance = {
+			base = 10
+		}
+		GEK = {
+			add_to_faction = SRB
+		}
+		SRB = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = srb.116.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			SRB = {
+				country_event = srb.117
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = srb.117
+	title = srb.117.t
+	desc = srb.117.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.117.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = SRB_jia_ru_xia_ke_shang_tong_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = SRB_nan_huan_xiang_xiang_fang_yu_tiao_yue
+		}
+	}
+}
+
+# SRB_GetLeader声索幻想乡统治权
+news_event = {
+	id = srb.118
+	title = srb.118.t
+	desc = srb.118.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SRB
+	option = {
+		name = srb.118.1
+		trigger = {
+			original_tag = SRB
+		}
+	}
+
+	# 其他
+	option = {
+		name = srb.118.2
+		trigger = {
+			NOT = {
+				original_tag = SRB
+			}
+		}
+	}
+}
+
+# news SRB重启宗教冲突
+news_event = {
+	id = srb.119
+	title = srb.119.t
+	desc = srb.119.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# SRB
+	option = {
+		name = srb.119.1
+		trigger = {
+			original_tag = SRB
+		}
+	}
+
+	# NMS
+	option = {
+		name = srb.119.2
+		trigger = {
+			original_tag = NMS
+		}
+	}
+
+	# 其他
+	option = {
+		name = srb.119.3
+		trigger = {
+			NOT = {
+				original_tag = SRB
+			}
+			NOT = {
+				original_tag = NMS
+			}
+		}
+	}
+}
+
+# 外交政策失败
+country_event = {
+	id = srb.120
+	title = srb.120.t
+	desc = srb.120.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = srb.120.1
+		hidden_effect = {
+			set_country_flag = SRB_no_way_to_denounce_treaty_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}

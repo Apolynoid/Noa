@@ -39,10 +39,13 @@ focus_tree = {
 		completion_reward = {
 			AKI_decrease_land_annexation_level = yes
 			custom_effect_tooltip = AKI_unlock_land_distribution_tt
+			add_manpower = 1000
+			decrease_force_attack_cost = yes
 			add_timed_idea = {
 				idea = AKI_duo_qu_tu_di_de_re_qing_idea
-				days = 365
+				days = 200
 			}
+			NOA_increase_conscription_to_lv3 = yes
 			custom_effect_tooltip = AKI_other_sw_countries_alert_tt
 			hidden_effect = {
 				SGS = {
@@ -87,6 +90,10 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = {
 				type = magic_energy_a
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = yunshudui_ma
 				amount = 100
 			}
 		}
@@ -237,6 +244,7 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
+			add_command_power = 50
 			add_named_threat = {
 				threat = 3
 				name = AKI_duo_qu_xi_nan_tu_di

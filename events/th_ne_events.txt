@@ -1,0 +1,210 @@
+add_namespace = nee
+country_event = { #YMM puppet UNA(YMM)
+	id = nee.1
+	title = nee.1.t
+	desc = nee.1.d
+	fire_only_once = yes
+	is_triggered_only = no
+	major = no
+	trigger = {
+		date > 147.1.30
+		has_global_flag = main_scenario
+		tag = YMM
+		is_subject = no
+		UNA = {
+			is_subject = no
+		}
+		country_exists = UNA
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = nee.1.1
+		ai_chance = {
+			base = 75
+		}
+		UNA = {
+			country_event = { id = nee.2 days = 2}
+		}
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			UNA = {
+				subject_level3 = yes
+			}
+		}
+	}
+
+	option = {
+		name = nee.1.2
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = { #YMM puppet UNA(UNA)
+	id = nee.2
+	title = nee.2.t
+	desc = nee.2.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = no
+
+	option = {
+		name = nee.2.1
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			ROOT = {
+				subject_level3 = yes
+			}
+			hidden_effect = {
+				news_event = { id = nee.3 days = 2}
+				country_event = { id = glo.2001 days = 2}
+			}
+		}
+	}
+
+	option = {
+		name = nee.2.2
+		FROM = {
+			hidden_effect = {
+				country_event = { id = glo.2002 days = 2}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+news_event = { #YMM puppet UNA(新闻)
+	id = nee.3
+	title = nee.3.t
+	desc = nee.3.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nee.3.1
+		trigger = {
+			or = {
+				tag = YMM
+				tag = UNA
+			}
+		}
+	}
+	option = {
+		name = nee.3.2
+		trigger = {
+			not = {
+				tag = YMM
+				tag = UNA
+			}
+		}
+	}
+}
+
+country_event = { #YMM VS LIL
+	id = nee.4
+	title = nee.4.t
+	desc = nee.4.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		date > 148.7.1
+		date < 149.7.1
+		has_global_flag = main_scenario
+		tag = YMM
+		is_subject = no
+		LIL = {
+			is_subject = no
+		}
+		country_exists = LIL
+		or = {
+			and = {
+				owns_state = 6 
+				owns_state = 431
+			}
+			UNA = {
+				is_subject_of = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 350
+	}
+
+	option = {
+		name = nee.4.1
+		ai_chance = {
+			base = 50
+		}
+		declare_war_on = {
+			target = LIL
+			type = puppet_wargoal_focus
+		}
+		army_experience = 15
+		if = {
+			limit = {
+				not = {
+					has_country_flag = go_oldorder
+					has_country_flag = go_fandong
+					has_country_flag = go_guli
+					has_country_flag = go_qinwai
+				}
+			}
+			go_neworder = yes
+		}
+	}
+
+	option = {
+		name = nee.4.2
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_country_flag = go_neworder
+			}
+		}
+	}
+}
+
+news_event = { #YMM VS LIL(新闻)
+	id = nee.5
+	title = nee.5.t
+	desc = nee.5.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = nee.5.1
+		trigger = {
+			Fairy_country_with_fairy_leader = yes
+		}
+	}
+	option = {
+		name = nee.5.2
+		trigger = {
+			tag = YMM
+		}
+	}
+	option = {
+		name = nee.5.3
+		trigger = {
+			not = {
+				tag = YMM
+				Fairy_country_with_fairy_leader = yes
+			}
+		}
+	}
+}

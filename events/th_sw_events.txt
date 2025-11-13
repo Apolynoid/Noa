@@ -1,176 +1,4 @@
-﻿add_namespace = swe
-
-country_event = { 
-	id = swe.5
-	title = swe.5.t
-	desc = swe.5.d
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		date > 151.3.5
-		tag = OKI
-		is_subject = no
-		not = {
-			# owns_state = 334
-			# owns_state = 337
-			# owns_state = 371
-			# owns_state = 342
-			owns_state = 654
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
-
-	option = {
-		name = swe.5.1
-		ai_chance = {
-			base = 99
-		}
-
-
-		add_state_claim = 342
-		add_state_claim = 334
-		add_state_claim = 233
-		add_state_claim = 219
-		add_state_claim = 371
-		add_state_claim = 337
-		add_state_claim = 654
-
-		342 = { state_owner_get = yes }
-        event_target:trigger_target = { country_event = {id = swe.6 days = 2} }
-	}
-
-	option = {
-		name = swe.5.2
-
-		ai_chance = {
-			base = 1
-		}
-
-	}
-}
-
-country_event = { 
-	id = swe.6
-	title = swe.6.t
-	desc = swe.6.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		ai_chance = {
-			base = 55
-		}
-
-		name = swe.6.1
-		
-		OKI = {
-			country_event = { id = swe.7 days = 2}
-		}
-		
-	}
-
-	option = {
-		name = swe.6.2
-
-		OKI = {
-			transfer_state = 342
-			transfer_state = 334
-			transfer_state = 233
-			transfer_state = 219
-			transfer_state = 371
-			transfer_state = 337
-			transfer_state = 654
-			hidden_effect = {
-				country_event = { id = glo.2001 days = 2}
-				news_event = { id = swe.8 days = 2 }
-			}
-		}
-
-		ai_chance = {
-			base = 45
-		}
-
-	}
-}
-
-country_event = { 
-	id = swe.7
-	title = swe.7.t
-	desc = swe.7.d
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		ai_chance = {
-			base = 99
-		}
-
-		name = swe.7.1
-		
-		army_experience = 10
-
-		OKI = {
-			declare_war_on = {
-	          target = FROM
-	          type = take_state_focus
-	          generator = { 654 }
-	        }
-		}
-
-		hidden_effect = {
-			news_event = { id = swe.8 days = 2 }
-		}
-	}
-
-	option = {
-		name = swe.7.2
-
-		ai_chance = {
-			base = 1
-		}
-	}
-}
-
-news_event = {
-	id = swe.8
-	title = swe.8.t
-	desc = swe.8.d
-	# fire_only_once = yes
-	is_triggered_only = yes
-
-	major = yes
-
-	option = {
-		name = swe.8.1
-		trigger = {
-			has_war_with = OKI
-		}
-	}
-
-	option = {
-		name = swe.8.2
-		trigger = {
-			or = {
-				has_idea = gensoukyo_creator_idea
-			}
-		}
-	}
-
-	option = {
-		name = swe.8.3
-		trigger = {
-			not = {
-				has_war_with = OKI
-				has_idea = gensoukyo_creator_idea
-			}
-		}
-	}
-}
-
-add_namespace = sw
+﻿add_namespace = sw
 
 # [state_to_explore.GetName]得到自发勘探
 country_event = {
@@ -417,6 +245,15 @@ country_event = {
 	}
 
 	option = {
+		ZYD = {
+			set_major = no
+		}
+		MEL = {
+			set_major = no
+		}
+		SGS = {
+			set_major = no
+		}
 		every_allied_country = {
 			country_event = sw.106
 		}
@@ -556,8 +393,12 @@ country_event = {
 
 	option = {
 		name = sw.109.1
+		add_manpower = 1000
 		activate_mission_tooltip = SW_xi_nan_ba_quan_zheng_duo
-		add_ideas = SW_xi_nan_tong_yi_zhan_zheng_idea
+		swap_ideas = {
+			remove_idea = SW_xi_nan_hun_zhan_idea
+			add_idea = SW_xi_nan_hun_zhan_a_idea
+		}
 	}
 }
 
@@ -707,6 +548,10 @@ news_event = {
 		}
 	}
 
+	mean_time_to_happen = {
+		days = 5
+	}
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = SW_southwest_war_phase_2_end_flag
@@ -766,6 +611,10 @@ news_event = {
 				is_subject = yes
 			}
 		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
 	}
 
 	immediate = {
@@ -829,6 +678,10 @@ news_event = {
 		}
 	}
 
+	mean_time_to_happen = {
+		days = 5
+	}
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = SW_southwest_war_phase_2_end_flag
@@ -876,6 +729,10 @@ news_event = {
 				has_war_with = ZYD
 			}
 		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
 	}
 
 	immediate = {
@@ -943,6 +800,10 @@ news_event = {
 			is_subject = no
 			exists = yes
 		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
 	}
 
 	immediate = {
@@ -1023,6 +884,10 @@ news_event = {
 		}
 	}
 
+	mean_time_to_happen = {
+		days = 5
+	}
+
 	immediate = {
 		hidden_effect = {
 			set_global_flag = SW_southwest_war_phase_3_end_flag
@@ -1057,15 +922,3 @@ news_event = {
 		}
 	}
 }
-
-# OKI要求土地
-
-# OKI FROM同意了我们的领土要求
-
-# OKI FROM拒绝了我们的领土要求
-
-# OKI宣布西南领土的所有权
-
-# OKI成功征服西南
-
-# [西南统一者]击败OKI

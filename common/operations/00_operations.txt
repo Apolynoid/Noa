@@ -1556,7 +1556,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 				steal_random_tech_bonus = {
 					folder = electronics_folder
 					folder = industry_folder
-					folder = industry_ma_folder
 
 					bonus = 3.0
 					name = operation_steal_tech_civilian
@@ -1577,7 +1576,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 				steal_random_tech_bonus = {
 					folder = electronics_folder
 					folder = industry_folder
-					folder = industry_sc_folder
 
 					bonus = 3.0
 					name = operation_steal_tech_civilian
@@ -1621,7 +1619,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 						steal_random_tech_bonus = {
 							folder = electronics_folder
 							folder = industry_folder
-							folder = industry_ma_folder
 
 							bonus = 4.0
 							name = operation_steal_tech_civilian
@@ -1642,7 +1639,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 						steal_random_tech_bonus = {
 							folder = electronics_folder
 							folder = industry_folder
-							folder = industry_sc_folder
 
 							bonus = 4.0
 							name = operation_steal_tech_civilian
@@ -1681,7 +1677,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 						steal_random_tech_bonus = {
 							folder = electronics_folder
 							folder = industry_folder
-							folder = industry_ma_folder
 
 							bonus = 3.0
 							name = operation_steal_tech_civilian
@@ -1702,7 +1697,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 						steal_random_tech_bonus = {
 							folder = electronics_folder
 							folder = industry_folder
-							folder = industry_sc_folder
 
 							bonus = 3.0
 							name = operation_steal_tech_civilian
@@ -1733,8 +1727,6 @@ operation_steal_tech_civilian = { ### 12 3/35
 	outcome_potential = {
 		ROOT = {
 			steal_random_tech_bonus = {
-				folder = industry_sc_folder
-				folder = industry_ma_folder
 				folder = industry_folder
 				folder = electronics_folder
 				bonus = 3.0

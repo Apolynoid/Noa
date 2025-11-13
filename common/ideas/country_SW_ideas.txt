@@ -120,14 +120,30 @@ ideas = {
 			}
 		}
 
-		# 西南统一战争
-		SW_xi_nan_tong_yi_zhan_zheng_idea = {
+		# 西南混战
+		SW_xi_nan_hun_zhan_idea = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				surrender_limit = -0.1
+			}
+			cancel = {
+				original_tag = AKI
+				has_global_flag = SW_southwest_war_phase_1_end_flag
+			}
+		}
+
+		SW_xi_nan_hun_zhan_a_idea = {
 			picture = tfv_can_conscription_crisis
 			modifier = {
 				army_attack_factor = 0.1
 				breakthrough_factor = 0.1
 				army_morale_factor = 0.1
-				surrender_limit = -0.1
+				surrender_limit = -0.2
+			}
+			cancel = {
+				has_global_flag = SW_southwest_war_phase_2_end_flag
 			}
 		}
 	}

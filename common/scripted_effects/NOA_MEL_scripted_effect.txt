@@ -34,16 +34,9 @@ MEL_decrease_political_collapse = {
 	}
 }
 
-MEL_add__MEL_crop_increase__toxic_crop = {
+MEL_add__MEL_crop_increase__crop = {
 	add_to_variable = {
-		MEL_toxic_crop_num = MEL_crop_increase
+		MEL_crop_num = MEL_crop_increase
 	}
-	custom_effect_tooltip = MEL_add__MEL_crop_increase__toxic_crop_tt
-}
-
-MEL_add__MEL_crop_increase__medicinal_crop = {
-	add_to_variable = {
-		MEL_medicinal_crop_num = MEL_crop_increase
-	}
-	custom_effect_tooltip = MEL_add__MEL_crop_increase__medicinal_crop_tt
+	custom_effect_tooltip = MEL_add__MEL_crop_increase__crop_tt
 }

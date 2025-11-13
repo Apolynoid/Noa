@@ -114,6 +114,7 @@ focus_tree = {
 	
 		completion_reward = {
 			add_ideas = ZYD_zhong_you_zhi_dao_jing_wei_dui_idea
+			NOA_increase_conscription_to_lv3 = yes
 		}
 	
 		ai_will_do = {

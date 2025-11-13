@@ -13,6 +13,7 @@
 
         #专用辅助
         mortar1 = 1
+        zhiyuanzhuangbei = 1
         #专用基础
 
         #专用进阶
@@ -53,6 +54,7 @@
     }
     add_ideas = {
         ZYD_xi_nan_mao_yi_zhong_xin_idea
+        SW_xi_nan_hun_zhan_idea
     }
     add_timed_idea = {
         idea = ZYD_di_xiao_de_zheng_fu_idea

@@ -58,7 +58,7 @@ technologies = {
 		research_cost = 0.8
 		folder = {
 			name = industry_folder
-			position = { x = 5 y = 0 }
+			position = { x = 2 y = 0 }
 		}
 		
 		ai_will_do = {
@@ -85,26 +85,139 @@ technologies = {
 			leads_to_tech = fensanshenchan145
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = basic_machine_tools
+			research_cost_coeff = 1
+		}
 		
 		
 		research_cost = 0.8
 		folder = {
 			name = industry_folder
-			position = { x = 5 y = 2 }
+			position = { x = 2 y = 2 }
 		}
-
-		# folder = {
-		# 	name = industry_sc_folder
-		# 	position = { x = 1 y = 7 }
-		# }
-
-		# folder = {
-		# 	name = industry_ma_folder
-		# 	position = { x = 1 y = 7 }
-		# }
 		
 		ai_will_do = {
 			factor = 1
+		}
+		
+		categories = {
+			industrys
+			civil
+		}
+	}
+
+	basic_machine_tools = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		
+		path = {
+			leads_to_tech = improved_machine_tools 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 145
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industrys
+			civil
+		}
+	}
+
+	#Machine tools branch	
+	improved_machine_tools = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		path = {
+			leads_to_tech = advanced_machine_tools 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 148
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 40
+						
+			modifier = {
+				factor = 10
+				date > "148.1.1"
+			}
+		}
+		
+		categories = {
+			industrys
+			civil
+		}
+	}
+	
+	advanced_machine_tools = {
+	
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = assembly_line_production 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 151
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+						
+			modifier = {
+				factor = 10
+				date > "150.1.1"
+			}
+		}
+		
+		categories = {
+			industrys
+			civil
+		}
+	}
+
+	assembly_line_production = {
+	
+		production_factory_max_efficiency_factor = 0.1
+
+		research_cost = 2
+		start_year = 156
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+			
+			modifier = {
+				factor = 10
+				date > "155.1.1"
+			}			
 		}
 		
 		categories = {
@@ -133,7 +246,7 @@ technologies = {
 		research_cost = 2
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 4 }
+			position = { x = 5 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -162,7 +275,7 @@ technologies = {
 		research_cost = 2
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 6 }
+			position = { x = 5 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -191,7 +304,7 @@ technologies = {
 		research_cost = 2
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 8 }
+			position = { x = 5 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -213,7 +326,7 @@ technologies = {
 		research_cost = 2.3
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 10 }
+			position = { x = 5 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -348,11 +461,7 @@ technologies = {
 		path = {
 			leads_to_tech = jianzaojishu140
 			research_cost_coeff = 1
-		}			
-		path = {
-			leads_to_tech = yunshudui140
-			research_cost_coeff = 1
-		}			
+		}					
 		
 		research_cost = 2
 		folder = {
@@ -491,88 +600,6 @@ technologies = {
 		categories = {
 			build
 			civil
-		}
-	}
-
-	yunshudui140 = {
-	
-		path = {
-			leads_to_tech = yunshucheliang146
-			research_cost_coeff = 1
-		}			
-		start_year = 140
-		research_cost = 1.5
-		folder = {
-			name = industry_folder
-			position = { x = 13 y = 4 }
-		}
-		enable_equipments = {
-			yunshudui_ma
-		}
-		enable_equipments = {
-			yunshudui_sc
-		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_war = yes
-				factor = 10
-			}
-		}
-		
-		categories = {
-			civil
-			transportation
-		}
-	}
-	yunshucheliang146= {
-	
-		path = {
-			leads_to_tech = yunshucheliang151
-			research_cost_coeff = 1
-		}			
-		start_year = 146
-		research_cost = 2
-		folder = {
-			name = industry_folder
-			position = { x = 13 y = 6 }
-		}
-		enable_equipments = {
-			truck_1
-		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_war = yes
-				factor = 10
-			}
-		}
-		
-		categories = {
-			civil
-			transportation
-		}
-	}
-	yunshucheliang151= {		
-		start_year = 151
-		research_cost = 2.5
-		folder = {
-			name = industry_folder
-			position = { x = 13 y = 8 }
-		}
-		enable_equipments = {
-			truck_2
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			civil
-			transportation
 		}
 	}
 
@@ -768,11 +795,6 @@ technologies = {
 			leads_to_tech = minyongjianzao156
 			research_cost_coeff = 1
 		}	
-
-		path = {
-			leads_to_tech = fangkongpao151
-			research_cost_coeff = 1
-		}
 		
 		research_cost = 2.2
 		start_year = 151
@@ -824,36 +846,6 @@ technologies = {
 		}
 	}
 
-	fangkongpao151 = {
-		
-		research_cost = 2.2
-		start_year = 151
-
-		folder = {
-			name = industry_folder
-			position = { x = 25 y = 8 }
-		}
-
-		enable_building = {
-			building = anti_air_building
-		    level = 2
-		}
-		enable_building = {
-			building = air_base
-		    level = 5
-		}
-
-		production_speed_anti_air_building_factor = 0.1
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			build
-			civil
-		}
-	}
 	########资源开发##############
 	ziyuankaifa130 = {
 
@@ -903,6 +895,16 @@ technologies = {
 			name = industry_folder
 			position = { x = 30 y = 4 }
 		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 1
+		}
+
+		enable_building = {
+			building = powder_factory
+		    level = 1
+		}
 		
 		ai_will_do = {
 			factor = 1
@@ -930,6 +932,39 @@ technologies = {
 		folder = {
 			name = industry_folder
 			position = { x = 30 y = 6 }
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 2
+		}
+
+		enable_building = {
+			building = powder_factory
+		    level = 2
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 1
+		}
+
+		enable_building = {
+			building = metal_factory
+		    level = 1
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+			modify_building_resources = {
+				building = powder_factory
+				resource = powder
+				amount = 12
+			}
 		}
 		
 		ai_will_do = {
@@ -960,6 +995,49 @@ technologies = {
 			name = industry_folder
 			position = { x = 30 y = 8 }
 		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 3
+		}
+
+		enable_building = {
+			building = powder_factory
+		    level = 3
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 2
+		}
+
+		enable_building = {
+			building = metal_factory
+		    level = 2
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+			modify_building_resources = {
+				building = powder_factory
+				resource = powder
+				amount = 12
+			}
+			modify_building_resources = {
+				building = rock_factory
+				resource = crystal
+				amount = 8
+			}
+			modify_building_resources = {
+				building = metal_factory
+				resource = metal
+				amount = 9
+			}
+		}
 		
 		ai_will_do = {
 			factor = 1
@@ -983,6 +1061,49 @@ technologies = {
 		folder = {
 			name = industry_folder
 			position = { x = 30 y = 10 }
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 4
+		}
+
+		enable_building = {
+			building = powder_factory
+		    level = 4
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 3
+		}
+
+		enable_building = {
+			building = metal_factory
+		    level = 3
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+			modify_building_resources = {
+				building = powder_factory
+				resource = powder
+				amount = 12
+			}
+			modify_building_resources = {
+				building = rock_factory
+				resource = crystal
+				amount = 8
+			}
+			modify_building_resources = {
+				building = metal_factory
+				resource = metal
+				amount = 9
+			}
 		}
 		
 		ai_will_do = {

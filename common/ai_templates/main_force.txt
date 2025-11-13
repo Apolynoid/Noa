@@ -4,6 +4,7 @@ ma_infantry_generic = {
 		SEJ
 		TEG
 		TKM
+		AKI
 	}
 
 	role = main_force

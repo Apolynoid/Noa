@@ -329,6 +329,82 @@ SEJ_xia_ke_shang_tong_meng = {
         }
     }
 
+    # 支援SGS
+    SEJ_zhi_yuan_SGS = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        targets = {SGS}
+        targets_dynamic = yes
+        target_trigger = {
+            has_global_flag = SW_southwest_war_phase_1_flag
+            NOT = {
+                has_global_flag = SW_southwest_war_phase_3_end_flag
+            }
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+            }
+        }
+        available = {
+            has_war = no
+        }
+        icon = generic_industry
+        fire_only_once = yes
+        days_remove = 15
+        complete_effect = {
+            set_variable = {
+                support_target = SGS
+            }
+            custom_effect_tooltip = SEJ_support_SGS_tt
+            SEJ_support_init_and_trigger = yes
+        }
+        remove_effect = {
+            SGS = {
+                country_event = sej.137
+            }
+        }
+    }
+
+    # 支援LAV
+    SEJ_zhi_yuan_LAV = {
+        target_root_trigger = {
+            has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
+        }
+        targets = {LAV}
+        targets_dynamic = yes
+        target_trigger = {
+            has_global_flag = YUK_civil_war_flag
+            NOT = {
+                has_global_flag = YUK_civil_war_end_flag
+            }
+            FROM = {
+                exists = yes
+                is_subject = no
+                has_government = fandong
+            }
+        }
+        available = {
+            has_war = no
+        }
+        icon = generic_industry
+        fire_only_once = yes
+        days_remove = 15
+        complete_effect = {
+            set_variable = {
+                support_target = LAV
+            }
+            custom_effect_tooltip = SEJ_support_LAV_tt
+            SEJ_support_init_and_trigger = yes
+        }
+        remove_effect = {
+            LAV = {
+                country_event = sej.137
+            }
+        }
+    }
+
     # 支援KNA
     SEJ_zhi_yuan_KNA = {
         target_root_trigger = {

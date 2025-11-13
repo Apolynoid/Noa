@@ -1,0 +1,40 @@
+
+state={
+	id=142
+	name="STATE_142"
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			add_core_of = ZYD
+			add_claim_by = GH1
+			buildings = {
+				infrastructure =2
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+		victory_points = {
+			5022 10
+		}
+
+	}
+
+	provinces={
+		1361 1892 2750 5013 5018 5022 5030 5037 
+	}
+	manpower=428.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

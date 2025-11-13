@@ -1,0 +1,29 @@
+state={
+	id=595
+	name="STATE_595"
+	provinces={
+		7560 7564 7571 7578 7589 
+	}
+	resources={
+		energy = 0
+		powder = 8.0
+		metal = 0.0
+		gas=2.000
+		crystal=0.000
+	}
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+				arms_factory = 1
+			}
+		}
+	}
+	state_category=s2
+	manpower=105
+	buildings_max_level_factor=1.000
+	local_supplies=2.500
+}

@@ -432,3 +432,25 @@ country_event = {
 		custom_effect_tooltip = SGS_stop_plan_supernova_tt
 	}
 }
+
+# 领土损失
+country_event = {
+	id = sgs.112
+	title = sgs.112.t
+	desc = sgs.112.d
+	major = no
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = SGS
+		has_defensive_war = yes
+		surrender_progress > 0.1
+	}
+
+	option = {
+		name = sgs.112.1
+		unlock_decision_tooltip = SGS_duo_hui_ling_tu
+		custom_effect_tooltip = decision_fire_once_tt
+	}
+}

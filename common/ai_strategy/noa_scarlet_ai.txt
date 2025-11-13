@@ -26,6 +26,11 @@ SCA_support_isolationist_AKI = {
 		id = AKI
 		value = 100
 	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = AKI		
+		value = 100
+	}
 }
 
 SCA_support_YUK_when_AKI_falls = {
@@ -61,6 +66,11 @@ SCA_support_YUK_when_AKI_falls = {
 	ai_strategy = {
 		type = support
 		id = YUK
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = YUK		
 		value = 100
 	}
 }

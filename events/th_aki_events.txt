@@ -56,6 +56,15 @@ country_event = {
 				add_to_faction = SGS
 				add_to_faction = MEL
 			}
+			ZYD = {
+				set_major = yes
+			}
+			MEL = {
+				set_major = yes
+			}
+			SGS = {
+				set_major = yes
+			}
 			news_event = {
 				id = aki.103
 			}
@@ -252,5 +261,77 @@ news_event = {
 		trigger = {
 			original_tag = SCA
 		}
+	}
+}
+
+# 怀疑主义蔓延
+country_event = {
+	id = aki.109
+	title = aki.109.t
+	desc = aki.109.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				AKI_army_defection_mtth = 360
+			}
+			add_ideas = AKI_huai_yi_zhu_yi_idea
+		}
+	}
+
+	option = {
+		name = aki.109.1
+		effect_tooltip = {
+			add_ideas = AKI_huai_yi_zhu_yi_idea
+		}
+	}
+}
+
+# 前线士兵逃离岗位
+country_event = {
+	id = aki.110
+	title = aki.110.t
+	desc = aki.110.d
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = AKI
+		has_war = yes
+		has_idea = AKI_huai_yi_zhu_yi_idea
+		surrender_progress > 0
+	}
+
+	# mtth = 350 * (1 - surrender_progress) ^ 2 + 10
+	mean_time_to_happen = {
+		days = 0
+		modifier = {
+			add = AKI_army_defection_mtth
+			tag = AKI
+		}
+	}
+
+	immediate = {
+		log = "AKI got army defection event."
+		hidden_effect = {
+			every_state = {
+				damage_units = {
+					state = THIS
+					damage = 0.05
+					limit = {
+						tag = AKI
+					}
+					ratio = yes
+					army = yes
+					navy = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = aki.110.1
+		custom_effect_tooltip = AKI_army_defection_tt
 	}
 }

@@ -23,6 +23,11 @@ GEK_support_radicalist_MRS = {
 		id = MRS
 		value = 100
 	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = MRS		
+		value = 100
+	}
 }
 
 GEK_support_NAR = {
@@ -40,6 +45,11 @@ GEK_support_NAR = {
 	ai_strategy = {
 		type = support
 		id = NAR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = NAR		
 		value = 100
 	}
 }
@@ -67,6 +77,35 @@ GEK_support_radicalist_SGS = {
 		id = SGS
 		value = 100
 	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = SGS		
+		value = 100
+	}
+}
+
+GEK_support_LAV = {
+	allowed = {
+		always = yes
+	}
+	
+	enable = {
+		# only for gekokujyo members
+		is_in_faction_with = GEK		
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = LAV
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = LAV		
+		value = 100
+	}
 }
 
 GEK_support_KNA = {
@@ -76,7 +115,7 @@ GEK_support_KNA = {
 	
 	enable = {
 		# only for gekokujyo members
-		is_in_faction_with = GEK		
+		is_in_faction_with = GEK			
 	}
 
 	abort_when_not_enabled = yes

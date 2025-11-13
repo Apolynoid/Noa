@@ -9,6 +9,16 @@ spriteTypes = {
 		texturefile = "gfx/equipments/antishield/magic_focus0.dds"
 	}
 
+	# tag-specific
+	spriteType = {
+		name = "GFX_SEJ_tactical_core153_medium"
+		texturefile = "gfx/equipments/tank/SEJ_KS-2.png"
+	}
+	spriteType = {
+		name = "GFX_SEJ_zhanshujiejiehexin1_medium"
+		texturefile = "gfx/equipments/tank/SEJ_KS-2.png"
+	}
+
 # doctrines
 	spriteType = {
 		name = "GFX_special_operations_medium"

@@ -75,9 +75,6 @@ MRY_kejigexin = {
 HKR_category = { #灵梦二手工业
 	priority = 20
 }
-SRB_category = {
-	priority = 20
-}
 th_beasts_category = {
 	priority = 20
 }

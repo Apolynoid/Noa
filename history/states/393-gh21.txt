@@ -29,6 +29,6 @@ state={
 	}
 	state_category=s2
 	local_supplies=2.5
-	manpower=127455.0
+	manpower=9491.0
 	buildings_max_level_factor=1.000
 }

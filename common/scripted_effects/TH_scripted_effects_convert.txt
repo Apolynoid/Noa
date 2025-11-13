@@ -1,0 +1,222 @@
+CONV_convert = {
+    if = {
+        limit = {
+            controller = {
+                has_idea = Beast
+            }
+        }
+        set_variable = { ST_present_race = 0}
+        custom_effect_tooltip = CONV_convert_0_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Pri_youkai
+            }
+        }
+        set_variable = { ST_present_race = 1}
+        custom_effect_tooltip = CONV_convert_1_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Youkai
+            }
+        }
+        set_variable = { ST_present_race = 2}
+        custom_effect_tooltip = CONV_convert_2_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = God
+            }
+        }
+        set_variable = { ST_present_race = 3}
+        custom_effect_tooltip = CONV_convert_3_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Human
+            }
+        }
+        set_variable = { ST_present_race = 4}
+        custom_effect_tooltip = CONV_convert_4_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Magician
+            }
+        }
+        set_variable = { ST_present_race = 5}
+        custom_effect_tooltip = CONV_convert_5_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Fairy
+            }
+        }
+        set_variable = { ST_present_race = 6}
+        custom_effect_tooltip = CONV_convert_6_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Ghost
+            }
+        }
+        set_variable = { ST_present_race = 7}
+        custom_effect_tooltip = CONV_convert_7_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Kappa
+            }
+        }
+        set_variable = { ST_present_race = 8}
+        custom_effect_tooltip = CONV_convert_8_tt
+    }
+    if = {
+        limit = {
+            controller = {
+                has_idea = Tenggu
+            }
+        }
+        set_variable = { ST_present_race = 9}
+        custom_effect_tooltip = CONV_convert_9_tt
+    }
+
+    hidden_effect = {
+        set_temp_variable = { manpower_start = state_population_k }
+        multiply_temp_variable = { manpower_start = -250 }
+
+        set_temp_variable = { manpower_change = ST_current_race_conscription_ratio }
+        add_to_temp_variable = { manpower_change = 1 }
+        log = "[ROOT.GetName] base manpower_change = [?manpower_change]"
+        multiply_temp_variable = { manpower_change = 1000}
+        multiply_temp_variable = { manpower_change = state_population_k}
+        multiply_temp_variable = { manpower_change = 0.5}
+        log = "[ROOT.GetName] current manpower_change = [?manpower_change]"
+
+        ###########
+        add_manpower = manpower_start
+        add_manpower = manpower_start
+        add_manpower = manpower_start
+        add_manpower = manpower_start
+
+        set_temp_variable = { manpower_max = 0}
+        set_temp_variable = { manpower_current = 0}
+        ROOT = {
+            every_owned_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    is_core_of = ROOT
+                    ST_present_same_race = yes
+                }
+                clamp_temp_variable = { var = PREV.PREV.manpower_max min = state_population_k }
+                add_to_temp_variable = { PREV.PREV.manpower_current = state_population_k }
+            }
+        } 
+        clamp_temp_variable = { var = manpower_current max = 2500}
+        multiply_temp_variable = { manpower_current = 0.05}
+        multiply_temp_variable = { manpower_max = 0.15}
+        set_temp_variable = { manpower_move_in = manpower_current}
+        add_to_temp_variable = { manpower_move_in = manpower_max}
+
+        set_temp_variable = { manpower_ratio = infrastructure_level}
+        multiply_temp_variable = { manpower_ratio = 0.05}
+        clamp_temp_variable = { var = manpower_ratio min = 0.02 max = 0.5 }
+        multiply_temp_variable = { manpower_ratio = 1000}
+        multiply_temp_variable = { manpower_move_in = manpower_ratio }
+        add_to_temp_variable = { manpower_change = manpower_move_in }
+        log = "[ROOT.GetName] final manpower_change = [?manpower_change]"
+
+        add_manpower = manpower_change
+
+        add_manpower = 100
+
+        ROOT = { add_to_variable = { PO_mp_add = PREV.CONV_current_convert_PO } }
+    }
+}
+
+CONV_daily = {
+    #convert value
+    every_owned_state = {
+        limit = {
+            not = { ST_present_same_race = yes }
+        }
+        ###time and cost
+        set_temp_variable = { percentage = 1 }
+        add_to_temp_variable = { percentage = ROOT.modifier@CONV_convert_cost_factor }
+        clamp_temp_variable = { var = percentage min = 0 }
+
+        set_variable = { CONV_convert_cost = global.CONV_convert_cost_factor_base }
+        multiply_variable = { CONV_convert_cost = state_population_k }
+        multiply_variable = { CONV_convert_cost = state_value}
+        multiply_variable = { CONV_convert_cost = ST_present_race_conscription_ratio }
+        multiply_variable = { CONV_convert_cost = percentage }
+
+        set_variable = { CONV_convert_time = CONV_convert_cost }
+
+
+        ####power 
+        set_variable = { CONV_convert_PO = CONV_convert_cost }
+        divide_variable = { CONV_convert_PO = percentage }
+        multiply_variable = { CONV_convert_PO = global.CONV_convert_cost_factor_base }
+
+        set_temp_variable = { percentage = 1 }
+        add_to_temp_variable = { percentage = ROOT.modifier@CONV_convert_PO_gain_factor }
+        clamp_temp_variable = { var = percentage min = 0 }
+
+        multiply_variable = { CONV_convert_PO = percentage }
+
+        ############
+        if = {
+            limit = {
+                ROOT = {
+                    check_variable = { OL_view_type = 1}
+                }
+            }
+            multiply_variable = { CONV_convert_PO = 0.75 }
+        }
+        if = {
+            limit = {
+                ROOT = {
+                    check_variable = { OL_view_type = 2}
+                }
+            }
+            multiply_variable = { CONV_convert_PO = 0.5 }
+        }
+        
+        clamp_variable = { var = CONV_convert_PO max = 2.5 min = 0.02 }
+    }
+
+    #convert progress
+    every_state = {
+        limit = {
+            has_variable = in_convert_progress_of_@ROOT
+        }
+        add_to_variable = { in_convert_progress_of_@ROOT = 1 }
+        if = {
+            limit = {
+                NOT = { is_controlled_by = ROOT}
+            }
+            clear_variable = in_convert_progress_of_@ROOT
+        }
+        if = {
+            limit = {
+                check_variable = { in_convert_progress_of_@ROOT > CONV_current_convert_time }   
+            }
+            CONV_convert = yes
+            clear_variable = in_convert_progress_of_@ROOT
+        }
+    }
+}
+
+CONV_defines = {
+    set_variable = { global.CONV_convert_cost_factor_base = 0.03 }
+}

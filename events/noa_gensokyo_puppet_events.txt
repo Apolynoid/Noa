@@ -1410,6 +1410,17 @@ country_event = {
 			transfer_state_to = AKI
 		}
 		puppet = AKI
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = MEL
+					original_tag = ZYD
+					original_tag = SGS
+				}
+			}
+		}
 	}
 
 	# 维持军事占领
@@ -1497,6 +1508,17 @@ country_event = {
 			transfer_state_to = SGS
 		}
 		puppet = SGS
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = MEL
+					original_tag = ZYD
+					original_tag = AKI
+				}
+			}
+		}
 	}
 
 	# 维持军事占领
@@ -1584,6 +1606,17 @@ country_event = {
 			transfer_state_to = MEL
 		}
 		puppet = MEL
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					original_tag = SGS
+					original_tag = ZYD
+					original_tag = AKI
+				}
+			}
+		}
 	}
 
 	# 维持军事占领

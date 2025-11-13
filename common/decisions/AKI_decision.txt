@@ -25,6 +25,14 @@ SW_xi_nan_tu_di_kai_fa = {
         days_remove = 90
         days_re_enable = 15
 
+        visible = {
+            ROOT = {
+                has_dynamic_modifier = {
+                    modifier = AKI_tu_di_jian_bing_idea
+                }
+            }
+        }
+
         available = {
             FROM = {
                 is_fully_controlled_by = ROOT
@@ -35,9 +43,18 @@ SW_xi_nan_tu_di_kai_fa = {
         }
 
         cancel_trigger = {
-            FROM = {
-                NOT = {
-                    is_fully_controlled_by = ROOT
+            OR = {
+                ROOT = {
+                    NOT = {
+                        has_dynamic_modifier = {
+                            modifier = AKI_tu_di_jian_bing_idea
+                        }
+                    }
+                }
+                FROM = {
+                    NOT = {
+                        is_fully_controlled_by = ROOT
+                    }
                 }
             }
         }
@@ -72,7 +89,70 @@ SW_xi_nan_tu_di_kai_fa = {
             }
         }
         ai_will_do = {
-            base = 0
+            base = 1000
+        }
+    }
+}
+
+# MEL ZYD 
+domestic_affair_management = {
+    # 对AKI的反攻
+    AKI_dui_AKI_de_fan_gong = {
+        allowed = {
+            OR = {
+                original_tag = MEL
+                original_tag = ZYD
+            }
+        }
+        visible = {
+            has_war_with = AKI
+        }
+        available = {
+            has_defensive_war = yes
+            AKI = {
+                surrender_progress > 0.1
+                casualties > 800
+                has_idea = AKI_huai_yi_zhu_yi_idea
+            }
+        }
+        cancel_trigger = {
+            NOT = {
+                has_war_with = AKI
+            }
+        }
+        fire_only_once = yes
+        days_remove = 365
+        cost = 50
+        icon = generic_prepare_civil_war
+
+        targeted_modifier = {
+            tag = AKI
+            attack_bonus_against = 0.1
+            breakthrough_bonus_against = 0.1
+        }
+
+        complete_effect = {
+            add_manpower = 600
+            add_command_power = 50
+            add_equipment_to_stockpile = {
+                type = gun_a
+                amount = 1000
+                producer = ROOT
+            }
+            add_equipment_to_stockpile = {
+                type = mortar_a
+                amount = 100
+                producer = ROOT
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 100
+                producer = ROOT
+            }
+        }
+
+        ai_will_do = {
+            base = 5000
         }
     }
 }

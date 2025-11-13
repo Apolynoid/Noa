@@ -1130,10 +1130,10 @@ focus_tree = {
 			is_subject = no
 			date > 148.1.1
 			OR = {
-			  	threat > 0.6
+			  	threat > 0.65
 				AND = {
 					date > 149.1.1
-					threat > 0.4
+					threat > 0.5
 				}
 			  	date > 149.11.1
 			}

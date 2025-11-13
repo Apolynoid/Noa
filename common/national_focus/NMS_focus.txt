@@ -985,10 +985,10 @@ focus_tree = {
 
 		available = {
 			OR = {
-				threat > 0.8
+				threat > 0.85
 				AND = {
 					date > 149.1.1
-					threat > 0.5
+					threat > 0.6
 				}
 				date > 150.1.1
 			}

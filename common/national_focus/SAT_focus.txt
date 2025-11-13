@@ -771,15 +771,9 @@ focus_tree = {
 				bonus = 0.5
 				ahead_reduction = 1.0
 				uses = 2.0
-				technology = linglishengchan140
-				technology = linglishengchan145
-				technology = linglishengchan150
-				technology = linglishengchan155
-				technology = linglishengchan160
-				technology = linglifuzhushengchan147
-				technology = linglifuzhushengchan152
-				technology = linglifuzhushengchan157
-				technology = linglifuzhushengchan162
+				technology = basic_machine_tools
+				technology = improved_machine_tools
+				technology = advanced_machine_tools
 			}
 
 
@@ -1979,15 +1973,9 @@ focus_tree = {
 				bonus = 1.0
 				ahead_reduction = 1.0
 				uses = 2.0
-				technology = fangwaijieshengchan140
-				technology = fangwaijieshengchan145
-				technology = fangwaijieshengchan150
-				technology = fangwaijieshengchan155
-				technology = fangwaijieshengchan160
-				technology = waijiefuzhushengchan147
-				technology = waijiefuzhushengchan152
-				technology = waijiefuzhushengchan157
-				technology = waijiefuzhushengchan162
+				technology = basic_machine_tools
+				technology = improved_machine_tools
+				technology = advanced_machine_tools
 			}
 
 			SAT_enhance_MRY_influence = yes

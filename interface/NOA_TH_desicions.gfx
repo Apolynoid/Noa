@@ -46,6 +46,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_generic_pressure"
+		texturefile = "gfx/interface/decisions/decision_generic_pressure.png"
+	}
+
+	spriteType = {
 		name = "GFX_decision_generic_position_army"
 		texturefile = "gfx/interface/decisions/decision_generic_position_army.png"
 	}

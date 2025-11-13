@@ -43,7 +43,6 @@ SW_nong_ye_she_hui_idea = {
 SW_wei_kai_fa_de_tu_di_state_idea = {
 	icon = GFX_modifiers_sw_undeveloped_land
 
-	attrition_for_controller = 0.1
 	local_factories = -0.5
 	local_manpower = -0.5
 	state_production_speed_buildings_factor = -0.5
@@ -54,6 +53,5 @@ SW_wei_kan_tan_de_tu_di_state_idea = {
 	icon = GFX_modifiers_sw_unexplored_land
 
 	disable_strategic_redeployment = 1
-	attrition_for_controller = 0.1
 	local_resources = -0.5
 }

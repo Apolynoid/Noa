@@ -235,3 +235,109 @@ SGS_chao_xin_xing_ji_hua_category = {
         }
     }
 }
+
+domestic_affair_management = {
+    # 夺回领土
+    SGS_duo_hui_ling_tu = {
+        allowed = {
+            original_tag = SGS
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            has_defensive_war = yes
+			surrender_progress > 0.1
+            has_tech = magic_energy1
+            has_completed_focus = SW_lu_jun_zheng_gui_hua
+            OR = {
+                has_completed_focus = SGS_ji_fa_ge_ming_re_qing
+                has_completed_focus = SGS_guo_fang_dong_yuan
+                has_completed_focus = SGS_yao_jing_shu_liang_you_shi
+            }   
+            OR = {
+                has_completed_focus = SGS_qian_hao_zhan
+                has_completed_focus = SGS_you_ji_zhan
+            }
+        }
+
+        fire_only_once = yes
+        days_remove = 365
+        cost = 50
+        icon = generic_nationalism
+
+        modifier = {
+            army_core_attack_factor = 0.2
+            army_core_defence_factor = 0.2
+        }
+
+        complete_effect = {
+            add_manpower = 1000
+            add_command_power = 50
+            if = {
+                limit = {
+                    has_tech = zhiyuanzhuangbei
+                }
+                add_tech_bonus = {
+                    name = SGS_duo_hui_ling_tu
+                    category = support_tech
+                    bonus = 0.75
+                }
+            } else = {
+                set_technology = {
+                    zhiyuanzhuangbei = 1
+                }
+            }
+            if = {
+                limit = {
+                    has_tech = zhihuixiaodui146
+                }
+                add_tech_bonus = {
+                    name = SGS_duo_hui_ling_tu
+                    category = support_tech
+                    bonus = 0.75
+                }
+            } else = {
+                set_technology = {
+                    zhihuixiaodui146 = 1
+                }
+            }
+            custom_effect_tooltip = SGS_2_artillery_division_tt
+            hidden_effect = {
+                delete_unit_template_and_units = {
+                    division_template = "西南妖精炮兵后备军"
+                }
+                division_template = {
+                    name = "西南妖精炮兵后备军"
+                    regiments = {
+                        ma_infantry = { x = 0 y = 0 }
+                        ma_infantry = { x = 0 y = 1 }
+                        ma_infantry = { x = 0 y = 2 }
+                        ma_infantry = { x = 0 y = 3 }
+                        ma_infantry = { x = 1 y = 0 }
+                        ma_magic_energy_brigade = { x = 2 y = 0 }
+                    }
+                    support = {
+                        sp_zhihuidui = { x = 0 y = 0 } 
+                    }
+				}
+                random_controlled_state = {
+                    create_unit = {
+                        division = "name = \"西南妖精炮兵后备军\" division_template = \"西南妖精炮兵后备军\" start_experience_factor = 0.5"
+                        owner = ROOT
+                    }
+                }
+                random_controlled_state = {
+                    create_unit = {
+                        division = "name = \"西南妖精炮兵后备军\" division_template = \"西南妖精炮兵后备军\" start_experience_factor = 0.5"
+                        owner = ROOT
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 5000
+        }
+    }
+}

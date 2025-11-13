@@ -1,0 +1,85 @@
+AKI_focus = {
+	name = "AKI focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = AKI
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		AKI_ying_dui_tu_di_jian_bing
+		AKI_tou_zi_wu_qi_sheng_chan
+		AKI_zheng_li_wu_qi_ku
+		AKI_duo_qu_xi_nan_tu_di
+		AKI_scarlet_wu_qi_yuan_zhu
+		# land reform
+		SW_zhang_liang_tu_di
+		SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+		SW_jun_shi_shou_di
+		SW_tui_yi_jun_ren_xie_hui
+		SW_zhi_shi_wu_qi
+		SW_lu_jun_zheng_gui_hua
+		# politics
+		AKI_tiao_he_ren_shen_mao_dun
+		AKI_fei_chu_jun_dui_ren_shen_ge_li
+		AKI_zhong_shi_ren_lei_sheng_chan_neng_li
+		# continue the reform
+		SW_gong_gong_tu_di_zeng_yu
+		SW_gu_li_tuo_huang_yi_min
+		SW_jiao_yu_zeng_di
+		# ask for more support!
+		AKI_scarlet_jun_shi_yuan_zhu
+		AKI_scarlet_gong_ye_yuan_zhu
+		# rush for cores asap
+		AKI_lian_meng_feng_shou_da_hui
+		AKI_shen_ming_xin_yang_kai_xuan
+		AKI_xuan_bu_tu_di_wen_ti_jie_jue
+		AKI_cha_jin_diao_ling_zhe
+		AKI_xi_nan_chong_jian_ji_hua
+		AKI_chuan_bo_shen_ming_xin_yang
+		AKI_guo_fang_zhuang_tai
+		# finish phase 1 reform
+		SW_nong_ye_xue_xiao
+		SW_jiao_tong_xi_tong_jian_she
+		SW_nong_ye_ji_shu_ge_xin
+		SW_nong_ye_ji_xie_zhi_zao_chang
+		SW_capital_bing_gong_chang
+		SW_yi_wu_jiao_yu
+		# reform phase 2
+		SW_xi_nan_jian_she_ji_hua
+		SW_jun_shi_jian_she
+		SW_jun_shi_gai_ge
+		SW_jun_shi_gong_ye_zhun_bei
+		SW_gong_ye_jian_she
+		SW_ji_chu_she_shi_jian_she
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

@@ -1,0 +1,83 @@
+MEL_focus = {
+	name = "MEL focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = MEL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		MEL_qiang_hua_mei_di_xin_quan_wei
+		MEL_jun_huo_zou_si_qu_dao
+		MEL_zhong_shi_jun_shi_zu_zhi
+		MEL_zhan_zheng_ji_hua_chu
+		MEL_zhan_zheng_gong_ye
+		# reform then
+		SW_zhang_liang_tu_di
+		SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+		SW_jun_shi_shou_di
+		SW_tui_yi_jun_ren_xie_hui
+		SW_zhi_shi_wu_qi
+		SW_lu_jun_zheng_gui_hua
+		# remove debuff
+		MEL_zheng_su_nei_zheng
+		MEL_qing_xi_fan_dui_pai
+		MEL_kuo_da_zheng_bing
+		# continue the reform
+		SW_gong_gong_tu_di_zeng_yu
+		SW_gu_li_tuo_huang_yi_min
+		SW_jiao_yu_zeng_di
+		SW_capital_bing_gong_chang
+		# get stability
+		MEL_tiao_zheng_chan_ye_jie_gou
+		MEL_fu_quan_wen_guan_zheng_fu
+		MEL_zeng_jia_guo_fang_yu_suan
+		# get core asap
+		MEL_zai_xi_nan_de_sheng_li
+		MEL_xi_nan_dan_yi_zhi
+		MEL_zhong_shi_jin_gong
+		MEL_jin_gong_hua_tian
+		# finish the reform
+		SW_nong_ye_xue_xiao
+		SW_jiao_tong_xi_tong_jian_she
+		SW_nong_ye_ji_shu_ge_xin
+		SW_nong_ye_ji_xie_zhi_zao_chang
+		SW_yi_wu_jiao_yu
+		# reform phase 2
+		SW_xi_nan_jian_she_ji_hua
+		SW_jun_shi_jian_she
+		SW_jun_shi_gai_ge
+		SW_jun_shi_gong_ye_zhun_bei
+		SW_gong_ye_jian_she
+		SW_ji_chu_she_shi_jian_she
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

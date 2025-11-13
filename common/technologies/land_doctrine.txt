@@ -70,7 +70,6 @@ technologies = {
 
 		doctrine = yes
 
-		enable_tactic = tactic_delay
 		category_primary = {
 			max_organisation = 10
 		}
@@ -501,7 +500,6 @@ technologies = {
 
 		doctrine = yes
 
-		enable_tactic = tactic_delay
 		max_dig_in = 10
 		dig_in_speed_factor = 0.2
 		
@@ -953,7 +951,6 @@ technologies = {
 
 		doctrine = yes
 
-		enable_tactic = tactic_delay
 		category_primary = {
 			max_organisation = 5
 		}

@@ -311,6 +311,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1.2
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -351,6 +355,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 	gun4  = {
@@ -387,6 +395,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -414,6 +426,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -451,6 +467,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -487,6 +507,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -518,6 +542,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = lingben
+				add = -10
+			}
 		}
 	}
 
@@ -568,7 +596,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.2
+			factor = 0
 		}
 	}
 
@@ -612,7 +640,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.2
+			factor = 0
 		}
 	}
 
@@ -665,7 +693,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.2
+			factor = 0
 		}
 	}
 
@@ -703,7 +731,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 
@@ -732,7 +760,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 
@@ -783,7 +811,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.2
+			factor = 0
 		}
 	}
 
@@ -885,6 +913,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1.2
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 
@@ -925,6 +957,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 	spell_card4  = {
@@ -961,6 +997,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 
@@ -990,6 +1030,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 
@@ -1025,6 +1069,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 
@@ -1059,6 +1107,10 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
 		}
 	}
 
@@ -1088,6 +1140,90 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				has_tech = waike
+				add = -10
+			}
+		}
+	}
+
+	yunshudui140 = {
+
+		start_year = 141
+		research_cost = 1.5
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x5 y = @y3 }
+		}
+		enable_equipments = {
+			yunshudui_ma
+		}
+		enable_equipments = {
+			yunshudui_sc
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		
+		categories = {
+			civil
+			transportation
+		}
+	}
+
+	yunshucheliang146= {
+	
+		path = {
+			leads_to_tech = yunshucheliang151
+			research_cost_coeff = 1
+		}			
+		start_year = 144
+		research_cost = 2
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x5 y = @y4 }
+		}
+		enable_equipments = {
+			truck_1
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		
+		categories = {
+			civil
+			transportation
+		}
+	}
+
+	yunshucheliang151= {		
+		start_year = 147
+		research_cost = 2.5
+		folder = {
+			name = infantry_general_folder
+			position = { x = @x5 y = @y5 }
+		}
+		enable_equipments = {
+			truck_2
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			transportation
 		}
 	}
 

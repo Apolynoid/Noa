@@ -88,6 +88,54 @@ units = {
 		start_manpower_factor = 1
 	}
 	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "妖精步兵编制"
+		location = 4827
+		division_template = "妖精步兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
 		name = "妖精游击队"
 		location = 4897
 		division_template = "妖精游击队"
@@ -162,22 +210,6 @@ units = {
 		start_manpower_factor = 1
 	}
 	division = {
-		name = "妖精游击队"
-		location = 4891
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精游击队"
-		location = 4891
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
 		name = "妖精步兵编制"
 		location = 4891
 		division_template = "妖精步兵编制"
@@ -186,46 +218,6 @@ units = {
 		start_manpower_factor = 1
 	}
 
-	division = {
-		name = "妖精游击队"
-		location = 4832
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精游击队"
-		location = 4832
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精步兵编制"
-		location = 4832
-		division_template = "妖精步兵编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精步兵编制"
-		location = 4832
-		division_template = "妖精步兵编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精步兵编制"
-		location = 4832
-		division_template = "妖精步兵编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
 	division = {
 		name = "妖精步兵编制"
 		location = 4832
@@ -243,30 +235,6 @@ units = {
 		start_manpower_factor = 1
 	}
 
-	division = {
-		name = "妖精游击队"
-		location = 4840
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精游击队"
-		location = 4840
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
-	division = {
-		name = "妖精游击队"
-		location = 4840
-		division_template = "妖精游击队"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-		start_manpower_factor = 1
-	}
 	division = {
 		name = "妖精步兵编制"
 		location = 4840

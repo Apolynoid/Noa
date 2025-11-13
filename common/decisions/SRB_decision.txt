@@ -1,0 +1,219 @@
+# 外交政策
+SRB_wai_jiao_zheng_ce = {
+    # 外交窗口结束
+    SRB_wai_jiao_chuang_kou_jie_shu = {
+		allowed = {
+            original_tag = SRB
+        }
+        
+        available = {
+            always = no
+        }
+
+        activation = {
+            always = no
+        }
+
+        icon = generic_political_discourse
+
+        selectable_mission = no
+
+        days_mission_timeout = 730
+
+        is_good = no
+
+        timeout_effect = {
+            custom_effect_tooltip = SRB_diplomacy_end_tt
+            hidden_effect = {
+                set_country_flag = SRB_diplomacy_end_flag
+                # check variable
+                if = {
+                    limit = {
+                        NOT = {
+                            any_other_country = {
+                                SRB_influence_over_75 = yes
+                            }
+                        }
+                        NOT = {
+                            any_other_country = {
+                                count = 2
+                                SRB_influence_over_50 = yes
+                            }
+                        }
+                    }
+                    # lock
+                    country_event = srb.120
+                }
+            }
+        }
+	}
+
+    # 抑制FROM影响力增长
+    SRB_yi_zhi_FROM_ying_xiang_li_zeng_zhang = {
+        target_root_trigger = {
+            original_tag = SRB
+            NOT = {
+                has_country_flag = SRB_diplomacy_end_flag
+            }
+        }
+        target_array = global.countries
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                SRB_is_possible_investor = yes
+                NOT = {
+                    has_country_flag = SRB_cancelled_investment_flag
+                }
+            }
+        }
+        available = {
+            always = yes
+        }
+        icon = generic_pressure
+        fire_only_once = no
+        cost = 50
+        days_remove = 100
+        cancel_trigger = {
+            OR = {
+                has_country_flag = SRB_diplomacy_end_flag
+                FROM = {
+                    has_country_flag = SRB_cancelled_investment_flag
+                }
+            }
+        }
+        modifier = {
+            custom_modifier_tooltip = SRB_no_influence_gain_tt
+        }
+        complete_effect = {
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = SRB_no_influence_gain_flag
+                }
+            }
+        }
+        remove_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_country_flag = SRB_no_influence_gain_flag
+                }
+            }
+        }
+        cancel_effect = {
+            hidden_effect = {
+                FROM = {
+                    clr_country_flag = SRB_no_influence_gain_flag
+                }
+            }
+        }
+    }
+
+    # 商议对FROM的产品出口
+    SRB_shang_yi_dui_FROM_de_chan_pin_chu_kou = {
+        target_root_trigger = {
+            original_tag = SRB
+            has_completed_focus = SRB_mao_yi_xie_ding_xie_shang
+            NOT = {
+                has_country_flag = SRB_diplomacy_end_flag
+            }
+        }
+        target_array = global.countries
+        targets_dynamic = yes
+        target_trigger = {
+            FROM = {
+                SRB_is_possible_investor = yes
+                NOT = {
+                    has_country_flag = SRB_cancelled_investment_flag
+                }
+            }
+        }
+        available = {
+            NOT = {
+                has_country_flag = SRB_trading_flag
+            }
+        }
+        icon = generic_trade
+        fire_only_once = no
+        days_remove = 180
+        cancel_trigger = {
+            OR = {
+                has_country_flag = SRB_diplomacy_end_flag
+                FROM = {
+                    has_country_flag = SRB_cancelled_investment_flag
+                }
+            }
+        }
+        modifier = {
+            political_power_gain = 0.2
+            consumer_goods_factor = 0.15
+            industrial_factory_donations = 3
+            production_speed_buildings_factor = 0.1
+            industrial_capacity_factory = 0.1
+        }
+        complete_effect = {
+            FROM = {
+                add_timed_idea = {
+                    idea = SRB_yu_SRB_de_mao_yi_idea
+                    days = 180
+                }
+                hidden_effect = {
+                    set_temp_variable = {
+                        SRB_influence_plus = 20
+                    }
+                }
+                SRB_add__SRB_influence_plus__influence = yes
+            }
+            hidden_effect = {
+                FROM = {
+                    country_event = srb.110
+                }
+                set_country_flag = SRB_trading_flag
+            }
+        }
+        remove_effect = {
+            hidden_effect = {
+                clr_country_flag = SRB_trading_flag
+            }
+        }
+        cancel_effect = {
+            hidden_effect = {
+                clr_country_flag = SRB_trading_flag
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    # 缩短外交窗口
+    SRB_suo_duan_wai_jiao_chuang_kou = {
+        allowed = {
+            original_tag = SRB
+        }
+        visible = {
+            always = yes
+        }
+        available = {
+            always = yes
+        }
+
+        fire_only_once = no
+        days_remove = 180
+        cost = 50
+        icon = generic_break_treaty
+
+        cancel_trigger = {
+            has_country_flag = SRB_diplomacy_end_flag
+        }
+
+        remove_effect = {
+            add_days_mission_timeout = {
+                mission = SRB_wai_jiao_chuang_kou_jie_shu
+                days = -120
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+}

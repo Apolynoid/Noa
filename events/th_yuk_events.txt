@@ -244,6 +244,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			set_global_flag = YUK_civil_war_end_flag
 			add_timed_idea = {
 				idea = YUK_nei_zhan_shang_hen_idea
 				days = 365

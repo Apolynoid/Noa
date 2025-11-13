@@ -1,0 +1,63 @@
+main_force_AKI = {
+
+	available_for = {
+		AKI
+	}
+
+	role = main_force
+	front_role_override = offence
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			has_tech = waike
+		}
+	}
+	
+	main_force_basic_AKI = {		
+		upgrade_prio = {
+			factor = 2
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 5
+				ma_magic_energy_brigade = 1
+			}
+		}
+
+		replace_at_match = 0.4
+		replace_with = main_force_improved_AKI
+		target_min_match = 0.5
+	}
+
+	main_force_improved_AKI = {
+	
+		upgrade_prio = {
+			factor = 5
+		}
+		
+		target_template = {
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_jiaqiangban = 1
+			}
+
+			
+			regiments = {
+				ma_infantry = 6
+				ma_magic_energy_brigade = 3
+			}
+		}
+	}
+}
+

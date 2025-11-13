@@ -1,0 +1,7 @@
+spriteTypes = {	
+	### generic 通用
+	spriteType = {
+		name = "GFX_ability_apply_special_corps"
+		texturefile = "gfx/interface/abilitylist/ability_apply_special_corps.png"
+	}
+}

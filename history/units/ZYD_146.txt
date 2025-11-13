@@ -34,59 +34,26 @@ division_template = {
 	}
 }
 units = {
-	division = {
-		name = "维和编制"
-		location = 3680
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "维和编制"
-		location = 3680
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "维和编制"
-		location = 5022
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "维和编制"
-		location = 7198
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "维和编制"
-		location = 990
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "维和编制"
-		location = 4939
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
 	###
 	division = {
-		name = "中有之道卫队"
+		name = "维和编制"
 		location = 4944
 		division_template = "维和编制"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "维和编制"
+		location = 4944
+		division_template = "维和编制"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "维和编制"
+		location = 4944
+		division_template = "维和编制"
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
@@ -193,28 +160,6 @@ units = {
 		location = 4841
 		division_template = "维和编制"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "维和编制"
-		location = 4837
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "维和编制"
-		location = 4844
-		division_template = "维和编制"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "维和编制"
-		location = 4807
-		division_template = "维和编制"
-		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 }

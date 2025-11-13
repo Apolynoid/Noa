@@ -155,20 +155,20 @@ bookmarks = {
 #            	TES_kuodayingxianglidaodiyu
 #			}			
 #		}
-#		"SRB"={
-#		    minor = yes
-#			history = "SRB_DAWN_DESC"		#sca
-#			ideas={ 
-#				Shrine
-#				God
-#				srb_daojiaotansuojingshen_o_idea
-#			}	
-#            focuses = {
-#            	SRB_xuanchengtianhuang
-#            	SRB_quderenleilingdaoquan
-#            	SRB_huoshaomingliansi
-#			}			
-#		}
+		"SRB"={
+		    minor = yes
+			history = "SRB_DAWN_DESC"		#sca
+			ideas={ 
+				SRB_di_xiao_de_xing_zheng_ji_gou_idea
+				SRB_jun_bei_xian_zhi_tiao_yue_idea
+				SRB_cui_ruo_de_jing_ji_idea
+			}	
+            focuses = {
+				SRB_mi_mi_jun_bei_chong_zheng
+				SRB_chong_xin_zhi_ding_shi_er_jie_guan_wei
+				SRB_ling_huo_de_wai_jiao_zheng_ce
+			}			
+		}
 
 		"AKI"={
 		    minor = yes

@@ -1,0 +1,71 @@
+defined_text = { 
+	name = SRB_get_SCA_influence
+	text = {
+		trigger = {
+			SCA = {
+				OR = {
+					NOA_is_independent = no
+					has_country_flag = SRB_cancelled_investment_flag
+				}
+			}
+		}
+		localization_key = SRB_cancelled_investment_tt
+	}
+	text = {
+		localization_key = "[?SCA.SRB_influence_value]"
+	}
+}
+
+defined_text = { 
+	name = SRB_get_NMS_influence
+	text = {
+		trigger = {
+			NMS = {
+				OR = {
+					NOA_is_independent = no
+					has_country_flag = SRB_cancelled_investment_flag
+				}
+			}
+		}
+		localization_key = SRB_cancelled_investment_tt
+	}
+	text = {
+		localization_key = "[?NMS.SRB_influence_value]"
+	}
+}
+
+defined_text = { 
+	name = SRB_get_TKM_influence
+	text = {
+		trigger = {
+			TKM = {
+				OR = {
+					NOA_is_independent = no
+					has_country_flag = SRB_cancelled_investment_flag
+				}
+			}
+		}
+		localization_key = SRB_cancelled_investment_tt
+	}
+	text = {
+		localization_key = "[?TKM.SRB_influence_value]"
+	}
+}
+
+defined_text = { 
+	name = SRB_get_SEJ_influence
+	text = {
+		trigger = {
+			SEJ = {
+				OR = {
+					NOA_is_independent = no
+					has_country_flag = SRB_cancelled_investment_flag
+				}
+			}
+		}
+		localization_key = SRB_cancelled_investment_tt
+	}
+	text = {
+		localization_key = "[?SEJ.SRB_influence_value]"
+	}
+}

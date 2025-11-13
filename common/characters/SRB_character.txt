@@ -1,0 +1,206 @@
+characters={
+	SRB_mik ={
+		name = SRB_mik
+		portraits={
+			civilian={
+				large="gfx/leaders/SRB/SRB_mik.dds"
+				small="gfx/leaders/SRB/SRB_mik_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SRB/SRB_mik.dds"
+				small="gfx/leaders/SRB/SRB_mik_small.dds"
+			}
+		}
+		field_marshal = {
+			traits = {  th_original_character th_character  media_personality th_trait_shiyingjianxi }
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 11
+			logistics_skill = 16
+			# id = 10
+			skill = 10
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = SRB_mik
+			name = SRB_mik
+			cost = 200
+			modifier = {
+				decryption = 2
+				research_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			traits = {
+				SRB_ri_chu_zhi_chu_de_dao_shi_trait
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			traits = {
+				SRB_ri_chu_zhi_chu_de_dao_shi_trait
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+	SRB_seiga ={
+		name = SRB_seiga
+		portraits={
+			civilian={
+				large="gfx/leaders/SRB/SRB_seiga.dds"
+				small="gfx/leaders/SRB/SRB_seiga_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SRB/SRB_seiga.dds"
+				small="gfx/leaders/SRB/SRB_seiga_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  th_trait_moulvedashi th_trait_shiyingjianxi }
+			attack_skill = 2
+			defense_skill = 8
+			planning_skill = 12
+			logistics_skill = 7
+			# id = 12
+			skill = 8
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = SRB_seiga
+			name = SRB_seiga
+			cost = 200
+			modifier = {
+				research_speed_factor = 0.05
+				conscription_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+	}
+	SRB_yoshika ={
+		name = SRB_yoshika
+		portraits={
+			civilian={
+				large="gfx/leaders/SRB/SRB_yoshika.dds"
+				small="gfx/leaders/SRB/SRB_yoshika_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SRB/SRB_yoshika.dds"
+				small="gfx/leaders/SRB/SRB_yoshika_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_reckless th_trait_chongjizhuanjia th_trait_shiyingjianxi }
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 1
+			logistics_skill = 2
+			# id = 11
+			skill = 4
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = SRB_yoshika
+			name = SRB_yoshika
+			cost = 200
+			modifier = {
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.15  
+				modifier_army_sub_unit_melee_infantry_defence_factor = 0.15  
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.15  
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.15  
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	SRB_futo ={
+		name = SRB_futo
+		portraits={
+			civilian={
+				large="gfx/leaders/SRB/SRB_futo.dds"
+				small="gfx/leaders/SRB/SRB_futo_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SRB/SRB_futo.dds"
+				small="gfx/leaders/SRB/SRB_futo_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  th_original_character th_character  trait_reckless th_trait_shiyingjianxi }
+			attack_skill = 6
+			defense_skill = 7
+			planning_skill = 4
+			logistics_skill = 4
+			# id = 13
+			skill = 6
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = SRB_futo
+			name = SRB_futo
+			cost = 200
+			traits = {
+				princess_of_terror
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+	SRB_toziko ={
+		name = SRB_toziko
+		portraits={
+			civilian={
+				large="gfx/leaders/SRB/SRB_toziko.dds"
+				small="gfx/leaders/SRB/SRB_toziko_small.dds"
+			}
+			army = {
+				large="gfx/leaders/SRB/SRB_toziko.dds"
+				small="gfx/leaders/SRB/SRB_toziko_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character th_trait_huolizhuanjia th_trait_shiyingjianxi th_trait_shiyingjianxi }
+            attack_skill = 7
+            defense_skill = 7
+            planning_skill = 3
+            logistics_skill = 5
+            skill = 6
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = SRB_toziko
+			name = SRB_toziko
+			cost = 200
+			traits = {
+				skilled_architect_advisor
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

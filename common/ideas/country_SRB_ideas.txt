@@ -1,0 +1,300 @@
+ideas = {
+	country = {
+		# 落后的军事体系
+		SRB_luo_hou_de_jun_shi_ti_xi_idea = {
+			picture = generic_army_problems
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				max_planning_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		SRB_luo_hou_de_jun_shi_ti_xi_a_idea = {
+			picture = generic_army_problems
+			modifier = {
+				production_speed_arms_factory_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		SRB_luo_hou_de_jun_shi_ti_xi_b_idea = {
+			picture = generic_army_problems
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+		# 低效的行政机构
+		SRB_di_xiao_de_xing_zheng_ji_gou_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.4
+				stability_factor = -0.2
+			}
+		}
+
+		SRB_di_xiao_de_xing_zheng_ji_gou_a_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+
+		SRB_di_xiao_de_xing_zheng_ji_gou_b_idea = {
+			picture = generic_political_problem
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+
+		# 军备限制条约
+		SRB_jun_bei_xian_zhi_tiao_yue_idea = {
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				production_speed_arms_factory_factor = -0.5
+				conscription_factor = -0.3
+				industrial_capacity_factory = -0.1
+				custom_modifier_tooltip = SRB_more_influence_tt
+			}
+			cancel = {
+				has_war = yes
+			}
+		}
+
+		# 脆弱的经济
+		SRB_cui_ruo_de_jing_ji_idea = {
+			picture = generic_economic_crisis
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		SRB_cui_ruo_de_jing_ji_a_idea = {
+			picture = generic_economic_crisis
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+
+		# new ideas
+		# 军事学院
+		SRB_lu_jun_xue_xiao_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+			}
+		}
+
+		SRB_lu_jun_xue_xiao_a_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		SRB_lu_jun_xue_xiao_b_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		SRB_lu_jun_xue_xiao_c_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				production_speed_bunker_factor = 0.1
+				land_bunker_effectiveness_factor = 0.2
+			}
+		}
+
+		SRB_lu_jun_xue_xiao_d_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+				supply_consumption_factor = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		SRB_lu_jun_xue_xiao_e_idea = {
+			picture = generic_army_war_college
+			modifier = {
+				army_org_factor = 0.1
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+				supply_consumption_factor = -0.1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				production_speed_bunker_factor = 0.1
+				land_bunker_effectiveness_factor = 0.2
+			}
+		}
+
+		# 工业发展计划
+		SRB_gong_ye_fa_zhan_ji_hua_idea = {
+			picture = SOV_third_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.08
+			}
+		}
+
+		# 窥探命莲寺的弱点
+		SRB_kui_tan_NMS_de_ruo_dian_idea = {
+			picture = generic_nms_weakness
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		# 农业改革
+		SRB_nong_ye_gai_ge_idea = {
+			picture = generic_agrarian_reform
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		# 与神灵庙的贸易
+		SRB_yu_SRB_de_mao_yi_idea = {
+			picture = SRB_trade_with_SRB
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				attrition = -0.05
+			}
+			cancel = {
+				OR = {
+					has_war_with = SRB
+					SRB = {
+						exists = no
+					}
+					SRB = {
+						is_subject = yes
+						NOT = {
+							is_subject_of = THIS
+						}
+					}
+				}
+			}
+		}
+
+		# 外交政策与收益 tt
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_1_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_2_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				industrial_factory_donations = 2
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_3_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				experience_gain_army = 0.1
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_4_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_5_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+				weekly_manpower = 2
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_6_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				industrial_factory_donations = 3
+				military_factory_donations = 2
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_7_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				army_org_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		SRB_wai_jiao_zheng_ce_yu_shou_yi_tt_8_idea = {
+			picture = generic_deal_with_the_devil2
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		# hidden
+		# 意志至上
+		SRB_yi_zhi_zhi_shang_idea = {
+			picture = jap_supremacy_of_will
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+
+		# 战争国民动员
+		SRB_zhan_zheng_guo_min_dong_yuan_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription = 0.015
+			}
+		}
+	}
+}

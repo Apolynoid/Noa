@@ -25,9 +25,12 @@ state={
 
 		}
 
+		victory_points = {
+			1560 1 
+		}
 	}
 	state_category=s2
 	local_supplies=2.5
-	manpower=1903530.0
+	manpower=203
 	buildings_max_level_factor=1.000
 }

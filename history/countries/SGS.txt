@@ -53,12 +53,13 @@
         open1
         hawk1
         free_magic
-        type1_manpowerlv3
+        type1_manpowerlv4
     }
     add_ideas = {
         SGS_zhan_zheng_de_yin_ying_idea
         SGS_bu_shou_huan_ying_de_wai_lai_shi_li_idea
         SGS_xi_nan_yao_jing_ge_ming_jun_idea
+        SW_xi_nan_hun_zhan_idea
     }
     SW_add_agrarian_society = yes
     

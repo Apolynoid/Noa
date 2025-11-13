@@ -28,6 +28,6 @@ state={
 	}
 	state_category=s5
 	local_supplies=2.5
-	manpower=214.0
+	manpower=150
 	buildings_max_level_factor=1.000
 }

@@ -407,7 +407,7 @@ ideas = {
 			picture = ARG_war_division
 			modifier = {
 				army_org_factor = 0.05
-				supply_factor = 0.1
+				supply_consumption_factor = -0.1
 				supply_node_range = 0.1
 			}
 		}
@@ -425,7 +425,7 @@ ideas = {
 			picture = ARG_war_division
 			modifier = {
 				army_org_factor = 0.05
-				supply_factor = 0.1
+				supply_consumption_factor = -0.1
 				supply_node_range = 0.1
 				max_planning_factor = 0.1
 				planning_speed = 0.2

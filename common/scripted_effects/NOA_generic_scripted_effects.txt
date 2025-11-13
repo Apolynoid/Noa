@@ -5,6 +5,97 @@ decrease_force_attack_cost = {
     }
 }
 
+decrease_last_stand_cost = {
+    custom_effect_tooltip = decreased_last_stand_cost_tt
+    hidden_effect = {
+        set_country_flag = decreased_last_stand_cost_flag
+    }
+}
+
+NOA_increase_conscription_to_lv3 = {
+    if = {
+        limit = {
+            OR = {
+                has_idea = Fairy
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_idea = manpowerlv1
+                    has_idea = type1_manpowerlv2
+                }
+            }
+            add_ideas = type1_manpowerlv3
+        }
+    } else_if = {
+        limit = { 
+            OR = {
+                has_idea = Magician
+                has_idea = Human
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_idea = manpowerlv1
+                    has_idea = type2_manpowerlv2
+                }
+            }
+            add_ideas = type2_manpowerlv3
+        }
+    } else_if = {
+        limit = {
+            OR = {
+                has_idea = Pri_youkai
+                has_idea = Tenggu
+                has_idea = Youkai
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_idea = manpowerlv1
+                    has_idea = type3_manpowerlv2
+                }
+            }
+            add_ideas = type3_manpowerlv3
+        }
+    } else_if = {
+        limit = {
+            OR = {
+                has_idea = God
+                has_idea = Kappa
+                has_idea = Beast
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_idea = manpowerlv1
+                    has_idea = type4_manpowerlv2
+                }
+            }
+            add_ideas = type4_manpowerlv3
+        }
+    } else_if = {
+        limit = {
+            OR = {
+                has_idea = Ghost
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_idea = manpowerlv1
+                    has_idea = type0_manpowerlv2
+                }
+            }
+            add_ideas = type0_manpowerlv3
+        }
+    }
+}
+
 NOA_gain_random_agency_upgrade = { #Gives a random agency upgrade or grants a free agency if one has not yet been established
     if = {
         limit = {

@@ -1,0 +1,119 @@
+ability = {
+	MEL_apply_special_corps = {
+		name = ABILITY_MEL_APPLY_SPECIAL_CORPS
+		desc = ABILITY_MEL_APPLY_SPECIAL_CORPS_DESC
+		icon = GFX_ability_apply_special_corps
+		
+		sound_effect = command_power_ability_offensive
+		
+		type = army_leader
+		
+		allowed = {
+			is_leading_army_group = no
+			is_border_war = no
+			OWNER = {
+				has_completed_focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+				check_variable = {
+					MEL_crop_num > 0
+				}
+			}
+		}
+		
+		cost = 0.05
+		duration = 168
+		
+		one_time_effect = {
+			OWNER = {
+				subtract_from_variable = {
+					MEL_crop_num = 1
+				}
+			}
+			add_temporary_buff_to_units = {
+				combat_offense = 0.4
+				combat_breakthrough = 0.4
+				org_damage_multiplier = -0.5
+				str_damage_multiplier = 0.3
+				cannot_retreat_while_attacking = 1.0
+				
+				days = 7
+				tooltip = ABILITY_APPLY_SPECIAL_CROPS_TOOLTIP
+			}
+		}
+		
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				FROM = {
+					has_war_support > 0.1
+					command_power > 1.5
+				}
+				check_variable = { num_units_offensive_combats > 6 }
+				
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
+				check_variable = { ai_random > temp }
+				
+				add = 2
+			}
+		}
+	}
+
+	MEL_apply_special_corps_blocked = {
+		name = ABILITY_MEL_APPLY_SPECIAL_CORPS_BLOCKED
+		desc = ABILITY_MEL_APPLY_SPECIAL_CORPS_DESC
+		icon = GFX_ability_apply_special_corps
+		
+		sound_effect = command_power_ability_offensive
+		
+		type = army_leader
+		
+		allowed = {
+			is_leading_army_group = no
+			is_border_war = no
+			OWNER = {
+				has_completed_focus = MEL_te_shu_zuo_wu_zhong_zhi_chang
+				check_variable = {
+					MEL_crop_num = 0
+				}
+			}
+		}
+		
+		cost = 999.0
+		duration = 168
+		
+		one_time_effect = {
+			OWNER = {
+				subtract_from_variable = {
+					MEL_crop_num = 1
+				}
+			}
+			add_temporary_buff_to_units = {
+				combat_offense = 0.4
+				combat_breakthrough = 0.4
+				org_damage_multiplier = -0.5
+				str_damage_multiplier = 0.3
+				cannot_retreat_while_attacking = 1.0
+				
+				days = 7
+				tooltip = ABILITY_APPLY_SPECIAL_CROPS_TOOLTIP
+			}
+		}
+		
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				FROM = {
+					has_war_support > 0.1
+					command_power > 1.5
+				}
+				check_variable = { num_units_offensive_combats > 6 }
+				
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
+				check_variable = { ai_random > temp }
+				
+				add = 2
+			}
+		}
+	}
+}

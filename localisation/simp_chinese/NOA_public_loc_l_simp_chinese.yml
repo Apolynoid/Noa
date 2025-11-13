@@ -7,8 +7,11 @@ disband_militia_tt:0 "§R解散§!所有民兵单位"
 auto_complete_tt:0 "§G这项国策会随着游戏进程自动完成§!"
 occupation_law_introduce_tt:0 "§Y$integration_law$§!法案除去数值上的优势外，当在完全占领、拥有宣称且顺从度高于50的省份开启§Y$integration_law$§!法案时，会自动获得该省份的核心。"
 
+decision_fire_once_tt:0 "这条决议仅能执行§Y一次§!！"
+
 on_select_tt:0 "选择时："
 on_complete_tt:0 "完成时："
+on_war_tt:0 "进入战争状态时："
 
 after_civil_war_begins_tt:0 "内战开始后："
 
@@ -18,5 +21,6 @@ already_lowest_tt:0 "已经达到最低，无法进一步降低。"
 decision_cost_increase_20_tt:0 "每次选择该决议将使决议消耗§R增加§!£pol_power 20"
 
 decreased_force_attack_cost_tt:0 "大幅降低§Y$ABILITY_FORCE_ATTACK$§!的指挥点数消耗"
+decreased_last_stand_cost_tt:0 "大幅降低§Y$ABILITY_LAST_STAND$§!的指挥点数消耗"
 
 bug_report_tt:0 "如果看到本条信息，说明mod出现了bug，请向制作组反映。（Documents\\Paradox Interactive\\Hearts of Iron IV\\logs\\game.log对制作组Debug会很有帮助）"

@@ -1,0 +1,91 @@
+SGS_focus = {
+	name = "SGS focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = SGS
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		SGS_xi_nan_yao_jing_jin_ji_hui_yi
+		SGS_yao_jing_ji_jin_pai
+		# ask for weapon first
+		SGS_zhan_zheng_zhun_bei
+		SGS_zheng_bian_xi_nan_ge_ming_jun
+		SGS_ge_ming_xuan_chuan
+		SGS_zhan_zheng_gong_ye_dong_yuan
+		SGS_wu_zhi_hu_wu_qi_yuan_zhu
+		SGS_zu_zhi_sheng_chan_yun_dong
+		SGS_ji_fa_ge_ming_re_qing
+		# get core asap
+		SGS_xi_nan_ge_ming_lian_bang
+		SGS_xi_nan_de_wei_lai
+		SGS_jia_ru_xia_ke_shang_yun_dong
+		# defence
+		SGS_xi_nan_tong_yi
+		SGS_yu_hua_tian_yao_jing_he_zuo
+		SGS_xi_nan_fang_yu_ji_hua
+		# reform then
+		SW_zhang_liang_tu_di
+		SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
+		SW_jun_shi_shou_di
+		SW_tui_yi_jun_ren_xie_hui
+		SW_zhi_shi_wu_qi
+		SW_lu_jun_zheng_gui_hua
+		# army buff
+		SGS_wu_zhi_hu_gong_ye_yuan_zhu
+		SGS_wu_zhi_hu_jun_shi_yuan_zhu
+		SGS_yin_bi_zhan_shu
+		SGS_you_ji_zhan
+		# continue the reform
+		SW_gong_gong_tu_di_zeng_yu
+		SW_gu_li_tuo_huang_yi_min
+		SW_jiao_yu_zeng_di
+		SW_capital_bing_gong_chang
+		# plan supernova
+		SGS_chao_xin_xing_ji_hua
+		SGS_zhu_zhong_sheng_chan_an_quan
+		# finish the reform
+		SW_nong_ye_xue_xiao
+		SW_jiao_tong_xi_tong_jian_she
+		SW_nong_ye_ji_shu_ge_xin
+		SW_nong_ye_ji_xie_zhi_zao_chang
+		SW_yi_wu_jiao_yu
+		# reform phase 2
+		SW_xi_nan_jian_she_ji_hua
+		SW_jun_shi_jian_she
+		SW_jun_shi_gai_ge
+		SW_jun_shi_gong_ye_zhun_bei
+		SW_gong_ye_jian_she
+		SW_ji_chu_she_shi_jian_she
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

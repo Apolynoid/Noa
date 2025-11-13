@@ -25,4 +25,9 @@ DEM_support_ZYD = {
 		id = ZYD
 		value = 100
 	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = ZYD		
+		value = 100
+	}
 }

@@ -161,19 +161,56 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.1
+				supply_consumption_factor = -0.2
 			}
 
 			targeted_modifier = {
 				tag = SGS
-				attack_bonus_against = 0.08
+				attack_bonus_against = 0.25
 			}
 			targeted_modifier = {
 				tag = ZYD
-				attack_bonus_against = 0.08
+				attack_bonus_against = 0.25
 			}
 			targeted_modifier = {
 				tag = MEL
-				attack_bonus_against = 0.08
+				attack_bonus_against = 0.25
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_war = yes
+					}
+					country_event = aki.109
+				}
+			}
+		}
+
+		# 怀疑主义
+		AKI_huai_yi_zhu_yi_idea = {
+			picture = tur_disorganised_armed_forces
+
+			modifier = {
+				surrender_limit = -0.5
+				custom_modifier_tooltip = AKI_army_defection_possibility_tt
+			}
+
+			cancel = {
+				OR = {
+					has_war = no
+					AND = {
+						SGS = {
+							NOA_is_independent = no
+						}
+						MEL = {
+							NOA_is_independent = no
+						}
+						ZYD = {
+							NOA_is_independent = no
+						}
+					}
+				}
 			}
 		}
 

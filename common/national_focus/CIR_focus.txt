@@ -634,7 +634,7 @@ focus_tree = {
 			is_subject = no
 			date > 148.1.1
 			OR = {
-			  	threat > 0.5
+			  	threat > 0.7
 				AND = {
 					date > 149.1.1
 					threat > 0.3
@@ -1006,7 +1006,7 @@ focus_tree = {
 	# 针对恶魔的弱点
 	focus = {
 		id = CIR_zhen_dui_e_mo_de_ruo_dian
-		icon = CIR_focus_aim_at_weakness_of_the_devil
+		icon = GFX_focus_SCA_weakness
 		cost = 7
 		x = 0
 		y = 1

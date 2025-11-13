@@ -1141,10 +1141,6 @@ focus_tree = {
     }
 
     prerequisite = {
-      focus = ALI_zhan_zheng_jing_ji_ti_zhi
-    }
-
-    prerequisite = {
       focus = ALI_dui_shi_jie_zhan_zheng_ji_hua
     }
 

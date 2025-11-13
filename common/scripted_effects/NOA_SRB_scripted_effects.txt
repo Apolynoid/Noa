@@ -1,0 +1,93 @@
+SRB_clear_investment = {
+    if = {
+        limit = {
+            NMS = {
+                has_country_flag = SRB_cancelled_investment_flag
+            }
+        }
+        set_variable = {
+            SRB_diplomacy_stw = 0.0
+        }
+        set_variable = {
+            SRB_diplomacy_wsw = 0.0
+        }
+        set_variable = {
+            SRB_diplomacy_mpw = 0.0
+        }
+    }
+    if = {
+        limit = {
+            SCA = {
+                has_country_flag = SRB_cancelled_investment_flag
+            }
+        }
+        set_variable = {
+            SRB_diplomacy_cf = 0
+        }
+        set_variable = {
+            SRB_diplomacy_mf = 0
+        }
+    }
+    if = {
+        limit = {
+            SEJ = {
+                has_country_flag = SRB_cancelled_investment_flag
+            }
+        }
+        set_variable = {
+            SRB_diplomacy_xpd = 0.0
+        }
+        set_variable = {
+            SRB_diplomacy_org = 0.0
+        }
+        set_variable = {
+            SRB_diplomacy_olm = 0.0
+        }
+    }
+    if = {
+        limit = {
+            TKM = {
+                has_country_flag = SRB_cancelled_investment_flag
+            }
+        }
+        set_variable = {
+            SRB_diplomacy_ic = 0.0
+        }
+        set_variable = {
+            SRB_diplomacy_mef = 0.0
+        }
+    }
+}
+
+SRB_cancel_investment = {
+    custom_effect_tooltip = SRB_cancel_investmeny_tt
+    hidden_effect = {
+        set_country_flag = SRB_cancelled_investment_flag
+        set_variable = {
+            SRB_influence_value = 0
+        }
+        SRB_clear_investment = yes
+    }
+}
+
+SRB_add__SRB_influence_plus__influence = {
+    custom_effect_tooltip = SRB_add__SRB_influence_plus__influence_tt
+    hidden_effect = {
+        add_to_variable = {
+            SRB_influence_value = SRB_influence_plus
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    SRB_influence_value > 100
+                }
+            }
+            # puppet SRB
+            country_event = srb.109
+            save_event_target_as = SRB_influencial_overlord
+            SRB = {
+                country_event = srb.108
+            }
+        }
+    }
+}

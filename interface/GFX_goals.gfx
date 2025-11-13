@@ -578,6 +578,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_befriend_NMS"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_NMS.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_YKR"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_YKR.png"			
 	}
@@ -670,6 +675,36 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_YKR_industrial_aid"
 		texturefile = "gfx/interface/goals/focus_generic_YKR_industrial_aid.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_SCA_weakness"
+		texturefile = "gfx/interface/goals/focus_generic_SCA_weakness.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMS_weakness"
+		texturefile = "gfx/interface/goals/focus_generic_NMS_weakness.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improve_relations_with_SCA"
+		texturefile = "gfx/interface/goals/focus_generic_improve_relations_with_SCA.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improve_relations_with_NMS"
+		texturefile = "gfx/interface/goals/focus_generic_improve_relations_with_NMS.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improve_relations_with_SEJ"
+		texturefile = "gfx/interface/goals/focus_generic_improve_relations_with_SEJ.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_improve_relations_with_TKM"
+		texturefile = "gfx/interface/goals/focus_generic_improve_relations_with_TKM.png"			
 	}
 
 	#### SCA Remilia Scarlet 斯卡蕾特帝国
@@ -1284,6 +1319,22 @@ spriteTypes = {
 	SpriteType = {
 		name = "ALI_focus_the_only_hegemony_in_gensokyo"
 		texturefile = "gfx/interface/goals/focus_ALI_the_only_hegemony_in_gensokyo.dds"			
+	}
+
+	#### SRB Toyosatomimi no Miko 神灵庙
+	SpriteType = {
+		name = "SRB_focus_emperor_of_the_land_of_the_rising_sun"
+		texturefile = "gfx/interface/goals/focus_SRB_emperor_of_the_land_of_the_rising_sun.png"			
+	}
+
+	SpriteType = {
+		name = "SRB_focus_south_gensokyo_treaty_of_defense"
+		texturefile = "gfx/interface/goals/focus_SRB_south_gensokyo_treaty_of_defense.png"			
+	}
+
+	SpriteType = {
+		name = "SRB_focus_i_am_the_sun"
+		texturefile = "gfx/interface/goals/focus_SRB_i_am_the_sun.png"			
 	}
 
 	#### SW 西南

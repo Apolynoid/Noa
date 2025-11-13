@@ -4,3 +4,8 @@ is_changemaker = {
 		has_government = qinwai
 	}
 }
+
+NOA_is_independent = {
+	exists = yes
+	is_subject = no
+}

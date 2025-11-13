@@ -14,7 +14,7 @@
 
         #专用辅助
         mortar1 = 1
-
+        zhiyuanzhuangbei = 1
         #专用基础
 
         #专用进阶
@@ -45,17 +45,19 @@
 146.1.1={
     oob = "MEL_146"
     add_ideas = {
-        type3_manpowerlv2
+        type3_manpowerlv3
         Pri_youkai
         Tribal
         close1
         hawk1
         sc_rule
+        low_economic_mobilisation
     }
     add_ideas = {
         MEL_zheng_zhi_beng_kui_idea
         MEL_ling_lan_jun_guo_zhu_yi_idea
         MEL_bo_ruo_de_min_yong_gong_ye_idea
+        SW_xi_nan_hun_zhan_idea
     }
     SW_add_agrarian_society = yes
     

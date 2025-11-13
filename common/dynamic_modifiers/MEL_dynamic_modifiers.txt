@@ -1,27 +1,5 @@
-MEL_tou_ru_du_xing_zuo_wu_state_idea = {
-	icon = GFX_modifiers_mel_use_toxic_crop
-
-	attacker_modifier = yes
-
-	army_attack_factor = 0.1
-	breakthrough_factor = 0.1
-}
-
-MEL_tou_ru_yao_yong_zuo_wu_state_idea = {
-	icon = GFX_modifiers_mel_use_medicinal_crop
-
-	army_morale_factor = 0.25
-	experience_loss_factor = -0.2
-}
-
-MEL_du_xing_zuo_wu_zhong_zhi_qu_idea = {
+MEL_te_shu_zuo_wu_zhong_zhi_qu_idea = {
 	icon = GFX_modifiers_mel_toxic_crop_farm
 
-	custom_modifier_tooltip = MEL_toxic_crop_gain_tt
-}
-
-MEL_yao_yong_zuo_wu_zhong_zhi_qu_idea = {
-	icon = GFX_modifiers_mel_medicinal_crop_farm
-
-	custom_modifier_tooltip = MEL_medicinal_crop_gain_tt
+	custom_modifier_tooltip = MEL_crop_gain_tt
 }

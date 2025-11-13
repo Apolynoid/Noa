@@ -1,0 +1,19 @@
+SRB_wai_jiao_zheng_ce_yu_shou_yi_idea = {
+	icon = GFX_idea_generic_deal_with_the_devil2
+
+	improve_relations_maintain_cost_factor = -0.5
+	# NMS
+	stability_weekly = SRB_diplomacy_stw
+	war_support_weekly = SRB_diplomacy_wsw
+	weekly_manpower = SRB_diplomacy_mpw
+	# SCA
+	industrial_factory_donations = SRB_diplomacy_cf
+	military_factory_donations = SRB_diplomacy_mf
+	# SEJ
+	experience_gain_army = SRB_diplomacy_xpd
+	army_org_factor = SRB_diplomacy_org
+	org_loss_when_moving = SRB_diplomacy_olm
+	# TKM
+	industrial_capacity_factory = SRB_diplomacy_ic
+	production_factory_max_efficiency_factor = SRB_diplomacy_mef
+}

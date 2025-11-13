@@ -23,4 +23,31 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly_AKI = {
+		effect = {
+			set_variable = {
+				AKI_army_defection_mtth = 0
+			}
+			# mtth = 350 * (1 - surrender_progress) ^ 2 + 10
+			set_temp_variable = {
+				t = 1.0
+			}
+			subtract_from_temp_variable = {
+				t = AKI.surrender_progress
+			}
+			set_variable = {
+				AKI_army_defection_mtth = 350
+			}
+			multiply_variable = {
+				AKI_army_defection_mtth = t
+			}
+			multiply_variable = {
+				AKI_army_defection_mtth = t
+			}
+			add_to_variable = {
+				AKI_army_defection_mtth = 10
+			}
+		}
+	}
 }

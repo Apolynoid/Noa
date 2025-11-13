@@ -39,9 +39,6 @@ set_country_flag = TECH_go_waike
         production_theory = 1
         org_production = 1
         # jianzaojishu130 = 1
-            
-        #专用工业
-        # fangwaijieshengchan130 = 1
 
         #种族
             

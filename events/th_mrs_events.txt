@@ -193,10 +193,6 @@ country_event = {
 		}
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 100
-				tag = MRS
-			}
 		}
 	}
 
@@ -750,6 +746,9 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = MRS_alice_overly_compromise_flag
 		}
+		ai_chance = {
+			base = 0
+		}
 	}
 
 	# 不同意
@@ -757,9 +756,6 @@ country_event = {
 		name = mrs.117.2
 		hidden_effect = {
 			set_country_flag = MRS_alice_refuse_flag
-		}
-		ai_chance = {
-			base = 0
 		}
 	}
 }

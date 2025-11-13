@@ -201,6 +201,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/generic_gekokujyo_military_advisor.png"
 	}	
 
+	spriteType = {
+		name = "GFX_idea_generic_nms_weakness"
+		texturefile = "gfx/interface/ideas/generic_nms_weakness.png"
+	}
+
 	#### SCA Remilia Scarlet 斯卡蕾特帝国
 
 	spriteType = {
@@ -540,6 +545,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_MEL_political_collapse"
 		texturefile = "gfx/interface/ideas/mel_political_collapse.png"
+	}
+
+	#### SRB Toyosatomimi no Miko 神灵庙
+	spriteType = {
+		name = "GFX_idea_SRB_trade_with_SRB"
+		texturefile = "gfx/interface/ideas/srb_trade_with_SRB.png"
 	}
 
 	#### YYK Saigyouji Yuyuko 白玉楼

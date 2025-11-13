@@ -388,6 +388,46 @@ leader_traits = {
 		}
 	}
 
+	#SRB
+	# 日出之处的道士
+	SRB_ri_chu_zhi_chu_de_dao_shi_trait = {
+		random = no
+
+		stability_factor = 0.1
+		political_power_gain = 0.1
+		research_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 日出之处的天子
+	SRB_ri_chu_zhi_chu_de_tian_zi_trait = {
+		random = no
+
+		stability_factor = 0.6
+		political_power_gain = 0.1
+		research_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 天道
+	SRB_tian_dao_trait = {
+		random = no
+
+		war_support_factor = 0.2
+		justify_war_goal_time = -0.5
+		generate_wargoal_tension = -0.5
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	#AKI
 	# 丰收之神
 	AKI_feng_shou_zhi_shen = {
@@ -444,8 +484,8 @@ leader_traits = {
 	}
 
 	#YUK
-	# 今昔花田之主
-	YUK_jin_xi_hua_tian_zhi_zhu = {
+	# 今昔鲜花之主
+	YUK_jin_xi_xian_hua_zhi_zhu = {
 		random = no
 
 		surrender_limit = 0.1

@@ -177,15 +177,6 @@ SBK = {
     recruit_character = SBK_sek
     recruit_character = SBK_sek_leader
 }
-SRB = {
-    recruit_character = SRB_mik
-    recruit_character = SRB_mik_leader
-    recruit_character = SRB_seiga
-    recruit_character = SRB_seiga_leader
-    recruit_character = SRB_toziko
-    recruit_character = SRB_futo
-    recruit_character = SRB_yoshika
-}
 TBA = {
     recruit_character = TBA_mike
     recruit_character = TBA_sannyo

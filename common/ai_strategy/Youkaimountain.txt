@@ -1,0 +1,142 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+dont_alliance_youkai_mountain1 = {
+	# reversed = yes
+
+	enable = {
+		not = { youkai_mountain_country = yes }
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "OTG"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "NMN"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "KAS"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "NTR"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "KAP"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "YAW"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "MRY"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "AKI"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GRS"			
+		value = -100
+	}
+}
+
+dont_alliance_youkai_mountain2 = {
+	reversed = yes
+
+	enable = {
+		not = { youkai_mountain_country = yes }
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "OTG"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "NMN"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "KAS"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "NTR"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "KAP"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "YAW"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "MRY"			
+		value = -100
+	}	
+
+	ai_strategy = {
+		type = alliance 
+		id = "AKI"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GRS"			
+		value = -100
+	}
+}

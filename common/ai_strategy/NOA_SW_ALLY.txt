@@ -34,3 +34,92 @@ SW_dont_leave_defense_faction_till_dissolve_event = {
 		target = leave_faction
 	}
 }
+
+SW_no_allaiance_until_everything_is_done = {
+	allowed = {
+		NOT = {
+			original_tag = AKI
+			original_tag = SGS
+			original_tag = MEL
+			original_tag = ZYD
+			original_tag = YUK
+		}
+	}
+	enable = {
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "AKI"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -175
+	}		
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "YUK"			
+		value = -175
+	}		
+}
+
+SW_no_allaiance_until_everything_is_done = {
+	allowed = {
+		NOT = {
+			original_tag = AKI
+			original_tag = SGS
+			original_tag = MEL
+			original_tag = ZYD
+			original_tag = YUK
+		}
+	}
+	enable = {
+		NOT = {
+			has_global_flag = SW_southwest_war_phase_3_end_flag
+		}
+	}
+	abort_when_not_enabled = yes
+
+	reversed = yes
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "AKI"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -175
+	}		
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -175
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "YUK"			
+		value = -175
+	}		
+}

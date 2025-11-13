@@ -39,10 +39,7 @@
         #工业
         production_theory = 1
         org_production = 1
-            
-        #专用工业
-        fangwaijieshengchan130 = 1
-        fangwaijieshengchan140 = 1
+        basic_machine_tools = 1
 
         #种族
             
@@ -55,7 +52,7 @@
 146.1.1={
     oob = "SRB_146"
 
-    set_country_flag = bunengqie_qinwai
+    set_country_flag = bunengsuiyiqiehuanzhengti
     
     add_ideas = {
         Magician
@@ -63,9 +60,36 @@
         open1
         dove1
         sc_rule
-        srb_daojiaotansuojingshen_o_idea
         manpowerlv1
     }
+
+    add_ideas = {
+        SRB_luo_hou_de_jun_shi_ti_xi_idea
+        SRB_di_xiao_de_xing_zheng_ji_gou_idea
+        SRB_jun_bei_xian_zhi_tiao_yue_idea
+        SRB_cui_ruo_de_jing_ji_idea
+    }
+
+    activate_mission = SRB_wai_jiao_chuang_kou_jie_shu
+
+    set_variable = {
+        SCA.SRB_influence_value = 10
+    }
+    set_variable = {
+        NMS.SRB_influence_value = 10
+    }
+    set_variable = {
+        TKM.SRB_influence_value = 10
+    }
+    set_variable = {
+        SEJ.SRB_influence_value = 10
+    }
+
+    recruit_character = SRB_mik
+    recruit_character = SRB_seiga
+    recruit_character = SRB_toziko
+    recruit_character = SRB_futo
+    recruit_character = SRB_yoshika
 
     set_politics = {
     	ruling_party = guli

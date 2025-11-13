@@ -1,0 +1,18 @@
+# 外交政策
+SRB_wai_jiao_zheng_ce = {
+	icon = generic_foreign_policy
+
+	priority = 96
+
+	allowed = {
+		original_tag = SRB
+	}
+
+	visible = {
+		NOT = {
+			has_country_flag = SRB_diplomacy_end_flag
+		}
+	}
+
+	visible_when_empty = yes
+}

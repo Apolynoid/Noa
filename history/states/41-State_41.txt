@@ -1,0 +1,34 @@
+
+state={
+	id=41
+	name="STATE_41"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			buildings = {
+				infrastructure = 7
+				industrial_complex = 3
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		7536 7539 7543 7549 7551 7553 7561 
+	}
+	manpower=585
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.500
+}

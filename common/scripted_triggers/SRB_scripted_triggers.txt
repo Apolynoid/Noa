@@ -1,0 +1,35 @@
+SRB_is_possible_investor = {
+	OR = {
+		original_tag = SCA
+		original_tag = NMS
+		original_tag = SEJ
+		original_tag = TKM
+	}
+}
+
+SRB_influence_under_50 = {
+	custom_trigger_tooltip = {
+		tooltip = SRB_influence_under_50_tt
+		check_variable = {
+			SRB_influence_value < 50
+		}
+	}
+}
+
+SRB_influence_over_50 = {
+	custom_trigger_tooltip = {
+		tooltip = SRB_influence_over_50_tt
+		check_variable = {
+			SRB_influence_value > 50
+		}
+	}
+}
+
+SRB_influence_over_75 = {
+	custom_trigger_tooltip = {
+		tooltip = SRB_influence_over_75_tt
+		check_variable = {
+			SRB_influence_value > 75
+		}
+	}
+}

@@ -722,7 +722,7 @@ focus_tree = {
         threat > 0.8
         AND = {
           date > 149.1.1
-          threat > 0.5
+          threat > 0.6
         }
         date > 150.1.1
       }
@@ -1777,6 +1777,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_ji_chu_wu_qi_yan_jiu
         bonus = 1
         uses = 1
         category = infantry
@@ -1804,6 +1805,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_ju_neng_he_xin_yan_jiu
         bonus = 1
         uses = 1
         category = artillery_tech
@@ -1831,6 +1833,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_fang_yu_jie_jie_yan_jiu
         bonus = 1
         uses = 1
         category = shield_weapons
@@ -1858,6 +1861,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_shen_mi_xue_yan_jiu
         bonus = 1.5
         uses = 2
         category = secret
@@ -2126,6 +2130,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_jian_zhu_ji_shu_jin_bu
         bonus = 0.8
         uses = 2
         category = build
@@ -2154,33 +2159,33 @@ focus_tree = {
 
     completion_reward = {
     	add_research_slot = 1
-		if = {
-			limit = {
-				134 = {
-					is_fully_controlled_by = ROOT
-					nuclear_facility < 1
-				}
-			}
-			134 = {
-				add_building_construction = {
-					type = nuclear_facility
-					level = 1
-					instant_build = yes
-					province = 771
-				}
-			}
-		}
-		else = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = SCA
-					nuclear_facility < 1
-				}
-				construct_building_in_random_province = {
-					nuclear_facility = 1
-				}
-			}
-		}
+      if = {
+        limit = {
+          134 = {
+            is_fully_controlled_by = ROOT
+            nuclear_facility < 1
+          }
+        }
+        134 = {
+          add_building_construction = {
+            type = nuclear_facility
+            level = 1
+            instant_build = yes
+            province = 771
+          }
+        }
+      }
+      else = {
+        random_owned_controlled_state = {
+          limit = {
+            is_core_of = SCA
+            nuclear_facility < 1
+          }
+          construct_building_in_random_province = {
+            nuclear_facility = 1
+          }
+        }
+      }
     }
 
     ai_will_do = {

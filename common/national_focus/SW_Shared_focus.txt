@@ -39,31 +39,21 @@ shared_focus = {
 		focus = SW_zhang_liang_tu_di
 	}
 
-	available = {
-		if = {
-			limit = {
-				SW_no_undeveloped_land = yes
-			}
-			always = yes
-		} else = {
-			SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
-		}
-	}
-
-	bypass = {
-		SW_no_undeveloped_land = yes
-	}
-
 	completion_reward = {
 		add_war_support = 0.1
-		SW_random_state_remove_unexplored_land = yes
 		if = {
 			limit = {
-				has_dynamic_modifier = {
-					modifier = AKI_tu_di_jian_bing_idea
-				}
+				SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
 			}
-			AKI_decrease_land_annexation_level = yes
+			SW_random_state_remove_unexplored_land = yes
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
+				}
+				AKI_decrease_land_annexation_level = yes
+			}
 		}
 	}
 
@@ -86,42 +76,21 @@ shared_focus = {
 		focus = SW_shi_bing_tu_di_fen_pei_wei_yuan_hui
 	}
 
-	available = {
+	completion_reward = {
 		if = {
 			limit = {
-				OR = {
-					SW_no_undeveloped_land = yes
-					has_country_flag = SW_military_investment_flag
+				SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
+			}
+			SW_random_state_remove_unexplored_land = yes
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = AKI_tu_di_jian_bing_idea
+					}
 				}
-			}
-			always = yes
-		} else = {
-			SW_ROOT_own_and_fully_control_2_undeveloped_explored_land = yes
-			NOT = {
-				has_country_flag = SW_doing_military_investment_flag
+				AKI_decrease_land_annexation_level = yes
 			}
 		}
-	}
-
-	bypass = {
-		OR = {
-			SW_no_undeveloped_land = yes
-			has_country_flag = SW_military_investment_flag
-		}
-	}
-
-	continue_if_invalid = yes
-
-	select_effect = {
-		SW_random_state_remove_unexplored_land = yes
-		SW_random_state_remove_unexplored_land = yes
-		hidden_effect = {
-			set_country_flag = SW_doing_military_investment_flag
-		}
-	}
-
-	completion_reward = {
-		custom_effect_tooltip = SW_develop_2_random_state_tt
 		hidden_effect = {
 			add_to_variable = {
 				SW_agrarian_society_cons = 0.2
@@ -132,18 +101,6 @@ shared_focus = {
 				remove_idea = SW_nong_ye_shei_hui_tt_idea
 				add_idea = SW_nong_ye_shei_hui_tt_1_idea
 			}
-		}
-		hidden_effect = {
-			clr_country_flag = SW_doing_military_investment_flag
-			set_country_flag = SW_military_investment_flag
-		}
-		if = {
-			limit = {
-				has_dynamic_modifier = {
-					modifier = AKI_tu_di_jian_bing_idea
-				}
-			}
-			AKI_decrease_land_annexation_level = yes
 		}
 	}
 
@@ -257,25 +214,15 @@ shared_focus = {
 	prerequisite = {
 		focus = SW_zhang_liang_tu_di
 	}
-
-	available = {
-		if = {
-			limit = {
-				SW_no_undeveloped_land = yes
-			}
-			always = yes
-		} else = {
-			SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
-		}
-	}
-
-	bypass = {
-		SW_no_undeveloped_land = yes
-	}
-
+	
 	completion_reward = {
 		add_political_power = 150
-		SW_random_state_remove_unexplored_land = yes
+		if = {
+			limit = {
+				SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
+			}
+			SW_random_state_remove_unexplored_land = yes
+		}
 	}
 
 	ai_will_do = {
@@ -297,42 +244,13 @@ shared_focus = {
 		focus = SW_gong_gong_tu_di_zeng_yu
 	}
 
-	available = {
+	completion_reward = {
 		if = {
 			limit = {
-				OR = {
-					SW_no_undeveloped_land = yes
-					has_country_flag = SW_education_investment_flag
-				}
+				SW_ROOT_own_and_fully_control_1_undeveloped_explored_land = yes
 			}
-			always = yes
-		} else = {
-			SW_ROOT_own_and_fully_control_2_undeveloped_explored_land = yes
-			NOT = {
-				has_country_flag = SW_doing_education_investment_flag
-			}
+			SW_random_state_remove_unexplored_land = yes
 		}
-	}
-
-	bypass = {
-		OR = {
-			SW_no_undeveloped_land = yes
-			has_country_flag = SW_education_investment_flag
-		}
-	}
-
-	continue_if_invalid = yes
-
-	select_effect = {
-		SW_random_state_remove_unexplored_land = yes
-		SW_random_state_remove_unexplored_land = yes
-		hidden_effect = {
-			set_country_flag = SW_doing_education_investment_flag
-		}
-	}
-
-	completion_reward = {
-		custom_effect_tooltip = SW_develop_2_random_state_tt
 		hidden_effect = {
 			add_to_variable = {
 				SW_agrarian_society_rs = 0.05
@@ -343,10 +261,6 @@ shared_focus = {
 				remove_idea = SW_nong_ye_shei_hui_tt_idea
 				add_idea = SW_nong_ye_shei_hui_tt_4_idea
 			}
-		}
-		hidden_effect = {
-			clr_country_flag = SW_doing_education_investment_flag
-			set_country_flag = SW_education_investment_flag
 		}
 	}
 

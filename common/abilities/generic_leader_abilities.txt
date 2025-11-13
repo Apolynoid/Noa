@@ -63,9 +63,11 @@ ability = {
 		allowed = {
 			is_leading_army_group = no
 			is_border_war = no
-			# OWNER = {
-			# 	NOT = { has_completed_focus = JAP_warrior_spirit }
-			# }
+			OWNER = {
+				NOT = {
+					has_country_flag = decreased_last_stand_cost_flag
+				}
+			}
 		}
 		
 		cost = 0.22

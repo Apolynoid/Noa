@@ -215,7 +215,7 @@ characters={
 		country_leader={
 			ideology=oldgenso_type
 			traits = {
-				YUK_jin_xi_hua_tian_zhi_zhu
+				YUK_jin_xi_xian_hua_zhi_zhu
 			}
 			id=-1
 		}

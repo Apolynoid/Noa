@@ -97,20 +97,6 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "看护编制"
-		location = 4818	
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "看护编制"
-		location = 4818	
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
 	division = {
 		name = "铃兰防卫军"
@@ -119,13 +105,6 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "看护编制"
-		location = 4887	
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
 	division = {
 		name = "铃兰防卫军"
@@ -141,13 +120,6 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "看护编制"
-		location = 4895	
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
 	division = {
 		name = "铃兰防卫军"
@@ -160,50 +132,6 @@ units = {
 		name = "警卫编制"
 		location = 4864
 		division_template = "警卫编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "看护编制"
-		location = 4864
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "看护编制"
-		location = 4838
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "看护编制"
-		location = 4719
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "看护编制"
-		location = 4719
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "看护编制"
-		location = 4719
-		division_template = "扫荡编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "看护编制"
-		location = 4719
-		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}

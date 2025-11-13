@@ -20,6 +20,14 @@ on_actions = {
 					    level = 50
 					}
 					remove_building = {
+					    type = rail_way
+					    level = 50
+					}
+					remove_building = {
+					    type = supply_node
+					    level = 50
+					}
+					remove_building = {
 					    type = arms_factory
 					    level = 50
 					}
@@ -70,6 +78,14 @@ on_actions = {
 					every_neighbor_state = {
 						damage_building = {
 						    type = infrastructure
+						    damage = 50
+						}
+						damage_building = {
+						    type = rail_way
+						    damage = 50
+						}
+						damage_building = {
+						    type = supply_node
 						    damage = 50
 						}
 						damage_building = {

@@ -6,6 +6,7 @@
         linglizhufu = 1
         linglicunchu = 1
         spell_card2 = 1
+        yunshudui140 = 1
         #辅助
         zhiyuanzhuangbei = 1
         zhihuixiaodui146 = 1
@@ -55,6 +56,7 @@
     add_ideas = {
         AKI_ren_yu_shen_de_ge_he_idea
         AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_idea
+        SW_xi_nan_hun_zhan_idea
     }
     set_variable = {
         AKI_land_annexation_level = 6
@@ -71,9 +73,9 @@
         elections_allowed = no
     }
     set_popularities = {
-        qinwai = 33
-        guli = 9
-        neworder = 53
+        qinwai = 13
+        guli = 49
+        neworder = 33
         oldorder = 0
         fandong = 5
     }

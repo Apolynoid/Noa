@@ -19,7 +19,7 @@ idea_categories = {
 
 	country_status = {
 		slot = races
-		slot = sub_races
+		slot = rb_sub_races
 		slot = scale
 		
 		ledger = all

@@ -254,7 +254,7 @@ ideas = {
 				army_morale_factor = 0.05
         production_speed_bunker_factor = 0.1
         supply_node_range = 0.1
-        supply_factor = 0.1
+        supply_consumption_factor = -0.1
       }
     }
 
@@ -266,7 +266,7 @@ ideas = {
 				army_morale_factor = 0.05
         production_speed_bunker_factor = 0.1
         supply_node_range = 0.1
-        supply_factor = 0.1
+        supply_consumption_factor = -0.1
         conversion_cost_civ_to_mil_factor = -0.4
         conversion_cost_mil_to_civ_factor = -0.4
         production_factory_efficiency_gain_factor = 0.05

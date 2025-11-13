@@ -335,8 +335,8 @@ diff_very_easy_ai = { #changed
 	ai_join_ally_desire_factor = 100
 	improve_relations_maintain_cost_factor = -1
 
-	planning_speed = 0.1
-	max_planning = 0.1
+	planning_speed = 0.25
+	max_planning = 0.25
 }
 
 diff_easy_ai = { #changed
@@ -347,8 +347,8 @@ diff_easy_ai = { #changed
 	ai_join_ally_desire_factor = 100
 	improve_relations_maintain_cost_factor = -1
 
-	planning_speed = 0.2
-	max_planning = 0.2
+	planning_speed = 0.25
+	max_planning = 0.25
 
 	political_power_factor = 0.1
 }

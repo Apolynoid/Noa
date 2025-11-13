@@ -5,6 +5,7 @@ main_force_TEG = {
 	}
 
 	role = main_force
+	front_role_override = offence
 	
 	upgrade_prio = {
 		factor = 10
