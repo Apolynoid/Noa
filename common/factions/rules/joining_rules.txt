@@ -1,0 +1,236 @@
+##########################################################################################
+
+### ###  ###  ##  #    ##   ##  #   #     ###   ##   ## ### ###      ###  #  # #   ###  ## 
+ #  #  # #   #  # #   #  # #     # #      #  # #  # #   #   #  #     #  # #  # #   #   #   
+ #  #  # ##  #  # #   #  # # ##   #       ###  ####  #  ##  #  #     ###  #  # #   ##   #  
+ #  #  # #   #  # #   #  # #  #   #       #  # #  #   # #   #  #     #  # #  # #   #     # 
+### ###  ###  ##  ###  ##   ##    #       ###  #  # ##  ### ###      #  #  ##  ### ### ## 
+
+########################################################################################## 
+
+joining_rule_non_radicalist = {
+	type = joining_rules
+	visible = {
+		NOT = { has_government = fandong }
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 1
+			NOT = { has_government = fandong }
+		}
+		modifier = {
+			add = 1
+			has_government = neworder
+		}
+	}
+	available = {
+		NOT = { has_government = fandong }
+	}
+	trigger = {
+		NOT = {
+			has_government = fandong 
+		}
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_changemaker = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	available = {
+		is_changemaker = yes
+	}
+	trigger = {
+		is_changemaker = yes
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_non_changemaker = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	available = {
+		is_changemaker = no
+	}
+	trigger = {
+		is_changemaker = no
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_same_ideology = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	trigger = {
+		has_government = FROM
+	}
+}
+
+joining_rule_radicalist_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	available = {
+		has_government = fandong
+	}
+	trigger = {
+		has_government = fandong
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_support_percentage = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	visible = {
+
+	}
+	trigger = {
+		compare_ideology_with_faction = {
+			value > 0.3
+			leader = FROM
+		}
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+
+joining_rule_puppets_only = {
+	type = joining_rules
+	can_remove = {
+		faction_manifest_fulfillment > 0.95
+	}
+	ai_will_do = {
+		base = 0
+	}
+	trigger = {
+		ROOT = { is_subject_of = FROM }
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+	modifier= {
+		subjects_autonomy_gain = -0.05
+	}
+}
+
+#######################################################
+
+#   #  ##  ###      ###  ### #    ##  ### ###  ##  #  #     
+#   # #  # #  #     #  # #   #   #  #  #   #  #  # ## #     
+# # # #### ###      ###  ##  #   ####  #   #  #  # # ##     
+# # # #  # #  #     #  # #   #   #  #  #   #  #  # #  #     
+ # #  #  # #  #     #  # ### ### #  #  #  ###  ##  #  #
+
+ ######################################################     
+
+
+joining_rule_has_no_war = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 3
+			has_government = guli
+			has_war = no 
+		}
+	}
+	trigger = {
+		has_war = no
+	}
+	modifier = {
+		improve_relations_maintain_cost_factor = -0.1
+	}
+}
+
+joining_rule_has_no_offensive_war = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2
+			OR = {
+				has_government = oldgenso
+				has_government = guli
+			}
+		}
+	}
+	trigger = {
+		has_offensive_war = no
+	}
+	modifier = {
+		defensive_war_stability_factor = 0.15
+	}
+}
+
+########################################################
+
+ ##  ###  ##   ##  ###   ##  ###  #  # ###  ##   ##  #   
+#    #   #  # #    #  # #  # #  # #  #  #  #  # #  # #   
+# ## ##  #  # # ## ###  #### ###  ####  #  #    #### #   
+#  # #   #  # #  # #  # #  # #    #  #  #  #  # #  # #   
+ ##  ###  ##   ##  #  # #  # #    #  # ###  ##  #  # ###
+
+######################################################## 
+
+joining_rule_neighbors_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 1
+			has_government = guli
+			has_war = no 
+		}
+	}
+	
+	trigger = {
+		any_neighbor_country = {
+			is_in_faction_with = FROM
+		}
+	}
+	modifier = {
+		enemy_justify_war_goal_time = 0.2
+	}
+}
+
+joining_rule_same_continent_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		faction_manifest_fulfillment > 0.75
+	}
+	trigger = {
+		ROOT = { is_on_same_continent_as = FROM }
+	}
+	modifier = {
+		enemy_justify_war_goal_time = 0.1
+	}
+}

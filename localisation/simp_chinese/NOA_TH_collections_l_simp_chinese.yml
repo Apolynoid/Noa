@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ COLLECTION_faction_allies_core_and_claimed_states:0 "阵营成员的核心与宣称地区"
+ COLLECTION_faction_allies_controlled_core_and_claimed_states:0 "阵营成员所控制的核心与宣称地区"
+
+ COLLECTION_CASUALTIES_INFLICTED_BY_FACTION_MEMBERS_2k: "防御战争中对敌人造成超2000伤亡的阵营成员数量"
+ COLLECTION_FACTION_BORDER_STATES_LV2_INFRASTRUCTURE: "阵营控制的未达到2级基础设施水平的接壤地区"

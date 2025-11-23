@@ -1,0 +1,32 @@
+faction_peace_take_claimed_focus = {
+	type = peace_conference_rules
+	ai_will_do = {
+		base = 1
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_take_claimed_states
+	}
+	modifier = {
+		custom_modifier_tooltip = NOA_faction_rule_modifier_encourage_take_claimed_states_tt
+	}
+}
+
+faction_peace_rule_conquest_focus = {
+	type = peace_conference_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2
+			OR = {
+				has_government = neworder
+				has_government = oldorder
+			}
+		}
+	}
+	peace_action_modifiers = {
+		faction_rule_modifier_encourage_take_states
+	}
+	modifier = {
+		custom_modifier_tooltip = NOA_faction_rule_modifier_encourage_take_states_tt
+	}
+}

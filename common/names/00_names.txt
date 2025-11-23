@@ -4,6 +4,133 @@
 # Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
 # Picking up a gender is random, and is influenced by the amount of names scripted.
 
+# Fairies
+SCA = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+CIR = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+LIL = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+SGS = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+YUK = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+CFA = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+CLO = {
+	male = {
+		names = { "Cloudia" "Gale" "Ray" "Lumen" "Rime" "Amber" "Jade" "Ember" "Azure" "Mira" 
+				 "Nova" "Sola" }
+		surnames = { }
+		callsigns = { }
+	}
+	#female = {
+	#	names = { "Juliette" "Anna" }
+	#	surnames = { }
+	#	callsigns = { "Queen Of The Sky" "The Red Princess" }
+	#}
+	surnames = { "Glimmer" "Velvet" "Ruby" "Topaz" "Mica" "Pyrite" "Pearl" "Opal" "Indigo" "Wisp"
+				 "Garnet" "Beryl" "Onyx" }
+	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
+				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
 default = {
 	male = {
 		names = { "Leader" }

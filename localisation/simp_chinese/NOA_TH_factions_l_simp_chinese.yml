@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ territorial_integrity_goal_name:0 "领土完整"
+ territorial_integrity_goal_desc:0 "保卫成员国的领土完整是我们的首要目标。"
+ NOA_industrial_research_goal_name: "研究$jianzaojishu151$"
+ NOA_a_military_base_goal_desc: "保卫自己的安全需要武器。为了大量生产武器，我们需要强大的军事工业。"
+ stall_the_radicalist_threat_in_netherworld_goal_name: "遏制冥界激进主义威胁"
+ stall_the_radicalist_threat_in_netherworld_goal_desc: "冥界的激进主义叛军严重威胁了幻想乡的和平与稳定，这一问题必须得到彻底解决。"
+ spread_radicalism_in_netherworld_goal_name:0 "在冥界传播激进主义"
+ spread_radicalism_in_netherworld_goal_desc:0 "冥界革命阵线正在为推翻冥界的旧秩序而战，我们必须帮助她们赢得内战的胜利。"
+ war_on_authority_goal_name:0 "对权威宣战"
+ war_on_authority_goal_desc:0 "旧有的权威只是新幻想乡的累赘，是时候让她们退出舞台了。"
+ war_on_changemaker_goal_name:0 "对变革者宣战"
+ war_on_changemaker_goal_desc:0 "这些所谓的变革者只会损害幻想乡的和谐，她们必须被消灭。"
+
+ AT_LEAST_100_FACTORIES: "至少控制总计§Y100$arms_factory$和$industrial_complex$§!的§Y所有阵营成员§!"
+ ALL_FACTION_MEMBERS_INFLICTED_2K_CASUALTIES: "对敌方造成超过2000人员伤亡的§Y所有阵营成员§!："
+ AT_LEAST_30_CIVS: "拥有至少§Y30$industrial_complex$§!的§Y所有阵营成员§!"
+ AT_LEAST_30_MILS: "拥有至少§Y30$arms_factory$§!的§Y所有阵营成员§!"
+
+ NOA_faction_rule_modifier_encourage_take_states_tt: "§Y获得地区§!和谈行动的花费降低§G10%§!"
+ NOA_faction_rule_modifier_encourage_take_claimed_states_tt: "对宣传地区使用§Y获得地区§!和谈行动的花费降低§G20%§!"
+ 

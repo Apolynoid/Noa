@@ -368,6 +368,9 @@ YYK_suppressing_resistance_flag:0 "正在某一地区执行镇压抵抗任务"
 
 YYK_is_hakugyokurou_states_flag:0 "是白玉楼周边地区"
 
+YYK_YKO_civil_war_victory_flag:0 "西行寺家赢得冥界内战胜利"
+YYK_KNA_civil_war_victory_flag:0 "革命阵线赢得冥界内战胜利"
+
 YYK_ming_jie_nei_zhan_tech:0 "冥界内战"
 YYK_shu_si_fang_yu_tech:0 "殊死防御"
 
