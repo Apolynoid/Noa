@@ -1,6 +1,14 @@
 ﻿l_simp_chinese:
  territorial_integrity_goal_name:0 "领土完整"
  territorial_integrity_goal_desc:0 "保卫成员国的领土完整是我们的首要目标。"
+ spread_of_radicalism_goal_name:0 "传播激进主义"
+ spread_of_radicalism_goal_desc:0 "旧秩序已经笼罩在幻想乡上空太久了，我们必须尽一切努力让幻想乡摆脱这种束缚，包括采用武力。"
+ unity_of_radicalism_goal_name:0 "激进派团结"
+ unity_of_radicalism_goal_desc:0 "为了反对现有大妖怪秩序，我们必须加强同盟国家间的合作，同时增加我们的盟友数量。"
+ containment_of_upheaval_goal_name:0 "遏制动乱"
+ containment_of_upheaval_goal_desc:0 "这些所谓的变革者只是在幻想乡制造更多的混乱，她们不切实际的幻想必须被终结。"
+ arsenal_of_democracy_goal_name:0 "民主兵工厂"
+ arsenal_of_democracy_goal_desc:0 "民主国家必须用足够的武器来武装自己，而我们必须准备好为她们提供这些武器。"
  NOA_industrial_research_goal_name: "研究$jianzaojishu151$"
  NOA_a_military_base_goal_desc: "保卫自己的安全需要武器。为了大量生产武器，我们需要强大的军事工业。"
  stall_the_radicalist_threat_in_netherworld_goal_name: "遏制冥界激进主义威胁"
@@ -11,12 +19,32 @@
  war_on_authority_goal_desc:0 "旧有的权威只是新幻想乡的累赘，是时候让她们退出舞台了。"
  war_on_changemaker_goal_name:0 "对变革者宣战"
  war_on_changemaker_goal_desc:0 "这些所谓的变革者只会损害幻想乡的和谐，她们必须被消灭。"
+ army_expansion_goal_name: "扩充军队"
+ army_expansion_goal_desc: "脚踏实地的军队才是最重要的。我们需要一支强大的军队。唯有如此，才能真正确保生存。"
+ defeat_of_changemaker_goal_name: "击败变革者"
+ defeat_of_changemaker_goal_desc: "要击败全世界的变革分子，我们必须优先消除我们这片区域的变革者。"
+ defeat_of_authority_goal_name: "消灭旧权威"
+ defeat_of_authority_goal_desc: "我们的首要任务是彻底对大陆境内所有旧权威的威胁节点实施彻底肃清。"
 
  AT_LEAST_100_FACTORIES: "至少控制总计§Y100$arms_factory$和$industrial_complex$§!的§Y所有阵营成员§!"
  ALL_FACTION_MEMBERS_INFLICTED_2K_CASUALTIES: "对敌方造成超过2000人员伤亡的§Y所有阵营成员§!："
  AT_LEAST_30_CIVS: "拥有至少§Y30$industrial_complex$§!的§Y所有阵营成员§!"
  AT_LEAST_30_MILS: "拥有至少§Y30$arms_factory$§!的§Y所有阵营成员§!"
+ HAS_DEPLOYED_AT_LEAST_5K_MANPOWER: "至少部署了5000人力的§Y所有阵营成员§!"
 
  NOA_faction_rule_modifier_encourage_take_states_tt: "§Y获得地区§!和谈行动的花费降低§G10%§!"
  NOA_faction_rule_modifier_encourage_take_claimed_states_tt: "对宣传地区使用§Y获得地区§!和谈行动的花费降低§G20%§!"
+
+ joining_rule_radicalist_only: "仅限激进主义国家"
+ joining_rule_changemaker:0 "激进或改良国家"
+ joining_rule_non_radicalist:0 "仅非激进主义"
+ joining_rule_non_changemaker:0 "非激进非改良国家"
+ dismissal_rule_ideology_not_changemaker:0 "非激进非改良国家"
+ dismissal_rule_ideology_not_radicalism:0 "非激进主义国家"
+ dismissal_rule_ideology_radicalist:0 "激进主义国家"
+ dismissal_rule_ideology_changemaker:0 "激进或改良国家"
+
+ faction_peace_take_claimed_focus_NOA:0 "$faction_peace_take_claimed_focus$"
+ change_leader_rule_never_NOA:0 "$change_leader_rule_never$"
+
  

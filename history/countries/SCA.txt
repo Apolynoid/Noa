@@ -62,7 +62,11 @@
     # give_guarantee = GRS
     set_major = yes
     drop_cosmetic_tag = yes
-    create_faction = feihongtixi
+    create_faction = SCA_scarlet_pact
+    create_faction_from_template = {
+        template = faction_template_scarlet_pact
+        name = SCA_scarlet_pact
+    }
     add_to_faction = WAK
     add_to_faction = PRI	
     

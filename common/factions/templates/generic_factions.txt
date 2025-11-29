@@ -26,9 +26,9 @@ faction_template_generic = {
 	default_rules = {
 		joining_rule_neighbors_only
 		joining_rule_has_no_offensive_war
-		faction_peace_take_claimed_focus
+		faction_peace_take_claimed_focus_NOA
 		dismissal_rule_offensive_war
-		change_leader_rule_never
+		change_leader_rule_never_NOA
 	}
 	
 }
@@ -36,7 +36,7 @@ faction_template_generic = {
 # World Revolution
 faction_template_spread_revolution = {
 	name = spread_revolution_faction
-	manifest = faction_manifest_spread_of_communism
+	manifest = faction_manifest_spread_of_radicalism
 	can_leader_join_other_factions = yes
 	icon = GFX_faction_logo_generic_9
 	visible = {
@@ -55,8 +55,7 @@ faction_template_spread_revolution = {
 		faction_goal_a_large_faction
 
 		# Long terms
-		faction_goal_defeat_of_anti_communists
-
+		faction_goal_defeat_of_authority
 
 	}
 
@@ -64,7 +63,7 @@ faction_template_spread_revolution = {
 		faction_peace_rule_conquest_focus
 		joining_rule_radicalist_only
 		dismissal_rule_ideology_not_changemaker
-		change_leader_rule_never
+		change_leader_rule_never_NOA
 		war_declaration_threat_25
 	}
 	

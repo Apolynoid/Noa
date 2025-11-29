@@ -113,15 +113,4 @@ on_actions = {
 			}
 		}
 	}
-
-	on_weekly_SEJ = {
-		effect = {
-			if = {
-				limit = {
-					has_completed_focus = SEJ_quan_huan_xiang_xiang_xia_ke_shang
-				}
-				SEJ_calc_buff = yes
-			}
-		}
-	}
 }

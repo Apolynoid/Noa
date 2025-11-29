@@ -2131,7 +2131,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			create_faction = SRB_south_gensokyo_treaty_of_defense
+			create_faction_from_template = {
+				template = faction_template_generic
+				name = SRB_south_gensokyo_treaty_of_defense
+			}
 		}
 	
 		ai_will_do = {

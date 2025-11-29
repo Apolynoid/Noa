@@ -26,73 +26,20 @@ faction_manifest_territorial_integrity = {
 	}
 }
 
-# Defense of Democracy
-faction_manifest_defense_of_democracy_allies = {
-	name = defense_of_democracy_goal_name
-	description = defense_of_democracy_goal_desc
-	is_manifest = yes
-	ratio_progress = {
-		total_amount = 50
-		completed_amount_collection = collection:world_uncapitulated_democratic_countries_and_dominions
-			
-		scale = {
-			trade_opinion_factor = 0.20
-			guarantee_cost = -0.50
-		}
-		
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = { 
-					democratic_drift_from_guarantees = 0.08
-					can_guarantee_other_ideologies = 1
-				}
-			}
-		}
-	}
-}
-
-# Containment of Communism
-faction_manifest_containment_of_communism = {
-	name = containment_of_communism_goal_name
-	description = containment_of_communism_goal_desc
-	is_manifest = yes
-	ratio_progress = {
-		total_amount_collection = game:all_states
-		completed_amount_collection = collection:world_non_communist_states
-		
-		scale = {
-			communism_drift = -0.08
-		}
-		
-		progress_sections = {
-			manifest_fulfilled = {
-				min = @manifest_fulfilled_value
-	
-				modifier = { 
-					required_garrison_factor = -0.15
-					generate_wargoal_tension = -0.15
-				}
-			}
-		}
-	}
-}
-
-# Spread of Communism 
-faction_manifest_spread_of_communism = {
-	name = spread_of_communism_goal_name
-	description = spread_of_communism_goal_desc
+# Spread of Radicalism 
+faction_manifest_spread_of_radicalism = {
+	name = spread_of_radicalism_goal_name
+	description = spread_of_radicalism_goal_desc
 	is_manifest = yes
 	ratio_progress = {
 		total_amount_collection = game:all_countries
-		completed_amount_collection = collection:world_communist_countries
+		completed_amount_collection = collection:world_radicalist_countries
 		range = { 
 			max = 1
 		}
 		
 		scale = {
-			communism_drift = 0.1
+			war_support_factor = 0.1
 		}
 		
 		progress_sections = {

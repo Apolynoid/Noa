@@ -1,4 +1,4 @@
-change_leader_rule_never = {
+change_leader_rule_never_NOA = {
 	type = change_leader_rules
 	trigger = {
 		always = no

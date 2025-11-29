@@ -374,7 +374,7 @@ faction_goal_spy_master = {
 				}
 			}
 			add_faction_initiative = 1
-			gain_random_agency_upgrade = yes
+			NOA_gain_random_agency_upgrade = yes
 		}
 		every_faction_member = { # Fallback in case someone completed everything
 			visible_when_empty = yes

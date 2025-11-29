@@ -180,3 +180,5 @@
  KNA_republic_fandong:0 "冥界共和国"
  KNA_republic_fandong_ADJ:0 "冥界共和国"
  KNA_republic_fandong_DEF:0 "冥界共和国"
+
+ FACTION_RANKING: "阵营排名：$VAL|H$"

@@ -503,7 +503,10 @@ country_event = {
 
 	option = {
 		name = sej.118.1
-		create_faction = CIR_gensokyo_revolutionary_movement
+		create_faction_from_template = {
+			template = faction_template_spread_revolution
+			name = CIR_gensokyo_revolutionary_movement
+		}
 	}
 }
 
@@ -554,7 +557,10 @@ country_event = {
 			limit = {
 				is_in_faction = no
 			}
-			create_faction = YKR_gensokyo_security_treaty_organisation
+			create_faction_from_template = {
+				template = faction_template_generic
+				name = YKR_gensokyo_security_treaty_organisation
+			}
 		}
 		faction_leader = {
 			add_to_faction = SEJ

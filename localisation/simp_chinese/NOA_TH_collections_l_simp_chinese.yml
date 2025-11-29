@@ -1,6 +1,12 @@
 ﻿l_simp_chinese:
+ COLLECTION_WORLD_RADICALIST_COUNTRIES: "所有激进主义国家" 
+ COLLECTION_NON_CHANGEMAKER_STATES: "非激进主义或改良主义国家控制的地区"
+
  COLLECTION_faction_allies_core_and_claimed_states:0 "阵营成员的核心与宣称地区"
  COLLECTION_faction_allies_controlled_core_and_claimed_states:0 "阵营成员所控制的核心与宣称地区"
+ COLLECTION_faction_owned_controlled_states_with_3_or_more_mils:0 "阵营拥有并控制的有3座以上$arms_factory$的地区"
 
  COLLECTION_CASUALTIES_INFLICTED_BY_FACTION_MEMBERS_2k: "防御战争中对敌人造成超2000伤亡的阵营成员数量"
  COLLECTION_FACTION_BORDER_STATES_LV2_INFRASTRUCTURE: "阵营控制的未达到2级基础设施水平的接壤地区"
+ COLLECTION_STATES_MY_CONTINENT_CONTROLLED_AUTHORITY: "同一大洲由非§Y激进主义§!或§Y改良主义§!国家控制的地区"
+ COLLECTION_AMOUNT_OF_CHANGEMAKER_CONTROLLED_STATES_SAME_CONTINENT: "同一大洲由§Y激进主义§!或§Y改良主义§!国家控制的地区"

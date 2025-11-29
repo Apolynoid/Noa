@@ -1,4 +1,4 @@
-faction_peace_take_claimed_focus = {
+faction_peace_take_claimed_focus_NOA = {
 	type = peace_conference_rules
 	ai_will_do = {
 		base = 1

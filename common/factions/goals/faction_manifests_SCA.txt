@@ -1,0 +1,30 @@
+@manifest_fulfilled_value = 0.75
+@manifest_fulfilled_value_high = 0.9
+
+# Containment of Communism
+faction_manifest_containment_of_upheaval = {
+	name = containment_of_upheaval_goal_name
+	description = containment_of_upheaval_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = game:all_states
+		completed_amount_collection = collection:world_non_changemaker_states
+		
+		scale = {
+			fandong_drift = -0.08
+			qinwai_drift = -0.08
+			stability_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = { 
+					required_garrison_factor = -0.15
+					generate_wargoal_tension = -0.15
+				}
+			}
+		}
+	}
+}

@@ -237,6 +237,7 @@ OTG_enlarge_army_tt:0 "在首都生成若干支§Y扩编师§!"
  TEG_tiangouluzhanmiji_tech:0 "天狗陆战秘籍"
  ###faction
  TEG_faction1:0 "幻想乡民主同盟"
+ TEG_gensokyo_democratic_alliance:0 "幻想乡民主同盟"
  TEG_faction2:0 "新幻想乡同盟"
 
  #TEG_decision

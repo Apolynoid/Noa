@@ -1,168 +1,6 @@
 #category = short_term medium_term or long_term
 # ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
 
-
-######################################################################
-
-###  ##   ##  ### ###  ##  #  #      ## ###  ###  ##  ### ### ###  ##  
-#   #  # #  #  #   #  #  # ## #     #   #  # #   #  #  #  #    #  #  # 
-##  #### #     #   #  #  # # ##      #  ###  ##  #     #  ##   #  #    
-#   #  # #  #  #   #  #  # #  #       # #    #   #  #  #  #    #  #  # 
-#   #  #  ##   #  ###  ##  #  #     ##  #    ###  ##  ### #   ###  ##  
-
-######################################################################
-
-faction_goal_war_on_communism_in_asia = {
-	name = war_on_communism_in_asia_goal_name
-	description = war_on_communism_in_asia_goal_desc
-	category = long_term
-	group = FOCUS_FILTER_POLITICAL_CHARACTER
-	allowed = {
-		
-	}
-	visible = {
-		FROM = {
-			original_tag = JAP
-			has_completed_focus = JAP_the_great_spiritual_evil
-		}
-	}
-	completed = {
-		collection_size = {
-			input = {
-				input = collection:communist_countries_asia
-				operators = {
-					limit = {
-						exists = yes 
-						has_capitulated = no 
-						NOT = { has_war_with = ROOT }
-					}
-				}
-				name = COLLECTION_WAR_WITH_COMMUNIST_COUNTRIES_ASIA
-			}
-			value < 1
-		}
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = THE_FACTION_LEADER
-		add_faction_initiative = 1
-		every_collection_element = {
-			input = {
-				input = game:scope
-				operators =  { 
-					faction_members 
-				}
-				
-				name = ALL_FACTION_MEMBERS
-			}
-			custom_effect_tooltip = ALL_FACTION_MEMBERS
-			add_war_support = 0.05
-		}
-	}
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 100 # Prio when taken the focus
-			has_completed_focus = JAP_strike_down_the_enemy_of_the_people
-		}
-	}
-}
-
-
-#  #  ##  ##  
-#  # #   #  # 
-#  #  #  #### 
-#  #   # #  # 
- ##  ##  #  # 
-
-
-faction_goal_contain_japanese_expansion_asia = {
-	name = contain_japanese_expansion_asia_goal_name
-	description = contain_japanese_expansion_asia_goal_desc
-	category = long_term
-	group = FOCUS_FILTER_ANNEXATION
-	allowed = {
-		
-	}
-	visible = {
-		FROM = {
-			original_tag = USA
-			has_country_flag = USA_unlock_contain_japanese_goal
-		}
-		date > 1940.1.1
-		collection_size = {
-			input = {
-				input = collection:country_and_all_subjects_controlled_non_core_states
-				name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-			}
-			value > 29
-		}
-	}
-	completed = {
-		JAP = {
-			IF = {
-				limit = {
-					is_in_faction = no
-				}
-				collection_size = {
-					input = {
-						input = collection:country_and_all_subjects_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-			ELSE = {
-				collection_size = {
-					input = {
-						input = collection:faction_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-		}		
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		every_collection_element = {
-			input = {
-				input = game:scope
-				operators =  { 
-					faction_members 
-					limit = {
-						faction_influence_ratio > 0.3
-					}
-				}
-				
-				name = INFLUENCE_ABOVE_30_PERCENT
-			}
-			custom_effect_tooltip = INFLUENCE_ABOVE_30_PERCENT
-			add_faction_initiative = 1
-		}
-	}
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 1 # Start considering it when Japan is growing a lot
-			collection_size = {
-				input = {
-					input = collection:country_and_all_subjects_controlled_non_core_states
-					name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-				}
-				value > 49
-			}
-		}
-		modifier = {
-			add = 10 # Really do it when at war
-			any_enemy_country = {
-				original_tag = JAP
-			}
-		}
-	}
-}
-
 ##########################################################
 
  ##  ### #  # ### ###  ###  ##       ##   ##   ##  #    ## 
@@ -421,9 +259,9 @@ faction_goal_industrial_domination = {
 ### Ideology based
 
 # Defeat of Communism 
-faction_goal_defeat_of_communism = {
-	name = defeat_of_communism_goal_name
-	description = defeat_of_communism_goal_desc
+faction_goal_defeat_of_changemaker = {
+	name = defeat_of_changemaker_goal_name
+	description = defeat_of_changemaker_goal_desc
 	group = FOCUS_FILTER_CONSOLIDATION
 	category = long_term
 	visible = {
@@ -433,7 +271,7 @@ faction_goal_defeat_of_communism = {
 				operators = {
 					faction_members
 					limit = {
-						has_government = communism
+						is_changemaker = yes
 					}
 				}
 				name = FACTION
@@ -448,8 +286,8 @@ faction_goal_defeat_of_communism = {
 	completed = {
 		collection_size = {
 			input = {
-				input = collection:communist_controlled_states_my_continent
-				name = COLLECTION_AMOUNT_OF_COMMUNIST_CONTROLLED_STATES_SAME_CONTINENT
+				input = collection:changemaker_controlled_states_my_continent
+				name = COLLECTION_AMOUNT_OF_CHANGEMAKER_CONTROLLED_STATES_SAME_CONTINENT
 			}
 			value < 1
 		}
@@ -464,8 +302,12 @@ faction_goal_defeat_of_communism = {
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
 			add_popularity = {
-				ideology = communism
-				popularity = -0.15
+				ideology = fandong
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = -0.1
 			}
 			add_political_power = 100
 		}
@@ -473,9 +315,9 @@ faction_goal_defeat_of_communism = {
 }
 
 # Defeat of Anti-communists
-faction_goal_defeat_of_anti_communists = {
-	name = defeat_of_anti_communists_goal_name
-	description = defeat_of_anti_communists_goal_desc
+faction_goal_defeat_of_authority = {
+	name = defeat_of_authority_goal_name
+	description = defeat_of_authority_goal_desc
 	group = FOCUS_FILTER_CONSOLIDATION
 	category = long_term
 	visible = {
@@ -485,10 +327,7 @@ faction_goal_defeat_of_anti_communists = {
 				operators = {
 					faction_members
 					limit = {
-						OR = {
-							has_government = fascism
-							has_government = democratic
-						}
+						is_changemaker = no
 					}
 				}
 				name = FACTION
@@ -502,8 +341,8 @@ faction_goal_defeat_of_anti_communists = {
 	completed = {
 		collection_size = {
 			input = {
-				input = collection:anti_communist_controlled_states_my_continent
-				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_FASCIST
+				input = collection:authority_controlled_states_my_continent
+				name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_AUTHORITY
 			}
 			value < 1
 		}
@@ -517,10 +356,7 @@ faction_goal_defeat_of_anti_communists = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = ALL_FACTION_MEMBERS
 		every_faction_member = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.2
-			}
+			add_war_support = 0.1
 			add_political_power = 100
 		}
 	}
@@ -529,16 +365,16 @@ faction_goal_defeat_of_anti_communists = {
 		modifier = { 
 			add = 1 # If war with communists you probably hate them
 			any_enemy_country = {
-				has_government = communism
+				has_government = fandong
 			}
 		}
 	}
 }
 
 # The red Tide
-faction_goal_the_red_tide = {
-	name = the_red_tide_goal_name
-	description = the_red_tide_goal_desc
+faction_goal_army_expansion = {
+	name = army_expansion_goal_name
+	description = army_expansion_goal_desc
 	category = long_term
 	group = FOCUS_FILTER_ARMY_XP
 	allowed = {
@@ -547,7 +383,7 @@ faction_goal_the_red_tide = {
 	visible = {
 		FROM = {
 			is_major = yes
-			has_government = communism
+			has_government = fandong
 		}
 	}
 	completed = {
@@ -558,23 +394,25 @@ faction_goal_the_red_tide = {
 				name = FACTION_NAME
 			}
 			manpower = yes
-			size > 10000000
+			size > 20000
 		}
 	}
 	complete_effect = {
 		add_faction_power_projection = 250
 		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_5M_MANPOWER
+		custom_effect_tooltip = HAS_DEPLOYED_AT_LEAST_5K_MANPOWER
 		every_faction_member = {
 			limit = {	
-				check_variable = { deployed_army_manpower_k	> 5000 }		
+				check_variable = { deployed_army_manpower_k	> 5 }		
 			}
 			hidden_effect = {
+				add_faction_initiative = 1
 				add_faction_influence_ratio = 0.05
 				army_experience = 50
 			} 
 		}
 		effect_tooltip = {
+			add_faction_initiative = 1
 			add_faction_influence_ratio = 0.05
 			army_experience = 50 
 		}	

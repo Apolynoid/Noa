@@ -821,7 +821,10 @@ focus_tree = {
   
 		completion_reward = {
 			add_stability = 0.1
-			create_faction = TKM_south_misty_lake_revolution_alliance
+			create_faction_from_template = {
+				template = faction_template_spread_revolution
+				name = TKM_south_misty_lake_revolution_alliance
+			}
 			hidden_effect = {
 				news_event = {
 					id = tkm.126

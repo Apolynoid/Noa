@@ -260,9 +260,6 @@ SEJ_nong_ye_ji_ti_hua_a_idea:0 "农业集体化"
 SEJ_nong_ye_ji_ti_hua_idea:0 "农业集体化"
 SEJ_ji_chu_jiao_yu_idea:0 "基础教育"
 
-SEJ_gekokujyo_movement_buff_leader_idea:0 "下克上革命运动-阵营领袖"
-SEJ_gekokujyo_movement_buff_member_idea:0 "下克上革命运动-成员国"
-
 #decision
 SEJ_chu_li_fan_dui_pai:0 "处理反对派"
 SEJ_chu_li_fan_dui_pai_desc:0 "虽然我们在政治斗争中取得了胜利，但是与我们意见相左的反对派绝不会就此善罢甘休。无论用何种手段，我们必须尽快处理这些反对派带来的问题，[SEJ.GetName]才能开始处理其他的有关事务。"

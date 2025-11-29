@@ -1,0 +1,74 @@
+	### FACTION ASSETS ###
+
+spriteTypes = {
+
+	#########################
+	##### Faction Logos #####
+	#########################
+
+	spriteType = {
+		name = "GFX_faction_logo_gekokujyo_revolutionary_movement"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_gekokujyo_revolutionary_movement.png"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_faction_logo_scarlet_pact"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_scarlet_pact.png"
+		noOfFrames = 2
+	}
+
+	### Faction Logos - Miniatures ###
+	spriteType = {
+		name = "GFX_faction_logo_gekokujyo_revolutionary_movement_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_gekokujyo_revolutionary_movement_miniature.png"
+	}
+
+	spriteType = {
+		name = "GFX_faction_logo_scarlet_pact_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_scarlet_pact_miniature.png"
+	}
+
+	### Faction Icons ###
+	# Rule Icons #
+	spriteType = {
+		name = "GFX_dismissal_rule_ideology_not_changemaker"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_non_changemaker.png"
+	}
+	spriteType = {
+		name = "GFX_dismissal_rule_ideology_not_radicalism"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_non_radicalist.png"
+	}
+	spriteType = {
+		name = "GFX_dismissal_rule_ideology_changemaker"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_changemaker.png"
+	}
+	spriteType = {
+		name = "GFX_dismissal_rule_ideology_radicalist"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_radicalist_only.png"
+	}
+	spriteType = {
+		name = "GFX_joining_rule_non_radicalist"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_non_radicalist.png"
+	}
+	spriteType = {
+		name = "GFX_joining_rule_changemaker"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_changemaker.png"
+	}
+	spriteType = {
+		name = "GFX_joining_rule_non_changemaker"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_non_changemaker.png"
+	}
+	spriteType = {
+		name = "GFX_joining_rule_radicalist_only"
+		texturefile = "gfx/interface/factions/rules/faction_joining_rule_radicalist_only.png"
+	}
+	spriteType = {
+		name = "GFX_change_leader_rule_never_NOA"
+		texturefile = "gfx/interface/ideas/generic_intel_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_peace_take_claimed_focus_NOA"
+		texturefile = "gfx/interface/ideas/idea_tfv_can_conscription_crisis.dds"
+	}
+}

@@ -993,7 +993,8 @@ focus_tree = {
           relation = guarantee
           active = yes
         }
-        add_ideas = SCA_yu_ren_lei_he_zuo_de_shou_yi_idea
+        add_political_power = 100
+        add_stability = 0.1
       }
     }
 

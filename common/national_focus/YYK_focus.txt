@@ -1711,7 +1711,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			create_faction = KNA_pan_netherworld_revolution_alliance
+			create_faction_from_template = {
+				template = faction_template_spread_revolution
+				name = KNA_pan_netherworld_revolution_alliance
+			}
 			unlock_decision_category_tooltip = KNA_di_yu_ge_ming
 		}
 	

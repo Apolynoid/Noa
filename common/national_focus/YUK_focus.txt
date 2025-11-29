@@ -1672,7 +1672,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			create_faction = southwest_revolutionary_front
+			create_faction_from_template = {
+				template = faction_template_spread_revolution
+				name = southwest_revolutionary_front
+			}
 		}
 	
 		ai_will_do = {

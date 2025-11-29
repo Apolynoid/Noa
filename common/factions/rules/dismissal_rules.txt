@@ -81,3 +81,15 @@ dismissal_rule_ideology_radicalist = {
 		has_government = fandong
 	}
 }
+
+dismissal_rule_ideology_changemaker = {
+	type = dismissal_rules
+	visible = { is_changemaker = no }
+	ai_will_do = {
+		base = 0
+	}
+
+	dismiss_member_trigger = {
+		is_changemaker = yes
+	}
+}

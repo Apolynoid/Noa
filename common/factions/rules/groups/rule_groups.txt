@@ -31,7 +31,6 @@ rule_group_geographical = {
 	#default_rule = joining_rule_neighbors_only
 	rules = {
 		joining_rule_neighbors_only
-		joining_rule_same_continent_only
 	}
 }
 
@@ -55,6 +54,7 @@ rule_group_dismissal_ideology = {
 	rules = {
 		dismissal_rule_ideology_not_changemaker
 		dismissal_rule_ideology_not_radicalism
+		dismissal_rule_ideology_changemaker
 		dismissal_rule_ideology_radicalist
 	}
 }
@@ -147,7 +147,7 @@ rule_group_peace_rules = {
 	#default_rule = faction_peace_rule_liberation_focus
 	rules = {
 		faction_peace_rule_conquest_focus
-		faction_peace_take_claimed_focus
+		faction_peace_take_claimed_focus_NOA
 	}
 }
 
@@ -155,7 +155,7 @@ rule_group_peace_rules = {
 
 rule_group_leader_faction = {
 	rules = {
-		change_leader_rule_never
+		change_leader_rule_never_NOA
 	}
 }
 

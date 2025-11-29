@@ -60,7 +60,10 @@
     set_country_flag = bunengqie_neworder
     set_major = yes
 
-    create_faction = TEG_faction1
+    create_faction_from_template = {
+        template = faction_template_gensokyo_democratic_alliance
+        name = TEG_gensokyo_democratic_alliance
+    }
     add_to_faction = NTR
 
     add_civil_war_target = OTG

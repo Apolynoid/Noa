@@ -43,6 +43,9 @@ joining_rule_changemaker = {
 	ai_will_do = {
 		base = 0
 	}
+	visible = {
+		is_changemaker = yes
+	}
 	available = {
 		is_changemaker = yes
 	}
@@ -59,6 +62,9 @@ joining_rule_non_changemaker = {
 	type = joining_rules
 	ai_will_do = {
 		base = 0
+	}
+	visible = {
+		is_changemaker = no
 	}
 	available = {
 		is_changemaker = no
@@ -87,6 +93,9 @@ joining_rule_radicalist_only = {
 	ai_will_do = {
 		base = 0
 	}
+	visible = {
+		has_government = fandong
+	}
 	available = {
 		has_government = fandong
 	}
@@ -105,7 +114,7 @@ joining_rule_support_percentage = {
 		base = 0
 	}
 	visible = {
-
+		always = yes
 	}
 	trigger = {
 		compare_ideology_with_faction = {
@@ -216,21 +225,5 @@ joining_rule_neighbors_only = {
 	}
 	modifier = {
 		enemy_justify_war_goal_time = 0.2
-	}
-}
-
-joining_rule_same_continent_only = {
-	type = joining_rules
-	ai_will_do = {
-		base = 0
-	}
-	can_remove = {
-		faction_manifest_fulfillment > 0.75
-	}
-	trigger = {
-		ROOT = { is_on_same_continent_as = FROM }
-	}
-	modifier = {
-		enemy_justify_war_goal_time = 0.1
 	}
 }

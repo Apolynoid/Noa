@@ -8,7 +8,23 @@
 
 ########################################     
 
+world_radicalist_countries = {
+	input = game:all_countries
+	name = COLLECTION_WORLD_RADICALIST_COUNTRIES
+	operators = {
+		limit = {
+			has_government = fandong
+		}
+	}
+}
 
+faction_members = {
+	input = game:scope
+	operators = {
+		faction_members
+	}
+	name = COLLECTION_FACTION_MEMBERS
+}
 
 #########################
 
@@ -68,4 +84,53 @@ faction_allies_controlled_core_and_claimed_states = {
 		}
 	}
 	name = COLLECTION_faction_allies_controlled_core_and_claimed_states
+}
+
+world_non_changemaker_states = {
+	input = game:all_states
+	name = COLLECTION_NON_CHANGEMAKER_STATES
+	operators = {
+		limit = {
+			controller = { is_changemaker = no }
+		}
+	}
+}
+
+authority_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_AUTHORITY
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				is_changemaker = no
+			}
+		}
+	}
+}
+
+changemaker_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_AMOUNT_OF_CHANGEMAKER_CONTROLLED_STATES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				is_changemaker = yes
+			}
+		}
+	}
+}
+
+faction_owned_controlled_states_with_3_or_more_mils = {
+	input = game:scope
+	operators = {
+		faction_members
+		owned_states
+		limit = {
+			is_controlled_by = PREV
+			arms_factory > 2
+		}
+	}
+	name = COLLECTION_faction_owned_controlled_states_with_3_or_more_mils
 }

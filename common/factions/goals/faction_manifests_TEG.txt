@@ -1,0 +1,29 @@
+@manifest_fulfilled_value = 0.75
+@manifest_fulfilled_value_high = 0.9
+
+# Containment of Communism
+faction_manifest_arsenal_of_democracy = {
+	name = arsenal_of_democracy_goal_name
+	description = arsenal_of_democracy_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount = 40
+		completed_amount_collection = collection:faction_owned_controlled_states_with_3_or_more_mils
+		
+		scale = {
+			stability_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value_high
+	
+				modifier = { 
+					production_factory_max_efficiency_factor = 0.1
+					factory_energy_consumption = -0.25
+				}
+			}
+		}
+	}
+}

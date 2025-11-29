@@ -1,3 +1,8 @@
 ﻿l_simp_chinese:
 NOA_ban_scale_change:0 "禁止规模转换"
 NOA_TKM_monthly_sp_bead_cost:0 "每月灵力珠消耗"
+
+echoryte_res:0 "谐晶资源"
+echoryte_res_research:0 "谐晶资源研究速度"
+PRODUCTION_MATERIALS_ECHORYTE:1 "谐晶"
+echoryte_desc:0 "一种在特定条件下产生稳定谐振的矿物，在幻想乡被用作普遍的工业能源。"

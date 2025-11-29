@@ -924,7 +924,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			create_faction = NMS_gensokyo_treaty_of_harmony
+			create_faction_from_template = {
+				template = faction_template_generic
+				name = NMS_gensokyo_treaty_of_harmony
+			}
 			hidden_effect = {
 				news_event = {
 					id = nms.123

@@ -122,7 +122,10 @@
         ST_race_penalty_remove = yes
     }
 
-    create_faction = SEJ_gekokujyo_revolutionary_movement
+    create_faction_from_template = {
+        template = faction_template_gekokujyo_revolutionary_movement
+        name = SEJ_gekokujyo_revolutionary_movement
+    }
     add_to_faction = CIR
 
     recruit_character = SEJ_smm

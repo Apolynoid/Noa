@@ -446,16 +446,24 @@ focus_tree = {
 			focus = SEJ_fen_hua_yao_guai_zhong_zu_pai
 		}
 
+		available = {
+			is_faction_leader = yes
+		}
+
 		completion_reward = {
 			unlock_decision_category_tooltip = SEJ_xia_ke_shang_tong_meng
 			add_to_tech_sharing_group = gekokujyo_tech_mutual_aid_committee
 			custom_effect_tooltip = SEJ_unlock_invite_allies_to_tech_sharing_tt
-			custom_effect_tooltip = SEJ_strngthen_allies_tt
-			hidden_effect = {
-				add_dynamic_modifier = {
-					modifier = SEJ_gekokujyo_movement_buff_leader_idea
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
 				}
-				SEJ_calc_buff = yes
+				custom_effect_tooltip = SEJ_strngthen_allies_tt
+				hidden_effect = {
+					set_faction_manifest = faction_manifest_unity_of_radicalism_1
+				}
+			}
+			hidden_effect = {
 				news_event = {
 					id = sej.115
 				}
@@ -483,9 +491,14 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SEJ_unlock_support_allies_tt
-			custom_effect_tooltip = SEJ_strngthen_allies_military_tt
-			hidden_effect = {
-				SEJ_calc_buff = yes
+			if = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				custom_effect_tooltip = SEJ_strngthen_allies_military_tt
+				hidden_effect = {
+					set_faction_manifest = faction_manifest_unity_of_radicalism_2
+				}
 			}
 		}
 

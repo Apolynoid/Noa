@@ -52,7 +52,10 @@ country_event = {
 			}
 			# create union
 			ZYD = {
-				create_faction = southwest_mutual_defense_treaty
+				create_faction_from_template = {
+					template = faction_template_generic
+					name = southwest_mutual_defense_treaty
+				}
 				add_to_faction = SGS
 				add_to_faction = MEL
 			}
