@@ -7,21 +7,10 @@ state={
 		metal=5.000
 		gas=10.000
 		crystal=0.000
+		echoryte = 8.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = SCA
-			add_core_of = SCA
-			buildings = {
-				infrastructure = 7
-				industrial_complex = 5
-				arms_factory = 2
-				radar_station = 0
-
-			}
-
-		}
 		146.1.1 = {
 			owner = SCA
 			add_core_of = SCA

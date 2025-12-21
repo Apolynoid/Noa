@@ -7,20 +7,10 @@ state={
 		metal=0.000
 		gas=15.000
 		crystal=0.000
+		echoryte = 11.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = SEJ
-			add_core_of = SEJ
-			buildings = {
-				infrastructure = 5
-				industrial_complex = 2
-				arms_factory = 2
-
-			}
-
-		}
 		146.1.1 = {
 			owner = SEJ
 			add_core_of = SEJ

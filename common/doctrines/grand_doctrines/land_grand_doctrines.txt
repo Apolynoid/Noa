@@ -1,0 +1,400 @@
+special_operations = {
+    folder = land
+
+    name = GRAND_DOCTRINE_SPECIAL_OPERATIONS
+    description = GRAND_DOCTRINE_SPECIAL_OPERATIONS_DESC
+    icon = GFX_doctrine_mission_type_tactics_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 75
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+	army_speed_factor = 0.10
+	special_forces_training_time_factor = -0.1
+	special_forces_cap = 0.25
+	category_shield = {
+		max_organisation = 10
+	}
+	enable_tactic = tactic_unexpected_thrust
+	
+
+    milestones = {
+        {
+            #Infantry
+	        org_loss_when_moving = -0.1
+            land_reinforce_rate = 0.05
+			category_primary = {
+				max_organisation = 5
+			}
+            enable_tactic = tactic_breakthrough
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Artillery/Support
+	        coordination_bonus = 0.05
+			category_line_artillery = {
+				breakthrough = 0.15
+			}
+            enable_tactic = tactic_overwhelming_fire
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+	        additional_brigade_column_size = 1
+			category_shield = {
+				max_organisation = 5
+				maximum_speed = 0.1
+				breakthrough = 0.2
+			}
+            enable_tactic = tactic_blitz
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+	        planning_speed = 0.3
+			category_shield = {
+				soft_attack = 0.15
+			}
+            enable_tactic = tactic_elastic_defense   
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+fire_support = {
+    folder = land
+
+    name = GRAND_DOCTRINE_FIRE_SUPPORT
+    description = GRAND_DOCTRINE_FIRE_SUPPORT_DESC
+    icon = GFX_doctrine_superior_firepower_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 75
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+	category_army = {
+		soft_attack = 0.05
+	}
+	enable_tactic = tactic_overwhelming_fire
+	
+
+    milestones = {
+        {
+            #Infantry
+	        coordination_bonus = 0.05
+			category_primary = {
+				max_organisation = 5
+			}
+            enable_tactic = tactic_breakthrough
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Artillery/Support
+			category_line_artillery = {
+				soft_attack = 0.05
+				max_organisation = 5
+			}
+	        additional_brigade_column_size = 1
+            enable_tactic = tactic_barrage
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+	        land_reinforce_rate = 0.02
+			category_shield = {
+				defense = 0.1
+			}
+            enable_tactic = tactic_elastic_defense
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+	        category_front_line = {
+				breakthrough = 0.1
+				soft_attack = 0.05
+			}
+            enable_tactic = tactic_tactical_withdrawal
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+mass_assault = {
+    folder = land
+
+    name = GRAND_DOCTRINE_MASS_ASSAULT
+    description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
+    icon = GFX_doctrine_mass_assault_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 75
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        infantry
+        combat_support
+        armor
+        operations
+    }
+
+    # EFFECTS
+	minimum_training_level = -0.2
+	category_primary = {
+		default_morale = 0.07
+	}
+	additional_brigade_column_size = 1
+	enable_tactic = tactic_human_wave_tactics
+	
+
+    milestones = {
+        {
+            #Infantry
+			category_primary = {
+				max_organisation = 10
+			}
+			sc_infantry = {
+				combat_width = -5
+			}
+			ma_infantry = {
+				combat_width = -5
+			}
+			sc_light_infantry = {
+				combat_width = -5
+			}
+			ma_light_infantry = {
+				combat_width = -5
+			}
+			melee_infantry = {
+				combat_width = -5
+			}
+            enable_tactic = tactic_relentless_assault
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Artillery/Support
+			land_reinforce_rate = 0.1
+			category_line_artillery = {
+				default_morale = 0.07
+			}
+            enable_tactic = tactic_overwhelming_fire
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = support_milestone_var
+                        }
+                    }
+                    set_variable = { support_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { support_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Armor
+			category_shield = {
+				max_organisation = 10
+			}
+            enable_tactic = tactic_elastic_defense
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+	        supply_consumption_factor = -0.1
+			max_planning = 0.1
+            enable_tactic = tactic_breakthrough
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}

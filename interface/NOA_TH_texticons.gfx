@@ -36,4 +36,19 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	# units
+	SpriteType = {
+		name = "GFX_unit_category_primary_icon_small"
+		texturefile = "gfx/texticons/unit_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_category_shield_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_shield_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
 }

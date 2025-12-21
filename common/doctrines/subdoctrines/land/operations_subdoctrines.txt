@@ -1,0 +1,170 @@
+infiltration_tactics = {
+    track = operations
+    name = SUBDOCTRINE_INFILTRATION_TACTICS
+    description = SUBDOCTRINE_INFILTRATION_TACTICS_DESC
+    icon = GFX_doctrine_infiltration_assault_medium
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+    enable_tactic = tactic_infantry_charge
+    max_planning = 0.1
+
+    rewards = {
+        infiltration_operation = {
+        #1
+            category_army = {
+                breakthrough = 0.10
+                max_organisation = 5
+            }
+        }
+        nightly_assaults = {
+        #2
+            land_night_attack = 0.2
+        }
+        breakthrough_priority = {
+        #3
+            max_planning = 0.05
+			category_army = {
+                breakthrough = 0.05
+            }
+        }
+        depth_infiltration = {
+        #4
+			supply_consumption_factor = -0.1
+			land_reinforce_rate = 0.03
+			category_primary = {
+				max_organisation = 5
+				default_morale = 0.04
+			}
+        }
+        continuous_offensive = {
+        #5
+            land_reinforce_rate = 0.05
+            org_loss_when_moving = -0.20
+        }
+    }
+}
+
+strategic_planning = {
+    track = operations
+    name = SUBDOCTRINE_STRATEGIC_PLANNING
+    description = SUBDOCTRINE_STRATEGIC_PLANNING_DESC
+    icon = GFX_doctrine_grand_assault_medium
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    # EFFECTS
+    enable_tactic = tactic_planned_attack
+    max_planning = 0.05
+	category_army = {
+		breakthrough = 0.10
+	}
+
+    rewards = {
+        central_command = {
+        #1
+			max_command_power = 30
+			max_planning = 0.05
+        }
+        concentrated_forces = {
+        #2
+            category_army = {
+				breakthrough = 0.15
+			}
+        }
+        central_planning = {
+        #3
+            max_planning = 0.05
+			coordination_bonus = 0.05
+        }
+        shock_tactics = {
+        #4
+			category_army = {
+				soft_attack = 0.05
+			}
+			category_primary = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+			}
+        }
+        centralized_control = {
+        #5
+            max_planning = 0.1
+			category_primary = {
+				max_organisation = 8
+			}
+        }
+    }
+}
+
+guerilla_warfare = {
+    track = operations
+    name = SUBDOCTRINE_GUERILLA_WARFARE
+    description = SUBDOCTRINE_GUERILLA_WARFARE_DESC
+    icon = GFX_doctrine_guerilla_warfare_medium
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 0
+    }
+
+    # EFFECTS
+    enable_tactic = tactic_guerrilla_tactics
+    conscription_factor = 0.1
+	out_of_supply_factor = -0.2
+
+    rewards = {
+        capture_tactics = {
+        #1
+			pocket_penalty = -0.1
+			category_primary = {
+				equipment_capture_factor = 0.01
+			}
+        }
+        resistance_tactics = {
+        #2
+            resistance_damage_to_garrison_on_our_occupied_states = 0.2
+			resistance_target_on_our_occupied_states = 0.2
+			category_army = {
+				defense = 0.1
+			}
+        }
+        fotification_defense = {
+        #3
+        	out_of_supply_factor = -0.1    
+			category_primary = {
+				entrenchment = 0.1
+			}
+        }
+        infantry_offensive = {
+        #4
+			land_reinforce_rate = 0.1
+			category_primary = {
+				breakthrough = 0.05
+				max_organisation = 10
+			}
+        }
+    }
+}

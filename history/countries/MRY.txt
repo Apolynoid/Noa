@@ -27,9 +27,6 @@
         #混合系
         sc_shield1 = 1
         jijia1 = 1
-
-        #陆军学说
-        fire_support = 1
             
         #工程学 
         jichushuxue = 1
@@ -51,6 +48,8 @@
         #种族
             
     }
+
+    set_grand_doctrine = fire_support
     
 }
 146.1.1={

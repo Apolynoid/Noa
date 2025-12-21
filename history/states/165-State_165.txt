@@ -1,0 +1,38 @@
+
+state={
+	id=165
+	name="STATE_165"
+	resources={
+		energy = 0
+		powder = 10.0
+		metal = 5.0
+		gas=0.000
+		crystal=0.000
+		echoryte = 5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = WAK
+			add_core_of = WAK
+			add_claim_by = TKM
+			buildings = {
+				infrastructure =6
+				industrial_complex = 4
+				arms_factory = 5
+
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		12 177 1774 2532 4369 4371 4376 4380 4477 
+	}
+	manpower=11700.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

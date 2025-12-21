@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ STATE_CATEGORY_s0: "荒地"
+ STATE_CATEGORY_s2: "零散定居点"
+ STATE_CATEGORY_s5: "小型聚居点"
+ STATE_CATEGORY_s7: "小村落"
+ STATE_CATEGORY_s10: "乡村"
+ STATE_CATEGORY_s12: "城镇"
+ STATE_CATEGORY_s15: "大型城镇"
+ STATE_CATEGORY_s17: "城市"
+ STATE_CATEGORY_s20: "大型城市"
+ STATE_CATEGORY_s25: "特大都市"

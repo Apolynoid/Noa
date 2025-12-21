@@ -1,0 +1,36 @@
+
+state={
+	id=339
+	name="STATE_339"
+	resources={
+
+		powder = 6.0
+		metal = 0.0
+		gas=15.000
+		crystal=0.000
+		echoryte = 6.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = YUK
+			add_core_of = YUK
+			buildings = {
+				infrastructure =3
+				industrial_complex = 10
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		647 680 685 1737 1763 2366 2550 3170 4584 4591 4603 4604 4608 4612 4621 4624 5645 
+	}
+	manpower=271649.0
+	buildings_max_level_factor=1.000
+	state_category=s15
+	local_supplies=2.5
+}

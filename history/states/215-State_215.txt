@@ -1,0 +1,36 @@
+
+state={
+	id=215
+	name="STATE_215"
+	resources={
+		powder=6.000
+		metal=1.000
+		gas=20.000
+		crystal=5.000
+		echoryte = 17.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = NMS
+			add_core_of = NMS
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 10
+				arms_factory = 5
+				radar_station = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		403 656 1048 1307 2066 2088 3612 3623 3824 5452 5713 7686 7690 
+	}
+	manpower=10138
+	buildings_max_level_factor=1.000
+	state_category=s17
+	local_supplies=2.500
+}

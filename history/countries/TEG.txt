@@ -28,8 +28,6 @@
         sc_shield1 = 1
         smg1 = 1
 
-        #陆军学说
-        special_operations = 1
         #工程学 
         jichushuxue = 1
         shuxuegongju = 1
@@ -50,6 +48,7 @@
             
     }
     
+    set_grand_doctrine = special_operations
 }
 
 146.1.1={

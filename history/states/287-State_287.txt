@@ -1,0 +1,36 @@
+
+state={
+	id=287
+	name="STATE_287"
+	resources={
+
+		powder = 13.0
+		metal = 0.0
+		gas=10.000
+		crystal=0.000
+		echoryte = 4.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SRB
+			add_core_of = SRB
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 5
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		19 817 1076 1174 1266 1368 2942 5490 5498 5503 5510 
+	}
+	manpower=6698.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+	local_supplies=2.5
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=246
+	name="STATE_246"
+	resources={
+
+		powder = 6.0
+		metal = 5.0
+		gas=0.000
+		crystal=0.000
+		echoryte = 7.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = HUM
+			add_core_of = HUM
+			buildings = {
+				infrastructure =9
+				industrial_complex = 8
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		190 225 1431 1903 2205 3181 3184 3476 3479 3480 3482 3488 
+	}
+	manpower=42887.0
+	buildings_max_level_factor=1.000
+	state_category=s17
+	local_supplies=2.5
+}

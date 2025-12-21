@@ -1,0 +1,36 @@
+
+state={
+	id=272
+	name="STATE_272"
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=20.000
+		crystal=0.000
+		echoryte = 3.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SGS
+			add_core_of = SGS
+			buildings = {
+				infrastructure =1
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		11 813 2033 2486 4783 4792 4825 4835 4850 4855 4863 4871 
+	}
+	manpower=13646.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

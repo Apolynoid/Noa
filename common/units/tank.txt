@@ -25,6 +25,7 @@ sub_units = {
 			category_all_infantry
 			category_army
 			category_special_forces
+			category_all_armor
 
 			#
 			category_combined
@@ -77,6 +78,7 @@ sub_units = {
 			category_all_infantry
 			category_army
 			category_special_forces
+			category_all_armor
 
 			#
 			category_combined
@@ -125,9 +127,8 @@ sub_units = {
 		
 		categories = {
 			category_front_line
-			category_light_infantry
-			category_all_infantry
 			category_army
+			category_all_armor
 
 			#
 			category_sc
@@ -172,9 +173,8 @@ sub_units = {
 		
 		categories = {
 			category_front_line
-			category_light_infantry
-			category_all_infantry
 			category_army
+			category_all_armor
 
 			#
 			category_ma
@@ -219,9 +219,8 @@ sub_units = {
 		
 		categories = {
 			category_front_line
-			category_light_infantry
-			category_all_infantry
 			category_army
+			category_all_armor
 
 			#
 			category_combined
@@ -266,9 +265,8 @@ sub_units = {
 		
 		categories = {
 			category_front_line
-			category_light_infantry
-			category_all_infantry
 			category_army
+			category_all_armor
 
 			#
 			category_combined

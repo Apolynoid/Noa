@@ -1,0 +1,168 @@
+concentrated_firepower = {
+    track = combat_support
+    name = SUBDOCTRINE_CONCENTRATED_FIREPOWER
+    description = SUBDOCTRINE_CONCENTRATED_FIREPOWER_DESC
+    icon = GFX_doctrine_fire_concentration_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1 
+    }
+
+    # EFFECTS
+    sc_mortar_brigade = {
+        combat_width = -5
+    }
+	sc_anti_shield_brigade = {
+		combat_width = -5
+	}
+	ma_magic_energy_brigade = {
+		combat_width = -5
+	}
+	ma_magic_focus_brigade = {
+		combat_width = -5
+	}
+    category_line_artillery = {
+        max_organisation = 5
+    }
+
+    rewards = {
+        offensive_deployment = {
+        #1
+            category_line_artillery = {
+                breakthrough = 0.1
+            }
+        }
+        predicted_fire = {
+        #2
+            category_line_artillery = {
+                soft_attack = 0.1
+            }
+        }
+        mobile_firepower = {
+        #3
+            category_line_artillery = {
+                breakthrough = 0.05
+                default_morale = 0.05
+            }
+        }
+        engineering_smoke = {
+        #4
+            sp_zhanchanggongbing = {
+				battalion_mult = {
+					category = category_line_artillery
+					breakthrough = 0.05
+				}
+			}
+			category_line_artillery = {
+				max_organisation = 5
+			}
+        }
+        regional_firepower = {
+        #5
+            category_line_artillery = {
+				soft_attack = 0.05
+                breakthrough = 0.05
+                defense = 0.05
+            }
+        }
+    }
+}
+
+fieldwork = {
+    track = combat_support
+    name = SUBDOCTRINE_FIELDWORK
+    description = SUBDOCTRINE_FIELDWORK_DESC
+    icon = GFX_doctrine_field_engineering_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 0 
+    }
+
+    # EFFECTS
+    category_line_artillery = {
+        max_organisation = 5
+		default_morale = 0.03
+    }
+
+    rewards = {
+        ballistics_corrections = {
+        #1
+            category_line_artillery = {
+                initiative = 0.02
+				supply_consumption = -0.03
+            }
+        }
+        precomputed_parameters = {
+        #2
+            category_line_artillery = {
+				defense = 0.2
+                max_organisation = 5
+            }
+        }
+        fort_buster = {
+        #3
+            category_line_artillery = {
+                hard_attack = 0.2
+            }
+			sc_mortar_brigade = {
+				fort = {
+					attack = 0.25
+				}
+			}
+			sc_anti_shield_brigade = {
+				fort = {
+					attack = 0.25
+				}
+			}
+			ma_magic_energy_brigade = {
+				fort = {
+					attack = 0.25
+				}
+			}
+			ma_magic_focus_brigade = {
+				fort = {
+					attack = 0.25
+				}
+			}
+        }
+        engineering_artillery = {
+        #4
+            sp_zhanchanggongbing = {
+				battalion_mult = {
+					category = category_line_artillery
+					soft_attack = 0.1
+					defense = 0.1
+				}
+			}
+        }
+        firepower_group = {
+        #5
+            sc_mortar_brigade = {
+				combat_width = -10
+			}
+			sc_anti_shield_brigade = {
+				combat_width = -10
+			}
+			ma_magic_energy_brigade = {
+				combat_width = -10
+			}
+			ma_magic_focus_brigade = {
+				combat_width = -10
+			}
+        }
+    }
+}

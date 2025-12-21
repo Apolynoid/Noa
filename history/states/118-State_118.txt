@@ -1,0 +1,36 @@
+
+state={
+	id=118
+	name="STATE_118"
+	resources={
+
+		powder = 0.0
+		metal = 5.0
+		gas=20.000
+		crystal=0.000
+		echoryte = 17.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = CIR
+			add_core_of = CIR
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 6
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		316 1056 1167 1751 2717 3345 3350 3352 3354 3356 3359 5784 5788 
+	}
+	manpower=100064.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

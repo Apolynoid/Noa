@@ -1,0 +1,35 @@
+
+state={
+	id=408
+	name="STATE_408"
+	resources={
+		powder=6.000
+		metal=5.000
+		gas=5.000
+		crystal=0.000
+		echoryte = 13.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			buildings = {
+				infrastructure = 7
+				industrial_complex = 6
+				arms_factory = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		748 3114 3130 4397 5296 5298 5303 5306 
+	}
+	manpower=5877
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.500
+}

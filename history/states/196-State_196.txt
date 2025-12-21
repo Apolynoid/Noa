@@ -1,0 +1,36 @@
+
+state={
+	id=196
+	name="STATE_196"
+	resources={
+
+		powder = 13.0
+		metal = 26.0
+		gas=5.000
+		crystal=0.000
+		echoryte = 11.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TKM
+			add_core_of = TKM
+			buildings = {
+				infrastructure =5
+				industrial_complex = 4
+				arms_factory = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1118 1618 2473 3517 3521 3527 3630 
+	}
+	manpower=5763.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

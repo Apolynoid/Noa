@@ -1,0 +1,38 @@
+
+state={
+	id=88
+	name="STATE_88"
+	resources={
+
+		powder = 13.0
+		metal = 5.0
+		gas=0.000
+		crystal=0.000
+		echoryte = 6.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = NTR
+			add_core_of = NTR
+			add_claim_by = KAP
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 6
+				arms_factory = 3
+				
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1117 2070 3103 3371 3381 4047 4048 4065 4069 4076 4086 4093 4099 4153 
+	}
+	manpower=4386.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+	local_supplies=2.5
+}

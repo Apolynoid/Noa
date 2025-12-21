@@ -6,6 +6,7 @@ state={
 		powder=0.000
 		metal=2.000
 		crystal=0.000
+		echoryte = 17.000
 	}
 
 	history={

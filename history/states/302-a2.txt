@@ -1,0 +1,37 @@
+
+state={
+	id=302
+	name="STATE_302"
+
+	resources={
+		energy = 0.000
+		powder = 0.0
+		metal = 8.0
+		gas=0.000
+		crystal=0.000
+		echoryte = 3.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MRY
+			add_core_of = MRY
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 7
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		3302 3303 3308 3311 3313 3314 3315 4461 4463 4464 4465 4470 4471 4472 4476 6678 
+	}
+	manpower=3045
+	state_category=s12
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

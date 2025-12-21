@@ -1,0 +1,36 @@
+
+state={
+	id=158
+	name="STATE_158"
+	resources={
+
+		powder = 10.0
+		metal = 6.0
+		gas=3.000
+		crystal=0.000
+		echoryte = 3.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = WAK
+			add_core_of = WAK
+			buildings = {
+				infrastructure =6
+				industrial_complex = 5
+				arms_factory = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1438 2196 2779 3239 3553 3560 4364 4373 
+	}
+	manpower=7746.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+	local_supplies=2.5
+}

@@ -8,6 +8,7 @@ state={
 		metal = 0.0
 		gas=20.000
 		crystal=0.000
+		echoryte = 5.000
 	}
 
 	history={

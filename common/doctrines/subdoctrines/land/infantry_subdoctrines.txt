@@ -1,0 +1,176 @@
+infantry_defense = {
+    track = infantry
+    name = SUBDOCTRINE_INFANTRY_DEFENSE
+    description = SUBDOCTRINE_INFANTRY_DEFENSE_DESC
+    icon = GFX_doctrine_defensive_postures_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1    
+    }
+
+    category_primary = {
+		entrenchment = 0.2
+	}
+
+    rewards = {
+        fighting_position = {
+			dig_in_speed_factor = 0.2
+            category_primary = {
+                max_organisation = 10
+            }
+        }
+        regional_defense = {
+			out_of_supply_factor = -0.2
+            category_primary = {
+                defense = 0.1
+            }
+        }
+        trench_networking = {
+			max_planning = 0.1
+            category_primary = {
+				entrenchment = 0.2
+			}
+        }
+        field_firegrid = {
+            category_primary = {
+				soft_attack = 0.2
+			}
+        }
+        decisive_battleplan = {
+            max_dig_in = 10
+			max_planning = 0.2
+			planning_speed = 0.1
+        }
+    }
+}
+
+large_formation_warfare = {
+    track = infantry
+    name = SUBDOCTRINE_LARGE_FORMATION_WARFARE
+    description = SUBDOCTRINE_LARGE_FORMATION_WARFARE_DESC
+    icon = GFX_doctrine_human_infantry_offensive_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1    
+    }
+
+    category_primary = {
+		supply_consumption = -0.02
+	}
+
+    rewards = {
+        mobilization_system = {
+			conscription_factor = 0.2
+			mobilization_speed = 0.1
+        }
+        flexible_structures = {
+			unit_sc_infantry_design_cost_factor = -1.0
+			unit_ma_infantry_design_cost_factor = -1.0
+			unit_sc_light_infantry_design_cost_factor = -1.0
+			unit_ma_light_infantry_design_cost_factor = -1.0
+			unit_melee_infantry_design_cost_factor = -1.0
+			sc_infantry = {
+				combat_width = -5
+			}
+			ma_infantry = {
+				combat_width = -5
+			}
+			sc_light_infantry = {
+				combat_width = -5
+			}
+			ma_light_infantry = {
+				combat_width = -5
+			}
+			melee_infantry = {
+				combat_width = -5
+			}
+        }
+        tactic_sharing = {
+            category_primary = {
+				experience_loss_factor = -0.02
+			}
+        }
+        large_front_offensive = {
+			army_morale_factor = 0.2
+            category_primary = {
+				max_organisation = 10
+			}
+        }
+        continuous_offensive = {
+            org_loss_when_moving = -0.2
+			land_reinforce_rate = 0.05
+        }
+    }
+}
+
+assault_tactic = {
+    track = infantry
+    name = SUBDOCTRINE_ASSAULT_TACTIC
+    description = SUBDOCTRINE_ASSAULT_TACTIC_DESC
+    icon = GFX_doctrine_assault_infantry_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1    
+    }
+
+	land_reinforce_rate = 0.03
+    category_primary = {
+		breakthrough = 0.05
+		max_organisation = 5
+	}
+
+    rewards = {
+        delegated_authority = {
+            category_primary = {
+                max_organisation = 10
+				default_morale = 0.02
+            }
+        }
+        assault_detachments = {
+            category_primary = {
+				breakthrough = 0.1
+                max_organisation = 5
+				default_morale = 0.03
+            }
+        }
+        tactical_planning = {
+            category_primary = {
+				max_organisation = 5
+				maximum_speed = 0.2
+			}
+        }
+        combined_assualt = {
+            category_primary = {
+				soft_attack = 0.1
+				breakthrough = 0.1
+			}
+        }
+        pocket_defence = {
+            supply_consumption_factor = -0.1
+			no_supply_grace = 48
+			out_of_supply_factor = -0.1
+			pocket_penalty = -0.1
+        }
+    }
+}

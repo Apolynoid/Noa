@@ -1,0 +1,35 @@
+
+state={
+	id=61
+	name="STATE_61"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=30.000
+		crystal=0.000
+		echoryte = 3.000
+	}
+
+	history={
+		146.1.1 = {
+			add_core_of = SCA
+			owner = SCA
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 6
+				arms_factory = 1
+				radar_station = 1
+
+			}
+
+		}
+	}
+
+	provinces={
+		401 1306 1455 1694 2084 2467 4113 4120 4127 4128 4130 4131 4136 4139 5874 5879 
+	}
+	manpower=101720
+	buildings_max_level_factor=1.000
+	state_category=s10
+	local_supplies=2.500
+}

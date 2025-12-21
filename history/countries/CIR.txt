@@ -24,8 +24,6 @@
 
         #混合系
 
-        #陆军学说
-            mass_assault = 1
         #工程学 
             jichushuxue = 1
             shuxuegongju = 1
@@ -42,6 +40,8 @@
             yunshudui140 = 1
             yunshucheliang146 = 1
     }
+
+    set_grand_doctrine = mass_assault
     
 }
 ################

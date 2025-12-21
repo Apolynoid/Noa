@@ -25,9 +25,7 @@
 
         #混合系
         sc_shield1 = 1
-
-        #陆军学说
-        mass_assault = 1   
+         
         #工程学 
         jichushuxue = 1
         shuxuegongju = 1
@@ -47,6 +45,8 @@
         #种族
             
     } 
+
+    set_grand_doctrine = mass_assault
 }
 143.7.1 = {
     oob = "SEJ_143"

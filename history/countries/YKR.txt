@@ -28,9 +28,6 @@
         #专用进阶
 
         #混合系
-
-        #陆军学说
-        special_operations = 1
             
         #工程学 
         jichushuxue = 1
@@ -62,6 +59,7 @@
         kongjianmonijishu = 1
     }
     
+    set_grand_doctrine = special_operations
 }
 146.1.1={
     set_country_flag = bunengsuiyiqiehuanzhengti
