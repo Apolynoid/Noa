@@ -6,10 +6,15 @@ bookmarks = {
 		picture = "GFX_Scenario146"
 		default_country = "SCA"
 		default = yes
-		
+
+		filters = { label }
+		label_order = { NOA_GensokyoFilter NOA_NetherworldFilter }
+
+		include_majors_in_minor_list = no	
 
 		"SCA"={
 			history = "SCA_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				SCA_yao_jing_bu_man_idea
 				SCA_di_xiao_de_xing_zheng_ti_xi_idea
@@ -24,6 +29,7 @@ bookmarks = {
 		
 		"MRY"={
 			history = "MRY_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				MRY_kejizhishen_idea
     			MRY_shenmingdeweiji_idea
@@ -38,21 +44,21 @@ bookmarks = {
 		
 		"TEG"={
 			history = "TEG_DAWN_DESC"
-		#	ideology = gexin
+			label = { NOA_GensokyoFilter }
+			new_content = yes
 			ideas = { 
-    			TEG_cui_ruo_de_min_zhu_zhi_du_idea
-    			TEG_can_mou_zong_bu_idea
-				TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea
+    			TEG_wei_ji_zhong_de_gong_he_guo_idea
+				TEG_nei_zhan_shang_hen_idea
+				TEG_gong_ye_tan_huan_idea
 			}
 			focuses = {
-				TEG_da_xuan
-				TEG_jie_jue_tian_mo_wen_ti
-				TEG_bao_wei_gong_he_guo
+				
 			}
 		}
 		
 		"SEJ"={
 			history = "SEJ_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				SEJ_xia_ke_shang_ge_ming_shi_yuan_di_idea
 				SEJ_yao_guai_zhong_zu_zhu_yi_pai_xi_idea
@@ -67,6 +73,7 @@ bookmarks = {
 
 		"CIR"={
 			history = "CIR_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				CIR_yao_jing_ge_ming_jun_idea
 				CIR_lian_he_ti_zheng_zhi_zhuang_kuang_idea
@@ -81,6 +88,7 @@ bookmarks = {
 
 		"NMS"={
 			history = "NMS_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				hum_ren_lei_cheng_fa_zhan_zheng_de_sheng_li_zhe_idea
 				NMS_zong_jiao_wei_ji_idea
@@ -95,6 +103,7 @@ bookmarks = {
 
 		"TKM"={
 			history = "TKM_DAWN_DESC"
+			label = { NOA_GensokyoFilter }
 			ideas = { 
 				TKM_bu_wen_ding_de_xin_sheng_zheng_quan_idea
 				TKM_ren_lei_de_bao_hu_zhe_idea
@@ -131,6 +140,7 @@ bookmarks = {
 		"MRS"={
 		    minor = yes
 			history = "MRS_DAWN_DESC"		#sca
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 				mrs_bushimofashi
 				mrs_fen_lie_de_mo_fa_shi_idea
@@ -158,6 +168,7 @@ bookmarks = {
 		"SRB"={
 		    minor = yes
 			history = "SRB_DAWN_DESC"		#sca
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 				SRB_di_xiao_de_xing_zheng_ji_gou_idea
 				SRB_jun_bei_xian_zhi_tiao_yue_idea
@@ -173,6 +184,7 @@ bookmarks = {
 		"AKI"={
 		    minor = yes
 			history = "AKI_DAWN_DESC"		#sca
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 				AKI_ren_yu_shen_de_ge_he_idea
 				AKI_diao_ling_zhe_zhun_jun_shi_zu_zhi_idea
@@ -188,6 +200,7 @@ bookmarks = {
 		"SGS"={
 		    minor = yes
 			history = "SGS_DAWN_DESC"		#sgs
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 				SGS_zhan_zheng_de_yin_ying_idea
 				SGS_bu_shou_huan_ying_de_wai_lai_shi_li_idea
@@ -203,6 +216,7 @@ bookmarks = {
     	"MEL"={
 		    minor = yes
 			history = "MEL_DAWN_DESC"		#sca
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 	            MEL_zheng_zhi_beng_kui_idea
 				MEL_ling_lan_jun_guo_zhu_yi_idea
@@ -218,6 +232,7 @@ bookmarks = {
 		"YUK"={
 		    minor = yes
 			history = "YUK_DAWN_DESC"		#sca
+			label = { NOA_GensokyoFilter }
 			ideas={ 
 				YUK_yao_jing_sao_dong_idea
 	            YUK_yu_suan_qing_xie_jun_heng_idea
@@ -233,6 +248,7 @@ bookmarks = {
 		"YYK"={
 		    minor = yes
 			history = "YYK_DAWN_DESC"		#sca
+			label = { NOA_NetherworldFilter }
 			ideas={ 
 				YYK_you_ling_ji_jin_pai_xi_idea
 				YYK_bu_zhong_cheng_de_jun_dui_idea
@@ -308,6 +324,7 @@ bookmarks = {
 		"NTR" = {
 			minor = yes
 			history = "NTR_DAWN_DESC"			#sat
+			label = { NOA_GensokyoFilter }
 			ideas = {
 				NTR_bu_wen_ding_de_gong_he_guo_idea
 				NTR_he_tong_de_yan_jiu_neng_li_idea

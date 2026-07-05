@@ -11,7 +11,6 @@ UNA = "countries/una.txt"			#####风洞
 NTR = "countries/ntr.txt"  ####河童
 YAW = "countries/yaw.txt"  ####山童
 KRD = "countries/krd.txt"  ####虹龙洞
-TBA = "countries/tba.txt"  ####赌场
 CHE = "countries/che.txt"       #####迷途之家   
 #-----------妖怪平原------------
 SCA = "countries/sca.txt" #####斯卡雷特帝国

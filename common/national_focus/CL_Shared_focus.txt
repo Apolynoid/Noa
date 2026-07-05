@@ -1,0 +1,472 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+# 天界发展计划
+shared_focus = {
+	id = CL_tian_jie_fa_zhan_ji_hua
+	icon = unknown
+	cost = 7
+	x = 15
+	y = 1
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 成立工业部
+shared_focus = {
+	id = CL_cheng_li_gong_ye_bu
+	icon = unknown
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = CL_tian_jie_fa_zhan_ji_hua
+
+	prerequisite = {
+		focus = CL_tian_jie_fa_zhan_ji_hua
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 基础设施建设
+shared_focus = {
+	id = CL_ji_chu_she_shi_jian_she
+	icon = unknown
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = CL_cheng_li_gong_ye_bu
+
+	prerequisite = {
+		focus = CL_cheng_li_gong_ye_bu
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 税制改革
+shared_focus = {
+	id = CL_shui_zhi_gai_ge
+	icon = unknown
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = CL_ji_chu_she_shi_jian_she
+
+	prerequisite = {
+		focus = CL_ji_chu_she_shi_jian_she
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 教育改革
+shared_focus = {
+	id = CL_jiao_yu_gai_ge
+	icon = unknown
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = CL_tian_jie_fa_zhan_ji_hua
+
+	prerequisite = {
+		focus = CL_tian_jie_fa_zhan_ji_hua
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 基础武器研究
+shared_focus = {
+	id = CL_ji_chu_wu_qi_yan_jiu
+	icon = unknown
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = CL_jiao_yu_gai_ge
+
+	prerequisite = {
+		focus = CL_jiao_yu_gai_ge
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 火炮研究
+shared_focus = {
+	id = CL_huo_pao_yan_jiu
+	icon = unknown
+	cost = 7
+	x = 2
+	y = 1
+
+	relative_position_id = CL_ji_chu_wu_qi_yan_jiu
+
+	prerequisite = {
+		focus = CL_ji_chu_wu_qi_yan_jiu
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 生产技术优化
+shared_focus = {
+	id = CL_sheng_chan_ji_shu_you_hua
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 2
+
+	relative_position_id = CL_tian_jie_fa_zhan_ji_hua
+
+	prerequisite = {
+		focus = CL_cheng_li_gong_ye_bu
+	}
+
+	prerequisite = {
+		focus = CL_jiao_yu_gai_ge
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 建筑技术进步
+shared_focus = {
+	id = CL_jian_zhu_ji_shu_jin_bu
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = CL_sheng_chan_ji_shu_you_hua
+
+	prerequisite = {
+		focus = CL_sheng_chan_ji_shu_you_hua
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 投资军事工业
+shared_focus = {
+	id = CL_tou_zi_jun_shi_gong_ye
+	icon = unknown
+	cost = 12
+	x = -2
+	y = 1
+
+	relative_position_id = CL_sheng_chan_ji_shu_you_hua
+
+	prerequisite = {
+		focus = CL_sheng_chan_ji_shu_you_hua
+	}
+
+	prerequisite = {
+		focus = CL_ji_chu_she_shi_jian_she
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 资源勘探
+shared_focus = {
+	id = CL_zi_yuan_kan_tan
+	icon = unknown
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = CL_tou_zi_jun_shi_gong_ye
+
+	prerequisite = {
+		focus = CL_tou_zi_jun_shi_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 投资民用工业
+shared_focus = {
+	id = CL_tou_zi_min_yong_gong_ye
+	icon = unknown
+	cost = 12
+	x = 0
+	y = 1
+
+	relative_position_id = CL_tou_zi_jun_shi_gong_ye
+
+	prerequisite = {
+		focus = CL_tou_zi_jun_shi_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 培养技术工人
+shared_focus = {
+	id = CL_pei_yang_ji_shu_gong_ren
+	icon = unknown
+	cost = 7
+	x = 2
+	y = 1
+
+	relative_position_id = CL_sheng_chan_ji_shu_you_hua
+
+	prerequisite = {
+		focus = CL_sheng_chan_ji_shu_you_hua
+	}
+
+	prerequisite = {
+		focus = CL_ji_chu_wu_qi_yan_jiu
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 装甲研究
+shared_focus = {
+	id = CL_zhuang_jia_yan_jiu
+	icon = unknown
+	cost = 12
+	x = 2
+	y = 1
+
+	relative_position_id = CL_pei_yang_ji_shu_gong_ren
+
+	prerequisite = {
+		focus = CL_pei_yang_ji_shu_gong_ren
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 国立科学院
+shared_focus = {
+	id = CL_guo_li_ke_xue_yuan
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = CL_pei_yang_ji_shu_gong_ren
+
+	prerequisite = {
+		focus = CL_pei_yang_ji_shu_gong_ren
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 新时代的天界工业
+shared_focus = {
+	id = CL_xin_shi_dai_de_tian_jie_gong_ye
+	icon = unknown
+	cost = 12
+	x = 0
+	y = 3
+
+	relative_position_id = CL_sheng_chan_ji_shu_you_hua
+
+	prerequisite = {
+		focus = CL_tou_zi_min_yong_gong_ye
+	}
+
+	prerequisite = {
+		focus = CL_guo_li_ke_xue_yuan
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 现代化生产
+shared_focus = {
+	id = CL_xian_dai_hua_sheng_chan
+	icon = unknown
+	cost = 7
+	x = -3
+	y = 1
+
+	relative_position_id = CL_xin_shi_dai_de_tian_jie_gong_ye
+
+	prerequisite = {
+		focus = CL_xin_shi_dai_de_tian_jie_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 种族科技研究
+shared_focus = {
+	id = CL_zhong_zu_ke_ji_yan_jiu
+	icon = unknown
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = CL_xin_shi_dai_de_tian_jie_gong_ye
+
+	prerequisite = {
+		focus = CL_xin_shi_dai_de_tian_jie_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 神秘学研究
+shared_focus = {
+	id = CL_shen_mi_xue_yan_jiu
+	icon = unknown
+	cost = 12
+	x = 1
+	y = 1
+
+	relative_position_id = CL_xin_shi_dai_de_tian_jie_gong_ye
+
+	prerequisite = {
+		focus = CL_xin_shi_dai_de_tian_jie_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 补给改革
+shared_focus = {
+	id = CL_bu_ji_gai_ge
+	icon = unknown
+	cost = 7
+	x = 3
+	y = 1
+
+	relative_position_id = CL_xin_shi_dai_de_tian_jie_gong_ye
+
+	prerequisite = {
+		focus = CL_xin_shi_dai_de_tian_jie_gong_ye
+	}
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

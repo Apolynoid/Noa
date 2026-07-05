@@ -1,0 +1,24 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+focus_tree = {
+	id = CFA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CFA
+		}
+	}
+
+	shared_focus = CL_tian_jie_fa_zhan_ji_hua
+
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 2000 y = 1900 }
+	default = no
+
+	# 政治线
+	
+	
+	# 外交线
+}

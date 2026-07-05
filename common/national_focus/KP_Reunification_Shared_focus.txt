@@ -1,0 +1,411 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+# 再统一之路
+shared_focus = {
+	id = KP_zai_tong_yi_zhi_lu
+	icon = unknown
+	cost = 7
+	x = 29
+	y = 8
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 初步工业重组
+shared_focus = {
+	id = KP_chu_bu_gong_ye_chong_zu
+	icon = GFX_focus_generic_industry_1
+	cost = 7
+	x = -3
+	y = 1
+
+    relative_position_id = KP_zai_tong_yi_zhi_lu
+
+    prerequisite = {
+        focus = KP_zai_tong_yi_zhi_lu
+    }
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = KP_po_sui_de_he_tong_gong_ye_qu_idea
+			add_idea = KP_po_sui_de_he_tong_gong_ye_qu_a_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 重构铁路系统
+shared_focus = {
+	id = KP_chong_gou_tie_lu_xi_tong
+	icon = GFX_focus_generic_railroad
+	cost = 7
+	x = -2
+	y = 1
+
+    relative_position_id = KP_chu_bu_gong_ye_chong_zu
+
+    prerequisite = {
+        focus = KP_chu_bu_gong_ye_chong_zu
+    }
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = KP_po_sui_de_he_tong_gong_ye_qu_c_idea
+			}
+			swap_ideas = {
+				remove_idea = KP_po_sui_de_he_tong_gong_ye_qu_c_idea
+				add_idea = KP_po_sui_de_he_tong_gong_ye_qu_d_idea	
+			}
+		} else = {
+			swap_ideas = {
+				remove_idea = KP_po_sui_de_he_tong_gong_ye_qu_a_idea
+				add_idea = KP_po_sui_de_he_tong_gong_ye_qu_b_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 补充技术工人
+shared_focus = {
+	id = KP_bu_chong_ji_shu_gong_ren
+	icon = GFX_focus_production
+	cost = 7
+	x = 0
+	y = 1
+
+    relative_position_id = KP_chu_bu_gong_ye_chong_zu
+
+    prerequisite = {
+        focus = KP_chu_bu_gong_ye_chong_zu
+    }
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = KP_po_sui_de_he_tong_gong_ye_qu_b_idea
+			}
+			swap_ideas = {
+				remove_idea = KP_po_sui_de_he_tong_gong_ye_qu_b_idea
+				add_idea = KP_po_sui_de_he_tong_gong_ye_qu_d_idea	
+			}
+		} else = {
+			swap_ideas = {
+				remove_idea = KP_po_sui_de_he_tong_gong_ye_qu_a_idea
+				add_idea = KP_po_sui_de_he_tong_gong_ye_qu_c_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 基础设施投资
+shared_focus = {
+	id = KP_ji_chu_she_shi_tou_zi
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 7
+	x = 2
+	y = 1
+
+    relative_position_id = KP_chu_bu_gong_ye_chong_zu
+
+    prerequisite = {
+        focus = KP_chu_bu_gong_ye_chong_zu
+    }
+
+	completion_reward = {
+		every_core_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 完成工业重组
+shared_focus = {
+	id = KP_wan_cheng_gong_ye_chong_zu
+	icon = GFX_focus_generic_industry_2
+	cost = 7
+	x = 0
+	y = 2
+
+    relative_position_id = KP_chu_bu_gong_ye_chong_zu
+
+    prerequisite = {
+        focus = KP_chong_gou_tie_lu_xi_tong
+    }
+
+    prerequisite = {
+        focus = KP_bu_chong_ji_shu_gong_ren
+    }
+
+    prerequisite = {
+        focus = KP_ji_chu_she_shi_tou_zi
+    }
+
+	completion_reward = {
+		remove_ideas = KP_po_sui_de_he_tong_gong_ye_qu_d_idea
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 首都工业区
+shared_focus = {
+	id = KP_shou_du_gong_ye_qu
+	icon = GFX_focus_generic_industry_3
+	cost = 12
+	x = 0
+	y = 1
+
+    relative_position_id = KP_wan_cheng_gong_ye_chong_zu
+
+    prerequisite = {
+        focus = KP_wan_cheng_gong_ye_chong_zu
+    }
+
+	available = {
+		has_full_control_of_state = capital
+	}
+
+	completion_reward = {
+		var:capital = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 构建统一认同
+shared_focus = {
+	id = KP_gou_jian_tong_yi_ren_tong
+	icon = unknown
+	cost = 7
+	x = 3
+	y = 1
+
+    relative_position_id = KP_zai_tong_yi_zhi_lu
+
+    prerequisite = {
+        focus = KP_zai_tong_yi_zhi_lu
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 宣传攻势
+shared_focus = {
+	id = KP_xuan_chuan_gong_shi
+	icon = unknown
+	cost = 7
+	x = -2
+	y = 1
+
+    relative_position_id = KP_gou_jian_tong_yi_ren_tong
+
+    prerequisite = {
+        focus = KP_gou_jian_tong_yi_ren_tong
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 贿赂地区行政官员
+shared_focus = {
+	id = KP_hui_lu_di_qu_xing_zheng_guan_yuan
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 1
+
+    relative_position_id = KP_gou_jian_tong_yi_ren_tong
+
+    prerequisite = {
+        focus = KP_gou_jian_tong_yi_ren_tong
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 支持准军事组织
+shared_focus = {
+	id = KP_zhi_chi_zhun_jun_shi_zu_zhi
+	icon = unknown
+	cost = 7
+	x = 2
+	y = 1
+
+    relative_position_id = KP_gou_jian_tong_yi_ren_tong
+
+    prerequisite = {
+        focus = KP_gou_jian_tong_yi_ren_tong
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 夺取边界地区
+shared_focus = {
+	id = KP_duo_qu_bian_jie_di_qu
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 2
+
+    relative_position_id = KP_gou_jian_tong_yi_ren_tong
+
+    prerequisite = {
+        focus = KP_xuan_chuan_gong_shi
+        focus = KP_hui_lu_di_qu_xing_zheng_guan_yuan
+        focus = KP_zhi_chi_zhun_jun_shi_zu_zhi
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 渗透下玄武川
+shared_focus = {
+	id = KP_shen_tou_xia_xuan_wu_chuan
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 1
+
+    relative_position_id = KP_duo_qu_bian_jie_di_qu
+
+    prerequisite = {
+        focus = KP_duo_qu_bian_jie_di_qu
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 宣称唯一合法政府
+shared_focus = {
+	id = KP_xuan_cheng_wei_yi_he_fa_zheng_fu
+	icon = unknown
+	cost = 7
+	x = 0
+	y = 3
+
+    relative_position_id = KP_zai_tong_yi_zhi_lu
+
+    prerequisite = {
+        focus = KP_zai_tong_yi_zhi_lu
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 河童再统一
+shared_focus = {
+	id = KP_he_tong_zai_tong_yi
+	icon = unknown
+	cost = 12
+	x = 0
+	y = 2
+
+    relative_position_id = KP_xuan_cheng_wei_yi_he_fa_zheng_fu
+
+    prerequisite = {
+        focus = KP_xuan_cheng_wei_yi_he_fa_zheng_fu
+    }
+
+    prerequisite = {
+        focus = KP_shou_du_gong_ye_qu
+    }
+
+    prerequisite = {
+        focus = KP_shen_tou_xia_xuan_wu_chuan
+    }
+
+	completion_reward = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

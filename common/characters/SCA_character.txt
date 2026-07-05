@@ -1,6 +1,7 @@
 characters={
 	SCA_pachy ={
 		name = SCA_pachy
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_pachy.dds"
@@ -42,6 +43,7 @@ characters={
 	}
 	SCA_rem ={
 		name = SCA_rem
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_rem.dds"
@@ -89,6 +91,7 @@ characters={
 	}
 	SCA_flan ={
 		name = SCA_flan
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_flan.dds"
@@ -134,6 +137,7 @@ characters={
 	}
 	SCA_kak ={
 		name = SCA_kak
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_kak.dds"
@@ -175,6 +179,7 @@ characters={
 	}
 	SCA_mli ={
 		name = SCA_mli
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_mli.dds"
@@ -209,6 +214,7 @@ characters={
 	}
 	SCA_sky ={
 		name = SCA_sky
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_sky.dds"
@@ -243,6 +249,7 @@ characters={
 	}
 	SCA_yuugenmagan ={
 		name = SCA_yuugenmagan
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_yuugenmagan.dds"
@@ -264,6 +271,7 @@ characters={
 	}
 	SCA_council_leader ={ #帝国临时议会
 		name = SCA_council_leader
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SCA/SCA_regency_council.png"

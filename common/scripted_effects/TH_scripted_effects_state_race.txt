@@ -974,6 +974,18 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 2 }
 		set_variable = { ST_present_race = 2 }
 	}
+	575 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 9 }
+	}
+	576 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 0 }
+	}
+	578 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 9 }
+	}
 	579 = {
 		set_variable = { ST_origin_race = 0 }
 		set_variable = { ST_present_race = 0 }
@@ -985,6 +997,10 @@ Ge_race_setting = {
 	580 = {
 		set_variable = { ST_origin_race = 0 }
 		set_variable = { ST_present_race = 0 }
+	}
+	600 = {
+		set_variable = { ST_origin_race = 2 }
+		set_variable = { ST_present_race = 9 }
 	}
 
 	#TEG OTG NMN

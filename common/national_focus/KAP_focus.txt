@@ -1,0 +1,250 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+focus_tree = {
+	id = KAP_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KAP
+		}
+	}
+
+	shared_focus = KP_guo_fang_gong_ye_ji_hua
+	shared_focus = KP_zai_tong_yi_zhi_lu
+
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 1800 y = 1800 }
+	default = no
+
+	# 紧急状态
+	focus = {
+		id = KAP_jin_ji_zhuang_tai
+		icon = unknown
+		cost = 7
+		x = 22
+		y = 2
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 争取守矢承认
+	focus = {
+		id = KAP_zheng_qu_shou_shi_cheng_ren
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KAP_jin_ji_zhuang_tai
+
+		prerequisite = {
+			focus = KAP_jin_ji_zhuang_tai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢军事援助
+	focus = {
+		id = KAP_shou_shi_jun_shi_yuan_zhu
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KAP_zheng_qu_shou_shi_cheng_ren
+
+		prerequisite = {
+			focus = KAP_zheng_qu_shou_shi_cheng_ren
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 反共和主义宣传
+	focus = {
+		id = KAP_fan_gong_he_zhu_yi_xuan_chuan
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KAP_jin_ji_zhuang_tai
+
+		prerequisite = {
+			focus = KAP_jin_ji_zhuang_tai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 颂扬个体工匠
+	focus = {
+		id = KAP_song_yang_ge_ti_gong_jiang
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KAP_fan_gong_he_zhu_yi_xuan_chuan
+
+		prerequisite = {
+			focus = KAP_fan_gong_he_zhu_yi_xuan_chuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加强边界管控
+	focus = {
+		id = KAP_jia_qiang_bian_jie_guan_kong
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = KAP_jin_ji_zhuang_tai
+
+		prerequisite = {
+			focus = KAP_zheng_qu_shou_shi_cheng_ren
+		}
+
+		prerequisite = {
+			focus = KAP_fan_gong_he_zhu_yi_xuan_chuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 反共和主义圣战
+	focus = {
+		id = KAP_fan_gong_he_zhu_yi_sheng_zhan
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = KAP_jia_qiang_bian_jie_guan_kong
+
+		prerequisite = {
+			focus = KAP_jia_qiang_bian_jie_guan_kong
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 支持保守派暴动
+	focus = {
+		id = KAP_zhi_chi_bao_shou_pai_bao_dong
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = KAP_fan_gong_he_zhu_yi_sheng_zhan
+
+		prerequisite = {
+			focus = KAP_fan_gong_he_zhu_yi_sheng_zhan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 组建金鳞队
+	focus = {
+		id = KAP_zu_jian_jin_lin_dui
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = KAP_fan_gong_he_zhu_yi_sheng_zhan
+
+		prerequisite = {
+			focus = KAP_fan_gong_he_zhu_yi_sheng_zhan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 有机河童社会
+	focus = {
+		id = KAP_you_ji_he_tong_she_hui
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = KAP_fan_gong_he_zhu_yi_sheng_zhan
+
+		prerequisite = {
+			focus = KAP_fan_gong_he_zhu_yi_sheng_zhan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+  	
+}

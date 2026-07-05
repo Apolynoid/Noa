@@ -1,0 +1,20 @@
+LIL_yonghenhuahai_dy = {
+	icon = xxx
+
+	state_production_speed_infrastructure_factor = -0.95
+	recruitable_population_factor = 0.25
+}
+LIL_yonghenhuahai_lingli_dy = {
+	PO_influence_factor = LIL_yonghenhuahai_lingli
+}
+LIL_leyuanfazhanjihua_dy = {
+	icon = zengechengshi
+	enable = { always = yes }
+	production_factory_efficiency_gain_factor = LIL_shengchangxiaolv
+	production_speed_buildings_factor = LIL_jianzaosudu
+	industrial_capacity_factory = LIL_gongchangchanchu
+	research_speed_factor = LIL_keyansudu
+	consumer_goods_factor = LIL_xiaofeiping
+}
+
+

@@ -61,9 +61,9 @@
     }
 
     add_ideas = {
-        NTR_bu_wen_ding_de_gong_he_guo_idea
-        NTR_he_tong_de_yan_jiu_neng_li_idea
-        NTR_min_bing_idea
+        KP_zai_tong_yi_zhi_meng_idea
+        KP_po_sui_de_he_tong_gong_ye_qu_idea
+        KP_he_tong_de_yan_jiu_neng_li_idea
     }
     
     set_politics = {

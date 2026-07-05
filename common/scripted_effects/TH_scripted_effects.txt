@@ -134,20 +134,6 @@ country_value_calculator_and_manpower_gainer = {
     set_variable = { all_value_plus_manpower = manpower_value}
     add_to_variable = { all_value_plus_manpower = all_value}
 
-    set_variable = { RESISTANCE_stability = 0 }
-    every_owned_state = {
-        limit = {
-            resistance > 90
-            not = {
-                is_core_of = ROOT
-            }
-        }
-        add_to_variable = { ROOT.RESISTANCE_stability = THIS.state_value }
-    }
-    set_temp_variable = { t = all_value_plus_manpower }
-    divide_variable = { RESISTANCE_stability = t }
-    divide_variable = { RESISTANCE_stability = -1 }
-
     CO_auto_core = yes
 
     if = {
@@ -1118,7 +1104,6 @@ startup_manu = {
     WAK = {add_ideas = WAK_manu2 }
     KRD = {add_ideas = KRD_manu2 }
     WHR = {add_ideas = WHR_manu2 }
-    TBA = {add_ideas = TBA_manu2 }
     YAW = {add_ideas = YAW_manu2 }
     NAR = {add_ideas = NAR_manu2 }
 }

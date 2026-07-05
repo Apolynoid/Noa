@@ -1,6 +1,7 @@
 characters={
 	SGS_sun ={
 		name = SGS_sun
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SGS/SGS_sun.dds"
@@ -46,6 +47,7 @@ characters={
 	}
 	SGS_lunar ={
 		name = SGS_lunar
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SGS/SGS_lunar.dds"
@@ -91,6 +93,7 @@ characters={
 	}
 	SGS_star ={
 		name = SGS_star
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SGS/SGS_star.dds"

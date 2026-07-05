@@ -1,6 +1,7 @@
 characters={
 	SEJ_sej ={
 		name = SEJ_sej
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SEJ/SEJ_sej.dds"
@@ -44,6 +45,7 @@ characters={
 	}
 	SEJ_smm ={
 		name = SEJ_smm
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SEJ/SEJ_smm.dds"
@@ -93,6 +95,7 @@ characters={
 	}
 	NIB_nib ={
 		name = NIB_nib
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NIB/NIB_nib.dds"
@@ -136,6 +139,7 @@ characters={
 	}
 	RMI_rmi ={
 		name = RMI_rmi
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/RMI/RMI_rmi.dds"

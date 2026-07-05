@@ -1478,7 +1478,7 @@ focus_tree = {
 	# 革命教育
 	focus = {
 		id = KNA_ge_ming_jiao_yu
-		icon = GFX_focus_education
+		icon = GFX_focus_education_NOA
 		cost = 12
 		x = 0
 		y = 1
@@ -1766,10 +1766,9 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	
@@ -3814,10 +3813,9 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	

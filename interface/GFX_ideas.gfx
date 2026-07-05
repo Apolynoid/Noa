@@ -250,8 +250,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_TEG_cross_river"
-		texturefile = "gfx/interface/ideas/teg_cross_river.png"
+		name = "GFX_idea_TEG_interim_democracy"
+		texturefile = "gfx/interface/ideas/teg_interim_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_war_bond"
+		texturefile = "gfx/interface/ideas/teg_war_bond.png"
 	}
 
 	spriteType = {

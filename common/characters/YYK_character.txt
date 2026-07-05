@@ -1,6 +1,7 @@
 characters={
 	YYK_yyk ={
 		name = YYK_yyk
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YYK/YYK_yyk.dds"
@@ -52,6 +53,7 @@ characters={
 	}
 	YYK_youmu ={
 		name = YYK_youmu
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YYK/YYK_youmu.dds"
@@ -93,6 +95,7 @@ characters={
 	}
 	YYK_yok ={
 		name = YYK_yok
+		can_be_captured = no
 		portraits = { 
 			civilian={
 				large="gfx/leaders/YYK/YYK_yok.dds"
@@ -118,6 +121,7 @@ characters={
 	}
 	UND_kana ={
 		name = UND_kana
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/UND/UND_kana.dds"

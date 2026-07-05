@@ -1,6 +1,7 @@
 characters={
 	TKM_kog ={
 		name = TKM_kog
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TKM/TKM_kog.dds"
@@ -42,6 +43,7 @@ characters={
 	}
 	TKM_benben ={
 		name = TKM_benben
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TKM/TKM_benben.dds"
@@ -80,6 +82,7 @@ characters={
 	}
 	TKM_yatsuhashi ={
 		name = TKM_yatsuhashi
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TKM/TKM_yatsuhashi.dds"
@@ -121,6 +124,7 @@ characters={
 	}
 	TKM_raiko ={
 		name = TKM_raiko
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TKM/TKM_raiko.dds"
@@ -166,6 +170,7 @@ characters={
 	}
 	TKM_kokoro ={
 		name = TKM_kokoro
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TKM/TKM_kokoro.dds"

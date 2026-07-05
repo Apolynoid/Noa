@@ -1,0 +1,121 @@
+ideas = {
+	country = {
+		# 再统一之梦
+		KP_zai_tong_yi_zhi_meng_idea = {
+			picture = unknown
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+			}
+		}
+
+		# 破碎的河童工业区
+		KP_po_sui_de_he_tong_gong_ye_qu_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.1
+				production_speed_rail_way_factor = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		KP_po_sui_de_he_tong_gong_ye_qu_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_rail_way_factor = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		KP_po_sui_de_he_tong_gong_ye_qu_b_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		KP_po_sui_de_he_tong_gong_ye_qu_c_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_rail_way_factor = -0.15
+			}
+		}
+
+		KP_po_sui_de_he_tong_gong_ye_qu_d_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		# 河童的研究能力
+	    KP_he_tong_de_yan_jiu_neng_li_idea = {
+	    	picture = jap_duplicate_research
+			modifier = {
+				research_speed_factor = 0.05
+			}
+	    }
+
+		# 国防工业计划
+		KP_guo_fang_gong_ye_ji_hua_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		KP_guo_fang_gong_ye_ji_hua_a_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		KP_guo_fang_gong_ye_ji_hua_b_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+
+		KP_guo_fang_gong_ye_ji_hua_c_idea = {
+			picture = SOV_second_five_year_plan
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.1
+			}
+		}
+
+		# 现代兵役制
+		KP_xian_dai_bing_yi_zhi_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.03
+			}
+		}
+
+		KP_xian_dai_bing_yi_zhi_a_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.03
+				breakthrough_factor = 0.1
+			}
+		}
+
+		KP_xian_dai_bing_yi_zhi_b_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.03
+				breakthrough_factor = 0.1
+				custom_modifier_tooltip = KP_kappa_medicine_tt
+			}
+		}
+	}
+}

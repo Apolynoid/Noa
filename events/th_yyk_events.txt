@@ -355,10 +355,9 @@ country_event = {
 		name = yyk.108.1
 		add_stability = 0.03
 		army_experience = 30
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.4
-			uses = 1
-			category = land_doctrine
+		add_mastery = {
+			amount = 40
+			folder = land
 		}
 		add_tech_bonus = {
 			bonus = 1
@@ -379,10 +378,9 @@ country_event = {
 		name = yyk.109.1
 		add_stability = 0.05
 		army_experience = 50
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.7
-			uses = 1
-			category = land_doctrine
+		add_mastery = {
+			amount = 70
+			folder = land
 		}
 		add_tech_bonus = {
 			bonus = 1

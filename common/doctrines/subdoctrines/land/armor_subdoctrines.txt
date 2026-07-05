@@ -1,0 +1,133 @@
+excellent_soldier = {
+    track = armor
+    name = SUBDOCTRINE_EXCELLENT_SOLDIER
+    description = SUBDOCTRINE_EXCELLENT_SOLDIER_DESC
+    icon = GFX_doctrine_commandos_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    category_shield = {
+		soft_attack = 0.05
+		breakthrough = 0.1
+	}
+
+    rewards = {
+        armored_offensive = {
+        #1
+            category_shield = {
+				soft_attack = 0.1
+				defense = 0.1
+			}
+        }
+        armored_breakthrough = {
+        #2
+            category_shield = {
+                breakthrough = 0.1
+            }
+        }
+        fire_brigade = {
+        #3
+            category_primary = {
+				max_organisation = 5
+			}
+			category_shield = {
+                max_organisation = 10
+            }
+        }
+        independent_combat_unit = {
+        #4
+            category_shield = {
+                supply_consumption = -0.05
+            }
+			sp_houfangyiliao = {
+				casualty_trickleback = 0.05
+			}
+        }
+        armor_engagement = {
+        #5
+            category_shield = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				ap_attack = 0.1
+			}
+        }
+    }
+}
+
+combined_arms = {
+    track = armor
+    name = SUBDOCTRINE_COMBINED_ARMS
+    description = SUBDOCTRINE_COMBINED_ARMS_DESC
+    icon = GFX_doctrine_combined_arms_medium
+
+    xp_cost = 75
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 1
+    }
+
+    category_shield = {
+		soft_attack = 0.05
+		defense = 0.1
+	}
+
+    rewards = {
+        armor_streamline = {
+        #1
+            equipment_bonus = {
+                armor = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
+        }
+        armored_strongpoints = {
+        #2
+            category_shield = {
+                breakthrough = 0.05
+            }
+			category_primary = {
+				breakthrough = 0.1
+			}
+        }
+        armored_reserve = {
+        #3
+			category_shield = {
+				breakthrough = 0.05
+                max_organisation = 5
+            }
+        }
+        armored_wave = {
+        #4
+            category_shield = {
+                max_organisation = 5
+				default_morale = 0.2
+            }
+			sp_houfangyiliao = {
+				casualty_trickleback = 0.05
+			}
+        }
+        continuous_deployment = {
+        #5
+            category_shield = {
+				soft_attack = 0.1
+				max_organisation = 5
+				default_morale = 0.2
+			}
+        }
+    }
+}

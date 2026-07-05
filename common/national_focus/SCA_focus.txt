@@ -1,4 +1,5 @@
 #!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
 focus_tree = {
   id = SCA_focus
   country = {
@@ -1950,11 +1951,10 @@ focus_tree = {
     }
 
     completion_reward = {
-      add_doctrine_cost_reduction = {
-        cost_reduction = 0.5
-        uses = 1
-        category = land_doctrine
-      }
+      add_mastery = {
+				amount = 50
+				folder = land
+			}
     }
 
     ai_will_do = {

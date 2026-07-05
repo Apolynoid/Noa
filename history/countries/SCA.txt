@@ -57,7 +57,7 @@
     }
 }
 146.1.1={
-    set_country_flag = bunengqie_fandong
+    set_country_flag = bunengsuiyiqiehuanzhengti
     oob = "SCA_146"
     # give_guarantee = GRS
     set_major = yes

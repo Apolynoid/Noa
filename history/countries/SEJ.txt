@@ -76,9 +76,7 @@
 }
 146.1.1={
     add_manpower = 100
-    set_country_flag = bunengqie_guli
-    set_country_flag = bunengqie_oldorder
-    set_country_flag = bunengqie_oldgenso
+    set_country_flag = bunengsuiyiqiehuanzhengti
     oob = "SEJ_146"
     set_major = yes
     add_ideas = {

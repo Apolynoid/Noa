@@ -183,8 +183,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_education"
-		texturefile = "gfx/interface/goals/focus_generic_education.png"			
+		name = "GFX_focus_education_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_education_NOA.png"			
 	}
 
 	SpriteType = {

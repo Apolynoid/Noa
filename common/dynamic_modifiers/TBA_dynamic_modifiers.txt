@@ -1,0 +1,7 @@
+gerongchongbai_dy = {
+	stability_factor = TES_chongbai_wendingdu
+	industrial_capacity_factory = TES_chongbai_changchu
+}
+shichangshenzhili_dy = {
+	consumer_goods_factor = TBA_xiaofei
+}

@@ -1259,7 +1259,7 @@ focus_tree = {
 	# 教育改革
 	focus = {
 		id = NMS_jiao_yu_gai_ge
-		icon = GFX_focus_education
+		icon = GFX_focus_education_NOA
 		cost = 7
 		x = 0
 		y = 2
@@ -1448,10 +1448,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = special_operations_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
+				grand_doctrine = special_operations
 			}
 		}
 	
@@ -1568,10 +1568,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = fire_support_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
+				grand_doctrine = fire_support
 			}
 		}
 	
@@ -1961,10 +1961,9 @@ focus_tree = {
 		}
 	
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	

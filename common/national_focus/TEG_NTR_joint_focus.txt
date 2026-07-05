@@ -1,0 +1,444 @@
+# 天狗-河童特殊关系
+joint_focus = {
+	id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	x = 0
+	y = 0
+
+	offset = {
+		trigger = {
+			has_focus_tree = TEG_focus
+		}
+		x = 21
+		y = 4
+	}
+
+	offset = {
+		trigger = {
+			has_focus_tree = NTR_focus
+		}
+		x = 22
+		y = 6
+	}
+
+	cost = 3
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	allow_branch = {
+		OR = {
+			tag = TEG
+			tag = NTR
+		}
+	}
+
+	completion_reward = {
+		add_political_power = 50
+	}
+}
+
+# 联合建设委员会
+joint_focus = {
+	id = TEG_NTR_lian_he_jian_she_wei_yuan_hui
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi 
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = -2
+	y = 1
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 妖怪山国防一体化
+joint_focus = {
+	id = TEG_NTR_yao_guai_shan_guo_fang_yi_ti_hua
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_lian_he_jian_she_wei_yuan_hui 
+	}
+
+	relative_position_id = TEG_NTR_lian_he_jian_she_wei_yuan_hui
+
+	x = 0
+	y = 1
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 民主同盟联席会议
+joint_focus = {
+	id = TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi 
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = 0
+	y = 1
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 联合演习
+joint_focus = {
+	id = TEG_NTR_lian_he_yan_xi
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi 
+	}
+
+	relative_position_id = TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi
+
+	x = 0
+	y = 1
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 妖怪山联合研究所
+joint_focus = {
+	id = TEG_NTR_yao_guai_shan_lian_he_yan_jiu_suo
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi 
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = 2
+	y = 1
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 妖怪山数学流派
+joint_focus = {
+	id = TEG_NTR_yao_guai_shan_shu_xue_liu_pai
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_yao_guai_shan_lian_he_yan_jiu_suo 
+	}
+
+	relative_position_id = TEG_NTR_yao_guai_shan_lian_he_yan_jiu_suo
+
+	x = 0
+	y = 1
+
+	cost = 12
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 同盟国防预算
+joint_focus = {
+	id = TEG_NTR_tong_meng_guo_fang_yu_suan
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_yao_guai_shan_guo_fang_yi_ti_hua 
+	}
+
+	prerequisite = {
+		focus = TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = -1
+	y = 3
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 同盟武器标准
+joint_focus = {
+	id = TEG_NTR_tong_meng_wu_qi_biao_zhun
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_yao_guai_shan_lian_he_yan_jiu_suo 
+	}
+
+	prerequisite = {
+		focus = TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = 1
+	y = 3
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+# 宣布河童正统性
+joint_focus = {
+	id = TEG_NTR_xuan_bu_he_tong_zheng_tong_xing
+	icon = unknown
+
+	text_icon = NORDIC_focus_style
+
+	prerequisite = { 
+		focus = TEG_NTR_tong_meng_guo_fang_yu_suan
+	}
+
+	prerequisite = {
+		focus = TEG_NTR_tong_meng_wu_qi_biao_zhun
+	}
+
+	relative_position_id = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
+
+	x = 0
+	y = 4
+
+	cost = 7
+
+	available = {
+		OR = {
+			original_tag = TEG
+			original_tag = NTR
+		}
+	}
+
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	completion_reward_joint_originator = {
+		
+	}
+
+	completion_reward = {
+		
+	}
+}

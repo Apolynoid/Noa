@@ -16,3 +16,23 @@ cirnos_perfect_maths_classroom = {
 	}
 }
 
+make_human_great_again = {
+	possible = {
+		original_tag = SRB
+	}
+
+	happened = {
+		owns_state = 246
+		NMS = {
+			NOA_is_independent = no
+		}
+		223 = {
+			owner = {
+				OR = {
+					original_tag = SRB
+					is_ally_with = SRB
+				}
+			}
+		}
+	}
+}

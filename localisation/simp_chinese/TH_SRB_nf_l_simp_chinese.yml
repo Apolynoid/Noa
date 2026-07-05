@@ -189,12 +189,12 @@ SRB_HUM_transfer_to_SRB_tt:0 "§Y作为[SRB.GetName]继续游戏§!"
 SRB_HUM_game_over_warning_tt:0 "§R[SRB.GetName]吞并[HUM.GetName]，游戏结束§!"
 
 SRB_cancelled_investment_tt:0 "§R取消投资§!"
-SRB_cancel_investmeny_tt:0 "§R取消§!对[SRB.GetNameWithFlag]的投资。"
+SRB_cancel_investment_tt:0 "§R取消§!对[SRB.GetNameWithFlag]的投资。"
 SRB_influence_under_50_tt:0 "对[SRB.GetNameWithFlag]的影响力低于§Y50§!"
 SRB_influence_over_50_tt:0 "对[SRB.GetNameWithFlag]的影响力高于§Y50§!"
 SRB_influence_over_75_tt:0 "对[SRB.GetNameWithFlag]的影响力高于§Y75§!"
 SRB_add__SRB_influence_plus__influence_tt:0 "增加对[SRB.GetNameWithFlag]的§Y[?SRB_influence_plus]§!点影响力"
-SRB_no_influence_gain_tt:0 "相应国家无法获得§Y影响力§!增长"
+SRB_no_influence_gain_tt:0 "相应国家无法获得每月§Y影响力§!自然增长"
 SRB_diplomacy_end_tt:0 "外交窗口§Y结束§!，影响力§Y不再§!发生变化。"
 
 SRB_diplomacy_end_flag:0 "外交窗口已经结束"
@@ -211,5 +211,5 @@ SRB_suo_duan_wai_jiao_chuang_kou:0 "缩短外交窗口"
 
 SRB_south_gensokyo_treaty_of_defense:0 "南幻想乡防御条约"
 
-MRS_DAWN_DESC:0 "大结界危机激化了魔法森林中的种族矛盾，这些种族矛盾将魔法使引向了战争，而魔法使在复权战争中的战败标志着魔法使在新时代的没落。战后，魔法森林虽然仍然作为统一政治实体存在，但魔法使已经失去的往日的支配地位，其他种族不仅得到了期望已久的自治权，在魔女议会中也得到了相应的席位。然而战后的魔女联盟依然危机四伏，各方强权争相投资议会中自己中意的派系，希望将魔法森林纳入势力范围，进而控制魔法森林丰富的资源。雾雨魔理沙作为大魔女的地位不断在议会中受到挑战，各派系对魔法森林的未来各执己见，在魔女议会中争论不休。魔女联盟的未来仍然悬而未决……"
+SRB_DAWN_DESC:0 "神灵庙在复权战争中无视妖怪联军警告维持了与人类的贸易，因而在战后成为了妖怪联军的制裁目标，不得不接受苛刻的《军备限制条约》。战后，失去了最大贸易伙伴的神灵庙经济迅速衰退，同时被经济增长掩盖的行政僵化、军事落后等问题也暴露出来。但妖怪联军随后的迅速分裂给了神灵庙机会。通过在幻想乡强权间的外交斡旋与商议贸易协定，神灵庙不仅可以获得发展急需的投资，甚至可能通过外交途径废除《军备限制条约》。神灵庙的未来就在这样一根钢索上——一边是被强权抛弃，缺少投资带来的慢性死亡，而另一侧是被强权支配，被迫卷入幻想乡纷争的万丈深渊……"
 introduce_SRB_page1:0 "§Y[SRB.GetName]§!原本是§Y$SRB_mik$§!为了修行所建的道观，同时也接纳部分人类信徒。在138季的§Y妖怪山战争§!中，§Y[NMS.GetName]§!与§Y[SRB.GetName]§!组建了§Y道佛联邦§!，接纳来自妖怪山的战争难民。然而，在§Y复权战争§!中，支持妖怪的§Y[NMS.GetName]§!与支持人类的§Y[SRB.GetName]§!分道扬镳，§Y道佛联邦§!解散。§Y[NMS.GetName]§!境内的人类纷纷流向§Y[SRB.GetName]§!，或者直接加入了人类军队。在这些人类的影响下，§Y[SRB.GetName]§!虽然没有直接加入§Y复权战争§!，但在战争期间无视了妖怪联军的警告，维持了与人类的贸易往来。然而局势很快变得对人类不利，§Y复权战争§!最终以妖怪联军的胜利而告终，而这成为了§Y[SRB.GetName]§!衰落的开始。在战后，妖怪联军确定了对人类的制裁条件后，在战时长期与人类维持贸易关系的§Y[SRB.GetName]§!很快成为了下一个制裁目标。最终，经过漫长的谈判，§Y[SRB.GetName]§!最终同意接受苛刻的§Y《军备限制条约》§!，以换取妖怪联军不进行经济制裁与军事干涉的承诺。\n\n战后，失去了最大贸易伙伴的§Y[SRB.GetName]§!经济迅速下滑，几乎到了崩溃边缘。同时，在§Y复权战争§!中支持了错误的一方使得§Y[SRB.GetName]§!在战后的秩序中没有一席之地，既不能扩大自己的影响力，也很难在短时间内找到新的贸易合作对象。不仅如此，战前被贸易带来的经济增长掩盖的行政与军事问题浮出水面。§Y[SRB.GetName]§!的行政结构早已远远落后于幻想乡的先进水平，行政官僚间权责划分不清，§Y行政院§!作为§Y[SRB.GetName]§!名义上的最高行政机关，下达的行政命令却往往拖延许久才能得到执行，甚至于完全得不到执行。军事上，虽然§Y[SRB.GetName]§!战前与人类保持了贸易往来，但人类却对军事组织与武器严格保密，只向§Y[SRB.GetName]§!分享的极少量的武器研发蓝图。不过，§Y动荡的幻想乡局势§!为§Y[SRB.GetName]§!提供了新的机会。§Y[SCA.GetName]§!与§Y[CIR.GetName]§!的公开对立无疑使双方，以及§Y雾之湖§!边的强权，都需要大量战略资源，而§Y[SRB.GetName]§!的§Y农业产出§!可以极为高效的润滑这些强权的战争机器。§Y[SRB.GetName]§!偏远的地理位置也给了这些强权放松戒备的理由，从而使得§Y[SRB.GetName]§!拥有在强权间斡旋，出口§Y农业产出§!换取发展重建所急需的投资的权利，甚至通过谈判解除§Y《军备限制条约》§!也并非不可能。\n\n§Y[SRB.GetName]§!的未来就在这样一根钢索上——一边是被强权抛弃，缺少投资带来的发展停滞，另一边是过于依赖强权，沦为强权附庸，被迫卷入幻想乡斗争带来的毁灭。而§Y[SRB.GetName]§!的对岸仍在迷雾中……"

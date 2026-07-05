@@ -47,7 +47,7 @@ equipments = {
 		air_attack = 3
 
 		#Misc Abilities
-		reliability = 0.6
+		reliability = 0.7
 		maximum_speed = 12#4
 
 		#Space taken in convoy

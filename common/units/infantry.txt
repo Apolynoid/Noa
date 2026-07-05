@@ -30,6 +30,9 @@ sub_units = {
 		}
 		
 		combat_width = 35
+
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = yes
 		
 		#Size Definitions
 		max_strength = 40
@@ -75,6 +78,9 @@ sub_units = {
 		}
 		
 		combat_width = 35
+
+		allow_in_army_hq = yes
+		allow_in_non_army_hq = yes
 		
 		#Size Definitions
 		max_strength = 50

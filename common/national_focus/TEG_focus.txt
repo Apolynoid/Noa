@@ -1,2327 +1,1905 @@
 #!gfx:interface\GFX_goals.gfx
 #!gfx:interface\replace\NOA_GFX_goals.gfx
 focus_tree = {
-  id = TEG_focus
-  country = {
-    factor = 0
-    modifier = {
-      add = 10
-      tag = TEG
-    }
-  }
+	id = TEG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TEG
+		}
+	}
 
-  shared_focus = ty_medium_main 
+	shared_focus = TEG_NTR_tian_gou_he_tong_te_shu_guan_xi
 
-  continuous_focus_position = { x = 20 y = 2200 }
-  default = no
-  # 解决天魔线
-  # 解决天魔问题
-  focus = {
-      id = TEG_jie_jue_tian_mo_wen_ti
-      icon = GFX_focus_attack_OTG
-      cost = 7
-      x = 4
-      y = 0
+	shared_focus = ty_medium_main 
 
-      available ={
-        is_subject = no
-      }
+	continuous_focus_position = { x = 20 y = 2200 }
+	default = no
 
-      will_lead_to_war_with = OTG
+	# 政治线
+	# 大选
+	focus = {
+		id = TEG_da_xuan
+		icon = unknown
+		cost = 7
+		x = 13
+		y = 1
 
-      completion_reward = {
-        add_political_power = 50
-        create_wargoal = {
-          type = civil_war
-          target = OTG
-        }
-        add_timed_idea = {
-          idea = TEG_kua_guo_he_liu_idea
-          days = 15
-        }
-      }
+		cancelable = no
 
-      ai_will_do = {
-        factor = 1
-      }
-  }
-
-  # 天狗内战的教训
-  focus = {
-    id = TEG_tian_gou_nei_zhan_de_jiao_xun
-    icon = GFX_goal_generic_more_territorial_claims
-    cost = 3
-    x = -2
-    y = 1
-
-    relative_position_id = TEG_jie_jue_tian_mo_wen_ti
-
-    available ={
-      NOT = {
-        country_exists = OTG
-      }
-    }
-
-    prerequisite = {
-      focus = TEG_jie_jue_tian_mo_wen_ti
-    }
-
-    completion_reward = {
-      remove_ideas = TEG_nei_zhan_dao_zhi_de_jun_shi_hun_luan_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 转移天魔科技文献
-  focus = {
-    id = TEG_zhuan_yi_tian_mo_ke_ji_wen_xian
-    icon = GFX_focus_book
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_tian_gou_nei_zhan_de_jiao_xun
-
-    prerequisite = {
-      focus = TEG_tian_gou_nei_zhan_de_jiao_xun
-    }
-
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 2
-        uses = 1
-        category = math
-      }
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = secret
-      }
-      add_breakthrough_progress = {
-				value = 1
-				specialization = specialization_race
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_idea
+				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
 			}
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 从内战中恢复
-  focus = {
-    id = TEG_cong_nei_zhan_zhong_hui_fu
-    icon = GFX_focus_recover_from_ruins
-    cost = 7
-    x = 2
-    y = 1
-
-    relative_position_id = TEG_jie_jue_tian_mo_wen_ti
-
-    available ={
-      NOT = {
-        country_exists = OTG
-      }
-    }
-
-    prerequisite = {
-      focus = TEG_jie_jue_tian_mo_wen_ti
-    }
-
-    completion_reward = {
-      remove_ideas = TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 天魔即天狗
-  focus = {
-    id = TEG_tian_mo_ji_tian_gou
-    icon = GFX_goal_generic_improve_relations
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_cong_nei_zhan_zhong_hui_fu
-
-    prerequisite = {
-      focus = TEG_cong_nei_zhan_zhong_hui_fu
-    }
-
-    completion_reward = {
-      OTG = {
-        every_core_state = {
-          add_core_of = TEG
-          remove_core_of = OTG
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 天魔领袖的命运
-  focus = {
-    id = TEG_tian_mo_ling_xiu_de_ming_yun
-    icon = TEG_focus_fate_of_tenmaku_leaders
-    cost = 3
-    x = 0
-    y = 3
-
-    relative_position_id = TEG_jie_jue_tian_mo_wen_ti
-
-    prerequisite = {
-      focus = TEG_zhuan_yi_tian_mo_ke_ji_wen_xian
-    }
-
-    prerequisite = {
-      focus = TEG_tian_mo_ji_tian_gou
-    }
-
-    completion_reward = {
-      country_event = {
-        id = teg.113
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 政治线
-  # 大选
-  focus = {
-    id = TEG_da_xuan
-    icon = GFX_focus_NOR_restore_public_trust_in_the_storting
-    cost = 3
-    x = 14
-    y = 0
-
-    available ={
-      has_global_flag = main_scenario
-    }
-
-    bypass = {
-      has_government = fandong
-    }
-
-    completion_reward = {
-      add_political_power = 100
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 60
-      }
-      hidden_effect = {
-        country_event = {
-          id = teg.101
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 射命丸文总统
-  focus = {
-    id = TEG_aya_zong_tong
-    icon = TEG_focus_president_aya
-    cost = 3
-    x = -4
-    y = 1
-
-    relative_position_id = TEG_da_xuan
-
-    available ={
-      custom_trigger_tooltip = {
-        tooltip = TEG_automatic_complete_tt
-        always = no
-      }
-    }
-
-    mutually_exclusive = {
-      focus = TEG_momiji_zhi_zheng
-      focus = TEG_hatate_zong_tong
-    }
-
-    prerequisite = {
-      focus = TEG_da_xuan
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_automatic_complete_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 倾向军事工业
-  focus = {
-    id = TEG_qing_xiang_jun_shi_gong_ye
-    icon = GFX_focus_military_construction
-    cost = 12
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_aya_zong_tong
-
-    prerequisite = {
-      focus = TEG_aya_zong_tong
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_aya
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
-        }
-      }
-      else = {
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_b_idea
-      }
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 60
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 天狗志愿军
-  focus = {
-    id = TEG_tian_gou_zhi_yuan_jun
-    icon = GFX_focus_volunteer_army
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_qing_xiang_jun_shi_gong_ye
-
-    prerequisite = {
-      focus = TEG_qing_xiang_jun_shi_gong_ye
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_aya
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      add_ideas = TEG_tian_gou_zhi_yuan_jun_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 鼓励民众参与政治
-  focus = {
-    id = TEG_gu_li_min_zhong_can_yu_zheng_zhi
-    icon = GFX_focus_encourage_political_participation
-    cost = 7
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_aya_zong_tong
-
-    prerequisite = {
-      focus = TEG_aya_zong_tong
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_aya
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 30
-      }
-      add_stability = 0.1
-      add_war_support = 0.05
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 赋予议会更大权力
-  focus = {
-    id = TEG_fu_yu_yi_hui_geng_da_quan_li
-    icon = GFX_focus_parliament
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gu_li_min_zhong_can_yu_zheng_zhi
-
-    prerequisite = {
-      focus = TEG_gu_li_min_zhong_can_yu_zheng_zhi
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_aya
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
-        }
-      }
-      else = {
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_a_idea
-      }
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 60
-      }
-      add_ideas = TEG_kuo_da_yi_hui_quan_li_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 犬走椛执政
-  focus = {
-    id = TEG_momiji_zhi_zheng
-    icon = TEG_focus_momiji_hold_power
-    cost = 3
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_da_xuan
-
-    mutually_exclusive = {
-      focus = TEG_aya_zong_tong
-      focus = TEG_hatate_zong_tong
-    }
-
-    available ={
-      custom_trigger_tooltip = {
-        tooltip = TEG_automatic_complete_tt
-        always = no
-      }
-    }
-
-    prerequisite = {
-      focus = TEG_da_xuan
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_automatic_complete_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 公共安全委员会
-  focus = {
-    id = TEG_gong_gong_an_quan_wei_yuan_hui
-    icon = TEG_focus_public_safety_committee
-    cost = 3
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_momiji_zhi_zheng
-
-    available ={
-      custom_trigger_tooltip = {
-        tooltip = TEG_automatic_complete_tt
-        always = no
-      }
-    }
-
-    prerequisite = {
-      focus = TEG_momiji_zhi_zheng
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
-        }
-      }
-      else_if = {
-        limit = {
-          has_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
-        }
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_a_idea
-      }
-      else = {
-        add_political_power = 50
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 经济管控
-  focus = {
-    id = TEG_jing_ji_guan_kong
-    icon = GFX_focus_DEN_limited_regulations
-    cost = 3
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gong_gong_an_quan_wei_yuan_hui
-
-    available ={
-      custom_trigger_tooltip = {
-        tooltip = TEG_automatic_complete_tt
-        always = no
-      }
-    }
-
-    prerequisite = {
-      focus = TEG_gong_gong_an_quan_wei_yuan_hui
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
-        }
-      }
-      else_if = {
-        limit = {
-          has_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
-        }
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_b_idea
-      }
-      else = {
-        add_stability = 0.1
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 姬海棠果总统
-  focus = {
-    id = TEG_hatate_zong_tong
-    icon = TEG_focus_president_hatate
-    cost = 3
-    x = 4
-    y = 1
-
-    relative_position_id = TEG_da_xuan
-
-    available ={
-      custom_trigger_tooltip = {
-        tooltip = TEG_automatic_complete_tt
-        always = no
-      }
-    }
-
-    mutually_exclusive = {
-      focus = TEG_aya_zong_tong
-      focus = TEG_momiji_zhi_zheng
-    }
-
-    prerequisite = {
-      focus = TEG_da_xuan
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_automatic_complete_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 选拔政治精英
-  focus = {
-    id = TEG_xuan_ba_zheng_zhi_jing_ying
-    icon = GFX_focus_elite_politics
-    cost = 7
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_hatate_zong_tong
-
-    prerequisite = {
-      focus = TEG_hatate_zong_tong
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_hatate
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 30
-      }
-      add_political_power = 100
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 总统与议会分离
-  focus = {
-    id = TEG_zong_tong_yu_yi_hui_fen_li
-    icon = GFX_focus_president
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_xuan_ba_zheng_zhi_jing_ying
-
-    prerequisite = {
-      focus = TEG_xuan_ba_zheng_zhi_jing_ying
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_hatate
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_b_idea
-        }
-      }
-      else = {
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_a_idea
-      }
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 60
-      }
-      add_ideas = TEG_jing_ying_min_zhu_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 均衡工业发展
-  focus = {
-    id = TEG_jun_heng_gong_ye_fa_zhan
-    icon = GFX_focus_balanced_construction
-    cost = 12
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_hatate_zong_tong
-
-    prerequisite = {
-      focus = TEG_hatate_zong_tong
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_hatate
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      if = {
-        limit = {
-          has_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-        }
-        swap_ideas = {
-          remove_idea = TEG_cui_ruo_de_min_zhu_zhi_du_idea
-          add_idea = TEG_guo_du_min_zhu_zhi_du_a_idea
-        }
-      }
-      else = {
-        remove_ideas = TEG_guo_du_min_zhu_zhi_du_b_idea
-      }
-      add_days_mission_timeout = {
-        mission = TEG_min_zhong_bu_man
-        days = 60
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 民主兵工厂
-  focus = {
-    id = TEG_min_zhu_bing_gong_chang
-    icon = TEG_focus_arsenal_of_democracy
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_jun_heng_gong_ye_fa_zhan
-
-    prerequisite = {
-      focus = TEG_jun_heng_gong_ye_fa_zhan
-    }
-
-    available = {
-      has_country_leader = {
-        character = TEG_hatate
-        ruling_only = yes
-      }
-    }
-
-    completion_reward = {
-      add_ideas = TEG_min_zhu_bing_gong_chang_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 保卫共和国
-  focus = {
-    id = TEG_bao_wei_gong_he_guo
-    icon = TEG_focus_defend_the_republic
-    cost = 7
-    x = 0
-    y = 4
-
-    relative_position_id = TEG_da_xuan
-
-    prerequisite = {
-      focus = TEG_tian_gou_zhi_yuan_jun
-      focus = TEG_min_zhu_bing_gong_chang
-      focus = TEG_jing_ji_guan_kong
-    }
-
-    prerequisite = {
-      focus = TEG_fu_yu_yi_hui_geng_da_quan_li
-      focus = TEG_zong_tong_yu_yi_hui_fen_li
-      focus = TEG_jing_ji_guan_kong
-    }
-
-    completion_reward = {
-      add_ideas = TEG_bao_wei_gong_he_guo_idea
-    }
-
-    ai_will_do = {
-      factor = 100
-    }
-  }
-
-  # 传播民主
-  focus = {
-    id = TEG_chuan_bo_min_zhu
-    icon = TEG_focus_spread_democracy
-    cost = 3
-    x = -3
-    y = 1
-
-    relative_position_id = TEG_bao_wei_gong_he_guo
-
-    prerequisite = {
-      focus = TEG_bao_wei_gong_he_guo
-    }
-
-    completion_reward = {
-      unlock_decision_category_tooltip = TEG_min_zhu_wai_jiao
-      hidden_effect = {
-        TEG = {
-          add_to_array = {
-            array = TEG_friends
-            value = SGS
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = TKM
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = SEJ
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = CIR
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = LIL
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = MRS
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = ALI
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = NAR
-          }
-          add_to_array = {
-            array = TEG_friends
-            value = CLO
-          }
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 我们的潜在盟友
-  focus = {
-    id = TEG_wo_men_de_qian_zai_meng_you
-    icon = GFX_focus_radicalism
-    cost = 3
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_chuan_bo_min_zhu
-
-    prerequisite = {
-      focus = TEG_chuan_bo_min_zhu
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_befriend_radicalists_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 我们的传统盟友
-  focus = {
-    id = TEG_wo_men_de_chuan_tong_meng_you
-    icon = GFX_focus_reformism
-    cost = 3
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_chuan_bo_min_zhu
-
-    prerequisite = {
-      focus = TEG_chuan_bo_min_zhu
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_befriend_reformists_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 妖怪山经济合作
-  focus = {
-    id = TEG_yao_guai_shan_jing_ji_he_zuo
-    icon = GFX_focus_economic_cooperation
-    cost = 7
-    x = 0
-    y = 2
-
-    relative_position_id = TEG_chuan_bo_min_zhu
-
-    prerequisite = {
-      focus = TEG_wo_men_de_qian_zai_meng_you
-      focus = TEG_wo_men_de_chuan_tong_meng_you
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_economic_coorporation_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 增强民主同盟
-  focus = {
-    id = TEG_zeng_qiang_min_zhu_tong_meng
-    icon = GFX_focus_democracy
-    cost = 7
-    x = 0
-    y = 3
-
-    relative_position_id = TEG_chuan_bo_min_zhu
-
-    prerequisite = {
-      focus = TEG_yao_guai_shan_jing_ji_he_zuo
-    }
-
-    completion_reward = {
-      custom_effect_tooltip = TEG_strengthen_democracy_alliance_tt
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 应对威胁
-  focus = {
-    id = TEG_ying_dui_wei_xie
-    icon = GFX_focus_enemy_in_all_directions
-    cost = 7
-    x = 3
-    y = 1
-
-    relative_position_id = TEG_bao_wei_gong_he_guo
-
-    prerequisite = {
-      focus = TEG_bao_wei_gong_he_guo
-    }
-
-    available = {
-      OR = {
-        threat > 0.6
-        date > 149.1.1
-      }
-    }
-
-    completion_reward = {
-      add_war_support = 0.1
-    }
-
-    ai_will_do = {
-      factor = 100
-    }
-  }
-
-  # 战争经济动员
-  focus = {
-    id = TEG_zhan_zheng_jing_ji_dong_yuan
-    icon = GFX_focus_SWI_issue_war_bonds
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_ying_dui_wei_xie
-
-    prerequisite = {
-      focus = TEG_ying_dui_wei_xie
-    }
-
-    completion_reward = {
-      add_ideas = TEG_zhan_shi_jing_ji_idea
-      if = {
-        limit = {
-          has_idea = isolation
-        }
-        swap_ideas = {
-          remove_idea = isolation
-          add_idea = low_economic_mobilisation
-        }
-      }
-      if = {
-        limit = {
-          has_idea = civilian_economy
-        }
-        swap_ideas = {
-          remove_idea = civilian_economy
-          add_idea = low_economic_mobilisation
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 100
-    }
-  }
-
-  # 消除天界威胁
-  focus = {
-    id = TEG_xiao_chu_tian_jie_wei_xie
-    icon = GFX_focus_attack_TES
-    cost = 12
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_zhan_zheng_jing_ji_dong_yuan
-
-    prerequisite = {
-      focus = TEG_zhan_zheng_jing_ji_dong_yuan
-    }
-
-    available = {
-			is_subject = no
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+	
+	# 射命丸文总统
+	focus = {
+		id = TEG_she_ming_wan_wen_zong_tong
+		icon = unknown
+		cost = 1
+		x = -3
+		y = 1
+
+		relative_position_id = TEG_da_xuan
+
+		prerequisite = {
+			focus = TEG_da_xuan
 		}
 
-    bypass = {
-      TES = {
-        OR = {
-          is_in_faction_with = ROOT
-          exists = no
-          is_subject = yes
-          has_war_with = ROOT
-        }
-      }
-      CCA = {
-        OR = {
-          is_in_faction_with = ROOT
-          exists = no
-          is_subject = yes
-          has_war_with = ROOT
-        }
-      }
-    }
-
-    will_lead_to_war_with = TES
-    will_lead_to_war_with = CCA
-
-    completion_reward = {
-      create_wargoal = {
-        type = topple_government
-        target = TES
-      }
-      create_wargoal = {
-        type = topple_government
-        target = CCA
-      }
-      hidden_effect = {
-        set_country_flag = TEG_attack_TES_flag
-      }
-    }
-
-    ai_will_do = {
-      factor = 0
-      modifier = {
-        add = 100
-        has_war = no
-      }
-    }
-  }
-
-  # 解决守矢问题
-  focus = {
-    id = TEG_jie_jue_shou_shi_wen_ti
-    icon = GFX_focus_attack_MRY
-    cost = 12
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_zhan_zheng_jing_ji_dong_yuan
-
-    prerequisite = {
-      focus = TEG_zhan_zheng_jing_ji_dong_yuan
-    }
-
-    available = {
-			is_subject = no
+		mutually_exclusive = {
+			focus = TEG_ji_hai_tang_guo_zong_tong
 		}
 
-    bypass = {
-      MRY = {
-        OR = {
-          is_in_faction_with = ROOT
-          exists = no
-          is_subject = yes
-          has_war_with = ROOT
-        }
-      }
-      KAP = {
-        OR = {
-          is_in_faction_with = ROOT
-          exists = no
-          is_subject = yes
-          has_war_with = ROOT
-        }
-      }
-    }
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    will_lead_to_war_with = MRY
-    will_lead_to_war_with = KAP
+	# 共和国再就业法案
+	focus = {
+		id = TEG_gong_he_guo_zai_jiu_ye_fa_an
+		icon = GFX_focus_generic_full_employment
+		cost = 7
+		x = -1
+		y = 1
 
-    completion_reward = {
-      country_event = {
-        id = teg.103
-      }
-      hidden_effect = {
-        set_country_flag = TEG_attack_MRY_flag
-      }
-    }
+		relative_position_id = TEG_she_ming_wan_wen_zong_tong
 
-    ai_will_do = {
-      factor = 0
-      modifier = {
-        add = 100
-        has_war = no
-        has_country_flag = {
-          flag = TEG_attack_TES_flag
-          days > 30
-        }
-      }
-    }
-  }
-
-  # 进军红魔馆
-  focus = {
-    id = TEG_jin_jun_hong_mo_guan
-    icon = GFX_focus_attack_SCA
-    cost = 12
-    x = 0
-    y = 2
-
-    relative_position_id = TEG_zhan_zheng_jing_ji_dong_yuan
-
-    prerequisite = {
-      focus = TEG_xiao_chu_tian_jie_wei_xie
-    }
-
-    prerequisite = {
-      focus = TEG_jie_jue_shou_shi_wen_ti
-    }
-
-    available = {
-			is_subject = no
+		prerequisite = {
+			focus = TEG_she_ming_wan_wen_zong_tong
 		}
 
-    bypass = {
-      SCA = {
-        OR = {
-          is_in_faction_with = ROOT
-          exists = no
-          is_subject = yes
-          has_war_with = ROOT
-        }
-      }
-    }
-
-    available = {
-      has_war = no
-    }
-
-    will_lead_to_war_with = SCA
-
-    completion_reward = {
-      create_wargoal = {
-        type = topple_government
-        target = SCA
-      }
-    }
-
-    ai_will_do = {
-      factor = 0
-      modifier = {
-        add = 100
-        has_war = no
-        has_country_flag = {
-          flag = TEG_attack_MRY_flag
-          days > 30
-        }
-      }
-    }
-  }
-
-  # 军事线
-  # 共和国国防部
-  focus = {
-    id = TEG_gong_he_guo_guo_fang_bu
-    icon = GFX_goal_generic_military_sphere
-    cost = 3
-    x = 30
-    y = 0
-
-    available ={
-      has_global_flag = main_scenario
-    }
-
-    completion_reward = {
-      army_experience = 25
-      swap_ideas = {
-        remove_idea = TEG_can_mou_zong_bu_idea
-        add_idea = TEG_gong_he_guo_guo_fang_bu_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 先进训练方法
-  focus = {
-    id = TEG_xian_jin_xun_lian_fang_fa
-    icon = GFX_goal_generic_small_arms
-    cost = 7
-    x = -6
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_guo_fang_bu
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_guo_fang_bu
-    }
-
-    completion_reward = {
-      add_ideas = TEG_xian_jin_xun_lian_fang_fa_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 职业军官培训
-  focus = {
-    id = TEG_zhi_ye_jun_guan_pei_xun
-    icon = GFX_focus_generic_military_mission
-    cost = 7
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_xian_jin_xun_lian_fang_fa
-
-    prerequisite = {
-      focus = TEG_xian_jin_xun_lian_fang_fa
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_gong_he_guo_guo_fang_bu_idea
-        add_idea = TEG_gong_he_guo_guo_fang_bu_a_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 特种部队训练
-  focus = {
-    id = TEG_te_zhong_bu_dui_xun_lian
-    icon = GFX_goal_generic_special_forces
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_zhi_ye_jun_guan_pei_xun
-
-    prerequisite = {
-      focus = TEG_zhi_ye_jun_guan_pei_xun
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_tian_gou_te_zhong_bu_dui_idea
-        add_idea = TEG_tian_gou_te_zhong_bu_dui_a_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 适应妖怪山地形
-  focus = {
-    id = TEG_shi_ying_yao_guai_shan_di_xing
-    icon = GFX_focus_GRE_a_land_of_mountains
-    cost = 7
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_xian_jin_xun_lian_fang_fa
-
-    prerequisite = {
-      focus = TEG_xian_jin_xun_lian_fang_fa
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_xian_jin_xun_lian_fang_fa_idea
-        add_idea = TEG_xian_jin_xun_lian_fang_fa_a_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 发扬传统速度优势
-  focus = {
-    id = TEG_fa_yang_chuan_tong_su_du_you_shi
-    icon = GFX_goal_generic_cavalry
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_shi_ying_yao_guai_shan_di_xing
-
-    prerequisite = {
-      focus = TEG_shi_ying_yao_guai_shan_di_xing
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_xian_jin_xun_lian_fang_fa_a_idea
-        add_idea = TEG_xian_jin_xun_lian_fang_fa_b_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 后勤理论研究
-  focus = {
-    id = TEG_hou_qin_li_lun_yan_jiu
-    icon = GFX_focus_generic_truck
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_fa_yang_chuan_tong_su_du_you_shi
-
-    prerequisite = {
-      focus = TEG_fa_yang_chuan_tong_su_du_you_shi
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_xian_jin_xun_lian_fang_fa_b_idea
-        add_idea = TEG_xian_jin_xun_lian_fang_fa_c_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 战争宣传
-  focus = {
-    id = TEG_zhan_zheng_xuan_chuan
-    icon = GFX_focus_war_propaganda
-    cost = 3
-    x = -2
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_guo_fang_bu
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_guo_fang_bu
-    }
-
-    completion_reward = {
-      add_war_support = 0.1
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 公民军事训练
-  focus = {
-    id = TEG_gong_min_jun_shi_xun_lian
-    icon = GFX_focus_generic_manpower
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_zhan_zheng_xuan_chuan
-
-    prerequisite = {
-      focus = TEG_zhan_zheng_xuan_chuan
-    }
-
-    completion_reward = {
-      army_experience = 10
-      add_ideas = TEG_guang_fan_jun_shi_xun_lian_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 社会广泛动员
-  focus = {
-    id = TEG_she_hui_guang_fan_dong_yuan
-    icon = GFX_focus_generic_little_entente
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gong_min_jun_shi_xun_lian
-
-    prerequisite = {
-      focus = TEG_gong_min_jun_shi_xun_lian
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_guang_fan_jun_shi_xun_lian_idea
-        add_idea = TEG_guang_fan_dong_yuan_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 设立军备研究所
-  focus = {
-    id = TEG_she_li_jun_bei_yan_jiu_suo
-    icon = GFX_focus_science_institute
-    cost = 7
-    x = 2
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_guo_fang_bu
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_guo_fang_bu
-    }
-
-    completion_reward = {
-      add_ideas = TEG_jun_bei_yan_jiu_suo_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 步兵装备研究
-  focus = {
-    id = TEG_bu_bing_zhuang_bei_yan_jiu
-    icon = GFX_focus_focus_fra_maquis
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_she_li_jun_bei_yan_jiu_suo
-
-    prerequisite = {
-      focus = TEG_she_li_jun_bei_yan_jiu_suo
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_jun_bei_yan_jiu_suo_idea
-        add_idea = TEG_jun_bei_yan_jiu_suo_a_idea
-      }
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = infantry
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 火炮研究
-  focus = {
-    id = TEG_huo_pao_yan_jiu
-    icon = GFX_goal_generic_army_artillery2
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_bu_bing_zhuang_bei_yan_jiu
-
-    prerequisite = {
-      focus = TEG_bu_bing_zhuang_bei_yan_jiu
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_jun_bei_yan_jiu_suo_a_idea
-        add_idea = TEG_jun_bei_yan_jiu_suo_b_idea
-      }
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = artillery_tech
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 装甲研究
-  focus = {
-    id = TEG_zhuang_jia_yan_jiu
-    icon = GFX_goal_generic_build_tank
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_huo_pao_yan_jiu
-
-    prerequisite = {
-      focus = TEG_huo_pao_yan_jiu
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_jun_bei_yan_jiu_suo_b_idea
-        add_idea = TEG_jun_bei_yan_jiu_suo_c_idea
-      }
-      add_tech_bonus = {
-        bonus = 1
-        uses = 1
-        category = shield_weapons
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 共和国空军
-  focus = {
-    id = TEG_gong_he_guo_kong_jun
-    icon = GFX_goal_generic_air_fighter
-    cost = 3
-    x = 6
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_guo_fang_bu
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_guo_fang_bu
-    }
-
-    completion_reward = {
-      air_experience = 30
-      add_ideas = TEG_gong_he_guo_kong_jun_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 先进机体研究
-  focus = {
-    id = TEG_xian_jin_ji_ti_yan_jiu
-    icon = GFX_focus_generic_copy_plane_designs
-    cost = 7
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_kong_jun
-
-    prerequisite = {
-      focus = TEG_she_li_jun_bei_yan_jiu_suo
-    }
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_kong_jun
-    }
-
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 1.0
-        uses = 2
-        ahead_reduction = 1.0
-        category = air_equipment
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 整编航空俱乐部
-  focus = {
-    id = TEG_zheng_bian_hang_kong_ju_le_bu
-    icon = GFX_focus_generic_multi_role_aircraft
-    cost = 7
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_kong_jun
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_kong_jun
-    }
-
-    completion_reward = {
-      air_experience = 10
-      swap_ideas = {
-        remove_idea = TEG_gong_he_guo_kong_jun_idea
-        add_idea = TEG_gong_he_guo_kong_jun_a_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 空军经验总结
-  focus = {
-    id = TEG_kong_jun_jing_yan_zong_jie
-    icon = GFX_goal_generic_air_doctrine
-    cost = 7
-    x = 0
-    y = 2
-
-    relative_position_id = TEG_gong_he_guo_kong_jun
-
-    prerequisite = {
-      focus = TEG_xian_jin_ji_ti_yan_jiu
-    }
-
-    prerequisite = {
-      focus = TEG_zheng_bian_hang_kong_ju_le_bu
-    }
-
-    completion_reward = {
-      air_experience = 20
-      swap_ideas = {
-        remove_idea = TEG_gong_he_guo_kong_jun_a_idea
-        add_idea = TEG_gong_he_guo_kong_jun_b_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 工业线
-  # 进一步工业化
-  focus = {
-    id = TEG_jin_yi_bu_gong_ye_hua
-    icon = GFX_goal_generic_production
-    cost = 7
-    x = 30
-    y = 6
-
-    available ={
-      has_global_flag = main_scenario
-    }
-
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 1
-        uses = 2
-        category = civil
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 共和国公路网
-  focus = {
-    id = TEG_gong_he_guo_gong_lu_wang
-    icon = GFX_focus_generic_improve_roads
-    cost = 12
-    x = -6
-    y = 1
-
-    relative_position_id = TEG_jin_yi_bu_gong_ye_hua
-
-    prerequisite = {
-      focus = TEG_jin_yi_bu_gong_ye_hua
-    }
-
-    completion_reward = {
-      every_core_state = {
-        add_building_construction = {
-          type = infrastructure
-          level = 2
-          instant_build = yes
-        }
-        add_extra_state_shared_building_slots = 3
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 共和国铁路局
-  focus = {
-    id = TEG_gong_he_guo_tie_lu_ju
-    icon = GFX_focus_generic_railroad
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_gong_lu_wang
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_gong_lu_wang
-    }
-
-    completion_reward = {
-      add_ideas = TEG_gong_he_guo_tie_lu_ju_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 妖怪山资源勘探
-  focus = {
-    id = TEG_yao_guai_shan_zi_yuan_kan_tan
-    icon = GFX_goal_generic_construction2
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gong_he_guo_tie_lu_ju
-
-    prerequisite = {
-      focus = TEG_gong_he_guo_tie_lu_ju
-    }
-
-    completion_reward = {
-      add_ideas = TEG_yao_guai_shan_zi_yuan_kan_tan_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 现代化农业
-  focus = {
-    id = TEG_xian_dai_hua_nong_ye
-    icon = GFX_focus_SOV_breadbasket_of_the_union
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_yao_guai_shan_zi_yuan_kan_tan
-
-    prerequisite = {
-      focus = TEG_yao_guai_shan_zi_yuan_kan_tan
-    }
-
-    completion_reward = {
-      add_ideas = TEG_xian_dai_hua_nong_ye_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 规划工业建设
-  focus = {
-    id = TEG_gui_hua_gong_ye_jian_she
-    icon = GFX_goal_generic_construction
-    cost = 7
-    x = -2
-    y = 1
-
-    relative_position_id = TEG_jin_yi_bu_gong_ye_hua
-
-    prerequisite = {
-      focus = TEG_jin_yi_bu_gong_ye_hua
-    }
-
-    completion_reward = {
-      add_ideas = TEG_gong_ye_jian_she_gui_hua_idea
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 投资民用工业
-  focus = {
-    id = TEG_tou_zi_min_yong_gong_ye
-    icon = GFX_goal_generic_construct_civ_factory
-    cost = 12
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_gui_hua_gong_ye_jian_she
-
-    prerequisite = {
-      focus = TEG_gui_hua_gong_ye_jian_she
-    }
-
-    completion_reward = {
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = industrial_complex
-          level = 1
-          instant_build = yes
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 投资军用工业
-  focus = {
-    id = TEG_tou_zi_jun_yong_gong_ye
-    icon = GFX_goal_generic_construct_mil_factory
-    cost = 12
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_gui_hua_gong_ye_jian_she
-
-    prerequisite = {
-      focus = TEG_gui_hua_gong_ye_jian_she
-    }
-
-    completion_reward = {
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-      random_core_state = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = arms_factory
-          level = 1
-          instant_build = yes
-        }
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 鼓励民间工业发展
-  focus = {
-    id = TEG_gu_li_min_jian_gong_ye_fa_zhan
-    icon = GFX_goal_generic_production2
-    cost = 12
-    x = 0
-    y = 2
-
-    relative_position_id = TEG_gui_hua_gong_ye_jian_she
-
-    prerequisite = {
-      focus = TEG_tou_zi_min_yong_gong_ye
-    }
-
-    prerequisite = {
-      focus = TEG_tou_zi_jun_yong_gong_ye
-    }
-
-    completion_reward = {
-      add_offsite_building = {
-        type = industrial_complex
-        level = 2
-      }
-      add_offsite_building = {
-        type = arms_factory
-        level = 2
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 优化流水线
-  focus = {
-    id = TEG_you_hua_liu_shui_xian
-    icon = GFX_focus_production
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_gu_li_min_jian_gong_ye_fa_zhan
-
-    prerequisite = {
-      focus = TEG_gu_li_min_jian_gong_ye_fa_zhan
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_gong_ye_jian_she_gui_hua_idea
-        add_idea = TEG_gong_ye_jian_she_gui_hua_a_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 新工业计划
-  focus = {
-    id = TEG_xin_gong_ye_ji_hua
-    icon = GFX_focus_construction
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_you_hua_liu_shui_xian
-
-    prerequisite = {
-      focus = TEG_you_hua_liu_shui_xian
-    }
-
-    completion_reward = {
-      add_timed_idea = {
-        idea = TEG_xin_gong_ye_ji_hua_idea
-        days = 730
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 给予人类科学家公民权
-  focus = {
-    id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-    icon = GFX_goal_tfv_generic_tech_sharing
-    cost = 7
-    x = 2
-    y = 1
-
-    relative_position_id = TEG_jin_yi_bu_gong_ye_hua
-
-    prerequisite = {
-      focus = TEG_jin_yi_bu_gong_ye_hua
-    }
-
-    completion_reward = {
-      swap_ideas = {
-        remove_idea = TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea
-        add_idea = TEG_rong_ru_tian_gou_she_hui_de_ren_lei_ke_xue_jia_idea
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 基础科学进步
-  focus = {
-    id = TEG_ji_chu_ke_xue_jin_bu
-    icon = GFX_focus_basic_science
-    cost = 7
-    x = -1
-    y = 1
-
-    relative_position_id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-
-    prerequisite = {
-      focus = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-    }
-
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 1.0
-        uses = 2
-        category = math
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 应用科学进步
-  focus = {
-    id = TEG_ying_yong_ke_xue_jin_bu
-    icon = GFX_goal_generic_construct_civilian
-    cost = 7
-    x = 1
-    y = 1
-
-    relative_position_id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-
-    prerequisite = {
-      focus = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-    }
-
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 0.75
-        uses = 2
-        category = industrys
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 培养天狗科学家
-  focus = {
-    id = TEG_pei_yang_tian_gou_ke_xue_jia
-    icon = GFX_focus_research2
-    cost = 7
-    x = 0
-    y = 2
-
-    relative_position_id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
-
-    prerequisite = {
-      focus = TEG_ji_chu_ke_xue_jin_bu
-    }
-
-    prerequisite = {
-      focus = TEG_ying_yong_ke_xue_jin_bu
-    }
-
-    completion_reward = {
-      add_research_slot = 1
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-  }
-
-  # 种族科技研究
-  focus = {
-    id = TEG_zhong_zu_ke_ji_yan_jiu
-    icon = GFX_focus_racial_science
-    cost = 7
-    x = 0
-    y = 1
-
-    relative_position_id = TEG_pei_yang_tian_gou_ke_xue_jia
-
-    prerequisite = {
-      focus = TEG_pei_yang_tian_gou_ke_xue_jia
-    }
-
-    completion_reward = {
-      add_breakthrough_progress = {
-				value = 1
-				specialization = specialization_race
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
+				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_b_idea
 			}
-    }
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+	# 公共住房法案
+	focus = {
+		id = TEG_gong_gong_zhu_fang_fa_an
+		icon = GFX_focus_DEN_civilian_preparations
+		cost = 7
+		x = 0
+		y = 3
 
-  # 神秘学研究
-  focus = {
-    id = TEG_shen_mi_xue_yan_jiu
-    icon = GFX_goal_generic_secret_weapon
-    cost = 12
-    x = 0
-    y = 1
+		relative_position_id = TEG_gong_he_guo_zai_jiu_ye_fa_an
 
-    relative_position_id = TEG_zhong_zu_ke_ji_yan_jiu
+		prerequisite = {
+			focus = TEG_gong_he_guo_zai_jiu_ye_fa_an
+		}
 
-    prerequisite = {
-      focus = TEG_zhong_zu_ke_ji_yan_jiu
-    }
+		available = {
+			TEG_parliament_not_in_recess = yes
+		}
 
-    completion_reward = {
-      add_tech_bonus = {
-        bonus = 3.0
-        uses = 1
-        category = secret
-      }
-      add_tech_bonus = {
-        bonus = 1.5
-        uses = 1
-        category = secret
-      }
-    }
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = TEG_wei_ji_zhong_de_gong_he_guo_b_idea
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+	
+	# 姬海棠果总统
+	focus = {
+		id = TEG_ji_hai_tang_guo_zong_tong
+		icon = unknown
+		cost = 1
+		x = 3
+		y = 1
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+		relative_position_id = TEG_da_xuan
 
-  # 与河童合作
-  focus = {
-    id = TEG_yu_he_tong_he_zuo
-    icon = GFX_focus_befriend_NTR
-    cost = 3
-    x = 6
-    y = 1
+		prerequisite = {
+			focus = TEG_da_xuan
+		}
 
-    relative_position_id = TEG_jin_yi_bu_gong_ye_hua
+		mutually_exclusive = {
+			focus = TEG_she_ming_wan_wen_zong_tong
+		}
 
-    prerequisite = {
-      focus = TEG_jin_yi_bu_gong_ye_hua
-    }
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    completion_reward = {
-      TEG = {
-        add_opinion_modifier = {
-          target = NTR
-          modifier = TEG_yu_he_tong_he_zuo_op
-        }
-      }
-      NTR = {
-        add_opinion_modifier = {
-          target = TEG
-          modifier = TEG_yu_he_tong_he_zuo_op
-        }
-      }
-    }
+	# 军人权利法案
+	focus = {
+		id = TEG_jun_ren_quan_li_fa_an
+		icon = GFX_focus_generic_military_mission
+		cost = 7
+		x = 1
+		y = 1
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+		relative_position_id = TEG_ji_hai_tang_guo_zong_tong
 
-  # 援助NTR
-  focus = {
-    id = TEG_yuan_zhu_NTR
-    icon = GFX_focus_DEN_no_regulations
-    cost = 7
-    x = 0
-    y = 1
+		prerequisite = {
+			focus = TEG_ji_hai_tang_guo_zong_tong
+		}
 
-    relative_position_id = TEG_yu_he_tong_he_zuo
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
+				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_c_idea
+			}
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    prerequisite = {
-      focus = TEG_yu_he_tong_he_zuo
-    }
+	# 住房激励法案
+	focus = {
+		id = TEG_zhu_fang_ji_li_fa_an
+		icon = GFX_focus_SWE_hygienic_housing
+		cost = 7
+		x = 0
+		y = 3
 
-    completion_reward = {
-      NTR = {
-        add_offsite_building = {
-          type = industrial_complex
-          level = 4
-        }
-      }
-      add_timed_idea = {
-        idea = TEG_yuan_zhu_NTR_idea
-        days = 365
-      }
-    }
+		relative_position_id = TEG_jun_ren_quan_li_fa_an
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+		prerequisite = {
+			focus = TEG_jun_ren_quan_li_fa_an
+		}
 
-  # 与河童的科技交流
-  focus = {
-    id = TEG_yu_he_tong_de_ke_ji_jiao_liu
-    icon = GFX_goal_generic_scientific_exchange
-    cost = 7
-    x = 0
-    y = 1
+		available = {
+			TEG_parliament_not_in_recess = yes
+		}
 
-    relative_position_id = TEG_yuan_zhu_NTR
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = TEG_wei_ji_zhong_de_gong_he_guo_c_idea
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    prerequisite = {
-      focus = TEG_yuan_zhu_NTR
-    }
+	# 共和国宣传部
+	focus = {
+		id = TEG_gong_he_guo_xuan_chuan_bu
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
 
-    completion_reward = {
-      add_ideas = TEG_yu_he_tong_de_ke_ji_jiao_liu_idea
-    }
+		relative_position_id = TEG_da_xuan
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+		prerequisite = {
+			focus = TEG_she_ming_wan_wen_zong_tong
+			focus = TEG_ji_hai_tang_guo_zong_tong
+		}
 
-  # 邀请河童科学家
-  focus = {
-    id = TEG_yao_qing_he_tong_ke_xue_jia
-    icon = GFX_focus_invite_scientists
-    cost = 7
-    x = 0
-    y = 1
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 
-    relative_position_id = TEG_yu_he_tong_de_ke_ji_jiao_liu
+	# 共和国外交部
+	focus = {
+		id = TEG_gong_he_guo_wai_jiao_bu
+		icon = GFX_goal_generic_improve_relations
+		cost = 7
+		x = 0
+		y = 1
 
-    prerequisite = {
-      focus = TEG_yu_he_tong_de_ke_ji_jiao_liu
-    }
+		relative_position_id = TEG_gong_he_guo_xuan_chuan_bu
 
-    completion_reward = {
-      add_research_slot = 1
-    }
+		prerequisite = {
+			focus = TEG_gong_he_guo_xuan_chuan_bu
+		}
 
-    ai_will_do = {
-      factor = 1
-    }
-  }
+		completion_reward = {
+			add_political_power = 75
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 联系旧盟友
+	focus = {
+		id = TEG_lian_xi_jiu_meng_you
+		icon = unknown
+		cost = 3
+		x = -3
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_wai_jiao_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 南雾之湖使团
+	focus = {
+		id = TEG_nan_wu_zhi_hu_shi_tuan
+		icon = unknown
+		cost = 3
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_wai_jiao_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业合作计划
+	focus = {
+		id = TEG_gong_ye_he_zuo_ji_hua
+		icon = unknown
+		cost = 12
+		x = -2
+		y = 2
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_lian_xi_jiu_meng_you
+			focus = TEG_nan_wu_zhi_hu_shi_tuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与下克上的盟约
+	focus = {
+		id = TEG_yu_xia_ke_shang_de_meng_yue
+		icon = unknown
+		cost = 3
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_wai_jiao_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 接触春之妖精
+	focus = {
+		id = TEG_jie_chu_chun_zhi_yao_jing
+		icon = unknown
+		cost = 3
+		x = 3
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_wai_jiao_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 商议援助天界妖精
+	focus = {
+		id = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 2
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_yu_xia_ke_shang_de_meng_yue
+			focus = TEG_jie_chu_chun_zhi_yao_jing
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 幻想乡的民主兵工厂
+	focus = {
+		id = TEG_huan_xiang_xiang_de_min_zhu_bing_gong_chang
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = TEG_gong_he_guo_wai_jiao_bu
+
+		prerequisite = {
+			focus = TEG_gong_gong_zhu_fang_fa_an
+			focus = TEG_zhu_fang_ji_li_fa_an
+		}
+
+		prerequisite = {
+			focus = TEG_gong_ye_he_zuo_ji_hua
+			focus = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争经济动员
+	focus = {
+		id = TEG_zhan_zheng_jing_ji_dong_yuan
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_huan_xiang_xiang_de_min_zhu_bing_gong_chang
+
+		prerequisite = {
+			focus = TEG_huan_xiang_xiang_de_min_zhu_bing_gong_chang
+		}
+
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.5
+				threat > 0.3
+			}
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = isolation
+			}
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = isolation
+				add_idea = low_economic_mobilisation
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 消灭共和之敌
+	focus = {
+		id = TEG_xiao_mie_gong_he_zhi_di
+		icon = GFX_goal_generic_major_war
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_zhan_zheng_jing_ji_dong_yuan
+
+		prerequisite = {
+			focus = TEG_zhan_zheng_jing_ji_dong_yuan
+		}
+
+		available = {
+			OR = {
+				threat > 0.8
+				AND = {
+					date > 149.1.1
+					threat > 0.5
+				}
+				date > 150.1.1
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 解决天界威胁
+	focus = {
+		id = TEG_jie_jue_tian_jie_wei_xie
+		icon = GFX_focus_attack_TES
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TEG_xiao_mie_gong_he_zhi_di
+
+		prerequisite = {
+			focus = TEG_xiao_mie_gong_he_zhi_di
+		}
+
+		available = {
+			is_subject = no
+			has_war = no
+		}
+
+		bypass = {
+			OR = {
+			  	TES = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+			  	}
+			  	has_war_with = TES
+			}
+		}
+
+		will_lead_to_war_with = TES
+
+		completion_reward = {
+			create_wargoal = {
+				target = TES
+				type = topple_government
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 解决守矢威胁
+	focus = {
+		id = TEG_jie_jue_shou_shi_wei_xie
+		icon = GFX_focus_attack_MRY
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TEG_xiao_mie_gong_he_zhi_di
+
+		prerequisite = {
+			focus = TEG_xiao_mie_gong_he_zhi_di
+		}
+
+		available = {
+			is_subject = no
+			has_war = no
+		}
+
+		bypass = {
+			OR = {
+			  	MRY = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+			  	}
+			  	has_war_with = MRY
+			}
+		}
+
+		will_lead_to_war_with = MRY
+
+		completion_reward = {
+			create_wargoal = {
+				target = MRY
+				type = topple_government
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 进军红魔馆
+	focus = {
+		id = TEG_jin_jun_hong_mo_guan
+		icon = GFX_focus_attack_SCA
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TEG_xiao_mie_gong_he_zhi_di
+
+		prerequisite = {
+			focus = TEG_jie_jue_tian_jie_wei_xie
+		}
+		
+		prerequisite = {
+			focus = TEG_jie_jue_shou_shi_wei_xie
+		}
+
+		available = {
+			is_subject = no
+			has_war = no
+		}
+
+		bypass = {
+			OR = {
+			  	SCA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+			  	}
+			  	has_war_with = SCA
+			}
+		}
+
+		will_lead_to_war_with = SCA
+
+		completion_reward = {
+			create_wargoal = {
+				target = SCA
+				type = topple_government
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事线
+	# 共和国国防部
+	focus = {
+		id = TEG_gong_he_guo_guo_fang_bu
+		icon = GFX_goal_generic_military_sphere
+		cost = 7
+		x = 30
+		y = 1
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_tian_gou_zong_can_mou_bu_idea
+				add_idea = TEG_gong_he_guo_guo_fang_bu_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 保卫共和国
+	focus = {
+		id = TEG_bao_wei_gong_he_guo
+		icon = TEG_focus_defend_the_republic
+		cost = 3
+		x = -7
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		available = {
+			has_defensive_war = yes
+			has_war_with_major = yes
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争权力法案
+	focus = {
+		id = TEG_zhan_zheng_quan_li_fa_an
+		icon = unknown
+		cost = 7
+		x = -5
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_guo_fang_bu
+		}
+
+		available = {
+			TEG_parliament_not_in_recess = yes
+		}
+
+		completion_reward = {
+
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 发行战争债券
+	focus = {
+		id = TEG_fa_xing_zhan_zheng_zhai_quan
+		icon = GFX_focus_mex_privatisation
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_zhan_zheng_quan_li_fa_an
+
+		prerequisite = {
+			focus = TEG_zhan_zheng_quan_li_fa_an
+			focus = TEG_bao_wei_gong_he_guo
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			add_ideas = TEG_zhan_zheng_zhai_quan_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战时工业
+	focus = {
+		id = TEG_zhan_shi_gong_ye
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_fa_xing_zhan_zheng_zhai_quan
+
+		prerequisite = {
+			focus = TEG_fa_xing_zhan_zheng_zhai_quan
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 研究步兵武器
+	focus = {
+		id = TEG_yan_jiu_bu_bing_wu_qi
+		icon = GFX_focus_focus_fra_maquis
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_guo_fang_bu
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_yan_jiu_bu_bing_wu_qi
+				bonus = 1
+				uses = 1
+				category = infantry
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 火炮研究
+	focus = {
+		id = TEG_huo_pao_yan_jiu
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_yan_jiu_bu_bing_wu_qi
+
+		prerequisite = {
+			focus = TEG_yan_jiu_bu_bing_wu_qi
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_huo_pao_yan_jiu
+				bonus = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 装甲研究
+	focus = {
+		id = TEG_zhuang_jia_yan_jiu
+		icon = GFX_goal_generic_build_tank
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_huo_pao_yan_jiu
+
+		prerequisite = {
+			focus = TEG_huo_pao_yan_jiu
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_zhuang_jia_yan_jiu
+				bonus = 1
+				uses = 1
+				category = shield_weapons
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = TEG_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_zhuang_jia_yan_jiu
+
+		prerequisite = {
+			focus = TEG_zhuang_jia_yan_jiu
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_shen_mi_xue_yan_jiu
+				bonus = 1.5
+				uses = 2
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强化国民卫队
+	focus = {
+		id = TEG_qiang_hua_guo_min_wei_dui
+		icon = GFX_focus_generic_manpower
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_guo_fang_bu
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_nei_zhan_shang_hen_idea
+				add_idea = TEG_nei_zhan_shang_hen_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 恢复征兵制
+	focus = {
+		id = TEG_hui_fu_zheng_bing_zhi
+		icon = GFX_focus_generic_little_entente
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_qiang_hua_guo_min_wei_dui
+
+		prerequisite = {
+			focus = TEG_qiang_hua_guo_min_wei_dui
+		}
+
+		completion_reward = {
+			remove_ideas = TEG_nei_zhan_shang_hen_a_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 改进型山地攻坚炮
+	focus = {
+		id = TEG_gai_jin_xing_shan_di_gong_jian_pao
+		icon = GFX_focus_SMB_mountain_guns
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		prerequisite = {
+			focus = TEG_huo_pao_yan_jiu
+		}
+
+		prerequisite = {
+			focus = TEG_hui_fu_zheng_bing_zhi
+		}
+
+		bypass = {
+			has_tech = gongjianpao155
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_gai_jin_xing_shan_di_gong_jian_pao
+				bonus = 1.5
+				uses = 1
+				ahead_reduction = 2.0
+				technology = gongjianpao149
+				technology = gongjianzhiyuanpao150
+				technology = gongjianpao155
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 后勤系统改良
+	focus = {
+		id = TEG_hou_qin_xi_tong_gai_liang
+		icon = GFX_focus_generic_truck
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = TEG_gai_jin_xing_shan_di_gong_jian_pao
+
+		prerequisite = {
+			focus = TEG_gai_jin_xing_shan_di_gong_jian_pao
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TEG_gong_he_guo_guo_fang_bu_b_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_guo_fang_bu_b_idea
+					add_idea = TEG_gong_he_guo_guo_fang_bu_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_guo_fang_bu_idea
+					add_idea = TEG_gong_he_guo_guo_fang_bu_a_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 武器标准化生产
+	focus = {
+		id = TEG_wu_qi_biao_zhun_hua_sheng_chan
+		icon = GFX_focus_mass_production_NOA
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gai_jin_xing_shan_di_gong_jian_pao
+
+		prerequisite = {
+			focus = TEG_gai_jin_xing_shan_di_gong_jian_pao
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TEG_gong_he_guo_guo_fang_bu_a_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_guo_fang_bu_a_idea
+					add_idea = TEG_gong_he_guo_guo_fang_bu_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_guo_fang_bu_idea
+					add_idea = TEG_gong_he_guo_guo_fang_bu_b_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和情报局
+	focus = {
+		id = TEG_gong_he_qing_bao_ju
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 7
+		x = 4
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_guo_fang_bu
+		}
+
+		completion_reward = {
+			NOA_gain_random_agency_upgrade = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国军事学院
+	focus = {
+		id = TEG_gong_he_guo_jun_shi_xue_yuan
+		icon = GFX_focus_generic_military_academy
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_gong_he_qing_bao_ju
+
+		prerequisite = {
+			focus = TEG_gong_he_qing_bao_ju
+		}
+
+		completion_reward = {
+			add_ideas = TEG_gong_he_guo_jun_shi_xue_yuan_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 发扬天狗速度优势
+	focus = {
+		id = TEG_fa_yang_tian_gou_su_du_you_shi
+		icon = GFX_goal_generic_cavalry
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_gong_he_guo_jun_shi_xue_yuan_idea
+				add_idea = TEG_gong_he_guo_jun_shi_xue_yuan_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 组建游骑兵团
+	focus = {
+		id = TEG_zu_jian_you_qi_bing_tuan
+		icon = unknown
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TEG_gai_jin_xing_shan_di_gong_jian_pao
+
+		prerequisite = {
+			focus = TEG_gai_jin_xing_shan_di_gong_jian_pao
+		}
+
+		prerequisite = {
+			focus = TEG_fa_yang_tian_gou_su_du_you_shi
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争经验总结
+	focus = {
+		id = TEG_zhan_zheng_jing_yan_zong_jie
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_gong_he_qing_bao_ju
+
+		prerequisite = {
+			focus = TEG_gong_he_qing_bao_ju
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视特种作战
+	focus = {
+		id = TEG_zhong_shi_te_zhong_zuo_zhan
+		icon = GFX_goal_generic_special_forces
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TEG_zhan_zheng_jing_yan_zong_jie
+
+		prerequisite = {
+			focus = TEG_zhan_zheng_jing_yan_zong_jie
+		}
+
+		completion_reward = {
+			add_ideas = TEG_tian_gou_te_zhong_bu_dui_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业线
+	# 共和国工业部
+	focus = {
+		id = TEG_gong_he_guo_gong_ye_bu
+		icon = GFX_goal_generic_production2
+		cost = 7
+		x = 0
+		y = 5
+
+		relative_position_id = TEG_gong_he_guo_guo_fang_bu
+
+		completion_reward = {
+			add_ideas = TEG_gong_he_guo_gong_ye_gui_hua_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 给予人类科学家公民权
+	focus = {
+		id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+		icon = GFX_focus_research
+		cost = 7
+		x = -4
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_ye_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_ye_bu
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TEG_liu_wang_ren_lei_ke_xue_jia_idea
+				add_idea = TEG_gui_hua_ren_lei_ke_xue_jia_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 投资基础科学
+	focus = {
+		id = TEG_tou_zi_ji_chu_ke_xue
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+
+		prerequisite = {
+			focus = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEG_tou_zi_ji_chu_ke_xue
+				bonus = 0.8
+				uses = 2
+				category = math
+				ahead_reduction = 1.0
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 投资应用科学
+	focus = {
+		id = TEG_tou_zi_ying_yong_ke_xue
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+
+		prerequisite = {
+			focus = TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 2
+				category = industrys
+				ahead_reduction = 0.8
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国科研委员会
+	focus = {
+		id = TEG_gong_he_guo_ke_yan_wei_yuan_hui
+		icon = GFX_focus_research2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_tou_zi_ji_chu_ke_xue
+
+		prerequisite = {
+			focus = TEG_tou_zi_ji_chu_ke_xue
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国工程技术学院
+	focus = {
+		id = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+		icon = GFX_focus_education_NOA
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_ye_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_ye_bu
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			if = {
+				limit = {
+					has_idea = TEG_gong_ye_tan_huan_b_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_ye_tan_huan_b_idea
+					add_idea = TEG_gong_ye_tan_huan_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_ye_tan_huan_idea
+					add_idea = TEG_gong_ye_tan_huan_a_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事工业建设
+	focus = {
+		id = TEG_jun_shi_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 投资红叶工业集团
+	focus = {
+		id = TEG_tou_zi_hong_ye_gong_ye_ji_tuan
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_jun_shi_gong_ye_jian_she
+
+		prerequisite = {
+			focus = TEG_jun_shi_gong_ye_jian_she
+		}
+
+		prerequisite = {
+			focus = TEG_tou_zi_ying_yong_ke_xue
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国陆军工程兵团
+	focus = {
+		id = TEG_gong_he_guo_lu_jun_gong_cheng_bing_tuan
+		icon = GFX_goal_generic_production
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = TEG_jun_shi_gong_ye_jian_she
+
+		prerequisite = {
+			focus = TEG_jun_shi_gong_ye_jian_she
+		}
+
+		prerequisite = {
+			focus = TEG_tou_zi_ying_yong_ke_xue
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事科研合作项目
+	focus = {
+		id = TEG_jun_shi_ke_yan_he_zuo_xiang_mu
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_lu_jun_gong_cheng_bing_tuan
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_lu_jun_gong_cheng_bing_tuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业复兴法案
+	focus = {
+		id = TEG_gong_ye_fu_xing_fa_an
+		icon = GFX_goal_generic_construction
+		cost = 7
+		x = 4
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_ye_bu
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_ye_bu
+		}
+
+		available = {
+			TEG_parliament_not_in_recess = yes
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			if = {
+				limit = {
+					has_idea = TEG_gong_ye_tan_huan_a_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_ye_tan_huan_a_idea
+					add_idea = TEG_gong_ye_tan_huan_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_ye_tan_huan_idea
+					add_idea = TEG_gong_ye_tan_huan_b_idea
+				}
+			}
+			hidden_effect = {
+				set_country_flag = TEG_act_established_flag
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国公路网
+	focus = {
+		id = TEG_gong_he_guo_gong_lu_wang
+		icon = GFX_focus_generic_improve_roads
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+		}
+
+		prerequisite = {
+			focus = TEG_gong_ye_fu_xing_fa_an
+		}
+
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 民用工业建设
+	focus = {
+		id = TEG_min_yong_gong_ye_jian_she
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_gong_lu_wang
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_gong_lu_wang
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 完成重建
+	focus = {
+		id = TEG_wan_cheng_chong_jian
+		icon = GFX_focus_generic_low_cost_housing
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+
+		prerequisite = {
+			focus = TEG_tou_zi_hong_ye_gong_ye_ji_tuan
+		}
+
+		prerequisite = {
+			focus = TEG_min_yong_gong_ye_jian_she
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_ideas = TEG_gong_ye_tan_huan_c_idea
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础设施评估报告
+	focus = {
+		id = TEG_ji_chu_she_shi_ping_gu_bao_gao
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TEG_gong_ye_fu_xing_fa_an
+
+		prerequisite = {
+			focus = TEG_gong_ye_fu_xing_fa_an
+		}
+
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战略资源勘探
+	focus = {
+		id = TEG_zhan_lue_zi_yuan_kan_tan
+		icon = GFX_goal_generic_construction2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_ji_chu_she_shi_ping_gu_bao_gao
+
+		prerequisite = {
+			focus = TEG_ji_chu_she_shi_ping_gu_bao_gao
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TEG_gong_he_guo_gong_ye_gui_hua_a_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_gong_ye_gui_hua_a_idea
+					add_idea = TEG_gong_he_guo_gong_ye_gui_hua_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_gong_ye_gui_hua_idea
+					add_idea = TEG_gong_he_guo_gong_ye_gui_hua_b_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国铁路局
+	focus = {
+		id = TEG_gong_he_guo_tie_lu_ju
+		icon = GFX_focus_generic_railroad
+		cost = 7
+		x = -1
+		y = 2
+
+		relative_position_id = TEG_gong_ye_fu_xing_fa_an
+
+		prerequisite = {
+			focus = TEG_gong_ye_fu_xing_fa_an
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = TEG_gong_he_guo_gong_ye_gui_hua_b_idea
+				}
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_gong_ye_gui_hua_b_idea
+					add_idea = TEG_gong_he_guo_gong_ye_gui_hua_c_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TEG_gong_he_guo_gong_ye_gui_hua_idea
+					add_idea = TEG_gong_he_guo_gong_ye_gui_hua_a_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 建设工业带
+	focus = {
+		id = TEG_jian_she_gong_ye_dai
+		icon = GFX_focus_generic_industry_2
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TEG_gong_he_guo_tie_lu_ju
+
+		prerequisite = {
+			focus = TEG_gong_he_guo_tie_lu_ju
+		}
+
+		prerequisite = {
+			focus = TEG_min_yong_gong_ye_jian_she
+		}
+
+		prerequisite = {
+			focus = TEG_zhan_lue_zi_yuan_kan_tan
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战时劳动力动员
+	focus = {
+		id = TEG_zhan_shi_lao_dong_li_dong_yuan
+		icon = GFX_focus_production
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = TEG_jian_she_gong_ye_dai
+
+		prerequisite = {
+			focus = TEG_jian_she_gong_ye_dai
+		}
+
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 共和国工业奇迹
+	focus = {
+		id = TEG_gong_he_guo_gong_ye_qi_ji
+		icon = GFX_focus_generic_modernize_industry
+		cost = 12
+		x = 0
+		y = 5
+
+		relative_position_id = TEG_gong_he_guo_gong_ye_bu
+
+		prerequisite = {
+			focus = TEG_jun_shi_ke_yan_he_zuo_xiang_mu
+		}
+
+		prerequisite = {
+			focus = TEG_wan_cheng_chong_jian
+		}
+
+		prerequisite = {
+			focus = TEG_jian_she_gong_ye_dai
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
 }

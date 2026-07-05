@@ -1,0 +1,29 @@
+
+state={
+	id=306
+	name="STATE_306"
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			add_claim_by = OTG
+			buildings = {
+				infrastructure = 7
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		383 1336 2262 4391 4393 4394 5188 5210 5216 5220 5222 5226 5229 5233 5240 5244 
+	}
+	manpower=998.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+	local_supplies=2.5
+}

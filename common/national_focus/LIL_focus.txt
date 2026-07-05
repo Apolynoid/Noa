@@ -1,0 +1,3875 @@
+focus_tree = {
+	id = LIL_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LIL
+		}
+	}
+	default = no
+	shared_focus = ty_medium_main 
+	shared_focus = LIL_136_1 
+	shared_focus = LIL_136_2 
+	shared_focus = LIL_4 
+	continuous_focus_position = { x = 2700 y = 1900 }
+	focus = {
+		id = LIL_1
+		icon = GFX_focus_LIL_dongquchunlai
+		cost = 6.00
+		x = 27
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = lil.1
+			}
+		#	set_temp_variable = {
+		#		LIL_qinwai = party_popularity@qinwai
+		#	}
+		#	add_popularity = {
+		#		ideology = guli
+		#		popularity = LIL_qinwai
+		#	}
+		}
+	}
+	focus = {
+		id = LIL_2
+		icon = GFX_focus_LIL_mingyunzhizhan
+		cost = 10.00
+		available = {
+			has_war_with = SCA
+		}
+		completion_reward = {
+			country_event = { days = 1 id = lil.15 }
+		}
+		x = 5
+		y = 13
+	}
+	focus = {
+		id = LIL_3
+		icon = GFX_focus_LIL_mingyunzhizhan
+		cost = 10.00
+		x = 13
+		y = 13
+		available = {
+			has_completed_focus = LIL_2
+			OR = {
+				NOT = {
+					country_exists = SCA
+				}
+				SCA = {
+					is_puppet = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = LIL_guangrongdeshenglizhe
+		}
+	}
+	
+	focus = {
+		id = LIL_5
+		icon = GFX_focus_LIL_hcyqiyishibai
+		cost = 0.00
+		x = 58
+		y = 4
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			hidden_trigger = {
+				SCA = {has_completed_focus = SCA_xiqujiaoxun}
+			}
+		}
+		
+		
+
+	}
+	focus = {
+		id = LIL_6
+		icon = GFX_focus_LIL_hanweileyuanyiqie
+		cost = 10.00
+		x = 58
+		y = 11
+		available = {
+			OR = {
+				has_completed_focus = LIL_21
+				has_completed_focus = LIL_22
+				has_completed_focus = LIL_26
+				has_completed_focus = LIL_36
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = LIL_7
+		icon = GFX_focus_LIL_jiefangzhiri
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_2
+		}
+		mutually_exclusive = {
+			focus = LIL_135
+		}
+		x = 4
+		y = 15
+		completion_reward = {
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						is_core_of = SC2
+					}
+					add_core_of = LIL
+				}
+				add_ideas = LIL_jiefangzhiri
+			}
+		}
+	}
+	focus = {
+		id = LIL_8
+		icon = GFX_focus_LIL_zhuisuiwuzhihu
+		cost = 10.00
+		available = {
+			has_government = fandong
+		}
+		prerequisite = {
+			focus = LIL_3
+		}
+		mutually_exclusive = {
+			focus = LIL_137
+			focus = LIL_11
+		}
+		x = 13
+		y = 14
+		completion_reward = {
+			custom_effect_tooltip = LIL_137_tt
+			LIL_lil = {
+				set_portraits = {
+					army = { large = "gfx/leaders/LIL/LIL_lil.dds" }
+					army = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+					civilian = { large = "gfx/leaders/LIL/LIL_lil.dds" }		
+					civilian = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+				}
+			}
+			LIL_lil_leader = {
+				set_portraits = {
+					army = { large = "gfx/leaders/LIL/LIL_lil.dds" }
+					army = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+					civilian = { large = "gfx/leaders/LIL/LIL_lil.dds" }		
+					civilian = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+				}
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.10
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = LIL_9
+		icon = GFX_focus_por_the_pink_map
+		cost = 10.00
+		available = {
+			is_neighbor_of = CIR
+		}
+		prerequisite = {
+			focus = LIL_8
+		}
+		mutually_exclusive = {
+			focus = LIL_141
+		}
+		x = 12
+		y = 15
+		completion_reward = {
+			custom_effect_tooltip = LIL_9_tt
+		}
+	}
+	
+	focus = {
+		id = LIL_11
+		icon = GFX_focus_LIL_chunzhiyaojinwansui
+		cost = 10.00
+		available = {
+			neworder > 0.4
+		}
+		prerequisite = {
+			focus = LIL_3
+		}
+		mutually_exclusive = {
+			focus = LIL_8
+		}
+		x = 16
+		y = 14
+		completion_reward = {
+			custom_effect_tooltip = LIL_11_tt
+			conservativedecrease = yes
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = neworder
+			}
+			add_ideas = LIL_chunzhiyaojingwaansui
+		}
+	}
+	focus = {
+		id = LIL_12
+		icon = GFX_focus_LIL_yaojingxiaznhi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_11
+		}
+		x = 16
+		y = 15
+		completion_reward = {
+			conservativedecrease = yes
+			custom_effect_tooltip = LIL_12_tt
+			hidden_effect = {
+				remove_country_leader_trait = LIL_leyuanzhixin
+				remove_ideas = LIL_xiangtiangoumenxuexi
+				remove_ideas = LIL_yaoguaiyingxiang
+				remove_ideas = LIL_leyuanzhishengdiantai
+				remove_ideas = LIL_leyuanzhisheng
+				remove_ideas = LIL_canzhengjintie
+				remove_ideas = LIL_wuzhihulianluotuan
+				remove_ideas = LIL_xuexigeminsiwei
+				remove_ideas = LIL_tongyisixiangjiaoyu
+				remove_ideas = LIL_gesongyaojinggeming
+				remove_ideas = LIL_gemingshuangzixing
+			}
+			add_country_leader_trait = LIL_yaojingxianzhi
+		}
+	}
+	
+	focus = {
+		id = LIL_18
+		icon = GFX_focus_LIL_baochunzhilv
+		cost = 6.00
+		prerequisite = {
+			focus = LIL_1
+		}
+		x = 27
+		y = 1
+		select_effect = {
+			LIL = {
+				LIL_lil = {
+					set_nationality = ZON
+				}
+			}
+			LIL_baochun_30 = yes
+		}
+		completion_reward = {
+			hidden_effect = {
+				ZON = {
+					LIL_lil = {
+						set_nationality = LIL
+					}
+				}
+			}
+			custom_effect_tooltip = LIL_18_tt
+			custom_effect_tooltip = LIL_18_tt_2
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = LIL_chuntiandaola_1
+					days = 30
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_19
+		icon = GFX_focus_LIL_leyuanzhizhong
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_18
+		}
+		x = 27
+		y = 2
+		completion_reward = {
+			country_event = {
+				id = lil.6
+			}
+		}
+	}
+	focus = {
+		id = LIL_20
+		icon = GFX_focus_LIL_yaojingzhichunzhongjiangdaolai
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_19
+		}
+		mutually_exclusive = {
+			focus = LIL_25
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = LIL_20_tt
+		}
+	}
+	focus = {
+		id = LIL_21
+		icon = GFX_focus_LIL_duyiwuerzihao
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_20
+		}
+		mutually_exclusive = {
+			focus = LIL_22
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_fandong
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_22
+		icon = GFX_focus_generic_radicalist_new_1
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_20
+		}
+		mutually_exclusive = {
+			focus = LIL_21
+		}
+		x = 20
+		y = 4
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = fandong
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_qinwai
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_23
+		icon = GFX_focus_LIL_zhuisuiwuzhihu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_22
+		}
+		mutually_exclusive = {
+			focus = LIL_24
+		}
+		x = 17
+		y = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.10
+			}
+			lobbyincrease = yes
+		}
+	}
+	focus = {
+		id = LIL_24
+		icon = GFX_focus_LIL_baochunzhilv
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_22
+		}
+		mutually_exclusive = {
+			focus = LIL_23
+		}
+		x = 23
+		y = 5
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1  
+		}
+	}
+	focus = {
+		id = LIL_25
+		icon = GFX_focus_LIL_weiyuanleyuanzaiciyongcun
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_19
+		}
+		mutually_exclusive = {
+			focus = LIL_20
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		x = 40
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = LIL_25_tt
+		}
+	}
+	focus = {
+		id = LIL_26
+		icon = GFX_focus_LIL_baoshopaiyijian
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_25
+		}
+		mutually_exclusive = {
+			focus = LIL_36
+		}
+		x = 34
+		y = 4
+		completion_reward = {
+			conservativedecrease = yes
+			add_popularity = {
+				ideology = guli
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = guli
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = LIL_paths
+					option = LIL_path_oldgenso
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_27
+		icon = GFX_focus_LIL_weichiwewnding
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_26
+		}
+		x = 34
+		y = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+			add_stability = 0.2
+			swap_ideas = {
+				remove_idea = LIL_leyuanzizhi
+				add_idea = LIL_leyuanzizhi_guli_1
+			}
+		}
+	}
+	focus = {
+		id = LIL_28
+		icon = GFX_focus_LIL_feichuleyuanzizhitizhi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_27
+		}
+		x = 32
+		y = 6
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = guli
+				popularity = 0.10
+			}
+			remove_ideas = LIL_yaoguaiyingxiang
+		}
+	}
+	focus = {
+		id = LIL_29
+		icon = GFX_focus_LIL_sikaletejinyan
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_27
+		}
+		x = 34
+		y = 6
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = LIL_leyuanzizhi_guli_1
+				add_idea = LIL_leyuanzizhi_guli_2
+			}
+			custom_effect_tooltip = LIL_29_tt
+			effect_tooltip = {
+				add_political_power = 100
+				custom_effect_tooltip = LIL_29_tt_1
+				division_template = {
+					name = "仿帝国卫队"
+					is_locked = no
+					regiments = {
+						sc_infantry = { x = 0 y = 0 }
+						sc_infantry = { x = 0 y = 1 }
+						sc_infantry = { x = 0 y = 2 }
+						sc_mortar_brigade = { x = 0 y = 3 }
+						sc_infantry = { x = 1 y = 0 }
+						sc_infantry = { x = 1 y = 1 }
+						sc_infantry = { x = 1 y = 2 }
+						sc_mortar_brigade = { x = 1 y = 3 }
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }  
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = LIL_SCAheping
+						has_completed_focus = LIL_40
+					}
+					add_political_power = 100
+					custom_effect_tooltip = LIL_29_tt_1
+					division_template = {
+						name = "仿帝国卫队"
+						is_locked = no
+						regiments = {
+							sc_infantry = { x = 0 y = 0 }
+							sc_infantry = { x = 0 y = 1 }
+							sc_infantry = { x = 0 y = 2 }
+							sc_mortar_brigade = { x = 0 y = 3 }
+							sc_infantry = { x = 1 y = 0 }
+							sc_infantry = { x = 1 y = 1 }
+							sc_infantry = { x = 1 y = 2 }
+							sc_mortar_brigade = { x = 1 y = 3 }
+						}
+						support = {
+							sp_zhihuidui = { x = 0 y = 0 }  
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_30
+		icon = GFX_focus_por_reclaim_crown_jewel
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_29
+		}
+		x = 34
+		y = 7
+		completion_reward = {
+			add_manpower = -100
+			swap_ideas = {
+				remove_idea = LIL_leyuanzizhi_guli_2
+				add_idea = LIL_leyuanzizhi_guli_3
+			}
+		}
+	}
+	focus = {
+		id = LIL_31
+		icon = GFX_focus_LIL_daquanzaiwo
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_30
+		}
+		x = 34
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_leyuanzizhi_guli_3
+				add_idea = LIL_leyuanzizhi_guli_4
+			}
+		}
+	}
+	focus = {
+		id = LIL_32
+		icon = GFX_focus_LIL_leyuanlingtu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_27
+		}
+		x = 36
+		y = 6
+		completion_reward = {
+			add_ideas = LIL_yaojingdelingtu
+		}
+	}
+	focus = {
+		id = LIL_33
+		icon = GFX_focus_LIL_quzhuzhongzu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+			HU7 = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			HU7 = {
+				bypass_declare_war = yes
+			}
+		}
+		prerequisite = {
+			focus = LIL_32
+		}
+		x = 36
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_quzhiqitaazongzu
+			if = {
+				limit = {
+					country_exists = HU7
+				}
+				HU7 = {
+					country_event = {
+						id = lil.7
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_34
+		icon = GFX_focus_LIL_guanshaangdameng
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_33
+		}
+		x = 36
+		y = 8
+		completion_reward = {
+			conservativedecrease = yes
+			swap_ideas = {
+				remove_idea = loose_border
+				add_idea = close_border
+			}
+		}
+	}
+	focus = {
+		id = LIL_35
+		icon = GFX_focus_LIL_zhongyongbaoshopai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_31
+		}
+		prerequisite = {
+			focus = LIL_34
+		}
+		x = 35
+		y = 9
+		completion_reward = {
+			add_ideas = LIL_suzaorengtong
+		}
+	}
+	focus = {
+		id = LIL_36
+		icon = GFX_focus_LIL_hanweileyuanyiqie
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_25
+		}
+		mutually_exclusive = {
+			focus = LIL_26
+		}
+		x = 46
+		y = 4
+		completion_reward = {
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.15
+			}
+			conservativedecrease = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = LIL_paths
+					option = LIL_path_guli
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_37
+		icon = GFX_focus_LIL_hepingwaijiao
+		cost = 10.00
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_37_tt
+				NOT = {
+					has_country_flag = LIL_yusikltjiaozahn 
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_26
+			focus = LIL_36
+		}
+		x = 40
+		y = 5
+		completion_reward = {
+			add_ideas = LIL_hepingwaijiao
+		}
+	}
+	focus = {
+		id = LIL_38
+		icon = GFX_focus_LIL_paiwangshoshishituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = MRY
+			}	
+		}
+		prerequisite = {
+			focus = LIL_37
+		}
+		x = 38
+		y = 6
+		completion_reward = {	
+			add_opinion_modifier = {
+				target = MRY
+				modifier = LIL_paiwangshoshi
+			}
+			MRY = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwangshoshi
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_39
+		icon = GFX_focus_LIL_paiwanghomoshituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = SCA
+			}	
+		}
+		prerequisite = {
+			focus = LIL_37
+		}
+		x = 40
+		y = 6
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SCA
+				modifier = LIL_paiwanghomoguan
+			}
+			SCA = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwanghomoguan
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_40
+		icon = GFX_focus_LIL_paiwanghomoshituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = SCA
+				custom_trigger_tooltip = {
+					tooltip = LIL_40_tt
+					CIR = {
+						has_country_flag = CIR_hanchunjiaji
+					}
+				}	
+			}	
+		}
+		prerequisite = {
+			focus = LIL_39
+		}
+		x = 40
+		y = 7
+		completion_reward = {
+			SCA = {
+				country_event = {
+					id = lil.9
+				}
+			}
+			custom_effect_tooltip = LIL_40_tt_1
+			custom_effect_tooltip = LIL_40_tt_2
+			custom_effect_tooltip = LIL_40_tt_3
+			effect_tooltip = {
+				add_political_power = 100
+				custom_effect_tooltip = LIL_29_tt_1
+				division_template = {
+					name = "仿帝国卫队"
+					is_locked = no
+					regiments = {
+						sc_infantry = { x = 0 y = 0 }
+						sc_infantry = { x = 0 y = 1 }
+						sc_infantry = { x = 0 y = 2 }
+						sc_mortar_brigade = { x = 0 y = 3 }
+						sc_infantry = { x = 1 y = 0 }
+						sc_infantry = { x = 1 y = 1 }
+						sc_infantry = { x = 1 y = 2 }
+						sc_mortar_brigade = { x = 1 y = 3 }
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }  
+					}
+				}
+			}
+		}
+	}	
+	focus = {
+		id = LIL_41
+		icon = GFX_focus_LIL_huyuheping
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = SCA
+				has_war_with = CIR
+			}
+			SCA = {
+				has_war_with = CIR
+			}
+		}
+		prerequisite = {
+			focus = LIL_40
+		}
+		x = 40
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = LIL_41_tt
+			SCA = {
+				country_event = {
+					id = lil.10
+				}
+			}
+			CIR = {
+				country_event = {
+					id = lil.10
+				}
+			}
+			custom_effect_tooltip = LIL_41_tt_1
+		}
+	}
+	focus = {
+		id = LIL_42
+		icon = GFX_focus_LIL_paiwangdidishituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = SAT
+				has_war_with = PRS
+				has_war_with = YUG
+				has_war_with = YMM
+			}
+		}
+		prerequisite = {
+			focus = LIL_37
+		}
+		x = 42
+		y = 6
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SAT
+				modifier = LIL_paiwangdidi
+			}
+			add_opinion_modifier = {
+				target = PRS
+				modifier = LIL_paiwangdidi
+			}
+			add_opinion_modifier = {
+				target = YUG
+				modifier = LIL_paiwangdidi
+			}
+			add_opinion_modifier = {
+				target = YMM
+				modifier = LIL_paiwangdidi
+			}
+			SAT = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwangdidi
+				}
+			}
+			PRS = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwangdidi
+				}
+			}			
+			YUG = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwangdidi
+				}
+			}			
+			YMM = {
+				add_opinion_modifier = {
+					target = LIL
+					modifier = LIL_paiwangdidi
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_43
+		icon = GFX_focus_LIL_paiwangdidishituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = SAT
+				has_war_with = PRS
+				has_war_with = YUG
+				has_war_with = YMM
+			}
+		}
+		prerequisite = {
+			focus = LIL_42
+		}
+		x = 42
+		y = 7
+		completion_reward = {
+			SAT = {
+				country_event = {
+					id = lil.12
+				}
+			}
+			PRS = {
+				country_event = {
+					id = lil.12
+				}
+			}
+			YUG = {
+				country_event = {
+					id = lil.12
+				}
+			}
+			YMM = {
+				country_event = {
+					id = lil.12
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_44
+		icon = GFX_focus_LIL_daziranjiaohui
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_36
+		}
+		x = 46
+		y = 5
+		completion_reward = {
+			remove_ideas = LIL_yaoguaiyingxiang
+			custom_effect_tooltip = LIL_44_tt
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.1
+			}
+			add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				ahead_reduction = 1
+				category = race
+			}
+			custom_effect_tooltip = LIL_44_tt_2
+			hidden_effect = {
+				set_technology = {
+					waike = 0
+				}
+				set_technology = {
+					lingben = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_45
+		icon = GFX_focus_ITA_the_italian_republic
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_44
+		}
+		x = 44
+		y = 6
+		completion_reward = {
+			set_politics = {
+				ruling_party = oldgenso
+			}
+			add_timed_idea = {
+			idea = LIL_ranghuahaigehuizhangquan
+			days = 365
+			}
+		}
+	}
+	focus = {
+		id = LIL_46
+		icon = GFX_focus_LIL_pohuaijiqi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_45
+		}
+		x = 44
+		y = 7
+		completion_reward = {
+			conservativedecrease = yes
+			add_ideas = LIL_pohuaichouedejiqi
+		}
+	}
+	focus = {
+		id = LIL_47
+		icon = GFX_focus_LIL_zengechengshi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_46
+		}
+		x = 44
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_pohuaichouedejiqi
+				add_idea = LIL_zengechengshi
+				}
+		}
+	}
+	focus = {
+		id = LIL_48
+		icon = GFX_focus_LIL_huifuhuahai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_44
+		}
+		x = 46
+		y = 6
+		completion_reward = {
+			PO_add1 = yes
+			add_to_variable = {
+				LIL_yonghenhuahai_lingli = 0.1
+			}
+			add_to_variable = {
+				LIL_yonghenhuahai_lingli_tt = 10
+			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = LIL_yonghenhuahai_lingli_dy
+				}
+			}
+			29 = {
+				add_dynamic_modifier = {
+					modifier = LIL_yonghenhuahai_dy
+				}
+				remove_building = {
+				    type = 	infrastructure
+				    level = 2
+				}
+				set_state_flag = LIL_yonghenhuahai_dy_flag
+			}
+			custom_effect_tooltip = LIL_48_tt
+		}
+	}
+	focus = {
+		id = LIL_49
+		icon = GFX_focus_LIL_chunzhige
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_48
+		}
+		x = 46
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_gesongziran
+			}
+		}
+	focus = {
+		id = LIL_50
+		icon = GFX_focus_LIL_leyuanzhishengdiantai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_49
+		}
+		x = 46
+		y = 8
+		completion_reward = {
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.2
+			}
+			custom_effect_tooltip = LIL_50_tt
+		}
+	}
+	focus = {
+		id = LIL_51
+		icon = GFX_focus_LIL_yaojingzhixinfu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_47
+		}
+		prerequisite = {
+			focus = LIL_50
+		}
+		x = 45
+		y = 9
+		completion_reward = {
+			add_ideas = LIL_yaojingzhixinfu
+		}
+	}
+	focus = {
+		id = LIL_52
+		icon = GFX_focus_LIL_gojianquyuxingmingzhu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_44
+		}
+		x = 48
+		y = 6
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_leyuanzizhi
+			add_idea = LIL_ziranchuncuideleyuanzizhi
+			}
+		}
+	}
+	focus = {
+		id = LIL_53
+		icon = GFX_focus_LIL_fanduisichang
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_52
+		}
+		x = 48
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_fanduisichan
+		}
+	}
+	focus = {
+		id = LIL_54
+		icon = GFX_focus_LIL_shuyudaziran
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_53
+		}
+		x = 48
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_fanduisichan
+				add_idea = LIL_yiqieshuyudaziran
+			}
+		}
+	}
+	focus = {
+		id = LIL_55
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_54
+		}
+		prerequisite = {
+			focus = LIL_50
+		}
+		x = 47
+		y = 9
+		completion_reward ={
+			add_popularity = {
+			ideology = oldgenso
+			popularity = 0.2
+			}
+			add_ideas = LIL_fanpuguizhen
+			add_tech_bonus = {
+			ahead_reduction = 3
+			bonus = 2
+			uses = 4
+			category = race
+			}
+		}
+	}
+	focus = {
+		id = LIL_56
+		icon = GFX_focus_LIL_ziranzhileyuan
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_51
+		}
+		prerequisite = {
+			focus = LIL_55
+		}
+		x = 46
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_leyuantuanjieyixin
+		}
+	}
+	focus = {
+		id = LIL_57
+		icon = GFX_focus_LIL_jianshehuazhidu
+		cost = 10.00
+		available = {
+			OR = {
+				has_completed_focus = LIL_21
+				has_completed_focus = LIL_22
+				has_completed_focus = LIL_26
+			}
+		}
+		prerequisite = {
+			focus = LIL_6
+		}
+		mutually_exclusive = {
+			focus = LIL_71
+		}
+		x = 55
+		y = 12
+		completion_reward = {
+			custom_effect_tooltip = LIL_57_tt
+			add_ideas = LIL_zhongzhigonggye
+			add_tech_bonus = {
+				category = industrys
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_58
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_57
+		}
+		x = 53
+		y = 13
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	infrastructure
+				    level = 2
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	infrastructure
+				    level = 2
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	infrastructure
+				    level = 2
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	infrastructure
+				    level = 2
+				    instant_build = yes
+				}
+			}
+			swap_ideas = {
+				add_idea = LIL_zhongzhigonggye_2
+				remove_idea = LIL_zhongzhigonggye
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_59
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_58
+		}
+		x = 53
+		y = 14
+		completion_reward = {
+			add_tech_bonus = {
+				category = resource
+				uses = 1
+				bonus = 1
+			}
+			swap_ideas = {
+				add_idea = LIL_zhongzhigonggye_3
+				remove_idea = LIL_zhongzhigonggye_2
+			}
+		}
+	}
+	focus = {
+		id = LIL_60
+		icon = GFX_focus_LIL_leyuanzhizhong
+		cost = 20.00
+		prerequisite = {
+			focus = LIL_59
+		}
+		x = 53
+		y = 15
+		completion_reward = {
+			29 = {
+				set_state_name = "花之都"
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			374 = {
+				set_state_category = s5
+			}
+			5 = {
+				set_state_category = s5
+			}
+			500 = {
+				set_state_category = s5
+			}
+			swap_ideas = {
+				add_idea = LIL_zhongzhigonggye_4
+				remove_idea = LIL_zhongzhigonggye_3
+			}
+		}
+	}
+	focus = {
+		id = LIL_61
+		icon = GFX_focus_LIL_jieshocanbu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_5
+		}
+		x = 56
+		y = 5
+		completion_reward = {
+			add_manpower = 120
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = LIL_62
+		icon = GFX_focus_NUE_temporary_rifle_regiments
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_61
+		}
+		x = 54
+		y = 6
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 2
+				category = basic_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LIL_63
+		icon = GFX_focus_LIL_xunlianfangshi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_62
+		}
+		x = 54
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_xinshixunlianfangfa
+		}
+	}
+	focus = {
+		id = LIL_64
+		icon = GFX_focus_LIL_tansuoxinzhizhanfa
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_63
+		}
+		x = 54
+		y = 8
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.50
+				uses = 2
+				category = basic_doctrine
+			}
+		}
+	}
+	focus = {
+		id = LIL_65
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_57
+		}
+		x = 57
+		y = 13
+		completion_reward = {
+			add_ideas = LIL_shebeigailiang_1
+			add_tech_bonus = {
+				category = main
+				uses = 1
+				bonus = 0.5
+			}
+			add_tech_bonus = {
+				category = fuzhu
+				uses = 1
+				bonus = 0.5
+			}
+		}
+	}
+	focus = {
+		id = LIL_66
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_65
+		}
+		x = 57
+		y = 14
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_67
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 20.00
+		prerequisite = {
+			focus = LIL_66
+		}
+		x = 57
+		y = 15
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_building_construction = {
+				    type = 	arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_building_construction = {
+				    type = 	arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				    type = 	industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_building_construction = {
+				    type = 	arms_factory
+				    level = 1
+				    instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_68
+		icon = GFX_focus_LIL_yanjiuqiyijunwuqi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_61
+		}
+		x = 58
+		y = 6
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				category = primary_weapons
+				uses = 2
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = mortar
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_69
+		icon = GFX_focus_LIL_wuqiyaojinhua
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_68
+		}
+		x = 58
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_wuqigailiang
+		}
+	}
+	focus = {
+		id = LIL_70
+		icon = GFX_focus_generic_Melee_Weapons
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_69
+		}
+		x = 58
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_wuqigailiang
+				add_idea = LIL_wuqigailiang2
+			  }	
+		}
+	}
+	focus = {	
+		id = LIL_71
+		icon =  GFX_focus_LIL_zhongshiyanjiu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_6
+		}
+		mutually_exclusive = {
+			focus = LIL_57
+		}
+		x = 61
+		y = 12
+		completion_reward = {
+			custom_effect_tooltip = LIL_71_tt
+			add_ideas = LIL_zhongshiyanjiu_1
+			add_tech_bonus = {
+				category = math
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = radio
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_72
+		icon = GFX_focus_LIL_yinjintiangodejishu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_71
+		}
+		x = 59
+		y = 13
+		completion_reward = {
+			effect_tooltip = {
+				add_ideas = LIL_xuexiyaoguaishangshihui_1
+			}
+			custom_effect_tooltip = LIL_72_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_idea = LIL_yaoguaiyingxiang
+								has_idea = LIL_xiangtiangoumenxuexi
+							}
+						}
+					}
+					add_ideas = LIL_xuexiyaoguaishangshihui_1
+				}
+				else = {
+					add_ideas = LIL_xuexiyaoguaishangshihui_2
+				}
+			}
+			add_tech_bonus = {
+				category = industrys
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_73
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_72
+		}
+		x = 59
+		y = 14
+		completion_reward = {
+			add_ideas = LIL_jianzaoxuexiao
+		}
+	}
+	focus = {
+		id = LIL_74
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_73
+		}
+		x = 59
+		y = 15
+		completion_reward = {
+			swap_ideas = {
+				add_idea = LIL_jianzaoxuexiao_2
+				remove_idea = LIL_jianzaoxuexiao
+			}
+		}
+	}
+	focus = {
+		id = LIL_75
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_5
+		}
+		x = 61
+		y = 5
+		completion_reward = {
+			if = {
+				limit = { 
+					has_intelligence_agency = no 
+				}
+				create_intelligence_agency = yes
+
+				else = {
+					upgrade_intelligence_agency = upgrade_passive_defense 
+					
+				}
+			}
+			upgrade_intelligence_agency = upgrade_form_department
+			add_ideas = LIL_leyuanjunshibumen
+		}
+
+	}
+	focus = {
+		id = LIL_76
+		icon = GFX_focus_LIL_xunlianfangshi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_75
+		}
+		x = 61
+		y = 6
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_leyuanjunshibumen
+				add_idea = LIL_leyuanjunshibumen2
+			  }	
+		}
+	}
+	focus = {
+		id = LIL_77
+		icon =  GFX_focus_LIL_junshitongxunchu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_76
+		}
+		x = 61
+		y = 7
+		completion_reward = {
+			add_tech_bonus = {
+                category = radio
+                uses = 2
+                bonus = 1
+            }
+			add_tech_bonus = {
+				name = SAT_association_center
+				bonus = 1
+				uses = 1
+				technology = zhihuixiaodui146
+				technology = zhihuixiaodui151
+				technology = zhihuixiaodui156
+				technology = zhihuixiaodui161
+				technology = zhihuixiaodui166
+			}
+			swap_ideas = {
+				remove_idea = LIL_leyuanjunshibumen2
+				add_idea = LIL_leyuanjunshibumen3
+			  }	
+		}
+	}
+	focus = {
+		id = LIL_78
+		icon = GFX_focus_LIL_yaojinshixinjun
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_77
+		}
+		x = 61
+		y = 8
+		completion_reward = {
+			army_experience = 10
+			add_ideas = LIL_yaojingshixinjun
+		}
+	}
+	focus = {
+		id = LIL_79
+		icon = GFX_focus_LIL_gaoshanghuahai
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_78
+		}
+		prerequisite = {
+			focus = LIL_64
+		}
+		prerequisite = {
+			focus = LIL_70
+		}
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = LIL_yaojingshixinjun
+				add_idea = LIL_yaojingshixinjun2
+			  }	
+		}
+		x = 58
+		y = 9
+
+	}
+	focus = {
+		id = LIL_80
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_76
+		}
+		x = 63
+		y = 7
+		available = {
+			has_tech = jianzaojishu130
+			or = {
+				has_full_control_of_state = 374
+				has_full_control_of_state = 46
+				has_full_control_of_state = 373
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 374
+				}
+				374 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1450
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2075
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5850
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2413
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 46
+				}
+				46 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5380
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1546
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2636
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5375
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 373
+				}
+				373 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2337
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1702
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1072
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5362
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 333
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5358
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}
+	focus = {
+		id = LIL_81
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_80
+		}
+		x = 63
+		y = 8
+		available = {
+			or = {
+				has_full_control_of_state = 499
+				has_full_control_of_state = 497
+				has_full_control_of_state = 4
+				has_full_control_of_state = 29
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 499
+				}
+				499 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6834
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6823
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6810
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 497
+				}
+				497 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6782
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6704
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 4
+				}
+				4 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5916
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1180
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1992
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5901
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 29
+				}
+				29 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5416
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 577
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1038
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5889
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5436
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2546
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}
+	focus = {
+		id = LIL_82
+		icon = GFX_focus_LIL_shuyudaziran
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_71
+		}
+		x = 63
+		y = 13
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_zhongshiyanjiu_1
+				add_idea = LIL_zhongshiyanjiu_2
+			}
+			add_tech_bonus = {
+				category = secret
+				uses = 3
+				ahead_reduction = 3
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_83
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_82
+		}
+		x = 63
+		y = 14
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_zhongshiyanjiu_2
+				add_idea = LIL_zhongshiyanjiu_3
+			}
+			add_tech_bonus = {
+				category = race
+				uses = 3
+				ahead_reduction = 3
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_84
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_83
+		}
+		available = {
+			has_tech = ziranronghe1
+			has_tech = ziranenhui1
+			has_tech = yaojinggansiban1
+		}
+		x = 63
+		y = 15
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = LIL_zhongshiyanjiu_3
+				add_idea = LIL_zhongshiyanjiu_4
+			}
+		}
+	}
+	focus = {
+		id = LIL_85
+		icon = GFX_focus_LIL_leyuanxiandaihuagaige
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_21
+		}
+		x = 6
+		y = 5
+		completion_reward = {
+			conservativeincrease = yes
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.05
+			}
+			add_timed_idea = {
+			idea = LIL_xiandaihuagaigezuibei
+			days = 180
+			}
+		}
+	}
+	focus = {
+		id = LIL_86
+		icon = GFX_focus_befriend_TEG_new
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_85
+		}
+		x = 4
+		y = 6
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_yaoguaiyingxiang
+			add_idea = LIL_xiangtiangoumenxuexi
+			}
+		}
+	}
+	focus = {
+		id = LIL_87
+		icon = GFX_focus_LIL_weichizizhitizhi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_85
+		}
+		x = 8
+		y = 6
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = LIL_leyuanzizhi
+				add_idea = LIL_leyuanzizhi_2
+			}
+		}
+	}
+	focus = {
+		id = LIL_88
+		icon = GFX_focus_LIL_yinjintiangodejishu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_86
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			add_political_power = -100
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = industrys
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = build
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = radio
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = math
+			}
+		}
+	}
+	focus = {
+		id = LIL_89
+		icon = GFX_focus_LIL_gaigezhongyangjigo
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_86
+		}
+		prerequisite = {
+			focus = LIL_87
+		}
+		x = 6
+		y = 7
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_leyuanzizhi_2
+			add_idea = LIL_leyuanzizhi_3
+			}
+		}
+	}
+	focus = {
+		id = LIL_90
+		icon = GFX_focus_LIL_gojianquyuxingmingzhu
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_87
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_quyuxingmingzhu
+		}
+	}
+	focus = {
+		id = LIL_91
+		icon = GFX_focus_LIL_leyuanxuanchuangbu
+		cost = 5
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_89
+		}
+		x = 4
+		y = 8
+		completion_reward = {
+			add_ideas = LIL_leyuanxuanchuanbu
+		}
+	}
+	focus = {
+		id = LIL_92
+		icon = GFX_focus_LIL_leyuanshuiwubu
+		cost = 5
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_89
+		}
+		x = 6
+		y = 8
+		completion_reward = {
+			add_ideas = LIL_leyuanshuiwubu
+		}
+	}
+	focus = {
+		id = LIL_93
+		icon = GFX_focus_LIL_leyuanxingzhenbu
+		cost = 5
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_89
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+			add_ideas = LIL_leyuanxingzhengbu
+		}
+	}
+	focus = {
+		id = LIL_94
+		icon = GFX_focus_LIL_baochunlinggan
+		cost = 1
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_88
+		}
+		prerequisite = {
+			focus = LIL_91
+		}
+		x = 2
+		y = 9
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = radio
+			}
+		}
+	}
+	focus = {
+		id = LIL_95
+		icon = GFX_focus_LIL_leyuanzhishengdiantai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_94
+		}
+		x = 2
+		y = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = radio
+				ahead_reduction = 2
+			}
+			add_ideas = LIL_leyuanzhishengdiantai
+		}
+	}
+	focus = {
+		id = LIL_96
+		icon = GFX_focus_LIL_baozhangziyou
+		cost = 5
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_95
+		}
+		x = 3
+		y = 11
+		completion_reward = {
+			custom_effect_tooltip = LIL_96_tt
+		}
+	}
+	focus = {
+		id = LIL_97
+		icon = GFX_focus_LIL_chunzhige
+		cost = 5
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_95
+		}
+		x = 1
+		y = 11
+		completion_reward = {
+			custom_effect_tooltip = LIL_97_tt
+			custom_effect_tooltip = LIL_97_tt_1
+		}
+	}
+	focus = {
+		id = LIL_98
+		icon = GFX_focus_LIL_leyuanlianheihui
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+			has_completed_focus = LIL_89
+		}
+		prerequisite = {
+			focus = LIL_90
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_leyuanzizhi_3
+			add_idea = LIL_leyuanzizhi_4
+			}
+		}
+	}
+	focus = {
+		id = LIL_99
+		icon = GFX_focus_LIL_jianlixuanjuzhi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_93
+		}
+		prerequisite = {
+			focus = LIL_98
+		}
+		x = 10
+		y = 9
+		completion_reward = {
+			country_event = { id = lil.3 }
+		}
+	}
+	focus = {
+		id = LIL_100
+		icon = GFX_focus_TBA_xiandaihuachangshi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_92
+		}
+		prerequisite = {
+			focus = LIL_93
+		}
+		x = 6
+		y = 9
+		completion_reward = {
+			add_ideas = LIL_difangfazhantouzi
+		}
+	}
+	focus = {
+		id = LIL_101
+		icon = GFX_focus_LIL_canzhenjintie
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_99
+		}
+		x = 11
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_canzhengjintie
+		}
+	}
+	focus = {
+		id = LIL_102
+		icon = GFX_focus_LIL_huanyinwaizi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_100
+		}
+		x = 5
+		y = 10
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_difangfazhantouzi
+			add_idea = LIL_difangfazhantouzi_2
+			}	
+		}
+	}
+	focus = {
+		id = LIL_103
+		icon = GFX_focus_LIL_gulimaoyi
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_100
+		}
+		x = 7
+		y = 10
+		completion_reward = {
+			conservativeincrease = yes
+			add_ideas = LIL_gulimaoyi
+		}
+	}
+	focus = {
+		id = LIL_104
+		icon = GFX_focus_LIL_shelileyuanneige
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_99
+		}
+		x = 9
+		y = 10
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_leyuanzizhi_4
+			add_idea = LIL_leyuanzizhi_5
+			}
+		}
+	}
+	focus = {
+		id = LIL_105
+		icon = GFX_focus_LIL_jingjiyouxian
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_102
+		}
+		prerequisite = {
+			focus = LIL_103
+		}
+		x = 6
+		y = 11
+		completion_reward = {
+			add_ideas = LIL_jingjiyouxian
+		}
+	}
+	focus = {
+		id = LIL_106
+		icon = GFX_focus_LIL_baozhangziyou
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_104
+		}
+		prerequisite = {
+			focus = LIL_101
+		}
+		x = 10
+		y = 11
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = LIL_leyuanzizhi_5
+			add_idea = LIL_ziyouminzhudeleyuanzizhi
+			}
+		}
+	}
+	focus = {
+		id = LIL_107
+		icon = GFX_focus_LIL_jiuleyuanxinleyuan
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_105
+		}
+		prerequisite = {
+			focus = LIL_106
+		}
+		x = 6
+		y = 12
+		completion_reward = {
+			add_ideas = LIL_leyuantuanjieyixin
+		}
+	}
+	focus = {
+		id = LIL_108
+		icon = GFX_focus_LIL_feichuleyuanzizhitizhi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_23
+			focus = LIL_24
+		}
+		x = 20
+		y = 6
+		completion_reward = {
+			remove_ideas = LIL_leyuanzizhi
+			add_ideas = Village
+			country_event = {
+				id = lil.13
+			}
+		}
+	}
+	focus = {
+		id = LIL_109
+		icon = GFX_focus_LIL_wuzhihulianhuotuan
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_23
+		}
+		x = 17
+		y = 6
+		completion_reward = {
+			add_ideas = LIL_wuzhihulianluotuan
+		}
+	}
+	focus = {
+		id = LIL_110
+		icon = GFX_focus_LIL_xuexigeming
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_109
+		}
+		x = 17
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_xuexigeminsiwei
+		}
+	}
+	focus = {
+		id = LIL_111
+		icon = GFX_focus_TBA_xiandaihuachangshi
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_109
+		}
+		x = 15
+		y = 7
+		completion_reward = {
+			CIR = { country_event = lil.14 }
+			custom_effect_tooltip = LIL_111_tt
+			effect_tooltip = {
+				CIR = {
+					add_political_power = -50
+				}
+				add_offsite_building = { type = industrial_complex level = 2 }
+				add_timed_idea = {
+					idea = LIL_wuzhihujiansheyuanzhu
+					days = 120
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_112
+		icon = GFX_focus_LIL_tudijizhongguanli
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_108
+		}
+		x = 20
+		y = 7
+		completion_reward = {
+			every_state = {
+				limit = {
+					owner = {
+						tag = LIL
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = LIL_113
+		icon = GFX_focus_LIL_tongyisixiangjiaoyu
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_110
+		}
+		x = 17
+		y = 8
+		completion_reward = {
+			remove_ideas = LIL_yaoguaiyingxiang
+			swap_ideas = {
+			remove_idea = LIL_xuexigeminsiwei
+			add_idea = LIL_tongyisixiangjiaoyu
+			}
+		}
+	}
+	focus = {
+		id = LIL_114
+		icon = GFX_focus_LIL_mofangjingji
+		cost = 10.00
+		available = {
+			has_completed_focus = LIL_121
+		}
+		prerequisite = {
+			focus = LIL_111
+		}
+		x = 15
+		y = 8
+		completion_reward = {
+		#	add_ideas = LIL_leyuanfazhanjihua_i
+			add_dynamic_modifier = {
+				modifier = LIL_leyuanfazhanjihua_dy
+			}
+			add_to_variable = {
+				LIL_shengchangxiaolv = 0.05
+			}
+			custom_effect_tooltip = LIL_114_tt
+		}
+	}
+	focus = {
+		id = LIL_115
+		icon = GFX_focus_LIL_laodongjinsai
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_114
+		}
+		x = 14
+		y = 9
+		completion_reward = {
+			add_ideas = LIL_laodongjingsai
+		}
+	}
+	focus = {
+		id = LIL_116
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_114
+		}
+		x = 15
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_xuanyangjitizhuyi
+		}
+	}
+	focus = {
+		id = LIL_117
+		icon = GFX_focus_ITA_banda_carita
+		cost = 10.00
+		available = {
+			NOT = {
+				has_country_flag = LIL_yusikltjiaozahn 
+			}
+		}
+		prerequisite = {
+			focus = LIL_115
+		}
+		prerequisite = {
+			focus = LIL_116
+		}
+		x = 14
+		y = 11
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.1
+			change_mobilisation_law = yes
+		}
+	}
+	focus = {
+		id = LIL_118
+		icon = GFX_focus_LIL_gesongyaojinggeming
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_113
+		}
+		x = 17
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_tongyisixiangjiaoyu
+				add_idea = LIL_gesongyaojinggeming
+			}
+		}
+	}
+	focus = {
+		id = LIL_119
+		icon = GFX_focus_LIL_leyuanchuangtong
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_128
+		}
+		x = 26
+		y = 9
+		completion_reward = {
+			add_popularity = {
+				ideology = oldgenso
+				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = LIL_qizhiyuhuahai2
+				add_idea = LIL_qizhiyuhuahai3
+			}
+			custom_effect_tooltip = LIL_119_tt
+			add_to_variable = {
+				LIL_huahaigeshe = 30
+			}
+		}
+	}
+	focus = {
+		id = LIL_120
+		icon = GFX_focus_LIL_gaigezhongyangjigo
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_112
+		}
+		x = 20
+		y = 8
+        completion_reward = {
+			add_ideas = LIL_leyuanzhongyangzhengzhiju
+		}
+	}
+	focus = {
+		id = LIL_121
+		icon = GFX_focus_LIL_jizhonguanli
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_120
+		}
+		x = 20
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_leyuanzhongyangzhengzhiju
+				add_idea = LIL_leyuanzhongyangzhengzhiju2
+			}
+		}
+	}
+	focus = {
+		id = LIL_122
+		icon = GFX_focus_LIL_leyuanlianheihui
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_121
+		}
+		x = 20
+		y = 10
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_leyuanzhongyangzhengzhiju2
+				add_idea = LIL_leyuanzhongyangzhengzhiju3
+			}
+		}
+	}
+	focus = {
+		id = LIL_123
+		icon = GFX_focus_LIL_gemingyaojing
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_idea = LIL_duileyuanzizhituoxie
+			}
+		}
+		prerequisite = {
+			focus = LIL_124
+			focus = LIL_133
+		}
+		prerequisite = {
+			focus = LIL_122
+		}
+		x = 20
+		y = 11
+		completion_reward = {
+			add_ideas = LIL_leyuantuanjieyixin
+			custom_effect_tooltip = LIL_123_tt
+			effect_tooltip = {
+				CIR = {
+					add_to_faction = LIL
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						CIR = {
+							is_faction_leader = yes
+						}
+					}
+					CIR = {
+						add_to_faction = LIL
+					}
+				}
+			}	
+		}
+	}
+	focus = {
+		id = LIL_124
+		icon = GFX_focus_LIL_gengweidadelixiang
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_118
+		}
+		x = 17
+		y = 10
+		completion_reward = {
+			conservativeincrease = yes
+			add_ideas = LIL_gengweidadelixiang
+		}
+	}
+	focus = {
+		id = LIL_125
+		icon = GFX_focus_LIL_chunzhiyaojingdiwei
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_24
+		}
+		x = 23
+		y = 6
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_xuangaochuntiandaodeyaojing
+				add_idea = LIL_xuangaochuntiandaodeweidayaojing
+			}
+		}
+	}
+	focus = {
+		id = LIL_126
+		icon = GFX_focus_LIL_yaojinggongjinhui
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_125
+		}
+		x = 23
+		y = 7
+		completion_reward = {
+			add_ideas = LIL_leyuangongjinhui_1
+			custom_effect_tooltip = LIL_126_tt
+			add_to_variable = {
+				LIL_gemingbai = 70
+			}
+			add_to_variable = {
+				LIL_jinbupai = 70
+			}
+			add_to_variable = {
+				LIL_chongbaizhe = 70
+			}
+			add_to_variable = {
+				LIL_baoshipai = 50
+			}
+			add_to_variable = {
+				LIL_huahaigeshe = 20
+			}
+		}
+	}
+	focus = {
+		id = LIL_127
+		icon = GFX_focus_LIL_qizhihuahai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_125
+		}
+		x = 25
+		y = 7
+        completion_reward = {
+			add_ideas = LIL_qizhiyuhuahai
+		}
+	}
+	focus = {
+		id = LIL_128
+		icon = GFX_focus_LIL_leyuanzhishengdiantai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_127
+		}
+		x = 25
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_qizhiyuhuahai
+				add_idea = LIL_qizhiyuhuahai2
+			}
+		}
+	}
+	focus = {
+		id = LIL_129
+		icon = GFX_focus_LIL_dongquchunlai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_130
+		}
+		prerequisite = {
+			focus = LIL_119
+		}
+		x = 26
+		y = 11
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIL_qizhiyuhuahai3
+				add_idea = LIL_chuntianjiuzaiqianfang
+			}
+		}
+	}
+	focus = {
+		id = LIL_130
+		icon = GFX_focus_LIL_baozhangziyou
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_128
+		}
+		x = 25
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_weidadeyaojing
+		}
+	}
+	focus = {
+		id = LIL_131
+		icon = GFX_focus_LIL_leyuanchuangtong
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_126
+		}
+		x = 23
+		y = 8
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			custom_effect_tooltip = LIL_131_tt
+			add_to_variable = {
+				LIL_jinbupai = 10
+			}
+			add_to_variable = {
+				LIL_baoshipai = 10
+			}
+			add_to_variable = {
+				LIL_huahaigeshe = 10
+			}
+		}
+	}
+	focus = {
+		id = LIL_132
+		icon = GFX_focus_LIL_chunzhiyaojingdiwei
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_131
+		}
+		x = 23
+		y = 9
+        completion_reward = {
+			add_country_leader_trait = LIL_leyuanzhixin
+		}
+	}
+	focus = {
+		id = LIL_133
+		icon = GFX_focus_LIL_jiefangchunfeng
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_132
+		}
+		x = 23
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_jiefangzhichunfeng
+		}
+	}
+	
+	focus = {
+		id = LIL_135
+		icon = GFX_focus_LIL_shenpanzhiri
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_2
+		}
+		mutually_exclusive = {
+			focus = LIL_7
+		}
+		x = 6
+		y = 15
+		completion_reward = {
+			effect_tooltip = {
+				add_ideas = LIL_shenpanzhiri
+			}
+		}
+	}
+	focus = {
+		id = LIL_137
+		icon = GFX_focus_LIL_yaojingzhichunzhongjiangdaolai	
+		cost = 10.00
+		available = {
+			has_War = no
+			has_government = qinwai
+		}
+		prerequisite = {
+			focus = LIL_3
+		}
+		mutually_exclusive = {
+			focus = LIL_8
+		}
+		x = 10
+		y = 14
+		completion_reward = {
+			custom_effect_tooltip = LIL_137_tt
+			LIL_lil = {
+				set_portraits = {
+					army = { large = "gfx/leaders/LIL/LIL_lil.dds" }
+					army = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+					civilian = { large = "gfx/leaders/LIL/LIL_lil.dds" }		
+					civilian = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+				}
+			}
+			LIL_lil_leader = {
+				set_portraits = {
+					army = { large = "gfx/leaders/LIL/LIL_lil.dds" }
+					army = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+					civilian = { large = "gfx/leaders/LIL/LIL_lil.dds" }		
+					civilian = { small = "gfx/leaders/LIL/LIL_lil_small.dds" }
+				}
+			}
+			lobbydecrease = yes
+			add_ideas = civilian_economy
+			add_ideas = LIL_zhenzhendeyojingzhichun
+		}
+	}
+	focus = {
+		id = LIL_138
+		icon = GFX_focus_LIL_shuyudaziran
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_137
+		}
+		x = 10
+		y = 15
+		completion_reward = {
+			conservativeincrease = yes
+			add_ideas = loose_border
+			swap_ideas = {
+				add_idea = LIL_zhenzhendeyojingzhichun_2
+				remove_idea = LIL_zhenzhendeyojingzhichun
+			}
+		}
+	}
+	focus = {
+		id = LIL_139
+		icon = GFX_focus_LIL_baozhangziyou
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_138
+		}
+		x = 10
+		y = 16
+		completion_reward = {
+			swap_ideas = {
+				add_idea = LIL_zhenzhendeyojingzhichun_3
+				remove_idea = LIL_zhenzhendeyojingzhichun_2
+			}
+		}
+	}
+	focus = {
+		id = LIL_140
+		icon = GFX_focus_LIL_nanbeiguiyi
+		cost = 10.00
+		available = {
+			is_neighbor_of = CIR	
+		}
+		prerequisite = {
+			focus = LIL_9
+		}
+		x = 12
+		y = 16
+		completion_reward = {
+			CIR = { 
+				country_event = {
+					id = lil.16
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_141
+		icon = GFX_focus_LIL_baochunzhilv
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_8
+		}
+		mutually_exclusive = {
+			focus = LIL_9
+		}
+		x = 14
+		y = 15
+		completion_reward = {
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.10
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = LIL_142
+		icon = GFX_focus_LIL_gemingshuangzixing
+		cost = 10.00
+		available = {
+			CIR = {
+				has_government = fandong
+			}
+		}
+		prerequisite = {
+			focus = LIL_141
+		}
+		x = 14
+		y = 16
+		completion_reward = {
+			add_ideas = LIL_gemingshuangzixing
+			CIR = {
+				add_ideas = LIL_gemingshuangzixing
+			}
+		}	
+	}
+	focus = {
+		id = LIL_143
+		icon = GFX_focus_LIL_nanbeiguiyi
+		cost = 10.00
+		available = {
+			is_neighbor_of = CIR	
+		}
+		prerequisite = {
+			focus = LIL_12
+		}
+		x = 16
+		y = 16
+		completion_reward = {
+			custom_effect_tooltip = LIL_143_tt
+			CIR = {
+				country_event = {
+					id = lil.17
+					days = 1
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {
+		id = LIL_148
+		icon = GFX_focus_LIL_quzhuzhongzu
+		cost = 10.00
+		available = {
+			HU7 = {
+				before_declare_war = yes
+			}
+		}
+		prerequisite = {
+			focus = LIL_76
+		}
+		bypass = {
+			HU7 = {
+				bypass_declare_war = yes
+			}
+		}	
+		completion_reward = {
+			HU7 = {
+				country_event = {
+					id = lil.7
+				}
+			}
+		}
+		x = 65
+		y = 7
+
+	}
+	focus = {
+		id = LIL_149
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = LIL_148
+		}
+		x = 65
+		y = 8
+		available = {
+			has_tech = jianzaojishu130
+			or = {
+				has_full_control_of_state = 374
+				has_full_control_of_state = 5
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 374
+				}
+				374 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1450
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5887
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 241
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 535
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 5
+				}
+				5 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5899
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1380
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 5913
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2104
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 498
+				}
+				498 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 6731
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_150
+		icon = GFX_focus_LIL_paiwangshoshishituan
+		cost = 10.00
+		available = {
+			NOT = {
+				has_war_with = MRY
+			}	
+		}
+		prerequisite = {
+			focus = LIL_38
+		}
+		x = 38
+		y = 7
+		completion_reward = {
+			MRY = {
+				country_event = {
+					id = lil.8
+				}
+			}
+		}
+	}
+	focus = {
+		id = LIL_151
+		icon = GFX_focus_LIL_tudijizhongguanli
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_154
+		}
+		x = 32
+		y = 8
+		completion_reward = {
+			conservativedecrease = yes
+			add_timed_idea = {
+				idea = LIL_songfanduizhequnanfang
+				days = 180
+			}
+			CIR = {
+				add_ideas = LIL_yaojingleyuanyiming
+			}
+		}
+	}
+	focus = {
+		id = LIL_152
+		icon = GFX_focus_LIL_zhixuzhileyuan
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_153
+		}
+		prerequisite = {
+			focus = LIL_35
+		}
+		x = 34
+		y = 10
+		completion_reward = {
+			add_ideas = LIL_leyuantuanjieyixin
+		}
+	}
+	focus = {
+		id = LIL_153
+		icon = GFX_focus_LIL_huahaihuaguan
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_151
+		}
+		prerequisite = {
+			focus = LIL_31
+		}
+		x = 33
+		y = 9
+		completion_reward = {
+			add_popularity = {
+				ideology = guli
+				popularity = 0.10
+			}
+			set_cosmetic_tag = LIL_wangguo
+			set_party_name = {
+				ideology = guli
+				long_name = "乐园王党"
+				name = "乐园王党"
+			}
+			add_country_leader_trait = TBA_leyuanzhiwaang
+			custom_effect_tooltip = LIL_153_tt
+			add_ideas = Country
+			#可以加新闻
+		}
+	}
+	focus = {
+		id = LIL_154
+		icon = GFX_focus_LIL_zhongyongbaoshopai
+		cost = 10.00
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = LIL_xianzhixian
+				}
+			}
+		}
+		prerequisite = {
+			focus = LIL_28
+		}
+		x = 32
+		y = 7
+		completion_reward = {
+			conservativedecrease = yes
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+			add_ideas = LIL_zhongyongbaoshopai
+		}
+	}
+}

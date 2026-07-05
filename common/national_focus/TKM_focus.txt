@@ -2050,10 +2050,9 @@ focus_tree = {
 		}
   
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
   
@@ -2331,10 +2330,9 @@ focus_tree = {
   
 		completion_reward = {
 			army_experience = 10
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.2
-				uses = 1
-        		category = land_doctrine
+			add_mastery = {
+				amount = 20
+				folder = land
 			}
 			if = {
 				limit = {

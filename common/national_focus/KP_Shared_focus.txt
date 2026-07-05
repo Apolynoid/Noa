@@ -1,0 +1,614 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+
+# 国防工业计划
+shared_focus = {
+	id = KP_guo_fang_gong_ye_ji_hua
+	icon = GFX_goal_generic_military_sphere
+	cost = 7
+	x = 16
+	y = 8
+
+	completion_reward = {
+		add_ideas = KP_guo_fang_gong_ye_ji_hua_idea
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 军事投资
+shared_focus = {
+	id = KP_jun_shi_tou_zi
+	icon = GFX_goal_generic_axis_build_infantry
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = KP_guo_fang_gong_ye_ji_hua
+
+	prerequisite = {
+		focus = KP_guo_fang_gong_ye_ji_hua
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_jun_shi_tou_zi
+			bonus = 0.65
+			uses = 2
+			category = military
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 扩大征兵
+shared_focus = {
+	id = KP_kuo_da_zheng_bing
+	icon = GFX_focus_generic_little_entente
+	cost = 7
+	x = -2
+	y = 1
+
+	relative_position_id = KP_jun_shi_tou_zi
+
+	prerequisite = {
+		focus = KP_jun_shi_tou_zi
+	}
+
+	completion_reward = {
+		add_ideas = KP_xian_dai_bing_yi_zhi_idea
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 战争宣传
+shared_focus = {
+	id = KP_zhan_zheng_xuan_chuan
+	icon = GFX_focus_war_propaganda
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = KP_kuo_da_zheng_bing
+
+	prerequisite = {
+		focus = KP_kuo_da_zheng_bing
+	}
+
+	completion_reward = {
+		add_war_support = 0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 总结战争经验
+shared_focus = {
+	id = KP_zong_jie_zhan_zheng_jing_yan
+	icon = GFX_focus_army_experience
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_zhan_zheng_xuan_chuan
+
+	prerequisite = {
+		focus = KP_zhan_zheng_xuan_chuan
+	}
+
+	completion_reward = {
+		army_experience = 30
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 河童光学迷彩
+shared_focus = {
+	id = KP_he_tong_guang_xue_mi_cai
+	icon = GFX_focus_SWE_beneath_sticks_and_stone
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = KP_kuo_da_zheng_bing
+
+	prerequisite = {
+		focus = KP_kuo_da_zheng_bing
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = KP_xian_dai_bing_yi_zhi_idea
+			add_idea = KP_xian_dai_bing_yi_zhi_a_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 量产河童妙药
+shared_focus = {
+	id = KP_liang_chan_he_tong_miao_yao
+	icon = GFX_focus_generic_field_hostpital
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_he_tong_guang_xue_mi_cai
+
+	prerequisite = {
+		focus = KP_he_tong_guang_xue_mi_cai
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = KP_xian_dai_bing_yi_zhi_a_idea
+			add_idea = KP_xian_dai_bing_yi_zhi_b_idea
+		}
+		custom_effect_tooltip = KP_kappa_medicine_tt
+		hidden_effect = {
+			set_technology = {
+				KP_he_tong_miao_yao = 1
+				popup = no
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+
+# 工业投资
+shared_focus = {
+	id = KP_gong_ye_tou_zi
+	icon = GFX_goal_generic_production2
+	cost = 7
+	x = 2
+	y = 1
+
+	relative_position_id = KP_guo_fang_gong_ye_ji_hua
+
+	prerequisite = {
+		focus = KP_guo_fang_gong_ye_ji_hua
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_gong_ye_tou_zi
+			bonus = 0.6
+			uses = 2
+			category = industrys
+			category = build
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 税制改革
+shared_focus = {
+	id = KP_shui_zhi_gai_ge
+	icon = GFX_focus_generic_economic_recovery
+	cost = 12
+	x = 2
+	y = 1
+
+	relative_position_id = KP_gong_ye_tou_zi
+
+	prerequisite = {
+		focus = KP_gong_ye_tou_zi
+	}
+
+	completion_reward = {
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 战略资源勘探
+shared_focus = {
+	id = KP_zhan_lve_zi_yuan_kan_tan
+	icon = GFX_goal_generic_construction2
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = KP_shui_zhi_gai_ge
+
+	prerequisite = {
+		focus = KP_shui_zhi_gai_ge
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = KP_guo_fang_gong_ye_ji_hua_a_idea
+			}
+			swap_ideas = {
+				remove_idea = KP_guo_fang_gong_ye_ji_hua_a_idea
+				add_idea = KP_guo_fang_gong_ye_ji_hua_c_idea	
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = KP_guo_fang_gong_ye_ji_hua_idea
+				add_idea = KP_guo_fang_gong_ye_ji_hua_b_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 投资军事工业
+shared_focus = {
+	id = KP_tou_zi_jun_shi_gong_ye
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 12
+	x = 0
+	y = 1
+
+	relative_position_id = KP_zhan_lve_zi_yuan_kan_tan
+
+	prerequisite = {
+		focus = KP_zhan_lve_zi_yuan_kan_tan
+	}
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 河童农业技术
+shared_focus = {
+	id = KP_he_tong_nong_ye_ji_shu
+	icon = GFX_focus_SOV_breadbasket_of_the_union
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = KP_shui_zhi_gai_ge
+
+	prerequisite = {
+		focus = KP_shui_zhi_gai_ge
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = KP_guo_fang_gong_ye_ji_hua_b_idea
+			}
+			swap_ideas = {
+				remove_idea = KP_guo_fang_gong_ye_ji_hua_b_idea
+				add_idea = KP_guo_fang_gong_ye_ji_hua_c_idea	
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = KP_guo_fang_gong_ye_ji_hua_idea
+				add_idea = KP_guo_fang_gong_ye_ji_hua_a_idea
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 扩建黄瓜种植园
+shared_focus = {
+	id = KP_kuo_jian_huang_gua_zhong_zhi_yuan
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 12
+	x = 0
+	y = 1
+
+	relative_position_id = KP_he_tong_nong_ye_ji_shu
+
+	prerequisite = {
+		focus = KP_he_tong_nong_ye_ji_shu
+	}
+
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 河童研究所
+shared_focus = {
+	id = KP_he_tong_yan_jiu_suo
+	icon = GFX_focus_research
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_guo_fang_gong_ye_ji_hua
+
+	prerequisite = {
+		focus = KP_guo_fang_gong_ye_ji_hua
+	}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 轻武器研究
+shared_focus = {
+	id = KP_qing_wu_qi_yan_jiu
+	icon = GFX_focus_focus_fra_maquis
+	cost = 7
+	x = -1
+	y = 1
+
+	relative_position_id = KP_he_tong_yan_jiu_suo
+
+	prerequisite = {
+		focus = KP_he_tong_yan_jiu_suo
+	}
+
+	prerequisite = {
+		focus = KP_jun_shi_tou_zi
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_qing_wu_qi_yan_jiu
+			bonus = 1
+			uses = 1
+			category = infantry
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 火炮研究
+shared_focus = {
+	id = KP_huo_pao_yan_jiu
+	icon = GFX_goal_generic_army_artillery2
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_qing_wu_qi_yan_jiu
+
+	prerequisite = {
+		focus = KP_qing_wu_qi_yan_jiu
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_huo_pao_yan_jiu
+			bonus = 1
+			uses = 1
+			category = artillery_tech
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 装甲研究
+shared_focus = {
+	id = KP_zhuang_jia_yan_jiu
+	icon = GFX_goal_generic_build_tank
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_huo_pao_yan_jiu
+
+	prerequisite = {
+		focus = KP_huo_pao_yan_jiu
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_zhuang_jia_yan_jiu
+			bonus = 1
+			uses = 1
+			category = shield_weapons
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 基础科学研究
+shared_focus = {
+	id = KP_ji_chu_ke_xue_yan_jiu
+	icon = GFX_focus_basic_science
+	cost = 7
+	x = 1
+	y = 1
+
+	relative_position_id = KP_he_tong_yan_jiu_suo
+
+	prerequisite = {
+		focus = KP_he_tong_yan_jiu_suo
+	}
+
+	prerequisite = {
+		focus = KP_gong_ye_tou_zi
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = KP_ji_chu_ke_xue_yan_jiu
+			bonus = 0.8
+			uses = 2
+			category = math
+			ahead_reduction = 1.0
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 应用科学研究
+shared_focus = {
+	id = KP_ying_yong_ke_xue_yan_jiu
+	icon = GFX_goal_generic_construct_civilian
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_ji_chu_ke_xue_yan_jiu
+
+	prerequisite = {
+		focus = KP_ji_chu_ke_xue_yan_jiu
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.7
+			uses = 2
+			category = industrys
+			ahead_reduction = 0.8
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# 种族科技研究
+shared_focus = {
+	id = KP_zhong_zu_ke_ji_yan_jiu
+	icon = GFX_focus_racial_science
+	cost = 7
+	x = 0
+	y = 1
+
+	relative_position_id = KP_ying_yong_ke_xue_yan_jiu
+
+	prerequisite = {
+		focus = KP_ying_yong_ke_xue_yan_jiu
+	}
+
+	completion_reward = {
+		add_breakthrough_progress = {
+			value = 1
+			specialization = specialization_race
+		}
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

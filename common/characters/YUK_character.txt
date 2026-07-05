@@ -1,6 +1,7 @@
 characters={
 	YUK_elly ={
 		name = YUK_elly
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_elly.dds"
@@ -38,6 +39,7 @@ characters={
 	}
 	YUK_gengetsu ={
 		name = YUK_gengetsu
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_gengetsu.dds"
@@ -71,6 +73,7 @@ characters={
 	}
 	YUK_kurumi ={
 		name = YUK_kurumi
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_kurumi.dds"
@@ -108,6 +111,7 @@ characters={
 	}
 	YUK_mugetsu ={
 		name = YUK_mugetsu
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_mugetsu.dds"
@@ -141,6 +145,7 @@ characters={
 	}
 	YUK_orange ={
 		name = YUK_orange
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_orange.dds"
@@ -174,6 +179,7 @@ characters={
 	}
 	YUK_yuk ={
 		name = YUK_yuk
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_yuk.dds"
@@ -222,6 +228,7 @@ characters={
 	}
 	YUK_larva ={
 		name = YUK_larva
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/YUK/YUK_larva.dds"

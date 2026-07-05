@@ -63,29 +63,3 @@ TEG_Our_industry_is_already_strong_3 = {
 		value = 75
 	}
 }
-
-### NOA Part
-TEG_rush_against_OTG = {
-	allowed = {
-		original_tag = TEG
-	}
-	
-	enable = {
-		TEG_unification_problem_to_solve = yes
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		
-		tag = OTG
-
-		ratio = 0.1
-
-		priority = 10
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-}

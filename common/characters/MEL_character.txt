@@ -1,6 +1,7 @@
 characters={
 	MEL_mel ={
 		name = MEL_mel
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MEL/MEL_mel.dds"

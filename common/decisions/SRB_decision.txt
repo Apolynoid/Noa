@@ -157,7 +157,7 @@ SRB_wai_jiao_zheng_ce = {
                 }
                 hidden_effect = {
                     set_temp_variable = {
-                        SRB_influence_plus = 20
+                        SRB_influence_plus = 15
                     }
                 }
                 SRB_add__SRB_influence_plus__influence = yes

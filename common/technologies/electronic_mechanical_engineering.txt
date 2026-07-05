@@ -78,6 +78,12 @@ technologies = {
 			waike
 		}
 
+		allow = {
+			NOT = {
+				has_tech = waike
+			}
+		}
+
 		on_research_complete = {
 		    hidden_effect = {
 		        set_technology = {
@@ -126,6 +132,12 @@ technologies = {
 		path = {
 			leads_to_tech = wuxiandian147
 			research_cost_coeff = 1
+		}
+
+		allow = {
+			NOT = {
+				has_tech = lingben
+			}
 		}
 		
 		XOR = {

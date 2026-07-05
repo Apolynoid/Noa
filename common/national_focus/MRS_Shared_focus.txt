@@ -324,10 +324,10 @@ shared_focus = {
 
   completion_reward = {
     custom_effect_tooltip = MRS_doctrine_skip_tt
-    add_doctrine_cost_reduction = {
-      cost_reduction = 0.5
-      uses = 1
-      category = mass_assault_doctrine
+    add_mastery = {
+      amount = 50
+      folder = land
+      grand_doctrine = mass_assault
     }
   }
 
@@ -439,10 +439,10 @@ shared_focus = {
 
   completion_reward = {
     custom_effect_tooltip = MRS_doctrine_skip_tt
-    add_doctrine_cost_reduction = {
-      cost_reduction = 0.5
-      uses = 1
-      category = fire_support_doctrine
+    add_mastery = {
+      amount = 50
+      folder = land
+      grand_doctrine = fire_support
     }
   }
 
@@ -594,10 +594,10 @@ shared_focus = {
 
   completion_reward = {
     custom_effect_tooltip = MRS_doctrine_skip_tt
-    add_doctrine_cost_reduction = {
-      cost_reduction = 0.5
-      uses = 1
-      category = special_operations_doctrine
+    add_mastery = {
+      amount = 50
+      folder = land
+      grand_doctrine = special_operations
     }
   }
 

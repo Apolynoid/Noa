@@ -1,0 +1,40 @@
+LTS_Tianzizhilu_dy = {
+	research_speed_factor = LTS_Tianzizhilu_keyan
+	political_power_gain = LTS_Tianzizhilu_zhengzhi
+	industrial_capacity_factory = LTS_Tianzizhilu_gongchang
+	Army_attack_factor = LTS_Tianzizhilu_gongji
+	Army_defence_factor = LTS_Tianzizhilu_fangyu
+	army_org_factor = LTS_Tianzizhilu_zuzhidu
+	production_speed_buildings_factor = LTS_Tianzizhilu_jianzhu
+}
+gerongchongbai_dy = {
+	stability_factor = TES_chongbai_wendingdu
+	industrial_capacity_factory = TES_chongbai_changchu
+}
+tianren_dy = {
+	#debuff
+	max_surrender_limit_offset = toxiang_tianren
+	political_power_factor = zhengzhi_tianren
+	stability_weekly = meizhouwendingdu_tianren
+	war_support_weekly = meizhouzhanzhneg_tianren
+	#buff
+	stability_factor = wendingdu_tianren
+	consumer_goods_factor = xiaofeiping_tianren
+}
+tianjieyaoguai_dy = {
+	industrial_capacity_factory = changchu_tianjieyaoguai
+	production_speed_buildings_factor = jianzhu_tianjieyaoguai
+	research_speed_factor = keyan_tianjieyaoguai
+	consumer_goods_factor = xiaofeiping_tianjieyaoguai
+}
+yaojing_dy = {
+	conscription = renko_yaojing
+	industrial_capacity_factory = gongchang_yaojinng
+	stability_weekly = meizhouwendingdu_yaojing
+	political_power_gain = zhengzhi_yaojing
+}
+diyuyaoguai_dy = {
+	war_support_factor = zhichidu_diyuyaoguai
+	Army_attack_factor = gongji_diyuyaoguai
+	consumer_goods_factor = xiaofeiping_diyuyaoguai
+}

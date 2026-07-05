@@ -783,10 +783,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.3
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 30
+				folder = land
 			}
 			add_tech_bonus = {
 				bonus = 0.5
@@ -2277,10 +2276,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	
@@ -2476,6 +2474,10 @@ focus_tree = {
 		}
 	
 		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
 			add_ideas = SEJ_nong_ye_ji_ti_hua_d_idea
 			custom_effect_tooltip = SEJ_collectivation_improve_tt
 			hidden_effect = {
@@ -2711,6 +2713,7 @@ focus_tree = {
 	
 		completion_reward = {
 			add_tech_bonus = {
+				name = SEJ_ying_yong_ke_xue_yan_jiu
 				bonus = 0.7
 				uses = 2
 				category = industrys
@@ -2738,6 +2741,7 @@ focus_tree = {
 	
 		completion_reward = {
 			add_tech_bonus = {
+				name = SEJ_ji_chu_ke_xue_yan_jiu
 				bonus = 0.8
 				uses = 2
 				category = math

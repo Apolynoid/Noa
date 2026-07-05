@@ -123,6 +123,18 @@ country_event = {
 
 	option = {
 		name = sca.104.1
+		random_core_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
 		remove_ideas = SCA_yao_jing_bu_man_idea
 		add_dynamic_modifier = {
 			modifier = SCA_yao_jing_bao_dong_idea

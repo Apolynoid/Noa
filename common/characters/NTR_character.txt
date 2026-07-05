@@ -1,6 +1,7 @@
 characters={
 	NTR_ntr ={
 		name = NTR_ntr
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NTR/NTR_ntr.dds"

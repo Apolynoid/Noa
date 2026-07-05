@@ -1,6 +1,7 @@
 characters={
 	ZYD_commerce_committee ={
 		name = ZYD_commerce_committee
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ZYD/ZYD_commerce_committee.png"

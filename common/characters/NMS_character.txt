@@ -1,6 +1,7 @@
 characters={
 	NMS_bkr ={
 		name = NMS_bkr
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_bkr.dds"
@@ -44,6 +45,7 @@ characters={
 	}
 	NMS_syou ={
 		name = NMS_syou
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_syou.dds"
@@ -84,6 +86,7 @@ characters={
 	}
 	NMS_mouse ={
 		name = NMS_mouse
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_mouse.dds"
@@ -118,6 +121,7 @@ characters={
 	}
 	NMS_kumoi ={
 		name = NMS_kumoi
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_kumoi.dds"
@@ -155,6 +159,7 @@ characters={
 	}
 	NMS_kyouko ={
 		name = NMS_kyouko
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_kyouko.dds"
@@ -197,6 +202,7 @@ characters={
 	}
 	NMS_murasa ={
 		name = NMS_murasa
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_murasa.dds"
@@ -239,6 +245,7 @@ characters={
 	}
 	NMS_nue ={
 		name = NMS_nue
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NMS/NMS_nue.dds"

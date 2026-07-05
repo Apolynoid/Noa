@@ -1,6 +1,7 @@
 characters={
 	SKI_ski ={
 		name = SKI_ski
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SKI/SKI_ski.dds"
@@ -40,6 +41,7 @@ characters={
 	}
 	SKI_nwt ={
 		name = SKI_nwt
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SKI/SKI_nwt.dds"
@@ -83,6 +85,7 @@ characters={
 	}
 	KMC_kmc ={
 		name = KMC_kmc
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KMC/KMC_kmc.dds"
@@ -122,6 +125,7 @@ characters={
 	}
 	KMC_elis ={
 		name = KMC_elis
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KMC/KMC_elis.dds"
@@ -159,6 +163,7 @@ characters={
 	}
 	KMC_sariel ={
 		name = KMC_sariel
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KMC/KMC_sariel.dds"

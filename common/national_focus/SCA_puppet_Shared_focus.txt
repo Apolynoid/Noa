@@ -153,10 +153,9 @@ shared_focus = {
   }
 
   completion_reward = {
-    add_doctrine_cost_reduction = {
-      cost_reduction = 0.5
-      uses = 1
-      category = land_doctrine
+    add_mastery = {
+      amount = 50
+      folder = land
     }
   }
 

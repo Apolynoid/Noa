@@ -60,13 +60,15 @@ SRB_clear_investment = {
 }
 
 SRB_cancel_investment = {
-    custom_effect_tooltip = SRB_cancel_investmeny_tt
+    custom_effect_tooltip = SRB_cancel_investment_tt
     hidden_effect = {
         set_country_flag = SRB_cancelled_investment_flag
         set_variable = {
             SRB_influence_value = 0
         }
-        SRB_clear_investment = yes
+        SRB = {
+            SRB_clear_investment = yes
+        }
     }
 }
 

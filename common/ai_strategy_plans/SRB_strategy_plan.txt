@@ -1,0 +1,78 @@
+SRB_focus = {
+	name = "SRB focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = SRB
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# politics first
+		SRB_chong_xin_zhi_ding_shi_er_jie_guan_wei
+		SRB_jing_ji_gai_ge
+		SRB_qiang_hua_zhong_yang_ji_quan
+		SRB_tui_xing_shi_qi_tiao_xian_fa
+		SRB_xuan_ba_xing_zheng_guan_liao
+		# quickly for diplomacy
+		SRB_ling_huo_de_wai_jiao_zheng_ce
+		SRB_jie_chu_ming_lian_si
+		SRB_guo_ying_lian_he_chu_ban_she
+		SRB_jie_chu_hong_mo_guan
+		SRB_si_ka_lei_te_gong_ye_yuan_zhu
+		SRB_jie_chu_fu_sang_shen
+		SRB_pan_luan_tong_meng_jun_shi_yuan_zhu
+		SRB_jie_chu_pan_luan_tong_meng
+		SRB_fu_sang_shen_sheng_chan_ji_shu
+		SRB_zhi_shen_shi_wai_de_shen_ling_miao
+		SRB_guo_jia_tuan_jie
+		# military preparation
+		SRB_mi_mi_jun_bei_chong_zheng
+		SRB_bing_qi_tui_yan
+		SRB_she_li_can_mou_bu
+		# political preparation
+		SRB_huo_bi_gai_ge
+		SRB_ri_chu_zhi_chu_de_tian_zi
+		SRB_kui_tan_ming_lian_si_ruo_dian
+		SRB_bei_fang_fang_xian
+		SRB_ren_lei_de_bao_hu_zhe
+		SRB_yao_qiu_ren_lei_he_bing
+		# industrial
+		SRB_ji_chu_she_shi_jian_she
+		SRB_jian_zhu_ji_shu_ge_xin
+		SRB_tou_zi_min_yong_gong_ye
+		SRB_kai_fa_da_si_miao
+		# combined
+		SRB_xin_jun_shi_li_lun
+		SRB_ying_zi_ji_hua
+		SRB_jin_yi_bu_jun_bei_chong_zheng
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

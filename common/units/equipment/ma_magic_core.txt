@@ -1,0 +1,177 @@
+# All infantry equipment
+
+equipments = {
+
+	magic_core_a = {
+		year = 117
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_ma_attack
+			up_defense
+			up_speed
+		}
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 1
+		hardness = 0.1
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 2
+		hard_attack = 1
+		ap_attack = 4
+		air_attack = 1
+
+		#Misc Abilities
+		reliability = 0.75
+		maximum_speed = 7.5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.2
+
+		
+		
+	}
+
+	magic_core117 = {
+		year = 117
+	
+		archetype = magic_core_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+		}
+	}
+
+	magic_core141 = {
+		year = 141
+	
+		archetype = magic_core_a
+		parent = magic_core117
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+		}
+		
+		defense = 10.5
+		breakthrough = 1.8
+		soft_attack = 3.2
+		hard_attack = 1.5
+		air_attack = 2
+		build_cost_ic = 0.25
+	}
+
+	magic_core147 = {
+		year = 147
+	
+		archetype = magic_core_a
+		parent = magic_core141
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			powder = 1
+			gas = 1
+		}
+		
+		defense = 13
+		breakthrough = 2.6
+		soft_attack = 4.4
+		hard_attack = 2
+		air_attack = 3
+		build_cost_ic = 0.3
+	}
+
+	magic_core153 = {
+		year = 153
+	
+		archetype = magic_core_a
+		parent = magic_core147
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			powder = 1
+			gas = 1
+		}
+		
+		defense = 15.5
+		breakthrough = 3.4
+		soft_attack = 5.6
+		hard_attack = 2.5
+		air_attack = 4
+		build_cost_ic = 0.35
+	}
+
+	magic_core159 = {
+		year = 159
+	
+		archetype = magic_core_a
+		parent = magic_core153
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			powder = 1
+			gas = 2
+		}
+		
+		defense = 18
+		breakthrough = 4.2
+		soft_attack = 6.8
+		hard_attack = 3
+		air_attack = 5
+		build_cost_ic = 0.4
+	}
+
+	magic_core165 = {
+		year = 165
+	
+		archetype = magic_core_a
+		parent = magic_core159
+		priority = 10
+		visual_level = 5
+
+		resources = {
+			powder = 1
+			gas = 2
+		}
+		
+		defense = 20.5
+		breakthrough = 5
+		soft_attack = 8
+		hard_attack = 3.5
+		air_attack = 6
+		build_cost_ic = 0.45
+	}
+}

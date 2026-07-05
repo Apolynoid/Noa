@@ -272,7 +272,7 @@ shared_focus = {
 # 农业学校
 shared_focus = {
 	id = SW_nong_ye_xue_xiao
-	icon = GFX_focus_education
+	icon = GFX_focus_education_NOA
 	cost = 7
 	x = 0
 	y = 1
@@ -585,6 +585,7 @@ shared_focus = {
 	completion_reward = {
 		army_experience = 10
 		add_tech_bonus = {
+			name = SW_jun_shi_jian_she
 			bonus = 0.6
 			uses = 2
 			category = military
@@ -691,10 +692,9 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
+		add_mastery = {
+			amount = 50
+			folder = land
 		}
 	}
 
@@ -746,6 +746,7 @@ shared_focus = {
 
 	completion_reward = {
 		add_tech_bonus = {
+			name = SW_gong_ye_jian_she
 			bonus = 0.6
 			uses = 2
 			category = industrys

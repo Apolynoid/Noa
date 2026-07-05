@@ -177,14 +177,6 @@ SBK = {
     recruit_character = SBK_sek
     recruit_character = SBK_sek_leader
 }
-TBA = {
-    recruit_character = TBA_mike
-    recruit_character = TBA_sannyo
-    recruit_character = TBA_chimata
-    recruit_character = TBA_mike_leader
-    recruit_character = TBA_sannyo_leader
-    recruit_character = TBA_chimata_leader
-}
 TES = {
     recruit_character = TES_tes
     recruit_character = TES_tes_leader
@@ -221,6 +213,12 @@ WHR = {
 YAW = {
     recruit_character = YAW_takane
     recruit_character = YAW_takane_leader
+    recruit_character = TBA_mike
+    recruit_character = TBA_sannyo
+    recruit_character = TBA_chimata
+    recruit_character = TBA_mike_leader
+    recruit_character = TBA_sannyo_leader
+    recruit_character = TBA_chimata_leader
 }
 YCE = {
     recruit_character = YCE_yce

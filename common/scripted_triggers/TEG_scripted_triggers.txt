@@ -1,15 +1,13 @@
-TEG_unification_problem_to_solve = {
+TEG_parliament_not_in_recess = {
 	custom_trigger_tooltip = {
-		tooltip = TEG_unification_problem_to_solve_tt
-		AND = {
-			TEG = {
-				exists = yes
-				is_subject = no
-			}
-			OTG = {
-				exists = yes
-				is_subject = no
-			}
+		tooltip = TEG_has_passed_first_act_tt
+		has_country_flag = TEG_act_established_flag
+	}
+	custom_trigger_tooltip = {
+		tooltip = TEG_least_180_days_from_last_act_tt
+		has_country_flag = {
+			flag = TEG_act_established_flag
+			days > 180
 		}
 	}
 }

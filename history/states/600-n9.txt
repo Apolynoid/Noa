@@ -1,0 +1,28 @@
+state={
+	id=600
+	name="STATE_600"
+	provinces={
+		7455 7456 7472 7473 7474 7487 7488 7491 7494 7496 7501 
+	}
+	resources={
+		energy = 0
+		powder = 5.0
+		metal = 5.0
+		gas=2.000
+		crystal=0.000
+	}
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 3
+			}
+		}
+	}
+	state_category=s5
+	manpower=687
+	buildings_max_level_factor=1.000
+	local_supplies=2.500
+}

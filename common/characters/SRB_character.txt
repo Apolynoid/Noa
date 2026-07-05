@@ -1,6 +1,7 @@
 characters={
 	SRB_mik ={
 		name = SRB_mik
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SRB/SRB_mik.dds"
@@ -58,6 +59,7 @@ characters={
 	}
 	SRB_seiga ={
 		name = SRB_seiga
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SRB/SRB_seiga.dds"
@@ -97,6 +99,7 @@ characters={
 	}
 	SRB_yoshika ={
 		name = SRB_yoshika
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SRB/SRB_yoshika.dds"
@@ -134,6 +137,7 @@ characters={
 	}
 	SRB_futo ={
 		name = SRB_futo
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SRB/SRB_futo.dds"
@@ -172,6 +176,7 @@ characters={
 	}
 	SRB_toziko ={
 		name = SRB_toziko
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SRB/SRB_toziko.dds"

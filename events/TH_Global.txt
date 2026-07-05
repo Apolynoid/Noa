@@ -1,0 +1,1056 @@
+﻿add_namespace = glo
+
+country_event = {
+	id = glo.1
+	title = glo.1.t
+	desc = glo.1.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+	country_event = glo.10000
+	name = glo.1.a
+	}
+	# option = {
+	# country_event = glo.3
+	# name = glo.1.b
+	# }
+}
+country_event = {
+	id = glo.10000
+	title = glo.10000.t
+	desc = glo.10000.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+	# country_event = glo.2
+		name = glo.1.a
+		hidden_effect = {
+			country_event = { id = gen.7 days = 2}
+		}
+	# country_event = glo.2
+	}
+	# option = {
+	# country_event = glo.3
+	# name = glo.1.b
+	# }
+}
+
+country_event = {
+	id = glo.2#FAQ1
+	title = glo.2.t
+	desc = glo.2.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = glo.2.a#138
+	# country_event = glo.21
+	}
+	# option = {
+	# name = glo.2.b#141
+	# country_event = glo.22
+	# }
+	# option = {
+	# name = glo.2.c#142
+	# country_event = glo.23
+	# }
+	# option = {
+	# name = glo.200.d#next page
+	# country_event = glo.20
+	# }
+}
+
+country_event = {
+	id = glo.20#FAQ2
+	title = glo.20.t
+	desc = glo.20.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = glo.20.a#144
+	country_event = glo.24
+	}
+	option = {
+	name = glo.20.b#大背景
+	country_event = glo.25
+	}
+	option = {
+	name = glo.20.c#吹逼
+	country_event = glo.26
+	}
+	option = {
+	name = glo.2000.d#上一页
+	country_event = glo.2
+	}
+}
+
+country_event = {
+	id = glo.3
+	title = glo.3.t
+	desc = glo.3.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.3.a
+	country_event = glo.4
+	}
+	
+}
+##############difficulty选择#################
+# country_event = {
+# 	id = glo.4#
+# 	title = glo.4.t
+# 	desc = glo.4.desc
+
+# 	is_triggered_only = yes
+	
+# 	option = {
+# 	name = glo.4.a#E
+# 	custom_effect_tooltip = tooltip_Ed
+# 	add_ideas = E_s
+# 	set_country_flag = E_s
+# 	  every_country = {
+# 		    add_opinion_modifier = {target = ROOT modifier = easy_s}
+# 	  }
+# 		if = {
+# 			limit = {
+# 				has_global_flag = scnario144
+# 			}
+# 			country_event = scn144.2
+# 		}
+# 	}
+# 	option = {
+# 	name = glo.4.b#N
+# 	custom_effect_tooltip = tooltip_Nd
+# 	add_ideas = N_s
+# 	set_country_flag = N_s
+# 		if = {
+# 			limit = {
+# 				has_global_flag = scnario144
+# 			}
+# 			country_event = scn144.2
+# 		}
+# 	}
+# 	option = {
+# 	name = glo.4.c#H
+# 	custom_effect_tooltip = tooltip_Hd
+# 	add_ideas = H_s
+# 	set_country_flag = H_s
+# 	  every_country = {
+# 		    add_opinion_modifier = {target = ROOT modifier = hard_s}
+# 	  }
+# 		if = {
+# 			limit = {
+# 				has_global_flag = scnario144
+# 			}
+# 			country_event = scn144.2
+# 		}
+# 	}
+# 	option = {
+# 	name = glo.4.d#L
+# 	custom_effect_tooltip = tooltip_Ld
+# 	add_ideas = L_s
+# 	set_country_flag = L_s
+# 	  every_country = {
+# 		    add_opinion_modifier = {target = ROOT modifier = lunatic_s}
+# 	  }
+# 		if = {
+# 			limit = {
+# 				has_global_flag = scnario144
+# 			}
+# 			country_event = scn144.2
+# 		}
+# 	}
+# }
+#================================
+
+country_event = {
+	id = glo.21
+	title = glo.21.t
+	desc = glo.21.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.22
+	title = glo.22.t
+	desc = glo.22.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.23
+	title = glo.23.t
+	desc = glo.23.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+#################
+country_event = {
+	id = glo.24
+	title = glo.24.t
+	desc = glo.24.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.25
+	title = glo.25.t
+	desc = glo.25.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.26
+	title = glo.26.t
+	desc = glo.26.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+#############新释放的国家调整观点和支持度#############
+country_event = {
+	id = glo.2000
+	title = glo.2000.t
+	desc = glo.2000.d
+	fire_only_once = no
+	hidden = yes
+	trigger = {
+		 NOT = { has_country_flag = initialled }
+	}
+	mean_time_to_happen = {
+        days = 0
+    }
+	immediate = {
+		set_country_flag = initialled
+
+		set_variable = { factory_num = num_of_factories}
+
+		add_manpower = 650
+
+		if = {
+			limit = {
+				not = { has_country_flag = initialled_facs}
+			}
+			custom_situation_initialize = yes
+		}
+		add_dynamic_modifier = { modifier = POPU_pp_gain }
+		add_dynamic_modifier = { modifier = PO_influ }
+		add_dynamic_modifier = { modifier = EXH_influ }
+		add_dynamic_modifier = { modifier = OL_influ }
+		add_dynamic_modifier = { modifier = LS_pp }
+		add_dynamic_modifier = { modifier = Monthly_manpower }
+		add_dynamic_modifier = { modifier = SS_subject_influence }
+		add_dynamic_modifier = { modifier = FT_buff }
+		add_dynamic_modifier = { modifier = GO_nerf }
+		add_dynamic_modifier = { modifier = POconvert_modifier }
+		if = {
+			limit = {
+				tag = HUM
+			}
+			add_dynamic_modifier = { modifier = HUM_influenced }
+		}
+		
+		
+		open_reset = yes
+		lobby_reset = yes
+		custom_defines_initialize = yes	
+
+		set_variable = { HMIF_influence = 0}
+		
+		set_variable = { OL_view_type = 0}
+		set_variable = { OL_view_value = 60}
+
+		situation_change = yes
+
+		research_slot_generator = yes
+
+		controller_race_manpower = yes
+
+		exhuastion_base_seton = yes
+
+		tech_ideas_set = yes 
+		
+		country_event = glo.3000 #种族关系观点修正	
+	}
+
+	option = {
+
+	}
+}
+
+country_event = { #同意
+	id = glo.2001
+	title = glo.2001.t
+	desc = glo.2001.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2001.a
+	}
+}
+
+country_event = { #未同意
+	id = glo.2002
+	title = glo.2002.t
+	desc = glo.2002.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2002.a
+	}
+}
+
+country_event = { #准备作战
+	id = glo.2003
+	title = glo.2003.t
+	desc = glo.2003.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2003.a
+	}
+}
+
+country_event = {
+	id = glo.3000
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		
+
+		custom_defines_changer = yes	
+
+		# 
+		exhuastion_modifier = yes
+
+		power_ratio_seton = yes
+		
+		race_opinion_changed = yes
+		opinion_change = yes
+
+		continent_faction = yes
+
+		if = {
+			limit = {
+				tag = HUM
+			}
+			add_to_variable = { global.HMIF_influenced = -1}
+		}
+	}
+
+	option = {
+
+	}
+}
+
+country_event = { #清楚入侵倾向
+	id = glo.3001
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_ai_strategy = {
+            type = invade
+            id = var:clear_target
+            value = -150
+        }
+	}
+	option = {
+		
+	}
+}
+
+country_event = { #将领国籍重新添加
+	id = glo.31
+	title = glo.31.t
+	desc = glo.31.d
+	fire_only_once = no
+	is_triggered_only = no
+	# hidden = yes
+	mean_time_to_happen = {
+		days = 0
+	}
+	trigger = {
+		has_country_flag = need_refresh_leader
+	}
+	immediate = {
+		leader_nationality_set = yes
+		clr_country_flag = need_refresh_leader
+	}
+	option = {
+		
+	}
+}
+
+country_event = { #传送门开关事件
+	id = glo.4
+	title = glo.4.t
+	desc = {
+		text = glo.41.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 1
+			}
+		}
+	}
+	desc = {
+		text = glo.42.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 2
+			}
+		}
+	}
+	desc = {
+		text = glo.43.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 3
+			}
+		}
+	}
+	desc = {
+		text = glo.44.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 4
+			}
+		}
+	}
+	desc = {
+		text = glo.45.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 5
+			}
+		}
+	}
+	desc = {
+		text = glo.46.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 6
+			}
+		}
+	}
+	desc = {
+		text = glo.47.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 7
+			}
+		}
+	}
+	desc = {
+		text = glo.48.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 8
+			}
+		}
+	}
+	desc = {
+		text = glo.49.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 9
+			}
+		}
+	}
+	desc = {
+		text = glo.410.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 10
+			}
+		}
+	}
+	desc = {
+		text = glo.411.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 11
+			}
+		}
+	}
+	desc = {
+		text = glo.412.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 12
+			}
+		}
+	}
+	desc = {
+		text = glo.413.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 13
+			}
+		}
+	}
+	desc = {
+		text = glo.414.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 14
+			}
+		}
+	}
+	desc = {
+		text = glo.415.d
+		trigger = {
+			check_variable = {
+				global.portal_id = 15
+			}
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	# hidden = yes
+	option = {
+		name = glo.4.1
+	}
+	option = {
+		name = glo.4.2
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 1
+				}
+			}
+			goto_state = 624
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 2
+				}
+			}
+			goto_state = 640
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 3
+				}
+			}
+			goto_state = 626
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 4
+				}
+			}
+			goto_state = 627
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 5
+				}
+			}
+			goto_state = 628
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 6
+				}
+			}
+			goto_state = 629
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 7
+				}
+			}
+			goto_state = 630
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 8
+				}
+			}
+			goto_state = 631
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 9
+				}
+			}
+			goto_state = 634
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 10
+				}
+			}
+			goto_state = 635
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 11
+				}
+			}
+			goto_state = 636
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 12
+				}
+			}
+			goto_state = 637
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 13
+				}
+			}
+			goto_state = 638
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 14
+				}
+			}
+			goto_state = 639
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.portal_id = 15
+				}
+			}
+			goto_state = 632
+		}
+	}
+}
+
+country_event = { #战争结束后更新附庸情况
+	id = glo.5
+	title = glo.5.t
+	desc = glo.5.d
+	fire_only_once = no
+	is_triggered_only = no
+	# hidden = yes
+	mean_time_to_happen = {
+		days = 0
+	}
+	trigger = {
+		has_country_flag = low_at_the_end_of_the_war
+		has_war = no
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				ROOT = { 
+					has_country_flag = low_to_3_for_@PREV 
+					is_subject_of = PREV
+				}
+			}
+			ROOT = {
+				subject_level3 = yes
+			}
+		}
+		every_country = {
+			limit = {
+				ROOT = { 
+					has_country_flag = low_to_2_for_@PREV 
+					is_subject_of = PREV
+				}
+			}
+			ROOT = {
+				subject_level2 = yes
+			}
+		}
+		every_country = {
+			limit = {
+				ROOT = { 
+					has_country_flag = low_to_1_for_@PREV 
+					is_subject_of = PREV
+				}
+			}
+			ROOT = {
+				subject_level1 = yes
+			}
+		}
+		
+		
+		every_country = {
+			ROOT = {
+				clr_country_flag = low_to_3_for_@PREV
+				clr_country_flag = low_to_2_for_@PREV
+				clr_country_flag = low_to_1_for_@PREV
+			}
+		}
+		clr_country_flag = low_at_the_end_of_the_war
+	}
+	option = {
+		
+	}
+}
+
+country_event = { #轰开了传送门（轰的以及盟友）
+	id = glo.6
+	title = glo.6.t
+	desc = glo.6.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = glo.6.1
+	}
+}
+
+country_event = { #轰开了传送门（被轰的）
+	id = glo.7
+	title = glo.7.t
+	desc = glo.7.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = glo.7.1
+	}
+}
+
+country_event = { #单独传送门省份强制送出
+	id = glo.8
+	title = glo.8.t
+	desc = glo.8.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 5
+	}
+	trigger = {
+		or = {
+			# and = {
+			# 	owns_state = 646
+			# 	not = {
+			# 		owns_state = 287
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 632
+			# 	not = {
+			# 		owns_state = 291
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 626
+			# 	not = {
+			# 		owns_state = 261
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 650
+			# 	not = {
+			# 		owns_state = 542
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 627
+			# 	not = {
+			# 		owns_state = 261
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 643
+			# 	not = {
+			# 		owns_state = 609
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 628
+			# 	not = {
+			# 		owns_state = 278
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 655
+			# 	not = {
+			# 		owns_state = 134
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 629
+			# 	not = {
+			# 		owns_state = 256
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 654
+			# 	not = {
+			# 		owns_state = 342
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 630
+			# 	not = {
+			# 		owns_state = 256
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 649
+			# 	not = {
+			# 		owns_state = 230
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 631
+			# 	not = {
+			# 		owns_state = 275
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 645
+			# 	not = {
+			# 		owns_state = 516
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 634
+			# 	not = {
+			# 		owns_state = 509
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 656
+			# 	not = {
+			# 		owns_state = 45
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 635
+			# 	not = {
+			# 		owns_state = 509
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 653
+			# 	not = {
+			# 		owns_state = 587
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 636
+			# 	not = {
+			# 		owns_state = 509
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 658
+			# 	not = {
+			# 		owns_state = 136
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 637
+			# 	not = {
+			# 		owns_state = 351
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 657
+			# 	not = {
+			# 		owns_state = 210
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 638
+			# 	not = {
+			# 		owns_state = 351
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 644
+			# 	not = {
+			# 		owns_state = 510
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 639
+			# 	not = {
+			# 		owns_state = 351
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 647
+			# 	not = {
+			# 		owns_state = 258
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 640
+			# 	not = {
+			# 		owns_state = 378
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 648
+			# 	not = {
+			# 		owns_state = 539
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 624
+			# 	not = {
+			# 		owns_state = 82
+			# 	}
+			# }
+			# and = {
+			# 	owns_state = 652
+			# 	not = {
+			# 		owns_state = 506
+			# 	}
+			# }
+			any_owned_state = {
+				has_state_flag = portal_state
+				any_neighbor_state = {
+					not = {
+						has_state_flag = portal_state
+					}
+					owner = {
+						not = {
+							tag = ROOT
+						}
+					}
+				}
+			}
+			and = {
+				owns_state = 625
+				not = {
+					owns_state = 494
+				}
+			}
+			and = {
+				owns_state = 651
+				not = {
+					owns_state = 53
+				}
+			}
+		}
+	}
+	option = {
+		name = glo.7.1
+		every_owned_state = {
+			limit = {
+				has_state_flag = portal_state
+			}
+			every_neighbor_state = {
+				limit = {
+					not = {
+						has_state_flag = portal_state
+					}
+				}
+				owner = {
+					transfer_state = PREV.PREV
+				}
+			}
+		}
+		if = {
+			limit = {
+				and = {
+					owns_state = 625
+					not = {
+						owns_state = 494
+					}
+				}
+			}
+			625 = {
+				494 = {
+					owner = {
+						transfer_state = PREV.PREV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				and = {
+					owns_state = 651
+					not = {
+						owns_state = 53
+					}
+				}
+			}
+			651 = {
+				53 = {
+					owner = {
+						transfer_state = PREV.PREV
+					}
+				}
+			}
+		}
+	}
+}

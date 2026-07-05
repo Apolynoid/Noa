@@ -1,0 +1,13 @@
+technologies = {
+    KP_he_tong_miao_yao = {
+        allow = {
+          always = no   
+        }
+        sp_houfangyiliao = {
+          casualty_trickleback = 0.1
+        }
+        ai_will_do = {
+          base = 0
+        }
+    }
+}

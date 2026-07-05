@@ -1,0 +1,11 @@
+focus_tree = {
+	id = test_tongyong2
+	country = {
+		factor = 1
+	}
+	default = yes
+
+	shared_focus = ty_early_main
+	shared_focus = ty_medium_main  
+	continuous_focus_position = { x = 20 y = 0 }
+}

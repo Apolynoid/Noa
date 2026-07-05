@@ -1,0 +1,303 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+PO_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+	
+	army_attack_factor = PO_attack_defence
+	army_defence_factor = PO_attack_defence
+	conscription_factor = PO_conscription
+	
+	research_speed_factor = PO_research
+	army_morale_factor = PO_org_recover
+	
+
+	#type2 
+	# research_speed_factor = PO_research_speed
+	# production_speed_buildings_factor = PO_production_speed
+	# global_building_slots_factor = PO_slots
+
+}
+
+POPU_pp_gain = {
+	political_power_gain = POPU_pp_gain
+}
+
+EXH_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	stability_factor = EXH_stability
+	war_support_factor = EXH_war_support
+	# army_speed_factor = EXH_speed
+	army_org_factor = EXH_org
+	# ai_join_ally_desire_factor = EXH_war_support
+}
+
+OL_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	stability_factor = OL_stability
+}
+
+LS_pp = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	political_power_cost = LS_lowing_pp_cost
+}
+
+Monthly_manpower = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	weekly_manpower = manpower_added
+}
+
+
+# TKM_xinshengdeshili = {
+# 	icon = "GFX_idea_generic_disjointed_gov" # optional, will show up in guis if icon is specified
+# 		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+# 		# remove_trigger = { always = no } #optional, will remove the modifier if true
+# #
+# 	political_power_gain = TKM_xinsheng_pp
+# 	drift_defence_factor = TKM_xinsheng_den
+# }
+
+SS_subject_influence = {
+	# icon = "GFX_idea_unknown"
+
+	conscription_factor = SS_Ghost_power
+	supply_consumption_factor = SS_Fairy_power
+	army_org_factor = SS_Human_power
+	army_morale_factor = SS_Pri_youkai_power
+	army_attack_factor = SS_Youkai_power
+	army_defence_factor = SS_Youkai_power
+	army_speed_factor = SS_Tengu_power
+	industrial_capacity_factory = SS_Kappa_power
+	encryption = SS_God_power
+	decryption = SS_God_power
+	research_speed_factor = SS_Magician_power
+	land_night_attack = SS_Beast_power
+}
+
+FT_buff = {
+	# icon = "GFX_idea_unknown"
+	research_speed_factor = FT_research_speed
+	war_support_factor = FT_war_support
+	army_morale_factor = FT_army_morale
+	political_power_gain = FT_political_power_gain
+}
+
+
+state_different_race = {
+	enable = { always = yes }
+	icon = GFX_population_icon
+	local_manpower = ST_current_race_conscription_ratio ###这个不会因惩罚的变动而变动
+}
+different_race_rebel = {
+	enable = { always = yes }
+	icon = GFX_different_race_rebel
+	recruitable_population_factor = ST_current_recruitable_population_factor
+	local_supplies_for_controller = ST_current_local_supplies_for_controller
+	compliance_growth = ST_current_compliance_growth
+	resistance_growth = ST_current_resistance_growth
+	state_production_speed_buildings_factor = ST_current_state_production_speed_buildings_factor
+	state_resources_factor = ST_current_state_resources_factor
+}
+
+HUM_influenced = {
+	# icon = "GFX_idea_unknown"
+
+	# industrial_factory_donations = HMIF_influenced
+	# army_org_factor = HMIF_influenced
+	consumer_goods_factor = global.HMIF_influenced_goods
+	industrial_capacity_factory = global.HMIF_influenced_factory
+}
+
+GO_nerf = {
+	army_attack_factor = GO_being_nerf
+	army_defence_factor = GO_being_nerf
+}
+lingliguozaizhadan_bombed = {
+	icon = GFX_lingliguozaizhadan_bombed
+	industry_free_repair_factor = -0.75
+	industry_repair_factor = -0.75
+	state_production_speed_buildings_factor = -0.75
+	recruitable_population_factor = -0.75
+	state_resources_factor = -0.75
+	attrition = 1
+}
+
+CLO_zhirebaolei_modifier = {
+	icon = GFX_CLO_zhirebaolei_modifier
+	state_resources_factor = 2
+	state_production_speed_buildings_factor = 0.5
+	local_factories = 0.5
+	local_supplies = 1
+	mobilization_speed = 0.5
+	recruitable_population_factor = 0.1
+	army_speed_factor = 0.5
+	compliance_gain = 0.3
+	resistance_growth = -1
+}
+CLO_zhaoliangdiyu_modifier = {
+	icon = GFX_CLO_zhaoliangdiyu_modifier
+
+	state_production_speed_buildings_factor = 0.2
+	enemy_operative_detection_chance_factor = 0.15
+}
+CLO_chongguishentan_modifier = {
+	icon = GFX_CLO_chongguishentan_modifier
+
+	state_production_speed_buildings_factor = 0.3
+	state_resources_factor = 0.3
+}
+CLO_yaojingchedishuncong_modifier = {
+	icon = GFX_CLO_yaojingchedishuncong_modifier
+
+	state_production_speed_buildings_factor = 0.1
+}
+CLO_xinhaohuoju_modifier = {
+	icon = GFX_CLO_xinhaohuoju_modifier
+
+	state_production_speed_buildings_factor = 0.25
+	local_supplies = 0.25
+	army_speed_factor = 0.25
+	compliance_gain = 0.15
+	resistance_growth = -0.5
+}
+CLO_fahuiyoushi_modifier = {
+	icon = GFX_idea_home_of_revolution
+
+	compliance_growth = 0.1
+}
+POconvert_modifier = {
+	fuel_cost = POconvert_daily_cost
+}
+
+#distance 1875   1875/(x+1) = 53.6 ratio=53.6
+ZON_624_to_652_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 34
+}
+#distance 650
+ZON_640_to_648_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 11.1
+}
+#distance 241
+ZON_626_to_650_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 3.5
+}
+#distance 739
+ZON_627_to_643_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 12.8
+}
+#distance 784
+ZON_628_to_655_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 13.6
+}
+#distance 57
+ZON_629_to_654_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 0.06
+}
+#distance 627
+ZON_630_to_649_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 10.7
+}
+#distance 620
+ZON_631_to_645_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 10.6
+}
+#distance 661
+ZON_634_to_656_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 11.3
+}
+#distance 1603
+ZON_635_to_653_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 28.9
+}
+#distance 36
+ZON_636_to_658_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = -0.33
+}
+#distance 110
+ZON_637_to_657_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 1.05
+}
+#distance 265
+ZON_638_to_644_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 3.9
+}
+#distance 624
+ZON_639_to_647_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 10.6
+}
+#distance 30
+ZON_632_to_646_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = -0.44
+}
+#distance 1395 (ratio x 2 )
+ZON_625_to_651_modifier = {
+	icon = GFX_warp_zone
+
+	army_speed_factor = 12.5
+}

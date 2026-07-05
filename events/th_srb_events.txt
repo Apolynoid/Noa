@@ -226,9 +226,13 @@ country_event = {
 
 	trigger = {
 		SRB_is_possible_investor = yes
+		NOT = {
+			has_country_flag = SRB_cancelled_investment_flag
+		}
 		OR = {
 			NOA_is_independent = no
 			has_civil_war = yes
+			has_war_with = SRB
 		}
 	}
 

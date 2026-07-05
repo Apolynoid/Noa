@@ -28,16 +28,14 @@ ability = {
 					MEL_crop_num = 1
 				}
 			}
-			add_temporary_buff_to_units = {
-				combat_offense = 0.4
-				combat_breakthrough = 0.4
-				org_damage_multiplier = -0.5
-				str_damage_multiplier = 0.3
-				cannot_retreat_while_attacking = 1.0
-				
-				days = 7
-				tooltip = ABILITY_APPLY_SPECIAL_CROPS_TOOLTIP
-			}
+		}
+
+		unit_modifiers = {
+			offence = 0.4
+			breakthrough_factor = 0.4
+			org_damage_multiplier = -0.5
+			str_damage_multiplier = 0.3
+			cannot_retreat_while_defending = 1.0
 		}
 		
 		ai_will_do = {
@@ -87,16 +85,14 @@ ability = {
 					MEL_crop_num = 1
 				}
 			}
-			add_temporary_buff_to_units = {
-				combat_offense = 0.4
-				combat_breakthrough = 0.4
-				org_damage_multiplier = -0.5
-				str_damage_multiplier = 0.3
-				cannot_retreat_while_attacking = 1.0
-				
-				days = 7
-				tooltip = ABILITY_APPLY_SPECIAL_CROPS_TOOLTIP
-			}
+		}
+
+		unit_modifiers = {
+			offence = 0.4
+			breakthrough_factor = 0.4
+			org_damage_multiplier = -0.5
+			str_damage_multiplier = 0.3
+			cannot_retreat_while_defending = 1.0
 		}
 		
 		ai_will_do = {

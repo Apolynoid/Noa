@@ -56,24 +56,20 @@
     oob = "MRY_146"
     
     set_major = yes
-    set_country_flag = bunengqie_fandong
+    set_country_flag = bunengsuiyiqiehuanzhengti
 
     diplomatic_relation = { 
         country = KAP relation = non_aggression_pact active = yes
     }
     add_ideas = {
-    Shrine
-    Youkai
-    hawk2
-    open1
-    sc_rule
-    
-    MRY_shenmingdeweiji_idea
-    MRY_fugushenwei_idea
+        Shrine
+        Youkai
+        hawk2
+        open1
+        sc_rule
     }
-    add_timed_idea = {
-        idea = MRY_kejizhishen_idea
-        days = 1825
+    add_ideas = {
+        
     }
     set_politics = {
     	ruling_party = neworder
@@ -86,9 +82,6 @@
         neworder = 70
         oldorder = 0
         fandong = 0
-    }
-    OTG = {
-        huxiangbaodu = yes
     }
     KAP = {
         huxiangbaodu = yes

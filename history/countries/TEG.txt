@@ -56,7 +56,7 @@
     capital = 399
     oob = "TEG_146"
     # set_research_slots = 7
-    set_country_flag = bunengqie_neworder
+    set_country_flag = bunengsuiyiqiehuanzhengti
     set_major = yes
 
     create_faction_from_template = {
@@ -64,24 +64,23 @@
         name = TEG_gensokyo_democratic_alliance
     }
     add_to_faction = NTR
-
-    add_civil_war_target = OTG
         
     add_ideas = {
-    can_create_defense_faction_idea
-    Tenggu
-    Country
-    isolation
-    # type3_manpowerlv2
-    manpowerlv1
-    TEG_cui_ruo_de_min_zhu_zhi_du_idea
-    TEG_nei_zhan_dao_zhi_de_jun_shi_hun_luan_idea
-    TEG_nei_zhan_dao_zhi_de_gong_ye_hun_luan_idea
-    TEG_can_mou_zong_bu_idea
-    TEG_tian_gou_te_zhong_bu_dui_idea
-    TEG_bei_zhuan_yi_de_ren_lei_ke_xue_jia_idea
-    dove1
-    open0
+        can_create_defense_faction_idea
+        Tenggu
+        Country
+        isolation
+        # type3_manpowerlv2
+        manpowerlv1
+        dove1
+        open0
+    }
+    add_ideas = {
+        TEG_wei_ji_zhong_de_gong_he_guo_idea
+        TEG_nei_zhan_shang_hen_idea
+        TEG_gong_ye_tan_huan_idea
+        TEG_tian_gou_zong_can_mou_bu_idea
+        TEG_liu_wang_ren_lei_ke_xue_jia_idea
     }
     #########局势修改
     # set_stability = 0.5
@@ -106,11 +105,5 @@
         neworder = 0
         oldorder = 0
         fandong = 35
-    }
-    set_variable = {
-        TEG_war_effort = 9
-    }
-    set_variable = {
-        TEG_war_progress = 80
     }
 }

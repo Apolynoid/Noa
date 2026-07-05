@@ -1,6 +1,7 @@
 characters={
 	MRS_mrs ={
 		name = MRS_mrs
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MRS/MRS_mrs.dds"
@@ -43,6 +44,7 @@ characters={
 
 	ALI_ali ={
 		name = ALI_ali
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ALI/ALI_ali.dds"
@@ -95,6 +97,7 @@ characters={
 	}
 	ALI_hor ={
 		name = ALI_hor
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ALI/ALI_hor.dds"
@@ -129,6 +132,7 @@ characters={
 	}
 	ALI_shh ={
 		name = ALI_shh
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ALI/ALI_shh.dds"
@@ -166,6 +170,7 @@ characters={
 	}
 	ALI_ski ={ #not original
 		name = ALI_ski
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ALI/ALI_ski.dds"
@@ -194,6 +199,7 @@ characters={
 	}
 	ALI_yumeko ={
 		name = ALI_yumeko
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ALI/ALI_yumeko.dds"
@@ -228,6 +234,7 @@ characters={
 
 	ELL_ellen ={
 		name = ELL_ellen
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ELL/ELL_ellen.dds"
@@ -269,6 +276,7 @@ characters={
 
 	NAR_narumi ={
 		name = NAR_narumi
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/NAR/NAR_narumi.dds"
@@ -313,6 +321,7 @@ characters={
 
 	RNS_rns ={
 		name = RNS_rns
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/RNS/RNS_rns.dds"
@@ -347,6 +356,7 @@ characters={
 	}
 	RNS_tokiko ={
 		name = RNS_tokiko
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/RNS/RNS_tokiko.dds"

@@ -1,6 +1,7 @@
 characters={
 	CIR_cir ={
 		name = CIR_cir
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CIR/CIR_cir.dds"
@@ -47,6 +48,7 @@ characters={
 	}
 	CIR_dys ={
 		name = CIR_dys
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CIR/CIR_dys.dds"

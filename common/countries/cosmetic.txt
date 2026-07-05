@@ -1,25 +1,6 @@
-SRB_emp ={
-    color = rgb { 230 230 230 }
-    color_ui = rgb { 230 230 230 }
-}
-
-SRB_emp2 ={
-    color = RGB { 0 160 220 }
-    color_ui = RGB { 0 160 220 }
-}
-
-AKI_WHUM = {
-    color = RGB { 40 255 20 }
-    color_ui = RGB { 40 255 20 }
-}
-
 CLO_heca = {
     color = RGB { 200 60 60 }
     color_ui = RGB { 200 60 60 }
-}
-TBA_new = {
-	color = rgb { 230  223  50 }
-	color_ui = rgb { 230  223  50 }
 }
 
 

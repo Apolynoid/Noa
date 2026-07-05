@@ -632,7 +632,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			date > 148.1.1
+			date > 148.6.1
 			OR = {
 			  	threat > 0.7
 				AND = {

@@ -251,35 +251,5 @@ ideas = {
 
 			
 		}
-		#赌场经济
-		duchang_jingji = {
-			
-			picture = ROA_duchang_jingji
-
-			visible = {
-				tag = TBA
-			}
-			available = {
-			    always = no
-			}
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_expected_value = 0.25
-				political_power_factor = 0.25
-				industrial_capacity_factory = -0.20
-				production_speed_buildings_factor = -0.20
-				conscription_factor = -0.1
-				stability_weekly = -0.003
-				war_support_weekly = -0.003
-				factory_energy_consumption = 0.25
-			}
-			allowed_to_remove = {
-				always = no
-			}
-			cancel_if_invalid = no
-
-			
-		}
 	}
 }

@@ -1,0 +1,214 @@
+shared_focus = {
+	id = LIL_136_1
+	icon = GFX_focus_LIL_chunfenggongshi
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_7
+		focus = LIL_135
+	}
+	allow_branch = {
+		NOT = {
+			has_completed_focus = LIL_135
+		}
+	}
+	x = 5	
+	y = 17
+	completion_reward = {
+		custom_effect_tooltip = LIL_136_1_tt
+	}
+}
+shared_focus = {
+	id = LIL_136_2
+	icon = xxx
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_7
+		focus = LIL_135
+	}
+	allow_branch = {
+		has_completed_focus = LIL_135
+	}
+	x = 5	
+	y = 17
+	completion_reward = {
+		custom_effect_tooltip = LIL_136_2_tt
+	}
+}
+###先知线
+shared_focus = {
+	id = LIL_4
+	icon = GFX_focus_LIL_yaojingxiaznhi
+	cost = 10.00
+	available = {
+		OR = {
+			NOT = {
+				country_exists = CIR
+			}
+			CIR = {
+				is_puppet_of = LIL
+			}
+		}	
+	}
+	allow_branch = {
+		has_completed_focus = LIL_143
+	}
+	x = 22
+	y = 12
+	completion_reward = {
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.10
+		}
+		add_stability = 0.1
+	}
+}
+shared_focus = {
+	id = LIL_13
+	icon = GFX_focus_POL_support_global_falangism
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_4
+	}
+	x = 22
+	y = 13
+	completion_reward = {
+		conservativedecrease = yes
+		add_ideas = LIL_xianzhishheneyhan
+	}
+}
+shared_focus = {
+	id = LIL_14
+	icon = GFX_focus_LIL_shuyudaziran
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_13
+	}
+	x = 22
+	y = 14
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = LIL_xianzhishheneyhan
+			add_idea = LIL_xianzhishheneyhan_2
+		}
+	}
+}
+shared_focus = {
+	id = LIL_15
+	icon = GFX_focus_LIL_chunzhiyaojinwansui
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_14
+	}
+	x = 24
+	y = 15
+	completion_reward = {
+		remove_ideas = LIL_chunzhiyaojingwaansui
+		swap_ideas = {
+			remove_idea = LIL_xianzhishheneyhan_2	
+			add_idea = LIL_xianzhishheneyhan_3
+		}
+	}
+}
+shared_focus = {
+	id = LIL_16
+	icon = GFX_focus_generic_catholic_dominion
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_15
+	}
+	x = 24
+	y = 16
+	completion_reward = {
+		conservativedecrease = yes
+		swap_ideas = {
+			remove_idea = LIL_xianzhishheneyhan_3	
+			add_idea = LIL_xianzhishheneyhan_4
+		}
+	}
+}
+shared_focus = {
+	id = LIL_17
+	icon = GFX_focus_por_the_fifth_empire
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_16
+	}
+	x = 24
+	y = 17
+	completion_reward = {
+		custom_effect_tooltip = LIL_17_tt
+	}
+}
+shared_focus = {
+	id = LIL_144
+	icon = GFX_focus_SOV_breadbasket_of_the_union
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_14
+	}
+	x = 20
+	y = 15
+	completion_reward = {
+		add_war_support = 0.1  
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.10
+		}
+	}
+}
+shared_focus = {
+	id = LIL_145
+	icon = GFX_focus_spa_the_phalanx_ascendant
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_146
+	}
+	x = 20
+	y = 17
+	completion_reward = {
+		custom_effect_tooltip = LIL_145_tt
+		swap_ideas = {
+			remove_idea = LIL_yishenzhhiming	
+			add_idea = LIL_yishenzhhiming_2
+		}
+	}
+}
+shared_focus = {
+	id = LIL_146
+	icon = GFX_focus_por_concordat
+	cost = 10.00
+	prerequisite = {
+		focus = LIL_144
+	}
+	x = 20
+	y = 16
+	completion_reward = {
+		add_ideas = LIL_yishenzhhiming
+	}
+}
+shared_focus = {
+	id = LIL_147
+	icon = GFX_focus_LIL_hxxleyuan
+	cost = 10.00
+	available = {
+		has_country_flag = yonghezhichun
+		custom_trigger_tooltip = {
+			tooltip = Gensokyo_claim_tt
+			check_variable = {
+				RE_Gensokyo_ratio > 0.5
+			}
+		}
+	}
+	prerequisite = {
+		focus = LIL_145
+	}
+	prerequisite = {
+		focus = LIL_17
+	}
+	x = 22
+	y = 18
+	completion_reward = {
+		add_political_power = 2000
+		set_cosmetic_tag = LIL_yonghen
+	}
+}	

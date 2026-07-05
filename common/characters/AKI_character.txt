@@ -1,6 +1,7 @@
 characters={
 	AKI_hin ={
 		name = AKI_hin
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/AKI/AKI_hin.dds"
@@ -45,6 +46,7 @@ characters={
 	}
 	AKI_sizuha ={
 		name = AKI_sizuha
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/AKI/AKI_sizuha.dds"
@@ -90,6 +92,7 @@ characters={
 	}
 	AKI_szh ={
 		name = AKI_szh
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/AKI/AKI_szh.dds"

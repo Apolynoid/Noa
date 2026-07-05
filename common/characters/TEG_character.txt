@@ -1,6 +1,7 @@
 characters={
 	TEG_aya ={
 		name = TEG_aya
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TEG/TEG_aya.dds"
@@ -41,6 +42,7 @@ characters={
 	}
 	TEG_mom ={
 		name = TEG_mom
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TEG/TEG_mom.dds"
@@ -85,6 +87,7 @@ characters={
 	}
 	TEG_hatate ={
 		name = TEG_hatate
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/TEG/TEG_hatate.dds"

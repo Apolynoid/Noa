@@ -1,0 +1,905 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+focus_tree = {
+	id = TES_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TES
+		}
+	}
+
+	shared_focus = CL_tian_jie_fa_zhan_ji_hua
+
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 2000 y = 1900 }
+	default = no
+
+	# 政治线
+	# 天界临时宪法
+	focus = {
+		id = TES_tian_jie_lin_shi_xian_fa
+		icon = unknown
+		cost = 7
+		x = 26
+		y = 1
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 清洗旧议会
+	focus = {
+		id = TES_qing_xi_jiu_yi_hui
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lin_shi_xian_fa
+
+		prerequisite = {
+			focus = TES_tian_jie_lin_shi_xian_fa
+		}
+
+		mutually_exclusive = {
+			focus = TES_yu_jiu_yi_hui_he_zuo
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 特别法庭
+	focus = {
+		id = TES_te_bie_fa_ting
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_qing_xi_jiu_yi_hui
+
+		prerequisite = {
+			focus = TES_qing_xi_jiu_yi_hui
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 有机国家
+	focus = {
+		id = TES_you_ji_guo_jia
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_te_bie_fa_ting
+
+		prerequisite = {
+			focus = TES_te_bie_fa_ting
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 与旧议会合作
+	focus = {
+		id = TES_yu_jiu_yi_hui_he_zuo
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lin_shi_xian_fa
+
+		prerequisite = {
+			focus = TES_tian_jie_lin_shi_xian_fa
+		}
+
+		mutually_exclusive = {
+			focus = TES_qing_xi_jiu_yi_hui
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 尊重保守价值观
+	focus = {
+		id = TES_zun_zhong_bao_shou_jia_zhi_guan
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_yu_jiu_yi_hui_he_zuo
+
+		prerequisite = {
+			focus = TES_yu_jiu_yi_hui_he_zuo
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 反共和联盟
+	focus = {
+		id = TES_fan_gong_he_lian_meng
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_zun_zhong_bao_shou_jia_zhi_guan
+
+		prerequisite = {
+			focus = TES_zun_zhong_bao_shou_jia_zhi_guan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 增加行动阵线席位
+	focus = {
+		id = TES_zeng_jia_xing_dong_zhen_xian_xi_wei
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 2
+
+		relative_position_id = TES_tian_jie_lin_shi_xian_fa
+
+		prerequisite = {
+			focus = TES_qing_xi_jiu_yi_hui
+			focus = TES_yu_jiu_yi_hui_he_zuo
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 金钱攻势
+	focus = {
+		id = TES_jin_qian_gong_shi
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 2
+
+		relative_position_id = TES_tian_jie_lin_shi_xian_fa
+
+		prerequisite = {
+			focus = TES_qing_xi_jiu_yi_hui
+			focus = TES_yu_jiu_yi_hui_he_zuo
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 社会宣传部
+	focus = {
+		id = TES_she_hui_xuan_chuan_bu
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_tian_jie_lin_shi_xian_fa
+
+		prerequisite = {
+			focus = TES_qing_xi_jiu_yi_hui
+			focus = TES_yu_jiu_yi_hui_he_zuo
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 塑造个人崇拜
+	focus = {
+		id = TES_su_zao_ge_ren_chong_bai
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_she_hui_xuan_chuan_bu
+
+		prerequisite = {
+			focus = TES_she_hui_xuan_chuan_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 接触工业家联合会
+	focus = {
+		id = TES_jie_chu_gong_ye_jia_lian_he_hui
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_she_hui_xuan_chuan_bu
+
+		prerequisite = {
+			focus = TES_she_hui_xuan_chuan_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争宣传
+	focus = {
+		id = TES_zhan_zheng_xuan_chuan
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TES_she_hui_xuan_chuan_bu
+
+		prerequisite = {
+			focus = TES_she_hui_xuan_chuan_bu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 收复失地
+	focus = {
+		id = TES_shou_fu_shi_di
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = TES_zhan_zheng_xuan_chuan
+
+		prerequisite = {
+			focus = TES_zhan_zheng_xuan_chuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天界情报局
+	focus = {
+		id = TES_tian_jie_qing_bao_ju
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TES_shou_fu_shi_di
+
+		prerequisite = {
+			focus = TES_shou_fu_shi_di
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重建秩序
+	focus = {
+		id = TES_chong_jian_zhi_xu
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TES_shou_fu_shi_di
+
+		prerequisite = {
+			focus = TES_shou_fu_shi_di
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 末日审判
+	focus = {
+		id = TES_mo_ri_shen_pan
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TES_shou_fu_shi_di
+
+		prerequisite = {
+			focus = TES_shou_fu_shi_di
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 最高领袖
+	focus = {
+		id = TES_zui_gao_ling_xiu
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = TES_mo_ri_shen_pan
+
+		prerequisite = {
+			focus = TES_mo_ri_shen_pan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事线
+	# 天界陆军改革
+	focus = {
+		id = TES_tian_jie_lu_jun_gai_ge
+		icon = unknown
+		cost = 7
+		x = 20
+		y = 8
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 剑卫团优先
+	focus = {
+		id = TES_jian_wei_tuan_you_xian
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lu_jun_gai_ge
+
+		prerequisite = {
+			focus = TES_tian_jie_lu_jun_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = TES_chuan_tong_lu_jun_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 最高军事领袖
+	focus = {
+		id = TES_zui_gao_jun_shi_ling_xiu
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TES_jian_wei_tuan_you_xian
+
+		prerequisite = {
+			focus = TES_jian_wei_tuan_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 设立督导军官
+	focus = {
+		id = TES_she_li_du_dao_jun_guan
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_jian_wei_tuan_you_xian
+
+		prerequisite = {
+			focus = TES_jian_wei_tuan_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 忠诚换取晋升
+	focus = {
+		id = TES_zhong_cheng_huan_qu_jin_sheng
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TES_she_li_du_dao_jun_guan
+
+		prerequisite = {
+			focus = TES_she_li_du_dao_jun_guan
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强化政治忠诚
+	focus = {
+		id = TES_qiang_hua_zheng_zhi_zhong_cheng
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TES_zhong_cheng_huan_qu_jin_sheng
+
+		prerequisite = {
+			focus = TES_zhong_cheng_huan_qu_jin_sheng
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 传统陆军优先
+	focus = {
+		id = TES_chuan_tong_lu_jun_you_xian
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lu_jun_gai_ge
+
+		prerequisite = {
+			focus = TES_tian_jie_lu_jun_gai_ge
+		}
+
+		mutually_exclusive = {
+			focus = TES_jian_wei_tuan_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 指挥权下放
+	focus = {
+		id = TES_zhi_hui_quan_xia_fang
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TES_chuan_tong_lu_jun_you_xian
+
+		prerequisite = {
+			focus = TES_chuan_tong_lu_jun_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军队自治
+	focus = {
+		id = TES_jun_dui_zi_zhi
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_chuan_tong_lu_jun_you_xian
+
+		prerequisite = {
+			focus = TES_chuan_tong_lu_jun_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 提高军官薪资
+	focus = {
+		id = TES_ti_gao_jun_guan_xin_zi
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TES_jun_dui_zi_zhi
+
+		prerequisite = {
+			focus = TES_jun_dui_zi_zhi
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事贵族的荣耀
+	focus = {
+		id = TES_jun_shi_gui_zu_de_rong_yao
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TES_ti_gao_jun_guan_xin_zi
+
+		prerequisite = {
+			focus = TES_ti_gao_jun_guan_xin_zi
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天界军事学院
+	focus = {
+		id = TES_tian_jie_jun_shi_xue_yuan
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_tian_jie_lu_jun_gai_ge
+
+		prerequisite = {
+			focus = TES_jian_wei_tuan_you_xian
+			focus = TES_chuan_tong_lu_jun_you_xian
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 量产型要石浮游炮
+	focus = {
+		id = TES_liang_chan_xing_yao_shi_fu_you_pao
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = TES_tian_jie_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = TES_tian_jie_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事理论探索
+	focus = {
+		id = TES_jun_shi_li_lun_tan_suo
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = TES_tian_jie_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = TES_tian_jie_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 统一指挥权
+	focus = {
+		id = TES_tong_yi_zhi_hui_quan
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = TES_tian_jie_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = TES_qiang_hua_zheng_zhi_zhong_cheng
+			focus = TES_jun_shi_gui_zu_de_rong_yao
+		}
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 危机线
+	# 天界陆军紧急会议
+	focus = {
+		id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+		icon = unknown
+		cost = 7
+		x = 22
+		y = 6
+
+		allow_branch = {
+			always = no
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 强调交付标准
+	focus = {
+		id = TES_qiang_diao_jiao_fu_biao_zhun
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+
+		prerequisite = {
+			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 参谋部人事改革
+	focus = {
+		id = TES_can_mou_bu_ren_shi_gai_ge
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+
+		prerequisite = {
+			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 撤换不称职军官
+	focus = {
+		id = TES_che_huan_bu_chen_zhi_jun_guan
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+
+		prerequisite = {
+			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军队重生
+	focus = {
+		id = TES_jun_dui_chong_sheng
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+
+		prerequisite = {
+			focus = TES_qiang_diao_jiao_fu_biao_zhun
+			focus = TES_can_mou_bu_ren_shi_gai_ge
+			focus = TES_che_huan_bu_chen_zhi_jun_guan
+		}
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}

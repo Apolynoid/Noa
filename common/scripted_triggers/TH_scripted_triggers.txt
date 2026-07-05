@@ -602,7 +602,6 @@ youkai_mountain_country = {
 		tag = NMN#
 		tag = AKI#
 
-		tag = TBA
 		tag = KRD
 
 	}
@@ -757,7 +756,6 @@ Youkai_country = {
 		tag = AKO
 		tag = AOO
 
-		tag = TBA
 		tag = KRD
 
 		tag = WHR

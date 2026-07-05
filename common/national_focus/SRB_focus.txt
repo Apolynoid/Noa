@@ -265,11 +265,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = SRB_xin_jun_shi_li_lun
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	
@@ -1135,6 +1133,12 @@ focus_tree = {
 		}
 
 		bypass = {
+			TKM = {
+				OR = {
+					NOA_is_independent = no
+					SRB_influence_under_50 = yes
+				}
+			}
 			OR = {
 				has_guaranteed = HUM
 				is_in_faction_with = HUM
@@ -1636,6 +1640,11 @@ focus_tree = {
 			TKM = {
 				SRB_cancel_investment = yes
 			}
+			diplomatic_relation = {
+				country = NMS
+				relation = non_aggression_pact
+				active = yes
+			}
 			NMS = {
 				hidden_effect = {
 					if = {
@@ -1735,6 +1744,11 @@ focus_tree = {
 			remove_ideas = SRB_jun_bei_xian_zhi_tiao_yue_idea
 			SEJ = {
 				SRB_cancel_investment = yes
+			}
+			diplomatic_relation = {
+				country = SCA
+				relation = non_aggression_pact
+				active = yes
 			}
 			SCA = {
 				hidden_effect = {
@@ -1902,6 +1916,11 @@ focus_tree = {
 			SCA = {
 				SRB_cancel_investment = yes
 			}
+			diplomatic_relation = {
+				country = SEJ
+				relation = non_aggression_pact
+				active = yes
+			}
 			SEJ = {
 				hidden_effect = {
 					if = {
@@ -1997,6 +2016,11 @@ focus_tree = {
 			remove_ideas = SRB_jun_bei_xian_zhi_tiao_yue_idea
 			NMS = {
 				SRB_cancel_investment = yes
+			}
+			diplomatic_relation = {
+				country = TKM
+				relation = non_aggression_pact
+				active = yes
 			}
 			TKM = {
 				hidden_effect = {
@@ -2138,7 +2162,7 @@ focus_tree = {
 		}
 	
 		ai_will_do = {
-		  	factor = 1
+		  	factor = 0
 		}
 	}
 

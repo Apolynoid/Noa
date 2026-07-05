@@ -1,0 +1,769 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	required_dlc = "Name of the Required DLC"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	icon = gfx_option_token							# Optional icon
+#	option = {										# Unless other specified, the first option is the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		allow_achievements = no						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+#													# If not specified, this is set to yes for default options and no for all other options.
+#	}
+#	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		...
+#	}
+# }
+
+MRY_paths = {
+	name = "MRY_paths"
+	group = "PATHS_youkai_mountain"
+	option = {
+		name = "MRY_path_qinwai"
+		text = "MRY_path_qinwai"
+		desc = " "
+	}
+	option = {
+		name = "MRY_path_guli"
+		text = "MRY_path_guli"
+		desc = " "
+	}
+	option = {
+		name = "MRY_path_neworder"
+		text = "MRY_path_neworder"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+LIL_paths = {
+	name = "LIL_paths"
+	group = "PATHS_north_gen"
+	option = {
+		name = "LIL_path_guli"
+		text = "LIL_path_guli"
+		desc = " "
+	}
+	option = {
+		name = "LIL_path_qinwai"
+		text = "LIL_path_qinwai"
+		desc = " "
+	}
+	option = {
+		name = "LIL_path_fandong"
+		text = "LIL_path_fandong"
+		desc = " "
+	}
+	option = {
+		name = "LIL_path_oldgenso"
+		text = "LIL_path_oldgenso"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+HKR_paths = {
+	name = "HKR_paths"
+	group = "PATHS_east_gen"
+	option = {
+		name = "HKR_path_qinwai"
+		text = "HKR_path_qinwai"
+		desc = " "
+	}
+	option = {
+		name = "HKR_path_neworder"
+		text = "HKR_path_neworder"
+		desc = " "
+	}
+	option = {
+		name = "HKR_path_fandong"
+		text = "HKR_path_fandong"
+		desc = " "
+	}
+	option = {
+		name = "HKR_path_guli"
+		text = "HKR_path_guli"
+		desc = " "
+	}
+	option = {
+		name = "HKR_path_oldorder"
+		text = "HKR_path_oldorder"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+TES_paths = {
+	name = "TES_paths"
+	group = "PATHS_others"
+	option = {
+		name = "TES_path_neworder"
+		text = "TES_path_neworder"
+		desc = " "
+	}
+	option = {
+		name = "TES_path_qinwai"
+		text = "TES_path_qinwai"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+SAT_paths = {
+	name = "SAT_paths"
+	group = "PATHS_others"
+	option = {
+		name = "SAT_path_oldorder"
+		text = "SAT_path_oldorder"
+		desc = " "
+	}
+	option = {
+		name = "SAT_path_guli"
+		text = "SAT_path_guli"
+		desc = " "
+	}
+	option = {
+		name = "SAT_path_qinwai"
+		text = "SAT_path_qinwai"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+CLO_paths = {
+	name = "CLO_paths"
+	group = "PATHS_others"
+	option = {
+		name = "CLO_path_guli"
+		text = "CLO_path_guli"
+		desc = " "
+	}
+	option = {
+		name = "CLO_path_neworder"
+		text = "CLO_path_neworder"
+		desc = " "
+	}
+	option = {
+		name = "CLO_path_fandong"
+		text = "CLO_path_fandong"
+		desc = " "
+	}
+	default = {
+		name = "path_random"
+		text = path_random
+		desc = " "
+	}
+}
+
+
+#与原版不一 ?
+allow_wargoals = {
+	name = "RULE_ALLOW_WARGOALS"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_wargoals"
+	option = {
+		name = "ALWAYS_FREE"
+		text = RULE_OPTION_ALWAYS_FREE
+		desc = "RULE_ALLOW_WARGOALS_ALWAYS_FREE_DESC"
+	}
+	default = {
+		name = "LIMITED"
+		text = "RULE_OPTION_LIMITED"
+		desc = "RULE_ALLOW_WARGOALS_LIMITED_DESC"
+	}
+	option = {
+		name = "FREE_25"
+		text = RULE_OPTION_FREE_25
+		desc = "RULE_ALLOW_WARGOALS_FREE_25_DESC"
+	}
+	option = {
+		name = "FREE_50"
+		text = RULE_OPTION_FREE_50
+		desc = "RULE_ALLOW_WARGOALS_FREE_50_DESC"
+	}
+	option = {
+		name = "FREE_75"
+		text = RULE_OPTION_FREE_75
+		desc = "RULE_ALLOW_WARGOALS_FREE_75_DESC"
+	}
+	option = {
+		name = "FREE_100"
+		text = RULE_OPTION_FREE_100
+		desc = "RULE_ALLOW_WARGOALS_FREE_100_DESC"
+	}
+	option = {
+		name = "FOCUSES_ONLY"
+		text = RULE_OPTION_FOCUSES_ONLY
+		desc = "RULE_ALLOW_WARGOALS_FOCUSES_ONLY_DESC"
+	}
+}
+#与原版不一 ?
+# allow_free_wargoal = {
+# 	name = "RULE_FREE_ALLOW_WARGOALS"
+# 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+
+# 	option = {
+# 		name = "ALWAYS_FREE"
+# 		text = FREE_OPTION_FREE
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_ALWAYS_FREE_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_10"
+# 		text = FREE_OPTION_10
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_10_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_20"
+# 		text = FREE_OPTION_20
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_20_DESC"
+# 	}
+# 	default = {
+# 		name = "FREE_30"
+# 		text = FREE_OPTION_30
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_30_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_40"
+# 		text = FREE_OPTION_40
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_40_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_50"
+# 		text = FREE_OPTION_50
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_50_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_60"
+# 		text = FREE_OPTION_60
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_60_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_70"
+# 		text = FREE_OPTION_70
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_70_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_80"
+# 		text = FREE_OPTION_80
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_80_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_90"
+# 		text = FREE_OPTION_90
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_90_DESC"
+# 	}
+# 	option = {
+# 		name = "FREE_100"
+# 		text = FREE_OPTION_100
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_FREE_100_DESC"
+# 	}
+# 	option = {
+# 		name = "NONE"
+# 		text = FREE_OPTION_NONE
+# 		desc = "RULE_FREE_ALLOW_WARGOALS_NONE_DESC"
+# 	}
+# }
+
+allow_access = {
+	name = "RULE_ALLOW_MILITARY_ACCESS"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_military_access_docking_rights"
+	default = {
+		name = "FREE"
+		text = RULE_OPTION_FREE
+		desc = "RULE_ALLOW_ACCESS_FREE_DESC"
+	}
+	option = {
+		name = "SAME_IDEOLOGY"
+		text = "RULE_OPTION_SAME_IDEOLOGY"
+		desc = "RULE_ALLOW_ACCESS_SAME_IDEOLOGY_DESC"
+	}
+	option = {
+		name = "BLOCKED"
+		text = RULE_OPTION_BLOCKED
+		desc = "RULE_ALLOW_ACCESS_BLOCKED_DESC"
+	}
+}
+
+allow_release_nations = {
+	name = "RULE_ALLOW_RELEASE_NATIONS"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_release_nations"
+	default = {
+		name = "FREE"
+		text = RULE_OPTION_FREE
+		desc = "RULE_ALLOW_RELEASE_NATIONS_FREE_DESC"
+	}
+	option = {
+		name = "PEACE_ONLY"
+		text = "RULE_OPTION_PEACE_ONLY"
+		desc = "RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_DESC"
+	}
+	option = {
+		name = "BLOCKED"
+		text = RULE_OPTION_BLOCKED
+		desc = "RULE_ALLOW_RELEASE_NATIONS_BLOCKED_DESC"
+	}
+}
+
+allow_licensing = {
+	name = "RULE_ALLOW_LICENSING"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	required_dlc = "Death or Dishonor"
+	icon = "GFX_production_licenses"
+	option = {
+		name = "FREE"
+		text = "RULE_OPTION_FREE"
+		desc = "RULE_ALLOW_LICENSING_FREE_DESC"
+	}
+	option = {
+		name = SAME_IDEOLOGY
+		text = "RULE_OPTION_SAME_IDEOLOGY"
+		desc = "RULE_ALLOW_LICENSING_SAME_IDEOLOGY_DESC"
+	}
+	option = {
+		name = SAME_FACTION
+		text = "RULE_OPTION_SAME_FACTION"
+		desc = "RULE_ALLOW_LICENSING_SAME_FACTION_DESC"
+	}
+	option = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_LICENSING_BLOCKED_DESC"
+	}
+}
+
+allow_lend_lease = {
+	name = "RULE_ALLOW_LEND_LEASE"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_lend_lease"
+	option = {
+		name = "FREE"
+		text = "RULE_OPTION_FREE"
+		desc = "RULE_ALLOW_LEND_LEASE_FREE_DESC"
+	}
+	default = {
+		name = "LIMITED"
+		text = "RULE_OPTION_LIMITED"
+		desc = "RULE_ALLOW_LEND_LEASE_LIMITED_DESC"
+	}
+	option = {
+		name = SAME_IDEOLOGY
+		text = "RULE_OPTION_SAME_IDEOLOGY"
+		desc = "RULE_ALLOW_LEND_LEASE_SAME_IDEOLOGY_DESC"
+	}
+	option = {
+		name = SAME_FACTION
+		text = "RULE_OPTION_SAME_FACTION"
+		desc = "RULE_ALLOW_LEND_LEASE_SAME_FACTION_DESC"
+	}
+	option = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_LEND_LEASE_BLOCKED_DESC"
+	}
+}
+
+allow_volunteers = {
+	name = "RULE_ALLOW_VOLUNTEERS"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_volunteers"
+	option = {
+		name = FREE
+		text = "RULE_OPTION_FREE"
+		desc = "RULE_ALLOW_VOLUNTEERS_FREE_DESC"
+	}
+	default = {
+		name = "LIMITED"
+		text = "RULE_OPTION_LIMITED"
+		desc = "RULE_ALLOW_VOLUNTEERS_LIMITED_DESC"
+	}
+	option = {
+		name = SAME_IDEOLOGY
+		text = "RULE_OPTION_SAME_IDEOLOGY"
+		desc = "RULE_ALLOW_VOLUNTEERS_SAME_IDEOLOGY_DESC"
+	}
+	option = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_VOLUNTEERS_BLOCKED_DESC"
+	}
+}
+
+allow_guarantees = {
+	name = "RULE_ALLOW_GUARANTEES"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_guarantee_independence"
+	option = {
+		name = "ALWAYS_FREE"
+		text = "RULE_OPTION_FREE"
+		desc = "RULE_ALLOW_GUARANTEES_FREE_DESC"
+	}
+	option = {
+		name = "LIMITED"
+		text = "RULE_OPTION_LIMITED"
+		desc = "RULE_ALLOW_GUARANTEES_LIMITED_DESC"
+	}
+	option = {
+		name = SAME_IDEOLOGY
+		text = "RULE_OPTION_SAME_IDEOLOGY"
+		desc = "RULE_ALLOW_GUARANTEES_SAME_IDEOLOGY_DESC"
+	}
+	default = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_GUARANTEES_BLOCKED_DESC"
+	}
+}
+
+allow_revoke_guarantees = {
+	name = "RULE_ALLOW_REVOKE_GUARANTEES"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_revoke_guarantees"
+	option = {
+		name = "ALLOWED"
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_ALLOW_REVOKE_GUARANTEES_ALLOWED_DESC"
+	}
+	default = {
+		name = "BLOCKED"
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_REVOKE_GUARANTEES_BLOCKED_DESC"
+	}
+}
+
+allow_leave_faction = {
+	name = "RULE_ALLOW_LEAVE_FACTION"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_leave_faction"
+	default = {
+		name = "ALLOWED"
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_ALLOW_LEAVE_FACTION_ALLOWED_DESC"
+	}
+	option = {
+		name = "BLOCKED"
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_LEAVE_FACTION_BLOCKED_DESC"
+	}
+}
+
+allow_kick_faction = {
+	name = "RULE_ALLOW_KICK_FACTION"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	icon = "GFX_kick_from_faction"
+	default = {
+		name = "ALLOWED"
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_ALLOW_KICK_FACTION_ALLOWED_DESC"
+	}
+	option = {
+		name = "BLOCKED"
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_KICK_FACTION_BLOCKED_DESC"
+	}
+}
+
+allow_take_over_faction = {
+	name = "RULE_ALLOW_TAKE_OVER_FACTION"
+	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
+	required_dlc = "Man the Guns"
+	icon = "GFX_take_over_faction_leadership"
+	option = {
+		name = "ALLOWED"
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_ALLOW_TAKE_OVER_FACTION_ALLOWED_DESC"
+	}
+	default = {
+		name = "BLOCKED"
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_TAKE_OVER_FACTION_BLOCKED_DESC"
+	}
+}
+
+ ##   ##  #   # ### ###  ###      ##   ##  ### ###  ##  #  #  ## 
+#  # #  # #   # #   #  #  #      #  # #  #  #   #  #  # ## # #   
+#    #  #  # #  ##  ###   #      #### #     #   #  #  # # ##  #  
+#  # #  #  # #  #   #  #  #      #  # #  #  #   #  #  # #  #   # 
+ ##   ##    #   ### #  #  #      #  #  ##   #  ###  ##  #  # ##  
+
+allow_coups = {
+	name = "RULE_ALLOW_COUPS"
+	group = "RULE_GROUP_COVERT_ACTIONS"
+	icon = "GFX_coups"
+	# option = {
+	# 	name = FREE
+	# 	text = "RULE_OPTION_FREE"
+	# 	desc = "RULE_ALLOW_COUPS_FREE_DESC"
+	# }
+	# option = {
+	# 	name = AI_ONLY
+	# 	text = "RULE_OPTION_AI_ONLY"
+	# 	desc = "RULE_ALLOW_COUPS_AI_ONLY_DESC"
+	# 	allow_achievements = yes
+	# }
+	default = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_COUPS_BLOCKED_DESC"
+	}
+}
+
+allow_party_boosting = {
+	name = "RULE_ALLOW_PARTY_BOOSTING"
+	group = "RULE_GROUP_COVERT_ACTIONS"
+	icon = "GFX_boosting_party_popularity"
+	# option = {
+	# 	name = FREE
+	# 	text = "RULE_OPTION_FREE"
+	# 	desc = "RULE_ALLOW_PARTY_BOOSTING_FREE_DESC"
+	# }
+	# option = {
+	# 	name = AI_ONLY
+	# 	text = "RULE_OPTION_AI_ONLY"
+	# 	desc = "RULE_ALLOW_PARTY_BOOSTING_AI_ONLY_DESC"
+	# 	allow_achievements = yes
+	# }
+	# option = {
+	# 	name = PLAYER_ONLY
+	# 	text = "RULE_OPTION_PLAYER_ONLY"
+	# 	desc = "RULE_ALLOW_PARTY_BOOSTING_PLAYER_ONLY_DESC"
+	# }
+	default = {
+		name = BLOCKED
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_ALLOW_PARTY_BOOSTING_BLOCKED_DESC"
+	}
+}
+
+###  ### #   # ###  ## ###  ##  #  #     ### ### #   # ###  #    ##  ### ###  ## 
+#  #  #  #   #  #  #    #  #  # ## #      #  #   ## ## #  # #   #  #  #  #   #   
+#  #  #   # #   #   #   #  #  # # ##      #  ##  # # # ###  #   ####  #  ##   #  
+#  #  #   # #   #    #  #  #  # #  #      #  #   #   # #    #   #  #  #  #     # 
+###  ###   #   ### ##  ###  ##  #  #      #  ### #   # #    ### #  #  #  ### ##  
+
+
+# allow_paratroopers = {
+# 	name = "RULE_ALLOW_PARATROOPERS"
+# 	group = "RULE_GROUP_GAMEPLAY"
+# 	option = {
+# 		name = yes
+# 		text = "RULE_OPTION_ALLOWED"
+# 		desc = "RULE_ALLOW_PARATROOPERS_ALLOWED_DESC"
+# 	}
+# 	option = {
+# 		name = no
+# 		text = "RULE_OPTION_BLOCKED"
+# 		desc = "RULE_ALLOW_PARATROOPERS_BLOCKED_DESC"
+# 	}
+# }
+
+#minimum_division_width = {
+#	name = "RULE_MINIMUM_WIDTH"
+#	group = "RULE_GROUP_DIVISION_TEMPLATES"
+#	option = {
+#		name = none
+#		text = "RULE_OPTION_NONE"
+#		desc = "RULE_MINIMUM_WIDTH_NONE_DESC"
+#	}
+#	option = {
+#		name = WIDTH_10
+#		text = "RULE_OPTION_10"
+#		desc = "RULE_MINIMUM_WIDTH_10_DESC"
+#	}
+#	option = {
+#		name = WIDTH_20
+#		text = "RULE_OPTION_20"
+#		desc = "RULE_MINIMUM_WIDTH_20_DESC"
+#	}
+#}
+#
+#maximum_division_width = {
+#	name = "RULE_MAXIMUM_WIDTH"
+#	group = "RULE_GROUP_DIVISION_TEMPLATES"
+#	option = {
+#		name = none
+#		text = "RULE_OPTION_NONE"
+#		desc = "RULE_MAXIMUM_WIDTH_NONE_DESC"
+#	}
+#	option = {
+#		name = WIDTH_20
+#		text = "RULE_OPTION_20"
+#		desc = "RULE_MAXIMUM_WIDTH_20_DESC"
+#	}
+#	option = {
+#		name = WIDTH_30
+#		text = "RULE_OPTION_30"
+#		desc = "RULE_MAXIMUM_WIDTH_30_DESC"
+#	}
+#	option = {
+#		name = WIDTH_40
+#		text = "RULE_OPTION_40"
+#		desc = "RULE_MAXIMUM_WIDTH_40_DESC"
+#	}
+#}
+
+ ##   ##  #  #  ## ### ###  #  #  ##  ### ###  ##  #  # 
+#  # #  # ## # #    #  #  # #  # #  #  #   #  #  # ## # 
+#    #  # # ##  #   #  ###  #  # #     #   #  #  # # ## 
+#  # #  # #  #   #  #  #  # #  # #  #  #   #  #  # #  # 
+ ##   ##  #  # ##   #  #  #  ##   ##   #  ###  ##  #  # 
+
+maximum_fort_level = {
+	name = "RULE_MAXIMUM_FORT_LEVEL"
+	group = "RULE_GROUP_GAMEPLAY"
+	option = {
+		name = normal
+		text = "RULE_OPTION_NORMAL"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_NORMAL_DESC"
+	}
+	option = {
+		name = level_1
+		text = "RULE_OPTION_1"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_2
+		text = "RULE_OPTION_2"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_3
+		text = "RULE_OPTION_3"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_4
+		text = "RULE_OPTION_4"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_5
+		text = "RULE_OPTION_5"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_6
+		text = "RULE_OPTION_6"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+	option = {
+		name = level_7
+		text = "RULE_OPTION_7"
+		desc = "RULE_MAXIMUM_FORT_LEVEL_DESC"
+	}
+}
+
+###  ###  ## ###  ##  ###   ##  #  # 
+#  # #   #   #   #  # #  # #  # #  # 
+###  ##   #  ##  #### ###  #    #### 
+#  # #     # #   #  # #  # #  # #  # 
+#  # ### ##  ### #  # #  #  ##  #  # 
+
+#research_ahead_of_time = {
+#	name = "RULE_RESEARCH_AOT"
+#	group = "RULE_GROUP_RESEARCH"
+#	default = {
+#		name = FREE
+#		text = "RULE_OPTION_FREE"
+#		desc = "RULE_RESEARCH_AOT_FREE_DESC"
+#	}
+#	option = {
+#		name = THREE_YEARS
+#		text = "RULE_OPTION_THREE_YEARS"
+#		desc = "RULE_RESEARCH_AOT_THREE_YEARS_DESC"
+#	}
+#	option = {
+#		name = TWO_YEARS
+#		text = "RULE_OPTION_TWO_YEARS"
+#		desc = "RULE_RESEARCH_AOT_TWO_YEARS_DESC"
+#	}
+#	option = {
+#		name = ONE_YEARS
+#		text = "RULE_OPTION_ONE_YEARS"
+#		desc = "RULE_RESEARCH_AOT_ONE_YEARS_DESC"
+#	}
+#	option = {
+#		name = BLOCKED
+#		text = "RULE_OPTION_BLOCKED"
+#		desc = "RULE_RESEARCH_AOT_BLOCKED_DESC"
+#	}
+#}
+
+ ##   ##  #  # #  # ### ###  #   #      ## ###  ###  ##  ### ### ###  ##      ###  #  # #   ###  ## 
+#  # #  # #  # ## #  #  #  #  # #      #   #  # #   #  #  #  #    #  #  #     #  # #  # #   #   #   
+#    #  # #  # # ##  #  ###    #        #  ###  ##  #     #  ##   #  #        ###  #  # #   ##   #  
+#  # #  # #  # #  #  #  #  #   #         # #    #   #  #  #  #    #  #  #     #  # #  # #   #     # 
+ ##   ##   ##  #  #  #  #  #   #       ##  #    ###  ##  ### #   ###  ##      #  #  ##  ### ### ##  
+
+
+
+#GER_faction_soviets = {
+#	name = "RULE_GER_FACTION_SOVIETS"
+#	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+#	default = {
+#		name = yes
+#		text = "RULE_OPTION_ALLOWED"
+#		desc = "RULE_GER_FACTION_SOVIETS_YES_DESC"
+#	}
+#	option = {
+#		name = no
+#		text = "RULE_OPTION_BLOCKED"
+#		desc = "RULE_GER_FACTION_SOVIETS_NO_DESC"
+#	}
+#}
+#
+#allow_ideology_change_USA = {
+#	name = "RULE_ALLOW_IDEOLOGY_CHANGE_USA"
+#	required_dlc = "Man the Guns"
+#	group = "RULE_GROUP_COUNTRY_SPECIFIC"
+#	default = {
+#		name = FREE
+#		text = "RULE_OPTION_FREE"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_FREE_DESC"
+#	}
+#	option = {
+#		name = COMMUNIST_ONLY
+#		text = "RULE_OPTION_COMMUNIST_ONLY"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_COMMUNIST_ONLY_DESC"
+#	}
+#	option = {
+#		name = FASCIST_ONLY
+#		text = "RULE_OPTION_FASCIST_ONLY"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_FASCIST_ONLY_DESC"
+#	}
+#	option = {
+#		name = BLOCKED
+#		text = "RULE_OPTION_BLOCKED"
+#		desc = "RULE_ALLOW_IDEOLOGY_CHANGE_USA_BLOCKED_DESC"
+#	}
+#}
+
+
+
+ ##  ###     ###  ### #  #  ##  #   # ###  ##  ###  
+#  #  #      #  # #   #  # #  # #   #  #  #  # #  # 
+####  #      ###  ##  #### ####  # #   #  #  # ###  
+#  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
+#  # ###     ###  ### #  # #  #   #   ###  ##  #  # 

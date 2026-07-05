@@ -1,0 +1,1408 @@
+#!gfx:interface\GFX_goals.gfx
+#!gfx:interface\replace\NOA_GFX_goals.gfx
+focus_tree = {
+	id = MRY_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MRY
+		}
+	}
+	default = no
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 1500 y = 1650 }
+
+	# 政治线
+	# 处理信仰危机
+	focus = {
+		id = MRY_chu_li_xin_yang_wei_ji
+		icon = unknown
+		cost = 7
+		x = 14
+		y = 1
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神威
+	focus = {
+		id = MRY_shen_wei
+		icon = unknown
+		cost = 1
+		x = -4
+		y = 1
+
+		relative_position_id = MRY_chu_li_xin_yang_wei_ji
+
+		prerequisite = {
+			focus = MRY_chu_li_xin_yang_wei_ji
+		}
+
+		mutually_exclusive = {
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 科技之神
+	focus = {
+		id = MRY_ke_ji_zhi_shen
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shen_wei
+
+		prerequisite = {
+			focus = MRY_shen_wei
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 现代宣传技术
+	focus = {
+		id = MRY_xian_dai_xuan_chuan_ji_shu
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = MRY_shen_wei
+
+		prerequisite = {
+			focus = MRY_shen_wei
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神德
+	focus = {
+		id = MRY_shen_de
+		icon = unknown
+		cost = 1
+		x = 4
+		y = 1
+
+		relative_position_id = MRY_chu_li_xin_yang_wei_ji
+
+		prerequisite = {
+			focus = MRY_chu_li_xin_yang_wei_ji
+		}
+
+		mutually_exclusive = {
+			focus = MRY_shen_wei
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 丰穰之神
+	focus = {
+		id = MRY_feng_xiang_zhi_shen
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shen_de
+
+		prerequisite = {
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 征收信仰
+	focus = {
+		id = MRY_zheng_shou_xin_yang
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = MRY_shen_de
+
+		prerequisite = {
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 向天狗做出承诺
+	focus = {
+		id = MRY_xiang_tian_gou_zuo_chu_cheng_nuo
+		icon = unknown
+		cost = 7
+		x = -2
+		y = 2
+
+		relative_position_id = MRY_chu_li_xin_yang_wei_ji
+
+		prerequisite = {
+			focus = MRY_shen_wei
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 向河童做出承诺
+	focus = {
+		id = MRY_xiang_he_tong_zuo_chu_cheng_nuo
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 2
+
+		relative_position_id = MRY_chu_li_xin_yang_wei_ji
+
+		prerequisite = {
+			focus = MRY_shen_wei
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 收集供物
+	focus = {
+		id = MRY_shou_ji_gong_wu
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_chu_li_xin_yang_wei_ji
+
+		prerequisite = {
+			focus = MRY_shen_wei
+			focus = MRY_shen_de
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 开设分神社
+	focus = {
+		id = MRY_kai_she_fen_shen_she
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shou_ji_gong_wu
+
+		prerequisite = {
+			focus = MRY_shou_ji_gong_wu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 组建天狗救国军
+	focus = {
+		id = MRY_zu_jian_tian_gou_jiu_guo_jun
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_xiang_tian_gou_zuo_chu_cheng_nuo
+
+		prerequisite = {
+			focus = MRY_xiang_tian_gou_zuo_chu_cheng_nuo
+		}
+
+		prerequisite = {
+			focus = MRY_kai_she_fen_shen_she
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 河童工业捐赠
+	focus = {
+		id = MRY_he_tong_gong_ye_juan_zeng
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_xiang_he_tong_zuo_chu_cheng_nuo
+
+		prerequisite = {
+			focus = MRY_xiang_he_tong_zuo_chu_cheng_nuo
+		}
+
+		prerequisite = {
+			focus = MRY_kai_she_fen_shen_she
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 不再名存实亡
+	focus = {
+		id = MRY_bu_zai_ming_cun_shi_wang
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_kai_she_fen_shen_she
+
+		prerequisite = {
+			focus = MRY_zu_jian_tian_gou_jiu_guo_jun
+		}
+
+		prerequisite = {
+			focus = MRY_he_tong_gong_ye_juan_zeng
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 终结动荡时代
+	focus = {
+		id = MRY_zhong_jie_dong_dang_shi_dai
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_bu_zai_ming_cun_shi_wang
+
+		prerequisite = {
+			focus = MRY_bu_zai_ming_cun_shi_wang
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 消灭共和派
+	focus = {
+		id = MRY_xiao_mie_gong_he_pai
+		icon = unknown
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = MRY_zhong_jie_dong_dang_shi_dai
+
+		prerequisite = {
+			focus = MRY_zhong_jie_dong_dang_shi_dai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 协助河童统一
+	focus = {
+		id = MRY_xie_zhu_he_tong_tong_yi
+		icon = unknown
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = MRY_zhong_jie_dong_dang_shi_dai
+
+		prerequisite = {
+			focus = MRY_zhong_jie_dong_dang_shi_dai
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 信仰的胜利
+	focus = {
+		id = MRY_xin_yang_de_sheng_li
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_zhong_jie_dong_dang_shi_dai
+
+		prerequisite = {
+			focus = MRY_xiao_mie_gong_he_pai
+			focus = MRY_xie_zhu_he_tong_tong_yi
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入绯红体系
+	focus = {
+		id = MRY_jia_ru_fei_hong_ti_xi
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_xin_yang_de_sheng_li
+
+		prerequisite = {
+			focus = MRY_xin_yang_de_sheng_li
+		}
+
+		mutually_exclusive = {
+			focus = MRY_suo_qu_xia_xuan_wu_chuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 索取下玄武川
+	focus = {
+		id = MRY_suo_qu_xia_xuan_wu_chuan
+		icon = unknown
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_xin_yang_de_sheng_li
+
+		prerequisite = {
+			focus = MRY_xin_yang_de_sheng_li
+		}
+
+		mutually_exclusive = {
+			focus = MRY_jia_ru_fei_hong_ti_xi
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事线
+	# 试制型非想天则
+	focus = {
+		id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		icon = unknown
+		cost = 12
+		x = 30
+		y = 1
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 步兵协同作战
+	focus = {
+		id = MRY_bu_bing_xie_tong_zuo_zhan
+		icon = GFX_focus_focus_fra_maquis
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		prerequisite = {
+			focus = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_bu_bing_xie_tong_zuo_zhan
+				bonus = 1
+				uses = 1
+				category = infantry
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 火炮支援
+	focus = {
+		id = MRY_huo_pao_zhi_yuan
+		icon = GFX_goal_generic_army_artillery2
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_bu_bing_xie_tong_zuo_zhan
+
+		prerequisite = {
+			focus = MRY_bu_bing_xie_tong_zuo_zhan
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_huo_pao_zhi_yuan
+				bonus = 1
+				uses = 1
+				category = artillery_tech
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 装甲可靠性改良
+	focus = {
+		id = MRY_zhuang_jia_ke_kao_xing_gai_liang
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		prerequisite = {
+			focus = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢军事奇迹
+	focus = {
+		id = MRY_shou_shi_jun_shi_qi_ji
+		icon = unknown
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		prerequisite = {
+			focus = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 装甲突击战术
+	focus = {
+		id = MRY_zhuang_jia_tu_ji_zhan_shu
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shou_shi_jun_shi_qi_ji
+
+		prerequisite = {
+			focus = MRY_shou_shi_jun_shi_qi_ji
+		}
+
+		completion_reward = {
+			add_mastery = {
+				amount = 50
+				folder = land
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 装甲火力加强
+	focus = {
+		id = MRY_zhuang_jia_huo_li_jia_qiang
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_zhuang_jia_ke_kao_xing_gai_liang
+
+		prerequisite = {
+			focus = MRY_zhuang_jia_ke_kao_xing_gai_liang
+		}
+
+		prerequisite = {
+			focus = MRY_huo_pao_zhi_yuan
+		}
+
+		prerequisite = {
+			focus = MRY_zhuang_jia_tu_ji_zhan_shu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 非想天则量产化
+	focus = {
+		id = MRY_fei_xiang_tian_ze_liang_chan_hua
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_zhuang_jia_huo_li_jia_qiang
+
+		prerequisite = {
+			focus = MRY_zhuang_jia_huo_li_jia_qiang
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢军事学院
+	focus = {
+		id = MRY_shou_shi_jun_shi_xue_yuan
+		icon = unknown
+		cost = 7
+		x = -5
+		y = 1
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		prerequisite = {
+			focus = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 研究上一次战争
+	focus = {
+		id = MRY_yan_jiu_shang_yi_ci_zhan_zheng
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_shou_shi_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = MRY_shou_shi_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 设立总参谋部
+	focus = {
+		id = MRY_she_li_zong_can_mou_bu
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_shou_shi_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = MRY_shou_shi_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 先进装甲研究
+	focus = {
+		id = MRY_xian_jin_zhuang_jia_yan_jiu
+		icon = GFX_goal_generic_build_tank
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_she_li_zong_can_mou_bu
+
+		prerequisite = {
+			focus = MRY_she_li_zong_can_mou_bu
+		}
+
+		prerequisite = {
+			focus = MRY_huo_pao_zhi_yuan
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_xian_jin_zhuang_jia_yan_jiu
+				bonus = 1
+				uses = 1
+				category = shield_weapons
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重视后勤
+	focus = {
+		id = MRY_zhong_shi_hou_qin
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_xian_jin_zhuang_jia_yan_jiu
+
+		prerequisite = {
+			focus = MRY_xian_jin_zhuang_jia_yan_jiu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 扩大动员计划
+	focus = {
+		id = MRY_kuo_da_dong_yuan_ji_hua
+		icon = unknown
+		cost = 7
+		x = 5
+		y = 1
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		prerequisite = {
+			focus = MRY_shi_zhi_xing_fei_xiang_tian_ze
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 反间谍训练
+	focus = {
+		id = MRY_fan_jian_die_xun_lian
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_kuo_da_dong_yuan_ji_hua
+
+		prerequisite = {
+			focus = MRY_kuo_da_dong_yuan_ji_hua
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 标准化军事训练
+	focus = {
+		id = MRY_biao_zhun_hua_jun_shi_xun_lian
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_kuo_da_dong_yuan_ji_hua
+
+		prerequisite = {
+			focus = MRY_kuo_da_dong_yuan_ji_hua
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 速度崇拜
+	focus = {
+		id = MRY_su_du_chong_bai
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_biao_zhun_hua_jun_shi_xun_lian
+
+		prerequisite = {
+			focus = MRY_biao_zhun_hua_jun_shi_xun_lian
+		}
+
+		prerequisite = {
+			focus = MRY_zhuang_jia_tu_ji_zhan_shu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战时生产
+	focus = {
+		id = MRY_zhan_shi_sheng_chan
+		icon = GFX_focus_generic_reorient_production
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_su_du_chong_bai
+
+		prerequisite = {
+			focus = MRY_su_du_chong_bai
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 工业线
+	# 守矢工业计划
+	focus = {
+		id = MRY_shou_shi_gong_ye_ji_hua
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 5
+
+		relative_position_id = MRY_shi_zhi_xing_fei_xiang_tian_ze
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢建设奇迹
+	focus = {
+		id = MRY_shou_shi_jian_she_qi_ji
+		icon = unknown
+		cost = 7
+		x = -4
+		y = 1
+
+		relative_position_id = MRY_shou_shi_gong_ye_ji_hua
+
+		prerequisite = {
+			focus = MRY_shou_shi_gong_ye_ji_hua
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战略铁路规划
+	focus = {
+		id = MRY_zhan_lue_tie_lu_gui_hua
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_shou_shi_jian_she_qi_ji
+
+		prerequisite = {
+			focus = MRY_shou_shi_jian_she_qi_ji
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢索道
+	focus = {
+		id = MRY_shou_shi_suo_dao
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_shou_shi_jian_she_qi_ji
+
+		prerequisite = {
+			focus = MRY_shou_shi_jian_she_qi_ji
+		}
+
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 重工业投资
+	focus = {
+		id = MRY_zhong_gong_ye_tou_zi
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_shou_shi_jian_she_qi_ji
+
+		prerequisite = {
+			focus = MRY_zhan_lue_tie_lu_gui_hua
+			focus = MRY_shou_shi_suo_dao
+		}
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整合军事工业
+	focus = {
+		id = MRY_zheng_he_jun_shi_gong_ye
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_zhong_gong_ye_tou_zi
+
+		prerequisite = {
+			focus = MRY_zhong_gong_ye_tou_zi
+		}
+
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 科研投资
+	focus = {
+		id = MRY_ke_yan_tou_zi
+		icon = unknown
+		cost = 7
+		x = 4
+		y = 1
+
+		relative_position_id = MRY_shou_shi_gong_ye_ji_hua
+
+		prerequisite = {
+			focus = MRY_shou_shi_gong_ye_ji_hua
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 基础科学研究
+	focus = {
+		id = MRY_ji_chu_ke_xue_yan_jiu
+		icon = GFX_focus_basic_science
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_ke_yan_tou_zi
+
+		prerequisite = {
+			focus = MRY_ke_yan_tou_zi
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_ji_chu_ke_xue_yan_jiu
+				bonus = 0.8
+				uses = 2
+				category = math
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 应用科学研究
+	focus = {
+		id = MRY_ying_yong_ke_xue_yan_jiu
+		icon = GFX_goal_generic_construct_civilian
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_ke_yan_tou_zi
+
+		prerequisite = {
+			focus = MRY_ke_yan_tou_zi
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_ying_yong_ke_xue_yan_jiu
+				bonus = 0.7
+				uses = 2
+				category = industrys
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢研究所
+	focus = {
+		id = MRY_shou_shi_yan_jiu_suo
+		icon = GFX_focus_research2
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = MRY_ke_yan_tou_zi
+
+		prerequisite = {
+			focus = MRY_ji_chu_ke_xue_yan_jiu
+			focus = MRY_ying_yong_ke_xue_yan_jiu
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 神秘学研究
+	focus = {
+		id = MRY_shen_mi_xue_yan_jiu
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shou_shi_yan_jiu_suo
+
+		prerequisite = {
+			focus = MRY_shou_shi_yan_jiu_suo
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = MRY_shen_mi_xue_yan_jiu
+				bonus = 1.5
+				uses = 2
+				category = secret
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 自给自足的努力
+	focus = {
+		id = MRY_zi_ji_zi_zu_de_nu_li
+		icon = unknown
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = MRY_shou_shi_gong_ye_ji_hua
+
+		prerequisite = {
+			focus = MRY_shou_shi_gong_ye_ji_hua
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战略资源开发
+	focus = {
+		id = MRY_zhan_lue_zi_yuan_kai_fa
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_zi_ji_zi_zu_de_nu_li
+
+		prerequisite = {
+			focus = MRY_zi_ji_zi_zu_de_nu_li
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 开发谐晶资源
+	focus = {
+		id = MRY_kai_fa_xie_jing_zi_yuan
+		icon = unknown
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = MRY_zhan_lue_zi_yuan_kai_fa
+
+		prerequisite = {
+			focus = MRY_zhan_lue_zi_yuan_kai_fa
+		}
+
+		prerequisite = {
+			focus = MRY_shou_shi_suo_dao
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 实验性替代能源
+	focus = {
+		id = MRY_shi_yan_xing_ti_dai_neng_yuan
+		icon = unknown
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_zi_ji_zi_zu_de_nu_li
+
+		prerequisite = {
+			focus = MRY_zi_ji_zi_zu_de_nu_li
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 守矢核电设施
+	focus = {
+		id = MRY_shou_shi_he_dian_she_shi
+		icon = unknown
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = MRY_shi_yan_xing_ti_dai_neng_yuan
+
+		prerequisite = {
+			focus = MRY_shi_yan_xing_ti_dai_neng_yuan
+		}
+
+		prerequisite = {
+			focus = MRY_ying_yong_ke_xue_yan_jiu
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 妖怪山经济整合
+	focus = {
+		id = MRY_yao_guai_shan_jing_ji_zheng_he
+		icon = unknown
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = MRY_zi_ji_zi_zu_de_nu_li
+
+		prerequisite = {
+			focus = MRY_kai_fa_xie_jing_zi_yuan
+			focus = MRY_shou_shi_he_dian_she_shi
+		}
+
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+}
