@@ -1,0 +1,23 @@
+state={
+	id=24
+	name="STATE_24"
+	history={
+       	146.1.1 = {
+			owner = CFA
+			add_core_of = CFA
+			add_claim_by = TES
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		508 900 1335 1529 1657 1736 1976 2079 2578 2620 
+	}
+	manpower=3621.0
+	state_category=s2
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

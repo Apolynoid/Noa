@@ -42,6 +42,12 @@ CL_bu_ji_gai_ge:0 "补给改革"
 CL_bu_ji_gai_ge_desc:0 ""
 
 ### idea
-
+CL_luo_hou_de_gong_ye_idea:0 "落后的工业"
+CL_luo_hou_de_gong_ye_a_idea:0 "$CL_luo_hou_de_gong_ye_idea$"
+CL_luo_hou_de_gong_ye_b_idea:0 "$CL_luo_hou_de_gong_ye_idea$"
+CL_luo_hou_de_gong_ye_c_idea:0 "$CL_luo_hou_de_gong_ye_idea$"
+CL_xian_dai_hua_gong_ye_idea:0 "现代化工业"
+CL_xian_dai_hua_gong_ye_a_idea:0 "$CL_xian_dai_hua_gong_ye_idea$"
+CL_bu_ji_gai_ge_idea:0 "补给改革"
 
 ### tt

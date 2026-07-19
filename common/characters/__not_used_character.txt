@@ -312,4 +312,39 @@ characters={
 			ideology = neworder_type
 		}
 	}
+	TES_singyoku ={
+		name = TES_singyoku
+		portraits={
+			civilian={
+				large="gfx/leaders/TES/TES_singyoku.dds"
+				small="gfx/leaders/TES/TES_singyoku_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TES/TES_singyoku.dds"
+				small="gfx/leaders/TES/TES_singyoku_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character trait_cautious }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TES_singyoku
+			name = TES_singyoku
+			cost = 200
+			modifier = {
+				army_defence_factor = 0.05
+				modifier_army_sub_unit_ma_infantry_defence_factor = 0.1
+				modifier_army_sub_unit_sc_infantry_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }

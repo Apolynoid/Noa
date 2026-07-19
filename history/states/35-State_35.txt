@@ -1,0 +1,25 @@
+state={
+	id=35
+	name="STATE_35"
+	resources={
+		energy = 5
+	}
+	history={
+       	146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		169 829 835 940 1060 1414 1778 1833 2588 2600 2602 2631 
+	}
+	state_category=s5
+	local_supplies=2.5
+	manpower=267
+	buildings_max_level_factor=1.000
+}

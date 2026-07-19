@@ -1438,6 +1438,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_YUK_southwest_revolutionary_front.png"			
 	}
 
+	#### CFA 妖精天堂
+	SpriteType = {
+		name = "CFA_focus_republic_of_celestial_fairies"
+		texturefile = "gfx/interface/goals/focus_CFA_republic_of_celestial_fairies.png"			
+	}
+
 	#### YYK Saigyouji Yuyuko 白玉楼
 	SpriteType = {
 		name = "YYK_focus_fate_of_netherworld"

@@ -1655,6 +1655,7 @@ focus_tree = {
 	
 		completion_reward = {
 			add_tech_bonus = {
+				name = CIR_ji_chu_ke_xue_yan_jiu
 				bonus = 0.8
 				uses = 2
 				category = math

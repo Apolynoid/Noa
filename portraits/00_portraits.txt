@@ -241,42 +241,6 @@ TEG = {
 		}
 	}
 }
-OTG = {
-	male = {
-		"GFX_Portrait_Tengu_Generic_1"
-		"GFX_Portrait_Tengu_Generic_2"
-		"GFX_Portrait_Tengu_Generic_3"
-		"GFX_Portrait_Tengu_Generic_4"
-	}
-	operative = {
-		male = {
-			"GFX_Portrait_Tengu_Generic_1"
-			"GFX_Portrait_Tengu_Generic_2"
-			"GFX_Portrait_Tengu_Generic_3"
-			"GFX_Portrait_Tengu_Generic_4"
-		}
-		female = {
-			"GFX_Portrait_Tengu_Generic_1"
-			"GFX_Portrait_Tengu_Generic_2"
-			"GFX_Portrait_Tengu_Generic_3"
-			"GFX_Portrait_Tengu_Generic_4"
-		}
-	}
-	scientist = {
-		male = {
-			"GFX_Portrait_Tengu_Generic_1"
-			"GFX_Portrait_Tengu_Generic_2"
-			"GFX_Portrait_Tengu_Generic_3"
-			"GFX_Portrait_Tengu_Generic_4"
-		}
-		female = {
-			"GFX_Portrait_Tengu_Generic_1"
-			"GFX_Portrait_Tengu_Generic_2"
-			"GFX_Portrait_Tengu_Generic_3"
-			"GFX_Portrait_Tengu_Generic_4"
-		}
-	}
-}
 #sca
 SCA = {
 	male = {

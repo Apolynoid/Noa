@@ -1,0 +1,248 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "天界妖精革命编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "天界妖精革命编制"
+		location = 511
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 511
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 511
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 511
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 511
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 171
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天界妖精革命编制"
+		location = 1390
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1390
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1390
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1390
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天界妖精革命编制"
+		location = 1529
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天界妖精革命编制"
+		location = 2595
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 2595
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 2595
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天界妖精革命编制"
+		location = 2595
+		division_template = "天界妖精革命编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+}

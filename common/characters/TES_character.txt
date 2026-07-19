@@ -1,0 +1,167 @@
+characters={
+	TES_tes ={
+		name = TES_tes
+		portraits={
+			civilian={
+				large="gfx/leaders/TES/TES_tes.dds"
+				small="gfx/leaders/TES/TES_tes_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TES/TES_tes.dds"
+				small="gfx/leaders/TES/TES_tes_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_character th_original_character  th_trait_qianxianzhandou trait_reckless th_trait_chongjizhuanjia }
+            attack_skill = 10
+            defense_skill = 11
+            planning_skill = 4
+            logistics_skill = 7
+            
+            skill = 8
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = TES_tes
+			name = TES_tes
+			cost = 200
+			modifier = {
+				
+			}
+			research_bonus = {
+				primary_weapons = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		country_leader={
+			ideology=neworder_type
+			traits = {
+				TES_tian_zi_trait
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+	TES_mai ={
+		name = TES_mai
+		portraits={
+			civilian={
+				large="gfx/leaders/TES/TES_mai.dds"
+				small="gfx/leaders/TES/TES_mai_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TES/TES_mai.dds"
+				small="gfx/leaders/TES/TES_mai_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character trait_reckless th_trait_yinyangshi }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TES_mai
+			name = TES_mai
+			cost = 200
+			traits = {
+				army_defense_expert_advisor
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	TES_yuki ={
+		name = TES_yuki
+		portraits={
+			civilian={
+				large="gfx/leaders/TES/TES_yuki.dds"
+				small="gfx/leaders/TES/TES_yuki_small.dds"
+			}
+			army = {
+				large="gfx/leaders/TES/TES_yuki.dds"
+				small="gfx/leaders/TES/TES_yuki_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_yinyangshi }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 5
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = TES_yuki
+			name = TES_yuki
+			cost = 200
+			traits = {
+				army_offense_expert_advisor
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	IKU_iku ={
+		name = IKU_iku
+		portraits={
+			civilian={
+				large="gfx/leaders/IKU/IKU_iku.dds"
+				small="gfx/leaders/IKU/IKU_iku_small.dds"
+			}
+			army = {
+				large="gfx/leaders/IKU/IKU_iku.dds"
+				small="gfx/leaders/IKU/IKU_iku_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character th_trait_huolizhuanjia th_trait_jijiacaokongzhe   }
+            attack_skill = 3
+            defense_skill = 6
+            planning_skill = 5
+            logistics_skill = 10
+            
+            skill = 6
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = IKU_iku
+			name = IKU_iku
+			cost = 200
+			traits = {
+				intelligence_expert_advisor
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=guli_type
+			id=-1
+		}
+	}
+}

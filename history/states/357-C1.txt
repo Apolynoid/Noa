@@ -1,0 +1,29 @@
+
+state={
+	id=357
+	name="STATE_357"
+
+	history={
+		146.1.1 = {
+			owner = CFA
+			add_core_of = CFA
+			add_claim_by = TES
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		511 692 1142 1302 1711 1840 2114 2169 2570 2590 
+	}
+	manpower=12685.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

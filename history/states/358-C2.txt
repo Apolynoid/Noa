@@ -1,0 +1,27 @@
+state={
+	id=358
+	name="STATE_358"
+	provinces={
+		271 361 400 456 607 1401 1599 1750 1898 2135 2304 2365 2712 
+	}
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			add_core_of = CFA
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+	manpower=1252.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+
+}

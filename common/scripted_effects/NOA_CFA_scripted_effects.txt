@@ -1,0 +1,11 @@
+CFA_start_city_fortification = {
+    custom_effect_tooltip = CFA_start_city_fortification_tt
+    hidden_effect = {
+        activate_mission = CFA_2657_bao_lei_hua
+        activate_mission = CFA_1390_bao_lei_hua
+        activate_mission = CFA_1529_bao_lei_hua
+        activate_mission = CFA_2595_bao_lei_hua
+        activate_mission = CFA_511_bao_lei_hua
+        activate_mission = CFA_171_bao_lei_hua
+    }
+}

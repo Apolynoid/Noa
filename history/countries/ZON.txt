@@ -11,8 +11,6 @@ XXX = { #same in initial_leader_setting(scripted_effects) only to decrease error
 
     recruit_character = SCA_yuugenmagan
 
-    recruit_character = TES_singyoku
-
     recruit_character = HKR_genjii
     recruit_character = HKR_mima
     recruit_character = HKR_ruukoto
@@ -25,6 +23,13 @@ XXX = { #same in initial_leader_setting(scripted_effects) only to decrease error
     recruit_character = UND_sara
     recruit_character = UND_kotohime
     recruit_character = UND_luize
+
+    recruit_character = TES_singyoku
+
+    recruit_character = OTG_tsukasa
+    recruit_character = OTG_megumu
+    recruit_character = OTG_megumu_leader
+    recruit_character = OTG_council_leader
 
 }
 CHE = {
@@ -78,10 +83,6 @@ HUM = {
 
     recruit_character = ZBT_kosuzu
     recruit_character = ZBT_kosuzu_leader
-}
-IKU = {
-    recruit_character = IKU_iku
-    recruit_character = IKU_iku_leader
 }
 INB = {
     recruit_character = INB_inb
@@ -139,12 +140,6 @@ OKI = {
     recruit_character = OKI_satono
     recruit_character = OKI_oki_leader
 }
-OTG = {
-    recruit_character = OTG_tsukasa
-    recruit_character = OTG_megumu
-    recruit_character = OTG_megumu_leader
-    recruit_character = OTG_council_leader
-}
 PRI = {
     recruit_character = PRI_luna
     recruit_character = PRI_luna_leader
@@ -176,13 +171,6 @@ SAT = {
 SBK = {
     recruit_character = SBK_sek
     recruit_character = SBK_sek_leader
-}
-TES = {
-    recruit_character = TES_tes
-    recruit_character = TES_tes_leader
-    recruit_character = TES_iku_leader
-    recruit_character = TES_mai
-    recruit_character = TES_yuki
 }
 UDO = {
     recruit_character = UDO_reisen

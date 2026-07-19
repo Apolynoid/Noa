@@ -1,0 +1,244 @@
+CFA_bao_lei_hua_cheng_shi = {
+    # 第一层防线 2657-68 1390-48 1529-24
+    CFA_2657_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 2657
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 120
+        selectable_mission = no
+        timeout_effect = {
+            68 = {
+                add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 2657
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 2657 
+                    }
+                }
+            }
+        }
+    }
+
+    CFA_1390_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 1390
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 120
+        selectable_mission = no
+        timeout_effect = {
+            48 = {
+                add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 1390
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 1390 
+                    }
+                }
+            }
+        }
+    }
+
+    CFA_1529_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 1529
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 120
+        selectable_mission = no
+        timeout_effect = {
+            24 = {
+                add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 1529
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 1529 
+                    }
+                }
+            }
+        }
+    }
+
+    # 第二层防线 2595-15
+    CFA_2595_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 2595
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 240
+        selectable_mission = no
+        timeout_effect = {
+            15 = {
+                add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 2595
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 2595 
+                    }
+                }
+            }
+        }
+    }
+
+    # 第三层防线 511-357 171-12*
+    CFA_511_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 511
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 360
+        selectable_mission = no
+        timeout_effect = {
+            357 = {
+                add_building_construction = {
+					type = bunker
+					level = 4
+					province = {
+						id = 511
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 511 
+                    }
+                }
+            }
+        }
+    }
+
+    CFA_171_bao_lei_hua = {
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            OR = {
+                NOT = {
+                    controls_province = 171
+                }
+                exists = no
+                is_subject = yes
+                has_defensive_war = no
+            }
+        }
+        icon = generic_fortification
+        days_mission_timeout = 360
+        selectable_mission = no
+        timeout_effect = {
+            12 = {
+                add_building_construction = {
+					type = bunker
+					level = 5
+					province = {
+						id = 171
+					}
+					instant_build = yes
+				}
+                add_province_modifier = {
+                    static_modifiers = { CFA_fortified_city_modifier }
+                    province = { 
+                        id = 171 
+                    }
+                }
+            }
+        }
+    }
+}

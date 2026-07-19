@@ -1595,6 +1595,7 @@ focus_tree = {
             id = 1803
             id = 4050
           }
+          instant_build = yes
         }
       }
       93 = {
@@ -1604,6 +1605,7 @@ focus_tree = {
           province = {
             id = 3454
           }
+          instant_build = yes
         }
       }
       69 = {
@@ -1614,6 +1616,7 @@ focus_tree = {
             id = 4269
             id = 4271
           }
+          instant_build = yes
         }
       }
       372 = {
@@ -1625,6 +1628,7 @@ focus_tree = {
             id = 3398
             id = 976
           }
+          instant_build = yes
         }
       }
     }
@@ -2104,6 +2108,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
+        name = SCA_sheng_chan_ji_shu_jin_bu
         bonus = 0.8
         uses = 2
         category = industrys

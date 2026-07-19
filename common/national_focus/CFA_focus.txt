@@ -18,7 +18,842 @@ focus_tree = {
 	default = no
 
 	# 政治线
+	# 捍卫独立
+	focus = {
+		id = CFA_han_wei_du_li
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 7
+		x = 26
+		y = 1
+
+		completion_reward = {
+			add_ideas = CFA_han_wei_du_li_idea
+		}
 	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整理武器库
+	focus = {
+		id = CFA_zheng_li_wu_qi_ku
+		icon = GFX_focus_secret_rearmament
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_han_wei_du_li
+
+		prerequisite = {
+			focus = CFA_han_wei_du_li
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				amount = 160
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事改革
+	focus = {
+		id = CFA_jun_shi_gai_ge
+		icon = GFX_focus_chi_army_reform
+		cost = 7
+		x = -3
+		y = 1
+
+		relative_position_id = CFA_han_wei_du_li
+
+		prerequisite = {
+			focus = CFA_han_wei_du_li
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_idea
+				add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天界妖精军事学院
+	focus = {
+		id = CFA_tian_jie_yao_jing_jun_shi_xue_yuan
+		icon = GFX_focus_generic_military_academy
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_jun_shi_gai_ge
+
+		prerequisite = {
+			focus = CFA_jun_shi_gai_ge
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_a_idea
+				add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事理论探索
+	focus = {
+		id = CFA_jun_shi_li_lun_tan_suo
+		icon = GFX_goal_generic_army_doctrines
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_tian_jie_yao_jing_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = CFA_tian_jie_yao_jing_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			add_mastery = {
+				amount = 50
+				folder = land
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 缴获战术
+	focus = {
+		id = CFA_jiao_huo_zhan_shu
+		icon = GFX_focus_prc_infiltration
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CFA_jun_shi_li_lun_tan_suo
+
+		prerequisite = {
+			focus = CFA_jun_shi_li_lun_tan_suo
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CFA_tian_jie_yao_jing_ge_ming_jun_d_idea
+				}
+				swap_ideas = {
+					remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_d_idea
+					add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_e_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_b_idea
+					add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_c_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 防御战术
+	focus = {
+		id = CFA_fang_yu_zhan_shu
+		icon = GFX_focus_trench_warfare
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CFA_jun_shi_li_lun_tan_suo
+
+		prerequisite = {
+			focus = CFA_jun_shi_li_lun_tan_suo
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CFA_tian_jie_yao_jing_ge_ming_jun_c_idea
+				}
+				swap_ideas = {
+					remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_c_idea
+					add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_e_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_b_idea
+					add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_d_idea
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 本土防卫
+	focus = {
+		id = CFA_ben_tu_fang_wei
+		icon = GFX_goal_generic_military_sphere
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = CFA_jun_shi_li_lun_tan_suo
+
+		prerequisite = {
+			focus = CFA_jiao_huo_zhan_shu
+		}
+
+		prerequisite = {
+			focus = CFA_fang_yu_zhan_shu
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CFA_tian_jie_yao_jing_ge_ming_jun_e_idea
+				add_idea = CFA_tian_jie_yao_jing_ge_ming_jun_f_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 城市堡垒化计划
+	focus = {
+		id = CFA_cheng_shi_bao_lei_hua_ji_hua
+		icon = GFX_goal_generic_fortify_city
+		cost = 12
+		x = 3
+		y = 1
+
+		relative_position_id = CFA_han_wei_du_li
+
+		prerequisite = {
+			focus = CFA_han_wei_du_li
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_defensive_war = yes
+				}
+				CFA_start_city_fortification = yes
+			} else = {
+				custom_effect_tooltip = CFA_next_defensive_war_tt
+				effect_tooltip = {
+					CFA_start_city_fortification = yes
+				}
+				hidden_effect = {
+					set_country_flag = CFA_city_fortification_ready_flag
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 国家紧急状态
+	focus = {
+		id = CFA_guo_jia_jin_ji_zhuang_tai
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_cheng_shi_bao_lei_hua_ji_hua
+
+		available = {
+			has_defensive_war = yes
+		}
+		
+		prerequisite = {
+			focus = CFA_cheng_shi_bao_lei_hua_ji_hua
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 战争动员
+	focus = {
+		id = CFA_zhan_zheng_dong_yuan
+		icon = GFX_goal_generic_propaganda
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CFA_guo_jia_jin_ji_zhuang_tai
+
+		available = {
+			has_defensive_war = yes
+		}
+		
+		prerequisite = {
+			focus = CFA_guo_jia_jin_ji_zhuang_tai
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 扩大征兵
+	focus = {
+		id = CFA_kuo_da_zheng_bing
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_zhan_zheng_dong_yuan
+
+		available = {
+			has_defensive_war = yes
+		}
+		
+		prerequisite = {
+			focus = CFA_zhan_zheng_dong_yuan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CFA_han_wei_du_li_idea
+				add_idea = CFA_han_wei_du_li_a_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 经济动员
+	focus = {
+		id = CFA_jing_ji_dong_yuan
+		icon = GFX_focus_generic_limited_social_mobilization
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CFA_guo_jia_jin_ji_zhuang_tai
+
+		available = {
+			has_defensive_war = yes
+		}
+		
+		prerequisite = {
+			focus = CFA_guo_jia_jin_ji_zhuang_tai
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CFA_jing_ji_dong_yuan_idea
+				days = 540
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 紧急生产
+	focus = {
+		id = CFA_jin_ji_sheng_chan
+		icon = GFX_focus_generic_reorient_production
+		cost = 7
+		x = 0
+		y = 1
+
+		relative_position_id = CFA_jing_ji_dong_yuan
+
+		available = {
+			has_defensive_war = yes
+		}
+
+		prerequisite = {
+			focus = CFA_jing_ji_dong_yuan
+		}
+
+		completion_reward = {
+			add_war_support = -0.05
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 军事委员会
+	focus = {
+		id = CFA_jun_shi_wei_yuan_hui
+		icon = GFX_goal_generic_small_arms
+		cost = 7
+		x = 0
+		y = 3
+
+		relative_position_id = CFA_guo_jia_jin_ji_zhuang_tai
+
+		available = {
+			has_defensive_war = yes
+		}
+		
+		prerequisite = {
+			focus = CFA_kuo_da_zheng_bing
+		}
+
+		prerequisite = {
+			focus = CFA_jin_ji_sheng_chan
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CFA_han_wei_du_li_a_idea
+				add_idea = CFA_han_wei_du_li_b_idea
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天界妖精共和国
+	focus = {
+		id = CFA_tian_jie_yao_jing_gong_he_guo
+		icon = CFA_focus_republic_of_celestial_fairies
+		cost = 7
+		x = 0
+		y = 6
+
+		relative_position_id = CFA_han_wei_du_li
+
+		prerequisite = {
+			focus = CFA_ben_tu_fang_wei
+			focus = CFA_jun_shi_wei_yuan_hui
+		}
+
+		available = {
+			is_subject = no
+			TES = {
+				NOA_is_independent = no
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = CFA_republic
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = Country
+							has_idea = Empire
+							has_idea = World
+						}
+					}
+				}
+				add_ideas = Country
+			}
+			hidden_effect = {
+				news_event = {
+					id = cfa.102
+					days = 5
+				}
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 整合情报机构
+	focus = {
+		id = CFA_zheng_he_qing_bao_ji_gou
+		icon = GFX_focus_generic_secret_service_agency
+		cost = 7
+		x = -2
+		y = 1
+
+		relative_position_id = CFA_tian_jie_yao_jing_gong_he_guo
+
+		prerequisite = {
+			focus = CFA_tian_jie_yao_jing_gong_he_guo
+		}
+
+		completion_reward = {
+			NOA_gain_random_agency_upgrade = yes
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 推行共和宪法
+	focus = {
+		id = CFA_tui_xing_gong_he_xian_fa
+		icon = GFX_focus_generic_treaty
+		cost = 7
+		x = 2
+		y = 1
+
+		relative_position_id = CFA_tian_jie_yao_jing_gong_he_guo
+
+		prerequisite = {
+			focus = CFA_tian_jie_yao_jing_gong_he_guo
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			every_controlled_state = {
+				add_compliance = 20
+			}
+		}
+	
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 	
 	# 外交线
+	# 外交政策
+	focus = {
+		id = CFA_wai_jiao_zheng_ce
+		icon = GFX_goal_generic_improve_relations
+		cost = 7
+		x = 20
+		y = 8
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗工业援助
+	focus = {
+		id = CFA_tian_gou_gong_ye_yuan_zhu
+		icon = NTR_focus_economic_cooperation_with_TEG
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CFA_wai_jiao_zheng_ce
+
+		bypass = {
+			TEG = {
+				NOA_is_independent = no
+			}
+		}
+
+		prerequisite = {
+			focus = CFA_wai_jiao_zheng_ce
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 天狗装备援助
+	focus = {
+		id = CFA_tian_gou_zhuang_bei_yuan_zhu
+		icon = GFX_focus_TEG_weapon_aid
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CFA_tian_gou_gong_ye_yuan_zhu
+
+		bypass = {
+			TEG = {
+				NOA_is_independent = no
+			}
+		}
+		
+		prerequisite = {
+			focus = CFA_tian_gou_gong_ye_yuan_zhu
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core_a
+				producer = TEG
+				amount = 800
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				producer = TEG
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = yunshudui_ma
+				producer = TEG
+				amount = 100
+			}
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 下克上军事援助
+	focus = {
+		id = CFA_xia_ke_shang_jun_shi_yuan_zhu
+		icon = CIR_focus_SEJ_military_aid
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CFA_wai_jiao_zheng_ce
+
+		bypass = {
+			GEK = {
+				NOA_is_independent = no
+			}
+		}
+
+		prerequisite = {
+			focus = CFA_wai_jiao_zheng_ce
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 下克上军事顾问
+	focus = {
+		id = CFA_xia_ke_shang_jun_shi_gu_wen
+		icon = GFX_focus_gekokujyo_military_advisor
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CFA_xia_ke_shang_jun_shi_yuan_zhu
+
+		bypass = {
+			GEK = {
+				NOA_is_independent = no
+			}
+		}
+
+		prerequisite = {
+			focus = CFA_xia_ke_shang_jun_shi_yuan_zhu
+		}
+
+		completion_reward = {
+			add_ideas = CFA_xia_ke_shang_jun_shi_gu_wen_idea
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 雾之湖志愿者
+	focus = {
+		id = CFA_wu_zhi_hu_zhi_yuan_zhe
+		icon = GFX_focus_generic_manpower
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CFA_wai_jiao_zheng_ce
+
+		prerequisite = {
+			focus = CFA_wai_jiao_zheng_ce
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 1000
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入民主同盟
+	focus = {
+		id = CFA_jia_ru_min_zhu_tong_meng
+		icon = GFX_focus_befriend_TEG
+		cost = 7
+		x = -1
+		y = 1
+
+		relative_position_id = CFA_tian_gou_zhuang_bei_yuan_zhu
+
+		prerequisite = {
+			focus = CFA_tian_gou_zhuang_bei_yuan_zhu
+		}
+
+		mutually_exclusive = {
+			focus = CFA_du_li_de_tian_jie_yao_jing
+			focus = CFA_jia_ru_xia_ke_shang_yun_dong
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+				TEG = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			TEG = {
+				country_event = cfa.103
+			}
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 独立的天界妖精
+	focus = {
+		id = CFA_du_li_de_tian_jie_yao_jing
+		icon = GFX_focus_ARG_defense_and_democracy
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = CFA_wu_zhi_hu_zhi_yuan_zhe
+
+		prerequisite = {
+			focus = CFA_tian_gou_zhuang_bei_yuan_zhu
+			focus = CFA_wu_zhi_hu_zhi_yuan_zhe
+			focus = CFA_xia_ke_shang_jun_shi_gu_wen
+		}
+
+		mutually_exclusive = {
+			focus = CFA_jia_ru_min_zhu_tong_meng
+			focus = CFA_jia_ru_xia_ke_shang_yun_dong
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 加入下克上运动
+	focus = {
+		id = CFA_jia_ru_xia_ke_shang_yun_dong
+		icon = GFX_focus_gekokujyo_movement
+		cost = 7
+		x = 1
+		y = 1
+
+		relative_position_id = CFA_xia_ke_shang_jun_shi_gu_wen
+
+		prerequisite = {
+			focus = CFA_xia_ke_shang_jun_shi_gu_wen
+		}
+
+		mutually_exclusive = {
+			focus = CFA_jia_ru_min_zhu_tong_meng
+			focus = CFA_du_li_de_tian_jie_yao_jing
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+				GEK = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			GEK = {
+				country_event = cfa.105
+			}
+		}
+
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
 }

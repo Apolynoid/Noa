@@ -70,8 +70,4 @@
         oldorder = 0
         fandong = 0
     }
-    
-    TES = {
-        subject_level4 = yes
-    }
 }

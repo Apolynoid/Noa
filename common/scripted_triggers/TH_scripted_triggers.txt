@@ -690,7 +690,6 @@ God_country = {
 		tag = OKI
 		tag = SKI
 		tag = TES
-		tag = CCA
 		tag = HCT
 		tag = KEK
 	}
@@ -734,9 +733,7 @@ Beast_country = {
 
 Youkai_country = {
 	or = {
-		#14
-		tag = IKU
-		
+		#14		
 		tag = YUG
 		tag = PRS
 		# tag = ONI
@@ -820,7 +817,6 @@ go_weixin_condition = {
 
 random_leader = {
 	or = {
-		tag = CFA
 		tag = BYA
 		tag = GRS
 		tag = UFA

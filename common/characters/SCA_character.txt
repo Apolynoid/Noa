@@ -127,8 +127,8 @@ characters={
 			idea_token = SCA_flan
 			name = SCA_flan
 			cost = 200
-			modifier = {
-				army_attack_factor = 0.1
+			traits = {
+				army_offense_expert_advisor
 			}
 			ai_will_do = {
 				factor = 1
@@ -204,8 +204,8 @@ characters={
 			idea_token = SCA_mli
 			name = SCA_mli
 			cost = 200
-			modifier = {
-				army_defence_factor = 0.1
+			traits = {
+				army_defense_expert_advisor
 			}
 			ai_will_do = {
 				factor = 1

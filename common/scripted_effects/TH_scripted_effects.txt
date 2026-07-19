@@ -854,14 +854,6 @@ startup_opinion = {
             }
         }
     }
-    TEG = {
-        OTG = {
-            background_enemy = yes
-            TEG = {
-                background_enemy = yes
-            }
-        }
-    }
     NTR = {
         KAP = {
             background_enemy = yes
@@ -908,7 +900,6 @@ startup_opinion = {
     #2
     SCA = { reverse_add_opinion_modifier = {target = KAP modifier = background_enemy2} }
     SCA = { reverse_add_opinion_modifier = {target = TEG modifier = background_enemy2} }
-    SCA = { reverse_add_opinion_modifier = {target = OTG modifier = background_enemy2} }
     SCA = { reverse_add_opinion_modifier = {target = AKI modifier = background_enemy2} }
 
     TKM = { add_opinion_modifier = {target = HUM modifier = background_enemy2} }
@@ -925,7 +916,6 @@ startup_opinion = {
 
     HKR = { add_opinion_modifier = {target = SEJ modifier = background_enemy2} } 
     TEG = { add_opinion_modifier = {target = MRY modifier = background_enemy2} } 
-    OTG = { add_opinion_modifier = {target = YAW modifier = background_enemy2} } 
 }
 
 startup_outlook = {
@@ -933,10 +923,6 @@ startup_outlook = {
     TEG = {
         set_variable = { OL_view_type = 1}
         set_variable = { OL_view_value = 30}
-    }
-    OTG = {
-        set_variable = { OL_view_value = 40}
-        set_variable = { OL_view_type = 1}
     }
     MRY = {
         set_variable = { OL_view_value = 60}
@@ -1053,7 +1039,6 @@ startup_outlook = {
 startup_manu = {
     ###manufacture
     TES = {add_ideas = TES_manu2 }
-    IKU = {add_ideas = IKU_manu2 }
     YMM = {add_ideas = YMM_manu2 }
     PRS = {add_ideas = PRS_manu2 }
     YUG = {add_ideas = YUG_manu2 }

@@ -7,7 +7,6 @@ state={
 		146.1.1 = {
 			owner = TEG
 			add_core_of = TEG
-			add_claim_by = OTG
 			buildings = {
 				infrastructure = 7
 				industrial_complex = 1

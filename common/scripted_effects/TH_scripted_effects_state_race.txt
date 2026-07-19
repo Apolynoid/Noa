@@ -48,11 +48,11 @@ Ce_race_setting = {
 		set_variable = { ST_origin_race = 6 }
 		set_variable = { ST_present_race = 6 }
 	}
-	#TES
 	68 = {
-		set_variable = { ST_origin_race = 3 }
-		set_variable = { ST_present_race = 3 }
+		set_variable = { ST_origin_race = 6 }
+		set_variable = { ST_present_race = 6 }
 	}
+	#TES
 	95 = {
 		set_variable = { ST_origin_race = 3 }
 		set_variable = { ST_present_race = 3 }
@@ -73,7 +73,6 @@ Ce_race_setting = {
 		set_variable = { ST_origin_race = 3 }
 		set_variable = { ST_present_race = 3 }
 	}
-	#CCA
 	14 = {
 		set_variable = { ST_origin_race = 3 }
 		set_variable = { ST_present_race = 3 }
@@ -94,42 +93,41 @@ Ce_race_setting = {
 		set_variable = { ST_origin_race = 3 }
 		set_variable = { ST_present_race = 3 }
 	}
-	#IKU
 	57 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	491 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	13 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	363 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	38 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	66 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	35 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	1 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 	364 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 3 }
+		set_variable = { ST_present_race = 3 }
 	}
 
 }

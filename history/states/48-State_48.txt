@@ -1,0 +1,32 @@
+state={
+	id=48
+	name="STATE_48"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0.0
+		gas=0.000
+		crystal=8.000
+	}
+
+	history={
+       	146.1.1 = {
+			owner = CFA
+			add_core_of = CFA
+			add_claim_by = TES
+			buildings = {
+				infrastructure =1
+				industrial_complex = 1
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		519 676 719 808 948 1281 1390 1543 2062 2118 2136 2174 2331 2547 2615 2643 
+	}
+	manpower=14071.0
+	state_category=s5
+	local_supplies=2.5
+	buildings_max_level_factor=1.000
+}

@@ -1079,6 +1079,7 @@ focus_tree = {
 						id = 2889
 						id = 5682
 					}
+					instant_build = yes
 				}
 			}
 			323 = {
@@ -1093,6 +1094,7 @@ focus_tree = {
 						id = 2538
 						id = 3605
 					}
+					instant_build = yes
 				}
 			}
 		}

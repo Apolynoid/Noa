@@ -1,0 +1,61 @@
+ideas = {
+	country = {
+		# 落后的工业
+		CL_luo_hou_de_gong_ye_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		CL_luo_hou_de_gong_ye_a_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		CL_luo_hou_de_gong_ye_b_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		CL_luo_hou_de_gong_ye_c_idea = {
+			picture = POL_disjointed_industry
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		CL_xian_dai_hua_gong_ye_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		CL_xian_dai_hua_gong_ye_a_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		# 补给改革
+		CL_bu_ji_gai_ge_idea = {
+			picture = generic_supply_line
+			modifier = {
+				supply_consumption_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+	}
+}

@@ -172,7 +172,6 @@ country_event = {
 		}
 		NOT = {
 			country_exists = TEG
-			country_exists = OTG
 		}
 		controls_state = 399
 	}
@@ -184,16 +183,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = TEG_puppet_event_flag
-			OTG = {
-				every_core_state = {
-					add_core_of = TEG
-				}
-				every_character = {
-					set_nationality = TEG
-					clr_character_flag = nationality_OTG
-					set_character_flag = nationality_TEG
-				}
-			}
 		}
 	}
 

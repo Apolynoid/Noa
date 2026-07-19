@@ -63,11 +63,8 @@ UNL = "countries/unl.txt"     #####无法地带
 CJK = "countries/cjk.txt"     #####血池地狱
 OIL = "countries/oil.txt"     #####石油之海
 #---------天界-------------
-CCA = "countries/cca.txt"    #####天宫
 TES = "countries/tes.txt"    #####天子
 CFA = "countries/cfa.txt" #####天界妖精
-IKU = "countries/iku.txt"		#####19
-OTG = "countries/otg.txt"       #####大天魔
 #--------冥界---------
 YYK = "countries/yyk.txt"#UUZ
 #-------彼岸------- 
@@ -91,7 +88,5 @@ UDG = "countries/udg.txt"#地灵殿释放的幽灵聚居区
 #ob
 XXX = "countries/xxx.txt"#ob
 ZON = "countries/zon.txt"#zone
-#######花妈内战国
-YS1 = "countries/ys1.txt"#妖精革命军
 
 

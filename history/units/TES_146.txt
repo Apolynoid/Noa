@@ -1,0 +1,424 @@
+﻿division_template = {
+	name = "云上军团"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "武装天女分队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "有顶天陆战队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "天人安全卫队"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+	}
+}
+
+
+######################
+######东####
+units = {
+	division = {
+		name = "云上军团"
+		location = 2600
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 2600
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 2600
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 2600
+		division_template = "武装天女分队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "云上军团"
+		location = 714
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 714
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 714
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 714
+		division_template = "武装天女分队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "云上军团"
+		location = 550
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 550
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 550
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 550
+		division_template = "武装天女分队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "云上军团"
+		location = 674
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 674
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 674
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 674
+		division_template = "武装天女分队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "云上军团"
+		location = 368
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 368
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "云上军团"
+		location = 368
+		division_template = "云上军团"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 368
+		division_template = "武装天女分队"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+
+	###西
+	division = {
+		name = "天人安全卫队"
+		location = 1958
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天人安全卫队"
+		location = 1958
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1958
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1958
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天人安全卫队"
+		location = 1958
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天人安全卫队"
+		location = 1958
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1958
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1958
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "天人安全卫队"
+		location = 456
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天人安全卫队"
+		location = 456
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 456
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 456
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	####中部
+	division = {
+		name = "有顶天陆战队"
+		location = 700
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 700
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 700
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 700
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 700
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 700
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天人安全卫队"
+		location = 700
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "有顶天陆战队"
+		location = 1691
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1691
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1691
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1691
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1691
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1691
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天人安全卫队"
+		location = 1691
+		division_template = "天人安全卫队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "有顶天陆战队"
+		location = 1641
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1641
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "有顶天陆战队"
+		location = 1641
+		division_template = "有顶天陆战队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1641
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1641
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1641
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "武装天女分队"
+		location = 1641
+		division_template = "武装天女分队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}

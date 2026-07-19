@@ -132,7 +132,6 @@ every_possible_country = { #random leader
 	limit = {
 		or = {
 			tag = BYA #BAMBOO
-			tag = CFA #天界妖精
 			tag = UFA #地底妖精
 			tag = GRS #GRS
 		}
@@ -279,49 +278,6 @@ every_possible_country = { #UNL 地底妖怪部落
 			army = {
 				large="gfx/leaders/ZYD/ZYD_council.dds"
 				small="gfx/leaders/ZYD/ZYD_council_small.dds"
-			}
-		}
-		country_leader={
-			ideology=qinwai_type
-			id=-1
-		}
-		country_leader={
-			ideology=guli_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldorder_type
-			id=-1
-		}
-		country_leader={
-			ideology=fandong_type
-			id=-1
-		}
-		country_leader={
-			ideology=neworder_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldgenso_type
-			id=-1
-		}
-	}
-}
-every_possible_country = { #TES 天庭
-	limit = {
-		tag = CCA
-	}
-	generate_character = {
-		token_base = CCA_leader
-		name = CCA_leader
-		portraits={
-			civilian={
-				large="gfx/leaders/OTG/OTG_council.dds"
-				small="gfx/leaders/OTG/OTG_council_small.dds"
-			}
-			army = {
-				large="gfx/leaders/OTG/OTG_council.dds"
-				small="gfx/leaders/OTG/OTG_council_small.dds"
 			}
 		}
 		country_leader={

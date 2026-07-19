@@ -19,12 +19,6 @@ dont_alliance_youkai_mountain1 = {
 
 	ai_strategy = {
 		type = alliance 
-		id = "OTG"			
-		value = -100
-	}	
-
-	ai_strategy = {
-		type = alliance 
 		id = "NMN"			
 		value = -100
 	}	
@@ -84,12 +78,6 @@ dont_alliance_youkai_mountain2 = {
 	ai_strategy = {
 		type = alliance 
 		id = "TEG"			
-		value = -100
-	}	
-
-	ai_strategy = {
-		type = alliance 
-		id = "OTG"			
 		value = -100
 	}	
 

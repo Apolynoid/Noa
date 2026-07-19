@@ -664,7 +664,7 @@ focus_tree = {
 
     completion_reward = {
       TKM = {
-        country_event = ali.103
+        country_event = ali.108
       }
     }
 

@@ -1,0 +1,22 @@
+state={
+	id=491
+	name="STATE_491"
+	provinces={
+		6693 6701 6745 6770 6771 6780 6790 
+	}
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+	}
+	state_category=s2
+	local_supplies=2.5
+	manpower=779
+	buildings_max_level_factor=1.000
+}

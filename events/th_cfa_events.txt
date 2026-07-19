@@ -1,0 +1,167 @@
+﻿add_namespace = cfa
+# 启动城市堡垒化计划
+country_event = {
+	id = cfa.101
+	title = cfa.101.t
+	desc = cfa.101.d
+	is_triggered_only = yes
+	
+	option = {
+		name = cfa.101.1
+		effect_tooltip = {
+			CFA_start_city_fortification = yes
+		}
+	}
+}
+
+# [CFA.GetName]成立
+news_event = {
+	id = cfa.102
+	title = cfa.102.t
+	desc = cfa.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# 改良
+	option = {
+		name = cfa.102.1
+		trigger = {
+			OR = {
+				has_government = fandong
+				has_government = qinwai
+			}
+		}
+	}
+
+	# 其他
+	option = {
+		name = cfa.102.2
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = fandong
+					has_government = qinwai
+				}
+			}
+		}
+	}
+}
+
+# TEG CFA请求加入同盟
+country_event = {
+	id = cfa.103
+	title = cfa.103.t
+	desc = cfa.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = cfa.103.1
+		ai_chance = {
+			base = 10
+		}
+		TEG = {
+			add_to_faction = CFA
+		}
+		CFA = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = cfa.103.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			CFA = {
+				country_event = cfa.104
+			}
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = cfa.104
+	title = cfa.104.t
+	desc = cfa.104.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = CFA_jia_ru_min_zhu_tong_meng
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = CFA_du_li_de_tian_jie_yao_jing
+		}
+	}
+
+	option = {
+		name = cfa.104.1
+	}
+}
+
+# SEJ CFA请求加入同盟
+country_event = {
+	id = cfa.105
+	title = cfa.105.t
+	desc = cfa.105.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = cfa.105.1
+		ai_chance = {
+			base = 10
+		}
+		GEK = {
+			add_to_faction = CFA
+		}
+		CFA = {
+			country_event = noa_gen.101
+		}
+	}
+
+	option = {
+		name = cfa.105.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			CFA = {
+				country_event = cfa.106
+			}
+		}
+	}
+}
+
+# SEJ 请求被拒绝
+country_event = {
+	id = cfa.106
+	title = cfa.106.t
+	desc = cfa.106.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = cfa.106.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = CFA_jia_ru_xia_ke_shang_yun_dong
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = CFA_du_li_de_tian_jie_yao_jing
+		}
+	}
+}

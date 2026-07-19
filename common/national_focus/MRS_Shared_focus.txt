@@ -811,6 +811,7 @@ shared_focus = {
 
   completion_reward = {
     add_tech_bonus = {
+      name = MRS_mo_fa_zhi_sen_zi_yuan_kan_tan
       bonus = 0.5
       uses = 1
       category = resource

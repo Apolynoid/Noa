@@ -1,0 +1,34 @@
+characters={
+	CFA_revolutionary_committee ={
+		name = CFA_revolutionary_committee
+		can_be_captured = no
+		portraits={
+			civilian={
+				large="gfx/leaders/CFA/CFA_revolutionary_committee.png"
+				small="gfx/leaders/CFA/CFA_revolutionary_committee_small.png"
+			}
+			army = {
+				large="gfx/leaders/CFA/CFA_revolutionary_committee.png"
+				small="gfx/leaders/CFA/CFA_revolutionary_committee_small.png"
+			}
+		}
+		country_leader = {
+			ideology = fandong_type
+			traits = {
+				collective_leadership
+			}
+			id = -1
+		}
+		country_leader={
+			ideology=qinwai_type
+			traits = {
+				collective_leadership
+			}
+			id=-1
+		}
+		country_leader = {
+			ideology = neworder_type
+			id = -1
+		}
+	}
+}

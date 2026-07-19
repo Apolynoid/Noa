@@ -1,0 +1,28 @@
+
+state={
+	id=57
+	name="STATE_57"
+
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		116 254 531 841 1188 1193 1231 1396 1548 1721 1818 1956 2142 2645 2658 2675 
+	}
+	manpower=1098
+	buildings_max_level_factor=1.000
+	state_category=s2
+	local_supplies=2.5
+}

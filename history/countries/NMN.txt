@@ -36,10 +36,6 @@
     add_manpower = 100
     oob = "NMN_146"
     
-    diplomatic_relation = { 
-        country = OTG relation = non_aggression_pact active = yes
-    }
-    
     add_ideas = {
     Youkai
     Village

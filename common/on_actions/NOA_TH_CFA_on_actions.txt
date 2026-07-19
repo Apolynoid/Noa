@@ -1,0 +1,24 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = CFA
+						has_country_flag = CFA_city_fortification_ready_flag
+					}
+				}
+				# show events and trigger mission
+				FROM = {
+					clr_country_flag = CFA_city_fortification_ready_flag
+					CFA_start_city_fortification = yes
+					hidden_effect = {
+						country_event = {
+							id = cfa.101
+						}
+					}
+				}
+			}
+		}
+	}
+}

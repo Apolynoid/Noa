@@ -1,0 +1,28 @@
+
+state={
+	id=360
+	name="STATE_360"
+
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		124 855 1224 1342 1691 1829 1952 2650 2661 5823 
+	}
+	manpower=1473.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

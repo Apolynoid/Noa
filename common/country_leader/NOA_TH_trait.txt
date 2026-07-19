@@ -515,6 +515,36 @@ leader_traits = {
 		}
 	}
 
+	#TES
+	# 天子
+	TES_tian_zi_trait = {
+		random = no
+
+		political_power_factor = 0.1
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		character_coop_cost_factor = -0.15
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	TES_tian_zi_a_trait = {
+		random = no
+
+		political_power_factor = 0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		character_coop_cost_factor = -0.15
+		stability_factor = 0.1
+		conscription_factor = 0.15
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	#YYK
 	# 亡灵公主
 	YKO_wang_ling_gong_zhu = {
@@ -588,6 +618,45 @@ leader_traits = {
 		resistance_damage_to_garrison = -0.25
 		foreign_subversive_activites = -0.3
 		non_core_manpower = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 陆军进攻专家
+	army_offense_expert_advisor = {
+		random = no
+		sprite = 7
+
+		army_attack_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 陆军防御专家
+	army_defense_expert_advisor = {
+		random = no
+		sprite = 9
+
+		army_defence_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 情报专家
+	intelligence_expert_advisor = {
+		random = no
+		sprite = 15
+
+		agency_upgrade_time = -0.2
+		decryption_factor = 0.15
+		army_intel_factor = 0.3
+		operative_slot = 1
 
 		ai_will_do = {
 			factor = 1

@@ -1,4 +1,4 @@
-﻿capital = 62
+﻿capital = 49
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -43,30 +43,29 @@
     
 }
 146.1.1={
-    oob = "TES_146"
-    IKU = {
-        subject_level4 = yes
-    }
-    
-    
-    
+    oob = "TES_146"  
 
     # set_research_slots = 5
     
     add_ideas = {
-    God
-    Village
-    hawk1
-    close2
-    free_magic
-    type2_manpowerlv3
-     
-    TES_buliang_tianren_idea
-    TES_juedui_zixing_idea
+        God
+        Town
+        hawk1
+        close2
+        free_magic
+        type2_manpowerlv3
     }
+
+    add_ideas = {
+        CL_luo_hou_de_gong_ye_idea
+    }
+
+    recruit_character = TES_tes
+    recruit_character = TES_mai
+    recruit_character = TES_yuki
+    recruit_character = IKU_iku
     
     set_politics = {
-    
     	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no

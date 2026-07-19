@@ -4,13 +4,16 @@
 # 天界发展计划
 shared_focus = {
 	id = CL_tian_jie_fa_zhan_ji_hua
-	icon = unknown
+	icon = GFX_focus_generic_industry_2
 	cost = 7
 	x = 15
 	y = 1
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = CL_luo_hou_de_gong_ye_idea
+			add_idea = CL_luo_hou_de_gong_ye_a_idea
+		}
 	}
 
 	ai_will_do = {
@@ -21,7 +24,7 @@ shared_focus = {
 # 成立工业部
 shared_focus = {
 	id = CL_cheng_li_gong_ye_bu
-	icon = unknown
+	icon = GFX_goal_generic_production2
 	cost = 7
 	x = -1
 	y = 1
@@ -33,7 +36,10 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = CL_luo_hou_de_gong_ye_a_idea
+			add_idea = CL_luo_hou_de_gong_ye_b_idea
+		}
 	}
 
 	ai_will_do = {
@@ -44,7 +50,7 @@ shared_focus = {
 # 基础设施建设
 shared_focus = {
 	id = CL_ji_chu_she_shi_jian_she
-	icon = unknown
+	icon = GFX_goal_generic_construct_infrastructure
 	cost = 7
 	x = -1
 	y = 1
@@ -56,7 +62,14 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		every_core_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
 	}
 
 	ai_will_do = {
@@ -67,7 +80,7 @@ shared_focus = {
 # 税制改革
 shared_focus = {
 	id = CL_shui_zhi_gai_ge
-	icon = unknown
+	icon = GFX_focus_generic_economic_recovery
 	cost = 7
 	x = -2
 	y = 1
@@ -79,7 +92,11 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_political_power = 75
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
 	}
 
 	ai_will_do = {
@@ -90,7 +107,7 @@ shared_focus = {
 # 教育改革
 shared_focus = {
 	id = CL_jiao_yu_gai_ge
-	icon = unknown
+	icon = GFX_focus_research
 	cost = 7
 	x = 1
 	y = 1
@@ -102,7 +119,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_jiao_yu_gai_ge
+			bonus = 0.8
+			uses = 2
+			category = math
+		}
 	}
 
 	ai_will_do = {
@@ -113,7 +135,7 @@ shared_focus = {
 # 基础武器研究
 shared_focus = {
 	id = CL_ji_chu_wu_qi_yan_jiu
-	icon = unknown
+	icon = GFX_focus_focus_fra_maquis
 	cost = 7
 	x = 1
 	y = 1
@@ -125,7 +147,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_ji_chu_wu_qi_yan_jiu
+			bonus = 1
+			uses = 1
+			category = infantry
+		}
 	}
 
 	ai_will_do = {
@@ -136,7 +163,7 @@ shared_focus = {
 # 火炮研究
 shared_focus = {
 	id = CL_huo_pao_yan_jiu
-	icon = unknown
+	icon = GFX_goal_generic_army_artillery2
 	cost = 7
 	x = 2
 	y = 1
@@ -148,7 +175,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = SRB_huo_pao_yan_jiu
+			bonus = 1
+			uses = 1
+			category = artillery_tech
+		}
 	}
 
 	ai_will_do = {
@@ -159,7 +191,7 @@ shared_focus = {
 # 生产技术优化
 shared_focus = {
 	id = CL_sheng_chan_ji_shu_you_hua
-	icon = unknown
+	icon = GFX_goal_generic_production
 	cost = 7
 	x = 0
 	y = 2
@@ -175,7 +207,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_sheng_chan_ji_shu_you_hua
+			bonus = 0.8
+			uses = 2
+			category = industrys
+		}
 	}
 
 	ai_will_do = {
@@ -186,7 +223,7 @@ shared_focus = {
 # 建筑技术进步
 shared_focus = {
 	id = CL_jian_zhu_ji_shu_jin_bu
-	icon = unknown
+	icon = GFX_goal_generic_construction
 	cost = 7
 	x = 0
 	y = 1
@@ -198,7 +235,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_jian_zhu_ji_shu_jin_bu
+			bonus = 0.8
+			uses = 2
+			category = build
+		}
 	}
 
 	ai_will_do = {
@@ -209,7 +251,7 @@ shared_focus = {
 # 投资军事工业
 shared_focus = {
 	id = CL_tou_zi_jun_shi_gong_ye
-	icon = unknown
+	icon = GFX_goal_generic_construct_mil_factory
 	cost = 12
 	x = -2
 	y = 1
@@ -225,7 +267,30 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -236,7 +301,7 @@ shared_focus = {
 # 资源勘探
 shared_focus = {
 	id = CL_zi_yuan_kan_tan
-	icon = unknown
+	icon = GFX_goal_generic_construction2
 	cost = 7
 	x = -2
 	y = 1
@@ -248,7 +313,13 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_zi_yuan_kan_tan
+			bonus = 0.8
+			ahead_reduction = 1.5
+			uses = 2
+			category = resource
+		}
 	}
 
 	ai_will_do = {
@@ -259,7 +330,7 @@ shared_focus = {
 # 投资民用工业
 shared_focus = {
 	id = CL_tou_zi_min_yong_gong_ye
-	icon = unknown
+	icon = GFX_goal_generic_construct_civ_factory
 	cost = 12
 	x = 0
 	y = 1
@@ -271,7 +342,30 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -282,7 +376,7 @@ shared_focus = {
 # 培养技术工人
 shared_focus = {
 	id = CL_pei_yang_ji_shu_gong_ren
-	icon = unknown
+	icon = GFX_focus_production
 	cost = 7
 	x = 2
 	y = 1
@@ -298,7 +392,10 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = CL_luo_hou_de_gong_ye_b_idea
+			add_idea = CL_luo_hou_de_gong_ye_c_idea
+		}
 	}
 
 	ai_will_do = {
@@ -309,7 +406,7 @@ shared_focus = {
 # 装甲研究
 shared_focus = {
 	id = CL_zhuang_jia_yan_jiu
-	icon = unknown
+	icon = GFX_goal_generic_build_tank
 	cost = 12
 	x = 2
 	y = 1
@@ -321,7 +418,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_zhuang_jia_yan_jiu
+			bonus = 1
+			uses = 1
+			category = shield_weapons
+		}
 	}
 
 	ai_will_do = {
@@ -332,7 +434,7 @@ shared_focus = {
 # 国立科学院
 shared_focus = {
 	id = CL_guo_li_ke_xue_yuan
-	icon = unknown
+	icon = GFX_focus_research2
 	cost = 7
 	x = 0
 	y = 1
@@ -344,7 +446,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_research_slot = 1
 	}
 
 	ai_will_do = {
@@ -355,8 +457,8 @@ shared_focus = {
 # 新时代的天界工业
 shared_focus = {
 	id = CL_xin_shi_dai_de_tian_jie_gong_ye
-	icon = unknown
-	cost = 12
+	icon = GFX_focus_generic_industry_3
+	cost = 7
 	x = 0
 	y = 3
 
@@ -371,7 +473,10 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = CL_luo_hou_de_gong_ye_c_idea
+			add_idea = CL_xian_dai_hua_gong_ye_idea
+		}
 	}
 
 	ai_will_do = {
@@ -382,8 +487,8 @@ shared_focus = {
 # 现代化生产
 shared_focus = {
 	id = CL_xian_dai_hua_sheng_chan
-	icon = unknown
-	cost = 7
+	icon = GFX_focus_generic_modernize_industry
+	cost = 12
 	x = -3
 	y = 1
 
@@ -394,7 +499,10 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		swap_ideas = {
+			remove_idea = CL_xian_dai_hua_gong_ye_idea
+			add_idea = CL_xian_dai_hua_gong_ye_a_idea
+		}
 	}
 
 	ai_will_do = {
@@ -405,7 +513,7 @@ shared_focus = {
 # 种族科技研究
 shared_focus = {
 	id = CL_zhong_zu_ke_ji_yan_jiu
-	icon = unknown
+	icon = GFX_focus_racial_science
 	cost = 7
 	x = -1
 	y = 1
@@ -417,7 +525,10 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_breakthrough_progress = {
+			value = 1
+			specialization = specialization_race
+		}
 	}
 
 	ai_will_do = {
@@ -428,7 +539,7 @@ shared_focus = {
 # 神秘学研究
 shared_focus = {
 	id = CL_shen_mi_xue_yan_jiu
-	icon = unknown
+	icon = GFX_goal_generic_secret_weapon
 	cost = 12
 	x = 1
 	y = 1
@@ -440,7 +551,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_tech_bonus = {
+			name = CL_shen_mi_xue_yan_jiu
+			bonus = 1.5
+			uses = 2
+			category = secret
+		}
 	}
 
 	ai_will_do = {
@@ -451,7 +567,7 @@ shared_focus = {
 # 补给改革
 shared_focus = {
 	id = CL_bu_ji_gai_ge
-	icon = unknown
+	icon = GFX_focus_generic_truck
 	cost = 7
 	x = 3
 	y = 1
@@ -463,7 +579,7 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
+		add_ideas = CL_bu_ji_gai_ge_idea
 	}
 
 	ai_will_do = {

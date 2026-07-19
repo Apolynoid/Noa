@@ -1,0 +1,131 @@
+ideas = {
+	country = {
+		# 天界妖精革命军
+		CFA_tian_jie_yao_jing_ge_ming_jun_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_a_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_b_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				experience_gain_army_factor = 0.1
+				max_planning_factor = 0.05
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_c_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				experience_gain_army_factor = 0.1
+				max_planning_factor = 0.05
+				equipment_capture = 0.05
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_d_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				experience_gain_army_factor = 0.1
+				max_planning_factor = 0.05
+				max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.1
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_e_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				experience_gain_army_factor = 0.1
+				max_planning_factor = 0.05
+				equipment_capture = 0.05
+				max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.1
+			}
+		}
+
+		CFA_tian_jie_yao_jing_ge_ming_jun_f_idea = {
+			picture = MEX_politicised_army_2
+			modifier = {
+				army_morale_factor = 0.1
+				experience_gain_army_factor = 0.1
+				max_planning_factor = 0.05
+				equipment_capture = 0.05
+				max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+
+		# 捍卫独立
+		CFA_han_wei_du_li_idea = {
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		CFA_han_wei_du_li_a_idea = {
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.1
+				conscription = 0.003
+			}
+		}
+
+		CFA_han_wei_du_li_b_idea = {
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.1
+				conscription = 0.003
+				command_power_gain_mult = 0.2
+				max_command_power_mult = 0.1
+			}
+		}
+
+		# 经济动员
+		CFA_jing_ji_dong_yuan_idea = {
+			picture = generic_license_production
+			modifier = {
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		# 下克上军事顾问
+		CFA_xia_ke_shang_jun_shi_gu_wen_idea = {
+			picture = generic_gekokujyo_military_advisor
+			modifier = {
+				experience_gain_army_factor = 0.1
+				max_dig_in_factor = 0.1
+				max_planning_factor = 0.1
+			}
+
+			cancel = {
+				GEK = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+	}
+}

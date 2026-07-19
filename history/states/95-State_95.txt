@@ -1,0 +1,29 @@
+
+state={
+	id=95
+	name="STATE_95"
+
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			add_core_of = CFA
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		69 364 1011 1102 1222 1496 1753 1958 1984 2068 2173 2512 2680 6457 6458 6459 
+	}
+	manpower=1695
+	buildings_max_level_factor=1.000
+	state_category=s5
+	local_supplies=2.5
+}

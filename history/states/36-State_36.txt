@@ -1,0 +1,35 @@
+
+state={
+	id=36
+	name="STATE_36"
+	resources={
+
+		powder = 0.0
+		metal = 0.0
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TES
+			add_core_of = TES
+			buildings = {
+				infrastructure = 7
+				industrial_complex = 3
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		799 986 1124 1226 1432 2064 
+	}
+	manpower=9696.0
+	buildings_max_level_factor=1.000
+	state_category=s15
+	local_supplies=2.5
+}

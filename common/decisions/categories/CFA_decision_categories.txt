@@ -1,0 +1,14 @@
+# 堡垒化城市
+CFA_bao_lei_hua_cheng_shi = {
+	icon = generic_fortification
+
+	priority = 95
+
+	allowed = {
+		original_tag = CFA
+	}
+
+	visible = {
+		always = no
+	}
+}

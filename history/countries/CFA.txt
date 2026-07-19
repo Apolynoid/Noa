@@ -19,6 +19,8 @@
 
         #工程学 
             jichushuxue = 1
+            shuxuegongju = 1
+            lingben = 1
         #专用工程学
 
         #工业
@@ -31,27 +33,7 @@
     
 }
 
-146.1.1={
-    # set_research_slots = 3
-    # Starting tech
-    set_technology = {
-    #步兵武器
-     #灵力
-    
-     #外界
-    #火炮
-
-    #陆军学说
-
-    #工程学
-    
-    #工业
-    
-    #支援
-    #装甲
-
-    }
-    
+146.1.1={   
     add_ideas = {
         type1_manpowerlv3
         Tribal
@@ -60,10 +42,16 @@
         close2
         free_magic
     }
+    add_ideas = {
+        CL_luo_hou_de_gong_ye_idea
+        CFA_tian_jie_yao_jing_ge_ming_jun_idea
+    }
     add_manpower = 1000
     oob = "CFA_146"
+
+    recruit_character = CFA_revolutionary_committee
+
     set_politics = {
-    
     	ruling_party = fandong
     	election_frequency = 48
     	elections_allowed = no
@@ -71,9 +59,9 @@
     set_popularities = {
         qinwai = 20
         fandong = 75
-        neworder = 0
+        neworder = 5
         oldorder = 0
-        guli = 5
+        guli = 0
     }
     
     

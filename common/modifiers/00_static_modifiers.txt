@@ -651,3 +651,9 @@ forest_foggy = { # on Province
 war_support_during_war = { #Applied during war, scaled from 0-100% with war support, not split.
 	stability_factor = -0.3
 }
+
+# NoA part
+CFA_fortified_city_modifier = {
+	supply_consumption_factor = -0.5
+	army_core_defence_factor = 0.25
+}

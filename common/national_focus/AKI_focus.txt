@@ -831,6 +831,7 @@ focus_tree = {
 						id = 2842
 						id = 4764
 					}
+					instant_build = yes
 				}
 			}
 			393 = {
@@ -845,6 +846,7 @@ focus_tree = {
 						id = 4716
 						id = 4697
 					}
+					instant_build = yes
 				}
 			}
 			179 = {
@@ -858,6 +860,7 @@ focus_tree = {
 						id = 4654
 						id = 4647
 					}
+					instant_build = yes
 				}
 			}
 			337 = {
@@ -872,6 +875,7 @@ focus_tree = {
 						id = 4609
 						id = 865
 					}
+					instant_build = yes
 				}
 			}
 		}
