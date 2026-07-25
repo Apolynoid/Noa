@@ -1,0 +1,77 @@
+defined_text = { 
+	name = TES_territorial_integrity_tooltip
+	text = {
+		trigger = {
+			TES_has_territorial_integrity = yes
+		}
+		localization_key = TES_territorial_integrity_tt_G
+	}
+	text = {
+		localization_key = TES_territorial_integrity_tt_R
+	}
+}
+
+defined_text = { 
+	name = TES_personal_cult_tooltip
+	text = {
+		trigger = {
+			TES_has_personal_cult = yes
+		}
+		localization_key = TES_personal_cult_tt_G
+	}
+	text = {
+		localization_key = TES_personal_cult_tt_R
+	}
+}
+
+defined_text = { 
+	name = TES_military_expansion_tooltip
+	text = {
+		trigger = {
+			TES_has_military_expansion = yes
+		}
+		localization_key = TES_military_expansion_tt_G
+	}
+	text = {
+		localization_key = TES_military_expansion_tt_R
+	}
+}
+
+defined_text = { 
+	name = TES_industrial_construction_tooltip
+	text = {
+		trigger = {
+			TES_has_industrial_construction = yes
+		}
+		localization_key = TES_industrial_construction_tt_G
+	}
+	text = {
+		localization_key = TES_industrial_construction_tt_R
+	}
+}
+
+defined_text = { 
+	name = TES_revendication_tooltip
+	text = {
+		trigger = {
+			TES_has_revendication = yes
+		}
+		localization_key = TES_revendication_tt_G
+	}
+	text = {
+		localization_key = TES_revendication_tt_R
+	}
+}
+
+defined_text = { 
+	name = TES_strike_down_the_republicans_tooltip
+	text = {
+		trigger = {
+			TES_strike_down_the_republicans = yes
+		}
+		localization_key = TES_strike_down_the_republicans_tt_G
+	}
+	text = {
+		localization_key = TES_strike_down_the_republicans_tt_R
+	}
+}

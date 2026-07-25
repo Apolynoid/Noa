@@ -21,13 +21,16 @@ focus_tree = {
 	# 天界临时宪法
 	focus = {
 		id = TES_tian_jie_lin_shi_xian_fa
-		icon = unknown
+		icon = GFX_focus_generic_treaty
 		cost = 7
 		x = 26
 		y = 1
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_di_he_fa_xing_zheng_fu_idea
+				add_idea = TES_di_he_fa_xing_zheng_fu_a_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -38,7 +41,7 @@ focus_tree = {
 	# 清洗旧议会
 	focus = {
 		id = TES_qing_xi_jiu_yi_hui
-		icon = unknown
+		icon = GFX_focus_purge
 		cost = 7
 		x = -2
 		y = 1
@@ -54,7 +57,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = TES_qing_xi_jiu_yi_hui_yi_idea
 		}
 	
 		ai_will_do = {
@@ -65,7 +68,7 @@ focus_tree = {
 	# 特别法庭
 	focus = {
 		id = TES_te_bie_fa_ting
-		icon = unknown
+		icon = GFX_focus_generic_court
 		cost = 7
 		x = -2
 		y = 1
@@ -77,7 +80,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_political_power = 150
+			remove_ideas = TES_di_he_fa_xing_zheng_fu_a_idea
 		}
 	
 		ai_will_do = {
@@ -88,7 +92,7 @@ focus_tree = {
 	# 有机国家
 	focus = {
 		id = TES_you_ji_guo_jia
-		icon = unknown
+		icon = GFX_goal_generic_national_unity
 		cost = 7
 		x = 0
 		y = 2
@@ -100,7 +104,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_qing_xi_jiu_yi_hui_yi_idea
+				add_idea = TES_you_ji_guo_jia_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -111,7 +118,7 @@ focus_tree = {
 	# 与旧议会合作
 	focus = {
 		id = TES_yu_jiu_yi_hui_he_zuo
-		icon = unknown
+		icon = GFX_goal_generic_dangerous_deal
 		cost = 7
 		x = 2
 		y = 1
@@ -127,7 +134,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = TES_yu_jiu_yi_hui_yi_he_zuo_idea
 		}
 	
 		ai_will_do = {
@@ -138,7 +145,7 @@ focus_tree = {
 	# 尊重保守价值观
 	focus = {
 		id = TES_zun_zhong_bao_shou_jia_zhi_guan
-		icon = unknown
+		icon = GFX_focus_generic_self_management
 		cost = 7
 		x = 2
 		y = 1
@@ -150,7 +157,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_stability = 0.1
+			remove_ideas = TES_di_he_fa_xing_zheng_fu_a_idea
 		}
 	
 		ai_will_do = {
@@ -161,7 +169,7 @@ focus_tree = {
 	# 反共和联盟
 	focus = {
 		id = TES_fan_gong_he_lian_meng
-		icon = unknown
+		icon = GFX_focus_spr_crush_the_revolution
 		cost = 7
 		x = 0
 		y = 2
@@ -173,7 +181,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_yu_jiu_yi_hui_yi_he_zuo_idea
+				add_idea = TES_yu_jiu_yi_hui_yi_he_zuo_a_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -184,7 +195,7 @@ focus_tree = {
 	# 增加行动阵线席位
 	focus = {
 		id = TES_zeng_jia_xing_dong_zhen_xian_xi_wei
-		icon = unknown
+		icon = GFX_focus_generic_support_the_left_right
 		cost = 7
 		x = -2
 		y = 2
@@ -197,7 +208,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jian_wei_tuan_idea
+				add_idea = TES_jian_wei_tuan_a_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -208,7 +222,7 @@ focus_tree = {
 	# 金钱攻势
 	focus = {
 		id = TES_jin_qian_gong_shi
-		icon = unknown
+		icon = GFX_focus_mex_privatisation
 		cost = 7
 		x = 2
 		y = 2
@@ -220,8 +234,24 @@ focus_tree = {
 			focus = TES_yu_jiu_yi_hui_he_zuo
 		}
 
+		available = {
+			has_political_power > 200
+		}
+
+		select_effect = {
+			add_political_power = -200
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = on_select_tt
+			effect_tooltip = {
+				add_political_power = -200
+			}
+			custom_effect_tooltip = on_complete_tt
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
 		}
 	
 		ai_will_do = {
@@ -232,7 +262,7 @@ focus_tree = {
 	# 社会宣传部
 	focus = {
 		id = TES_she_hui_xuan_chuan_bu
-		icon = unknown
+		icon = GFX_goal_generic_propaganda
 		cost = 7
 		x = 0
 		y = 2
@@ -245,7 +275,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	
 		ai_will_do = {
@@ -256,7 +286,7 @@ focus_tree = {
 	# 塑造个人崇拜
 	focus = {
 		id = TES_su_zao_ge_ren_chong_bai
-		icon = unknown
+		icon = TES_focus_cultivate_cult_of_personality
 		cost = 7
 		x = -2
 		y = 1
@@ -267,8 +297,18 @@ focus_tree = {
 			focus = TES_she_hui_xuan_chuan_bu
 		}
 
+		available = {
+			has_country_leader = {
+				character = TES_tes
+				ruling_only = yes
+			}
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = TES_build_personal_cult_tt
+			hidden_effect = {
+				TES_calc_mandate_value = yes
+			}
 		}
 	
 		ai_will_do = {
@@ -279,7 +319,7 @@ focus_tree = {
 	# 接触工业家联合会
 	focus = {
 		id = TES_jie_chu_gong_ye_jia_lian_he_hui
-		icon = unknown
+		icon = GFX_focus_generic_industral_devlopment_bucket
 		cost = 7
 		x = 2
 		y = 1
@@ -291,7 +331,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
 		}
 	
 		ai_will_do = {
@@ -302,7 +349,7 @@ focus_tree = {
 	# 战争宣传
 	focus = {
 		id = TES_zhan_zheng_xuan_chuan
-		icon = unknown
+		icon = GFX_focus_war_propaganda
 		cost = 7
 		x = 0
 		y = 1
@@ -314,7 +361,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_war_support = 0.1
 		}
 	
 		ai_will_do = {
@@ -325,7 +372,7 @@ focus_tree = {
 	# 收复失地
 	focus = {
 		id = TES_shou_fu_shi_di
-		icon = unknown
+		icon = GFX_focus_attack_CFA
 		cost = 12
 		x = 0
 		y = 1
@@ -336,19 +383,43 @@ focus_tree = {
 			focus = TES_zhan_zheng_xuan_chuan
 		}
 
+		bypass = {
+			OR = {
+				CFA = {
+					NOA_is_independent = no
+				}
+				has_war_with = CFA
+			}
+		}
+
+		available = {
+			is_subject = no
+			date > 146.9.1
+			TES_has_3_mandate_value = yes
+		}
+
+		continue_if_invalid = yes
+
+		cancelable = no
+
+		will_lead_to_war_with = CFA
+
 		completion_reward = {
-			
+			declare_war_on = {
+				target = CFA
+				type = annex_everything
+			}
 		}
 	
 		ai_will_do = {
-		  	factor = 1
+		  	factor = 10000
 		}
 	}
 
 	# 天界情报局
 	focus = {
 		id = TES_tian_jie_qing_bao_ju
-		icon = unknown
+		icon = GFX_focus_generic_secret_service_agency
 		cost = 7
 		x = -1
 		y = 1
@@ -360,7 +431,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			NOA_gain_random_agency_upgrade = yes
 		}
 	
 		ai_will_do = {
@@ -371,7 +442,7 @@ focus_tree = {
 	# 重建秩序
 	focus = {
 		id = TES_chong_jian_zhi_xu
-		icon = unknown
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 7
 		x = 1
 		y = 1
@@ -382,8 +453,18 @@ focus_tree = {
 			focus = TES_shou_fu_shi_di
 		}
 
+		available = {
+			CFA = {
+				NOA_is_independent = no
+			}
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = TES_allow_integration_of_CFA_tt
+			custom_effect_tooltip = occupation_law_introduce_tt
+			hidden_effect = {
+				set_country_flag = can_integrate_flag_CFA
+			}
 		}
 	
 		ai_will_do = {
@@ -394,7 +475,7 @@ focus_tree = {
 	# 末日审判
 	focus = {
 		id = TES_mo_ri_shen_pan
-		icon = unknown
+		icon = GFX_focus_attack_TEG
 		cost = 12
 		x = 0
 		y = 2
@@ -405,19 +486,48 @@ focus_tree = {
 			focus = TES_shou_fu_shi_di
 		}
 
+		bypass = {
+			OR = {
+				TEG = {
+					NOA_is_independent = no
+				}
+				has_war_with = TEG
+			}
+		}
+
+		available = {
+			is_subject = no
+			TES_has_5_mandate_value = yes
+		}
+
+		continue_if_invalid = yes
+
+		cancelable = no
+
+		will_lead_to_war_with = TEG
+
 		completion_reward = {
-			
+			declare_war_on = {
+				target = TEG
+				type = topple_government
+			}
 		}
 	
 		ai_will_do = {
 		  	factor = 1
+			modifier = {
+				factor = 10000
+				TEG = {
+					has_war_with_major = yes
+				}
+			}
 		}
 	}
 
-	# 最高领袖
+	# 天命攸归
 	focus = {
-		id = TES_zui_gao_ling_xiu
-		icon = unknown
+		id = TES_tian_ming_you_gui
+		icon = GFX_focus_CHI_cradle_of_civilization
 		cost = 12
 		x = 0
 		y = 2
@@ -428,8 +538,22 @@ focus_tree = {
 			focus = TES_mo_ri_shen_pan
 		}
 
+		available = {
+			has_country_leader = {
+				character = TES_tes
+				ruling_only = yes
+			}
+			TES_has_9_mandate_value = yes
+		}
+
 		completion_reward = {
-			
+			add_political_power = 300
+			add_stability = 0.2
+			add_war_support = 0.2
+			swap_ruler_traits = {
+				remove = TES_tian_zi_trait
+				add = TES_tian_zi_a_trait
+			}
 		}
 	
 		ai_will_do = {
@@ -441,13 +565,16 @@ focus_tree = {
 	# 天界陆军改革
 	focus = {
 		id = TES_tian_jie_lu_jun_gai_ge
-		icon = unknown
+		icon = GFX_focus_chi_army_reform
 		cost = 7
 		x = 20
 		y = 8
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_idea
+				add_idea = TES_jun_dui_fen_lie_a_idea
+			}
 		}
 
 		ai_will_do = {
@@ -458,7 +585,7 @@ focus_tree = {
 	# 剑卫团优先
 	focus = {
 		id = TES_jian_wei_tuan_you_xian
-		icon = unknown
+		icon = GFX_focus_RAJ_a_private_military
 		cost = 7
 		x = -2
 		y = 1
@@ -473,8 +600,15 @@ focus_tree = {
 			focus = TES_chuan_tong_lu_jun_you_xian
 		}
 
+		available = {
+			has_completed_focus = TES_zeng_jia_xing_dong_zhen_xian_xi_wei
+		}
+
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_a_idea
+				add_idea = TES_jun_dui_fen_lie_b_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -482,10 +616,10 @@ focus_tree = {
 		}
 	}
 
-	# 最高军事领袖
+	# 设立督导军官
 	focus = {
-		id = TES_zui_gao_jun_shi_ling_xiu
-		icon = unknown
+		id = TES_she_li_du_dao_jun_guan
+		icon = GFX_focus_generic_military_mission
 		cost = 7
 		x = 0
 		y = 1
@@ -497,30 +631,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
-		}
-		
-		ai_will_do = {
-		  	factor = 1
-		}
-	}
-
-	# 设立督导军官
-	focus = {
-		id = TES_she_li_du_dao_jun_guan
-		icon = unknown
-		cost = 7
-		x = -2
-		y = 1
-
-		relative_position_id = TES_jian_wei_tuan_you_xian
-
-		prerequisite = {
-			focus = TES_jian_wei_tuan_you_xian
-		}
-
-		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_b_idea
+				add_idea = TES_jun_dui_fen_lie_c_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -531,9 +645,9 @@ focus_tree = {
 	# 忠诚换取晋升
 	focus = {
 		id = TES_zhong_cheng_huan_qu_jin_sheng
-		icon = unknown
+		icon = GFX_focus_generic_soldier_salute
 		cost = 7
-		x = 1
+		x = -1
 		y = 1
 
 		relative_position_id = TES_she_li_du_dao_jun_guan
@@ -543,7 +657,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_c_idea
+				add_idea = TES_jun_dui_fen_lie_d_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -554,7 +671,7 @@ focus_tree = {
 	# 强化政治忠诚
 	focus = {
 		id = TES_qiang_hua_zheng_zhi_zhong_cheng
-		icon = unknown
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 7
 		x = 1
 		y = 1
@@ -566,7 +683,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_d_idea
+				add_idea = TES_jun_dui_fen_lie_e_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -577,7 +697,7 @@ focus_tree = {
 	# 传统陆军优先
 	focus = {
 		id = TES_chuan_tong_lu_jun_you_xian
-		icon = unknown
+		icon = GFX_focus_generic_manpower
 		cost = 7
 		x = 2
 		y = 1
@@ -593,7 +713,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_a_idea
+				add_idea = TES_jun_dui_fen_lie_f_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -601,10 +724,10 @@ focus_tree = {
 		}
 	}
 
-	# 指挥权下放
+	# 军队自治
 	focus = {
-		id = TES_zhi_hui_quan_xia_fang
-		icon = unknown
+		id = TES_jun_dui_zi_zhi
+		icon = GFX_goal_generic_military_deal
 		cost = 7
 		x = 0
 		y = 1
@@ -616,30 +739,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
-		}
-		
-		ai_will_do = {
-		  	factor = 1
-		}
-	}
-
-	# 军队自治
-	focus = {
-		id = TES_jun_dui_zi_zhi
-		icon = unknown
-		cost = 7
-		x = 2
-		y = 1
-
-		relative_position_id = TES_chuan_tong_lu_jun_you_xian
-
-		prerequisite = {
-			focus = TES_chuan_tong_lu_jun_you_xian
-		}
-
-		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_f_idea
+				add_idea = TES_jun_dui_fen_lie_g_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -650,9 +753,9 @@ focus_tree = {
 	# 提高军官薪资
 	focus = {
 		id = TES_ti_gao_jun_guan_xin_zi
-		icon = unknown
+		icon = GFX_focus_RAJ_special_economic_zones
 		cost = 7
-		x = -1
+		x = 1
 		y = 1
 
 		relative_position_id = TES_jun_dui_zi_zhi
@@ -662,7 +765,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_g_idea
+				add_idea = TES_jun_dui_fen_lie_h_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -673,7 +779,7 @@ focus_tree = {
 	# 军事贵族的荣耀
 	focus = {
 		id = TES_jun_shi_gui_zu_de_rong_yao
-		icon = unknown
+		icon = GFX_focus_generic_advanced_military_studies
 		cost = 7
 		x = -1
 		y = 1
@@ -685,7 +791,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_jun_dui_fen_lie_h_idea
+				add_idea = TES_jun_dui_fen_lie_i_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -696,7 +805,7 @@ focus_tree = {
 	# 天界军事学院
 	focus = {
 		id = TES_tian_jie_jun_shi_xue_yuan
-		icon = unknown
+		icon = GFX_focus_generic_military_academy
 		cost = 7
 		x = 0
 		y = 2
@@ -709,7 +818,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = TES_tian_jie_jun_shi_xue_yuan_idea
+		}
+		
+		ai_will_do = {
+		  	factor = 1
+		}
+	}
+
+	# 学习战争经验
+	focus = {
+		id = TES_xue_xi_zhan_zheng_jing_yan
+		icon = GFX_focus_army_experience
+		cost = 7
+		x = 0
+		y = 2
+
+		relative_position_id = TES_tian_jie_jun_shi_xue_yuan
+
+		prerequisite = {
+			focus = TES_tian_jie_jun_shi_xue_yuan
+		}
+
+		completion_reward = {
+			army_experience = 30
 		}
 		
 		ai_will_do = {
@@ -720,8 +852,8 @@ focus_tree = {
 	# 量产型要石浮游炮
 	focus = {
 		id = TES_liang_chan_xing_yao_shi_fu_you_pao
-		icon = unknown
-		cost = 7
+		icon = GFX_focus_SWE_let_fly_all_guns
+		cost = 12
 		x = -1
 		y = 1
 
@@ -732,7 +864,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_tian_jie_jun_shi_xue_yuan_idea
+				add_idea = TES_tian_jie_jun_shi_xue_yuan_a_idea
+			}
 		}
 		
 		ai_will_do = {
@@ -743,7 +878,7 @@ focus_tree = {
 	# 军事理论探索
 	focus = {
 		id = TES_jun_shi_li_lun_tan_suo
-		icon = unknown
+		icon = GFX_goal_generic_army_doctrines
 		cost = 7
 		x = 1
 		y = 1
@@ -755,7 +890,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_mastery = {
+				amount = 50
+				folder = land
+			}
 		}
 		
 		ai_will_do = {
@@ -766,7 +904,7 @@ focus_tree = {
 	# 统一指挥权
 	focus = {
 		id = TES_tong_yi_zhi_hui_quan
-		icon = unknown
+		icon = GFX_focus_military_command
 		cost = 12
 		x = 0
 		y = 3
@@ -779,7 +917,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = TES_jun_dui_fen_lie_e_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_jun_dui_fen_lie_e_idea
+					add_idea = TES_tong_yi_zhi_hui_quan_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TES_jun_dui_fen_lie_i_idea
+					add_idea = TES_tong_yi_zhi_hui_quan_idea
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -791,17 +942,24 @@ focus_tree = {
 	# 天界陆军紧急会议
 	focus = {
 		id = TES_tian_jie_lu_jun_jin_ji_hui_yi
-		icon = unknown
+		icon = GFX_goal_generic_axis_build_infantry
 		cost = 7
 		x = 22
 		y = 6
 
 		allow_branch = {
-			always = no
+			has_country_flag = TES_uncoordinated_army_manifested_flag
+		}
+
+		available = {
+			has_completed_focus = TES_tian_jie_lu_jun_gai_ge
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_idea
+				add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+			}
 		}
 
 		ai_will_do = {
@@ -812,8 +970,8 @@ focus_tree = {
 	# 强调交付标准
 	focus = {
 		id = TES_qiang_diao_jiao_fu_biao_zhun
-		icon = unknown
-		cost = 7
+		icon = GFX_goal_generic_small_arms
+		cost = 3
 		x = -2
 		y = 1
 
@@ -823,8 +981,41 @@ focus_tree = {
 			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
 		}
 
+		available = {
+			has_completed_focus = TES_jie_chu_gong_ye_jia_lian_he_hui
+		}
+
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_011_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_110_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_110_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_010_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_101_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_101_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_001_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_100_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_000_idea
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -835,8 +1026,8 @@ focus_tree = {
 	# 参谋部人事改革
 	focus = {
 		id = TES_can_mou_bu_ren_shi_gai_ge
-		icon = unknown
-		cost = 7
+		icon = GFX_focus_staff
+		cost = 3
 		x = 0
 		y = 1
 
@@ -846,8 +1037,41 @@ focus_tree = {
 			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
 		}
 
+		available = {
+			has_completed_focus = TES_tian_jie_jun_shi_xue_yuan
+		}
+
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_101_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_110_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_110_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_100_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_011_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_011_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_001_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_010_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_000_idea
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -858,8 +1082,8 @@ focus_tree = {
 	# 撤换不称职军官
 	focus = {
 		id = TES_che_huan_bu_chen_zhi_jun_guan
-		icon = unknown
-		cost = 7
+		icon = GFX_goal_generic_political_pressure
+		cost = 3
 		x = 2
 		y = 1
 
@@ -869,8 +1093,44 @@ focus_tree = {
 			focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
 		}
 
+		available = {
+			OR = {
+				has_completed_focus = TES_she_li_du_dao_jun_guan
+				has_completed_focus = TES_ti_gao_jun_guan_xin_zi
+			}
+		}
+
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_110_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_101_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_101_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_100_idea
+				}
+			} else_if = {
+				limit = {
+					has_idea = TES_bu_xie_tiao_zhong_de_jun_dui_011_idea
+				}
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_011_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_010_idea
+				}
+			} else = {
+				swap_ideas = {
+					remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_001_idea
+					add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_000_idea
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -881,7 +1141,7 @@ focus_tree = {
 	# 军队重生
 	focus = {
 		id = TES_jun_dui_chong_sheng
-		icon = unknown
+		icon = GFX_focus_GER_demonstration_of_military_achievements
 		cost = 7
 		x = 0
 		y = 2
@@ -890,12 +1150,18 @@ focus_tree = {
 
 		prerequisite = {
 			focus = TES_qiang_diao_jiao_fu_biao_zhun
+		}
+
+		prerequisite = {
 			focus = TES_can_mou_bu_ren_shi_gai_ge
+		}
+
+		prerequisite = {
 			focus = TES_che_huan_bu_chen_zhi_jun_guan
 		}
 
 		completion_reward = {
-			
+			remove_ideas = TES_bu_xie_tiao_zhong_de_jun_dui_000_idea
 		}
 
 		ai_will_do = {

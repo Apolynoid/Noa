@@ -1,0 +1,7 @@
+on_actions = {
+	on_weekly_TES = {
+		effect = {
+			TES_calc_mandate_value = yes
+		}
+	}
+}

@@ -27,7 +27,7 @@ ideas = {
 
 		# 低效的政府
 		ZYD_di_xiao_de_zheng_fu_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.25
 				stability_factor = -0.1
@@ -35,7 +35,7 @@ ideas = {
 		}
 
 		ZYD_di_xiao_de_zheng_fu_a_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.15
 			}

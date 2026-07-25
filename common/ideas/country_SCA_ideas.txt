@@ -12,7 +12,7 @@ ideas = {
 
 		# 低效的行政体系
 		SCA_di_xiao_de_xing_zheng_ti_xi_idea = {
-	    	picture = generic_political_problem
+	    	picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 				war_support_factor = -0.1
@@ -21,7 +21,7 @@ ideas = {
 	    }
 
 		SCA_di_xiao_de_xing_zheng_ti_xi_a_idea = {
-	    	picture = generic_political_problem
+	    	picture = JAP_collapsing_government
 
 			cancel = {
 				has_completed_focus = SCA_flandre_zheng_bian

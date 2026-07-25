@@ -1,0 +1,284 @@
+﻿add_namespace = tes
+# 天界战争
+news_event = {
+	id = tes.101
+	title = tes.101.t
+	desc = tes.101.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = TES_celestial_war_tt
+		}
+		TES = {
+			has_war_with = CFA
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TES_celestial_war_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# TES
+	option = {
+		name = tes.101.1
+		trigger = {
+			original_tag = TES
+		}
+	}
+
+	# CFA
+	option = {
+		name = tes.101.2
+		trigger = {
+			original_tag = CFA
+		}
+	}
+
+	# 其他
+	option = {
+		name = tes.101.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TES
+					original_tag = CFA
+				}
+			}
+		}
+	}
+}
+
+# 军队问题显现
+country_event = {
+	id = tes.102
+	title = tes.102.t
+	desc = tes.102.d
+	is_triggered_only = no
+
+	trigger = {
+		original_tag = TES
+		NOT = {
+			has_country_flag = TES_uncoordinated_army_manifested_flag
+		}
+		has_war = yes
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TES_uncoordinated_army_manifested_flag
+			swap_ideas = {
+				remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_hidden_idea
+				add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_idea
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = tes.102.1
+		effect_tooltip = {
+			unlock_national_focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+		}
+	}
+}
+
+# 天庭赢得天界战争
+news_event = {
+	id = tes.103
+	title = tes.103.t
+	desc = tes.103.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = TES_celestial_war_tt
+		NOT = {
+			has_global_flag = TES_celestial_war_end_tt
+		}
+		TES = {
+			NOA_is_independent = yes
+		}
+		CFA = {
+			NOA_is_independent = no
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TES_celestial_war_end_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# TES
+	option = {
+		name = tes.103.1
+		trigger = {
+			original_tag = TES
+		}
+	}
+
+	# 激进-改良
+	option = {
+		name = tes.103.2
+		trigger = {
+			NOT = {
+				original_tag = TES
+			}
+			is_changemaker = yes
+		}
+	}
+
+	# 其他
+	option = {
+		name = tes.103.3
+		trigger = {
+			NOT = {
+				original_tag = TES
+			}
+			is_changemaker = no
+		}
+	}
+}
+
+# 天界妖精赢得天界战争
+news_event = {
+	id = tes.104
+	title = tes.104.t
+	desc = tes.104.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		has_global_flag = TES_celestial_war_tt
+		NOT = {
+			has_global_flag = TES_celestial_war_end_tt
+		}
+		TES = {
+			NOA_is_independent = no
+		}
+		CFA = {
+			NOA_is_independent = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TES_celestial_war_end_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# CFA
+	option = {
+		name = tes.104.1
+		trigger = {
+			original_tag = CFA
+		}
+	}
+
+	# 激进-改良
+	option = {
+		name = tes.104.2
+		trigger = {
+			NOT = {
+				original_tag = CFA
+			}
+			is_changemaker = yes
+		}
+	}
+
+	# 其他
+	option = {
+		name = tes.104.3
+		trigger = {
+			NOT = {
+				original_tag = CFA
+			}
+			is_changemaker = no
+		}
+	}
+}
+
+# 天庭介入妖怪山
+news_event = {
+	id = tes.105
+	title = tes.105.t
+	desc = tes.105.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = TES_intervene_in_youkai_mountain_tt
+		}
+		TES = {
+			has_war_with = TEG
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = TES_intervene_in_youkai_mountain_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# TES
+	option = {
+		name = tes.105.1
+		trigger = {
+			original_tag = TES
+		}
+	}
+
+	# TEG
+	option = {
+		name = tes.105.2
+		trigger = {
+			original_tag = TEG
+		}
+	}
+
+	# 其他
+	option = {
+		name = tes.105.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TES
+					original_tag = TEG
+				}
+			}
+		}
+	}
+}

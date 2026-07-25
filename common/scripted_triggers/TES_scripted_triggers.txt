@@ -1,0 +1,64 @@
+TES_has_territorial_integrity = {
+	TES = {
+		all_core_state = {
+			is_controlled_by = TES
+		}
+	}
+}
+
+TES_has_personal_cult = {
+	TES = {
+		has_completed_focus = TES_su_zao_ge_ren_chong_bai
+	}
+}
+
+TES_has_military_expansion = {
+	TES = {
+		check_variable = { num_equipment_in_armies_k@magic_core_a > 40 }
+	}
+}
+
+TES_has_industrial_construction = {
+	TES = {
+		arms_factory > 30
+	}
+}
+
+TES_has_revendication = {
+	CFA = {
+		all_core_state = {
+			is_controlled_by = TES
+		}
+	}
+}
+
+TES_strike_down_the_republicans = {
+	TEG = { NOA_is_independent = no }
+}
+
+TES_has_3_mandate_value = {
+	custom_trigger_tooltip = {
+		tooltip = TES_has_3_mandate_value_tooltip
+		check_variable = {
+			TES_mandate_value > 2
+		}
+	}
+}
+
+TES_has_5_mandate_value = {
+	custom_trigger_tooltip = {
+		tooltip = TES_has_5_mandate_value_tooltip
+		check_variable = {
+			TES_mandate_value > 4
+		}
+	}
+}
+
+TES_has_9_mandate_value = {
+	custom_trigger_tooltip = {
+		tooltip = TES_has_9_mandate_value_tooltip
+		check_variable = {
+			TES_mandate_value > 8
+		}
+	}
+}

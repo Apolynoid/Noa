@@ -30,7 +30,7 @@ ideas = {
 
 		# 低效的行政机构
 		SRB_di_xiao_de_xing_zheng_ji_gou_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.4
 				stability_factor = -0.2
@@ -38,7 +38,7 @@ ideas = {
 		}
 
 		SRB_di_xiao_de_xing_zheng_ji_gou_a_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 				stability_factor = -0.2
@@ -46,7 +46,7 @@ ideas = {
 		}
 
 		SRB_di_xiao_de_xing_zheng_ji_gou_b_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 			}

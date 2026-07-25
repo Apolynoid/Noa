@@ -244,7 +244,7 @@ ideas = {
 		# ----KNA----
 		# 混乱的革命阵线
 		KNA_hun_luan_de_ge_ming_zhen_xian_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.1
 				stability_factor = -0.1
@@ -252,7 +252,7 @@ ideas = {
 		}
 
 		KNA_hun_luan_de_ge_ming_zhen_xian_a_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				stability_factor = -0.05
 			}
@@ -590,7 +590,7 @@ ideas = {
 
 		# 低效的行政系统
 		YKO_di_xiao_de_xing_zheng_xi_tong_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 				stability_factor = -0.1
@@ -604,7 +604,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_a_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.05
@@ -617,7 +617,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_b_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.05
@@ -629,7 +629,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_c_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 				stability_factor = -0.1
@@ -642,7 +642,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_d_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				stability_factor = -0.1
 				research_speed_factor = -0.15
@@ -654,7 +654,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_e_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				political_power_factor = -0.2
 				stability_factor = -0.05
@@ -667,7 +667,7 @@ ideas = {
 		}
 
 		YKO_di_xiao_de_xing_zheng_xi_tong_f_idea = {
-			picture = generic_political_problem
+			picture = JAP_collapsing_government
 			modifier = {
 				stability_factor = -0.05
 				research_speed_factor = -0.1

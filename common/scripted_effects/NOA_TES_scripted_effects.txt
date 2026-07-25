@@ -1,0 +1,63 @@
+TES_calc_mandate_value = {
+    set_variable = {
+        TES_mandate_value = 0
+    }
+    if = {
+        limit = {
+            TES_has_territorial_integrity = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 1
+        }
+    }
+    if = {
+        limit = {
+            TES_has_personal_cult = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 1
+        }
+    }
+    if = {
+        limit = {
+            TES_has_military_expansion = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 1
+        }
+    }
+    if = {
+        limit = {
+            TES_has_industrial_construction = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 1
+        }
+    }
+    if = {
+        limit = {
+            TES_has_revendication = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 2
+        }
+    }
+    if = {
+        limit = {
+            TES_strike_down_the_republicans = yes
+        }
+        add_to_variable = {
+            TES_mandate_value = 3
+        }
+    }
+
+    set_variable = {
+        TES_mandate_buff_value = TES_mandate_value
+    }
+    subtract_from_variable = {
+        TES_mandate_buff_value = 4
+    }
+    multiply_variable = {
+        TES_mandate_buff_value = 0.04
+    }
+}

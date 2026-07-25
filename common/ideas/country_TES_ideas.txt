@@ -1,0 +1,360 @@
+ideas = {
+	country = {
+		# 剑卫团
+		TES_jian_wei_tuan_idea = {
+			picture = RAJ_private_military_complex
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+
+		TES_jian_wei_tuan_a_idea = {
+			picture = RAJ_private_military_complex
+
+			modifier = {
+				war_support_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+
+		# 低合法性政府
+		TES_di_he_fa_xing_zheng_fu_idea = {
+			picture = JAP_collapsing_government
+
+			modifier = {
+				political_power_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+
+		TES_di_he_fa_xing_zheng_fu_a_idea = {
+			picture = JAP_collapsing_government
+
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+
+		# 军队分裂
+		TES_jun_dui_fen_lie_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_morale_factor = -0.2
+				army_org_factor = -0.1
+				max_planning_factor = -0.3
+				planning_speed = -0.5
+				pocket_penalty = 0.2
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.2
+			}
+		}
+
+		TES_jun_dui_fen_lie_a_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				army_morale_factor = -0.2
+				army_org_factor = -0.1
+				max_planning_factor = -0.3
+				planning_speed = -0.5
+				pocket_penalty = 0.2
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.2
+			}
+		}
+
+		TES_jun_dui_fen_lie_b_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				army_org_factor = -0.1
+				max_planning_factor = -0.3
+				planning_speed = -0.5
+				pocket_penalty = 0.2
+				max_command_power_mult = -0.1
+			}
+		}
+
+		TES_jun_dui_fen_lie_c_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				max_planning_factor = -0.2
+				planning_speed = -0.3
+				pocket_penalty = 0.1
+				max_command_power_mult = -0.1
+			}
+		}
+
+		TES_jun_dui_fen_lie_d_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				planning_speed = -0.1
+
+				army_morale_factor = 0.1
+			}
+		}
+
+		TES_jun_dui_fen_lie_e_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				planning_speed = -0.1
+
+				army_morale_factor = 0.2
+				max_command_power_mult = 0.1
+				army_strength_factor = 0.05
+			}
+		}
+
+		TES_jun_dui_fen_lie_f_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				army_morale_factor = -0.2
+				max_planning_factor = -0.1
+				planning_speed = -0.3
+				pocket_penalty = 0.2
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.2
+			}
+		}
+
+		TES_jun_dui_fen_lie_g_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				army_morale_factor = -0.1
+				max_planning_factor = -0.1
+				planning_speed = -0.1
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.1
+			}
+		}
+
+		TES_jun_dui_fen_lie_h_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.1
+
+				army_org_factor = 0.1
+			}
+		}
+
+		TES_jun_dui_fen_lie_i_idea = {
+			picture = RAJ_partition_india_united
+
+			modifier = {
+				max_command_power_mult = -0.1
+				command_power_gain_mult = -0.1
+
+				
+				army_org_factor = 0.1
+				max_planning_factor = 0.1
+			}
+		}
+
+		TES_tong_yi_zhi_hui_quan_idea = {
+			picture = ARG_war_division
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.2
+				army_strength_factor = 0.05
+				max_command_power_mult = 0.1
+			}
+		}
+
+		# hidden 不协调的军队
+		TES_bu_xie_tiao_zhong_de_jun_dui_hidden_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				custom_modifier_tooltip = TES_uncoordinated_army_tt
+				hidden_modifier = {
+					army_org_factor = -0.1
+					supply_consumption_factor = 0.1
+					max_planning_factor = -0.1
+					land_reinforce_rate = -0.05
+					experience_gain_army_unit_factor = -0.1
+					land_mastery_gain_factor = -0.1
+				}
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				army_org_factor = -0.1
+				supply_consumption_factor = 0.1
+				max_planning_factor = -0.1
+				land_reinforce_rate = -0.05
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_111_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				supply_consumption_factor = 0.1
+				max_planning_factor = -0.1
+				land_reinforce_rate = -0.05
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_011_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				max_planning_factor = -0.1
+				land_reinforce_rate = -0.05
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_101_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				supply_consumption_factor = 0.1
+				land_reinforce_rate = -0.05
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_110_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				supply_consumption_factor = 0.1
+				max_planning_factor = -0.1
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_001_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				land_reinforce_rate = -0.05
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_010_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				max_planning_factor = -0.1
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_100_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				supply_consumption_factor = 0.1
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		TES_bu_xie_tiao_zhong_de_jun_dui_000_idea = {
+			picture = generic_army_problems
+
+			modifier = {
+				experience_gain_army_unit_factor = -0.1
+				land_mastery_gain_factor = -0.1
+			}
+		}
+
+		# 清洗旧议会
+		TES_qing_xi_jiu_yi_hui_yi_idea = {
+			picture = generic_purge
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		# 有机国家
+		TES_you_ji_guo_jia_idea = {
+			picture = PER_unification_initiative_idea
+
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.15
+				training_time_army_factor = -0.1
+			}
+		}
+
+		# 与旧议会合作
+		TES_yu_jiu_yi_hui_yi_he_zuo_idea = {
+			picture = generic_deal_with_the_devil
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		TES_yu_jiu_yi_hui_yi_he_zuo_a_idea = {
+			picture = generic_deal_with_the_devil
+
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		# 天界军事学院
+		TES_tian_jie_jun_shi_xue_yuan_idea = {
+			picture = generic_army_war_college
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+			}
+		}
+
+		TES_tian_jie_jun_shi_xue_yuan_a_idea = {
+			picture = generic_army_war_college
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_equipment_upgrade_xp_cost = -0.1
+				planning_speed = 0.1
+			}
+
+			equipment_bonus = {
+				magic_energy_a = {
+					instant = yes
+					soft_attack = 0.1
+					hard_attack = 0.1
+				}
+			}
+		}
+	}
+}

@@ -45,7 +45,7 @@
 146.1.1={
     oob = "TES_146"  
 
-    # set_research_slots = 5
+    set_country_flag = bunengsuiyiqiehuanzhengti 
     
     add_ideas = {
         God
@@ -58,6 +58,16 @@
 
     add_ideas = {
         CL_luo_hou_de_gong_ye_idea
+        TES_jian_wei_tuan_idea
+        TES_di_he_fa_xing_zheng_fu_idea
+        TES_jun_dui_fen_lie_idea
+        TES_bu_xie_tiao_zhong_de_jun_dui_hidden_idea
+    }
+
+    TES_calc_mandate_value = yes
+
+    add_dynamic_modifier = {
+        modifier = TES_tian_ming_idea
     }
 
     recruit_character = TES_tes

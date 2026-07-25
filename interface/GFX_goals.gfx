@@ -483,6 +483,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_TEG"
+		texturefile = "gfx/interface/goals/focus_generic_attack_TEG.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_MRY"
 		texturefile = "gfx/interface/goals/focus_generic_attack_MRY.png"			
 	}
@@ -545,6 +550,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_attack_TES"
 		texturefile = "gfx/interface/goals/focus_generic_attack_TES.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_attack_CFA"
+		texturefile = "gfx/interface/goals/focus_generic_attack_CFA.png"			
 	}
 
 	SpriteType = {
@@ -1436,6 +1446,12 @@ spriteTypes = {
 	SpriteType = {
 		name = "YUK_focus_southwest_revolutionary_front"
 		texturefile = "gfx/interface/goals/focus_YUK_southwest_revolutionary_front.png"			
+	}
+
+	#### TES Hinanawi Tenshi 天庭
+	SpriteType = {
+		name = "TES_focus_cultivate_cult_of_personality"
+		texturefile = "gfx/interface/goals/focus_TES_cultivate_cult_of_personality.png"			
 	}
 
 	#### CFA 妖精天堂

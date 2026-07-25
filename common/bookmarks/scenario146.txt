@@ -8,7 +8,7 @@ bookmarks = {
 		default = yes
 
 		filters = { label }
-		label_order = { NOA_GensokyoFilter NOA_NetherworldFilter }
+		label_order = { NOA_GensokyoFilter NOA_CelestialFilter NOA_NetherworldFilter }
 
 		include_majors_in_minor_list = no	
 
@@ -152,19 +152,7 @@ bookmarks = {
 				MRS_mo_fa_zhi_sen_de_li_ming
 			}			
 		}
-#		"TES"={
-#		    minor = yes
-#			history = "TES_DAWN_DESC"		#sca
-#			ideas={ 
-#				not_gensoukyo_idea
-#				God
-#			}	
-#            focuses = {
-#            	TES_zhuanyishoudou
-#            	TES_binamingjuducai
-#            	TES_kuodayingxianglidaodiyu
-#			}			
-#		}
+
 		"SRB"={
 		    minor = yes
 			history = "SRB_DAWN_DESC"		#sca
@@ -242,6 +230,18 @@ bookmarks = {
 				YUK_yu_yao_jing_de_shang_tan
 				YUK_yu_suan_qing_xie
             	YUK_zheng_he_fu_yong_jing_ji
+			}			
+		}
+
+		"TES"={
+		    minor = yes
+			history = "TES_DAWN_DESC"		#sca
+			label = { NOA_CelestialFilter }
+			ideas={ 
+				
+			}	
+            focuses = {
+            	
 			}			
 		}
 
