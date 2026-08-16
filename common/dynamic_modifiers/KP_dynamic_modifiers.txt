@@ -1,0 +1,17 @@
+KP_zai_tong_yi_zheng_tong_xing_idea = {
+	icon = GFX_idea_tfv_can_conscription_crisis
+	remove_trigger = {
+		OR = {
+			NOA_is_independent = no
+			NOT = {
+				has_country_flag = KP_reunification_process_flag
+			}
+		}
+	}
+
+	war_support_factor = 0.1
+	army_core_attack_factor = KP_legitimacy_reward
+	army_claim_attack_factor = KP_legitimacy_reward
+	army_morale_factor = KP_legitimacy_reward
+	political_power_factor = KP_legitimacy_reward
+}

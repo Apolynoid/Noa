@@ -1,0 +1,224 @@
+KP_calc_legitimacy_score = {
+    set_variable = {
+        KP_legitimacy = 0
+    }
+    set_variable = {
+        KP_legitimacy_from_stability = stability
+    }
+    multiply_variable = {
+        KP_legitimacy_from_stability = 10
+    }
+    set_variable = {
+        KP_legitimacy_from_manpower = num_equipment_in_armies_k@gun_a
+    }
+    multiply_variable = {
+        KP_legitimacy_from_manpower = 2
+    }
+    set_variable = {
+        KP_legitimacy_from_factories = num_of_factories
+    }
+    multiply_variable = {
+        KP_legitimacy_from_factories = 0.4
+    }
+    set_variable = {
+        KP_legitimacy_from_technology = 0
+    }
+    set_variable = {
+        KP_legitimacy_from_national_strength = 0
+    }
+    add_to_variable = {
+        KP_legitimacy_from_national_strength = KP_legitimacy_from_stability
+    }
+    add_to_variable = {
+        KP_legitimacy_from_national_strength = KP_legitimacy_from_manpower
+    }
+    add_to_variable = {
+        KP_legitimacy_from_national_strength = KP_legitimacy_from_factories
+    }
+    if = {
+        limit = {
+            has_tech = houfangyiliao151
+        }
+        add_to_variable = {
+            KP_legitimacy_from_technology = 10
+        }
+    }
+    if = {
+        limit = {
+            has_tech = mortar2
+        }
+        add_to_variable = {
+            KP_legitimacy_from_technology = 10
+        }
+    }
+    if = {
+        limit = {
+            has_tech = jisuangongju149
+        }
+        add_to_variable = {
+            KP_legitimacy_from_technology = 10
+        }
+    }
+    if = {
+        limit = {
+            has_tech = improved_machine_tools
+        }
+        add_to_variable = {
+            KP_legitimacy_from_technology = 10
+        }
+    }
+    set_variable = {
+        KP_special_legitimacy = 0
+    }
+    if = {
+        limit = {
+            controls_state = 69
+        }
+        add_to_variable = {
+            KP_special_legitimacy = 40
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = KP_recognized_by_major_power_flag
+        }
+        add_to_variable = {
+            KP_special_legitimacy = 10
+        }
+    }
+    add_to_variable = {
+        KP_legitimacy = KP_legitimacy_from_national_strength
+    }
+    add_to_variable = {
+        KP_legitimacy = KP_legitimacy_from_technology
+    }
+    add_to_variable = {
+        KP_legitimacy = KP_special_legitimacy
+    }
+}
+
+KP_calc_legitimacy_reward = {
+    set_variable = {
+        global.KP_num_country_available = 0
+    }
+    every_country = {
+        limit = {
+            KP_has_reunification_process = yes
+        }
+        add_to_variable = {
+            global.KP_num_country_available = 1
+        }
+    }
+    set_variable = {
+        global.KP_legitimacy_sum = 0
+    }
+    every_country = {
+        limit = {
+            KP_has_reunification_process = yes
+        }
+        add_to_variable = {
+            global.KP_legitimacy_sum = KP_legitimacy
+        }
+    }
+    set_variable = {
+        KP_legitimacy_reward = KP_legitimacy
+    }
+     multiply_variable = {
+        KP_legitimacy_reward = global.KP_num_country_available
+    }
+    divide_variable = {
+        KP_legitimacy_reward = global.KP_legitimacy_sum
+    }
+    subtract_from_variable = {
+        KP_legitimacy_reward = 1
+    }
+    multiply_variable = {
+        KP_legitimacy_reward = 4 # competition factor
+    }
+    add_to_variable = {
+        KP_legitimacy_reward = 1
+    }
+    multiply_variable = {
+        KP_legitimacy_reward = 0.07
+    }
+}
+
+KP_add_local_support_by__min_fac__ = {
+    if = {
+        limit = {
+            original_tag = NTR
+        }
+        custom_effect_tooltip = KP_add_local_support_by__min_fac__tt
+        hidden_effect = {
+            add_to_variable = {
+                FROM.KP_local_support_NTR = min_fac    
+            }
+            subtract_from_variable = {
+                FROM.KP_local_support_KAP = min_fac 
+            }
+        }
+    } else_if = {
+        limit = {
+            original_tag = KAP
+        }
+        custom_effect_tooltip = KP_add_local_support_by__min_fac__tt
+        hidden_effect = {
+            add_to_variable = {
+                FROM.KP_local_support_KAP = min_fac    
+            }
+            subtract_from_variable = {
+                FROM.KP_local_support_NTR = min_fac 
+            }
+        }
+    } else = {
+        custom_effect_tooltip = bug_report_tt
+    }
+}
+
+KP_paramilitary_conflict = {
+    set_temp_variable = {
+        current_NTR_power = { value = FROM.KP_paramilitary_NTR multiply = FROM.KP_paramilitary_NTR }
+    }
+    set_temp_variable = {
+        currrnt_KAP_power = { value = FROM.KP_paramilitary_KAP multiply = FROM.KP_paramilitary_KAP }
+    }
+    if = {
+        limit = {
+            check_variable = {
+                FROM.KP_paramilitary_NTR > FROM.KP_paramilitary_KAP
+            }
+        }
+        multiply_variable = {
+            FROM.KP_paramilitary_KAP = 0.4
+        }
+        set_temp_variable = {
+            final_KAP_power = { value = FROM.KP_paramilitary_KAP multiply = FROM.KP_paramilitary_KAP }
+        }
+        subtract_from_temp_variable = {
+            current_NTR_power = { value = currrnt_KAP_power subtract = final_KAP_power }
+        }
+        set_variable = {
+            FROM.KP_paramilitary_NTR = { value = current_NTR_power root = 2 }
+        }
+    } else = {
+        multiply_variable = {
+            FROM.KP_paramilitary_NTR = 0.4
+        }
+        set_temp_variable = {
+            final_NTR_power = { value = FROM.KP_paramilitary_NTR multiply = FROM.KP_paramilitary_NTR }
+        }
+        subtract_from_temp_variable = {
+            current_KAP_power = { value = current_NTR_power subtract = final_NTR_power }
+        }
+        set_variable = {
+            FROM.KP_paramilitary_KAP = { value = current_KAP_power root = 2 }
+        }
+    }
+}
+
+KP_recognized_by_major_power = {
+    custom_effect_tooltip = KP_recognized_by_major_power_tt
+    hidden_effect = {
+        set_country_flag = KP_recognized_by_major_power_flag
+    }
+}

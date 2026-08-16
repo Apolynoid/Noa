@@ -409,6 +409,10 @@ focus_tree = {
 				target = CFA
 				type = annex_everything
 			}
+			add_named_threat = {
+				threat = 3
+				name = TES_shou_fu_shi_di
+			}
 		}
 	
 		ai_will_do = {
@@ -510,6 +514,10 @@ focus_tree = {
 			declare_war_on = {
 				target = TEG
 				type = topple_government
+			}
+			add_named_threat = {
+				threat = 5
+				name = TES_mo_ri_shen_pan
 			}
 		}
 	

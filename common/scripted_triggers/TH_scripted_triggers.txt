@@ -626,8 +626,6 @@ Ghost_country = {
 		tag = SAK
 		tag = GYK
 		tag = HGH
-		tag = YYG
-		tag = YYH
 		
 		tag = OIL
 		tag = CJK

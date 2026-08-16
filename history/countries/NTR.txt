@@ -51,6 +51,8 @@
 }
 146.1.1={
     oob = "NTR_146"
+
+    add_civil_war_target = KAP
     
     add_ideas = {
         Kappa
@@ -61,9 +63,9 @@
     }
 
     add_ideas = {
-        KP_zai_tong_yi_zhi_meng_idea
         KP_po_sui_de_he_tong_gong_ye_qu_idea
         KP_he_tong_de_yan_jiu_neng_li_idea
+        NTR_he_tong_gong_he_jun_idea
     }
     
     set_politics = {
@@ -72,14 +74,12 @@
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 65
+        qinwai = 80
         guli = 0
-        neworder = 25
+        neworder = 5
         oldorder = 0
-        fandong = 10
+        fandong = 15
     }
-
-    set_truce = {target = YAW days = 1095}
 
     recruit_character = NTR_ntr
 }

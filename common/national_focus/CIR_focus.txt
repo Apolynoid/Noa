@@ -473,13 +473,13 @@ focus_tree = {
 			CIR = {
 				add_opinion_modifier = {
 				  	target = SEJ
-				  	modifier = CIR_jia_qiang_he_zuo_op
+				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
 			SEJ = {
 				add_opinion_modifier = {
 				  	target = CIR
-				  	modifier = CIR_jia_qiang_he_zuo_op
+				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
 		}
@@ -539,13 +539,13 @@ focus_tree = {
 			CIR = {
 				add_opinion_modifier = {
 				  	target = TEG
-				  	modifier = CIR_jia_qiang_he_zuo_op
+				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
 			TEG = {
 				add_opinion_modifier = {
 				  	target = CIR
-				  	modifier = CIR_jia_qiang_he_zuo_op
+				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
 		}

@@ -31,9 +31,99 @@ ideas = {
 
 		# 激进派问题
 		NTR_ji_jin_pai_wen_ti_idea = {
-			picture = unknown
+			picture = generic_disjointed_gov
 			modifier = {
-				
+				political_power_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+
+		NTR_ji_jin_pai_wen_ti_a_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+
+		# 国防债券
+		NTR_guo_fang_zhai_quan_idea = {
+			picture = NOR_printing_money
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		# 浪潮
+		NTR_lang_chao_idea = {
+			picture = generic_tide
+			modifier = {
+				training_time_army_factor = -0.2
+				conscription_factor = 0.25
+			}
+		}
+
+		# 完美宪政
+		NTR_wan_mei_xian_zheng_idea = {
+			picture = generic_parliament
+			modifier = {
+				political_power_factor = 0.15
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		# 联合idea
+		# 民主同盟建设委员会
+		TEG_NTR_min_zhu_tong_meng_jian_she_wei_yuan_hui_idea = {
+			picture = SOV_third_five_year_plan_civilian
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TEG_NTR_min_zhu_tong_meng_jian_she_wei_yuan_hui_a_idea = {
+			picture = SOV_third_five_year_plan_civilian
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		# 民主同盟联席会议
+		TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi_idea = {
+			picture = CZE_planning_bonus
+			modifier = {
+				planning_speed = 0.1
+				max_command_power_mult = 0.25
+				command_power_gain_mult = 0.1
+			}
+		}
+
+		TEG_NTR_min_zhu_tong_meng_lian_xi_hui_yi_a_idea = {
+			picture = CZE_planning_bonus
+			modifier = {
+				planning_speed = 0.1
+				max_command_power_mult = 0.25
+				command_power_gain_mult = 0.1
+			}
+			equipment_bonus = {
+				gun_a = {
+					build_cost_ic = -0.1
+				}
+				mortar_a = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		# 民主堡垒
+		TEG_NTR_min_zhu_bao_lei_idea = {
+			picture = TEG_NTR_bastion_of_democracy
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.2
+				compliance_growth = 0.1
+				global_building_slots_factor = 0.2
 			}
 		}
 	}

@@ -53,6 +53,8 @@
 }
 146.1.1={
     oob = "KAP_146"
+
+    add_civil_war_target = NTR
     # add_ideas = KAP_government_problem_idea
 
     # give_guarantee = GRS
@@ -69,8 +71,8 @@
     }
 
     add_ideas = {
-        KP_zai_tong_yi_zhi_meng_idea
         KP_po_sui_de_he_tong_gong_ye_qu_idea
+        KAP_ji_shu_gong_ren_liu_shi_idea
     }
     
     set_politics = {
@@ -80,14 +82,12 @@
     }
 
     set_popularities = {
-        qinwai = 15
-        guli = 50
+        qinwai = 5
+        guli = 80
         neworder = 10
         oldorder = 0
-        fandong = 25
+        fandong = 5
     }
-
-    set_truce = {target = NTR days = 1095}
-    set_truce = {target = YAW days = 1095}
     
+    recruit_character = KAP_elder_council
 }

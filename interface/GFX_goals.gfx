@@ -388,6 +388,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_tide"
+		texturefile = "gfx/interface/goals/focus_generic_tide.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_military_department"
 		texturefile = "gfx/interface/goals/focus_generic_military_department.png"			
 	}
@@ -493,6 +498,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_attack_NTR"
+		texturefile = "gfx/interface/goals/focus_generic_attack_NTR.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_attack_HUM"
 		texturefile = "gfx/interface/goals/focus_generic_attack_HUM.png"			
 	}
@@ -565,6 +575,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_befriend_TEG"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_TEG.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_MRY"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_MRY.png"			
 	}
 
 	SpriteType = {
@@ -1114,7 +1129,23 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_HUM_human_militarism.png"			
 	}
 
+	#### KP 河童通用
+	SpriteType = {
+		name = "KP_focus_reunification_of_kappa_NTR"
+		texturefile = "gfx/interface/goals/focus_KP_reunification_of_kappa_NTR.png"			
+	}
+
+	SpriteType = {
+		name = "KP_focus_reunification_of_kappa_KAP"
+		texturefile = "gfx/interface/goals/focus_KP_reunification_of_kappa_KAP.png"			
+	}
+
 	#### NTR 河童共和国
+
+	SpriteType = {
+		name = "NTR_focus_third_constitutional_assembly"
+		texturefile = "gfx/interface/goals/focus_NTR_third_constitutional_assembly.png"			
+	}
 
 	SpriteType = {
 		name = "NTR_focus_military_cooperation_with_TEG"
@@ -1139,6 +1170,32 @@ spriteTypes = {
 	SpriteType = {
 		name = "NTR_focus_analyse_weakness_of_potential_enemies"
 		texturefile = "gfx/interface/goals/focus_NTR_analyse_weakness_of_potential_enemies.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_NTR_focus_special_relationship"
+		texturefile = "gfx/interface/goals/focus_TEG_NTR_special_relationship.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_NTR_focus_joint_manoeuvre"
+		texturefile = "gfx/interface/goals/focus_TEG_NTR_joint_manoeuvre.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_NTR_focus_bastion_of_democracy"
+		texturefile = "gfx/interface/goals/focus_TEG_NTR_bastion_of_democracy.png"			
+	}
+
+	#### KAP 河童长老会
+	SpriteType = {
+		name = "KAP_focus_moriya_military_aid"
+		texturefile = "gfx/interface/goals/focus_KAP_moriya_military_aid.png"			
+	}
+
+	SpriteType = {
+		name = "KAP_focus_anti_republicanism_propaganda"
+		texturefile = "gfx/interface/goals/focus_KAP_anti_republicanism_propaganda.png"			
 	}
 	
 	#### MRS Kirisame Marisa 魔法之森

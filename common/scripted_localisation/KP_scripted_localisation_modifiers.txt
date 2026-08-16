@@ -1,0 +1,44 @@
+defined_text = { 
+	name = NTR_reunification_process_tooltip
+	text = {
+		trigger = {
+			NTR = {
+				KP_has_reunification_process = yes
+			}
+		}
+		localization_key = KP_NTR_legitimacy_tarce_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = KAP_reunification_process_tooltip
+	text = {
+		trigger = {
+			KAP = {
+				KP_has_reunification_process = yes
+			}
+		}
+		localization_key = KP_KAP_legitimacy_tarce_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = { 
+	name = YAW_reunification_process_tooltip
+	text = {
+		trigger = {
+			YAW = {
+				KP_has_reunification_process = yes
+			}
+		}
+		localization_key = KP_YAW_legitimacy_tarce_tt
+	}
+	text = {
+		localization_key = ""
+	}
+}

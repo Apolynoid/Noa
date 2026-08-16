@@ -7,5 +7,13 @@ CFA_start_city_fortification = {
         activate_mission = CFA_2595_bao_lei_hua
         activate_mission = CFA_511_bao_lei_hua
         activate_mission = CFA_171_bao_lei_hua
+        TES = {
+            activate_mission = TES_2657_bao_lei_hua
+            activate_mission = TES_1390_bao_lei_hua
+            activate_mission = TES_1529_bao_lei_hua
+            activate_mission = TES_2595_bao_lei_hua
+            activate_mission = TES_511_bao_lei_hua
+            activate_mission = TES_171_bao_lei_hua
+        }
     }
 }

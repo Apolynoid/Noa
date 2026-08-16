@@ -1,0 +1,257 @@
+defined_text = {
+	name = GetPropagandaCampaignEffects_Left
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 1 }
+		}
+		localization_key = TEG_propaganda_campaign_locked_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 2 }
+		}
+		localization_key = TEG_propaganda_campaign_empty_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 3 }
+		}
+		localization_key = TEG_propaganda_jia_ru_gong_he_guo_lu_jun
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 4 }
+		}
+		localization_key = TEG_propaganda_bao_wei_gong_he_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 5 }
+		}
+		localization_key = TEG_propaganda_gong_he_guo_zui_wei_xian_de_di_ren
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 6 }
+		}
+		localization_key = TEG_propaganda_ta_men_bu_neng_tong_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 7 }
+		}
+		localization_key = TEG_propaganda_bie_rang_di_ren_tou_ting
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 8 }
+		}
+		localization_key = TEG_propaganda_yun_shu_shi_shi_bing_de_sheng_ming_xian
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 9 }
+		}
+		localization_key = TEG_propaganda_gong_ye_dai_lai_sheng_li
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 10 }
+		}
+		localization_key = TEG_propaganda_shu_ben_shi_gong_he_de_peng_you
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_left_icon_frame = 11 }
+		}
+		localization_key = TEG_propaganda_yong_liang_shi_ying_de_wei_lai
+	}
+}
+
+defined_text = {
+	name = GetPropagandaCampaignEffects_Center
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 1 }
+		}
+		localization_key = TEG_propaganda_campaign_locked_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 2 }
+		}
+		localization_key = TEG_propaganda_campaign_empty_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 3 }
+		}
+		localization_key = TEG_propaganda_jia_ru_gong_he_guo_lu_jun
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 4 }
+		}
+		localization_key = TEG_propaganda_bao_wei_gong_he_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 5 }
+		}
+		localization_key = TEG_propaganda_gong_he_guo_zui_wei_xian_de_di_ren
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 6 }
+		}
+		localization_key = TEG_propaganda_ta_men_bu_neng_tong_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 7 }
+		}
+		localization_key = TEG_propaganda_bie_rang_di_ren_tou_ting
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 8 }
+		}
+		localization_key = TEG_propaganda_yun_shu_shi_shi_bing_de_sheng_ming_xian
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 9 }
+		}
+		localization_key = TEG_propaganda_gong_ye_dai_lai_sheng_li
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 10 }
+		}
+		localization_key = TEG_propaganda_shu_ben_shi_gong_he_de_peng_you
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_center_icon_frame = 11 }
+		}
+		localization_key = TEG_propaganda_yong_liang_shi_ying_de_wei_lai
+	}
+}
+
+defined_text = {
+	name = GetPropagandaCampaignEffects_Right
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 1 }
+		}
+		localization_key = TEG_propaganda_campaign_locked_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 2 }
+		}
+		localization_key = TEG_propaganda_campaign_empty_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 3 }
+		}
+		localization_key = TEG_propaganda_jia_ru_gong_he_guo_lu_jun
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 4 }
+		}
+		localization_key = TEG_propaganda_bao_wei_gong_he_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 5 }
+		}
+		localization_key = TEG_propaganda_gong_he_guo_zui_wei_xian_de_di_ren
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 6 }
+		}
+		localization_key = TEG_propaganda_ta_men_bu_neng_tong_guo
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 7 }
+		}
+		localization_key = TEG_propaganda_bie_rang_di_ren_tou_ting
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 8 }
+		}
+		localization_key = TEG_propaganda_yun_shu_shi_shi_bing_de_sheng_ming_xian
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 9 }
+		}
+		localization_key = TEG_propaganda_gong_ye_dai_lai_sheng_li
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 10 }
+		}
+		localization_key = TEG_propaganda_shu_ben_shi_gong_he_de_peng_you
+	}
+	text = {
+		trigger = {
+			check_variable = { TEG_poster_right_icon_frame = 11 }
+		}
+		localization_key = TEG_propaganda_yong_liang_shi_ying_de_wei_lai
+	}
+}
+
+defined_text = {
+	name = GetDaysRemainingLeft
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { TEG_poster_left_icon_frame = 1 }
+				check_variable = { TEG_poster_left_icon_frame = 2 }
+			}
+		}
+		localization_key = TEG_poster_no_text
+	}
+	text = {
+		localization_key = TEG_poster_left_days_remaining_text
+	}
+}
+
+defined_text = {
+	name = GetDaysRemainingCenter
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { TEG_poster_center_icon_frame = 1 }
+				check_variable = { TEG_poster_center_icon_frame = 2 }
+			}
+		}
+		localization_key = TEG_poster_no_text
+	}
+	text = {
+		localization_key = TEG_poster_center_days_remaining_text
+	}
+}
+
+defined_text = {
+	name = GetDaysRemainingRight
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { TEG_poster_right_icon_frame = 1 }
+				check_variable = { TEG_poster_right_icon_frame = 2 }
+			}
+		}
+		localization_key = TEG_poster_no_text
+	}
+	text = {
+		localization_key = TEG_poster_right_days_remaining_text
+	}
+}

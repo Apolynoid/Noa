@@ -1,0 +1,53 @@
+ideas = {
+	country = {
+		# 技术工人流失
+		KAP_ji_shu_gong_ren_liu_shi_idea = {
+			picture = generic_worker_loss
+
+			modifier = {
+				stability_factor = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		KAP_ji_shu_gong_ren_liu_shi_a_idea = {
+			picture = generic_worker_loss
+
+			modifier = {
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		# 反共和主义圣战
+		KAP_fan_gong_he_zhu_yi_sheng_zhan_idea = {
+			picture = generic_attack_ntr
+
+			targeted_modifier = {
+				tag = NTR
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		# 金鳞队
+		KAP_jin_lin_dui_idea = {
+			picture = generic_suppression
+
+			modifier = {
+				resistance_damage_to_garrison = -0.25
+				resistance_growth = -0.15
+			}
+		}
+
+		# 有机国家
+		KAP_you_ji_guo_jia_idea = {
+			picture = PER_unification_initiative_idea
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = 0.2
+				industrial_capacity_factory = 0.1
+			}
+		}
+	}
+}

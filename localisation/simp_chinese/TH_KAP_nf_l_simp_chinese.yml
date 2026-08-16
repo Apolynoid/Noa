@@ -20,3 +20,11 @@ KAP_zu_jian_jin_lin_dui:0 "组建金鳞队"
 KAP_zu_jian_jin_lin_dui_desc:0 ""
 KAP_you_ji_he_tong_she_hui:0 "有机河童社会"
 KAP_you_ji_he_tong_she_hui_desc:0 ""
+# idea
+KAP_ji_shu_gong_ren_liu_shi_idea:0 "技术工人流失"
+KAP_ji_shu_gong_ren_liu_shi_a_idea:0 "$KAP_ji_shu_gong_ren_liu_shi_idea$"
+KAP_fan_gong_he_zhu_yi_sheng_zhan_idea:0 "反共和主义圣战"
+KAP_jin_lin_dui_idea:0 "金鳞队"
+KAP_you_ji_guo_jia_idea:0 "有机国家"
+
+KAP_damage_NTR_units_tt:0 "对[NTR.GetNameWithFlag]所有单位§Y造成损失§!。"

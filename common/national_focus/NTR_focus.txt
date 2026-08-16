@@ -24,13 +24,13 @@ focus_tree = {
   	# 第三次立法会议
   	focus = {
 		id = NTR_di_san_ci_li_fa_hui_yi
-		icon = unknown
+		icon = NTR_focus_third_constitutional_assembly
 		cost = 7
 		x = 22
 		y = 1
 
 		completion_reward = {
-			
+			add_political_power = 100
 		}
 	
 		ai_will_do = {
@@ -41,7 +41,7 @@ focus_tree = {
 	# 联合政府
 	focus = {
 		id = NTR_lian_he_zheng_fu
-		icon = unknown
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		cost = 7
 		x = -5
 		y = 1
@@ -57,7 +57,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = NTR_ji_jin_pai_wen_ti_idea
+				add_idea = NTR_ji_jin_pai_wen_ti_a_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -68,7 +71,7 @@ focus_tree = {
 	# 动员志愿者
 	focus = {
 		id = NTR_dong_yuan_zhi_yuan_zhe
-		icon = unknown
+		icon = GFX_focus_generic_manpower
 		cost = 7
 		x = -1
 		y = 1
@@ -80,7 +83,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_doctrine = mass_assault
+				}
+				add_mastery = {
+					amount = 50
+					folder = land
+				}
+			} else = {
+				add_mastery = {
+					amount = 30
+					folder = land
+				}
+				custom_effect_tooltip = NTR_mass_army_tt
+			}
 		}
 	
 		ai_will_do = {
@@ -91,7 +108,7 @@ focus_tree = {
 	# 推行限价令
 	focus = {
 		id = NTR_tui_xing_xian_jia_ling
-		icon = unknown
+		icon = GFX_focus_DEN_limited_regulations
 		cost = 7
 		x = 1
 		y = 1
@@ -103,7 +120,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_political_power = 50
+			remove_ideas = NTR_ji_jin_pai_wen_ti_a_idea
 		}
 	
 		ai_will_do = {
@@ -114,7 +132,7 @@ focus_tree = {
 	# 我即浪潮
 	focus = {
 		id = NTR_wo_ji_lang_chao
-		icon = unknown
+		icon = GFX_focus_tide
 		cost = 12
 		x = 0
 		y = 3
@@ -126,7 +144,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = NTR_lang_chao_idea
 		}
 	
 		ai_will_do = {
@@ -137,7 +155,7 @@ focus_tree = {
 	# 边缘化激进派
 	focus = {
 		id = NTR_bian_yuan_hua_ji_jin_pai
-		icon = unknown
+		icon = GFX_focus_spr_crush_the_revolution
 		cost = 7
 		x = 5
 		y = 1
@@ -153,7 +171,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = NTR_ji_jin_pai_wen_ti_idea
+				add_idea = NTR_ji_jin_pai_wen_ti_a_idea
+			}
 		}
 	
 		ai_will_do = {
@@ -164,7 +185,7 @@ focus_tree = {
 	# 精英化军队
 	focus = {
 		id = NTR_jing_ying_hua_jun_dui
-		icon = unknown
+		icon = GFX_focus_generic_military_mission
 		cost = 7
 		x = 1
 		y = 1
@@ -176,7 +197,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_doctrine = fire_support
+				}
+				add_mastery = {
+					amount = 50
+					folder = land
+				}
+			} else = {
+				add_mastery = {
+					amount = 30
+					folder = land
+				}
+				custom_effect_tooltip = NTR_elite_army_tt
+			}
 		}
 	
 		ai_will_do = {
@@ -187,7 +222,7 @@ focus_tree = {
 	# 国家指导投资
 	focus = {
 		id = NTR_guo_jia_zhi_dao_tou_zi
-		icon = unknown
+		icon = GFX_focus_DEN_no_regulations
 		cost = 7
 		x = -1
 		y = 1
@@ -199,7 +234,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_effect_tooltip = NTR_national_investment_tt
+			hidden_effect = {
+				country_event = {
+					id = ntr.101
+					days = 180
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -210,7 +251,7 @@ focus_tree = {
 	# 完美宪政
 	focus = {
 		id = NTR_wan_mei_xian_zheng
-		icon = unknown
+		icon = GFX_focus_ARG_strengthening_the_concordancia
 		cost = 12
 		x = 0
 		y = 3
@@ -222,7 +263,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = NTR_wan_mei_xian_zheng_idea
 		}
 	
 		ai_will_do = {
@@ -233,7 +274,7 @@ focus_tree = {
 	# 推广共和国宪法
 	focus = {
 		id = NTR_tui_guang_gong_he_guo_xian_fa
-		icon = unknown
+		icon = GFX_focus_generic_treaty
 		cost = 7
 		x = 0
 		y = 2
@@ -246,7 +287,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_political_power = 50
+			every_controlled_state = {
+				add_compliance = 20
+			}
 		}
 	
 		ai_will_do = {
@@ -284,7 +328,7 @@ focus_tree = {
 	# 募集国防债券
 	focus = {
 		id = NTR_mu_ji_guo_fang_zhai_quan
-		icon = unknown
+		icon = GFX_focus_mex_privatisation
 		cost = 7
 		x = -1
 		y = 1
@@ -296,7 +340,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_ideas = NTR_guo_fang_zhai_quan_idea
 		}
 	
 		ai_will_do = {
@@ -333,7 +377,7 @@ focus_tree = {
 	# 争取天狗承认
 	focus = {
 		id = NTR_zheng_qu_tian_gou_cheng_ren
-		icon = unknown
+		icon = GFX_focus_befriend_TEG
 		cost = 7
 		x = 2
 		y = 2
@@ -345,8 +389,14 @@ focus_tree = {
 			focus = NTR_bian_yuan_hua_ji_jin_pai
 		}
 
+		bypass = {
+			TEG = {
+				NOA_is_independent = no
+			}
+		}
+
 		completion_reward = {
-			
+			KP_recognized_by_major_power = yes
 		}
 	
 		ai_will_do = {
@@ -357,7 +407,7 @@ focus_tree = {
 	# 与天狗的贸易协定
 	focus = {
 		id = NTR_yu_tian_gou_de_mao_yi_xie_ding
-		icon = unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 7
 		x = 1
 		y = 1
@@ -369,7 +419,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	
 		ai_will_do = {
@@ -389,6 +442,12 @@ focus_tree = {
 
 		prerequisite = {
 			focus = NTR_zheng_qu_tian_gou_cheng_ren
+		}
+
+		bypass = {
+			TEG = {
+				NOA_is_independent = no
+			}
 		}
 
 		completion_reward = {
@@ -456,7 +515,7 @@ focus_tree = {
 	# 战斗工兵
 	focus = {
 		id = NTR_zhan_dou_gong_bing
-		icon = unknown
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 		cost = 7
 		x = -2
 		y = 1
@@ -468,7 +527,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_effect_tooltip = NTR_assault_engineers_tt
+			hidden_effect = {
+				set_technology = {
+					NTR_zhan_dou_gong_bing_tech = 1
+					popup = no
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -479,7 +544,7 @@ focus_tree = {
 	# 玄武川水利工程
 	focus = {
 		id = NTR_xuan_wu_chuan_shui_li_gong_cheng
-		icon = unknown
+		icon = GFX_focus_generic_hydroelectric_energy
 		cost = 12
 		x = 2
 		y = 1
@@ -490,8 +555,19 @@ focus_tree = {
 			focus = NTR_gong_he_guo_gong_cheng_bing_tuan
 		}
 
+		available = {
+			has_full_control_of_state = 74
+		}
+
 		completion_reward = {
-			
+			74 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	
 		ai_will_do = {

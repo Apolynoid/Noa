@@ -217,7 +217,7 @@ focus_tree = {
 	# 共和国宣传部
 	focus = {
 		id = TEG_gong_he_guo_xuan_chuan_bu
-		icon = unknown
+		icon = GFX_goal_generic_propaganda
 		cost = 7
 		x = 0
 		y = 2
@@ -230,7 +230,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			unlock_decision_category_tooltip = TEG_gong_he_guo_xuan_chuan_yun_dong
+			hidden_effect = {
+				TEG_init_ptopaganda_system = yes
+			}
 		}
 	
 		ai_will_do = {
@@ -264,7 +267,7 @@ focus_tree = {
 	# 联系旧盟友
 	focus = {
 		id = TEG_lian_xi_jiu_meng_you
-		icon = unknown
+		icon = GFX_focus_befriend_NTR
 		cost = 3
 		x = -3
 		y = 1
@@ -276,7 +279,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			TEG = {
+				add_opinion_modifier = {
+				  	target = NTR
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			NTR = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -287,7 +301,7 @@ focus_tree = {
 	# 南雾之湖使团
 	focus = {
 		id = TEG_nan_wu_zhi_hu_shi_tuan
-		icon = unknown
+		icon = GFX_focus_befriend_TKM_NOA
 		cost = 3
 		x = -1
 		y = 1
@@ -299,7 +313,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			TEG = {
+				add_opinion_modifier = {
+				  	target = TKM
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			TKM = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -334,7 +359,7 @@ focus_tree = {
 	# 与下克上的盟约
 	focus = {
 		id = TEG_yu_xia_ke_shang_de_meng_yue
-		icon = unknown
+		icon = GFX_focus_gekokujyo_movement
 		cost = 3
 		x = 1
 		y = 1
@@ -346,7 +371,30 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			TEG = {
+				add_opinion_modifier = {
+				  	target = SEJ
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			SEJ = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			TEG = {
+				add_opinion_modifier = {
+				  	target = CIR
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			CIR = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -357,7 +405,7 @@ focus_tree = {
 	# 接触春之妖精
 	focus = {
 		id = TEG_jie_chu_chun_zhi_yao_jing
-		icon = unknown
+		icon = GFX_focus_befriend_LIL
 		cost = 3
 		x = 3
 		y = 1
@@ -369,7 +417,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			TEG = {
+				add_opinion_modifier = {
+				  	target = LIL
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
+			LIL = {
+				add_opinion_modifier = {
+				  	target = TEG
+				  	modifier = generic_strengthen_cooperation_op
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -424,7 +483,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = arms_factory
-				level = 2
+				level = 3
 			}
 		}
 	
@@ -660,6 +719,8 @@ focus_tree = {
 				remove_idea = TEG_tian_gou_zong_can_mou_bu_idea
 				add_idea = TEG_gong_he_guo_guo_fang_bu_idea
 			}
+			unlock_decision_tooltip = TEG_propaganda_jia_ru_gong_he_guo_lu_jun
+			custom_effect_tooltip = TEG_propaganda_campaign_unlock_tt
 		}
 	
 		ai_will_do = {
@@ -685,6 +746,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150
 			add_war_support = 0.1
+			unlock_decision_tooltip = TEG_propaganda_bao_wei_gong_he_guo
+			unlock_decision_tooltip = TEG_propaganda_ta_men_bu_neng_tong_guo
+			custom_effect_tooltip = TEG_propaganda_campaign_unlock_tt
 		}
 	
 		ai_will_do = {
@@ -1489,7 +1553,7 @@ focus_tree = {
 	# 军事科研合作项目
 	focus = {
 		id = TEG_jun_shi_ke_yan_he_zuo_xiang_mu
-		icon = unknown
+		icon = GFX_goal_generic_scientific_exchange
 		cost = 7
 		x = 0
 		y = 1
@@ -1501,7 +1565,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			add_research_slot = 1
 		}
 	
 		ai_will_do = {
@@ -1546,6 +1610,8 @@ focus_tree = {
 					add_idea = TEG_gong_ye_tan_huan_b_idea
 				}
 			}
+			unlock_decision_tooltip = TEG_propaganda_gong_ye_dai_lai_sheng_li
+			custom_effect_tooltip = TEG_propaganda_campaign_unlock_tt
 			hidden_effect = {
 				set_country_flag = TEG_act_established_flag
 			}

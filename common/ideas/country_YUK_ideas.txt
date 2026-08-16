@@ -376,7 +376,7 @@ ideas = {
 
 		# 革命经费
 		YUK_ge_ming_jing_fei_idea = {
-			picture = unknown
+			picture = MEX_callistas
 			modifier = {
 				training_time_army_factor = -0.3
 			}

@@ -1,0 +1,38 @@
+characters={
+	KAP_elder_council ={
+		name = KAP_elder_council
+		can_be_captured = no
+		portraits={
+			civilian={
+				large="gfx/leaders/KAP/KAP_elder_council.png"
+				small="gfx/leaders/KAP/KAP_elder_council_small.png"
+			}
+			army = {
+				large="gfx/leaders/KAP/KAP_elder_council.png"
+				small="gfx/leaders/KAP/KAP_elder_council_small.png"
+			}
+		}
+		country_leader = {
+			ideology = neworder_type
+			traits = {
+				rule_of_the_elders
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = guli_type
+			traits = {
+				rule_of_the_elders
+			}
+			id = -1
+		}
+		country_leader = {
+			ideology = oldorder_type
+			id = -1
+		}
+		country_leader = {
+			ideology = oldgenso_type
+			id = -1
+		}
+	}
+}

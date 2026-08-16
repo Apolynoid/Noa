@@ -1,0 +1,15 @@
+
+
+#### Propaganda assets and posters ####
+
+spriteTypes = {	
+	### TEG Posters ###
+    				
+	spriteType = {
+		name = "GFX_TEG_propaganda_strip"
+		texturefile = "gfx/interface/propaganda/TEG/TEG_propaganda_strip.png"
+		legacy_lazy_load = no
+		noOfFrames = 12
+	}
+
+}

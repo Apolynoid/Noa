@@ -1,0 +1,18 @@
+# 共和国宣传运动
+TEG_gong_he_guo_xuan_chuan_yun_dong = {
+	icon = SOV_propaganda
+
+	priority = 90
+
+	scripted_gui = teg_propaganda_campaigns_ui
+
+	allowed = {
+		original_tag = TEG
+	}
+
+	visible = {
+		has_completed_focus = TEG_gong_he_guo_xuan_chuan_bu
+	}
+
+	visible_when_empty = yes
+}

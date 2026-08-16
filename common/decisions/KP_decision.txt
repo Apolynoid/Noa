@@ -1,0 +1,530 @@
+# 河童再统一进程
+KP_he_tong_zai_tong_yi_jin_cheng = {
+    # 对FROM发起宣传攻势
+    KP_dui_FROM_fa_qi_xuan_chuan_gong_shi = {
+        state_target = yes
+        priority = 20
+        allowed = {
+            OR = {
+                original_tag = NTR
+                original_tag = KAP
+            }
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = KP_xuan_chuan_gong_shi
+                has_country_flag = KP_can_act_in_reunification_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                owner = {
+                    OR = {
+                        original_tag = NTR
+                        original_tag = KAP
+                    }
+                }
+                any_neighbor_state = {
+                    NOT = {
+                        is_owned_by = PREV.owner
+                    }
+                    owner = {
+                        OR = {
+                            original_tag = NTR
+                            original_tag = KAP
+                        }
+                    }
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = eng_propaganda_campaigns
+        cost = 30
+        days_re_enable = 30
+
+        available = {
+            KP_ROOT_local_support_under_80 = yes
+        }
+
+        complete_effect = {
+            if = {
+                limit = {
+                    check_variable = {
+                        FROM.KP_local_support_@ROOT > 0.4
+                    }
+                }
+                set_temp_variable = {
+                    min_fac = 1
+                }
+                subtract_from_temp_variable = {
+                    min_fac = FROM.KP_local_support_@ROOT
+                }
+            } else = {
+                set_temp_variable = {
+                    min_fac = FROM.KP_local_support_@ROOT
+                }
+                add_to_temp_variable = {
+                    min_fac = 0.2
+                }
+            }
+            set_temp_variable = {
+               m_factor = 2
+            }
+            subtract_from_temp_variable = {
+                m_factor = FROM.KP_local_support_@ROOT
+            }
+            multiply_temp_variable = {
+                min_fac = m_factor
+            }
+            multiply_temp_variable = {
+                min_fac = root.KP_legitimacy_reward
+            }
+            KP_add_local_support_by__min_fac__ = yes
+        }
+
+        ai_will_do = {
+            base = 2000
+        }
+    }
+
+    # 贿赂FROM行政官员
+    KP_hui_lu_FROM_xing_zheng_guan_yuan = {
+        state_target = yes
+        priority = 20
+        allowed = {
+            OR = {
+                original_tag = NTR
+                original_tag = KAP
+            }
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = KP_hui_lu_di_qu_xing_zheng_guan_yuan
+                has_country_flag = KP_can_act_in_reunification_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                owner = {
+                    OR = {
+                        original_tag = NTR
+                        original_tag = KAP
+                    }
+                }
+                any_neighbor_state = {
+                    NOT = {
+                        is_owned_by = PREV.owner
+                    }
+                    owner = {
+                        OR = {
+                            original_tag = NTR
+                            original_tag = KAP
+                        }
+                    }
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = hol_attract_foreign_investors
+        cost = 30
+        days_re_enable = 30
+
+        available = {
+            KP_ROOT_government_infiltration_under_100 = yes
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = KP_add_10_government_infiltration_tt
+            hidden_effect = {
+                add_to_variable = {
+                    FROM.KP_government_infiltration_@ROOT = 0.1
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 2000
+        }
+    }
+
+    # 支持FROM准军事组织
+    KP_zhi_chi_FROM_zhun_jun_shi_zu_zhi = {
+        state_target = yes
+        priority = 20
+        allowed = {
+            OR = {
+                original_tag = NTR
+                original_tag = KAP
+            }
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = KP_zhi_chi_zhun_jun_shi_zu_zhi
+                has_country_flag = KP_can_act_in_reunification_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                owner = {
+                    OR = {
+                        original_tag = NTR
+                        original_tag = KAP
+                    }
+                }
+                any_neighbor_state = {
+                    NOT = {
+                        is_owned_by = PREV.owner
+                    }
+                    owner = {
+                        OR = {
+                            original_tag = NTR
+                            original_tag = KAP
+                        }
+                    }
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_prepare_civil_war
+        cost = 30
+        days_re_enable = 30
+
+        available = {
+            KP_ROOT_paramilitary_under_80 = yes
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = KP_add_10_paramilitary_tt
+            hidden_effect = {
+                add_to_variable = {
+                    FROM.KP_paramilitary_@ROOT = 0.1
+                }
+                if = {
+                    limit = {
+                        set_temp_variable = {
+                            total_paramilitary = FROM.KP_paramilitary_NTR
+                        }
+                        add_to_temp_variable = {
+                            total_paramilitary = FROM.KP_paramilitary_KAP
+                        }
+                        check_variable = {
+                            total_paramilitary > 1.0
+                        }
+                    }
+                    KP_paramilitary_conflict = yes
+                    FROM = {
+                        save_event_target_as = conflict_state
+                    }
+                    NTR = {
+                        country_event = {
+                            id = kp.103
+                            days = 1
+                        }
+                    }
+                    KAP = {
+                        country_event = {
+                            id = kp.103
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 2000
+        }
+    }
+
+    # 要求FROM地区公投
+    KP_yao_qiu_FROM_di_qu_gong_tou = {
+        state_target = yes
+        priority = 20
+        allowed = {
+            OR = {
+                original_tag = NTR
+                original_tag = KAP
+            }
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = KP_duo_qu_bian_jie_di_qu
+                has_country_flag = KP_can_act_in_reunification_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                NOT = {
+                    is_owned_by = ROOT
+                }
+                owner = {
+                    OR = {
+                        original_tag = NTR
+                        original_tag = KAP
+                    }
+                }
+                any_neighbor_state = {
+                    NOT = {
+                        is_owned_by = PREV.owner
+                    }
+                    owner = {
+                        OR = {
+                            original_tag = NTR
+                            original_tag = KAP
+                        }
+                    }
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_civil_support
+        cost = 100
+        days_re_enable = 30
+
+        available = {
+            KP_ROOT_local_support_over_50 = yes
+        }
+
+        complete_effect = {
+            set_temp_variable = {
+                x_min = { value = 1 subtract = FROM.KP_government_infiltration_@ROOT }
+            }
+            multiply_temp_variable = {
+                x_min = 0.25
+            }
+            set_temp_variable = {
+                x_max = 0.75
+            }
+            subtract_from_temp_variable = {
+                x_max = { value = FROM.KP_government_infiltration_@ROOT multiply = 0.35 }
+            }
+            set_temp_variable = {
+                t = { value = FROM.KP_local_support_@ROOT subtract = x_min }
+            }
+            divide_temp_variable = {
+                t = { value = x_max subtract = x_min }
+            }
+            clamp_temp_variable = {
+                var = t
+                min = 0
+                max = 1
+            }
+            # P = t ^ 3 * (t * (6 * t - 15) + 10)
+            set_temp_variable = {
+                P = { value = t multiply = 6 }
+            }
+            subtract_from_temp_variable = {
+                P = 15
+            }
+            multiply_temp_variable = {
+                P = t
+            }
+            add_to_temp_variable = {
+                P = 10
+            }
+            multiply_temp_variable = {
+                P = { value = t pow = 3 }
+            }
+
+            set_temp_variable = {
+                success_weight = { value = P multiply = 100 }
+            }
+            round_temp_variable = success_weight
+            set_temp_variable = {
+                failure_weight = { value = 100 subtract = success_weight }
+            }
+            custom_effect_tooltip = KP_public_vote_tt
+
+            hidden_effect = {
+                random_list = {
+                    success_weight = {
+                        ROOT = {
+                            transfer_state = FROM
+                        }
+                        FROM = {
+                            save_event_target_as = public_vote_state
+                        }
+                        NTR = {
+                            country_event = {
+                                id = kp.104
+                                days = 1
+                            }
+                        }
+                        KAP = {
+                            country_event = {
+                                id = kp.104
+                                days = 1
+                            }
+                        }
+                    }
+                    failure_weight = {
+                        set_temp_variable = {
+                            min_fac = -0.1
+                        }
+                        KP_add_local_support_by__min_fac__ = yes
+                        FROM = {
+                            save_event_target_as = public_vote_state
+                        }
+                        NTR = {
+                            country_event = {
+                                id = kp.105
+                                days = 1
+                            }
+                        }
+                        KAP = {
+                            country_event = {
+                                id = kp.105
+                                days = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 2000
+        }
+    }
+
+    # 在FROM地区发动政变
+    KP_zai_FROM_di_qu_fa_dong_zheng_bian = {
+        state_target = yes
+        priority = 20
+        allowed = {
+            OR = {
+                original_tag = NTR
+                original_tag = KAP
+            }
+        }
+        target_root_trigger = {
+            ROOT = {
+                has_completed_focus = KP_duo_qu_bian_jie_di_qu
+                has_country_flag = KP_can_act_in_reunification_flag
+            }
+        }
+        target_trigger = {
+            FROM = {
+                NOT = {
+                    is_owned_by = ROOT
+                }
+                owner = {
+                    OR = {
+                        original_tag = NTR
+                        original_tag = KAP
+                    }
+                }
+                any_neighbor_state = {
+                    NOT = {
+                        is_owned_by = PREV.owner
+                    }
+                    owner = {
+                        OR = {
+                            original_tag = NTR
+                            original_tag = KAP
+                        }
+                    }
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        icon = generic_assassination
+        cost = 100
+        days_re_enable = 30
+
+        available = {
+            KP_ROOT_paramilitary_over_40 = yes
+        }
+
+        complete_effect = {
+            set_temp_variable = {
+                anti_coup_factor = { value = 1 subtract = FROM.KP_government_infiltration_@ROOT }
+            }
+            set_temp_variable = {
+                anti_coup_military = { value = 0.7 multiply = anti_coup_factor }
+            }
+            set_temp_variable = {
+                anti_coup_power = { value = anti_coup_military multiply = anti_coup_military }
+            }
+            set_temp_variable = {
+                local_power = { value = FROM.KP_paramilitary_@ROOT multiply = FROM.KP_paramilitary_@ROOT }
+            }
+            set_temp_variable = {
+                max_enemy_power = { value = local_power subtract = anti_coup_power }
+            }
+            divide_temp_variable = {
+                max_enemy_power = 0.84
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        max_enemy_power > 0
+                    }
+                }
+                set_temp_variable = {
+                    max_enemy_paramilitary = { value = max_enemy_power root = 2 }
+                }
+                custom_effect_tooltip = KP_max_enemy_paramilitary_for_coup_success_tt
+            } else = {
+                custom_effect_tooltip = KP_no_hope_coup_tt
+            }
+            hidden_effect = {
+                KP_paramilitary_conflict = yes
+                if = {
+                    limit = {
+                        check_variable = {
+                            FROM.KP_paramilitary_@ROOT > anti_coup_military
+                        }
+                    }
+                    # success
+                    multiply_variable = {
+                        FROM.KP_paramilitary_@ROOT = 0.9
+                    }
+                    ROOT = {
+                        transfer_state = FROM
+                    }
+                    FROM = {
+                        save_event_target_as = coup_state
+                    }
+                    NTR = {
+                        country_event = {
+                            id = kp.106
+                            days = 1
+                        }
+                    }
+                    KAP = {
+                        country_event = {
+                            id = kp.106
+                            days = 1
+                        }
+                    }
+                } else = {
+                    # failure
+                    multiply_variable = {
+                        FROM.KP_paramilitary_@ROOT = 0.4
+                    }
+                    FROM = {
+                        save_event_target_as = coup_state
+                    }
+                    NTR = {
+                        country_event = {
+                            id = kp.107
+                            days = 1
+                        }
+                    }
+                    KAP = {
+                        country_event = {
+                            id = kp.107
+                            days = 1
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 2000
+        }
+    }
+
+}

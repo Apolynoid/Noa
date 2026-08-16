@@ -1,0 +1,25 @@
+technologies = {
+    NTR_zhan_dou_gong_bing_tech = {
+        allow = {
+          	always = no   
+        }
+
+        sp_zhanchanggongbing = {
+			fort = {
+				attack = 0.1
+			}
+
+			river = {
+				attack = 0.1
+			}
+
+			urban = {
+				attack = 0.1
+			}
+		}
+
+      	ai_will_do = {
+        	base = 0
+      	}
+    }
+}

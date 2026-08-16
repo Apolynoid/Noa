@@ -11,3 +11,14 @@ TEG_parliament_not_in_recess = {
 		}
 	}
 }
+
+TEG_propaganda_poster_slot_available = {
+	custom_trigger_tooltip = {
+		tooltip = TEG_propaganda_poster_slot_available_tt
+		OR = {
+			check_variable = { TEG_poster_left_icon_frame = TEG_propaganda_empty_slot_index }
+			check_variable = { TEG_poster_center_icon_frame = TEG_propaganda_empty_slot_index }
+			check_variable = { TEG_poster_right_icon_frame = TEG_propaganda_empty_slot_index }
+		}
+	}
+}

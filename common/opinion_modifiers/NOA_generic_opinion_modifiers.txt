@@ -9,7 +9,7 @@
 # trade = yes/no
 
 opinion_modifiers = {
-	CIR_jia_qiang_he_zuo_op = {
+	generic_strengthen_cooperation_op = {
 		value = 50
 	}
 }	

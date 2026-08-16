@@ -1,14 +1,5 @@
 ideas = {
 	country = {
-		# 再统一之梦
-		KP_zai_tong_yi_zhi_meng_idea = {
-			picture = unknown
-			modifier = {
-				stability_factor = -0.05
-				war_support_factor = 0.1
-			}
-		}
-
 		# 破碎的河童工业区
 		KP_po_sui_de_he_tong_gong_ye_qu_idea = {
 			picture = POL_disjointed_industry
@@ -115,6 +106,43 @@ ideas = {
 				conscription = 0.03
 				breakthrough_factor = 0.1
 				custom_modifier_tooltip = KP_kappa_medicine_tt
+			}
+		}
+
+		# 渗透下玄武川
+		KP_shen_tou_xia_xuan_wu_chuan_idea = {
+			picture = generic_attack_sca
+
+			targeted_modifier = {
+				tag = SCA
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = GRS
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+
+		# 河童再统一
+		KP_he_tong_zai_tong_yi_ntr_idea = {
+			picture = KP_kappa_reunification_ntr
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		KP_he_tong_zai_tong_yi_kap_idea = {
+			picture = KP_kappa_reunification_kap
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
 			}
 		}
 	}

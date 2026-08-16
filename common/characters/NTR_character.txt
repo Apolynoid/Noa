@@ -35,14 +35,9 @@ characters={
 		}
 		country_leader={
 			ideology=qinwai_type
-			id=-1
-		}
-		country_leader={
-			ideology=guli_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldorder_type
+			traits = {
+				NTR_he_tong_ji_xie_shi
+			}
 			id=-1
 		}
 		country_leader={
@@ -51,10 +46,6 @@ characters={
 		}
 		country_leader={
 			ideology=neworder_type
-			id=-1
-		}
-		country_leader={
-			ideology=oldgenso_type
 			id=-1
 		}
 	}

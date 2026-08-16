@@ -1297,7 +1297,7 @@ news_event = {
 news_event = {
 	id = tkm.139
 	title = {
-		text = tkm.139.t_esclation
+		text = tkm.139.t_escalation
 		trigger = {
 			has_global_flag = TKM_south_misty_lake_war_SCA_flag
 		}
@@ -1307,7 +1307,7 @@ news_event = {
 	}
 
 	desc = {
-		text = tkm.139.d_esclation
+		text = tkm.139.d_escalation
 		trigger = {
 			has_global_flag = TKM_south_misty_lake_war_SCA_flag
 		}
@@ -1437,7 +1437,7 @@ news_event = {
 news_event = {
 	id = tkm.140
 	title = {
-		text = tkm.140.t_esclation
+		text = tkm.140.t_escalation
 		trigger = {
 			has_global_flag = TKM_south_misty_lake_war_NMS_flag
 		}
@@ -1447,7 +1447,7 @@ news_event = {
 	}
 
 	desc = {
-		text = tkm.140.d_esclation
+		text = tkm.140.d_escalation
 		trigger = {
 			has_global_flag = TKM_south_misty_lake_war_NMS_flag
 		}

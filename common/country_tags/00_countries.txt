@@ -82,8 +82,6 @@ AOO = "countries/aoo.txt"#青鬼
 AKO = "countries/ako.txt"#赤鬼
 HGH = "countries/hgh.txt"#地狱幽灵
 #####其他
-YYH = "countries/yyh.txt"#幽幽子在地獄的殖民地
-YYG = "countries/yyg.txt"#幽幽子在幻想乡——旧地狱的殖民地
 UDG = "countries/udg.txt"#地灵殿释放的幽灵聚居区
 #ob
 XXX = "countries/xxx.txt"#ob

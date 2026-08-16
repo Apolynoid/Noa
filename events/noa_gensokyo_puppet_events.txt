@@ -547,6 +547,161 @@ country_event = {
 }
 
 # NTR 88
+country_event = {
+	id = genpup.108
+	title = genpup.108.t
+	desc = genpup.108.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = NTR_puppet_event_flag
+		}
+		NOT = {
+			country_exists = NTR
+		}
+		any_owned_state = {
+			is_core_of = NTR
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 88
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = NTR_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.108.1
+		NTR = {
+			transfer_state = 88
+		}
+		puppet = NTR
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.108.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = NTR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = NTR
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = NTR
+		}
+		puppet = NTR
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.108.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	# 交给我们的河童盟友
+	option = {
+		name = genpup.108.4
+		trigger = {
+			any_allied_country = {
+				OR = {
+					original_tag = KAP
+					original_tag = YAW
+				}
+			}
+		}
+		if = {
+			limit = {
+				KAP = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = NTR
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = KAP
+			}
+			NTR = {
+				every_character = {
+					set_nationality = KAP
+					clr_character_flag = nationality_NTR
+					set_character_flag = nationality_KAP
+				}
+			}
+		} else_if = {
+			limit = { 
+				YAW = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = NTR
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = YAW
+			}
+			NTR = {
+				every_character = {
+					set_nationality = YAW
+					clr_character_flag = nationality_NTR
+					set_character_flag = nationality_YAW
+				}
+			}
+		} else = {
+			custom_effect_tooltip = bug_report_tt
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+}	
 
 # WHR 164
 country_event = {
@@ -1704,3 +1859,389 @@ country_event = {
 		}
 	}
 }
+
+# YAW 415
+country_event = {
+	id = genpup.122
+	title = genpup.122.t
+	desc = genpup.122.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = YAW_puppet_event_flag
+		}
+		NOT = {
+			country_exists = YAW
+		}
+		any_owned_state = {
+			is_core_of = YAW
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 415
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YAW_puppet_event_flag
+		}
+	}
+
+	# 在首都释放一个傀儡国
+	option = {
+		name = genpup.122.1
+		YAW = {
+			transfer_state = 415
+		}
+		puppet = YAW
+	}
+
+	# 释放一个傀儡国管理所有有关地区
+	option = {
+		name = genpup.122.2
+		trigger = {
+			any_owned_state = {
+				is_core_of = YAW
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = YAW
+				NOT = {
+					is_core_of = ROOT
+				}
+				NOT = {
+					is_claimed_by = ROOT
+				}
+			}
+			transfer_state_to = YAW
+		}
+		puppet = YAW
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.122.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	# 交给我们的河童盟友
+	option = {
+		name = genpup.122.4
+		trigger = {
+			any_allied_country = {
+				OR = {
+					original_tag = NTR
+					original_tag = KAP
+				}
+			}
+		}
+		if = {
+			limit = {
+				NTR = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = YAW
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = NTR
+			}
+			YAW = {
+				every_character = {
+					set_nationality = NTR
+					clr_character_flag = nationality_YAW
+					set_character_flag = nationality_NTR
+				}
+			}
+		} else_if = {
+			limit = { 
+				KAP = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = YAW
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = KAP
+			}
+			YAW = {
+				every_character = {
+					set_nationality = KAP
+					clr_character_flag = nationality_YAW
+					set_character_flag = nationality_KAP
+				}
+			}
+		} else = {
+			custom_effect_tooltip = bug_report_tt
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+}	
+
+# KAP 40
+country_event = {
+	id = genpup.123
+	title = genpup.123.t
+	desc = genpup.123.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = KAP_puppet_event_flag
+		}
+		NOT = {
+			country_exists = KAP
+		}
+		any_owned_state = {
+			is_core_of = KAP
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 40
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = KAP_puppet_event_flag
+		}
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.123.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	# 交给我们的河童盟友
+	option = {
+		name = genpup.123.4
+		trigger = {
+			any_allied_country = {
+				OR = {
+					original_tag = NTR
+					original_tag = YAW
+				}
+			}
+		}
+		if = {
+			limit = {
+				NTR = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = KAP
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = NTR
+			}
+		} else_if = {
+			limit = { 
+				YAW = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = KAP
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = YAW
+			}
+		} else = {
+			custom_effect_tooltip = bug_report_tt
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+}	
+
+# GRS 69
+country_event = {
+	id = genpup.124
+	title = genpup.124.t
+	desc = genpup.124.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		has_war = no
+		NOT = {
+			has_country_flag = GRS_puppet_event_flag
+		}
+		NOT = {
+			country_exists = GRS
+		}
+		any_owned_state = {
+			is_core_of = GRS
+			NOT = {
+				is_core_of = ROOT
+			}
+			NOT = {
+				is_claimed_by = ROOT
+			}
+		}
+		controls_state = 69
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = GRS_puppet_event_flag
+		}
+	}
+
+	# 维持军事占领
+	option = {
+		name = genpup.124.3
+		add_stability = -0.05
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	# 交给我们的河童盟友
+	option = {
+		name = genpup.124.4
+		trigger = {
+			any_allied_country = {
+				OR = {
+					original_tag = NTR
+					original_tag = KAP
+					original_tag = YAW
+				}
+			}
+		}
+		if = {
+			limit = {
+				NTR = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = GRS
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = NTR
+			}
+		} else_if = {
+			limit = { 
+				KAP = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = GRS
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = KAP
+			}
+		} else_if = {
+			limit = { 
+				YAW = {
+					is_ally_with = ROOT
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = GRS
+					NOT = {
+						is_core_of = ROOT
+					}
+					NOT = {
+						is_claimed_by = ROOT
+					}
+				}
+				transfer_state_to = YAW
+			}
+		} else = {
+			custom_effect_tooltip = bug_report_tt
+		}
+
+		ai_chance = {
+			base = 1000
+		}
+	}
+}	

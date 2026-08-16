@@ -1,0 +1,49 @@
+KP_has_reunification_process = {
+	NOA_is_independent = yes
+	has_country_flag = KP_reunification_process_flag
+}
+
+KP_ROOT_local_support_under_80 = {
+	custom_trigger_tooltip = {
+		tooltip = KP_ROOT_local_support_under_80_tt
+		check_variable = {
+			FROM.KP_local_support_@ROOT < 0.8
+		}
+	}
+}
+
+KP_ROOT_local_support_over_50 = {
+	custom_trigger_tooltip = {
+		tooltip = KP_ROOT_local_support_over_50_tt
+		check_variable = {
+			FROM.KP_local_support_@ROOT > 0.5
+		}
+	}
+}
+
+KP_ROOT_government_infiltration_under_100 = {
+	custom_trigger_tooltip = {
+		tooltip = KP_ROOT_government_infiltration_under_100_tt
+		check_variable = {
+			FROM.KP_government_infiltration_@ROOT < 1
+		}
+	}
+}
+
+KP_ROOT_paramilitary_under_80 = {
+	custom_trigger_tooltip = {
+		tooltip = KP_ROOT_paramilitary_under_80_tt
+		check_variable = {
+			FROM.KP_paramilitary_@ROOT < 0.8
+		}
+	}
+}
+
+KP_ROOT_paramilitary_over_40 = {
+	custom_trigger_tooltip = {
+		tooltip = KP_ROOT_paramilitary_over_40_tt
+		check_variable = {
+			FROM.KP_paramilitary_@ROOT > 0.4
+		}
+	}
+}

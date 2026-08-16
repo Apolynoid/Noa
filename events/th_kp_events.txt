@@ -1,0 +1,280 @@
+﻿add_namespace = kp
+
+# 河童再统一问题
+country_event = {
+	id = kp.101
+	title = kp.101.t
+	desc = kp.101.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			NTR = {
+				set_country_flag = KP_reunification_process_flag
+				set_country_flag = KP_can_act_in_reunification_flag
+			}
+			KAP = {
+				set_country_flag = KP_reunification_process_flag
+				set_country_flag = KP_can_act_in_reunification_flag
+			}
+			KP_calc_legitimacy_reward = yes
+		}
+	}
+
+	option = {
+		name = kp.101.1
+		add_dynamic_modifier = {
+			modifier = KP_zai_tong_yi_zheng_tong_xing_idea
+		}
+	}
+}
+
+country_event = {
+	id = kp.102
+	title = kp.102.t
+	desc = kp.102.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		KP_calc_legitimacy_reward = yes
+	}
+}
+
+# [conflict_state.GetName]发生准军事组织冲突
+country_event = {
+	id = kp.103
+	title = kp.103.t
+	desc = kp.103.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kp.103.1
+	}
+}
+
+# [public_vote_state.GetName]公投改变阵营
+country_event = {
+	id = kp.104
+	title = kp.104.t
+	desc = kp.104.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kp.104.1
+		trigger = {
+			owns_state = event_target:public_vote_state
+		}
+	}
+
+	option = {
+		name = kp.104.2
+		trigger = {
+			NOT = {
+				owns_state = event_target:public_vote_state
+			}
+		}
+	}
+}
+
+# [public_vote_state.GetName]公投维持现状
+country_event = {
+	id = kp.105
+	title = kp.105.t
+	desc = kp.105.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kp.105.1
+		trigger = {
+			owns_state = event_target:public_vote_state
+		}
+	}
+
+	option = {
+		name = kp.105.2
+		trigger = {
+			NOT = {
+				owns_state = event_target:public_vote_state
+			}
+		}
+	}
+}
+
+# [coup_state.GetName]发生政变
+country_event = {
+	id = kp.106
+	title = kp.106.t
+	desc = kp.106.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kp.106.1
+		trigger = {
+			owns_state = event_target:coup_state
+		}
+	}
+
+	option = {
+		name = kp.106.2
+		trigger = {
+			NOT = {
+				owns_state = event_target:coup_state
+			}
+		}
+	}
+}
+
+# [coup_state.GetName]政变被挫败
+country_event = {
+	id = kp.107
+	title = kp.107.t
+	desc = kp.107.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = kp.107.1
+		trigger = {
+			owns_state = event_target:coup_state
+		}
+	}
+
+	option = {
+		name = kp.107.2
+		trigger = {
+			NOT = {
+				owns_state = event_target:coup_state
+			}
+		}
+	}
+}
+
+# 河童内战继续
+country_event = {
+	id = kp.108
+	title = kp.108.t
+	desc = kp.108.d
+
+	is_triggered_only = no
+
+	trigger = {
+		OR = {
+			original_tag = NTR
+			original_tag = KAP
+		}
+		OR = {
+			has_war_with = NTR
+			has_war_with = KAP
+		}
+		has_country_flag = KP_can_act_in_reunification_flag
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = KP_can_act_in_reunification_flag
+			if = {
+				limit = {
+					original_tag = NTR
+				}
+				every_owned_state = {
+					limit = {
+						check_variable = {
+							FROM.KP_paramilitary_KAP > 0.3
+						}
+					}
+					damage_units = {
+						state = THIS
+						damage = 0.05
+						limit = {
+							tag = NTR
+						}
+						ratio = yes
+						army = yes
+						navy = no
+					}
+				}
+			} else_if = {
+				limit = {
+					original_tag = KAP
+				}
+				every_owned_state = {
+					limit = {
+						check_variable = {
+							FROM.KP_paramilitary_NTR > 0.3
+						}
+					}
+					damage_units = {
+						state = THIS
+						damage = 0.05
+						limit = {
+							tag = KAP
+						}
+						ratio = yes
+						army = yes
+						navy = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = kp.108.1
+		custom_effect_tooltip = KP_paramilitary_sabotage_tt
+	}
+}
+
+# 河童再统一运动结束
+country_event = {
+	id = kp.109
+	title = kp.109.t
+	desc = kp.109.d
+
+	is_triggered_only = no
+
+	trigger = {
+		OR = {
+			original_tag = NTR
+			original_tag = KAP
+			original_tag = YAW
+		}
+		has_country_flag = KP_reunification_process_flag
+		NOT = {
+			count_triggers = {
+				amount = 2
+				KAP = {
+					NOA_is_independent = yes
+				}
+				NTR = {
+					NOA_is_independent = yes
+				}
+				YAW = {
+					NOA_is_independent = yes
+					has_country_flag = KP_reunification_process_flag
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = KP_reunification_process_flag
+				}
+				clr_country_flag = KP_reunification_process_flag
+			}
+		}
+	}
+
+	option = {
+		name = kp.109.1
+	}
+}

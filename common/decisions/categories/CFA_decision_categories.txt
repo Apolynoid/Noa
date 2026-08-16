@@ -12,3 +12,18 @@ CFA_bao_lei_hua_cheng_shi = {
 		always = no
 	}
 }
+
+# 堡垒化城市
+TES_bao_lei_hua_cheng_shi = {
+	icon = generic_fortification
+
+	priority = 95
+
+	allowed = {
+		original_tag = TES
+	}
+
+	visible = {
+		always = no
+	}
+}

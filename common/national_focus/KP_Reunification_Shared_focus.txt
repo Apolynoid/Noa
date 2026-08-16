@@ -4,13 +4,13 @@
 # 再统一之路
 shared_focus = {
 	id = KP_zai_tong_yi_zhi_lu
-	icon = unknown
+	icon = GFX_goal_generic_political_pressure
 	cost = 7
 	x = 29
 	y = 8
 
 	completion_reward = {
-		
+		add_war_support = 0.1
 	}
 
 	ai_will_do = {
@@ -219,7 +219,7 @@ shared_focus = {
 # 构建统一认同
 shared_focus = {
 	id = KP_gou_jian_tong_yi_ren_tong
-	icon = unknown
+	icon = GFX_goal_generic_national_unity
 	cost = 7
 	x = 3
 	y = 1
@@ -230,8 +230,12 @@ shared_focus = {
         focus = KP_zai_tong_yi_zhi_lu
     }
 
+	available = {
+		has_country_flag = KP_reunification_process_flag
+	}
+
 	completion_reward = {
-		
+		add_political_power = 100
 	}
 
 	ai_will_do = {
@@ -242,7 +246,7 @@ shared_focus = {
 # 宣传攻势
 shared_focus = {
 	id = KP_xuan_chuan_gong_shi
-	icon = unknown
+	icon = GFX_goal_generic_propaganda
 	cost = 7
 	x = -2
 	y = 1
@@ -253,8 +257,12 @@ shared_focus = {
         focus = KP_gou_jian_tong_yi_ren_tong
     }
 
+	available = {
+		has_country_flag = KP_reunification_process_flag
+	}
+
 	completion_reward = {
-		
+		custom_effect_tooltip = KP_propaganda_tt
 	}
 
 	ai_will_do = {
@@ -265,7 +273,7 @@ shared_focus = {
 # 贿赂地区行政官员
 shared_focus = {
 	id = KP_hui_lu_di_qu_xing_zheng_guan_yuan
-	icon = unknown
+	icon = GFX_goal_generic_dangerous_deal
 	cost = 7
 	x = 0
 	y = 1
@@ -276,8 +284,12 @@ shared_focus = {
         focus = KP_gou_jian_tong_yi_ren_tong
     }
 
+	available = {
+		has_country_flag = KP_reunification_process_flag
+	}
+
 	completion_reward = {
-		
+		custom_effect_tooltip = KP_bribery_tt
 	}
 
 	ai_will_do = {
@@ -288,7 +300,7 @@ shared_focus = {
 # 支持准军事组织
 shared_focus = {
 	id = KP_zhi_chi_zhun_jun_shi_zu_zhi
-	icon = unknown
+	icon = GFX_focus_RAJ_a_private_military
 	cost = 7
 	x = 2
 	y = 1
@@ -299,8 +311,12 @@ shared_focus = {
         focus = KP_gou_jian_tong_yi_ren_tong
     }
 
+	available = {
+		has_country_flag = KP_reunification_process_flag
+	}
+
 	completion_reward = {
-		
+		custom_effect_tooltip = KP_paramilitary_tt
 	}
 
 	ai_will_do = {
@@ -311,7 +327,7 @@ shared_focus = {
 # 夺取边界地区
 shared_focus = {
 	id = KP_duo_qu_bian_jie_di_qu
-	icon = unknown
+	icon = GFX_focus_generic_provoke_border_clashes
 	cost = 7
 	x = 0
 	y = 2
@@ -320,12 +336,16 @@ shared_focus = {
 
     prerequisite = {
         focus = KP_xuan_chuan_gong_shi
-        focus = KP_hui_lu_di_qu_xing_zheng_guan_yuan
         focus = KP_zhi_chi_zhun_jun_shi_zu_zhi
     }
 
+	available = {
+		has_country_flag = KP_reunification_process_flag
+		has_war = no
+	}
+
 	completion_reward = {
-		
+		custom_effect_tooltip = KP_border_scramble_tt
 	}
 
 	ai_will_do = {
@@ -336,7 +356,7 @@ shared_focus = {
 # 渗透下玄武川
 shared_focus = {
 	id = KP_shen_tou_xia_xuan_wu_chuan
-	icon = unknown
+	icon = GFX_focus_prc_infiltration
 	cost = 7
 	x = 0
 	y = 1
@@ -347,8 +367,15 @@ shared_focus = {
         focus = KP_duo_qu_bian_jie_di_qu
     }
 
+	available = {
+		has_war_with = GRS
+	}
+
 	completion_reward = {
-		
+		add_timed_idea = {
+			idea = KP_shen_tou_xia_xuan_wu_chuan_idea
+			days = 365
+		}
 	}
 
 	ai_will_do = {
@@ -359,7 +386,7 @@ shared_focus = {
 # 宣称唯一合法政府
 shared_focus = {
 	id = KP_xuan_cheng_wei_yi_he_fa_zheng_fu
-	icon = unknown
+	icon = GFX_focus_generic_improve_the_administration
 	cost = 7
 	x = 0
 	y = 3
@@ -370,8 +397,38 @@ shared_focus = {
         focus = KP_zai_tong_yi_zhi_lu
     }
 
+	available = {
+		if = {
+			limit = {
+				original_tag = NTR
+			}
+			KAP = {
+				NOA_is_independent = no
+			}
+		} else_if = {
+			limit = {
+				original_tag = KAP
+			}
+			NTR = {
+				NOA_is_independent = no
+			}
+		} else = {
+			custom_trigger_tooltip = {
+				tooltip = bug_report_tt
+				always = no
+			}
+		}
+	}
+
 	completion_reward = {
-		
+		custom_effect_tooltip = KP_allow_integration_of_kappas_tt
+		custom_effect_tooltip = occupation_law_introduce_tt
+		hidden_effect = {
+			set_country_flag = can_integrate_flag_NTR
+			set_country_flag = can_integrate_flag_KAP
+			set_country_flag = can_integrate_flag_YAW
+			set_country_flag = can_integrate_flag_GRS
+		}
 	}
 
 	ai_will_do = {
@@ -382,7 +439,15 @@ shared_focus = {
 # 河童再统一
 shared_focus = {
 	id = KP_he_tong_zai_tong_yi
-	icon = unknown
+	icon = {
+		KP_focus_reunification_of_kappa_NTR = {
+			original_tag = NTR
+		}
+		KP_focus_reunification_of_kappa_KAP = {
+			original_tag = KAP
+		}
+		GFX_goal_unknown = yes
+	}
 	cost = 12
 	x = 0
 	y = 2
@@ -393,16 +458,54 @@ shared_focus = {
         focus = KP_xuan_cheng_wei_yi_he_fa_zheng_fu
     }
 
-    prerequisite = {
-        focus = KP_shou_du_gong_ye_qu
-    }
-
-    prerequisite = {
-        focus = KP_shen_tou_xia_xuan_wu_chuan
-    }
+	available = {
+		if = {
+			limit = {
+				original_tag = NTR
+			}
+			custom_trigger_tooltip = {
+				tooltip = KP_cores_every_KAP_core_tt
+				KAP = {
+					all_core_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			
+		} else_if = {
+			limit = {
+				original_tag = KAP
+			}
+			custom_trigger_tooltip = {
+				tooltip = KP_cores_every_NTR_core_tt
+				NTR = {
+					all_core_state = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		} else = {
+			custom_trigger_tooltip = {
+				tooltip = bug_report_tt
+				always = no
+			}
+		}
+	}
 
 	completion_reward = {
-		
+		if = {
+			limit = {
+				original_tag = NTR
+			}
+			add_ideas = KP_he_tong_zai_tong_yi_ntr_idea
+		} else_if = {
+			limit = {
+				original_tag = KAP
+			}
+			add_ideas = KP_he_tong_zai_tong_yi_kap_idea
+		} else = {
+			custom_effect_tooltip = bug_report_tt
+		}
 	}
 
 	ai_will_do = {

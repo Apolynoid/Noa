@@ -1,0 +1,20 @@
+# 河童再统一进程
+KP_he_tong_zai_tong_yi_jin_cheng = {
+	icon = generic_nationalism
+
+	priority = 90
+
+	allowed = {
+		OR = {
+			original_tag = NTR
+			original_tag = KAP
+			original_tag = YAW
+		}
+	}
+
+	visible = {
+		KP_has_reunification_process = yes
+	}
+
+	visible_when_empty = yes
+}

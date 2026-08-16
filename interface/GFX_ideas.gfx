@@ -47,6 +47,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_worker_loss"
+		texturefile = "gfx/interface/ideas/generic_worker_loss.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_bills"
 		texturefile = "gfx/interface/ideas/generic_bills.png"
 	}
@@ -167,6 +172,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_tide"
+		texturefile = "gfx/interface/ideas/generic_tide.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_volunteer_army"
 		texturefile = "gfx/interface/ideas/generic_volunteer_army.png"
 	}
@@ -204,6 +214,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_generic_nms_weakness"
 		texturefile = "gfx/interface/ideas/generic_nms_weakness.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_attack_sca"
+		texturefile = "gfx/interface/ideas/generic_attack_sca.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_attack_ntr"
+		texturefile = "gfx/interface/ideas/generic_attack_ntr.png"
 	}
 
 	#### SCA Remilia Scarlet 斯卡蕾特帝国
@@ -415,6 +435,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/hum_human_free_city.png"
 	}
 
+	#### KP 河童通用
+	spriteType = {
+		name = "GFX_idea_KP_kappa_reunification_ntr"
+		texturefile = "gfx/interface/ideas/kp_kappa_reunification_ntr.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_KP_kappa_reunification_kap"
+		texturefile = "gfx/interface/ideas/kp_kappa_reunification_kap.png"
+	}
+
 	#### NTR 河童共和国
 	spriteType = {
 		name = "GFX_idea_NTR_unstable_republic"
@@ -439,6 +470,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_NTR_enthusiasm_of_unification"
 		texturefile = "gfx/interface/ideas/ntr_enthusiasm_of_unification.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_NTR_bastion_of_democracy"
+		texturefile = "gfx/interface/ideas/teg_ntr_bastion_of_democracy.png"
 	}
 
 	#### SCA Puppet 斯卡蕾特傀儡

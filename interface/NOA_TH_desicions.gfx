@@ -5,6 +5,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_decision_category_generic_nationalism"
+		texturefile = "gfx/interface/decisions/decision_category_generic_nationalism.png"
+	}
+
+	spriteType = {
 		name = "GFX_decision_category_generic_gekokujyoism"
 		texturefile = "gfx/interface/decisions/decision_category_generic_gekokujyoism.png"
 	}

@@ -55,12 +55,36 @@ leader_traits = {
 		}
 	}
 
+	# 元老政治
+	rule_of_the_elders = {
+		random = no
+		
+		stability_factor = 0.1
+		
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	# 紧急权力
 	emergency_power = {
 		random = no
 
 		political_power_gain = 0.2
 
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# NTR
+	# 河童机械师
+	NTR_he_tong_ji_xie_shi = {
+		random = no
+		#generic
+
+		production_factory_max_efficiency_factor = 0.05
+		
 		ai_will_do = {
 			factor = -5
 		}

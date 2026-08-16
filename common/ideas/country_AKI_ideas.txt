@@ -227,7 +227,7 @@ ideas = {
 
 		# 针对恶魔的弱点
 		AKI_zhen_dui_e_mo_de_ruo_dian_idea = {
-			picture = unknown
+			picture = generic_attack_sca
 
 			targeted_modifier = {
 				tag = SCA

@@ -1,0 +1,101 @@
+TEG_pick_propaganda_campaign_slot_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { TEG_poster_left_icon_frame = TEG_propaganda_empty_slot_index }
+			}
+			set_variable = { TEG_poster_left_icon_frame = TEG_new_propaganda_campaign }
+			hidden_effect = {
+				set_country_flag = { flag = TEG_propaganda_left_days_remaining_flag days = 180 }
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { TEG_poster_center_icon_frame = TEG_propaganda_empty_slot_index }
+			}
+			set_variable = { TEG_poster_center_icon_frame = TEG_new_propaganda_campaign }
+			hidden_effect = {
+				set_country_flag = { flag = TEG_propaganda_center_days_remaining_flag days = 180 }
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { TEG_poster_right_icon_frame = TEG_propaganda_empty_slot_index }
+			}
+			set_variable = { TEG_poster_right_icon_frame = TEG_new_propaganda_campaign }
+			hidden_effect = {
+				set_country_flag = { flag = TEG_propaganda_right_days_remaining_flag days = 180 }
+			}
+		}
+		set_variable = { TEG_new_propaganda_campaign = 0 } # Reset var
+	}
+}
+
+TEG_reset_propaganda_campaign_slot_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { TEG_poster_left_icon_frame = TEG_propaganda_campaign_to_remove }
+			}
+			set_variable = { TEG_poster_left_icon_frame = TEG_propaganda_empty_slot_index }
+			clr_country_flag = TEG_propaganda_left_days_remaining_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = { TEG_poster_center_icon_frame = TEG_propaganda_campaign_to_remove }
+			}
+			set_variable = { TEG_poster_center_icon_frame = TEG_propaganda_empty_slot_index }
+			clr_country_flag = TEG_propaganda_center_days_remaining_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = { TEG_poster_right_icon_frame = TEG_propaganda_campaign_to_remove }
+			}
+			set_variable = { TEG_poster_right_icon_frame = TEG_propaganda_empty_slot_index }
+			clr_country_flag = TEG_propaganda_right_days_remaining_flag
+		}
+		set_variable = { TEG_propaganda_campaign_to_remove = 0 } # Reset var
+	}
+}
+
+TEG_init_ptopaganda_system = {
+    set_variable = {
+        TEG_propaganda_empty_slot_index = 2
+    }
+    set_variable = {
+        TEG_poster_left_icon_frame = TEG_propaganda_empty_slot_index
+    }
+    set_variable = {
+        TEG_poster_center_icon_frame = TEG_propaganda_empty_slot_index
+    }
+    set_variable = {
+        TEG_poster_right_icon_frame = TEG_propaganda_empty_slot_index
+    }
+    set_variable = {
+        TEG_propaganda_join_republic_army_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_defend_the_republic_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_the_most_dangerous_enemy_of_the_republic_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_they_shall_not_pass_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_the_enemy_is_listening_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_supplies_keep_soldiers_alive_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_production_powers_victory_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_books_are_friends_of_the_republic_cost = 15
+    }
+    set_variable = {
+        TEG_propaganda_food_wins_the_future_cost = 15
+    }
+}

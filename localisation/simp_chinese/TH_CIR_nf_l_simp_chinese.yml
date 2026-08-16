@@ -129,7 +129,6 @@ CIR_create_fairy_rebellion_tt:0 "产生一队妖精叛军"
 CIR_attack_SCA_no_stop_tt:0 "该国策不会暂停"
 
 #op
-CIR_jia_qiang_he_zuo_op:0 "加强合作"
 
 #idea/tech
 CIR_yao_jing_shu_liang_you_shi_tech:0 "妖精联合体军事"

@@ -7,9 +7,7 @@ technologies = {
 		}
 		dependencies = {
 		   gun1 = 1
-		   
 		}
-		
 		
 		path = {
 			leads_to_tech = zhihuixiaodui146

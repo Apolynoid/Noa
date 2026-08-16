@@ -1,0 +1,453 @@
+# 共和国宣传运动
+TEG_gong_he_guo_xuan_chuan_yun_dong = {
+	# 加入共和国陆军！
+	TEG_propaganda_jia_ru_gong_he_guo_lu_jun = {
+		priority = 10
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = TEG_gong_he_guo_guo_fang_bu
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_join_republic_army_cost
+
+		modifier = {
+			weekly_manpower = 3
+			training_time_army_factor = -0.2
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 3 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_join_republic_army_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 3 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 保卫共和国！
+	TEG_propaganda_bao_wei_gong_he_guo = {
+		priority = 9
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = TEG_bao_wei_gong_he_guo
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_defend_the_republic_cost
+
+		modifier = {
+			war_support_weekly = 0.004
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 4 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_defend_the_republic_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 4 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 共和国最危险的敌人！
+	TEG_propaganda_gong_he_guo_zui_wei_xian_de_di_ren = {
+		priority = 8
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war_with = MRY
+		}
+
+		visible = {
+			MRY = {
+				NOA_is_independent = yes
+			}
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_the_most_dangerous_enemy_of_the_republic_cost
+
+		targeted_modifier = {
+			tag = MRY
+			attack_bonus_against = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 5 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_the_most_dangerous_enemy_of_the_republic_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 5 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 她们不能通过！
+	TEG_propaganda_ta_men_bu_neng_tong_guo = {
+		priority = 7
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = TEG_bao_wei_gong_he_guo
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_they_shall_not_pass_cost
+
+		modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 6 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_they_shall_not_pass_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 6 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 别让敌人偷听！
+	TEG_propaganda_bie_rang_di_ren_tou_ting = {
+		priority = 6
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war = yes
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_the_enemy_is_listening_cost
+
+		modifier = {
+			defense_impact_on_blueprint_stealing = 0.2
+			intelligence_agency_defense = 0.2
+			enemy_operative_detection_chance_factor = 0.1
+			enemy_operative_intel_extraction_rate = -0.2
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 7 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_the_enemy_is_listening_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 7 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 运输是士兵的生命线！
+	TEG_propaganda_yun_shu_shi_shi_bing_de_sheng_ming_xian = {
+		priority = 5
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+
+			has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = TEG_hou_qin_xi_tong_gai_liang
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_supplies_keep_soldiers_alive_cost
+
+		modifier = {
+			supply_consumption_factor = -0.1
+			production_speed_supply_node_factor = 0.2
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 8 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_supplies_keep_soldiers_alive_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 8 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 工业带来胜利！
+	TEG_propaganda_gong_ye_dai_lai_sheng_li = {
+		priority = 4
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+		}
+
+		visible = {
+			has_completed_focus = TEG_gong_ye_fu_xing_fa_an
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_production_powers_victory_cost
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 9 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_production_powers_victory_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 9 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 书本是共和的朋友！
+	TEG_propaganda_shu_ben_shi_gong_he_de_peng_you = {
+		priority = 3
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_books_are_friends_of_the_republic_cost
+
+		modifier = {
+			research_speed_factor = 0.1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 10 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_books_are_friends_of_the_republic_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 10 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	# 用粮食赢得未来！
+	TEG_propaganda_yong_liang_shi_ying_de_wei_lai = {
+		priority = 2
+
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = TEG
+		}
+
+		available = {
+			TEG_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 180
+		days_re_enable = 90
+		cost = TEG_propaganda_food_wins_the_future_cost
+
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_variable = { TEG_new_propaganda_campaign = 11 }
+				TEG_pick_propaganda_campaign_slot_effect = yes
+				multiply_variable = {
+					TEG_propaganda_food_wins_the_future_cost = 2
+				}
+			}
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				set_variable = { TEG_propaganda_campaign_to_remove = 11 }
+				TEG_reset_propaganda_campaign_slot_effect = yes
+			}
+			custom_effect_tooltip = TEG_propaganda_campaign_cooldown_tt
+		}
+	}
+}

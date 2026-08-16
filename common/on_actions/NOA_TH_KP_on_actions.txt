@@ -1,0 +1,124 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			NTR = {
+				KP_calc_legitimacy_score = yes
+				country_event = {
+					id = kp.101
+					days = 1
+				}
+				every_owned_state = {
+					set_variable = {
+						KP_local_support_NTR = 0.9
+					}
+					set_variable = {
+						KP_local_support_KAP = 0.1
+					}
+					set_variable = {
+						KP_paramilitary_NTR = 0.0
+					}
+					set_variable = {
+						KP_paramilitary_KAP = 0.0
+					}
+					set_variable = {
+						KP_government_infiltration_NTR = 0.0
+					}
+					set_variable = {
+						KP_government_infiltration_KAP = 0.0
+					}
+				}
+			}
+			KAP = {
+				KP_calc_legitimacy_score = yes
+				country_event = {
+					id = kp.101
+					days = 1
+				}
+				every_owned_state = {
+					set_variable = {
+						KP_local_support_NTR = 0.2
+					}
+					set_variable = {
+						KP_local_support_KAP = 0.8
+					}
+					set_variable = {
+						KP_paramilitary_NTR = 0.0
+					}
+					set_variable = {
+						KP_paramilitary_KAP = 0.0
+					}
+					set_variable = {
+						KP_government_infiltration_NTR = 0.0
+					}
+					set_variable = {
+						KP_government_infiltration_KAP = 0.0
+					}
+				}
+			}
+			YAW = {
+				KP_calc_legitimacy_score = yes
+			}
+		}
+	}
+	on_weekly_NTR = {
+		effect = {
+			KP_calc_legitimacy_score = yes
+			country_event = {
+				id = kp.102
+				days = 1
+			}
+		}
+	}
+	on_weekly_KAP = {
+		effect = {
+			KP_calc_legitimacy_score = yes
+			country_event = {
+				id = kp.102
+				days = 1
+			}
+		}
+	}
+	on_weekly_YAW = {
+		effect = {
+			KP_calc_legitimacy_score = yes
+			country_event = {
+				id = kp.102
+				days = 1
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							original_tag = NTR
+							original_tag = KAP
+						}
+					}
+					FROM.FROM = {
+						OR = {
+							is_core_of = NTR
+							is_core_of = KAP
+						}
+					}
+				}
+				set_temp_variable = {
+					target_compliance = { value = FROM.FROM.KP_local_support_@ROOT multiply = 50 }
+				}
+				if =  {
+					limit = {
+						check_variable = {
+							FROM.FROM.compliance < target_compliance
+						}
+					}
+					FROM.FROM = {
+						set_compliance = target_compliance
+					}
+				}
+			}
+		}
+	}
+}

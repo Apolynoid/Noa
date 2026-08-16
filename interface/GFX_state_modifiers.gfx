@@ -5,6 +5,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_modifiers_kp_faction_control"
+		textureFile = "gfx/interface/state_modifiers/modifiers_kp_faction_control.png"
+	}
+
+	spriteType = {
 		name = "GFX_modifiers_sw_undeveloped_land"
 		textureFile = "gfx/interface/state_modifiers/modifiers_sw_undeveloped_land.png"
 	}

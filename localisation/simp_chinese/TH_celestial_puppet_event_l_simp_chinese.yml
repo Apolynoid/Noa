@@ -1,0 +1,7 @@
+﻿l_simp_chinese:
+# TES
+celpup.101.t:0 "[TES.GetName]的处置"
+celpup.101.d:0 "我们的军队已经击败了[TES.GetName]并成功的占领了她们的首都，现在我们应当如何处理她们？"
+celpup.101.1:0 "在首都释放一个傀儡国"
+celpup.101.2:0 "释放一个傀儡国管理所有有关地区"
+celpup.101.3:0 "维持军事占领"
