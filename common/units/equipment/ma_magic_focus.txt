@@ -40,6 +40,7 @@ equipments = {
 		#Defensive Abilities
 		breakthrough = 10
 		hardness = 0.01
+		defense = 1
 
 		#Offensive Abilities
 		soft_attack = 11

@@ -1,0 +1,161 @@
+# All infantry equipment
+
+equipments = {
+
+	mortar_a = {
+		year = 143
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_sc_attack
+			up_ap_attack
+			up_speed
+		}
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 1
+		breakthrough = 10
+		hardness = 0.01
+
+		#Offensive Abilities
+		soft_attack = 30
+		hard_attack = 5
+		ap_attack = 6
+
+		#Misc Abilities
+		reliability = 0.8
+		maximum_speed = 6
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 3.5
+
+		
+		
+	}
+
+	mortar143 = {
+		year = 143
+	
+		archetype = mortar_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			powder = 2
+			metal = 1
+		}
+	}
+
+	mortar149 = {
+		year = 149
+	
+		archetype = mortar_a
+		parent = mortar143
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			powder = 2
+			metal = 1
+		}
+
+		defense = 2
+		breakthrough = 14
+		soft_attack = 37
+		hard_attack = 5.5
+		ap_attack = 6.5
+		build_cost_ic = 4.1
+	}
+
+	mortar155 = {
+		year = 155
+	
+		archetype = mortar_a
+		parent = mortar149
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			powder = 3
+			metal = 1
+		}
+		
+		defense = 3
+		breakthrough = 18
+		soft_attack = 44
+		hard_attack = 6
+		ap_attack = 7
+		build_cost_ic = 4.7
+	}
+
+	mortar161 = {
+		year = 161
+	
+		archetype = mortar_a
+		parent = mortar155
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			crystal = 1
+			powder = 3
+			metal = 1
+		}
+		
+		defense = 4
+		breakthrough = 22
+		soft_attack = 51
+		hard_attack = 6.5
+		ap_attack = 7.5
+		build_cost_ic = 5.3
+	}
+
+	mortar167 = {
+		year = 167
+	
+		archetype = mortar_a
+		parent = mortar161
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			crystal = 1
+			powder = 3
+			metal = 1
+		}
+		
+		defense = 5
+		breakthrough = 26
+		soft_attack = 58
+		hard_attack = 7
+		ap_attack = 8
+		build_cost_ic = 5.9
+	}
+}

@@ -198,6 +198,8 @@ TKM_dao_ju_zhan_zheng_zhai_quan_idea:0 "道具战争债券"
 TKM_dao_ju_zhan_zheng_zhai_quan_tt_idea:0 "$TKM_dao_ju_zhan_zheng_zhai_quan_idea$"
 TKM_dao_ju_zhan_zheng_zhai_quan_a_tt_idea:0 "$TKM_dao_ju_zhan_zheng_zhai_quan_idea$"
 
+TKM_tsukumo_arms_co_ltd_idea:0 "九十九兵器株式会社"
+
 # decision
 TKM_jie_ru_mo_fa_zhi_sen_nei_zhan:0 "介入魔法森林内战"
 TKM_jie_ru_mo_fa_zhi_sen_nei_zhan_desc:0 "魔法森林陷入内战阴云中，但这对我们也许是机会——魔法森林产出大量我们需要的高能灵气，如果我们能选择正确的合作势力并帮助她们赢得内战，我们也许在内战后能得到数年的高能灵气开采权作为报酬，这将毫无疑问是双赢的交易。\n\n[TKM_get_magic_forest_cooperator]"

@@ -179,6 +179,28 @@ ideas = {
 	    }
 
 		# 政治线
+		# 援助天界妖精投资
+		TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea = {
+			picture = unknown
+			cancel = {
+				OR = {
+					CFA = {
+						NOA_is_independent = no
+					}
+					TEG = {
+						NOA_is_independent = no
+					}
+					has_war_with = TEG
+				}
+			}
+			on_remove = {
+				country_event = teg.104
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				custom_modifier_tooltip = TEG_end_investment_when_CFA_loses_tt
+			}
+		}
 
 		# 军事线
 		# 战争债券
@@ -273,6 +295,57 @@ ideas = {
 				stability_factor = 0.2
 				war_support_factor = 0.1
 				compliance_growth = 0.1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		TEG_kouyou_arsenal_idea = {
+			picture = TEG_kouyou_arsenal
+			allowed = {
+				original_tag = TEG
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = TEG_tou_zi_hong_ye_bing_gong_chang
+				}
+			}
+
+			research_bonus = {
+				primary_weapons = 0.05
+				melee = 0.05
+				support_tech = 0.05
+				artillery_tech = 0.05
+			}
+
+			traits = {
+				quality_production_material_science_trait
+			}
+		}
+
+		TEG_kouyou_arsenal_invested_idea = {
+			picture = TEG_kouyou_arsenal
+			allowed = {
+				original_tag = TEG
+			}
+
+			visible = {
+				has_completed_focus = TEG_tou_zi_hong_ye_bing_gong_chang
+			}
+
+			research_bonus = {
+				primary_weapons = 0.05
+				melee = 0.05
+				support_tech = 0.05
+				artillery_tech = 0.05
+			}
+
+			traits = {
+				quality_production_material_science_improved_trait
 			}
 		}
 	}

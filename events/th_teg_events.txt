@@ -9,7 +9,7 @@ country_event = {
 	option = {
 		name = teg.101.1
 		hidden_effect = {
-			complete_national_focus = TEG_aya_zong_tong
+			complete_national_focus = TEG_she_ming_wan_wen_zong_tong
 		}
 	}
 	# 姬海棠果总统
@@ -20,339 +20,66 @@ country_event = {
 			ideology = qinwai_type
 		}
 		hidden_effect = {
-			complete_national_focus = TEG_hatate_zong_tong
+			complete_national_focus = TEG_ji_hai_tang_guo_zong_tong
 		}
 	}
 }
 
-# 犬走椛支持者起义
+# [TEG.GetName]的工业合作
 country_event = {
 	id = teg.102
 	title = teg.102.t
 	desc = teg.102.d
-	picture = GFX_TEG_country_event_102
 	is_triggered_only = yes
+	
 	option = {
 		name = teg.102.1
-		add_timed_idea = {
-			idea = TEG_qi_yi_hou_de_hun_luan_idea
-			days = 70
-		}
-		if = {
-			limit = {
-				has_idea = TEG_tian_gou_zhi_yuan_jun_idea
-			}
-			remove_ideas = TEG_tian_gou_zhi_yuan_jun_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_kuo_da_yi_hui_quan_li_idea
-			}
-			remove_ideas = TEG_kuo_da_yi_hui_quan_li_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_min_zhu_bing_gong_chang_idea
-			}
-			remove_ideas = TEG_min_zhu_bing_gong_chang_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_jing_ying_min_zhu_idea
-			}
-			remove_ideas = TEG_jing_ying_min_zhu_idea
-		}
-		hidden_effect = {
-			complete_national_focus = TEG_momiji_zhi_zheng
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
 		}
 	}
 }
 
-# 守矢问题的解决方案
+# [TEG.GetName]与我国商议援助天界妖精
 country_event = {
 	id = teg.103
 	title = teg.103.t
 	desc = teg.103.d
 	is_triggered_only = yes
-
-	# 武力解决
+	
 	option = {
 		name = teg.103.1
-		create_wargoal = {
-			target = MRY
-			type = topple_government
-		}
-		create_wargoal = {
-			target = KAP
-			type = topple_government
-		}
-	}
-
-	# 和平解决的可能性？
-	option = {
-		name = teg.103.2
-		MRY = {
-			country_event = {
-				id = teg.104
-			}
-		}
-		trigger = {
-			MRY = {
-				has_government = qinwai
-			}
-		}
-		ai_chance = {
-			base = 1000
-		}
+		add_ideas = TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea
 	}
 }
 
-# MRY 天狗希望与我们合作
+# 天狗投资终止
 country_event = {
 	id = teg.104
 	title = teg.104.t
 	desc = teg.104.d
 	is_triggered_only = yes
-
-	# 我们会加入民主同盟
+	
 	option = {
 		name = teg.104.1
-		if = {
-			limit = {
-				MRY = {
-					is_faction_leader = yes
-				}
-			}
-			every_country = {
-				limit = {
-					is_in_faction_with = MRY
-					NOT = {
-						original_tag = MRY
-					}
-				}
-				TEG = {
-					add_to_faction = PREV
-				}
-				
-			}
-		}
-		TEG = {
-			add_to_faction = MRY
-			country_event = {
-				id = teg.105
-			}
-		}
-	}
-
-	# 我们不会接受这一提案
-	option = {
-		name = teg.104.2
-		TEG = {
-			country_event = {
-				id = teg.106
-			}
+		effect_tooltip = {
+			remove_ideas = TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea
 		}
 	}
 }
 
-# 守矢神社同意了我们的提案
+# 总动员状态结束
 country_event = {
 	id = teg.105
 	title = teg.105.t
 	desc = teg.105.d
 	is_triggered_only = yes
-
+	
 	option = {
 		name = teg.105.1
 	}
 }
 
-# 守矢神社拒绝了我们的提案
-country_event = {
-	id = teg.106
-	title = teg.106.t
-	desc = teg.106.d
-	is_triggered_only = yes
+# 天狗向红魔馆进军
 
-	option = {
-		name = teg.106.1
-		create_wargoal = {
-			target = MRY
-			type = topple_government
-		}
-		create_wargoal = {
-			target = KAP
-			type = topple_government
-		}
-	}
-}
-
-# 天狗共和国希望与我们合作
-country_event = {
-	id = teg.107
-	title = teg.107.t
-	desc = teg.107.d
-	is_triggered_only = yes
-
-	# 这对我们没有坏处
-	option = {
-		name = teg.107.1
-		diplomatic_relation = {
-			country = TEG
-			relation = non_aggression_pact
-			active = yes
-		}
-		add_opinion_modifier = {
-			target = TEG
-			modifier = TEG_tong_yi_he_zuo_op
-		}
-		hidden_effect = {
-			set_country_flag = TEG_accepted_cooperation_flag
-			TEG = {
-				set_variable = {
-					target = ROOT
-				}
-				country_event = teg.108
-			}
-		}
-		ai_chance = {
-			base = 2
-		}
-	}
-
-	# 我们不需要与她们合作
-	option = {
-		name = teg.107.2
-		hidden_effect = {
-			TEG = {
-				set_variable = {
-					target = ROOT
-				}
-				country_event = teg.109
-			}
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				has_government = qinwai
-				factor = 0
-			}
-		}
-	}
-}
-
-# 同意合作
-country_event = {
-	id = teg.108
-	title = teg.108.t
-	desc = teg.108.d
-	is_triggered_only = yes
-
-	option = {
-		name = teg.108.1
-	}
-}
-
-# 拒绝合作
-country_event = {
-	id = teg.109
-	title = teg.109.t
-	desc = teg.109.d
-	is_triggered_only = yes
-
-	option = {
-		name = teg.109.1
-	}
-}
-
-# 来自天狗的援助
-country_event = {
-	id = teg.110
-	title = teg.110.t
-	desc = teg.110.d
-	is_triggered_only = yes
-
-	option = {
-		name = teg.110.1
-	}
-}
-
-# 与天狗的经济合作
-country_event = {
-	id = teg.111
-	title = teg.111.t
-	desc = teg.111.d
-	is_triggered_only = yes
-
-	option = {
-		name = teg.111.1
-	}
-}
-
-# 与天狗同盟关系的强化
-country_event = {
-	id = teg.112
-	title = teg.112.t
-	desc = teg.112.d
-	is_triggered_only = yes
-
-	option = {
-		name = teg.112.1
-	}
-}
-
-# 紧急事态
-country_event = {
-	id = teg.114
-	title = teg.114.t
-	desc = teg.114.d
-	picture = GFX_TEG_country_event_102
-	is_triggered_only = no
-	fire_only_once = yes
-
-	trigger = {
-		original_tag = TEG
-		NOT = {
-			has_government = fandong
-		}
-		surrender_progress > 0.4
-	}
-
-	option = {
-		name = teg.114.1
-		add_popularity = {
-			ideology = fandong
-			popularity = 0.4
-		}
-		set_politics = {
-			ruling_party = fandong
-		}
-		if = {
-			limit = {
-				has_idea = TEG_tian_gou_zhi_yuan_jun_idea
-			}
-			remove_ideas = TEG_tian_gou_zhi_yuan_jun_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_kuo_da_yi_hui_quan_li_idea
-			}
-			remove_ideas = TEG_kuo_da_yi_hui_quan_li_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_min_zhu_bing_gong_chang_idea
-			}
-			remove_ideas = TEG_min_zhu_bing_gong_chang_idea
-		}
-		if = {
-			limit = {
-				has_idea = TEG_jing_ying_min_zhu_idea
-			}
-			remove_ideas = TEG_jing_ying_min_zhu_idea
-		}
-		hidden_effect = {
-			complete_national_focus = TEG_momiji_zhi_zheng
-		}
-	}
-}

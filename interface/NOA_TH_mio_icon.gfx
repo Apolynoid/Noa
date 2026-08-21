@@ -3,4 +3,14 @@ spriteTypes = {
 		name = "GFX_idea_CIR_union_arsenal_no_9"
 		textureFile = "gfx/interface/ideas/mio/cir_union_arsenal_no_9.png"
 	}
+
+	spriteType = {
+		name = "GFX_idea_TEG_kouyou_arsenal"
+		textureFile = "gfx/interface/ideas/mio/teg_kouyou_arsenal.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_TKM_tsukumo_arms_co_ltd"
+		textureFile = "gfx/interface/ideas/mio/tkm_tsukumo_arms_co_ltd.png"
+	}
 }

@@ -707,3 +707,8 @@ units = {
 		start_equipment_factor = 1
 	}
 }
+
+focus = {
+	current = "TEG_da_xuan"
+	progress = 0
+}

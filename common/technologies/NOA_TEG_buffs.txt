@@ -13,4 +13,17 @@ technologies = {
           base = 0
         }
     }
+
+    TEG_you_qi_bing_tuan = {
+      allow = {
+        always = no   
+      }
+      enable_subunits = {
+        sp_ranger
+        sp_armored_ranger
+      }
+      ai_will_do = {
+        base = 0
+      }
+    }
 }

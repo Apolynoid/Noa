@@ -1003,6 +1003,487 @@ generic_magic_materiel_mio = {
 	}
 }
 
+generic_science_materiel_mio = {
+	name = generic_science_materiel_manufacturer_idea
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	allowed = {
+		always = no
+	}
+	equipment_type = {
+		mio_cat_eq_sc_infantry_weapons
+		mio_cat_eq_sc_artillery
+	}
+	research_categories = {
+		primary_weapons
+		melee
+		support_tech
+		artillery_tech
+	}
+
+	tree_header_text = {
+		text = mio_header_infantry_weapons
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_header_artillery
+		x = 6
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_generic_materiel
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+	}
+
+	# 改进子弹设计
+	trait = {
+		token = generic_mio_trait_improved_bullet_design
+		name = generic_mio_trait_improved_bullet_design
+		icon = GFX_generic_mio_department_icon_infantry_quality
+
+		position = {
+			x = 2
+			y = 0
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			reliability = 0.03
+		}
+	}
+
+	# 卡宾枪
+	trait = {
+		token = generic_mio_trait_carbine
+		name = generic_mio_trait_carbine
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+
+		relative_position_id = generic_mio_trait_improved_bullet_design
+
+		position = {
+			x = -1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_improved_bullet_design
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_semi_auto_rifle
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	# 半自动步枪
+	trait = {
+		token = generic_mio_trait_semi_auto_rifle
+		name = generic_mio_trait_semi_auto_rifle
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		relative_position_id = generic_mio_trait_improved_bullet_design
+
+		position = {
+			x = 1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_improved_bullet_design
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_carbine
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	# 支援装备流水线
+	trait = {
+		token = generic_mio_trait_support_equipment_assembly_line
+		name = generic_mio_trait_support_equipment_assembly_line
+		icon = GFX_generic_mio_department_icon_support_line_efficiency
+
+		relative_position_id = generic_mio_trait_improved_bullet_design
+
+		position = {
+			x = -2
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_improved_bullet_design
+		}
+
+		limit_to_equipment_type = { 
+			support_equipment
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+	# 冲压工艺
+	trait = {
+		token = generic_mio_trait_stamping_process
+		name = generic_mio_trait_stamping_process
+		icon = GFX_generic_mio_department_icon_infantry_production
+
+		relative_position_id = generic_mio_trait_improved_bullet_design
+
+		position = {
+			x = 0
+			y = 2
+		}
+
+		any_parent = {
+			generic_mio_trait_carbine
+			generic_mio_trait_semi_auto_rifle
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+
+	# 反装甲枪
+	trait = {
+		token = generic_mio_trait_anti_armor_rifle
+		name = generic_mio_trait_anti_armor_rifle
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		relative_position_id = generic_mio_trait_stamping_process
+
+		position = {
+			x = -1
+			y = 1
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_standard_ammo
+		}
+
+		all_parents = {
+			generic_mio_trait_stamping_process
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.25
+		}
+	}
+
+	# 标准弹药
+	trait = {
+		token = generic_mio_trait_standard_ammo
+		name = generic_mio_trait_standard_ammo
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		relative_position_id = generic_mio_trait_stamping_process
+
+		position = {
+			x = 1
+			y = 1
+		}
+
+		mutually_exclusive = {
+			generic_mio_trait_anti_armor_rifle
+		}
+
+		all_parents = {
+			generic_mio_trait_stamping_process
+		}
+
+		limit_to_equipment_type = { 
+			mio_cat_eq_sc_infantry_weapons
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+	# 研究团队
+	trait = {
+		token = generic_mio_trait_research_team
+		name = generic_mio_trait_research_team
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = {
+			x = 4
+			y = 0
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.06
+		}
+	}
+
+	# 改进型瞄具
+	trait = {
+		token = generic_mio_trait_improved_sight
+		name = generic_mio_trait_improved_sight
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = {
+			x = 6
+			y = 0
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_sc_artillery
+		}
+
+		equipment_bonus = {
+			defense = 0.1
+			breakthrough = 0.05
+		}
+	}
+
+	# 下降式炮闩
+	trait = {
+		token = generic_mio_trait_sliding_breech
+		name = generic_mio_trait_sliding_breech
+		icon = GFX_generic_mio_department_icon_tank_general_at
+
+		relative_position_id = generic_mio_trait_improved_sight
+		position = {
+			x = 2
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_improved_sight
+		}
+
+		limit_to_equipment_type = { 
+			anti_shield_a
+		}
+
+		equipment_bonus = {
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	# 液压复进系统
+	trait = {
+		token = generic_mio_trait_hydraulic_recoil_system
+		name = generic_mio_trait_hydraulic_recoil_system
+		icon = GFX_generic_mio_department_icon_tank_general_aa
+
+		relative_position_id = generic_mio_trait_sliding_breech
+		position = {
+			x = 0
+			y = 1
+		}
+		all_parents = {
+			generic_mio_trait_sliding_breech
+		}
+
+		limit_to_equipment_type = { 
+			anti_shield_a
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+			anti_air_attack = 0.05
+		}
+	}
+
+	# 轻量化设计
+	trait = {
+		token = generic_mio_trait_light_weight_design
+		name = generic_mio_trait_light_weight_design
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		relative_position_id = generic_mio_trait_improved_sight
+
+		mutually_exclusive = {
+			generic_mio_trait_high_explosove_charge
+		}
+
+		position = {
+			x = -1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_improved_sight
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_sc_artillery
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.03
+		}
+	}
+
+	# 高爆装药
+	trait = {
+		token = generic_mio_trait_high_explosove_charge
+		name = generic_mio_trait_high_explosove_charge
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+
+		relative_position_id = generic_mio_trait_improved_sight
+
+		mutually_exclusive = {
+			generic_mio_trait_light_weight_design
+		}
+
+		position = {
+			x = 1
+			y = 1
+		}
+
+		all_parents = {
+			generic_mio_trait_improved_sight
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_sc_artillery
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.08
+		}
+	}
+
+	# 多级装药
+	trait = {
+		token = generic_mio_trait_multi_stage_charge
+		name = generic_mio_trait_multi_stage_charge
+		icon = GFX_generic_mio_department_icon_artillery_production
+
+		relative_position_id = generic_mio_trait_improved_sight
+
+		position = {
+			x = 0
+			y = 2
+		}
+
+		any_parent = {
+			generic_mio_trait_light_weight_design
+			generic_mio_trait_high_explosove_charge
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_sc_artillery
+		}
+
+		equipment_bonus = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+
+	# 改进身管铸造
+	trait = {
+		token = generic_mio_trait_improved_barrel_forging
+		name = generic_mio_trait_improved_barrel_forging
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		relative_position_id = generic_mio_trait_multi_stage_charge
+
+		position = {
+			x = 0
+			y = 1
+		}
+
+		any_parent = {
+			generic_mio_trait_light_weight_design
+			generic_mio_trait_multi_stage_charge
+		}
+
+		limit_to_equipment_type = {
+			mio_cat_eq_sc_artillery
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	# 改进流水线
+	trait = {
+		token = generic_mio_trait_improved_assembly_line
+		name = generic_mio_trait_improved_assembly_line
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		relative_position_id = generic_mio_trait_research_team
+		position = {
+			x = 0
+			y = 4
+		}
+		any_parent = {
+			generic_mio_trait_anti_armor_rifle
+			generic_mio_trait_standard_ammo
+			generic_mio_trait_improved_barrel_forging
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.08
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.2
+			military_industrial_organization_industrial_manufacturer_assign_cost = -0.2
+		}
+	}
+}
+
 ##       ####  ######  ########     #######  ########     ######  ########    ###    ########  ######
 ##        ##  ##    ##    ##       ##     ## ##          ##    ##    ##      ## ##      ##    ##    ##
 ##        ##  ##          ##       ##     ## ##          ##          ##     ##   ##     ##    ##

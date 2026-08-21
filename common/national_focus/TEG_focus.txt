@@ -21,7 +21,7 @@ focus_tree = {
 	# 大选
 	focus = {
 		id = TEG_da_xuan
-		icon = unknown
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		cost = 7
 		x = 13
 		y = 1
@@ -33,6 +33,7 @@ focus_tree = {
 				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_idea
 				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
 			}
+			country_event = teg.101
 		}
 	
 		ai_will_do = {
@@ -43,7 +44,7 @@ focus_tree = {
 	# 射命丸文总统
 	focus = {
 		id = TEG_she_ming_wan_wen_zong_tong
-		icon = unknown
+		icon = TEG_focus_president_aya
 		cost = 1
 		x = -3
 		y = 1
@@ -58,8 +59,12 @@ focus_tree = {
 			focus = TEG_ji_hai_tang_guo_zong_tong
 		}
 
+		available = {
+			always = no
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = auto_complete_tt
 		}
 	
 		ai_will_do = {
@@ -82,6 +87,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = TEG_first_act_tt
 			swap_ideas = {
 				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
 				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_b_idea
@@ -130,7 +136,7 @@ focus_tree = {
 	# 姬海棠果总统
 	focus = {
 		id = TEG_ji_hai_tang_guo_zong_tong
-		icon = unknown
+		icon = TEG_focus_president_hatate
 		cost = 1
 		x = 3
 		y = 1
@@ -145,8 +151,12 @@ focus_tree = {
 			focus = TEG_she_ming_wan_wen_zong_tong
 		}
 
+		available = {
+			always = no
+		}
+
 		completion_reward = {
-			
+			custom_effect_tooltip = auto_complete_tt
 		}
 	
 		ai_will_do = {
@@ -169,6 +179,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = TEG_first_act_tt
 			swap_ideas = {
 				remove_idea = TEG_wei_ji_zhong_de_gong_he_guo_a_idea
 				add_idea = TEG_wei_ji_zhong_de_gong_he_guo_c_idea
@@ -278,6 +289,15 @@ focus_tree = {
 			focus = TEG_gong_he_guo_wai_jiao_bu
 		}
 
+		available = {
+			NTR = {
+				OR = {
+					NOA_is_independent = yes
+					is_ally_with = ROOT
+				}
+			}
+		}
+
 		completion_reward = {
 			TEG = {
 				add_opinion_modifier = {
@@ -312,6 +332,15 @@ focus_tree = {
 			focus = TEG_gong_he_guo_wai_jiao_bu
 		}
 
+		available = {
+			TKM = {
+				OR = {
+					NOA_is_independent = yes
+					is_ally_with = ROOT
+				}
+			}
+		}
+
 		completion_reward = {
 			TEG = {
 				add_opinion_modifier = {
@@ -335,8 +364,8 @@ focus_tree = {
 	# 工业合作计划
 	focus = {
 		id = TEG_gong_ye_he_zuo_ji_hua
-		icon = unknown
-		cost = 12
+		icon = GFX_focus_generic_industral_devlopment_bucket
+		cost = 7
 		x = -2
 		y = 2
 
@@ -348,7 +377,80 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_completed_focus = TEG_lian_xi_jiu_meng_you
+					NTR = {
+						OR = {
+							NOA_is_independent = yes
+							is_ally_with = ROOT
+						}
+					}
+				}
+				add_tech_bonus = {
+					name = TEG_gong_ye_he_zuo_ji_hua
+					bonus = 1
+					uses = 1
+					category = industrys
+				}
+				NTR = {
+					country_event = teg.102
+					event_option_tooltip = teg.102.1
+				}
+			} else ={
+				custom_effect_tooltip = TEG_cooperate_with_NTR_tt
+				effect_tooltip = {
+					add_tech_bonus = {
+						name = TEG_gong_ye_he_zuo_ji_hua
+						bonus = 1
+						uses = 1
+						category = industrys
+					}
+					NTR = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = TEG_nan_wu_zhi_hu_shi_tuan
+					TKM = {
+						OR = {
+							NOA_is_independent = yes
+							is_ally_with = ROOT
+						}
+					}
+				}
+				add_tech_bonus = {
+					name = TEG_gong_ye_he_zuo_ji_hua
+					bonus = 0.8
+					uses = 1
+					category = military
+				}
+				TKM = {
+					country_event = teg.102
+					event_option_tooltip = teg.102.1
+				}
+			} else = {
+				custom_effect_tooltip = TEG_cooperate_with_TKM_tt
+				effect_tooltip = {
+					add_tech_bonus = {
+						name = TEG_gong_ye_he_zuo_ji_hua
+						bonus = 0.8
+						uses = 1
+						category = military
+					}
+					TKM = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -368,6 +470,15 @@ focus_tree = {
 
 		prerequisite = {
 			focus = TEG_gong_he_guo_wai_jiao_bu
+		}
+
+		available = {
+			GEK = {
+				OR = {
+					NOA_is_independent = yes
+					is_ally_with = ROOT
+				}
+			}
 		}
 
 		completion_reward = {
@@ -395,6 +506,42 @@ focus_tree = {
 				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
+					CFA = {
+						NOA_is_independent = yes
+					}
+				}
+				if = {
+					limit = {
+						SEJ = {
+							OR = {
+								NOA_is_independent = yes	
+								is_ally_with = ROOT
+							}
+						}
+					}
+					SEJ = {
+						country_event = teg.103
+						event_option_tooltip = teg.103.1
+					}
+				}
+				if = {
+					limit = {
+						CIR = {
+							OR = {
+								NOA_is_independent = yes	
+								is_ally_with = ROOT
+							}
+						}
+					}
+					CIR = {
+						country_event = teg.103
+						event_option_tooltip = teg.103.1
+					}
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -416,6 +563,15 @@ focus_tree = {
 			focus = TEG_gong_he_guo_wai_jiao_bu
 		}
 
+		available = {
+			LIL = {
+				OR = {
+					NOA_is_independent = yes
+					is_ally_with = ROOT
+				}
+			}
+		}
+
 		completion_reward = {
 			TEG = {
 				add_opinion_modifier = {
@@ -429,6 +585,18 @@ focus_tree = {
 				  	modifier = generic_strengthen_cooperation_op
 				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
+					CFA = {
+						NOA_is_independent = yes
+					}
+				}
+				LIL = {
+					country_event = teg.103
+					event_option_tooltip = teg.103.1
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -439,7 +607,7 @@ focus_tree = {
 	# 商议援助天界妖精
 	focus = {
 		id = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
-		icon = unknown
+		icon = GFX_focus_befriend_CFA
 		cost = 7
 		x = 2
 		y = 2
@@ -451,8 +619,82 @@ focus_tree = {
 			focus = TEG_jie_chu_chun_zhi_yao_jing
 		}
 
+		available = {
+			CFA = {
+				NOA_is_independent = yes
+			}
+		}
+
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_completed_focus = TEG_yu_xia_ke_shang_de_meng_yue
+				}
+				if = {
+					limit = {
+						SEJ = {
+							OR = {
+								NOA_is_independent = yes	
+								is_ally_with = ROOT
+							}
+						}
+					}
+					SEJ = {
+						country_event = teg.103
+						event_option_tooltip = teg.103.1
+					}
+				}
+				if = {
+					limit = {
+						CIR = {
+							OR = {
+								NOA_is_independent = yes	
+								is_ally_with = ROOT
+							}
+						}
+					}
+					CIR = {
+						country_event = teg.103
+						event_option_tooltip = teg.103.1
+					}
+				}
+			} else = {
+				custom_effect_tooltip = TEG_cooperate_with_gekokujyo_tt
+				effect_tooltip = {
+					SEJ = {
+						add_ideas = TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea
+					}
+					CIR = {
+						add_ideas = TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = TEG_jie_chu_chun_zhi_yao_jing
+				}
+				if = {
+					limit = {
+						LIL = {
+							OR = {
+								NOA_is_independent = yes	
+								is_ally_with = ROOT
+							}
+						}
+					}
+					LIL = {
+						country_event = teg.103
+						event_option_tooltip = teg.103.1
+					}
+				}
+			} else = {
+				custom_effect_tooltip = TEG_cooperate_with_LIL_tt
+				effect_tooltip = {
+					LIL = {
+						add_ideas = TEG_yuan_zhu_tian_jie_yao_jing_tou_zi_idea
+					}
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -759,7 +1001,7 @@ focus_tree = {
 	# 战争权力法案
 	focus = {
 		id = TEG_zhan_zheng_quan_li_fa_an
-		icon = unknown
+		icon = GFX_goal_generic_political_pressure
 		cost = 7
 		x = -5
 		y = 1
@@ -775,7 +1017,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_war_support = 0.1
+			unlock_decision_tooltip = TEG_gong_he_guo_zong_dong_yuan_ling
 			hidden_effect = {
 				set_country_flag = TEG_act_established_flag
 			}
@@ -802,7 +1045,11 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
+			OR = {
+				has_war = yes
+				has_war_support > 0.5
+			}
+			
 		}
 
 		completion_reward = {
@@ -1191,7 +1438,7 @@ focus_tree = {
 	# 组建游骑兵团
 	focus = {
 		id = TEG_zu_jian_you_qi_bing_tuan
-		icon = unknown
+		icon = GFX_focus_generic_mountain_training
 		cost = 12
 		x = 2
 		y = 1
@@ -1207,7 +1454,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			custom_effect_tooltip = TEG_allow_ranger_tt
+			hidden_effect = {
+				set_technology = {
+					TEG_you_qi_bing_tuan = 1
+					popup = no
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -1473,11 +1726,11 @@ focus_tree = {
 		}
 	}
 
-	# 投资红叶工业集团
+	# 投资红叶兵工厂
 	focus = {
-		id = TEG_tou_zi_hong_ye_gong_ye_ji_tuan
-		icon = unknown
-		cost = 12
+		id = TEG_tou_zi_hong_ye_bing_gong_chang
+		icon = TEG_focus_invest_in_kouyou_arsenal
+		cost = 7
 		x = 0
 		y = 1
 
@@ -1492,7 +1745,32 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:TEG_kouyou_arsenal_mio = {
+					add_mio_funds = 2000
+				}
+			} else = {
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = TEG_kouyou_arsenal_idea
+						add_idea = TEG_kouyou_arsenal_invested_idea
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							has_idea = TEG_kouyou_arsenal_idea
+						}
+						swap_ideas = {
+							remove_idea = TEG_kouyou_arsenal_idea
+							add_idea = TEG_kouyou_arsenal_invested_idea
+						}
+					}
+				}
+			}
 		}
 	
 		ai_will_do = {
@@ -1705,7 +1983,7 @@ focus_tree = {
 		relative_position_id = TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
 
 		prerequisite = {
-			focus = TEG_tou_zi_hong_ye_gong_ye_ji_tuan
+			focus = TEG_tou_zi_hong_ye_bing_gong_chang
 		}
 
 		prerequisite = {

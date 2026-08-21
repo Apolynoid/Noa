@@ -86,7 +86,7 @@ leader_traits = {
 	}
 
 	# 军需品标准化制造商
-	standardized_production_material_trait = {
+	standardized_production_material_magic_trait = {
 		random = no
 
 		equipment_bonus = {
@@ -108,4 +108,51 @@ leader_traits = {
 		}
 	}
 
+	# 军需品精工制造商
+	quality_production_material_science_trait = {
+		random = no
+
+		equipment_bonus = {
+			gun_a = {
+				soft_attack = 0.05
+				reliability = 0.1
+			}
+
+			melee_a = {
+				reliability = 0.1
+			}
+
+			support_equipment = {
+				reliability = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	quality_production_material_science_improved_trait = {
+		random = no
+
+		equipment_bonus = {
+			gun_a = {
+				soft_attack = 0.1
+				defense = 0.1
+				reliability = 0.1
+			}
+
+			melee_a = {
+				reliability = 0.1
+			}
+
+			support_equipment = {
+				reliability = 0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
 }

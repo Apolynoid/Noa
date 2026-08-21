@@ -1,6 +1,8 @@
 should_have_special_materiel_manufacturers = {
 	OR = {
 		original_tag = CIR
+		original_tag = TEG
+		original_tag = TKM
 	}
 }
 

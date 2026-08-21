@@ -1,0 +1,259 @@
+sub_units = {
+	sp_feixingzhencha = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+		regimental = no
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 30
+		default_morale = 0.2
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.1
+		recon = 3
+		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.25
+		hard_attack = -0.25
+		ap_attack = -0.25
+		air_attack = -0.25
+		
+		essential = {
+			magic_core_a
+			# infantry_equipment
+			support_equipment
+		}
+
+		need = {
+			magic_core_a = 20
+			support_equipment = 50
+		}
+
+		forest = {
+			movement = 0.1
+		}
+		hills = {
+			movement = 0.1
+		}
+		mountain = {
+			movement = 0.1
+		}
+		jungle = {
+			movement = 0.1
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.1
+		}
+		bamboo = {
+			movement = 0.1
+		}
+		river = {
+			movement = 0.1
+		}
+	}
+
+	sp_ranger = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+
+		regimental = no
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 30
+		default_morale = 0.3
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.06
+		recon = 3
+		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		soft_attack = -0.1
+		hard_attack = -0.25
+		ap_attack = -0.25
+		air_attack = -0.25
+
+		maximum_speed = 0.6 # move at horsie speeds
+		
+		essential = {
+			gun_a
+			support_equipment
+		}
+
+		need = {
+			gun_a = 20
+			support_equipment = 50
+		}
+		
+		forest = {
+			movement = 0.15
+			attack = 0.05
+		}
+		hills = {
+			movement = 0.15
+			attack = 0.05
+		}
+		mountain = {
+			movement = 0.10
+			defence = 0.05
+		}
+		jungle = {
+			movement = 0.10
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.1
+			attack = 0.05
+		}
+		bamboo = {
+			movement = 0.1
+		}
+		river = {
+			movement = 0.1
+		}
+		
+		same_support_type = sp_feixingzhencha
+	}
+
+	sp_armored_ranger = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+
+		type = {
+			infantry
+			support
+		}
+
+		battalion_mult = {
+			category = category_shield
+			hard_attack = 0.10
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+			category_shield
+			category_all_armor
+		}
+
+
+		regimental = no
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 30
+		default_morale = 0.3
+		manpower = 3
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.06
+		recon = 3
+		can_be_parachuted = no
+
+		# Support nerfs to combat abilities
+		hard_attack = -0.1
+		ap_attack = -0.1
+		air_attack = -0.1
+		
+		essential = {
+			smg_a
+			support_equipment
+		}
+
+		need = {
+			smg_a = 5
+			support_equipment = 50
+		}
+		
+		forest = {
+			movement = 0.15
+			attack = 0.05
+		}
+		hills = {
+			movement = 0.15
+			attack = 0.05
+		}
+		mountain = {
+			movement = 0.10
+			defence = 0.05
+		}
+		jungle = {
+			movement = 0.10
+		}
+		marsh = {
+			movement = 0.1
+		}
+		plains = {
+			movement = 0.1
+			attack = 0.05
+		}
+		bamboo = {
+			movement = 0.1
+		}
+		river = {
+			movement = 0.1
+		}
+		
+		same_support_type = sp_feixingzhencha
+	}
+}

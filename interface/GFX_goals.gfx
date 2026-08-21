@@ -643,6 +643,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_befriend_CFA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_CFA.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_SKI"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_SKI.png"			
 	}
@@ -849,6 +854,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "TEG_focus_spread_democracy"
 		texturefile = "gfx/interface/goals/focus_TEG_spread_democracy.png"			
+	}
+
+	SpriteType = {
+		name = "TEG_focus_invest_in_kouyou_arsenal"
+		texturefile = "gfx/interface/goals/focus_TEG_invest_in_kouyou_arsenal.png"			
 	}
 
 	#### CIR Cirno 雾之湖妖精联合体

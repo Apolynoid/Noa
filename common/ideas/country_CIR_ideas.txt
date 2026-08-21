@@ -350,7 +350,7 @@ ideas = {
 			}
 
 			traits = {
-				standardized_production_material_trait
+				standardized_production_material_magic_trait
 			}
 		}
 	}

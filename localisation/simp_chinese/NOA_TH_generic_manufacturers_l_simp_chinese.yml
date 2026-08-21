@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
 generic_materiel_manufacturer_idea:0 "通用军需品制造商"
+generic_science_materiel_manufacturer_idea:0 "科学军需品制造商"
 generic_magic_materiel_manufacturer_idea:0 "灵力军需品制造商"
 generic_armor_manufacturer_idea:0 "通用装甲制造商"
 generic_aircraft_manufacturer_idea:0 "通用飞行单位制造商"
@@ -8,4 +9,6 @@ generic_materiel_manufacturer_trait:0 "通用军需品制造商"
 generic_armor_manufacturer_trait:0 "通用装甲制造商"
 generic_aircraft_manufacturer_trait:0 "通用飞行单位制造商"
 
-standardized_production_material_trait:0 "军需品标准化制造商"
+standardized_production_material_magic_trait:0 "军需品标准化制造商"
+quality_production_material_science_trait:0 "军需品精工制造商"
+quality_production_material_science_improved_trait:0 "$quality_production_material_science_trait$"
