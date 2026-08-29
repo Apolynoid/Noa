@@ -1,0 +1,9 @@
+MRY_shou_shi_xin_yang_idea = {
+	icon = GFX_idea_MRY_faith_of_moriya
+
+	political_power_factor = MRY_faith_bonus_general
+	stability_factor = MRY_faith_bonus_general
+	war_support_factor = MRY_faith_bonus_general
+	production_speed_buildings_factor = MRY_faith_bonus_building
+	army_attack_factor = MRY_faith_bonus_military
+}

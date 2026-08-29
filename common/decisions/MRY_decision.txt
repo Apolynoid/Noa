@@ -1,0 +1,118 @@
+# 守矢信仰
+MRY_shou_shi_xin_yang = {
+    # 举行御柱祭
+	MRY_ju_xing_yu_zhu_ji = {
+		icon = generic_civil_support
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = MRY
+		}
+
+		available = {
+            num_of_civilian_factories_available_for_projects > 0
+        }
+
+		days_remove = 60
+		cost = MRY_onbashira_cost
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = {
+					MRY_onbashira_cost = MRY_faith_desicion_increase
+				}
+			}
+		}
+
+		remove_effect = {
+			set_temp_variable = {
+				MRY_faith_gain = MRY_onbashira_faith_gain
+			}
+			MRY_gain__MRY_faith_gain__faith = yes
+			custom_effect_tooltip = MRY_cost_up_tt
+		}
+	}
+
+    # 巡回传教
+    MRY_xun_hui_chuan_jiao = {
+		icon = eng_propaganda_campaigns
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = MRY
+		}
+
+		days_remove = 30
+		cost = MRY_missionary_work_cost
+
+		complete_effect = {
+			hidden_effect = {
+				add_to_variable = {
+					MRY_missionary_work_cost = MRY_faith_desicion_increase
+				}
+			}
+		}
+
+		remove_effect = {
+			set_temp_variable = {
+				MRY_faith_gain = MRY_missionary_work_faith_gain
+			}
+			MRY_gain__MRY_faith_gain__faith = yes
+			custom_effect_tooltip = MRY_cost_up_tt
+		}
+	}
+
+	# 御前演武
+	MRY_yu_qian_yan_wu = {
+		icon = generic_army_support
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = MRY
+		}
+
+		visible = {
+			has_completed_focus = MRY_shou_shi_jun_shi_qi_ji
+		}
+
+		days_remove = 60
+		days_re_enable = 60
+		custom_cost_text = MRY_10_faith
+
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MRY_target_faith = 10.0
+			}
+            MRY_has__MRY_target_faith__faith = yes
+        }
+
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					MRY_faith_lost = 10
+				}
+				MRY_lose__MRY_faith_lost__faith = yes
+			}
+		}
+
+		remove_effect = {
+			add_mastery = {
+				amount = 50
+				folder = land
+			}
+		}
+	}
+}

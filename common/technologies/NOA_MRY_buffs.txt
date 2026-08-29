@@ -1,0 +1,16 @@
+technologies = {
+	MRY_fei_xiang_tian_ze_tech = {
+		allow = {
+			always = no   
+		}
+		enable_equipments = {
+			hisoutensoku
+		}
+		enable_subunits = {
+			sc_shield_tank
+		}
+		ai_will_do = {
+        	base = 0
+      	}
+	}
+}

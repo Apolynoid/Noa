@@ -15,6 +15,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_befriend_OTG_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_OTG_NOA.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_energy_NOA"
 		texturefile = "gfx/interface/goals/focus_generic_energy_NOA.png"			
 	}

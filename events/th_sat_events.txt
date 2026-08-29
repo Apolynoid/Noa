@@ -1,0 +1,1092 @@
+﻿add_namespace = sat
+##########事件###########
+country_event = {  
+	#与阿燐谈谈
+	id = sat.1
+	title = sat.1.t
+	desc = sat.1.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.1
+	option = { 
+		name = sat.1.1
+
+		ai_chance = {
+			base = 75
+		}
+
+		add_political_power = -25
+		UTH = { can_core = yes }
+
+	}
+
+}
+
+country_event = {  
+	#和阿空聊聊
+	id = sat.2
+	title = sat.2.t
+	desc = sat.2.d
+	picture = GFX_news_event_sat.2
+	is_triggered_only = yes
+
+	option = { 
+		name = sat.2.1
+		add_political_power = -50
+		UTH = {
+			low_puppet_level = yes
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+
+country_event = {  
+	# SAT: A letter to Yukari
+	id = sat.3
+	title = sat.3.t
+	desc = sat.3.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.3
+	option = { ### Let's talk about it 
+		name = sat.3.1
+		ai_chance = {
+			base = 100
+		}
+		YKR = { 
+			country_event = { id = sat.4 days = 3 }
+		}
+	}
+
+}
+
+country_event = {  
+	# YKR: SAT's letter
+	id = sat.4
+	title = sat.4.t
+	desc = sat.4.d
+	is_triggered_only = yes
+
+	option = { ### It's time to give Satori some missions
+		name = sat.4.1
+		ai_chance = {
+			base = 100
+		}
+		FROM = { country_event = { id = sat.5 days = 4 } }
+	}
+}
+
+country_event = {  
+	# SAT: YKR's letter
+	id = sat.5
+	title = sat.5.t
+	desc = sat.5.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.5
+	option = { ### We have a mission
+		name = sat.5.1
+		ai_chance = {
+			base = 100
+		}
+		set_country_flag = SAT_received_YKR_letter_flag
+		custom_effect_tooltip = SAT_we_will_start_a_mission_which_could_change_this_state_tt
+		unlock_decision_tooltip = SAT_assimilate_ghost
+		hidden_effect = {
+			set_variable = {
+				var = ROOT.SAT_GHOST_IMMIGRANT
+				value = 0
+			}
+		}
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.05
+		}
+		bianjiekaifang = yes
+	}
+}
+
+country_event = {  
+	# Shikieiki: Letter to Satori
+	id = sat.6
+	title = sat.6.t
+	desc = sat.6.d
+	fire_only_once = yes
+	trigger = {
+		tag = SKI
+		date < 146.6.1
+		date > 146.3.1
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = { 
+		name = sat.6.1
+		ai_chance = {
+			base = 100
+		}
+		SAT = { country_event = { id = sat.7 days = 3 } }
+	}
+}
+
+
+country_event = {  
+	# Satori: Received Shikieiki's letter
+	id = sat.7
+	title = sat.7.t
+	desc = sat.7.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.7
+	option = { 
+		name = sat.7.1
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			set_country_flag = SAT_received_SKI_letter_flag
+		}
+		complete_national_focus = SAT_chaos_of_Higan
+	}
+}
+
+country_event = {  
+	# Satori: A dive in library
+	id = sat.8
+	title = sat.8.t
+	desc = sat.8.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.8
+	option = { 
+		name = sat.8.1
+		ai_chance = {
+			base = 100
+		}
+		add_tech_bonus = {
+			name = SAT_dive_in_the_library
+			bonus = 1.25
+			uses = 2
+			ahead_reduction = 0.5
+			category = build
+			category = math
+		}
+	}
+}
+
+country_event = {  
+	# SAT provides arms 
+	id = sat.9
+	title = sat.9.t
+	desc = sat.9.d
+	is_triggered_only = yes
+
+	option = { 
+		name = sat.9.1
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				SAT = {
+					has_tech = gun2
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun141
+				amount = 2000
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = magic_core141
+				amount = 2000
+				producer = SAT
+			}
+		}
+	}
+}
+
+country_event = {  
+	# SAT provides arms 2
+	id = sat.10
+	title = sat.9.t
+	desc = sat.9.d
+	is_triggered_only = yes
+
+	option = { 
+		name = sat.9.1
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				SAT = {
+					has_tech = gun3
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun147
+				amount = 2000
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = magic_core147
+				amount = 2000
+				producer = SAT
+			}
+		}
+	}
+}
+
+country_event = {  
+	# SAT provides arms 3
+	id = sat.11
+	title = sat.9.t
+	desc = sat.9.d
+	is_triggered_only = yes
+
+	option = { 
+		name = sat.9.1
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				SAT = {
+					has_tech = gun4
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun153
+				amount = 2000
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = magic_core153
+				amount = 2000
+				producer = SAT
+			}
+		}
+	}
+}
+
+country_event = {  
+	# SAT provides arms 4
+	id = sat.12
+	title = sat.9.t
+	desc = sat.9.d
+	is_triggered_only = yes
+
+	option = { 
+		name = sat.9.1
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				SAT = {
+					has_tech = gun5
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun159
+				amount = 2000
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = magic_core159
+				amount = 2000
+				producer = SAT
+			}
+		}
+	}
+}
+
+country_event = {  
+	# SAT proposed a mutual-aid pact
+	id = sat.13
+	title = sat.13.t
+	desc = sat.13.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.13
+	option = { 
+		name = sat.13.1
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = { SAT_SKI_pact_idea }
+		FROM = { add_ideas = { SAT_SKI_pact_idea } }
+		add_political_power = -50
+		approved_event = yes
+	}
+
+	option = { 
+		name = sat.13.2
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 50
+		refused_event = yes
+	}
+}
+
+country_event = {  
+	# SAT proposed to aid us for converter
+	id = sat.14
+	title = sat.14.t
+	desc = sat.14.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.14
+	option = {  ## Accept
+		name = sat.14.1
+		ai_chance = {
+			base = 100
+		}
+		add_stability = 0.05
+		if = {
+			limit = {
+				NOT = { has_tech = waike }
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core141
+				amount = 2000
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = gun141
+				amount = 2000
+				producer = SAT
+			}
+		}
+		add_offsite_building = {
+			type = arms_factory
+			level = 2
+		}
+		diplomatic_relation = {
+			country = HUB
+			relation = guarantee
+			active = no
+		}
+		# approved_event = yes
+		SAT = {
+			set_country_flag = SAT_support_yuyuko_flag 
+			country_event = { id = sat.15 }
+		}
+		hidden_effect = {
+			set_country_flag = YYK_accepted_SAT_support_flag
+		}
+	}
+
+	option = { ## Refused
+		name = sat.14.2
+		ai_chance = {
+			base = 0
+		}
+		add_stability = 0.05
+		if = {
+			limit = {
+				NOT = { has_tech = waike }
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core141
+				amount = 500
+				producer = SAT
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = gun141
+				amount = 500
+				producer = SAT
+			}
+		}
+		hidden_effect = {
+			set_country_flag = YYK_refused_SAT_support_flag
+		}
+		SAT = {
+			effect_tooltip = {
+				uncomplete_national_focus = {
+					focus = SAT_reinforce_yuyuko
+					uncomplete_children = yes
+					refund_political_power = no
+				}
+			}
+			country_event = { id = sat.16 }
+		}
+	}
+}
+
+country_event = {  
+	# YYK agreed
+	id = sat.15
+	title = sat.15.t
+	desc = sat.15.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.15
+	option = { 
+		name = sat.15.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -75
+		add_timed_idea = {
+			idea = SAT_military_industrial_cost_2
+			days = 80
+		}
+	}
+}
+
+country_event = {  
+	# YYK refused
+	id = sat.16
+	title = sat.16.t
+	desc = sat.16.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.16
+	option = { 
+		name = sat.16.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -25
+		uncomplete_national_focus = {
+			focus = SAT_reinforce_yuyuko
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+	}
+}
+
+country_event = {  
+	# SAT wants to cease fire with us 
+	id = sat.17
+	title = sat.17.t
+	desc = sat.17.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.17
+	option = { ### Sure
+		name = sat.17.1
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				HUB = { is_subject_of = ROOT }
+			}
+			set_autonomy = {
+				target = HUB
+				autonomous_state = autonomy_free
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction_with = HUB
+			}
+			HUB = { leave_faction = yes }
+		}
+		white_peace = SAT
+		approved_event = yes
+	}
+
+	option = { ### No Way
+		name = sat.17.2 
+		ai_chance = {
+			base = 0
+		}
+		refused_event = yes
+	}
+}
+
+country_event = {  
+	# SAT wants to control us
+	id = sat.18
+	title = sat.18.t
+	desc = sat.18.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.18
+	option = { ### We have no choice
+		name = sat.18.1
+		ai_chance = {
+			base = 100
+		}
+		effect_tooltip = {
+			FROM = {
+				ROOT = {
+					subject_level2 = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = sat.19 hours = 10 } }
+	}
+
+	option = { ### Komeiji Satori must pay for her ambition!
+		name = sat.18.2 
+		ai_chance = {
+			base = 0
+		}
+		FROM = { country_event = { id = sat.20 hours = 10 } }
+		
+	}
+}
+
+country_event = {  
+	# HUB Submitted
+	id = sat.19
+	title = sat.19.t
+	desc = sat.19.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.19
+	option = { ### Nice
+		name = sat.19.1
+		ai_chance = {
+			base = 100
+		}
+		HUB = {
+			subject_level2 = yes
+		}
+		add_political_power = -50
+	}
+
+}
+
+country_event = {  
+	# HUB resist
+	id = sat.20
+	title = sat.20.t
+	desc = sat.20.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.20
+	option = { ### Invasion
+		name = sat.20.1
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+			target = HUB
+			type = puppet_wargoal_focus
+		}
+		if = {
+			limit = { HUB = { is_guaranteed_by = AOO } }
+			hidden_effect = {
+				set_country_flag = SAT_invade_HUB_regardless_resistence
+			}
+			unlock_decision_tooltip = SAT_cease_fire_with_AOO
+		}
+	}
+
+	option = { ### Bah
+		name = sat.20.1
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 10
+	}
+
+}
+
+
+###############################################
+
+###### Reformist
+
+###############################################
+
+country_event = {  
+	# SAT: A new ambition
+	id = sat.21
+	title = sat.21.t
+	desc = sat.21.d
+	picture = GFX_news_event_sat.21
+	trigger = {
+		tag = SAT
+		has_country_flag = SAT_received_SKI_letter_flag
+		has_country_flag = SAT_received_YKR_letter_flag
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+	fire_only_once = yes
+
+	option = { ### An Alternative way?
+		name = sat.21.1
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.05
+		}
+		set_country_flag = SAT_alternative_solution_has_been_worked_out_tt
+	}
+}
+
+
+country_event = {  
+	# YUG: Satori's usurp
+	id = sat.22
+	title = sat.22.t
+	desc = sat.22.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.22
+	option = { ### We won't accept that
+		name = sat.22.1
+		ai_chance = {
+			base = 100
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		declare_war_on = {
+			target = SAT
+			type = topple_government
+		}
+	}
+
+	option = { ### Satori's right, we are going to support her
+		name = sat.22.2
+		ai_chance = {
+			base = 0
+		}
+		if = {
+			limit = {
+				tag = YUG
+			}
+			SAT = {
+				ROOT = {
+					subject_level4 = yes
+				}
+			}
+			ROOT = {
+				set_politics = {
+					ruling_party = qinwai
+				}
+				add_popularity = {
+					ideology = qinwai
+					popularity = 0.80
+				}
+			}
+			else = {
+				SAT = {
+					ROOT = {
+						subject_level2 = yes
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+country_event = {  
+	# MRY: Satori's invitation
+	id = sat.23
+	title = sat.23.t
+	desc = sat.23.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.23
+	option = { ### Let's see what Satori could give us
+		name = sat.23.1
+		ai_chance = {
+			base = 100
+		}
+		SAT = { country_event = { id = sat.24 hours = 10  } }
+	}
+
+	option = { ### Satori should come to Moriya Shrine
+		name = sat.23.2
+		ai_chance = {
+			base = 40
+		}
+		SAT = { country_event = { id = sat.25 hours = 10 } }
+		hidden_effect = {
+			SAT = { set_country_flag = SAT_invited_flag }
+		}
+	}
+}
+
+country_event = {  
+	# SAT: Kanako will come here
+	id = sat.24
+	title = sat.24.t
+	desc = sat.24.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.24
+	option = { ### Make the agreement
+		name = sat.24.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		MRY = { country_event = { id = sat.26 days = 8 } }
+		SAT_make_agreement_bonus = yes
+	}
+
+}
+
+country_event = {  
+	# SAT: Kanako requires Satori to go to MRY
+	id = sat.25
+	title = sat.25.t
+	desc = sat.25.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.25
+	option = { ### Then I will come
+		name = sat.25.1
+		ai_chance = {
+			base = 100
+		}
+		country_event = { id = sat.27 days = 7 }
+	}
+
+	option = { ### This is unaccetable
+		name = sat.25.2
+		ai_chance = {
+			base = 0
+		}
+		refused_event = yes
+	}
+
+}
+
+country_event = {  
+	# MRY: Nice
+	id = sat.26
+	title = sat.26.t
+	desc = sat.26.d
+	is_triggered_only = yes
+
+	option = { ### Make the agreement
+		name = sat.26.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -150
+		custom_effect_tooltip = SAT_MRY_will_Benefit_from_it_once_started_tt
+		add_tech_bonus = {
+			name = sat.26
+			bonus = 1.5
+			uses = 1
+			category = industrys
+		}
+	}
+
+}
+
+country_event = {  
+	# SAT: Meet at the Shrine
+	id = sat.27
+	title = sat.27.t
+	desc = sat.27.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.27
+	option = { ### Make the agreement
+		name = sat.27.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		MRY = { country_event = { id = sat.26 days = 3 } }
+		SAT_make_agreement_bonus = yes
+	}
+
+}
+
+country_event = {  
+	# SEJ: agreement with SAT
+	id = sat.28
+	title = sat.28.t
+	desc = sat.28.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.28
+	option = { ### Yes
+		name = sat.28.1
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -100
+		SAT = { set_country_flag = SAT_SEJ_Pact_flag }
+		add_tech_bonus = {
+			name = SAT_SEJ_Pact_flag
+			bonus = 1.5
+			ahead_reduction = 1.0
+			uses = 2
+			category = resource
+		}
+		add_tech_bonus = {
+			name = SAT_SEJ_Pact_flag
+			bonus = 1.5
+			ahead_reduction = 1.0
+			uses = 1
+			category = build
+		}
+		SAT = {
+			add_tech_bonus = {
+				name = SAT_SEJ_Pact_flag
+				bonus = 1.5
+				ahead_reduction = 1.0
+				uses = 2
+				category = resource
+			}
+			add_tech_bonus = {
+				name = SAT_SEJ_Pact_flag
+				bonus = 1.5
+				ahead_reduction = 1.0
+				uses = 1
+				category = build
+			}
+		}
+		custom_effect_tooltip = SAT_SEJ_benefit_from_project_tt
+		approved_event = yes
+	}
+
+	option = { ### No
+		name = sat.28.2
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = 5
+		refused_event = yes
+	}
+
+}
+
+
+country_event = {  
+	# YKR/SKI: Defence Pact against YYK
+	id = sat.29
+	title = sat.29.t
+	desc = sat.29.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.29
+	option = { ### yes
+		name = sat.29.1
+		ai_chance = {
+			base = 100
+		}
+		if = { 
+			limit = { tag = YKR }
+			add_ideas = { SAT_YKR_defence_against_YYK_idea }
+			SAT = { add_ideas = { SAT_YKR_defence_against_YYK_idea } }
+		}
+		
+		if = { 
+			limit = { tag = SKI }
+			add_ideas = { SAT_SKI_defence_against_YYK_idea }
+			SAT = { add_ideas = { SAT_SKI_defence_against_YYK_idea } }
+		}
+		
+		add_political_power = -15
+		approved_event = yes
+	}
+
+	option = { ### no
+		name = sat.29.2
+		ai_chance = {
+			base = 0
+		}
+		refused_event = yes
+	}
+
+}
+
+country_event = {  
+	# SAT/YKR pact enabled
+	id = sat.30
+	title = sat.30.t
+	desc = sat.30.d
+	trigger = {
+		OR = {
+			AND = {
+				tag = SAT
+				YKR = { has_defensive_war_with = YYK }
+			} 
+			AND = {
+				tag = YKR
+				SAT = { has_defensive_war_with = YYK }
+			} 
+		}
+		has_idea = SAT_YKR_defence_against_YYK_idea
+		NOT = { has_war_with = YYK }
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	fire_only_once = yes
+
+	option = { ### Prepare for the war
+		name = sat.30.1
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			SAT = { set_country_flag = SAT_YKR_anti_YYK_pact_enabled }	
+		}
+		SAT = { set_country_flag = SAT_YYK_defence_pact_enabled_flag }
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = YYK
+			value = 200
+		}
+		if = {
+			limit = {
+				tag = SAT
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = HUB
+				value = 200
+			}
+		}
+		country_event = { id = sat.32 days = 42 }
+	}
+}
+
+country_event = {  
+	# SAT/SKI pact enabled
+	id = sat.31
+	title = sat.30.t
+	desc = sat.30.d
+	trigger = {
+		OR = {
+			AND = {
+				tag = SAT
+				SKI = { has_defensive_war_with = YYK }
+			} 
+			AND = {
+				tag = SKI
+				SAT = { has_defensive_war_with = YYK }
+			} 
+		}
+		has_idea = SAT_SKI_defence_against_YYK_idea
+		NOT = { has_war_with = YYK }
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	fire_only_once = yes
+
+	option = { ### Prepare for the war
+		name = sat.30.1
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			SAT = { set_country_flag = SAT_SKI_anti_YYK_pact_enabled }	
+		}
+		SAT = { set_country_flag = SAT_YYK_defence_pact_enabled_flag }
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = YYK
+			value = 200
+		}
+		if = {
+			limit = {
+				tag = SAT
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = HUB
+				value = 200
+			}
+		}
+		country_event = { id = sat.32 days = 42 }
+	}
+}
+
+country_event = {  
+	# War with YYK
+	id = sat.32
+	title = sat.32.t
+	desc = sat.32.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.32
+	option = { ### Enable the Pact
+		name = sat.32.1
+		ai_chance = {
+			base = 100
+		}
+		declare_war_on = {
+			target = YYK
+			type = puppet_wargoal_focus
+		}
+		if = {
+			limit = {
+				tag = SAT
+				HUB = { is_subject = no }
+				HUB = { is_in_faction = no }
+				HUB = { NOT = { is_guaranteed_by = SKI } }
+				HUB = { NOT = { is_guaranteed_by = YKR } }
+				all_other_country = {
+					OR = {
+						AND = {
+							NOT = { is_in_faction_with = SKI }
+							NOT = { is_in_faction_with = YKR }
+						}
+						NOT = { has_guaranteed = HUB }
+					}
+				}
+			}
+			declare_war_on = {
+				target = HUB
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+
+}
+
+country_event = {  
+	# TES: SAT seeks cooperation
+	id = sat.33
+	title = sat.33.t
+	desc = sat.33.d
+	is_triggered_only = yes
+	picture = GFX_news_event_sat.33
+	option = { ### Approve the Pact
+		name = sat.33.1
+		ai_chance = {
+			base = 100
+		}
+		SAT = { 
+			add_ideas = { SAT_TES_cooperation_idea }
+			add_tech_bonus = {
+				name = SAT_TES_cooperation
+				category = air_equipment
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 3
+			}
+		}
+		TES = { 
+			add_ideas = { SAT_TES_cooperation_TES_idea }
+			add_tech_bonus = {
+				name = SAT_TES_cooperation
+				category = resource
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 3
+			} 
+		}
+		approved_event = yes
+	}
+
+	option = { ### Refuse the Pact
+		name = sat.33.2
+		ai_chance = {
+			base = 0
+		}
+		refused_event = yes
+	}
+
+}

@@ -248,6 +248,34 @@ leader_traits = {
 		}
 	}
 
+	#MRY
+	# 战争之神
+	MRY_zhan_zheng_zhi_shen = {
+		random = no
+
+		army_org_factor = 0.1
+		experience_gain_army_factor = 0.1
+		offensive_war_stability_factor = 0.1
+		war_support_factor = 0.1
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
+	# 土著神
+	MRY_tu_zhu_shen = {
+		random = no
+
+		stability_factor = 0.15
+		political_power_factor = 0.1
+		resistance_damage_to_garrison = -0.25
+
+		ai_will_do = {
+			factor = -5
+		}
+	}
+
 	#HUM
 	# 妥协者
 	HUM_tuo_xie_zhe = {

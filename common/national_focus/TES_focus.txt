@@ -469,6 +469,7 @@ focus_tree = {
 			hidden_effect = {
 				set_country_flag = can_integrate_flag_CFA
 			}
+			custom_effect_tooltip = TES_world_limit_remove_tt
 		}
 	
 		ai_will_do = {

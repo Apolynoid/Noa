@@ -1,0 +1,803 @@
+﻿add_namespace = und
+country_event = { # Demand Puppet FROM SAT
+	id = und.1
+	title = und.1.t
+	desc = und.1.d
+	is_triggered_only = yes
+	option = {
+		name = und.1.1
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = FROM }
+					}
+					AND = {
+						any_other_country = {
+							is_major = yes
+							NOT = { tag = SAT }
+							NOT = { tag = YUG }
+							has_guaranteed = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				tag = YUG
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				ROOT = {
+					subject_level2 = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = und.2 } }
+
+	}
+
+	option = {
+		name = und.1.2
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 10
+				OR = {
+					AND = {
+						is_in_faction = yes
+						NOT = { is_in_faction_with = FROM }
+					}
+					AND = {
+						any_other_country = {
+							is_major = yes
+							NOT = { tag = SAT }
+							NOT = { tag = YUG }
+							has_guaranteed = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 150
+				AND = {
+					tag = YUG
+					SAT = {
+						check_variable = {
+							var = SAT_YUG_prestige
+							value = 8
+							compare = less_than
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 250
+				tag = UFA
+			}
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+				not = {
+					tag = YUG
+				}
+			}
+		}
+		FROM = { country_event = { id = und.3 hours = 8 } }
+	}
+	
+}
+
+country_event = { # SAT: FROM Submitted
+	id = und.2
+	title = und.2.t
+	desc = und.2.d
+	is_triggered_only = yes
+	option = {
+		name = und.2.1
+		ai_chance = {
+			base = 100
+		}
+		every_other_country = {
+			limit = { is_subject_of = FROM }
+			SAT = { PREV = { subject_level2 = yes } }
+		}
+		FROM = { subject_level2 = yes }
+	}
+
+}
+
+country_event = { # SAT: FROM rejected
+	id = und.3
+	title = und.3.t
+	desc = und.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = und.3.1
+		ai_chance = {
+			base = 20
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		add_political_power = -15
+	}
+
+	option = {  ### Invasion
+		name = und.3.2
+
+		ai_chance = {
+			base = 80
+			# modifier = {
+			# 	factor = 0
+			# 	OR = {
+			# 		is_neighbor_of = FROM
+			# 		any_other_country = { 
+			# 			is_neighbor_of = FROM
+			# 			OR = {
+			# 				is_subject_of = ROOT
+			# 				is_in_faction_with = ROOT
+			# 			}
+			# 		}
+			# 	}
+			# }
+		}
+		add_political_power = -25
+		if = {
+			limit = { 
+				is_faction_leader = yes
+				FROM = { is_in_faction_with = ROOT }
+			}
+			remove_from_faction = FROM
+		}
+		declare_war_on = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = { # Demand Alliance from SAT
+	id = und.4
+	title = und.4.t
+	desc = und.4.d
+	is_triggered_only = yes
+	
+	option = {
+		name = und.4.1
+		FROM = { 
+			qiangjiemeng = yes
+			add_to_faction = ROOT 
+		}	
+		approved_event = yes
+		ai_chance = {
+			base = 75
+			modifier = {
+				has_completed_focus = SAT_chirendan_corporate_state_congress
+				factor = 0.15
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				tag = YUG
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = und.4.2
+		refused_event = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_completed_focus = SAT_chirendan_transform_alliance
+				factor = 0.25
+			}
+			modifier = {
+				has_completed_focus = SAT_underworld_mutual_aid_pact
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #### YUG: Invade UUG
+	id = und.5
+	title = und.5.t
+	desc = und.5.d
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			SAT = {
+				SAT_YUG_prestige_decrease_2 = yes
+			}
+		}
+	}
+
+	option = {
+		name = und.5.1
+		ai_chance = {
+			base = 60
+		}
+		add_war_support = 0.05
+		declare_war_on = {
+			target = UUG
+			type = puppet_wargoal_focus
+		}
+	}
+
+	option = {
+		name = und.5.2
+		ai_chance = {
+			base = 0
+		}
+		add_war_support = -0.025
+	}
+}
+
+country_event = { #### UUG: Unrest
+	id = und.6
+	title = und.6.t
+	desc = und.6.d
+	fire_only_once = yes
+	trigger = {
+		tag = UUG
+		date > 146.4.1
+	}
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	option = {
+		name = und.6.1
+		ai_chance = {
+			base = 60
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.10
+		}
+		add_timed_idea = {
+			idea = UUG_unrest
+			days = 160
+		}
+		UFA = {
+			add_timed_idea = {
+				idea = UUG_unrest
+				days = 160
+			}
+		}
+		set_global_flag = UUG_unrest_global_flag
+		every_other_country = {
+			limit = {  
+				OR = {
+					tag = SAT
+					tag = YUG
+					tag = PRS
+					tag = UNL
+					tag = YMM
+				}
+			}
+			country_event = { id = und.7 hours = 6 }
+		}
+		every_other_country = {
+			limit = {  
+				OR = {
+					tag = SEJ
+					tag = MRY
+					tag = SCA
+				}
+			}
+			country_event = { id = und.8 hours = 6 }
+		}
+	}
+}
+
+country_event = { #### SAT: UUG Unrest
+	id = und.7
+	title = und.7.t
+	desc = und.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = und.7.1
+		ai_chance = {
+			base = 60
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.05
+		}
+		if = {
+			limit = { tag = SAT }
+			add_ideas = { SAT_UUG_unrest }
+		}
+		if = {
+			limit = { 
+				OR = {
+					tag = YUG
+					tag = UNL
+					tag = PRS
+				}
+				
+			}
+			add_ideas = { SAT_UUG_unrest_2 }
+		}
+		if = {
+			limit = { 
+				tag = YMM
+			}
+			add_ideas = { SAT_UUG_unrest_3 }
+		}
+		effect_tooltip = {
+			set_country_flag = UUG_unrest_global_flag
+		}
+	}
+
+}
+
+country_event = { #### SEJ, MRY, SCA:
+	id = und.8
+	title = und.8.t
+	desc = und.8.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = und.8.1
+		add_timed_idea = {
+			idea = SAT_UUG_unrest_Gensokyo
+			days = 120
+		}
+		effect_tooltip = {
+			set_country_flag = UUG_unrest_global_flag
+		}
+		remove_ideas = {
+			SAT_Pact_of_Geyser_Gensokyo
+		}
+	}
+}
+
+country_event = { #### Sign Chirendan Memorandum
+	id = und.9
+	title = und.9.t
+	desc = und.9.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = und.9.1   ## Accept
+		remove_ideas = { SAT_Pact_of_Geyser }
+		if = {
+			limit = {
+				tag = YUG
+			}
+			give_guarantee = FROM
+			hidden_effect = {
+				set_country_flag = SAT_Memorandum_YUG_accepted_flag
+			}
+			if = {
+				limit = { SAT = { NOT = { has_completed_focus = SAT_military_mutual_aid } } }
+				diplomatic_relation = {
+					country = FROM
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+		else = {
+			add_ideas = { SAT_Chirendan_memorandum }
+			diplomatic_relation = {
+				country = FROM
+				relation = military_access
+				active = yes
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { tag = YUG }
+				YUG = { has_country_flag = SAT_Memorandum_YUG_accepted_flag }
+			}
+			YUG = { give_guarantee = ROOT }
+		}
+		FROM = { country_event = { id = und.10 hours = 10 } }
+		if = {
+			limit = {
+				OR = {
+					tag = YMM
+					tag = PRS
+				}
+				SAT = { has_completed_focus = SAT_passage_defence_HQ }
+			}
+			if = {
+				limit = { SAT = { has_completed_focus = SAT_this_is_our_land } }
+				add_ideas = { SAT_passage_defence_HQ_idea }
+			}
+			else = {
+				add_ideas = { SAT_passage_defence_HQ_1_5_idea }
+			}
+		}
+	}
+
+	option = {   
+		name = und.9.2   ## Abandon Pact Only
+		ai_chance = {
+			factor = 0
+		}
+		remove_ideas = { SAT_Pact_of_Geyser }
+		FROM = { country_event = { id = und.11 hours = 10 } }
+	}
+}
+
+country_event = { #### Memorandum accepted
+	id = und.10
+	title = und.10.t
+	desc = und.10.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### This is good
+		name = und.10.1
+		give_guarantee = FROM
+		if = {
+			limit = {
+				FROM = { tag = YUG }
+			}
+			if = {
+				limit = { SAT = { NOT = { has_completed_focus = SAT_military_mutual_aid } } }
+				SAT = {
+					diplomatic_relation = {
+						country = FROM
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+			effect_tooltip = {
+				FROM = { give_guarantee = ROOT }
+			}
+			YMM = { country_event = { id = und.9 hours = 4 } }
+			PRS = { country_event = { id = und.9 hours = 4 } }
+			UNL = { country_event = { id = und.9 hours = 4 } }
+		}
+		else = {
+			diplomatic_relation = {
+				country = FROM
+				relation = military_access
+				active = yes
+			}
+			effect_tooltip = {
+				FROM = { 
+					add_ideas = { SAT_Chirendan_memorandum } 
+					if = {
+						limit = {
+							OR = {
+								tag = YMM
+								tag = PRS
+							}
+						}
+						add_ideas = { SAT_passage_defence_HQ_idea }
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+country_event = { #### Memorandum refused
+	id = und.11
+	title = und.11.t
+	desc = und.11.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+
+	option = {
+		name = und.11.1
+		if = {
+			limit = {
+				FROM = { tag = YUG }
+			}
+			YMM = { country_event = { id = und.9 hours = 4 } }
+			PRS = { country_event = { id = und.9 hours = 4 } }
+			UNL = { country_event = { id = und.9 hours = 4 } }
+		}
+	}
+}
+
+
+country_event = { #### demand Zombie fairies
+	id = und.12
+	title = und.12.t
+	desc = und.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Submit
+		name = und.12.1
+		ai_chance = {
+			factor = 50
+		}
+		effect_tooltip = {
+			SAT = {
+				ROOT = {
+					subject_level2 = yes
+				}
+			}
+		}
+		SAT = { country_event = { id = und.13 } }
+	}
+
+	option = {  ### Resist
+		name = und.12.2
+		ai_chance = {
+			factor = 50
+		}
+		SAT = { country_event = { id = und.14 } }
+	}
+}
+
+country_event = { #### Zombie fairies submitted
+	id = und.13
+	title = und.13.t
+	desc = und.13.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Nice
+		name = und.13.1
+		FROM = { 
+			subject_level2 = yes
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = { #### Zombie fairies refused
+	id = und.14
+	title = und.14.t
+	desc = und.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Attack
+		name = und.14.1
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+		add_political_power = -75
+	}
+
+	option = {  ### Fine
+		name = und.14.2
+		add_stability = -0.03
+	}
+}
+
+country_event = {  #### UUG arrest calm down a bit
+	id = und.15
+	title = und.15.t
+	desc = und.15.d
+	fire_only_once = yes
+	trigger = {
+		tag = SAT
+		has_global_flag = UUG_unrest_global_flag
+		OR = {
+			UUG = { exists = no }
+			UUG = { is_subject = yes }
+		}
+		OR = {
+			has_idea = SAT_UUG_unrest
+			has_idea = SAT_UUG_unrest_2
+			has_idea = SAT_UUG_unrest_3
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = und.15.1
+		SAT_UUG_unrest_reduce = yes
+		set_global_flag = UUG_unrest_pacified_global_flag
+	}
+}
+
+country_event = {  #### SAT: Invade UNL
+	id = und.16
+	title = und.16.t
+	desc = und.16.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### On our own
+		name = und.16.1
+		ai_chance = {
+			factor = 0
+		}
+		YUG = {
+			diplomatic_relation = {
+				country = UNL
+				relation = guarantee
+				active = no
+			}
+		}
+		declare_war_on = {
+			target = UNL
+			type = puppet_wargoal_focus
+		}
+		add_war_support = 0.05
+	}
+
+	option = {  ### Ask PRS
+		name = und.16.2
+		custom_effect_tooltip = SAT_PRS_invade_using_prestige_tt
+		PRS = { country_event = { id = und.17 hours = 2 } }
+	}
+
+	option = {  ### Ask PRS using Presitige
+		name = und.16.3
+		trigger = {
+			SAT_PRS_prestige_at_least_4 = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = SAT_PRS_invade_using_prestige_tt
+		hidden_effect = {
+			set_country_flag = SAT_force_PRS_invade_UNL_flag
+		}
+		PRS = { country_event = { id = und.17 hours = 2 } }
+		SAT_PRS_prestige_decrease_2 = yes
+		custom_effect_tooltip = SAT_PRS_invade_forced_tt
+	}
+}
+
+country_event = {  #### PRS: Invade UNL?
+	id = und.17
+	title = und.17.t
+	desc = und.17.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Let's start
+		name = und.17.1
+		ai_chance = {
+			base = 10
+		}
+		SAT = { country_event = { id = und.18 hours = 38 } }
+		effect_tooltip = {
+			declare_war_on = {
+				target = UNL
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {  ### Non of our bussiness
+		name = und.17.2
+		ai_chance = {
+			base = 16
+			modifier = {
+				factor = 0
+				SAT = { is_ai = yes }
+			}
+			modifier = {
+				factor = 0
+				SAT = { has_country_flag = SAT_force_PRS_invade_UNL_flag }
+			}
+		}
+		SAT = { country_event = { id = und.19 hours = 38 } }
+	}
+}
+
+country_event = {  #### SAT: PRS agree to joint invasion
+	id = und.18
+	title = und.18.t
+	desc = und.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Nice
+		name = und.18.1
+		add_war_support = 0.05
+		if = {
+			limit = { UNL = { is_guaranteed_by = YUG }  }
+			YUG = {
+				diplomatic_relation = {
+					country = UNL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		declare_war_on = {
+			target = UNL
+			type = puppet_wargoal_focus
+		}
+		PRS = {
+			declare_war_on = {
+				target = UNL
+				type = annex_everything
+			}
+		}
+	}
+
+}
+
+country_event = {  #### SAT: PRS refuse to invasion
+	id = und.19
+	title = und.19.t
+	desc = und.19.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Bah, we will do it ourselves
+		name = und.19.1
+		if = {
+			limit = { UNL = { is_guaranteed_by = YUG }  }
+			YUG = {
+				diplomatic_relation = {
+					country = UNL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		declare_war_on = {
+			target = UNL
+			type = puppet_wargoal_focus
+		}
+		add_war_support = 0.05
+	}
+
+	option = {  ### We should not take risks
+		name = und.19.1
+		ai_chance = {
+			factor = 0
+		}
+		add_war_support = -0.05
+	}
+
+}
+
+country_event = {  #### PRS: Invade ACE?
+	id = und.20
+	title = und.20.t
+	desc = und.20.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {  ### Let's start
+		name = und.20.1
+		ai_chance = {
+			base = 10
+		}
+		declare_war_on = {
+			target = ACE
+			type = annex_everything
+		}
+		approved_event = yes
+	}
+
+	option = {  ### Non of our bussiness
+		name = und.20.2
+		ai_chance = {
+			base = 0
+		}
+		refused_event = yes
+	}
+
+}

@@ -25,4 +25,6 @@ decision_cost_increase_20_tt:0 "每次选择该决议将使决议消耗§R增加
 decreased_force_attack_cost_tt:0 "大幅降低§Y$ABILITY_FORCE_ATTACK$§!的指挥点数消耗"
 decreased_last_stand_cost_tt:0 "大幅降低§Y$ABILITY_LAST_STAND$§!的指挥点数消耗"
 
+clr_world_limit_tt:0 "可以将规模调整为§Y世界§!"
+
 bug_report_tt:0 "如果看到本条信息，说明mod出现了bug，请向制作组反映。（Documents/Paradox Interactive/Hearts of Iron IV/logs/game.log对制作组Debug会很有帮助）"

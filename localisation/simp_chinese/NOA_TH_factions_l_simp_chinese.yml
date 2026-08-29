@@ -47,4 +47,16 @@
  faction_peace_take_claimed_focus_NOA:0 "$faction_peace_take_claimed_focus$"
  change_leader_rule_never_NOA:0 "$change_leader_rule_never$"
 
+ # AI Theaters
+ theater_netherworld:0 "冥界"
+ theater_hell:0 "地狱"
+ theater_celestial:0 "天界"
+ theater_underground:0 "旧地狱"
+ theater_youkai_mountain:0 "妖怪山"
+ theater_bamboo_forest:0 "竹林"
+ theater_southwest:0 "西南战区"
+ theater_magic_forest:0 "魔法之森"
+ theater_south_misty_lake:0 "南雾之湖"
+ theater_phantom_grassland:0 "幻草原"
+ theater_east_gensokyo:0 "东幻想乡"
  

@@ -6,3 +6,6 @@ echoryte_res:0 "谐晶资源"
 echoryte_res_research:0 "谐晶资源研究速度"
 PRODUCTION_MATERIALS_ECHORYTE:1 "谐晶"
 echoryte_desc:0 "一种在特定条件下产生稳定谐振的矿物，在幻想乡被用作普遍的工业能源。"
+
+country_resource_echoryte: "谐晶"
+country_resource_echoryte_tt: "$country_resource_echoryte$：$RIGHT|+=$"

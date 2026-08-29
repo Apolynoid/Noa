@@ -1,0 +1,274 @@
+﻿add_namespace = mry
+
+# SCA MRY请求加入Faction
+country_event = {
+	id = mry.101
+	title = mry.101.t
+	desc = mry.101.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mry.101.1
+		ai_chance = {
+			base = 10
+		}
+		SCA = {
+			add_to_faction = MRY
+		}
+		NMS = {
+			country_event = noa_gen.101
+		}
+		hidden_effect = {
+			news_event = {
+				id = mry.102
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = mry.101.2
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			MRY = {
+				country_event = mry.103
+			}
+		}
+	}
+}
+
+# MRY加入SCA.Faction
+news_event = {
+	id = mry.102
+	title = mry.102.t
+	desc = mry.102.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# MRY/SCA
+	option = {
+		name = mry.102.1
+		trigger = {
+			OR = {
+				original_tag = MRY
+				original_tag = SCA
+			}
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = mry.102.2
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MRY
+					original_tag = SCA
+				}
+			}
+			is_changemaker = yes
+		}
+	}
+
+	# 其他
+	option = {
+		name = mry.102.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MRY
+					original_tag = SCA
+				}
+			}
+			is_changemaker = no
+		}
+	}
+}
+
+# 请求被拒绝
+country_event = {
+	id = mry.103
+	title = mry.103.t
+	desc = mry.103.d
+	major = no
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = mry.103.1
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = MRY_jia_ru_fei_hong_ti_xi
+				uncomplete_children = yes
+  				refund_political_power = no
+			}
+			complete_national_focus = MRY_yao_guai_shan_shen_sheng_tong_meng
+		}
+	}
+}
+
+# MRY建立MRY.Faction
+news_event = {
+	id = mry.104
+	title = mry.104.t
+	desc = mry.104.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	# MRY
+	option = {
+		name = mry.104.1
+		trigger = {
+			original_tag = MRY
+		}
+	}
+
+	# 激进/改良
+	option = {
+		name = mry.104.2
+		trigger = {
+			NOT = {
+				original_tag = MRY
+			}
+			is_changemaker = yes
+		}
+	}
+
+	# 其他
+	option = {
+		name = mry.104.3
+		trigger = {
+			NOT = {
+				original_tag = MRY
+			}
+			is_changemaker = no
+		}
+	}
+}
+
+# 第二次妖怪山战争
+news_event = {
+	id = mry.105
+	title = mry.105.t
+	desc = mry.105.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = MRY_second_youkai_mountain_war_flag
+		}
+		MRY = {
+			has_war_with = TEG
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MRY_second_youkai_mountain_war_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# MRY
+	option = {
+		name = mry.105.1
+		trigger = {
+			original_tag = MRY
+		}
+	}
+
+	# TEG
+	option = {
+		name = mry.105.2
+		trigger = {
+			original_tag = TEG
+		}
+	}
+
+	# 其他
+	option = {
+		name = mry.105.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = MRY
+					original_tag = TEG
+				}
+			}
+		}
+	}
+}
+
+# MRY索取下玄武川
+news_event = {
+	id = mry.106
+	title = mry.106.t
+	desc = mry.106.d
+
+	fire_only_once = no
+	is_triggered_only = no
+	major = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = MRY_war_against_SCA_tt
+		}
+		MRY = {
+			is_subject = no
+			has_offensive_war_with = SCA
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = MRY_war_against_SCA_tt
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	# SCA
+	option = {
+		name = mry.106.1
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# MRY
+	option = {
+		name = mry.106.2
+		trigger = {
+			original_tag = MRY
+		}
+	}
+
+	# 其他
+	option = {
+		name = mry.106.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = SCA
+					original_tag = MRY
+				}
+			}
+		}
+	}
+}

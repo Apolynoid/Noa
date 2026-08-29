@@ -1,0 +1,27 @@
+add_namespace = go
+country_event = {
+	id = go.1
+	title = go.1.t
+	desc = go.1.d
+	is_triggered_only = yes
+	option = {
+		name = go.1.1
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = GO_nerf_puppet
+				days = FROM.GO_time_current
+			}
+		}
+		custom_effect_tooltip = GO_nerf_puppet_tt
+	}
+}
+country_event = {
+	id = go.2
+	title = go.2.t
+	desc = go.2.d
+	is_triggered_only = yes
+	option = {
+		name = go.2.1
+		set_variable = { GO_being_nerf = 0 }
+	}
+}

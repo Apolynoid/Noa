@@ -233,6 +233,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_nuclear"
+		texturefile = "gfx/interface/goals/focus_generic_nuclear.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_peace"
 		texturefile = "gfx/interface/goals/focus_generic_peace.png"			
 	}
@@ -410,6 +415,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_down_with_hawks"
 		texturefile = "gfx/interface/goals/focus_generic_down_with_hawks.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_echoryte"
+		texturefile = "gfx/interface/goals/focus_generic_echoryte.png"			
 	}
 
 	SpriteType = {
@@ -615,6 +625,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_befriend_NTR"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_NTR.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_focus_befriend_KAP"
+		texturefile = "gfx/interface/goals/focus_generic_befriend_KAP.png"			
 	}
 
 	SpriteType = {
@@ -859,6 +874,77 @@ spriteTypes = {
 	SpriteType = {
 		name = "TEG_focus_invest_in_kouyou_arsenal"
 		texturefile = "gfx/interface/goals/focus_TEG_invest_in_kouyou_arsenal.png"			
+	}
+
+	#### MRY Yasaka Kanako 守矢神社
+	SpriteType = {
+		name = "MRY_focus_divine_might"
+		texturefile = "gfx/interface/goals/focus_MRY_divine_might.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_divine_grace"
+		texturefile = "gfx/interface/goals/focus_MRY_divine_grace.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_god_of_science"
+		texturefile = "gfx/interface/goals/focus_MRY_god_of_science.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_form_god_of_abundance"
+		texturefile = "gfx/interface/goals/focus_MRY_god_of_abundance.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_form_tengu_national_salvation_army"
+		texturefile = "gfx/interface/goals/focus_MRY_form_tengu_national_salvation_army.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_kappa_industrial_donation"
+		texturefile = "gfx/interface/goals/focus_MRY_kappa_industrial_donation.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_triumphant_faith"
+		texturefile = "gfx/interface/goals/focus_MRY_triumphant_faith.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_holy_alliance_of_youkai_mountain"
+		texturefile = "gfx/interface/goals/focus_MRY_holy_alliance_of_youkai_mountain.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_hisoutensoku_prototype"
+		texturefile = "gfx/interface/goals/focus_MRY_hisoutensoku_prototype.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_improve_armor_reliability"
+		texturefile = "gfx/interface/goals/focus_MRY_improve_armor_reliability.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_improve_armor_firepower"
+		texturefile = "gfx/interface/goals/focus_MRY_improve_armor_firepower.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_hisoutensoku_mass_production"
+		texturefile = "gfx/interface/goals/focus_MRY_hisoutensoku_mass_production.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_autarky_effort"
+		texturefile = "gfx/interface/goals/focus_MRY_autarky_effort.png"			
+	}
+
+	SpriteType = {
+		name = "MRY_focus_youkai_mountain_economy_integration"
+		texturefile = "gfx/interface/goals/focus_MRY_youkai_mountain_economy_integration.png"			
 	}
 
 	#### CIR Cirno 雾之湖妖精联合体

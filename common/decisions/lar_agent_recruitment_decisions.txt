@@ -1,0 +1,546 @@
+lar_local_recruitment = {
+	#unlocks decisions to recruit in Gensokyo
+	recruit_in_Gensokyo = {
+
+		#icon = generic_research
+
+		available = {
+			
+		}
+
+		visible = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = Gensokyo
+				}
+			}
+			OR = {
+				any_owned_state = {
+					is_on_continent = Gensokyo
+				}
+				any_allied_country = {
+					any_owned_state = {
+						is_on_continent = Gensokyo
+					}
+				}
+				any_of_scopes = {
+					array = subjects
+					any_owned_state = {
+						is_on_continent = Gensokyo
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+			set_country_flag = Gensokyo_recruitment_unlocked
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	recruit_in_Gensokyo_state = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_on_continent = Gensokyo
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_capital = yes
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = Gensokyo_recruitment_unlocked
+				capital_scope = { is_on_continent = Gensokyo }
+			}
+			NOT = { has_country_flag = Gensokyo_recruitment_in_process }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 180
+		on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = { flag = Gensokyo_recruitment_in_process days = 180 value = 1 }
+			if = {
+				limit = {
+					num_of_operatives < num_operative_slots
+				}
+				custom_effect_tooltip = recruit_in_state_tt
+			}
+			else = {
+				custom_effect_tooltip = recruit_in_state_to_pool_tt
+			}
+			hidden_effect = {
+				create_operative_leader = {
+					bypass_recruitment = yes
+					nationalities = { FROM.OWNER }
+					portrait_tag_override = FROM.OWNER
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+#unlocks decisions to recruit in Gensokyo
+	recruit_in_Underground = {
+
+		#icon = generic_research
+
+		available = {
+			
+		}
+
+		visible = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = Underground
+				}
+			}
+			OR = {
+				any_owned_state = {
+					is_on_continent = Underground
+				}
+				any_allied_country = {
+					any_owned_state = {
+						is_on_continent = Underground
+					}
+				}
+				any_of_scopes = {
+					array = subjects
+					any_owned_state = {
+						is_on_continent = Underground
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+			set_country_flag = Underground_recruitment_unlocked
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	recruit_in_Underground_state = {
+
+		icon = onmap_recruit_operative
+		name = recruit_in_Gensokyo_state
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_on_continent = Underground
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_capital = yes
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = Underground_recruitment_unlocked
+				capital_scope = { is_on_continent = Underground }
+			}
+			NOT = { has_country_flag = Underground_recruitment_in_process }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 180
+		on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = { flag = Underground_recruitment_in_process days = 180 value = 1 }
+			if = {
+				limit = {
+					num_of_operatives < num_operative_slots
+				}
+				custom_effect_tooltip = recruit_in_state_tt
+			}
+			else = {
+				custom_effect_tooltip = recruit_in_state_to_pool_tt
+			}
+			hidden_effect = {
+				create_operative_leader = {
+					bypass_recruitment = yes
+					nationalities = { FROM.OWNER }
+					portrait_tag_override = FROM.OWNER
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	#unlocks decisions to recruit in Celestial
+	recruit_in_Celestial = {
+
+		#icon = generic_research
+
+		available = {
+			
+		}
+
+		visible = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = Celestial
+				}
+			}
+			OR = {
+				any_owned_state = {
+					is_on_continent = Celestial
+				}
+				any_allied_country = {
+					any_owned_state = {
+						is_on_continent = Celestial
+					}
+				}
+				any_of_scopes = {
+					array = subjects
+					any_owned_state = {
+						is_on_continent = Celestial
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+			set_country_flag = Celestial_recruitment_unlocked
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	recruit_in_Celestial_state = {
+
+		icon = onmap_recruit_operative
+		name = recruit_in_Gensokyo_state
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_on_continent = Celestial
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_capital = yes
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = Celestial_recruitment_unlocked
+				capital_scope = { is_on_continent = Celestial }
+			}
+			NOT = { has_country_flag = Celestial_recruitment_in_process }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 180
+		on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = { flag = Celestial_recruitment_in_process days = 180 value = 1 }
+			if = {
+				limit = {
+					num_of_operatives < num_operative_slots
+				}
+				custom_effect_tooltip = recruit_in_state_tt
+			}
+			else = {
+				custom_effect_tooltip = recruit_in_state_to_pool_tt
+			}
+			hidden_effect = {
+				create_operative_leader = {
+					bypass_recruitment = yes
+					nationalities = { FROM.OWNER }
+					portrait_tag_override = FROM.OWNER
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	#unlocks decisions to recruit in Netherworld
+	recruit_in_Netherworld = {
+
+		#icon = generic_research
+
+		available = {
+			
+		}
+
+		visible = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = Netherworld
+				}
+			}
+			OR = {
+				any_owned_state = {
+					is_on_continent = Netherworld
+				}
+				any_allied_country = {
+					any_owned_state = {
+						is_on_continent = Netherworld
+					}
+				}
+				any_of_scopes = {
+					array = subjects
+					any_owned_state = {
+						is_on_continent = Netherworld
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+			set_country_flag = Netherworld_recruitment_unlocked
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	recruit_in_Netherworld_state = {
+
+		icon = onmap_recruit_operative
+		name = recruit_in_Gensokyo_state
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_on_continent = Netherworld
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_capital = yes
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = Netherworld_recruitment_unlocked
+				capital_scope = { is_on_continent = Netherworld }
+			}
+			NOT = { has_country_flag = Netherworld_recruitment_in_process }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 180
+		on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = { flag = Netherworld_recruitment_in_process days = 180 value = 1 }
+			if = {
+				limit = {
+					num_of_operatives < num_operative_slots
+				}
+				custom_effect_tooltip = recruit_in_state_tt
+			}
+			else = {
+				custom_effect_tooltip = recruit_in_state_to_pool_tt
+			}
+			hidden_effect = {
+				create_operative_leader = {
+					bypass_recruitment = yes
+					nationalities = { FROM.OWNER }
+					portrait_tag_override = FROM.OWNER
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	#unlocks decisions to recruit in Hell
+	recruit_in_Hell = {
+
+		#icon = generic_research
+
+		available = {
+			
+		}
+
+		visible = {
+			capital_scope = {
+				NOT = {
+					is_on_continent = Hell
+				}
+			}
+			OR = {
+				any_owned_state = {
+					is_on_continent = Hell
+				}
+				any_allied_country = {
+					any_owned_state = {
+						is_on_continent = Hell
+					}
+				}
+				any_of_scopes = {
+					array = subjects
+					any_owned_state = {
+						is_on_continent = Hell
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		days_remove = 90
+
+		remove_effect = {
+			set_country_flag = Hell_recruitment_unlocked
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	recruit_in_Hell_state = {
+
+		icon = onmap_recruit_operative
+		name = recruit_in_Gensokyo_state
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_on_continent = Hell
+				CONTROLLER = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				is_capital = yes
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = Hell_recruitment_unlocked
+				capital_scope = { 
+					is_on_continent = Hell 
+				}
+			}
+			NOT = { has_country_flag = Hell_recruitment_in_process }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 180
+		on_map_mode = map_only
+		complete_effect = {
+			set_country_flag = { flag = Hell_recruitment_in_process days = 180 value = 1 }
+			if = {
+				limit = {
+					num_of_operatives < num_operative_slots
+				}
+				custom_effect_tooltip = recruit_in_state_tt
+			}
+			else = {
+				custom_effect_tooltip = recruit_in_state_to_pool_tt
+			}
+			hidden_effect = {
+				create_operative_leader = {
+					bypass_recruitment = yes
+					nationalities = { FROM.OWNER }
+					portrait_tag_override = FROM.OWNER
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

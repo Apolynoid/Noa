@@ -1,0 +1,413 @@
+SAGE_invite_category = {
+    SAGE_special_invite = {
+         allowed = {
+            or = {
+                tag = KAS
+                tag = YKR
+                tag = OKI
+            }
+        }
+        days_re_enable = 10
+        target_root_trigger = {
+            has_idea = gensoukyo_creator_idea2
+            is_subject = no
+            not = {
+                has_global_flag = SAGE_war_started
+            }
+        }
+        cost = 10
+        target_trigger = {
+            FROM = {
+                is_subject = no
+                or = {
+                    is_faction_leader = yes
+                    is_in_faction = no
+                }
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                }
+            }
+            or = {
+                ###HKR
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = HKR
+                    }
+                }
+                ###SCA
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = SCA
+                        not = {
+                            has_government = qinwai
+                        }
+                    }
+                }
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = SCA
+                        has_government = qinwai
+                    }
+                }
+                ###YOUKAI MOUNTAIN
+                and = {
+                    tag = KAS
+                    FROM = {
+                        youkai_mountain_country = yes
+                    }
+                }
+                ###MRY
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = MRY
+                        not = {
+                            has_government = qinwai
+                            has_government = guli
+                        }
+                    }
+                }
+                ###SEJ
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = SEJ
+                        or = {
+                            has_government = neworder
+                            has_government = oldorder
+                        }
+                    }
+                }
+                ###CIR
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = CIR
+                        has_government = qinwai
+                    }
+                }
+                ###TKM
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = TKM
+                        has_government = qinwai
+                    }
+                }
+                ###NMS
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = NMS
+                    }
+                }
+                ###NUE
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = NUE
+                    }
+                }
+                ###MNM
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = MNM
+                    }
+                }
+                ###KYK
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = KYK
+                    }
+                }
+                ###SRB
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = SRB
+                        not = {
+                            has_government = fandong
+                        }
+                    }
+                }
+                ###YUK
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = YUK
+                    }
+                }
+                ###EET
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = EET
+                    }
+                }
+
+                ###OUT OF GENSOKYO
+                #netherworld
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = YYK
+                        not = {
+                            has_government = fandong
+                            has_government = neworder
+                        }
+                    }
+                }
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = YOM
+                    }
+                }
+                #hell
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = SKI
+                        not = {
+                            has_government = qinwai
+                            has_government = fandong
+                        }
+                    }
+                }
+                and = {
+                    tag = OKI
+                    FROM = {
+                        tag = HCT
+                        not = {
+                            has_government = qinwai
+                            has_government = fandong
+                        }
+                    }
+                }
+                #underground
+                and = {
+                    tag = YKR
+                    FROM = {
+                        tag = SAT
+                        not = {
+                            has_government = qinwai
+                            has_government = fandong
+                        }
+                    }
+                }
+                and = {
+                    tag = KAS
+                    FROM = {
+                        tag = YUG
+                    }
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                exists = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                }
+            }
+        }
+        targets = { 
+            HKR SCA SEJ CIR TKM NMS SRB YUK EET #GENSOKYO
+            MRY TEG NMN KAP NTR YAW GRS AKI #YOUKAI MOUNTAIN
+            YYK SKI HCT SAT YUG #OTHERS
+        }
+        available = {
+            not = { has_country_flag = SAGE_cooldown }
+        }
+        complete_effect = {
+            FROM = {
+                country_event = { days = 2 id = sage.11 }
+            }
+        }
+        ai_will_do = {
+            base = 5000
+        }
+    }
+    SAGE_invite_members = {
+        allowed = {
+            or = {
+                tag = KAS
+                tag = YKR
+                tag = OKI
+            }
+        }
+        days_re_enable = 10
+        target_root_trigger = {
+            has_idea = gensoukyo_creator_idea2
+            is_subject = no
+            not = {
+                has_global_flag = SAGE_war_started
+            }
+        }
+        cost = 5
+        target_trigger = {
+            FROM = {
+                is_subject = no
+                jierangpanding = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                    tag = KAS
+                    tag = YKR
+                    tag = OKI
+                }
+                is_in_faction = no
+                has_war = no
+            }
+        }
+        visible = {
+            FROM = {
+                exists = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                }
+            }
+        }
+        target_array = global.gensokyo_countries
+        available = {
+            not = { has_country_flag = SAGE_cooldown }
+        }
+        complete_effect = {
+            FROM = {
+                country_event = { days = 2 id = sage.11 }
+            }
+            custom_effect_tooltip = SAGE_cooldown_tt
+            set_country_flag = {
+                flag = SAGE_cooldown
+                days = 10
+                value = 1
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+    SAGE_dismantle_faction = {
+        allowed = {
+            or = {
+                tag = KAS
+                tag = YKR
+                tag = OKI
+            }
+        }
+        days_re_enable = 10
+        target_root_trigger = {
+            has_idea = gensoukyo_creator_idea2
+            is_subject = no
+            not = {
+                has_global_flag = SAGE_war_started
+            }
+        }
+        cost = 10
+        target_trigger = {
+            FROM = {
+                is_subject = no
+                jierangpanding = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                    tag = KAS
+                    tag = YKR
+                    tag = OKI
+                }
+                is_faction_leader = yes
+                has_war = no
+            }
+        }
+        visible = {
+            FROM = {
+                exists = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                }
+            }
+        }
+        target_array = global.gensokyo_countries
+        available = {
+            not = { has_country_flag = SAGE_cooldown }
+        }
+        complete_effect = {
+            FROM = {
+                country_event = { days = 2 id = sage.11 }
+            }
+            custom_effect_tooltip = SAGE_cooldown_tt
+            set_country_flag = {
+                flag = SAGE_cooldown
+                days = 10
+                value = 1
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+    SAGE_stop_war = {
+        allowed = {
+            or = {
+                tag = KAS
+                tag = YKR
+                tag = OKI
+            }
+        }
+        days_re_enable = 10
+        target_root_trigger = {
+            has_idea = gensoukyo_creator_idea2
+            is_subject = no
+            not = {
+                has_global_flag = SAGE_war_started
+            }
+        }
+        cost = 10
+        target_trigger = {
+            FROM = {
+                is_subject = no
+                jierangpanding = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                    tag = KAS
+                    tag = YKR
+                    tag = OKI
+                }
+                has_offensive_war = yes
+                or = {
+                    is_faction_leader = yes
+                    is_in_faction = no
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                exists = yes
+                not = {
+                    has_country_flag = SAGE_rejected_@ROOT
+                }
+            }
+        }
+        target_array = global.gensokyo_countries
+        available = {
+            not = { has_country_flag = SAGE_cooldown }
+        }
+        complete_effect = {
+            FROM = {
+                country_event = { days = 2 id = sage.11 }
+            }
+            custom_effect_tooltip = SAGE_cooldown_tt
+            set_country_flag = {
+                flag = SAGE_cooldown
+                days = 10
+                value = 1
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+}

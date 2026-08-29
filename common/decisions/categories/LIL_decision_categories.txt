@@ -1,0 +1,97 @@
+LIL_baochun_c = {
+	priority = 200
+	visible = {
+		has_completed_focus = LIL_18
+    }
+	# visible_when_empty = yes
+	on_map_area = {
+		target_array = global.Gensokyo_state
+		target_trigger = {
+			FROM = {
+				is_capital = yes
+				owner = {
+					NOT = {
+						tag = LIL
+						tag = ZON
+					}
+				}
+			}
+		}
+		name = LIL_baochun_c_tt
+		zoom = 300
+	}
+}
+LIL_leyuanzhisheng_c = {
+	priority = 150
+}
+LIL_yonghenhuahai_c = {
+	priority = 150
+	visible = {
+		has_completed_focus = LIL_50
+    }
+	visible_when_empty = yes
+	highlight_states = {
+        highlight_states_trigger = {
+			FROM = {
+				is_owned_by = ROOT 
+				ST_race_is_Fairy = yes
+				any_neighbor_state = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+				NOT = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+			}
+        }
+    }
+	on_map_area = {
+		target_array = owned_controlled_states
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT 
+				ST_race_is_Fairy = yes
+				any_neighbor_state = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+				NOT = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+			}
+		}
+		name = LIL_yonghenhuahai_c_tt
+		zoom = 150
+	}
+}
+LIL_zhenzhaoguowangweidui_c = {
+	priority = 150
+}
+LIL_leyuanfazhanjihua_c = {
+	priority = 150
+}
+LIL_leyuangongjinhui_c = {
+	visible = {
+		has_completed_focus = LIL_126
+	}
+	visible_when_empty = yes
+	priority = 150
+}
+LIL_yaojingjiefangzhanzhen_c = {
+	priority = 160
+}
+LIL_chunfengxingdong_c = {
+	priority = 210
+}
+LIL_shenpantingxingdong_c = {
+	priority = 210
+}
+LIL_chanchushenmingshenshangdeliu_c = {
+	priority = 210
+}
+LIL_yonghenleyuan_c = {
+	visible = {
+		NOT = {
+			has_country_flag = yonghezhichun
+		}
+	}
+	priority = 300
+}

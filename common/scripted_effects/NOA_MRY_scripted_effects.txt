@@ -1,0 +1,55 @@
+MRY_clamp_and_calc_faith_bonus = {
+	clamp_variable = {
+		var = MRY_faith_value
+		min = -100.0
+		max = 100.0
+	}
+	set_variable = {
+		MRY_faith_bonus_general = { value = MRY_faith_value divide = 1000 }
+	}
+	if = {
+		limit = {
+			has_completed_focus = MRY_shou_shi_jun_shi_qi_ji
+		}
+		set_variable = {
+			MRY_faith_bonus_military = { value = MRY_faith_value divide = 1000 }
+		}
+		clamp_variable = {
+			var = MRY_faith_bonus_military
+			min = 0.0
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = MRY_shou_shi_jian_she_qi_ji
+		}
+		set_variable = {
+			MRY_faith_bonus_building = { value = MRY_faith_value divide = 500 }
+		}
+		clamp_variable = {
+			var = MRY_faith_bonus_building
+			min = 0.0
+		}
+	}
+}
+
+MRY_gain__MRY_faith_gain__faith = {
+	custom_effect_tooltip = MRY_gain__MRY_faith_gain__faith_tt
+	hidden_effect = {
+		add_to_variable = {
+			MRY_faith_value = MRY_faith_gain
+		}
+		MRY_clamp_and_calc_faith_bonus = yes
+	}
+}
+
+MRY_lose__MRY_faith_lost__faith = {
+	custom_effect_tooltip = MRY_lose__MRY_faith_lost__faith_tt
+	hidden_effect = {
+		subtract_from_variable = {
+			MRY_faith_value = MRY_faith_lost
+		}
+		MRY_clamp_and_calc_faith_bonus = yes
+	}
+}
+

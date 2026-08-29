@@ -26,7 +26,6 @@
 
         #混合系
         sc_shield1 = 1
-        jijia1 = 1
             
         #工程学 
         jichushuxue = 1
@@ -46,7 +45,7 @@
         yunshucheliang146 = 1
 
         #种族
-            
+        MRY_fei_xiang_tian_ze_tech = 1
     }
 
     set_grand_doctrine = fire_support
@@ -69,17 +68,24 @@
         sc_rule
     }
     add_ideas = {
-        
+        MRY_xin_yang_wei_ji_idea
+        MRY_tian_gou_di_guo_liu_wang_zhe_idea
+        MRY_fei_xiang_tian_ze_idea
     }
+
+    recruit_character = MRY_ysk
+    recruit_character = MRY_sanae
+    recruit_character = MRY_mry
+
     set_politics = {
     	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 25
-        guli = 5
-        neworder = 70
+        qinwai = 10
+        guli = 40
+        neworder = 50
         oldorder = 0
         fandong = 0
     }

@@ -31,6 +31,12 @@ spriteTypes = {
 		texturefile = "gfx/equipments/sf/motorcycle.png"
 	}
 
+# MRY
+	spriteType = {
+		name = "GFX_hisoutensoku_medium"
+		texturefile = "gfx/equipments/tank/hisoutensoku.png"
+	}
+
 	SpriteType = {
 		name = "GFX_doctrine_combined_arms_medium"
 		texturefile = "gfx/interface/doctrines/icons/doctrine_combined_arms.png"

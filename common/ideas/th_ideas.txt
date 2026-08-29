@@ -357,61 +357,7 @@ ideas = {
 				can_create_factions = yes
 			}
 		}
-		####otg
-		OTG_otg_problem_idea = {
-	    	picture = generic_disjointed_gov
-	    	allowed = {
-				always = no
-			}
 
-			available = {
-				country_exists = TEG
-				not = {
-					TEG = { is_subject_of = ROOT}
-				}
-			}
-
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			modifier = {
-				political_power_factor = -0.25
-			}
-
-			targeted_modifier = { 
-				tag = TEG
-				attack_bonus_against = -0.1
-				defense_bonus_against = -0.1
-			}
-	    }
-	    ############SCENARIO 143############
-	    qingbaoxielu143_idea = {
-			modifier = {
-				encryption = -100
-				resistance_target = 1
-			}
-		}
-		juexin_idea = {
-			modifier = {
-				decryption = 40
-				stability_factor = 0.5
-				war_support_factor = 0.5
-			}
-			targeted_modifier = { 
-				tag = HUM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.2
-			}
-		}
-		shuxirenli_idea = {
-			targeted_modifier = { 
-				tag = HUM
-				attack_bonus_against = 0.5
-				defense_bonus_against = 0.5
-			}
-		}
 		#########WEI WANG
 		great_presige_idea = {
 	    	picture = FRA_la_deluge
@@ -498,9 +444,9 @@ ideas = {
 			available = {
 				not = { 
 					OR = {
-						has_tech = special_operations
-						has_tech = fire_support
-						has_tech = mass_assault
+						has_doctrine = special_operations
+						has_doctrine = fire_support
+						has_doctrine = mass_assault
 					}
 				}
 			}

@@ -1,0 +1,535 @@
+view_change = {
+    add_weixin = {
+        visible = {
+            always = yes
+        }
+
+        available = {
+            political_power_daily > 0.1
+            custom_trigger_tooltip = {
+                tooltip = shijieguantiaozheng_tt
+                not = {
+                    has_country_flag = shijieguantiaozheng_tt
+                }
+            }
+        }
+
+        cost = OL_to_change_cost
+
+        fire_only_once = no
+
+        modifier = {
+            political_power_gain = -0.15
+            OL_daily_gain = 0.04
+        }
+        days_remove = 182
+
+        remove_effect = {
+
+        }
+
+        complete_effect = {
+            set_country_flag = {
+                days = 183
+                flag = shijieguantiaozheng_tt
+                value = 1
+            }
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 0}
+                }
+                add_stability = 0.01
+            }
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 2}
+                }
+                add_stability = -0.02
+            }
+            custom_effect_tooltip = add_weixin_tt
+            
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value < -5}
+                add = 1
+            }
+            modifier = {
+                check_variable = { OL_view_type = 0 }
+                add = 0.5
+            }
+            modifier = {
+                check_variable = { OL_view_value > 85}
+                factor = 0
+            }
+            modifier = {
+                go_weixin_condition = yes
+                add = 5
+            }
+            modifier = {
+                or = {
+                    has_government = oldorder
+                    has_government = neworder
+                }
+                factor = 1.25
+            }
+        }
+    }
+
+    add_weiwu = {
+        visible = {
+            always = yes
+        }
+
+        available = {
+            political_power_daily > 0.1
+            custom_trigger_tooltip = {
+                tooltip = shijieguantiaozheng_tt
+                not = {
+                    has_country_flag = shijieguantiaozheng_tt
+                }
+            }
+        }
+
+        cost = OL_to_change_cost
+
+        fire_only_once = no
+
+        modifier = {
+            political_power_gain = -0.15
+            OL_daily_gain = -0.04
+        }
+
+        days_remove = 182
+
+        remove_effect = {
+
+        }
+
+        complete_effect = {
+            set_country_flag = {
+                days = 183
+                flag = shijieguantiaozheng_tt
+                value = 1
+            }
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 2}
+                }
+                add_stability = 0.01
+            }
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 0}
+                }
+                add_stability = -0.02
+            }
+
+            custom_effect_tooltip = add_weiwu_tt
+            
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value > 5}
+                add = 1
+            }
+            modifier = {
+                check_variable = { OL_view_type = 2 }
+                add = 0.5
+            }
+            modifier = {
+                check_variable = { OL_view_value < -85 }
+                factor = 0
+            }
+            modifier = {
+                go_weiwu_condition = yes
+                add = 5
+            }
+            modifier = {
+                has_government = qinwai
+                factor = 1.25
+            }
+        }
+    }
+
+    view_to_weixin = {
+        visible = {
+            check_variable = { OL_view_type = 1}
+			ROOT = {
+				not = {has_completed_focus = SGS_sikaodefangshi}
+			}
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = view_to_weixin_tt
+                or = {
+                    check_variable = { OL_view_value > global.OL_border2}
+                    check_variable = { OL_view_value = global.OL_border2}
+                } 
+            }
+              
+        }
+
+        modifier = {
+
+        }
+
+        cost = 120
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            outlook_to_weixin = yes
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    PO_average_mp > 70
+                }
+            }
+        }
+    }
+
+    view_to_pingheng = {
+        visible = {
+            not = { check_variable = { OL_view_type = 1} }
+			ROOT = {
+				not = {has_completed_focus = SGS_sikaodefangshi}
+			}
+        }
+        available = {
+            or = {
+                custom_trigger_tooltip = {
+                    tooltip = view_to_pingheng1_tt
+                    check_variable = { OL_view_type = 0}
+                    or = {
+                        check_variable = { OL_view_value < global.OL_view1_border2}
+                        check_variable = { OL_view_value = global.OL_view1_border2}
+                    } 
+                }
+
+                custom_trigger_tooltip = {
+                    tooltip = view_to_pingheng2_tt
+                    check_variable = { OL_view_type = 2}
+                    or = {
+                        check_variable = { OL_view_value > global.OL_view1_border1}
+                        check_variable = { OL_view_value = global.OL_view1_border1}
+                    } 
+                }
+
+
+            }
+            
+              
+        }
+
+        modifier = {
+
+        }
+
+        cost = 120
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 0}
+                }
+                outlook_to_weiwu = yes
+                else = {
+                    outlook_to_weixin = yes
+                }
+            }
+            
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    OL_view_type = 2
+                }
+                check_variable = {
+                    PO_average_mp > 75
+                }
+            }
+            modifier = {
+                factor = 10
+                check_variable = {
+                    OL_view_type = 0
+                }
+                check_variable = {
+                    PO_average_mp < 25
+                }
+            }
+        }
+    }
+
+    view_to_weiwu = {
+        visible = {
+            check_variable = { OL_view_type = 1}
+			ROOT = {
+				not = {has_completed_focus = SGS_sikaodefangshi}
+			}
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = view_to_weiwu_tt
+                or = {
+                    check_variable = { OL_view_value < global.OL_border1}
+                    check_variable = { OL_view_value = global.OL_border1}
+                } 
+            }
+        }
+
+        modifier = {
+
+        }
+
+        cost = 120
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            outlook_to_weiwu = yes
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    PO_average_mp < 25
+                }
+            }
+        }
+    }
+    
+	view_to_weixin2 = {
+        visible = {
+            check_variable = { OL_view_type = 1}
+			ROOT = {
+				has_completed_focus = SGS_sikaodefangshi
+			}
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = view_to_weixin_tt
+                or = {
+                    check_variable = { OL_view_value > global.OL_border2}
+                    check_variable = { OL_view_value = global.OL_border2}
+                } 
+            }
+              
+        }
+
+        modifier = {
+
+        }
+
+        cost = 90
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            outlook_to_weixin = yes
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    PO_average_mp > 70
+                }
+            }
+        }
+    }
+
+    view_to_pingheng3 = {
+        visible = {
+            not = { check_variable = { OL_view_type = 1} }
+			ROOT = {
+				has_completed_focus = SGS_sikaodefangshi
+			}
+        }
+        available = {
+            or = {
+                custom_trigger_tooltip = {
+                    tooltip = view_to_pingheng1_tt
+                    check_variable = { OL_view_type = 0}
+                    or = {
+                        check_variable = { OL_view_value < global.OL_view1_border2}
+                        check_variable = { OL_view_value = global.OL_view1_border2}
+                    } 
+                }
+
+                custom_trigger_tooltip = {
+                    tooltip = view_to_pingheng2_tt
+                    check_variable = { OL_view_type = 2}
+                    or = {
+                        check_variable = { OL_view_value > global.OL_view1_border1}
+                        check_variable = { OL_view_value = global.OL_view1_border1}
+                    } 
+                }
+
+
+            }
+            
+              
+        }
+
+        modifier = {
+
+        }
+
+        cost = 90
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            if = {
+                limit = {
+                    check_variable = { OL_view_type = 0}
+                }
+                outlook_to_weiwu = yes
+                else = {
+                    outlook_to_weixin = yes
+                }
+            }
+            
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    OL_view_type = 2
+                }
+                check_variable = {
+                    PO_average_mp > 75
+                }
+            }
+            modifier = {
+                factor = 10
+                check_variable = {
+                    OL_view_type = 0
+                }
+                check_variable = {
+                    PO_average_mp < 25
+                }
+            }
+        }
+    }
+
+    view_to_weiwu3 = {
+        visible = {
+            check_variable = { OL_view_type = 1}
+			ROOT = {
+				has_completed_focus = SGS_sikaodefangshi
+			}
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = view_to_weiwu_tt
+                or = {
+                    check_variable = { OL_view_value < global.OL_border1}
+                    check_variable = { OL_view_value = global.OL_border1}
+                } 
+            }
+        }
+
+        modifier = {
+
+        }
+
+        cost = 90
+
+        days_remove = global.OL_view_time
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_stability = -0.25
+            outlook_to_weiwu = yes
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 10
+                check_variable = {
+                    PO_average_mp < 25
+                }
+            }
+        }
+    }
+
+    testest_add = {
+        visible = {
+            always = no
+        }
+        complete_effect = {
+            add_to_variable = { OL_view_value = 20}
+        }
+    }
+    testest_minus = {
+        visible = {
+            always = no
+        }
+        complete_effect = {
+            add_to_variable = { OL_view_value = -20}
+        }
+    }
+}

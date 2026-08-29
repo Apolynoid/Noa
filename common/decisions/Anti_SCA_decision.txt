@@ -1,0 +1,236 @@
+# SCA_fanSCA = {
+# 	enter_wang = {
+#         visible = {
+#             has_global_flag = SCA_baoweiwang
+#             is_subject = no
+#             SCA = { is_subject = no }
+#             country_exists = SCA
+#             not = { has_country_flag = SCA_baoweiwangjianlizhe }
+#             not = { has_global_flag = SCA_baoweiwang_over}
+#             not = { is_in_faction_with = SCA}
+#             not = { has_war_with = SCA }
+#         }
+#         available = {
+#             date < 153.1.1
+#             custom_trigger_tooltip = {
+#                 tooltip =  SCA_baoweiwang_has_entered
+#                 not = { has_global_flag = SCA_baoweiwang_has_entered}
+#             }
+
+#             # custom_trigger_tooltip = {
+#             #     tooltip =  SCA_entered_lower_than_5
+#             #     or = {
+#             #         has_global_flag = {
+#             #             flag = SCA_entered_lower_than_5
+#             #             value < 6
+#             #         }
+#             #         not = {
+#             #             has_global_flag = SCA_entered_lower_than_5
+#             #         }
+#             #     }
+#             # }
+
+#             custom_trigger_tooltip = {
+#                 tooltip =   SCA_neighbor
+#                 any_country = {
+#                     or = {
+#                         is_subject_of = ROOT
+#                         tag = ROOT
+#                         is_in_faction_with = ROOT
+#                     }
+#                     any_neighbor_country = {
+#                         or = {
+#                             has_war_with = SCA
+#                             is_in_faction_with = SCA
+#                             tag = SCA
+#                             is_subject_of = SCA
+#                         }
+#                     }
+#                 }     
+#             }
+
+#             custom_trigger_tooltip = {
+#                 tooltip =   SCA_ready_to_attack
+#                 or = {
+#                     has_country_flag =  SCA_ready_to_attack
+#                 }   
+                
+#             }
+
+#             # always = no
+
+#             #
+#             custom_trigger_tooltip = {
+#                 tooltip = SCA_strength
+#                 check_variable = { global.SCA_strength > global.enemy_strength }
+#             }
+
+#             not = { has_non_aggression_pact_with = SCA}
+            
+#         }
+
+#         modifier = {
+#         	training_time_factor = -0.05
+#         }
+
+#         days_remove = 90
+
+#         cost = 10
+
+#         war_with_on_complete = SCA
+
+#         # days_re_enable = 60
+
+
+#         fire_only_once = yes
+
+#         complete_effect = {
+
+#             if = {
+#                 limit = {
+#                     or = {
+#                         any_country = {
+#                             has_country_flag = SCA_baoweiwangjianlizhe
+#                             is_subject = yes
+#                         }
+#                         has_global_flag = SCA_yaoguaishanxianxuanzhan
+#                     }
+#                     check_variable = {
+#                         all_value > 549
+#                     }
+#                     is_in_faction = no
+#                 }
+#                 every_country = {
+#                     limit = {
+#                         has_country_flag = SCA_baoweiwangjianlizhe
+#                     }
+#                     clr_country_flag = SCA_baoweiwangjianlizhe
+#                 }
+#                 clr_global_flag = SCA_yaoguaishanxianxuanzhan
+#                 create_faction = fanSCAbaoweiwang
+#                 set_country_flag = SCA_baoweiwangjianlizhe
+#             }
+            
+#             # if = {
+#             #     limit = {
+#             #         not = {
+#             #             has_global_flag = SCA_entered_lower_than_5
+#             #         }       
+#             #     }
+#             #     set_global_flag = {
+#             #         flag = SCA_entered_lower_than_5
+#             #         value = 1
+#             #     }
+#             #     else = {
+#             #         modify_global_flag = {
+#             #             flag = SCA_entered_lower_than_5
+#             #             value = 1
+#             #         }
+#             #     }
+#             # }
+            
+            
+#             set_global_flag = {
+#                 flag = SCA_baoweiwang_has_entered
+#                 value = 1
+#                 days = 182
+#             }
+# 	    }
+
+#         war_with_on_remove = SCA
+
+#         remove_effect = {
+#             declare_war_on = {
+#                 target = SCA
+#                 type = dahongmoguan_wargoal
+#             }
+#         }
+
+#         ai_will_do = {
+#             factor = 3
+#             modifier = {
+#                 or = {
+#                     tag = SEJ
+#                     tag = CIR
+#                     tag = TEG
+#                     tag = MRY
+#                 }
+                
+#                 factor = 10
+#             }
+
+#             modifier = {
+#                 tag = NMS
+#                 num_subjects > 0  
+#                 factor = 8
+#             }
+
+#             modifier = {
+#                 tag = TKM
+#                 NMS = { has_war_with = SCA} 
+#                 factor = 8
+#             }
+
+#             modifier = {
+#                 has_army_manpower = {
+#                     size < 1500
+#                 }
+#                 factor = 0
+#             }
+
+#             modifier = {
+#                 has_army_manpower = {
+#                     size > 1500
+#                 }
+#                 factor = 1
+#             }
+
+#             modifier = {
+#                 has_army_manpower = {
+#                     size > 2500
+#                 }
+#                 factor = 1.2
+#             }
+
+#              modifier = {
+#                 has_army_manpower = {
+#                     size > 4000
+#                 }
+#                 factor = 1.5
+#             }
+
+#             modifier = {
+#                 SCA = {
+#                     enemies_strength_ratio > 0.3
+#                 }
+#                 factor = 1.2
+#             }
+
+#             modifier = {
+#                 SCA = {
+#                     enemies_strength_ratio > 0.5
+#                 }
+#                 factor = 1.5
+#             }
+
+#             modifier = {
+#                 SCA = {
+#                     enemies_strength_ratio > 0.75
+#                 }
+#                 factor = 2
+#             }
+
+#             modifier = {
+#                 SCA = {
+#                     enemies_strength_ratio > 1
+#                 }
+#                 factor = 3
+#             }
+
+#             modifier = {
+#                 has_war = yes
+#                 factor = 0
+#             }
+#         }
+#     }
+# }

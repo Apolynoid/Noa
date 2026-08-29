@@ -1,0 +1,8 @@
+MRY_has__MRY_target_faith__faith = {
+	custom_trigger_tooltip = {
+		tooltip = MRY_has__MRY_target_faith__faith_tt
+		check_variable = {
+			MRY_faith_value > MRY_target_faith
+		}
+	}
+}

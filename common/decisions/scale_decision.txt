@@ -1,0 +1,191 @@
+scale_change = {
+    to_tribal = {
+        visible = {
+            has_idea = Village
+            not = {
+                has_country_flag = bunengzhuanbian
+            }
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = to_tribal_tt
+                check_variable = { all_value_plus_manpower < 180}
+            }
+        }
+
+        modifier = {
+            stability_weekly = -0.006
+            political_power_gain = -0.5
+        }
+
+        days_remove = 182
+
+        cost = 100
+
+        # days_re_enable = 90
+
+        fire_only_once = no
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            add_ideas = Tribal
+        }
+
+        cancel_trigger = {
+            not = {
+                has_idea = Village
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+	to_village = {
+        visible = {
+            has_idea = Tribal
+            not = {
+                has_country_flag = bunengzhuanbian
+            }
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = to_village_tt
+                check_variable = { all_value_plus_manpower > 299}
+            }
+        }
+
+        modifier = {
+
+        }
+
+        days_remove = 365
+
+        cost = 100
+
+        # days_re_enable = 90
+
+        fire_only_once = no
+
+        complete_effect = {
+		    
+	    }
+
+        remove_effect = {
+            add_ideas = Village
+        }
+
+        cancel_trigger = {
+            not = {
+                has_idea = Tribal
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
+        }
+    }
+
+    to_town = {
+        visible = {
+            has_idea = Village
+            not = {
+                has_country_flag = bunengzhuanbian
+            }
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = to_town_tt
+                check_variable = { all_value_plus_manpower > 549}
+            }
+        }
+
+        modifier = {
+
+        }
+
+        days_remove = 365
+
+        cost = 100
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_ideas = Town
+        }
+
+        cancel_trigger = {
+            not = {
+                has_idea = Village
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
+        }
+    }
+    to_country = {
+        visible = {
+            has_idea = Town
+            not = {
+                has_country_flag = bunengzhuanbian
+            }
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = to_country_tt
+                check_variable = { all_value_plus_manpower > 1049}
+            }
+        }
+
+        modifier = {
+
+        }
+
+        days_remove = 365
+
+        cost = 100
+
+        days_re_enable = 90
+
+        fire_only_once = no
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            add_ideas = Country
+        }   
+
+        cancel_trigger = {
+            not = {
+                has_idea = Town
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
+        }
+    }
+}

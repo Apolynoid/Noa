@@ -222,6 +222,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_generic_attack_teg"
+		texturefile = "gfx/interface/ideas/generic_attack_teg.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_attack_ntr"
 		texturefile = "gfx/interface/ideas/generic_attack_ntr.png"
 	}
@@ -292,6 +297,32 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TEG_democracy_alliance"
 		texturefile = "gfx/interface/ideas/teg_democracy_alliance.png"
+	}
+
+	#### MRY Yasaka Kanako 守矢神社
+	spriteType = {
+		name = "GFX_idea_MRY_faith_crisis"
+		texturefile = "gfx/interface/ideas/mry_faith_crisis.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRY_exiles_from_tengu_empire"
+		texturefile = "gfx/interface/ideas/mry_exiles_from_tengu_empire.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRY_faith_of_moriya"
+		texturefile = "gfx/interface/ideas/mry_faith_of_moriya.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRY_hisoutensoku"
+		texturefile = "gfx/interface/ideas/mry_hisoutensoku.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MRY_youkai_mountain_economy_integration"
+		texturefile = "gfx/interface/ideas/mry_youkai_mountain_economy_integration.png"
 	}
 
 	#### SEJ Kijin Seija 叛乱同盟

@@ -81,5 +81,57 @@ country_event = {
 	}
 }
 
-# 天狗向红魔馆进军
+# 天狗军队向红魔馆进军
+news_event = {
+	id = teg.106
+	title = teg.106.t
+	desc = teg.106.d
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
 
+	# TEG
+	option = {
+		name = teg.106.1
+		trigger = {
+			original_tag = TEG
+		}
+	}
+
+	# SCA
+	option = {
+		name = teg.106.2
+		trigger = {
+			original_tag = SCA
+		}
+	}
+
+	# 与SCA交战
+	option = {
+		name = teg.106.3
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TEG
+					original_tag = SCA
+				}
+			}
+			has_war_with = SCA
+		}
+	}
+
+	option = {
+		name = teg.106.4
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = TEG
+					original_tag = SCA
+				}
+			}
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+}

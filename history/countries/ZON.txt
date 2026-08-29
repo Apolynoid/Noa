@@ -28,8 +28,6 @@ XXX = { #same in initial_leader_setting(scripted_effects) only to decrease error
 
     recruit_character = OTG_tsukasa
     recruit_character = OTG_megumu
-    recruit_character = OTG_megumu_leader
-    recruit_character = OTG_council_leader
 
 }
 CHE = {
@@ -115,14 +113,6 @@ LIL = {
 MOK = {
     recruit_character = MOK_mokou
     recruit_character = MOK_mokou_leader
-}
-MRY = {
-    recruit_character = MRY_ysk
-    recruit_character = MRY_ysk_leader
-    recruit_character = MRY_sanae
-    recruit_character = MRY_sanae_leader
-    recruit_character = MRY_mry
-    recruit_character = MRY_mry_leader
 }
 MSD = {
     recruit_character = MSD_msd

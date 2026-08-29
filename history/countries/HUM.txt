@@ -62,7 +62,6 @@
     oob = "HUM_146"
     # set_research_slots = 6
     # Starting tech
-    set_party_name = { ideology = neworder long_name = HUM_neworder_main_party name = HUM_neworder_main_party }
     set_truce = {target = EMB days = 1095}
     set_truce = {target = WAK days = 1095}
     set_truce = {target = KAG days = 1095}

@@ -142,3 +142,5 @@ TES_build_personal_cult_tt:0 "塑造对领袖的个人崇拜，获得§Y1§!点�
 TES_uncoordinated_army_tt:0 "天界陆军系统坚持拒绝对军队实际情况的深入调查，因此军队的问题可能直到§Y真正的战争§!中才能显现。尽管如此，我们仍然有一系列准备工作可以完成：\n§Y战略后勤§!：与§Y工业家联合会§!提前联系，她们的支持对战争后勤必不可少。\n§Y人才培养§!：提前建设§Y军事学院§!，培养更多参谋人才。\n§Y控制军队§!：向军队系统§Y派遣忠诚军官§!，或§Y收买现役军官§!，为人事改革做准备。"
 
 TES_allow_integration_of_CFA_tt:0 "允许对占领的[CFA.GetNameWithFlag]地区开启§Y$integration_law$§!法案。"
+
+TES_world_limit_remove_tt:0 "当整合[CFA.GetNameWithFlag]所有核心地区后，将解除调整规模为§Y世界§!的限制。"

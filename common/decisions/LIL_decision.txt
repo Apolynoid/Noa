@@ -1,0 +1,1095 @@
+LIL_baochun_c = {
+	LIL_baochun = {
+		icon = baochun
+		available = {
+			OR = {
+				has_country_flag = LIL_chuntiandaolai
+				has_country_flag = yonghezhichun
+			}	
+			NOT = {
+				has_country_flag = LIL_baochunzhong
+			}
+			custom_trigger_tooltip = {
+				tooltip = LIL_diqubaochun_tt
+				FROM = {
+					NOT = {
+						has_state_flag = LIL_diqubaochun
+					}
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				is_capital = yes
+			}
+		}
+		allowed = {
+			tag = LIL
+		}
+		target_root_trigger = {
+			has_completed_focus = LIL_18
+		}
+		target_trigger = {
+			FROM = {
+				# is_on_continent = Gensokyo
+				owner = {
+					NOT = {
+						tag = LIL
+						tag = ZON
+					}
+				}
+			}
+		}
+	  	target_array = global.Gensokyo_state
+		days_remove = 30
+		on_map_mode = map_only
+		state_target = yes
+		complete_effect = {
+			custom_effect_tooltip = LIL_baochun_tt
+			FROM = {
+				set_state_flag = LIL_diqubaochun
+				set_state_flag = LIL_diqubaochun_xiaoguo
+			}
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						has_state_flag = LIL_diqubaochun_xiaoguo
+					}
+				}
+				LIL_baochun_30 = yes
+				every_owned_state = {
+					clr_state_flag = LIL_diqubaochun_xiaoguo
+				}
+			}
+			LIL_chunzhizhong_1 = yes
+			set_country_flag = LIL_baochunzhong
+			custom_effect_tooltip = LIL_diqubaochun_xiaoguo_tt
+			effect_tooltip = {
+				LIL_baochun_30 = yes
+			}
+			hidden_effect = {
+				LIL = {
+					LIL_lil = {
+						set_nationality = ZON
+					}
+				}
+			}
+		}
+		remove_effect = {
+			clr_country_flag = LIL_baochunzhong
+			custom_effect_tooltip = LIL_baochunjieshu_tt
+			hidden_effect = {
+				ZON = {
+					LIL_lil = {
+						set_nationality = LIL
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	LIL_baochun_diantai = {
+		available = {
+			OR = {
+				has_country_flag = LIL_chuntiandaolai
+				has_country_flag = yonghezhichun
+			}
+		}
+		visible = {
+			FROM = {
+				is_capital = yes
+			}
+		}
+		allowed = {
+			tag = LIL
+		}
+		target_root_trigger = {
+			has_completed_focus = LIL_97
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_state_flag = LIL_diqubaochun
+				}
+				
+				# is_on_continent = Gensokyo
+				owner = {
+					NOT = {
+						tag = LIL
+						tag = ZON
+					}
+				}
+			}
+		}
+		target_array = global.Gensokyo_state
+		days_remove = 30
+		cost = 200
+		on_map_mode = map_only
+		state_target = yes
+		complete_effect = {
+		#	custom_effect_tooltip = LIL_baochun_tt
+			FROM = {
+				set_state_flag = LIL_diqubaochun
+				set_state_flag = LIL_diqubaochun_xiaoguo
+			}
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						has_state_flag = LIL_diqubaochun_xiaoguo
+					}
+				}
+				LIL_baochun_30 = yes
+				every_owned_state = {
+					clr_state_flag = LIL_diqubaochun_xiaoguo
+				}
+			}
+			LIL_chunzhizhong_1 = yes
+			set_country_flag = LIL_baochunzhong
+			custom_effect_tooltip = LIL_diqubaochun_xiaoguo_tt
+			effect_tooltip = {
+				LIL_baochun_30 = yes
+			}
+			hidden_effect = {
+				LIL = {
+					LIL_lil = {
+						set_nationality = ZON
+					}
+				}
+			}
+		}
+		remove_effect = {
+		#	clr_country_flag = LIL_baochunzhong
+		#	custom_effect_tooltip = LIL_baochunjieshu_tt
+			hidden_effect = {
+				ZON = {
+					LIL_lil = {
+						set_nationality = LIL
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	LIL_shiyongchunzhizhong = {
+		available = {
+			has_country_flag = LIL_chuntiandaolai
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_18
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			LIL_baochun_30 = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	LIL_zhongzhichunzhizhong = {
+		available = {
+			has_country_flag = LIL_chuntiandaolai
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+		}
+		days_re_enable = 90
+		days_remove = 90
+		visible = {
+			has_completed_focus = LIL_18
+		}
+		complete_effect = {
+			LIL_chunzhizhong_1 = yes
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+LIL_leyuanzhisheng_c = {
+	LIL_leyuanzhisheng_j = {
+		available = {
+
+		}
+		visible = {
+
+		}
+		allowed = {
+			tag = LIL
+		}
+		target_root_trigger = {
+			has_completed_focus = LIL_96
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_idea = LIL_leyuanzhisheng
+				}
+				OR = {
+					tag = SCA
+					AND = {
+						capital_scope = {
+							is_on_continent = Gensokyo
+						}
+						NOT = {
+							has_government = qinwai
+						}
+						OR = {
+							AND = {
+								NOT = {
+									has_idea = Fairy
+								}
+								any_owned_state = {
+									check_variable = {
+										ST_present_race = 6
+									}
+								}
+							}
+							AND = {
+								NOT = {
+									has_idea = Fairy
+								}
+								any_neighbor_country = {
+									is_puppet_of = FROM
+									has_idea = Fairy
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_ideas = LIL_leyuanzhisheng
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+LIL_yonghenhuahai_c = {
+	LIL_kuozhangyonghenhuahai = {
+	#	icon = baochun
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+		}
+		visible = {
+			
+		}
+		allowed = {
+			tag = LIL
+		}
+		target_root_trigger = {
+			has_completed_focus = LIL_50
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT 
+				ST_race_is_Fairy = yes
+				any_neighbor_state = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+				NOT = {
+					has_state_flag = LIL_yonghenhuahai_dy_flag
+				}
+			}
+		}
+		target_array = owned_controlled_states
+		on_map_mode = map_only
+		state_target = yes
+		complete_effect = {
+			PO_add1 = yes
+			add_to_variable = {
+				LIL_yonghenhuahai_lingli = 0.1
+			}
+			add_to_variable = {
+				LIL_yonghenhuahai_lingli_tt = 10
+			}
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = LIL_yonghenhuahai_dy
+				}
+				remove_building = {
+				    type = 	infrastructure
+				    level = 2
+				}
+				set_state_flag = LIL_yonghenhuahai_dy_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
+LIL_zhenzhaoguowangweidui_c = {
+	LIL_zhenzhaoguowangweidui = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_153
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = guowangweidui_flag
+				}
+				division_template = {
+					name = "国王卫队"
+					is_locked = no
+					priority = 2
+					regiments = {
+						sc_infantry = { x = 0 y = 0 }
+						sc_infantry = { x = 0 y = 1 }
+						sc_infantry = { x = 0 y = 2 }
+						sc_infantry = { x = 1 y = 0 }
+						sc_infantry = { x = 1 y = 1 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = guowangweidui_flag
+					}
+				}
+				set_country_flag = guowangweidui_flag
+			}
+			29 = {
+				create_unit = {
+					division = "division_template = \"国王卫队\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = LIL
+					prioritize_location = 547
+				}
+				create_unit = {
+					division = "division_template = \"国王卫队\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = LIL
+					prioritize_location = 547
+				}
+			}
+		}
+		cost = 50
+		days_remove = 15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+LIL_leyuanfazhanjihua_c = {
+	LIL_qiangweijihua = {
+		available = {
+			NOT = {
+				has_country_flag = LIL_jihuajingji_zhong
+			}
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 1
+				}
+				tooltip = LIL_shiyongchunzhizhong_2a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_114
+		}
+		allowed = {
+			tag = LIL
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = -0.1
+			production_speed_arms_factory_factor = 0.3
+		}
+		complete_effect = {
+			set_country_flag = LIL_jihuajingji_zhong
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_2c
+			add_to_variable = {
+				LIL_chunzhizhong = -2
+			}
+			set_variable = {
+				LIL_jungong_1 = num_of_factories
+			}
+			multiply_variable = {
+				LIL_jungong_1 = 0.1
+			}
+			set_variable = {
+				LIL_jungong_2 = num_of_military_factories
+			}
+		}
+		remove_effect = {
+			clr_country_flag = LIL_jihuajingji_zhong
+			set_variable = {
+				LIL_jungong_3 = num_of_military_factories
+			}
+			subtract_from_variable = {
+				LIL_jungong_3 = LIL_jungong_2
+			}
+			custom_effect_tooltip = LIL_qiangweijihua_tt
+			effect_tooltip = {
+				LIL_chunzhizhong_2 = yes
+				add_offsite_building = { type = arms_factory level = 1 }
+				custom_effect_tooltip = LIL_gongchangchanchu_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							LIL_jungong_3 > LIL_jungong_1
+						}
+					}
+					add_to_variable = {
+						LIL_gongchangchanchu = 0.05
+					}
+					add_offsite_building = { type = arms_factory level = 1 }
+					LIL_chunzhizhong_2 = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1100
+		}
+	}
+	LIL_yinchunhuajihua = {
+		available = {
+			NOT = {
+				has_country_flag = LIL_jihuajingji_zhong
+			}
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 1
+				}
+				tooltip = LIL_shiyongchunzhizhong_2a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_114
+		}
+		allowed = {
+			tag = LIL
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.1
+			production_speed_buildings_factor = -0.1
+			production_speed_industrial_complex_factor = 0.3
+		}
+		complete_effect = {
+			set_country_flag = LIL_jihuajingji_zhong
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_2c
+			add_to_variable = {
+				LIL_chunzhizhong = -2
+			}
+			set_variable = {
+				LIL_jungong_1 = num_of_factories
+			}
+			multiply_variable = {
+				LIL_jungong_1 = 0.1
+			}
+			set_variable = {
+				LIL_jungong_2 = num_of_civilian_factories
+			}
+		}
+		remove_effect = {
+			clr_country_flag = LIL_jihuajingji_zhong
+			set_variable = {
+				LIL_jungong_3 = num_of_civilian_factories
+			}
+			subtract_from_variable = {
+				LIL_jungong_3 = LIL_jungong_2
+			}
+			custom_effect_tooltip = LIL_yinchunhuajihua_tt
+			effect_tooltip = {
+				LIL_chunzhizhong_2 = yes
+				add_offsite_building = { type = industrial_complex level = 1 }
+				custom_effect_tooltip = LIL_jianzaosudu_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+							LIL_jungong_3 > LIL_jungong_1
+						}
+					}
+					add_to_variable = {
+						LIL_jianzaosudu = 0.05
+					}
+					add_offsite_building = { type = industrial_complex level = 1 }
+					LIL_chunzhizhong_2 = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1100
+		}
+	}
+	LIL_baihejihua = {
+		available = {
+			NOT = {
+				has_country_flag = LIL_jihuajingji_zhong
+			}
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 4
+				}
+				tooltip = LIL_shiyongchunzhizhong_5a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_114
+		}
+		allowed = {
+			tag = LIL
+		}
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.1
+		}
+		complete_effect = {
+			set_country_flag = LIL_jihuajingji_zhong
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_5c
+			add_to_variable = {
+				LIL_chunzhizhong = -5
+			}
+		}
+		remove_effect = {
+			clr_country_flag = LIL_jihuajingji_zhong
+			LIL_chunzhizhong_2 = yes
+			custom_effect_tooltip = LIL_baihejihua_tt
+			effect_tooltip = {
+				add_research_slot = 1
+			}
+			custom_effect_tooltip = LIL_baihejihua_2tt
+			custom_effect_tooltip = LIL_baihejihua_3tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = LIL_baihejihua_flag
+						}
+					}
+					add_research_slot = 1
+				}
+				if = {
+					limit = {
+						has_country_flag = LIL_baihejihua_flag
+					}
+					add_to_variable = {
+						LIL_keyansudu = 0.05
+					}
+					add_to_variable = {
+						LIL_xiaofeiping = -0.01
+					}
+				}
+			}		
+			set_country_flag = LIL_baihejihua_flag
+		}
+	}
+	LIL_yinhuajihua = {
+		available = {
+			NOT = {
+				has_country_flag = LIL_jihuajingji_zhong
+			}
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 1
+				}
+				tooltip = LIL_shiyongchunzhizhong_2a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_114
+		}
+		allowed = {
+			tag = LIL
+		}
+		days_remove = 180
+		modifier = {
+			consumer_goods_factor = 0.1
+			production_speed_buildings_factor = -0.2
+			industrial_capacity_factory = 0.15
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+		}
+		complete_effect = {
+			set_country_flag = LIL_jihuajingji_zhong
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_2c
+			add_to_variable = {
+				LIL_chunzhizhong = -2
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = LIL_yinhuajihua_tt
+			clr_country_flag = LIL_jihuajingji_zhong
+			set_variable = {
+				LIL_gun = num_of_military_factories
+			}
+			multiply_variable = {
+				LIL_gun = 100
+			}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = gun_a
+					amount = LIL_gun
+					producer = LIL
+				}
+			}
+		}
+	}
+}
+LIL_leyuangongjinhui_c = {
+	LIL_gaishangemingbai = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+			fandong > 0
+		}
+		visible = {
+			NOT = {
+				has_country_flag = LIL_yaoqingemingbai_flag
+			}
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			custom_effect_tooltip = LIL_gaishangemingbai_tt
+			add_to_variable = {
+				LIL_gemingbai = 15
+			}
+		}
+	}
+	LIL_yaoqingemingbai = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_yaoqingemingbai_tt
+				check_variable = {
+					LIL_gemingbai > 79
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			set_country_flag = LIL_yaoqingemingbai_flag
+			LIL_leyuangongjinhui = yes
+		}
+	}
+	LIL_gaishanjinbubai = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+			qinwai > 0
+		}
+		visible = {
+			NOT = {
+				has_country_flag = LIL_yaoqinjinbubai_flag
+			}
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			custom_effect_tooltip = LIL_gaishanjinbubai_tt
+			add_to_variable = {
+				LIL_jinbupai = 15
+			}
+		}
+	}
+	LIL_yaoqinjinbubai = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_yaoqinjinbubai_tt
+				check_variable = {
+					LIL_jinbupai > 79
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			set_country_flag = LIL_yaoqinjinbubai_flag
+			LIL_leyuangongjinhui = yes
+		}
+	}
+	LIL_gaishanchngbaizhe = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+			neworder > 0
+		}
+		visible = {
+			NOT = {
+				has_country_flag = LIL_yaoqinchongbaizhe_flag
+			}
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			custom_effect_tooltip = LIL_gaishanchngbaizhe_tt
+			add_to_variable = {
+				LIL_chongbaizhe = 15
+			}
+		}
+	}
+	LIL_yaoqinchongbaizhe = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_yaoqinchongbaizhe_tt
+				check_variable = {
+					LIL_chongbaizhe > 79
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			set_country_flag = LIL_yaoqinchongbaizhe_flag
+			LIL_leyuangongjinhui = yes
+		}
+	}
+	LIL_gaishanbaoshobai = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+			guli > 0
+		}
+		visible = {
+			NOT = {
+				has_country_flag = LIL_yaoqinbaoshobai_flag
+			}
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			custom_effect_tooltip = LIL_gaishanbaoshobai_tt
+			add_to_variable = {
+				LIL_baoshipai = 15
+			}
+		}
+	}
+	LIL_yaoqinbaoshobai = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_yaoqinbaoshobai_tt
+				check_variable = {
+					LIL_baoshipai > 79
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			set_country_flag = LIL_yaoqinbaoshobai_flag
+			LIL_leyuangongjinhui = yes
+		}
+	}
+	LIL_gaishanhuahaigeshe = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 0
+				}
+				tooltip = LIL_shiyongchunzhizhong_a
+			}
+			oldgenso > 0
+		}
+		visible = {
+			NOT = {
+				has_country_flag = LIL_yaoqinhuahaigeshe_flag
+			}
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_c
+			add_to_variable = {
+				LIL_chunzhizhong = -1
+			}
+			custom_effect_tooltip = LIL_gaishanhuahaigeshe_tt
+			add_to_variable = {
+				LIL_huahaigeshe = 15
+			}
+		}
+	}
+	LIL_yaoqinhuahaigeshe = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = LIL_yaoqinhuahaigeshe_tt
+				check_variable = {
+					LIL_huahaigeshe > 79
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = LIL_126
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			set_country_flag = LIL_yaoqinhuahaigeshe_flag
+			LIL_leyuangongjinhui = yes
+		}
+	}
+}
+LIL_yaojingjiefangzhanzhen_c = {
+	LIL_yaojingjiefangzhanzhen = {
+		available = {
+			has_completed_focus = LIL_20
+			SCA = {
+				has_war_with = CIR
+			}
+		}
+		allowed = {
+			tag = LIL
+		}
+		visible = {
+			OR = {
+				NOT = {
+					SCA = {
+						has_war_with = LIL
+					}
+				}
+				NOT = {
+					has_completed_focus = LIL_25
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = SCA
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+LIL_chunfengxingdong_c = {
+	LIL_chunfengxingdong = {
+		available = {
+			has_war_with = SCA
+			custom_trigger_tooltip = {
+				check_variable = {
+					LIL_chunzhizhong > 2
+				}
+				tooltip = LIL_shiyongchunzhizhong_3a
+			}
+		}
+		visible = {
+			has_completed_focus = LIL_136_1
+		}
+		allowed = {
+			tag = LIL
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = LIL_chunfenggongshi
+					}
+				}
+				add_timed_idea = {
+					idea = LIL_chunfenggongshi
+					days = 60
+				}
+			}
+			if = {
+				limit = {
+					has_idea = LIL_chunfenggongshi
+				}
+				modify_timed_idea = {
+					idea = LIL_chunfenggongshi
+					days = 60
+				}
+			}
+			custom_effect_tooltip = LIL_shiyongchunzhizhong_3c
+			add_to_variable = {
+				LIL_chunzhizhong = -3
+			}
+		}
+	}
+}
+LIL_shenpantingxingdong_c = {
+	LIL_shenpantingxingdong = {
+		available = {
+			has_war_with = SCA
+		}
+		visible = {
+			has_completed_focus = LIL_136_2
+		}
+		allowed = {
+			tag = LIL
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_timed_idea = {
+				idea = LIL_shenpangtinggongshi
+				days = 90
+			}
+		}
+	}
+}
+LIL_chanchushenmingshenshangdeliu_c = {
+	LIL_chanchushenmingshenshangdeliu = {
+		available = {
+		#	has_war_with = SCA
+		}
+		visible = {
+			has_completed_focus = LIL_145
+		}
+		allowed = {
+			tag = LIL
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					tag = ZON
+					has_idea = Fairy
+					is_puppet_of = LIL
+				}
+				is_neighbor_of = LIL
+			}
+			
+		}
+		days_remove = 15
+		remove_effect = {
+			declare_war_on = {
+				type = annex_everything
+				target = FROM	
+			}
+		}
+	}
+}
+LIL_yonghenleyuan_c = {
+	LIL_yonghenleyuan = {
+		available = {
+			OR = {
+				NOT = {
+					has_idea = LIL_chuntiandaola_1
+					has_idea = LIL_chuntiandaola_2
+					has_idea = LIL_chuntiandaola_3
+					has_idea = LIL_chuntiandaola_4
+				}	
+			}	
+		}
+		activation = {
+			has_completed_focus = LIL_17
+		}
+		complete_effect = {
+			hidden_effect = {
+				activate_mission = LIL_yonghenleyuan
+			}
+		}
+		days_mission_timeout = 365
+		is_good = yes
+		timeout_effect = {
+			country_event = {
+				id = lil.18
+			}
+		}
+	}
+	
+}

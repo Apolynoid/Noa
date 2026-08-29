@@ -1,0 +1,136 @@
+﻿add_namespace = world
+
+country_event = { ###成立冥界
+	id = world.1
+	title = Netherworld_claim
+	desc = Netherworld_claim_d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = world_claim_1
+		hidden_effect = {
+			news_event = world.7
+		}
+		set_cosmetic_tag = Netherworld_united
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = world_claim_2
+	}
+}
+country_event = { ###成立幻想乡
+	id = world.2
+	title = Gensokyo_claim
+	desc = Gensokyo_claim_d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = world_claim_1
+		hidden_effect = {
+			news_event = world.7
+		}
+		set_cosmetic_tag = Gensokyo_united
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = world_claim_2
+	}
+}
+country_event = { ###成立旧地狱
+	id = world.3
+	title = Underground_claim
+	desc = Underground_claim_d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = world_claim_1
+		hidden_effect = {
+			news_event = world.7
+		}
+		set_cosmetic_tag = Underground_united
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = world_claim_2
+	}
+}
+country_event = { ###成立天界
+	id = world.4
+	title = Celestial_claim
+	desc = Celestial_claim_d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = world_claim_1
+		hidden_effect = {
+			news_event = world.7
+		}
+		set_cosmetic_tag = Celestial_united
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = world_claim_2
+	}
+}
+country_event = { ###成立彼岸
+	id = world.5
+	title = Hell_claim
+	desc = Hell_claim_d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = world_claim_1
+		hidden_effect = {
+			news_event = world.7
+		}
+		set_cosmetic_tag = Hell_united
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = { 
+		name = world_claim_2
+	}
+}
+news_event = { #通用新闻
+	id = world.7
+	title = world.7.t
+	desc = world.7.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+	
+	option = { 
+		name = world.7.1
+		trigger = {
+			tag = FROM
+		}
+	}
+	option = { 
+		name = world.7.2
+		trigger = {
+			not = {
+				tag = FROM
+			}
+		}
+	}
+}

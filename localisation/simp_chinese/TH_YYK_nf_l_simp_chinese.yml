@@ -434,8 +434,6 @@ YYK_opposition_resistance_tt:0 "仍存在反对者抵抗的地区数: §R[?YYK_o
 YYK_civil_war_defense_tt:0 "陆军防御数值: §G+10.0%§!"
 YYK_desperate_defense_tt:0 "陆军防御数值: §G+20.0%§!"
 
-YYK_clr_world_limit_tt:0 "可以将规模调整为§Y世界§!"
-
 YYK_former_generals_join_tt:0 "§Y西行寺家的将领§!将会§G加入§!"
 YYK_rebellion_generals_join_tt:0 "§Y革命阵线的将领§!将会§G加入§!"
 

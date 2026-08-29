@@ -46,6 +46,7 @@
     oob = "TES_146"  
 
     set_country_flag = bunengsuiyiqiehuanzhengti 
+    set_country_flag = world_limit
     
     add_ideas = {
         God

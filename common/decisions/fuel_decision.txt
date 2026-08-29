@@ -1,0 +1,78 @@
+fuel_decision = {
+	POconvert_on = {
+		visible = {
+			has_fuel > 1
+			not = {
+				has_country_flag = POconvert_on
+			}
+			#has_tech
+			##
+			#暂时找不到更好的方法在开局封闭此决议
+			##
+			date > 146.1.2
+			###
+		}
+		available = {
+			
+		}
+		custom_cost_trigger = {
+			set_temp_variable = {
+				a = fuel_k
+			}
+			set_temp_variable = {
+				b = all_value_plus_manpower
+			}
+			multiply_temp_variable = {
+				b = global.POconvert_first_fuel_cost_ratio
+			}
+			check_variable = {
+				a > b
+			}
+		}
+		custom_cost_text = POconvert_cost
+		days_remove = 10
+		complete_effect = {
+			set_temp_variable = {
+				actual_cost = POconvert_fuel_cost
+			}
+			multiply_temp_variable = {
+				actual_cost = -1
+			}
+			add_fuel = actual_cost
+		}
+		remove_effect = {
+			custom_effect_tooltip = POconvert_on_tt
+			set_country_flag = POconvert_on
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	POconvert_off = {
+		visible = {
+			has_country_flag = POconvert_on
+		}
+		available = {
+			
+		}
+
+		days_remove = 5
+		cost = 10
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_stability = -0.01
+			custom_effect_tooltip = POconvert_off_tt
+			clr_country_flag = POconvert_on
+		}
+		cancel_trigger = {
+			not = {
+				has_country_flag = POconvert_on
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

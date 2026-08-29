@@ -36,9 +36,11 @@ MRY_xiao_mie_gong_he_pai_desc:0 ""
 MRY_xie_zhu_he_tong_tong_yi:0 "协助河童统一"
 MRY_xie_zhu_he_tong_tong_yi_desc:0 ""
 MRY_xin_yang_de_sheng_li:0 "信仰的胜利"
-MRY_xin_yang_de_sheng_li_desc:0 ""
+MRY_xin_yang_de_sheng_li_desc:0 "终于，在我们成功粉碎了妖怪山的共和分子后，我们不仅成为了妖怪山的霸主，还成功的向幻想乡证明了信仰的强大力量，再也没有任何势力敢于挑战守矢的地位。守矢的信仰将引领幻想乡的新时代！"
 MRY_jia_ru_fei_hong_ti_xi:0 "加入绯红体系"
 MRY_jia_ru_fei_hong_ti_xi_desc:0 ""
+MRY_yao_guai_shan_shen_sheng_tong_meng:0 "妖怪山神圣同盟"
+MRY_yao_guai_shan_shen_sheng_tong_meng_desc:0 ""
 MRY_suo_qu_xia_xuan_wu_chuan:0 "索取下玄武川"
 MRY_suo_qu_xia_xuan_wu_chuan_desc:0 ""
 # 军事线
@@ -70,8 +72,8 @@ MRY_yan_jiu_shang_yi_ci_zhan_zheng:0 "研究上一次战争"
 MRY_yan_jiu_shang_yi_ci_zhan_zheng_desc:0 ""
 MRY_kuo_da_dong_yuan_ji_hua:0 "扩大动员计划"
 MRY_kuo_da_dong_yuan_ji_hua_desc:0 ""
-MRY_fan_jian_die_xun_lian:0 "反间谍训练"
-MRY_fan_jian_die_xun_lian_desc:0 ""
+MRY_shou_shi_qing_bao_zong_ju:0 "守矢情报总局"
+MRY_shou_shi_qing_bao_zong_ju_desc:0 ""
 MRY_biao_zhun_hua_jun_shi_xun_lian:0 "标准化军事训练"
 MRY_biao_zhun_hua_jun_shi_xun_lian_desc:0 ""
 MRY_su_du_chong_bai:0 "速度崇拜"
@@ -113,3 +115,74 @@ MRY_shou_shi_he_dian_she_shi:0 "守矢核电设施"
 MRY_shou_shi_he_dian_she_shi_desc:0 ""
 MRY_yao_guai_shan_jing_ji_zheng_he:0 "妖怪山经济整合"
 MRY_yao_guai_shan_jing_ji_zheng_he_desc:0 ""
+
+# ideas
+MRY_xin_yang_wei_ji_idea:0 "信仰危机"
+MRY_xin_yang_wei_ji_a_idea:0 "$MRY_xin_yang_wei_ji_idea$"
+MRY_tian_gou_di_guo_liu_wang_zhe_idea:0 "天狗帝国流亡者"
+MRY_fei_xiang_tian_ze_idea:0 "非想天则"
+MRY_fei_xiang_tian_ze_a_idea:0 "$MRY_fei_xiang_tian_ze_idea$"
+MRY_fei_xiang_tian_ze_b_idea:0 "$MRY_fei_xiang_tian_ze_idea$"
+MRY_fei_xiang_tian_ze_c_idea:0 "$MRY_fei_xiang_tian_ze_idea$"
+MRY_fan_gong_he_zhu_yi_sheng_zhan_idea:0 "反共和主义圣战"
+MRY_xin_yang_de_sheng_li_idea:0 "信仰的胜利"
+MRY_xin_yang_de_sheng_li_idea_desc:0 "终于，在我们成功粉碎了妖怪山的共和分子后，我们不仅成为了妖怪山的霸主，还成功的向幻想乡证明了信仰的强大力量，再也没有任何势力敢于挑战守矢的地位。守矢的信仰将引领幻想乡的新时代！"
+MRY_shou_shi_jun_shi_xue_yuan_idea:0 "守矢军事学院"
+MRY_shou_shi_jun_shi_xue_yuan_a_idea:0 "$MRY_shou_shi_jun_shi_xue_yuan_idea$"
+MRY_shou_shi_jun_shi_xue_yuan_b_idea:0 "$MRY_shou_shi_jun_shi_xue_yuan_idea$"
+MRY_shou_shi_dong_yuan_ji_hua_idea:0 "守矢动员计划"
+MRY_shou_shi_dong_yuan_ji_hua_a_idea:0 "$MRY_shou_shi_dong_yuan_ji_hua_idea$"
+MRY_shou_shi_dong_yuan_ji_hua_b_idea:0 "$MRY_shou_shi_dong_yuan_ji_hua_idea$"
+MRY_shou_shi_gong_ye_ji_hua_idea:0 "守矢工业计划"
+MRY_shou_shi_gong_ye_ji_hua_a_idea:0 "$MRY_shou_shi_gong_ye_ji_hua_idea$"
+MRY_shou_shi_gong_ye_ji_hua_b_idea:0 "$MRY_shou_shi_gong_ye_ji_hua_idea$"
+MRY_ti_dai_neng_yuan_idea:0 "替代能源"
+MRY_ti_dai_neng_yuan_a_idea:0 "$MRY_ti_dai_neng_yuan_idea$"
+MRY_yao_guai_shan_jing_ji_zheng_he_idea:0 "妖怪山经济整合"
+MRY_yao_guai_shan_jing_ji_zheng_he_a_idea:0 "$MRY_yao_guai_shan_jing_ji_zheng_he_idea$"
+MRY_shou_shi_tie_lu_idea:0 "守矢铁路"
+MRY_ke_yan_tou_zi_idea:0 "科研投资"
+
+MRY_shou_shi_xin_yang_idea:0 "守矢信仰"
+
+# general
+MRY_faith_tt:0 "£faith_texticon §Y信仰§!"
+# decisions
+MRY_shou_shi_xin_yang:0 "守矢信仰"
+MRY_shou_shi_xin_yang_desc:0 "当前$MRY_faith_tt$：[?MRY_faith_value|1]"
+MRY_ju_xing_yu_zhu_ji:0 "举行御柱祭"
+MRY_xun_hui_chuan_jiao:0 "巡回传教"
+MRY_yu_qian_yan_wu:0 "御前演武"
+
+MRY_10_faith:0 "£faith_texticon  §Y10§!"
+MRY_10_faith_blocked:0 "£faith_texticon  §R10§!"
+MRY_10_faith_tooltip:0 "需要£faith_texticon  §Y10§!来执行决议"
+
+# tt
+MRY_gain__MRY_faith_gain__faith_tt:0 "获得[?MRY_faith_gain|G1]点$MRY_faith_tt$。"
+MRY_lose__MRY_faith_lost__faith_tt:0 "失去[?MRY_faith_lost|R1]点$MRY_faith_tt$。"
+MRY_has__MRY_target_faith__faith_tt:0 "$MRY_faith_tt$超过[?MRY_target_faith|Y1]"
+MRY_cost_up_tt:0 "该决议消耗政治点增加[?MRY.MRY_faith_desicion_increase|R0]。"
+
+MRY_activate_faith_for_construction_tt:0 "$MRY_faith_tt$将提供§Y建造速度§!加成。"
+MRY_activate_faith_for_military_tt:0 "$MRY_faith_tt$将提供§Y陆军攻击§!加成。"
+
+MRY_faith_for_attacking_TEG_tt:0 "在与§Y[TEG.GetNameWithFlag]§!交战时，随着其战争失利获得$MRY_faith_tt$，至多§G40.0§!点。"
+MRY_faith_for_attacking_NTR_tt:0 "在与§Y[NTR.GetNameWithFlag]§!交战时，随着其战争失利获得$MRY_faith_tt$，至多§G10.0§!点。"
+
+MRY_faith_for_autarky_tt:0 "在不进口§Y谐晶§!资源的条件下，满足工业谐晶需求时，每周$MRY_faith_tt$增长§G0.3§!。"
+
+MRY_tengu_exile_character_tt:0 "§Y$OTG_megumu$§!和§Y$OTG_tsukasa$§!将会作为将领§G加入§!！"
+
+MRY_merge_ideas_tt:0 "将§Y$MRY_shou_shi_gong_ye_ji_hua_b_idea$§!和§Y$MRY_ti_dai_neng_yuan_a_idea$§!整合为§Y$MRY_yao_guai_shan_jing_ji_zheng_he_a_idea$§!。"
+
+MRY_decrease_cost_increase_tt:0 "降低$MRY_ju_xing_yu_zhu_ji$与$MRY_xun_hui_chuan_jiao$决议政治点消耗的增长速度。"
+MRY_increase_faith_gain_tt:0 "增加$MRY_ju_xing_yu_zhu_ji$与$MRY_xun_hui_chuan_jiao$决议的$MRY_faith_tt$获取。"
+
+MRY_hisoutensoku_tt:0 "允许编制§Y机甲小队§!。\n允许生产§Y非想天则§!。"
+
+MRY_holy_alliance_of_youkai_mountain:0 "妖怪山神圣同盟"
+
+MRY_fei_xiang_tian_ze_tech:0 "非想天则"
+hisoutensoku:0 "非想天则"
+hisoutensoku_desc:0 ""

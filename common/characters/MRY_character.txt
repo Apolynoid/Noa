@@ -1,0 +1,202 @@
+characters={
+	MRY_ysk ={
+		name = MRY_ysk
+		portraits={
+			civilian={
+				large="gfx/leaders/MRY/MRY_ysk.dds"
+				small="gfx/leaders/MRY/MRY_ysk_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRY/MRY_ysk.dds"
+				small="gfx/leaders/MRY/MRY_ysk_small.dds"
+			}
+		}
+		field_marshal = {
+            traits = {  th_original_character th_character  career_officer harsh_leader th_trait_huoqiangzhuanjia}
+            attack_skill = 9
+            defense_skill = 7
+            planning_skill = 15
+            logistics_skill = 10
+            skill = 11
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = MRY_ysk
+			name = MRY_ysk
+			cost = 200
+			modifier = {
+				research_speed_factor = 0.05
+				experience_gain_army = 0.01
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=oldorder_type
+			id=-1
+		}
+		country_leader={
+			ideology=neworder_type
+			traits = {
+				MRY_zhan_zheng_zhi_shen
+			}
+			id=-1
+		}
+	}
+	MRY_mry ={
+		name = MRY_mry
+		portraits={
+			civilian={
+				large="gfx/leaders/MRY/MRY_mry.dds"
+				small="gfx/leaders/MRY/MRY_mry_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRY/MRY_mry.dds"
+				small="gfx/leaders/MRY/MRY_mry_small.dds"
+			}
+		}
+		field_marshal = {
+            traits = {  th_original_character th_character  th_trait_dayaoguai old_guard }
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 9
+            skill = 11
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = MRY_mry
+			name = MRY_mry
+			cost = 200
+			modifier = {
+				PO_good_humanism_influence_factor = 0.5
+				compliance_growth = 0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=guli_type
+			traits = {
+				MRY_tu_zhu_shen
+			}
+			id=-1
+		}
+		country_leader={
+			ideology=oldgenso_type
+			id=-1
+		}
+	}
+	MRY_sanae ={
+		name = MRY_sanae
+		portraits={
+			civilian={
+				large="gfx/leaders/MRY/MRY_sanae.dds"
+				small="gfx/leaders/MRY/MRY_sanae_small.dds"
+			}
+			army = {
+				large="gfx/leaders/MRY/MRY_sanae.dds"
+				small="gfx/leaders/MRY/MRY_sanae_small.dds"
+			}
+		}
+		corps_commander = {
+            traits = {  th_original_character th_character  media_personality th_trait_huoqiangzhuanjia }
+            attack_skill = 6
+            defense_skill = 6
+            planning_skill = 6
+            logistics_skill = 6
+            skill = 6
+        }
+		advisor = {
+			slot = character_coop
+			idea_token = MRY_sanae
+			name = MRY_sanae
+			cost = 200
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_growth = -0.2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		country_leader={
+			ideology=qinwai_type
+			id=-1
+		}
+		country_leader={
+			ideology=fandong_type
+			id=-1
+		}
+	}
+
+	OTG_megumu ={
+		name = OTG_megumu
+		portraits={
+			civilian={
+				large="gfx/leaders/OTG/OTG_megumu.dds"
+				small="gfx/leaders/OTG/OTG_megumu_small.dds"
+			}
+			army = {
+				large="gfx/leaders/OTG/OTG_megumu.dds"
+				small="gfx/leaders/OTG/OTG_megumu_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_dayaoguai th_trait_moulvedashi harsh_leader }
+			skill = 9
+			attack_skill = 0
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = OTG_megumu
+			name = OTG_megumu
+			cost = 200
+			modifier = {
+				army_leader_start_level = 1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	OTG_tsukasa ={
+		name = OTG_tsukasa
+		portraits={
+			civilian={
+				large="gfx/leaders/OTG/OTG_tsukasa.dds"
+				small="gfx/leaders/OTG/OTG_tsukasa_small.dds"
+			}
+			army = {
+				large="gfx/leaders/OTG/OTG_tsukasa.dds"
+				small="gfx/leaders/OTG/OTG_tsukasa_small.dds"
+			}
+		}
+		corps_commander = {
+			traits = { th_character th_original_character th_trait_moulvedashi }
+			skill = 6
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 7
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = character_coop
+			idea_token = OTG_tsukasa
+			name = OTG_tsukasa
+			cost = 200
+			modifier = {
+				intel_network_gain_factor = 0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

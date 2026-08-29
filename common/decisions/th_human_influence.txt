@@ -1,0 +1,561 @@
+human_influ = {
+    human_influ_maoyixingwei1 = {
+        visible = {
+            not = { has_idea = Human}
+            or = {
+                check_variable = { all_value < HUM.all_value}
+                check_variable = { all_value = HUM.all_value}
+            }
+            has_global_flag = main_scenario
+        }
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            research_speed_factor = 0.15
+            OL_daily_gain = -0.02
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 30
+            modifier = {
+                go_weiwu_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value > 20}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 2 }
+                factor = 1.5
+            }
+        }
+    }
+    human_influ_maoyixingwei2 = {
+        visible = {
+            not = { has_idea = Human}
+            check_variable = { all_value > HUM.all_value}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            OL_daily_gain = -0.02
+            consumer_goods_factor = -0.04
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 25
+            modifier = {
+                go_weiwu_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value > 20}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 2 }
+                factor = 1.5
+            }
+        }
+    }
+    human_influ_yaoli = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            political_power_factor = 0.3
+            OL_daily_gain = -0.06
+            PO_daily_gain = 0.01
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 40
+            modifier = {
+                go_weiwu_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value > 20}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 2 }
+                factor = 1.5
+            }
+        }
+    }
+    human_influ_zhongzurenzhi = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            MONTHLY_POPULATION = 0.25
+            OL_daily_gain = 0.02
+            PO_daily_gain = 0.01
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 3
+            modifier = {
+                go_weiwu_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value > 20}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 2 }
+                factor = 1.5
+            }
+        }
+    }
+    human_influ_lianbing = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            army_org_factor = 0.15
+            army_morale_factor = 0.05
+        }
+
+        complete_effect = {
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+
+            subtract_from_variable = { HMIF_influence = 40}
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 100
+                has_war = yes
+            }
+        }
+    }
+    human_influ_yaoyan = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            stability_weekly = 0.003
+            OL_daily_gain = 0.04
+            PO_daily_gain = 0.01
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 12
+            modifier = {
+                factor = 2
+                has_stability < 1.5
+                has_stability > 0.75
+            }
+            modifier = {
+                go_weixin_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value < 20}
+                factor = 1.5
+            }
+        }
+    }
+
+    human_influ_yexing = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            weekly_manpower = 35
+            OL_daily_gain = 0.06
+            PO_daily_gain = 0.01
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        remove_effect = {
+
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 25
+            modifier = {
+                factor = 4
+                manpower_per_military_factory < 190
+            }
+            modifier = {
+                factor = 1.5
+                has_war = yes
+                manpower_per_military_factory < 250
+            }
+            modifier = {
+                go_weixin_condition = yes
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value < 20}
+                factor = 1.5
+            }
+        }
+    }
+
+    human_influ_xiji = {
+        visible = {
+            not = { has_idea = Human}
+            has_global_flag = main_scenario
+        }
+
+        custom_cost_trigger = {
+            check_variable = { HMIF_influence > 39.99}
+        }
+
+        custom_cost_text = HMIF_influence_not_enough
+
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = HMIF_same_time
+                not = {
+                    has_country_flag = human_influencing
+                }
+            }
+        }
+
+        modifier = {
+            OL_daily_gain = 0.1
+            PO_daily_gain = 0.04
+        }
+
+        complete_effect = {
+            subtract_from_variable = { HMIF_influence = 40}
+
+
+            set_country_flag = {
+                flag = human_influencing
+                days = 182
+                value = 1
+            }
+            HUM = { activate_targeted_decision = { target = ROOT decision = human_influ_debuff } }
+        }
+
+        remove_effect = {
+
+        }
+
+        fire_only_once = no
+
+        days_remove = 182
+
+        days_re_enable = 181
+
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                go_weixin_condition = yes
+                factor = 1.5
+            } 
+            modifier = {
+                check_variable = { OL_view_type = 1 }
+                check_variable = { OL_view_value < 20}
+                factor = 1.5
+            }
+        }
+    }
+
+    human_influ_debuff = {
+
+        allowed = {
+            always = no
+        }
+        activation = {
+            always = no
+        }
+        target_trigger = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+
+        modifier = {
+
+        }
+
+        # timeout_effect = {
+        #     FROM = {
+        #         clr_country_flag = human_influencing
+        #     }
+        # }
+
+        is_good = yes
+
+        days_mission_timeout = 182
+
+        fire_only_once = yes
+
+        ai_will_do = {
+           factor = 100
+        }
+    }
+
+    human_influ_liberate = {
+        visible = {
+            tag = HUM
+            has_global_flag = main_scenario
+        }
+        available = {
+            always = no
+        }
+
+        modifier = {
+
+        }
+
+        fire_only_once = no
+
+        ai_will_do = {
+           factor = 100
+        }
+    }
+}

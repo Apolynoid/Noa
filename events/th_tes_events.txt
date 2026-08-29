@@ -282,3 +282,31 @@ news_event = {
 		}
 	}
 }
+
+# 天界重新平定
+country_event = {
+	id = tes.106
+	title = tes.106.t
+	desc = tes.106.d
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		all_state = {
+			OR = {
+				NOT = {
+					is_core_of = CFA
+				}
+				is_core_of = TES
+			}
+		}
+	}
+
+	option = {
+		name = tes.106.1
+		custom_effect_tooltip = clr_world_limit_tt
+		hidden_effect = {
+			clr_country_flag = world_limit
+		}
+	}
+}

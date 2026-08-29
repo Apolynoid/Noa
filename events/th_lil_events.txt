@@ -1,0 +1,950 @@
+﻿add_namespace = lil
+country_event = {
+	id = lil.1
+	title = lil.1.t
+	desc = lil.1.d
+  #	picture = xxx
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = yonghezhichun
+					}
+				}
+					country_event = {
+						id = lil.2
+						days = 90
+					}
+				}
+			}
+			set_country_flag = LIL_chuntiandaolai
+			clr_country_flag = LIL_chuntianyiqu
+			every_state = {
+				limit = {
+					has_state_flag = LIL_diqubaochun
+				}
+				clr_state_flag = LIL_diqubaochun
+			}
+		}
+	
+
+	option = {
+		name = lil.1.1
+		custom_effect_tooltip = lil.1.1_tt
+		set_country_flag = LIL_chunhuidadi
+		clr_country_flag = LIL_chunhuidadi_2
+		clr_country_flag = LIL_chunhuidadi_3
+		clr_country_flag = LIL_chunhuidadi_4
+	}
+	option = {
+		name = lil.1.2
+		custom_effect_tooltip = lil.1.2_tt
+		set_country_flag = LIL_chunhuidadi_2
+		clr_country_flag = LIL_chunhuidadi
+		clr_country_flag = LIL_chunhuidadi_3
+		clr_country_flag = LIL_chunhuidadi_4
+		trigger = {
+			OR = {
+				has_completed_focus = LIL_57
+				has_completed_focus = LIL_97
+			}
+		}
+	}
+	option = {
+		name = lil.1.3
+		custom_effect_tooltip = lil.1.3_tt
+		set_country_flag = LIL_chunhuidadi_3
+		clr_country_flag = LIL_chunhuidadi_2
+		clr_country_flag = LIL_chunhuidadi
+		clr_country_flag = LIL_chunhuidadi_4
+		trigger = {
+			OR = {
+				has_completed_focus = LIL_57
+				has_completed_focus = LIL_97
+			}
+		}
+	}
+	option = {
+		name = lil.1.4
+		custom_effect_tooltip = lil.1.4_tt
+		set_country_flag = LIL_chunhuidadi_4
+		clr_country_flag = LIL_chunhuidadi_2
+		clr_country_flag = LIL_chunhuidadi_3
+		clr_country_flag = LIL_chunhuidadi
+		trigger = {
+			OR = {
+				has_completed_focus = LIL_71
+				has_completed_focus = LIL_97
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.2
+	title = lil.2.t
+	desc = lil.2.d
+  #	picture = xxx
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = yonghezhichun
+					}
+				}
+				country_event = {
+					id = lil.1
+					days = 275
+				}
+			}
+			clr_country_flag = LIL_chuntiandaolai
+			set_country_flag = LIL_chuntianyiqu
+		}
+	}
+
+	option = {
+		name = lil.2.1
+	}
+}
+country_event = {
+	id = lil.3
+	title = lil.3.t
+	desc = lil.3.d		
+  #	picture = xxx
+	#fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = lil.3
+				days = 1460
+			}
+		}
+	}
+	option = {
+		name = lil.3.1
+		create_country_leader = {
+			name = "莉莉霍瓦特" 
+			picture = "gfx/leaders/LIL/LIL_lil.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+	}
+	option = {
+		name = lil.3.2
+		create_country_leader = {
+			name = "琪露诺" 
+			picture = "gfx/leaders/CIR/CIR_cir.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CIR_cir
+		}
+	}
+	option = {
+		name = lil.3.3
+		create_country_leader = {
+			name = "大妖精" 
+			picture = "gfx/leaders/CIR/CIR_dys.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CIR_dys
+		}
+	}
+	option = {
+		name = lil.3.4
+		create_country_leader = {
+			name = "克劳恩皮斯" 
+			picture = "gfx/leaders/CLO/CLO_clown.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CLO_clown
+		}
+	}
+	option = {
+		name = lil.3.5
+		create_country_leader = {
+			name = "桑尼米尔克" 
+			picture = "gfx/leaders/SGS/SGS_sun.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = SGS_sun
+		}
+	}
+	option = {
+		name = lil.3.6
+		hidden_effect = {
+			country_event = lil.4
+		}
+		trigger = {
+			OR = {
+				has_character = SGS_lunar
+				has_character = YUK_elly
+				has_character = SGS_star
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.4
+	title = lil.3.t
+	desc = lil.3.d
+  #	picture = xxx
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = lil.4.1
+		create_country_leader = {
+			name = "露娜切露德" 
+			picture = "gfx/leaders/SGS/SGS_lunar.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = SGS_lunar
+		}
+	}
+	option = {
+		name = lil.4.2
+		create_country_leader = {
+			name = "斯塔萨菲雅" 
+			picture = "gfx/leaders/SGS/SGS_star.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = SGS_star
+		}
+	}
+	option = {
+		name = lil.4.3
+		create_country_leader = {
+			name = "爱塔妮缇拉尔瓦" 
+			picture = "gfx/leaders/YUK/YUK_larva.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = YUK_elly
+		}
+	}
+	option = {
+		name = lil.4.4
+		hidden_effect = {
+			country_event = lil.5
+		}
+		trigger = {
+			
+		}
+	}
+}
+country_event = {
+	id = lil.5
+	title = lil.3.t
+	desc = lil.3.d
+  #	picture = xxx
+	#fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = lil.3.1
+		create_country_leader = {
+			name = "莉莉霍瓦特" 
+			picture = "gfx/leaders/LIL/LIL_lil.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+	}
+	option = {
+		name = lil.3.2
+		create_country_leader = {
+			name = "琪露诺" 
+			picture = "gfx/leaders/CIR/CIR_cir.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CIR_cir
+		}
+	}
+	option = {
+		name = lil.3.3
+		create_country_leader = {
+			name = "大妖精" 
+			picture = "gfx/leaders/CIR/CIR_dys.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CIR_dys
+		}
+	}
+	option = {
+		name = lil.3.4
+		create_country_leader = {
+			name = "克劳恩皮斯" 
+			picture = "gfx/leaders/CLO/CLO_clown.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = CLO_clown
+		}
+	}
+	option = {
+		name = lil.3.5
+		create_country_leader = {
+			name = "桑尼米尔克" 
+			picture = "gfx/leaders/SGS/SGS_sun.dds"
+			expire = "1965.1.1"
+			ideology = qinwai_type
+			traits = {
+			
+			}
+		}
+		trigger = {
+			has_character = SGS_sun
+		}
+	}
+	option = {
+		name = lil.3.6
+		hidden_effect = {
+			country_event = lil.4
+		}
+		trigger = {
+			OR = {
+				has_character = SGS_lunar
+				has_character = YUK_elly
+				has_character = SGS_star
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.6
+	title = lil.6.t
+	desc = lil.6.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.6.1
+		complete_national_focus = LIL_20
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_guli
+					}
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_oldgenso
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = lil.6.2
+		complete_national_focus = LIL_25
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_qinwai
+					}
+					has_game_rule = {
+						rule = LIL_paths
+						option = LIL_path_fandong
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.7
+	title = lil.7.t
+	desc = lil.7.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.7.1
+		LIL = {
+			annex_country = {
+				target = HU7
+				transfer_troops = yes
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = lil.7.2
+		LIL = {
+			declare_war_on = {
+				type = annex_everything
+				target = HU7
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+country_event = {
+	id = lil.8
+	title = lil.8.t
+	desc = lil.8.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.8.1
+		FROM = {
+			xianghubaodu = yes
+			country_event = { id = glo.2001 }
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = LIL 
+					value > 19
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = LIL 
+					value > 39
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = LIL 
+					value > 59
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = LIL 
+					value > 79
+				}
+			}
+		}
+	}
+	option = {
+		name = lil.8.2
+		FROM = {
+			country_event = { id = glo.2002 days = 2}
+		}
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = -10
+				has_opinion = {
+					target = LIL 
+					value > 19
+				}
+			}
+			modifier = {
+				factor = -10
+				has_opinion = {
+					target = LIL 
+					value > 39
+				}
+			}
+			modifier = {
+				factor = -10
+				has_opinion = {
+					target = LIL 
+					value > 59
+				}
+			}
+			modifier = {
+				factor = -10
+				has_opinion = {
+					target = LIL 
+					value > 79
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.9
+	title = lil.9.t
+	desc = lil.9.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.9.1
+		FROM = {
+			set_country_flag = LIL_hanchunjiaji_no
+			country_event = { id = glo.2001 }
+			set_truce = {
+				target = SCA
+				days = 365
+			}
+			set_country_flag = LIL_SCAheping
+			if = {
+				limit = {
+					has_completed_focus = LIL_29
+				}
+				add_political_power = 100
+				custom_effect_tooltip = LIL_29_tt_1
+				division_template = {
+					name = "仿帝国卫队"
+					is_locked = no
+					regiments = {
+						sc_infantry = { x = 0 y = 0 }
+						sc_infantry = { x = 0 y = 1 }
+						sc_infantry = { x = 0 y = 2 }
+						sc_mortar_brigade = { x = 0 y = 3 }
+						sc_infantry = { x = 1 y = 0 }
+						sc_infantry = { x = 1 y = 1 }
+						sc_infantry = { x = 1 y = 2 }
+						sc_mortar_brigade = { x = 1 y = 3 }
+					}
+					support = {
+						sp_zhihuidui = { x = 0 y = 0 }  
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = lil.9.2
+		FROM = {
+			country_event = { id = glo.2002 days = 2}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+country_event = {
+	id = lil.10
+	title = lil.10.t
+	desc = lil.10.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.10.1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = lil.10.2
+		if = {
+			limit = {
+				ROOT = {
+					has_government = qinwai
+				}
+			}
+			set_variable = {
+				LIL_tiaotingneizhan = 1
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = lil.11
+	title = lil.11.t
+	desc = lil.11.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.11.1
+		trigger = {
+			OR = {
+				check_variable = {
+					LIL_tiaotingneizhan = 0
+				}
+				check_variable = {
+					LIL_tiaotingneizhan = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = lil.11.2
+		#可以加新闻
+		CIR = {
+			set_truce = {
+				target = SCA
+				days = 730
+			}
+			white_peace = SCA
+		}
+		trigger = {
+			check_variable = {
+				LIL_tiaotingneizhan = 2
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = lil.12
+	title = lil.8.t
+	desc = lil.8.d
+  #	picture = xxx
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = lil.8.1
+		FROM = {
+			xianghubaodu = yes
+			country_event = { id = glo.2001 }
+		}
+		ai_chance = {
+			factor = 90
+			modifier = {
+				ROOT = {
+					has_government = neworder
+				}
+				factor = -80
+			}
+		}
+	}
+	option = {
+		name = lil.8.2
+		FROM = {
+			country_event = { id = glo.2002 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				ROOT = {
+					has_government = neworder
+				}
+				factor = 80
+			}
+		}
+	}
+}
+country_event = {
+	id = lil.13
+	title = lil.13.t
+	desc = lil.13.d
+  #	picture = xxx
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = lil.13.1
+		add_political_power = -50
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.10
+		}
+		add_to_variable = {
+			LIL_jinbupai = -50
+		}
+		add_to_variable = {
+			LIL_baoshipai = -50
+		}
+		custom_effect_tooltip = lil.13.1_tt
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = lil.13.2
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = guli
+			popularity = 0.05
+		}
+		add_timed_idea = {
+			idea = LIL_duileyuanzizhituoxie
+			days = 360
+		}
+		add_to_variable = {
+			LIL_jinbupai = -20
+		}
+		add_to_variable = {
+			LIL_baoshipai = -20
+		}
+		custom_effect_tooltip = lil.13.2_tt
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+country_event = {
+	id = lil.14
+	title = lil.14.t
+	desc = lil.14.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.14.1
+		add_political_power = -50
+		LIL = {
+			country_event = { id = glo.2001 }
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_timed_idea = {
+				idea = LIL_wuzhihujiansheyuanzhu
+				days = 120
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = lil.14.2
+		LIL = {
+			country_event = { id = glo.2002 }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = lil.15
+	title = lil.15.t
+	desc = lil.15.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = lil.15.1
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SC2
+				}
+				add_core_of = LIL
+			}
+			add_ideas = LIL_jiefangzhiri
+		}
+		complete_national_focus = LIL_7
+		mark_focus_tree_layout_dirty = yes
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = lil.15.2
+		complete_national_focus = LIL_135
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			add_ideas = LIL_shenpanzhiri
+		}
+		LIL_lil = {
+			set_portraits = {
+				army = { large = "gfx/leaders/LIL/LIL_lilb.png" }
+				army = { small = "gfx/leaders/LIL/LIL_lilb_small.png" }
+				civilian = { large = "gfx/leaders/LIL/LIL_lilb.png" }		
+				civilian = { small = "gfx/leaders/LIL/LIL_lilb_small.png" }
+			}
+		}
+		LIL_lil_leader = {
+			set_portraits = {
+				army = { large = "gfx/leaders/LIL/LIL_lilb.png" }
+				army = { small = "gfx/leaders/LIL/LIL_lilb_small.png" }
+				civilian = { large = "gfx/leaders/LIL/LIL_lilb.png" }		
+				civilian = { small = "gfx/leaders/LIL/LIL_lilb_small.png" }
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+country_event = {
+	id = lil.16
+	title = lil.16.t
+	desc = lil.16.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.16.1
+		puppet = LIL
+		LIL = {
+			can_core = yes
+			low_puppet_level = yes
+			low_puppet_level = yes
+			low_puppet_level = yes
+			low_puppet_level = yes
+			low_puppet_level = yes
+		}
+		change_tag_from = LIL
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = lil.16.2
+		LIL = {
+			country_event = { id = glo.2002 }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = lil.17
+	title = lil.17.t
+	desc = lil.17.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.17.1
+		remove_opinion_modifier = {
+			target = LIL
+			modifier = background_friend
+		}
+		LIL = {
+			remove_opinion_modifier = {
+				target = CIR
+				modifier = background_friend
+			}
+			leave_faction = yes
+			declare_war_on = {
+				type = annex_everything
+				target = CIR	
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	id = lil.18
+	title = lil.18.t
+	desc = lil.18.d
+  #	picture = xxx
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lil.18.1
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.40
+		}
+		set_politics = {
+			ruling_party = oldorder
+		}
+		remove_country_leader_trait = LIL_yaojingxianzhi
+		add_country_leader_trait = LIL_yonghendexianzhi
+		swap_ideas = {
+			remove_idea = LIL_xianzhishheneyhan_4
+			add_idea = LIL_xianzhishheneyhan_5
+		}
+		set_country_flag = yonghezhichun
+		custom_effect_tooltip = lil.18_tt
+		every_country = {
+			add_opinion_modifier = {
+				target = LIL
+				modifier = LIL_yongchunyibian
+			}
+			add_ideas = LIL_yongchunyibian_i
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

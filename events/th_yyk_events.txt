@@ -400,7 +400,7 @@ country_event = {
 
 	option = {
 		name = yyk.110.1
-		custom_effect_tooltip = YYK_clr_world_limit_tt
+		custom_effect_tooltip = clr_world_limit_tt
 		hidden_effect = {
 			clr_country_flag = world_limit
 		}

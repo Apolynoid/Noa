@@ -1,0 +1,1073 @@
+﻿add_namespace = gen
+#==============通用焦点==============
+country_event = {
+	id = gen.1
+	title = gen.1.t
+	desc = gen.1.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	trigger = {
+		is_subject = yes
+		
+		OVERLORD = {
+			has_war = yes
+			any_country = {
+				has_war_with = PREV
+				ROOT = { not = { has_war_with = PREV} }
+			}
+		}
+		
+		
+		
+	}
+
+	immediate = {
+		OVERLORD = {
+			every_country = {
+				limit = { 
+					has_war_with = PREV
+				}
+				ROOT = {
+					add_to_war = { 
+					    targeted_alliance = PREV.PREV
+					    enemy = PREV
+					}
+				}
+			}
+			country_event = gen.2
+		}
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = gen.2
+	title = gen.2.t
+	desc = gen.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = gen.2.a
+	}
+}
+
+news_event = {
+	id = gen.3
+	title = gen.3.t
+	desc = gen.3.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = gen.3.a
+	}
+}
+
+# country_event = {
+# 	id = gen.3
+# 	title = gen.3.t
+# 	desc = gen.3.d
+# 
+# 	fire_only_once = no
+# 	is_triggered_only = no
+
+# 	mean_time_to_happen = {
+# 		days = 2
+# 	}
+
+# 	trigger = {
+# 		num_divisions < 2
+
+# 		country_exists = ROOT
+
+# 		or = {
+# 			OVERLORD = {
+# 	    		has_war = no
+# 	    	}
+# 	    	is_subject = no
+# 		}
+    	
+#     	has_war = no
+    	
+#     	not = { 
+#     		tag = XXX
+#     	}
+# 	}
+
+# 	option = {	
+# 		name = gen.3.1
+# 			if = {
+# 				limit = {
+# 					has_tech = lingben
+# 				}
+# 				division_template = {
+# 					name = "Buffer"
+# 				    regiments = {
+# 				        melee_infantry = { x = 0 y = 0 }
+# 				        melee_infantry = { x = 0 y = 1 }
+# 				        melee_infantry = { x = 0 y = 2 }
+# 				        melee_infantry = { x = 0 y = 3 }
+# 				    }
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_tech = waike
+# 				}
+# 				division_template = {
+# 					name = "Buffer"
+# 				    regiments = {
+# 				        melee_infantry = { x = 0 y = 0 }
+# 				        melee_infantry = { x = 0 y = 1 }
+# 				        melee_infantry = { x = 0 y = 2 }
+# 				        melee_infantry = { x = 0 y = 3 }
+# 				    }
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_idea = none_theory
+# 				}
+# 				division_template = {
+# 					name = "Buffer"
+# 				    regiments = {
+# 				        melee_infantry = { x = 0 y = 0 }
+# 				        melee_infantry = { x = 0 y = 1 }
+# 				        melee_infantry = { x = 0 y = 2 }
+# 				        melee_infantry = { x = 0 y = 3 }
+# 				    }
+# 				}
+# 			}
+# 		#2ge 
+# 			capital_scope = {
+# 				create_unit = {
+# 				    division = "name = \"Buffer\" division_template = \"Buffer\" start_experience_factor = 0.1 start_equipment_factor = 1"
+# 				    owner = ROOT
+# 				}
+# 				create_unit = {
+# 				    division = "name = \"Buffer\" division_template = \"Buffer\" start_experience_factor = 0.1 start_equipment_factor = 1"
+# 				    owner = ROOT
+# 				}
+# 			}
+		
+# 	}
+# }
+
+news_event = {
+	id = gen.4
+	title = gen.4.t
+	desc = gen.4.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = gen.4.1
+		trigger = {
+			tag = FROM
+			has_government = guli
+		}
+	}
+	option = {
+		name = gen.4.2
+		trigger = {
+			tag = FROM
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = gen.4.3
+		trigger = {
+			tag = FROM
+			has_government = fandong
+		}
+	}
+	option = {
+		name = gen.4.4
+		trigger = {
+			tag = FROM
+			has_government = neworder
+		}
+	}
+	option = {
+		name = gen.4.5
+		trigger = {
+			tag = FROM
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = gen.4.6
+		trigger = {
+			not = {
+				tag = FROM
+			}
+		}
+	}
+}
+
+news_event = {
+	id = gen.5
+	title = gen.5.t
+	desc = gen.5.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = gen.5.1
+		trigger = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+		}
+	}
+	option = {
+		name = gen.5.2
+		trigger = {
+			capital_scope = {
+				not = { is_on_continent = Gensokyo }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gen.6
+	title = gen.6.t
+	desc = gen.6.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = gen.6.1
+	}
+}
+
+country_event = {
+	id = gen.7
+	title = gen.7.t
+	desc = gen.7.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+
+	option = {
+		name = gen.7.1
+		trigger = {
+			capital_scope ={
+				is_on_continent = Gensokyo
+			}
+		}
+	}
+	option = {
+		name = gen.7.2
+		trigger = {
+			capital_scope ={
+				not = { is_on_continent = Gensokyo }
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = gen.8
+	title = gen.8.t
+	desc = gen.8.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+			and = {
+				has_government = guli
+				or = {
+					has_country_flag = {
+						flag = openvalue
+						value > 2
+					}
+					has_country_flag = {
+						flag = lobbyvalue
+						value > 2
+					}
+				}
+			}
+			and = {
+				has_government = qinwai
+				or = {
+					has_country_flag = {
+						flag = openvalue
+						value < -2
+					}
+					has_country_flag = {
+						flag = lobbyvalue
+						value > 2
+					}
+				}
+			}
+			and = {
+				has_government = fandong
+				or = {
+					has_country_flag = {
+						flag = openvalue
+						value < -2
+					}
+					has_country_flag = {
+						flag = lobbyvalue
+						value < -2
+					}
+				}
+			}
+			and = {
+				has_government = neworder
+				or = {
+					has_country_flag = {
+						flag = openvalue
+						value > 2
+					}
+					has_country_flag = {
+						flag = lobbyvalue
+						value < -2
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 900
+	}
+
+	option = {
+		name = gen.8.1
+		add_stability = -0.035
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = gen.8.2
+
+		ai_chance = {
+			base = 85
+		}
+
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.02
+			}
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.02
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = gen.9
+	title = gen.9.t
+	desc = gen.9.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+			and = {
+				has_government = guli
+				guli < 0.35
+			}
+			and = {
+				has_government = qinwai
+				qinwai < 0.35
+			}
+			and = {
+				has_government = fandong
+				fandong < 0.35
+			}
+			and = {
+				has_government = neworder
+				neworder < 0.35
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 900
+	}
+
+	option = {
+		name = gen.9.1
+		add_stability = -0.07
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = gen.9.2
+
+		ai_chance = {
+			base = 65
+		}
+
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = guli
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = qinwai
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = fandong
+						popularity = 0.03
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = guli
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = neworder
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = fandong
+						popularity = 0.03
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = neworder
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = qinwai
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = fandong
+						popularity = 0.03
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			random_list = {
+				50 = {
+					add_popularity = {
+						ideology = guli
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = qinwai
+						popularity = 0.03
+					}
+				}
+				50 = {
+					add_popularity = {
+						ideology = neworder
+						popularity = 0.03
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = gen.9.3
+
+		ai_chance = {
+			base = 30
+		}
+
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			random_list = {
+				50 = {
+					conservativeincrease = yes
+				}
+				50 = {
+					lobbydecrease = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			random_list = {
+				50 = {
+					conservativedecrease = yes
+				}
+				50 = {
+					lobbyincrease = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			random_list = {
+				50 = {
+					conservativeincrease = yes
+				}
+				50 = {
+					lobbyincrease = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			random_list = {
+				50 = {
+					conservativedecrease = yes
+				}
+				50 = {
+					lobbydecrease = yes
+				}
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = gen.10
+	title = gen.10.t
+	desc = gen.10.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+			and = {
+				has_government = guli
+				guli > 0.7
+				and = {
+					has_country_flag = {
+						flag = openvalue 
+						value < -3
+					}
+					has_country_flag = {
+						flag = lobbyvalue 
+						value < -3
+					}
+				}
+			}
+			and = {
+				has_government = qinwai
+				qinwai > 0.7
+				and = {
+					has_country_flag = {
+						flag = openvalue 
+						value > 3
+					}
+					has_country_flag = {
+						flag = lobbyvalue 
+						value < -3
+					}
+				}
+			}
+			and = {
+				has_government = neworder
+				neworder > 0.7
+				and = {
+					has_country_flag = {
+						flag = openvalue 
+						value < -3
+					}
+					has_country_flag = {
+						flag = lobbyvalue 
+						value > 3
+					}
+				}
+			}
+			and = {
+				has_government = fandong
+				fandong > 0.7
+				and = {
+					has_country_flag = {
+						flag = openvalue 
+						value > 3
+					}
+					has_country_flag = {
+						flag = lobbyvalue 
+						value > 3
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 2000
+	}
+
+	option = {
+		name = gen.10.1
+		ai_chance = {
+			base = 20
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			random_list = {
+				50 = {
+					lobbydecrease = yes
+				}
+				50 = {
+					conservativedecrease = yes
+				}
+			}	
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			random_list = {
+				50 = {
+					lobbydecrease = yes
+				}
+				50 = {
+					conservativeincrease = yes
+				}
+			}	
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			random_list = {
+				50 = {
+					lobbyincrease = yes
+				}
+				50 = {
+					conservativeincrease = yes
+				}
+			}	
+		}
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			random_list = {
+				50 = {
+					lobbyincrease = yes
+				}
+				50 = {
+					conservativedecrease = yes
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = gen.10.2
+
+		ai_chance = {
+			base = 35
+		}
+
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.05
+			}
+		}
+	}
+
+	option = {
+		name = gen.10.3
+
+		ai_chance = {
+			base = 45
+		}
+
+		add_political_power = 75
+	}
+
+}
+
+country_event = {
+	id = gen.11
+	title = gen.11.t
+	desc = gen.11.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		check_variable = {
+			PO_average_mp < global.PO_low
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1000
+	}
+
+	option = {
+		name = gen.11.1
+		ai_chance = {
+			base = 95
+		}
+		
+		OL_minus4 = yes
+	}
+
+	option = {
+		name = gen.11.2
+
+		ai_chance = {
+			base = 5
+		}
+
+		add_stability = -0.07
+	}
+}
+
+country_event = {
+	id = gen.12
+	title = gen.12.t
+	desc = gen.12.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+		or = {
+   			and = {
+   				check_variable = { OL_view_type = 0}
+      			check_variable = { OL_view_value < global.OL_border2}
+   			}
+   			and = {
+   				check_variable = { OL_view_type = 1}
+   				or = {
+   					check_variable = { OL_view_value < global.OL_border1}
+   					check_variable = { OL_view_value > global.OL_border2}
+   				}
+   			}
+   			and = {
+   				check_variable = { OL_view_type = 2}
+   				check_variable = { OL_view_value > global.OL_border1}
+   			}
+   		}
+	}
+
+	mean_time_to_happen = {
+		days = 1000
+	}
+
+	option = {
+		name = gen.12.1
+		if = {
+			limit = {
+				and = {
+	   				check_variable = { OL_view_type = 0}
+	      			check_variable = { OL_view_value < global.OL_border2}
+	   			}
+			}
+			OL_minus4 = yes
+		}
+
+		if = {
+			limit = {
+				and = {
+	   				check_variable = { OL_view_type = 2}
+	   				check_variable = { OL_view_value > global.OL_border1}
+	   			}
+			}
+			OL_add4 = yes
+		}
+
+		if = {
+			limit = {
+				and = {
+   					check_variable = { OL_view_type = 1}
+	   				check_variable = { OL_view_value < global.OL_border1}
+	   			}
+			}
+			OL_minus4 = yes
+			else = {
+				if = {
+					limit = {
+						check_variable = { OL_view_type = 1}
+					}
+					OL_add4 = yes
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 95
+		}
+		
+		
+	}
+
+	option = {
+		name = gen.12.2
+
+		ai_chance = {
+			base = 5
+		}
+
+		add_stability = -0.07
+	}
+
+
+}
+
+country_event = {
+	id = gen.13
+	title = gen.13.t
+	desc = gen.13.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = gen.13.1
+	}
+}
+
+country_event = {
+	id = gen.14
+	title = gen.14.t
+	desc = gen.14.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		add_to_war = {
+			targeted_alliance = FROM.FROM
+			enemy = FROM
+		}
+		
+		name = gen.14.1
+	}
+}
+
+country_event = {
+	id = gen.15
+	title = gen.15.t
+	desc = gen.15.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject = yes
+					is_in_faction = no
+					not = {
+						has_country_flag = been_justified_by_@ROOT
+					}
+				}
+			}
+			FROM = {
+				OVERLORD = {
+					country_event = gen.16
+				}
+				set_country_flag = {
+					days = 200
+					value = 1
+					flag = been_justified_by_@ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = gen.16
+	title = gen.16.t
+	desc = gen.16.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = gen.16.1
+	}
+}
+news_event = {
+	id = gen.17
+	title = gen.17.t
+	desc = gen.17.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = gen.17.1
+	}
+}

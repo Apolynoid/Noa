@@ -7,6 +7,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_faith_texticon"
+		texturefile = "gfx/texticons/faith.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_spiritual_power_bead_texticon"
 		texturefile = "gfx/texticons/spiritual_power_bead.png"
 		legacy_lazy_load = no

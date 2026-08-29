@@ -1,0 +1,3399 @@
+add_namespace = hkr
+##########事件###########
+country_event = { #时代的落幕？
+	id = hkr.1
+	title = hkr.1.t
+	desc = hkr.1.d
+	picture = GFX_news_event_hkr.1
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.1.1#没有
+		trigger = {
+
+		}
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.15
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.1.2#有
+		trigger = {
+
+		}
+		add_popularity = {
+			ideology = guli
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.15
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #外界帮助
+	id = hkr.2
+	title = hkr.2.t
+	desc = hkr.2.d
+	picture = GFX_news_event_hkr.2
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.2.1#人类村落
+		set_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = 1
+		}
+		set_country_flag = {
+			flag = hkr_help_renli
+			value = 1
+		}
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.2.2#红魔馆
+		set_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = -1
+		}
+		set_country_flag = {
+			flag = hkr_help_hongmoguan
+			value = 1
+		}
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.2.3#八云紫
+		set_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		set_country_flag = {
+			flag = hkr_help_zi
+			value = 1
+		}
+		set_country_flag = {
+          flag = hkr_renyaoqingxiang
+          value = 0
+        }
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #招募对象
+	id = hkr.3
+	title = hkr.3.t
+	desc = hkr.3.d
+	picture = GFX_news_event_hkr.3
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.3.1#人类村落
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = 1
+		}
+		add_ideas = HKR_qurenli_idea
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+				}
+				
+			}
+		}
+	}
+
+	option = {
+		name = hkr.3.2#志愿者
+		add_ideas = HKR_zhiyuanzhe_idea
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+		}
+	}
+
+	option = {
+		name = hkr.3.3#妖怪
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = -1
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					is_historical_focus_on = yes
+				}
+				
+			}
+		}
+		add_ideas = HKR_zhaoyaoguai_idea
+		trigger = {
+
+		}
+	}
+}
+
+country_event = { #拉拢的手段
+	id = hkr.4
+	title = hkr.4.t
+	desc = hkr.4.d
+	picture = GFX_news_event_hkr.4
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.4.1#灵力展示
+		add_manpower = 200
+		add_ideas = HKR_zhanshililiang_idea
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = HKR_paths
+					option = HKR_path_oldorder
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.4.2#退治道具
+		add_manpower = 50
+		add_ideas = HKR_tuizhidaoju_idea
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = { #博丽密器
+	id = hkr.5
+	title = hkr.5.t
+	desc = hkr.5.d
+	picture = GFX_news_event_hkr.5
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.5.1#封魔
+		add_ideas = HKR_fengmozhen_idea
+
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = HKR_paths
+					option = HKR_path_oldorder
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.5.2#阴阳鱼
+		add_ideas = HKR_yinyangyu_idea
+		
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = HKR_paths
+					option = HKR_path_oldorder
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.5.3#不公开
+
+		add_political_power = 300
+		OL_add5 = yes
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 33
+		}
+	}
+}
+
+country_event = { #修博丽神社
+	id = hkr.6
+	title = hkr.6.t
+	desc = hkr.6.d
+	picture = GFX_news_event_hkr.6
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.6.1#小
+		add_manpower = -50
+		add_political_power = -10
+		192 = {
+			add_extra_state_shared_building_slots = 2
+	        add_building_construction = {
+	            type = infrastructure
+	            level = 1
+	            instant_build = yes
+	        }
+		}
+		trigger = {
+
+		}
+	}
+
+	option = {
+		name = hkr.6.2#中
+		add_manpower = -150
+		add_political_power = -25
+		192 = {
+			add_extra_state_shared_building_slots =4
+	        add_building_construction = {
+	            type = infrastructure
+	            level = 2
+	            instant_build = yes
+	        }
+		}
+
+		trigger = {
+
+		}
+	}
+
+	option = {
+		name = hkr.6.3#大
+		add_manpower = -250
+		add_political_power = -50
+		192 = {
+			add_extra_state_shared_building_slots = 6
+	        add_building_construction = {
+	            type = infrastructure
+	            level = 4
+	            instant_build = yes
+	        }
+		}
+
+		trigger = {
+
+		}
+	}
+}
+
+country_event = { #重申八云紫关系
+	id = hkr.7
+	title = hkr.7.t
+	desc = hkr.7.d
+	picture = GFX_news_event_hkr.7
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.7.1#人类
+		if = {
+          limit = {
+            not = {
+              has_country_flag = HKR_renleixuandui
+            }
+          }
+          set_country_flag = {
+            flag = HKR_renleixuandui
+            value = 1
+          }
+          else = {
+            modify_country_flag = {
+              flag = HKR_renleixuandui
+              value = 1
+            }
+          }
+        }
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.1
+		}
+		add_ideas = HKR_event7_idea
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = 1
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.7.2#威望
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.1
+		}
+		add_ideas = HKR_weiwang_idea
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = -1
+		}
+		lobbyincrease = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.7.3#自然
+		add_ideas = HKR_ziran_idea
+		add_popularity = {
+			ideology = guli
+			popularity = 0.1
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.7.4#职责
+		if = {
+          limit = {
+            not = {
+              has_country_flag = HKR_zixuandui
+            }
+          }
+          set_country_flag = {
+            flag = HKR_zixuandui
+            value = 1
+          }
+          else = {
+            modify_country_flag = {
+              flag = HKR_zixuandui
+              value = 1
+            }
+          }
+        }
+		add_ideas = HKR_zhize_idea
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.1
+		}
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #博丽神社的神明
+	id = hkr.8
+	title = hkr.8.t
+	desc = hkr.8.d
+	picture = GFX_news_event_hkr.8
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.8.1#隐岐奈
+		HKR_aunn = {
+          add_skill_level = 1
+          add_logistics = 2
+          add_planning = 2
+          add_defense = 1
+          add_attack = 1
+        }
+
+        set_country_flag = hkr_okina
+		
+		add_opinion_modifier = { target = OKI modifier = HKR_yinqinai_op}
+		reverse_add_opinion_modifier = { target = OKI modifier = HKR_yinqinai_op}
+		add_opinion_modifier = { target = YKR modifier = HKR_yinqinai2_op}
+		reverse_add_opinion_modifier = { target = YKR modifier = HKR_yinqinai2_op}
+		OKI = {
+	        can_use = yes
+		}
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = -10
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = hkr.25 }
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.8.2#妖怪
+		if = {
+          limit = {
+            not = {
+              has_country_flag = HKR_hongmoguanxuandui
+            }
+          }
+          set_country_flag = {
+            flag = HKR_hongmoguanxuandui
+            value = 1
+          }
+          else = {
+            modify_country_flag = {
+              flag = HKR_hongmoguanxuandui
+              value = 1
+            }
+          }
+        }
+		set_country_flag = hkr_shensheheyaoguaiyouguan
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.1
+		}
+		add_political_power = 100
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = -1
+		}
+		if = {
+			limit = {
+				has_idea = hkr_yaoguaiwunv
+			}
+			remove_ideas = hkr_yaoguaiwunv
+			add_timed_idea = { idea = HKR_yaoguaiwunv2_idea days = 182}
+		}
+		conservativeincrease = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.8.3#依神
+		custom_effect_tooltip = HKR_yorigami_tt
+		hidden_effect = {
+			XXX = {
+				HKR_jyo = {
+					set_nationality = HKR
+				}
+				HKR_son = {
+					set_nationality = HKR
+				}
+			}
+		}
+		add_stability = -0.05
+		add_ideas = HKR_yishen_idea
+		hidden_effect = {
+			news_event = { days = 2 id = hkr.25 }
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.8.4#自己
+		if = {
+          limit = {
+            not = {
+              has_country_flag = HKR_renleixuandui
+            }
+          }
+          set_country_flag = {
+            flag = HKR_renleixuandui
+            value = 1
+          }
+          else = {
+            modify_country_flag = {
+              flag = HKR_renleixuandui
+              value = 1
+            }
+          }
+        }
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = 1
+		}
+		HKR_hkr = {
+          add_skill_level = 1
+          add_planning = 1
+        }
+		remove_ideas = hkr_huaping 
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.075
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.075
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = hkr.25 }
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.8.5#不定
+		if = {
+          limit = {
+            not = {
+              has_country_flag = HKR_zixuandui
+            }
+          }
+          set_country_flag = {
+            flag = HKR_zixuandui
+            value = 1
+          }
+          else = {
+            modify_country_flag = {
+              flag = HKR_zixuandui
+              value = 1
+            }
+          }
+        }
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		add_popularity = {
+			ideology = guli
+			popularity = 0.1
+		}
+		add_stability = 0.1
+
+		conservativedecrease = yes
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #再度发展关系
+	id = hkr.9
+	title = hkr.9.t
+	desc = hkr.9.d
+	picture = GFX_news_event_hkr.9
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.9.1#人类
+		custom_effect_tooltip = changing_effect
+		add_political_power = 350
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = 1
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = HKR_renleixuandui
+					value > 1
+				}
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.1
+			}
+			remove_ideas = hkr_yaoguaiwunv
+			HUM = {
+				can_use = yes
+			}
+			add_ideas = HUM_manu
+		}
+		trigger = {
+			has_country_flag = hkr_help_renli
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.9.2#红魔馆
+		custom_effect_tooltip = changing_effect
+		modify_country_flag = {
+			flag = hkr_renyaoqingxiang
+			value = -1
+		}
+		add_opinion_modifier = {
+			target = SCA
+			modifier = HKR_zaiduguanxi_op
+		}
+		reverse_add_opinion_modifier = {
+			target = SCA
+			modifier = HKR_zaiduguanxi_op
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = HKR_hongmoguanxuandui
+					value > 1
+				}
+			}
+			if = {
+				limit = { has_idea = hkr_yaoguaiwunv }
+				remove_ideas = hkr_yaoguaiwunv
+				add_timed_idea = { idea = HKR_yaoguaiwunv2_idea days = 365}
+			}
+			add_war_support = 0.05
+			SCA = {
+		        can_use = yes
+			}
+			add_ideas = SCA_manu
+		}
+		trigger = {
+			has_country_flag = hkr_help_hongmoguan
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.9.3#紫
+		custom_effect_tooltip = changing_effect
+		modify_country_flag = {
+			flag = hkr_oldorder
+			value = 1
+		}
+		add_opinion_modifier = {
+			target = YKR
+			modifier = HKR_zaiduguanxi_op
+		}
+		reverse_add_opinion_modifier = {
+			target = YKR
+			modifier = HKR_zaiduguanxi_op
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = HKR_zixuandui
+					value > 1
+				}
+			}
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.1
+			}
+			if = {
+				limit = { has_idea = hkr_yaoguaiwunv }
+				remove_ideas = hkr_yaoguaiwunv
+				add_timed_idea = { idea = HKR_yaoguaiwunv2_idea days = 182}
+			}
+			YKR = {
+		        can_use = yes
+			}
+			add_ideas = YKR_manu
+		}
+		trigger = {
+			has_country_flag = hkr_help_zi
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_guli
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.9.4#绝对中立
+		add_political_power = 200
+		add_popularity = {
+			ideology = guli
+			popularity = 0.05
+		}
+		add_stability = 0.1
+		trigger = {
+
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_neworder
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_qinwai
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_fandong
+					}
+					has_game_rule = {
+						rule = HKR_paths
+						option = HKR_path_oldorder
+					}
+					is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #寻求人类帮助
+	id = hkr.10
+	title = hkr.10.t
+	desc = hkr.10.d
+	picture = GFX_news_event_hkr.10
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.10.1#边缘人类
+		add_ideas = HKR_bianyuanrenlei_idea
+		add_manpower = 200
+		set_country_flag = HKR_bianyuanrenleibangzhu
+		every_country = {
+			limit = {
+				has_idea = Human
+				not = {
+					tag = HUM
+				}
+			}
+			add_opinion_modifier = { modifier = HKR_bianyuanbangzhu_op target = HKR}
+			reverse_add_opinion_modifier = { modifier = HKR_bianyuanbangzhu_op target = HKR}
+		}
+	}
+	option = {
+		name = hkr.10.2#人类村落人类
+
+		HUM = {
+			country_event = hkr.11
+		}
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			add_ideas = HKR_renlirenlei_idea
+			add_manpower = 200
+		}
+	}
+}
+
+country_event = { #寻求人类帮助
+	id = hkr.11
+	title = hkr.11.t
+	desc = hkr.11.d	
+	picture = GFX_news_event_hkr.11
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.11.1#支持
+		add_political_power = -30
+		HKR = {
+			add_ideas = HKR_renlirenlei_idea
+			add_manpower = 200
+			set_country_flag = HKR_renlirenleibangzhu
+		}
+		HKR = { country_event = { days = 2 id = glo.2001} }
+		ai_chance = {
+			base = 75
+			modifier = {
+				add = -35
+				has_government = guli
+			}
+			modifier = {
+				add = -30
+				has_cosmetic_tag = HUM_f
+			}
+			modifier = {
+				add = 10
+				or = {
+					MSD =  { is_subject_of = HKR}
+					HKR = { controls_state = 243 }
+				}
+			}
+			modifier = {
+				add = 1000
+				HKR = {
+					or = {
+						is_neighbor_of = HUM
+						any_country = {
+							is_subject_of = HKR
+							is_neighbor_of = HUM
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = hkr.11.2#不支持
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 100
+		HKR = { country_event = { days = 2 id = glo.2002} }
+	}
+}
+
+country_event = { #消除外来威胁
+	id = hkr.12
+	title = hkr.12.t
+	desc = hkr.12.d
+	picture = GFX_news_event_hkr.12
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.12.1#命莲寺
+		declare_war_on = {
+			target = NMS
+			type = annex_everything
+		}
+	}
+	option = {
+		name = hkr.12.2#付丧神
+		declare_war_on = {
+			target = TKM
+			type = annex_everything
+		}
+	}
+	option = {
+		name = hkr.12.3#神灵庙
+		declare_war_on = {
+			target = SRB
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #（魔法使）魔法使联合
+	id = hkr.13
+	title = hkr.13.t
+	desc = hkr.13.d
+	picture = GFX_news_event_hkr.13
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.13.1#结盟
+		HKR = {
+			remove_ideas = hkr_huaping
+			add_ideas = can_create_faction_idea
+			create_faction = HKR_mofashi
+			add_to_faction = ROOT
+			set_country_flag = HKR_MRS_jiemeng
+			country_event = { id = hkr.14 days = 2 }
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				ROOT = {
+					has_country_flag = MAF_united
+					has_government = fandong
+				}
+				factor = 0
+			}
+			modifier = {
+				ROOT = {
+					has_country_flag = MAF_united
+					has_government = qinwai
+				}
+				add = -20
+			}
+		}
+	}
+	option = {
+		name = hkr.13.2#附庸
+		HKR = {
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+            	subject_level3 = yes
+			}
+			remove_ideas = hkr_huaping
+			ROOT = {
+				subject_level2 = yes	
+				can_core = yes
+			}
+	        set_country_flag = HKR_MRS_fuyong
+	        country_event = { id = hkr.14 days = 2 }
+	        if = {
+	        	limit = {
+	        		ROOT = {
+	        			original_tag = ALI
+	        		}
+	        	}
+	        	set_country_flag = HKR_ALI_fuyong
+	        }
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				ROOT = {
+					has_government = fandong
+				}
+				factor = 0
+			}
+			modifier = {
+				ROOT = {
+          			or = {
+            			original_tag = ALI
+            			AND = {
+              				original_tag = MRS
+              				has_government = qinwai
+						}
+					}
+				}
+				add = -30
+			}
+		}
+		
+	}
+	option = {
+		name = hkr.13.3#不同意
+		HKR = { country_event = { id = glo.2002 days = 2}}
+		ai_chance = {
+			base = 30
+			modifier = {
+				HKR = {
+					has_country_flag = HKR_beici
+				}
+				add = -15
+			}
+			modifier = {
+				ROOT = {
+          			original_tag = MRS
+					or = {
+						has_government = guli
+						has_government = neworder
+				  	}
+				}
+				factor = 0
+			}
+			modifier = {
+				ROOT = {
+          			original_tag = ALI
+					or = {
+						has_government = oldorder
+						has_government = neworder
+				  	}
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #（回复）魔法使联合
+	id = hkr.14
+	title = hkr.14.t
+	picture = GFX_news_event_hkr.14
+	desc = {
+		text = hkr.14.d1
+		trigger = {
+			has_country_flag = HKR_MRS_jiemeng
+		}
+	}
+	desc = {
+		text = hkr.14.d2
+		trigger = {
+			has_country_flag = HKR_MRS_fuyong
+		}
+	}
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.14.1#结盟
+		if = {
+			limit = { 
+				has_country_flag = HKR_MRS_jiemeng
+			}
+			effect_tooltip = {
+				HKR = {
+					remove_ideas = hkr_huaping
+					create_faction = HKR_mofashi
+					add_to_faction = FROM
+				}
+			}
+			else = {
+				effect_tooltip = {
+					HKR = {
+						remove_ideas = hkr_huaping
+						FROM = {
+							subject_level2 = yes
+							can_core = yes
+						}
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			news_event = { id = hkr.33 days = 2}
+		}
+	}
+}
+
+country_event = { #主动监视人类村落
+	id = hkr.15
+	title = hkr.15.t
+	desc = hkr.15.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.15.1#影狼
+		add_ideas = HKR_zhudongjianshi_idea
+		declare_war_on = {
+			target = KAG
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+
+	}
+	option = {
+		name = hkr.15.2#小镇
+		add_ideas = HKR_zhudongjianshi_idea
+		declare_war_on = {
+			target = SBK
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = hkr.15.3#不要
+		add_ideas = HKR_zhudongjianshi_idea2
+		add_political_power = 220
+		ai_chance = {
+			base = 100
+		}
+
+	}
+}
+
+country_event = { #YKR puppet or VS HKR
+	id = hkr.16
+	title = hkr.16.t
+	desc = hkr.16.d
+	picture = GFX_news_event_hkr.16
+	# hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		or = {
+			date > 149.5.15
+			HKR = {
+				check_variable = { all_value_plus_manpower > 300}
+			}
+		}
+		HKR = {
+			has_idea = hkr_bayunzi
+		}
+		has_global_flag = main_scenario
+		country_exists = HKR
+		country_exists = YKR
+		not = {
+			HKR = {
+				is_subject_of = YKR
+				is_in_faction_with = YKR
+			}
+		}
+		tag = HKR
+		is_subject = no
+	}
+	mean_time_to_happen = {
+		days = 700
+	}
+
+	option = {
+		name = hkr.16.1
+
+		ai_chance = {
+			base = 90
+		}
+			
+		YKR = {
+	    	HKR = {
+	    		subject_level2 = yes
+	    	}
+    	}
+    	hidden_effect = {
+    		news_event = { days = 2 id = hkr.17}
+    	}
+	}
+
+	option = {
+		name = hkr.16.2
+
+		# set_country_flag = hkr_jujuezi
+
+		swap_ideas = { add_idea = hkr_bayunzi2 remove_idea = hkr_bayunzi}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 1000
+				or = {
+					has_government = fandong
+					has_government = qinwai
+					has_government = neworder
+					has_completed_focus = HKR_yaoguaiwunv
+					num_subjects > 0
+					owns_state = 424
+				}
+			}
+			
+		}
+	}
+}
+
+news_event = { #YKR puppet HKR
+	id = hkr.17
+	title = hkr.17.t
+	desc = hkr.17.d
+	picture = GFX_news_event_hkr.17
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.17.1
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = YKR
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.17.2
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.17.3
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = hkr.17.4
+		trigger = {
+			not = { tag = YKR }
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+}
+
+country_event = { #YKR puppet or VS HKR
+	id = hkr.18
+	title = hkr.18.t
+	desc = hkr.18.d
+	picture = GFX_news_event_hkr.18
+	# hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		or = {
+			date > 152.5.15
+			HKR = {
+				check_variable = { all_value_plus_manpower > 550}
+			}
+		}
+		HKR = {
+			has_idea = hkr_bayunzi2
+		}
+		has_global_flag = main_scenario
+		country_exists = HKR
+		country_exists = YKR
+		not = {
+			HKR = {
+				is_subject_of = YKR
+				is_in_faction_with = YKR
+			}
+		}
+		# has_country_flag = hkr_jujuezi
+		tag = HKR
+		is_subject = no
+
+	}
+	mean_time_to_happen = {
+		days = 600
+	}
+
+	option = {
+		name = hkr.18.1
+
+		HKR = {
+			declare_war_on = {
+				target = YKR
+				type = puppet_wargoal_focus
+			}
+		}
+
+		hidden_effect = {
+			# news_event = { id = hkr.19 days = 2}
+		}
+
+		ai_chance = {
+			base = 99
+			modifier = {
+				has_government = guli
+				add = -98
+			}
+		}
+	}
+
+	option = {
+		name = hkr.18.2
+
+		YKR = {
+	    	HKR = {
+	    		subject_level2 = yes
+	    	}
+    	}
+    	hidden_effect = {
+    		news_event = { days = 2 id = hkr.17}
+    	}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0.01
+				or = {
+					has_government = fandong
+					has_government = qinwai
+					has_government = neworder
+					has_completed_focus = HKR_yaoguaiwunv
+					num_subjects > 0
+					owns_state = 424
+				}
+			}
+		}
+	}
+
+	option = {
+		name = hkr.18.3
+
+		swap_ideas = { add_idea = hkr_bayunzi3 remove_idea = hkr_bayunzi2}
+
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #YKR puppet or VS HKR
+	id = hkr.181
+	title = hkr.181.t
+	desc = hkr.181.d
+	
+	# hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		or = {
+			date > 155.5.15
+			HKR = {
+				check_variable = { all_value_plus_manpower > 800}
+			}
+		}
+		HKR = {
+			has_idea = hkr_bayunzi3
+		}
+		has_global_flag = main_scenario
+		country_exists = HKR
+		country_exists = YKR
+		not = {
+			HKR = {
+				is_subject_of = YKR
+				is_in_faction_with = YKR
+			}
+		}
+		# has_country_flag = hkr_jujuezi
+		tag = HKR
+		is_subject = no
+
+	}
+	mean_time_to_happen = {
+		days = 400
+	}
+
+	option = {
+		name = hkr.181.1
+
+		YKR = {
+			declare_war_on = {
+				target = HKR
+				type = puppet_wargoal_focus
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = hkr.19 days = 2}
+		}
+
+		ai_chance = {
+			base = 99
+			modifier = {
+				has_government = guli
+				add = -98
+			}
+		}
+	}
+
+	option = {
+		name = hkr.181.2
+
+		YKR = {
+	    	HKR = {
+	    		subject_level2 = yes
+	    	}
+    	}
+    	hidden_effect = {
+    		news_event = { days = 2 id = hkr.17}
+    	}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0.01
+				or = {
+					has_government = fandong
+					has_government = qinwai
+					has_government = neworder
+					has_completed_focus = HKR_yaoguaiwunv
+					num_subjects > 0
+					owns_state = 424
+				}
+			}
+		}
+	}
+}
+
+news_event = { #YKR declare on HKR
+	id = hkr.19
+	title = hkr.19.t
+	desc = hkr.19.d
+	picture = GFX_news_event_hkr.19
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.19.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.19.2
+		trigger = {
+			has_idea = gensoukyo_creator_idea
+			not = {
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = hkr.19.3
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.19.4
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+country_event = { #suika
+	id = hkr.20
+	title = hkr.20.t
+	desc = hkr.20.d
+	picture = GFX_news_event_hkr.20
+	# hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = hkr.20.1
+		remove_ideas = {
+			hkr_bayunzi
+			hkr_bayunzi2
+			hkr_bayunzi3
+			hkr_chisesharenmo
+		}	
+
+		set_country_flag = hkr_suika
+		
+		PO_add10 = yes
+		OL_add10 = yes
+		add_ideas = HKR_suika_jinja_idea
+		custom_effect_tooltip = HKR_suika_tt
+        hidden_effect = {
+			XXX = {
+				HKR_suika = {
+					set_nationality = HKR
+					add_country_leader_role = {
+						Promote_leader = yes
+						Country_leader = {
+							ideology = neworder_type
+						}
+					}
+				}
+			}
+        }
+		
+		hidden_effect = {
+			news_event = { id = hkr.21 days = 2}
+		}
+	}
+
+	option = {
+		name = hkr.20.2
+		add_political_power = 150
+	}
+}
+
+news_event = { #SUK HKR
+	id = hkr.21
+	title = hkr.21.t
+	desc = hkr.21.d
+	picture = GFX_news_event_hkr.21
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.21.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.21.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.21.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+#新闻
+
+news_event = { #兽道失地
+	id = hkr.22
+	title = hkr.22.t
+	desc = hkr.22.d
+	picture = GFX_news_event_hkr.22
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.22.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.22.2
+		trigger = {
+			tag = MSD
+		}
+	}
+	option = {
+		name = hkr.22.3
+		trigger = {
+			or = {
+				tag = MRS
+				has_war_together_with = MRS
+			}
+			not = {
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.22.4
+		trigger = {
+			not = {
+				tag = MSD
+				tag = HKR
+				tag = MRS
+				has_war_together_with = MRS
+			}
+		}
+	}
+}
+
+news_event = { #转变为妖怪神社
+	id = hkr.23
+	title = hkr.23.t
+	desc = hkr.23.d
+	picture = GFX_news_event_hkr.23
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.23.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.23.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.23.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #防御大结界外部
+	id = hkr.24
+	title = hkr.24.t
+	desc = hkr.24.d
+	picture = GFX_news_event_hkr.24
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.24.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.24.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = hkr.24.3
+		trigger = {
+			not = {
+				tag = YKR
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #博丽神社的神明
+	id = hkr.25
+	title = hkr.25.t
+	desc = hkr.25.d
+	picture = GFX_news_event_hkr.25
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.25.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.25.2
+		trigger = {
+			not = { tag = HKR }
+		}
+	}
+}
+
+news_event = { #让人类再次伟大
+	id = hkr.26
+	title = hkr.26.t
+	desc = hkr.26.d
+	picture = GFX_news_event_hkr.26
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.26.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.26.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.26.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #光荣革命成功
+	id = hkr.27
+	title = hkr.27.t
+	desc = hkr.27.d
+	picture = GFX_news_event_hkr.27
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.27.1
+		trigger = {
+			or = {
+				tag = HKR
+				has_idea = Human
+			}
+		}
+	}
+	option = {
+		name = hkr.27.2
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #光荣革命失败
+	id = hkr.28
+	title = hkr.28.t
+	desc = hkr.28.d
+	picture = GFX_news_event_hkr.28
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.28.1
+		trigger = {
+			or = {
+				tag = HKR
+				has_idea = Human
+			}
+		}
+	}
+	option = {
+		name = hkr.28.2
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #剔除其他势力
+	id = hkr.29
+	title = hkr.29.t
+	desc = hkr.29.d
+	picture = GFX_news_event_hkr.29
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.29.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.29.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.29.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #妖怪朝贡
+	id = hkr.30
+	title = hkr.30.t
+	desc = hkr.30.d
+	picture = GFX_news_event_hkr.30
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.30.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.30.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.30.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #强行入驻人类村落
+	id = hkr.31
+	title = hkr.31.t
+	desc = hkr.31.d
+	picture = GFX_news_event_hkr.31
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.31.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.31.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.31.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #博丽人类帝国
+	id = hkr.32
+	title = hkr.32.t
+	desc = hkr.32.d
+	picture = GFX_news_event_hkr.32
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.32.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.32.2
+		trigger = {
+			has_idea = Human
+			not = {
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.32.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #与魔法使联合的可能
+	id = hkr.33
+	title = hkr.33.t
+	desc = hkr.33.d
+	picture = GFX_news_event_hkr.33
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.33.1
+		trigger = {
+			or = {
+				tag = HKR
+				tag = MRS
+			}	
+		}
+	}
+	option = {
+		name = hkr.33.2
+		trigger = {
+			not = {
+				tag = HKR
+				tag = MRS
+			}
+		}
+	}
+}
+
+news_event = { #复仇
+	id = hkr.34
+	title = hkr.34.t
+	desc = hkr.34.d
+	picture = GFX_news_event_hkr.34
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.34.1
+		trigger = {
+			or = {
+				tag = HKR
+				and = {
+					tag = MRS
+					or = {
+						is_subject_of = HKR
+						is_in_faction_with = HKR
+					}
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = hkr.34.2
+		trigger = {
+			tag = SEJ
+		}
+	}
+	option = {
+		name = hkr.34.2
+		trigger = {
+			not = {
+				tag = SEJ
+				tag = HKR
+				and = {
+					tag = MRS
+					or = {
+						is_subject_of = HKR
+						is_in_faction_with = HKR
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = { #树立秩序威严
+	id = hkr.35
+	title = hkr.35.t
+	desc = hkr.35.d
+	picture = GFX_news_event_hkr.35
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.35.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.35.2
+		trigger = {
+			not = {	tag = HKR }
+		}
+	}
+}
+
+news_event = { #脱离妖怪
+	id = hkr.36
+	title = hkr.36.t
+	desc = hkr.36.d
+	picture = GFX_news_event_hkr.36
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.36.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.36.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = hkr.36.3
+		trigger = {
+			not = {
+				tag = YKR
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #重申符卡规则
+	id = hkr.37
+	title = hkr.37.t
+	desc = hkr.37.d
+	picture = GFX_news_event_hkr.37
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.37.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.37.2
+		trigger = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	option = {
+		name = hkr.37.3
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #阻止人类变妖怪
+	id = hkr.38
+	title = hkr.38.t
+	desc = hkr.38.d
+	picture = GFX_news_event_hkr.38
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.38.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.38.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.38.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #加强妖怪贤者在幻想乡的影响力
+	id = hkr.39
+	title = hkr.39.t
+	desc = hkr.39.d
+	picture = GFX_news_event_hkr.39
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.39.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.39.2
+		trigger = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	option = {
+		name = hkr.39.3
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #幻想乡和平宣言
+	id = hkr.40
+	title = hkr.40.t
+	desc = hkr.40.d
+	picture = GFX_news_event_hkr.40
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.40.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.40.2
+		trigger = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	option = {
+		name = hkr.40.3
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #职责重申
+	id = hkr.41
+	title = hkr.41.t
+	desc = hkr.41.d
+	picture = GFX_news_event_hkr.41
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.41.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.41.2
+		trigger = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	option = {
+		name = hkr.41.3
+		trigger = {
+			not = {
+				has_idea = gensoukyo_creator_idea
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #镇压妖怪解放运动
+	id = hkr.42
+	title = hkr.42.t
+	desc = hkr.42.d
+	picture = GFX_news_event_hkr.42
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.42.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.42.2
+		trigger = {
+			not = {
+				tag = NMS
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.42.3
+		trigger = {
+			tag = NMS
+		}
+	}
+}
+
+news_event = { #妖精反动派
+	id = hkr.46
+	title = hkr.46.t
+	desc = hkr.46.d
+	picture = GFX_news_event_hkr.46
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.46.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.46.2
+		trigger = {
+			Fairy_country_with_fairy_leader = yes
+		}
+	}
+	option = {
+		name = hkr.46.3
+		trigger = {
+			not = {
+				Fairy_country_with_fairy_leader = yes
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #静观幻想乡的变化
+	id = hkr.48
+	title = hkr.48.t
+	desc = hkr.48.d
+	picture = GFX_news_event_hkr.48
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.48.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.48.2
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #去宗教化
+	id = hkr.49
+	title = hkr.49.t
+	desc = hkr.49.d
+	picture = GFX_news_event_hkr.49
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.49.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.49.2
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #成为幻想乡的平凡势力
+	id = hkr.50
+	title = hkr.50.t
+	desc = hkr.50.d
+	picture = GFX_news_event_hkr.50
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.50.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.50.2
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+}
+
+news_event = { #幻想乡最后的幻想
+	id = hkr.51
+	title = hkr.51.t
+	desc = hkr.51.d
+	picture = GFX_news_event_hkr.51
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.51.1
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.51.2
+		trigger = {
+			tag = HKR
+		}
+	}
+}
+
+news_event = { #幻想乡的职责
+	id = hkr.52
+	title = hkr.52.t
+	desc = hkr.52.d
+	picture = GFX_news_event_hkr.52
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.52.1
+		trigger = {
+			not = {	 tag = HKR}
+		}
+	}
+	option = {
+		name = hkr.52.2
+		trigger = {
+			tag = HKR
+		}
+	}
+}
+
+news_event = { #守护最后的神社
+	id = hkr.54
+	title = hkr.54.t
+	desc = hkr.54.d
+	picture = GFX_news_event_hkr.54
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.54.1
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.54.2
+		trigger = {
+			tag = HKR
+		}
+	}
+}
+
+news_event = { #吸收八云紫的力量
+	id = hkr.55
+	title = hkr.55.t
+	desc = hkr.55.d
+	picture = GFX_news_event_hkr.55
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.55.1
+		trigger = {
+			not = {
+				tag = HKR
+			}
+		}
+	}
+	option = {
+		name = hkr.55.2
+		trigger = {
+			tag = HKR
+		}
+	}
+}
+
+news_event = { #宣战 紫 妖怪怎能为奴
+	id = hkr.56
+	title = hkr.56.t
+	desc = hkr.56.d
+	picture = GFX_news_event_hkr.56
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.56.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.56.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = hkr.56.3
+		trigger = {
+			not = { 
+				tag = HKR 
+				tag = YKR
+			}
+		}
+	}
+}
+
+country_event = { #annu
+	id = hkr.57
+	title = hkr.57.t
+	desc = hkr.57.d
+	picture = GFX_news_event_hkr.57
+	# hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		tag = HKR
+		has_government = qinwai
+		or = {
+			qinwai > 0.95
+			is_subject = yes
+		}
+	}
+
+	option = {
+		name = hkr.57.1
+		remove_ideas = {
+			hkr_chisesharenmo
+		}	
+		HKR_aunn_leader = {
+			add_country_leader_role = {
+				Promote_leader = yes
+				country_leader= {
+					ideology = qinwai_type
+				}
+			}
+		}
+		
+		PO_add10 = yes
+		OL_minus10 = yes
+		HKR_aunn = {
+	        add_skill_level = 1
+	        add_defense = 1
+	        add_attack = 1
+	        add_logistics = 1
+	        add_planning = 1
+	    }
+		
+		hidden_effect = {
+			news_event = { id = hkr.58 days = 2}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = {
+		name = hkr.57.2
+		add_political_power = 150
+		ai_chance = {
+			base = 70
+		}
+		
+	}
+}
+
+news_event = { #阿吽神社新闻
+	id = hkr.58
+	title = hkr.58.t
+	desc = hkr.58.d
+	picture = GFX_news_event_hkr.58
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.58.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.58.2
+		trigger = {
+			tag = OKI
+		}
+	}
+	option = {
+		name = hkr.58.3
+		trigger = {
+			not = { 
+				tag = OKI 
+				tag = HKR
+			}
+		}
+	}
+}
+
+country_event = { #博丽帝国迁都
+	id = hkr.61
+	title = hkr.61.t
+	desc = hkr.61.d
+	fire_only_once = yes
+	is_triggered_only = no
+	picture = GFX_news_event_hkr.61
+	trigger = {
+		has_completed_focus = HKR_jianlibolirenleidiguo
+		tag = HKR
+		owns_state = 246
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = hkr.61.1
+		set_capital = { state = 246 }
+		add_stability = 0.3
+		add_political_power = 100	
+		246 = {
+			add_extra_state_shared_building_slots = 1
+	        add_building_construction = {
+	            type = infrastructure
+	            level = 1
+	            instant_build = yes
+	        }
+		}
+		
+	}
+	option = {
+		name = hkr.61.2
+		set_capital = { state = 192 }
+		add_war_support = 0.15
+		HKR_hkr = {
+          add_skill_level = 1
+          add_logistics = 1
+          add_planning = 1
+          add_defense = 1
+          add_attack = 1
+        }
+        192 = {
+			add_extra_state_shared_building_slots = 3
+	        add_building_construction = {
+	            type = infrastructure
+	            level = 2
+	            instant_build = yes
+	        }
+		}
+	}
+}
+
+country_event = { #博丽的动向 #YKR
+	id = hkr.62
+	title = hkr.62.t
+	desc = hkr.62.d
+	picture = GFX_news_event_hkr.62
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.62.1
+		effect_tooltip = {
+			YKR = {
+				if = {
+					limit = {
+						has_guaranteed = HKR
+					}
+					diplomatic_relation = {
+						country = HKR 
+						relation = guarantee 
+						active = no
+					}
+				}
+			}
+			HKR = {
+				add_political_power = -15
+				add_stability = -0.01
+				PO_minus1 = yes
+			}
+		}
+		HKR = {
+			country_event = hkr.63
+		}
+		ai_chance = {
+			base = 100
+		}
+		
+	}
+	option = {
+		name = hkr.62.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #来自[YKR.GetLeader]的警
+	id = hkr.63
+	title = hkr.63.t
+	desc = hkr.63.d
+	picture = GFX_news_event_hkr.63
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.63.1
+		YKR = {
+			if = {
+				limit = {
+					has_guaranteed = HKR
+				}
+				diplomatic_relation = {
+					country = HKR 
+					relation = guarantee 
+					active = no
+				}
+			}
+		}
+		add_political_power = -15
+		add_stability = -0.01
+		PO_minus1 = yes
+	}
+}
+country_event = { #强调种族变化（事件）
+	id = hkr.64
+	title = hkr.64.t
+	desc = hkr.64.d
+	picture = GFX_news_event_hkr.64
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.64.1
+
+		HKR = {
+			OL_minus2 = yes
+			add_political_power = 40
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = HKR_qiangdiaozhongzubianhua_op
+			}
+			approved_event = yes
+			set_temp_variable = { op = 10 }
+			qinxiangheguandian = yes
+		}
+		every_country = {
+			limit = {
+				has_idea = Human
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = HKR_qiangdiaozhongzubianhua_op2
+			}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+	option = {
+		name = hkr.64.2
+		HKR = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+country_event = { #邀请魔理沙成为妖怪（事件）
+	id = hkr.65
+	picture = GFX_news_event_hkr.65
+	title = {
+		text = hkr.65.t1
+		trigger = {
+			tag = MRS
+			or = {
+				has_government = qinwai
+				has_government = neworder
+				has_government = guli
+			}
+		}
+	}
+	title = {
+		text = hkr.65.t2
+		trigger = {
+			or = {
+				and = {
+					tag = MRS
+					or = {
+						has_government = fandong
+						has_government = oldorder
+					}
+				}
+				tag = ALI
+			}
+		}
+	}
+	desc = {
+		text = hkr.65.d1
+		trigger = {
+			tag = MRS
+			or = {
+				has_government = qinwai
+				has_government = neworder
+				has_government = guli
+			}
+		}
+	}
+	desc = {
+		text = hkr.65.d2
+		trigger = {
+			or = {
+				and = {
+					tag = MRS
+					or = {
+						has_government = fandong
+						has_government = oldorder
+					}
+				}
+				tag = ALI
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = hkr.65.11
+		HKR = {
+			ROOT =  {
+				can_use = yes
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ALI
+					}
+				}
+				ROOT = {
+					MRS_mrs = {
+						add_skill_level = 1
+						add_attack = 1
+						add_defense = 1
+						add_logistics = 1
+						add_planning = 1
+					}
+				}
+				
+				add_ideas = ALI_manu
+				else = {
+					add_ideas = MRS_manu
+					ROOT = {
+						MRS_mrs = {
+							add_skill_level = 1
+							add_attack = 1
+							add_defense = 1
+							add_logistics = 1
+							add_planning = 1
+						}
+					}
+					
+				}
+			}
+			country_event = { days = 2 id = hkr.70}
+		}
+		trigger = {
+			tag = MRS
+			or = {
+				has_government = qinwai
+				has_government = neworder
+				has_government = guli
+			}
+		}
+		ai_chance = {
+			base = 99
+		}
+	}
+	option = {
+		name = hkr.65.12
+		HKR = {
+			refused_event = yes
+		}
+		trigger = {
+			tag = MRS
+			or = {
+				has_government = qinwai
+				has_government = neworder
+				has_government = guli
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = hkr.65.21
+		HKR = {
+			ROOT =  {
+				can_use = yes
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = ALI
+					}
+				}
+				ROOT = {
+					MRS_mrs = {
+						add_skill_level = 1
+						add_attack = 1
+						add_defense = 1
+						add_logistics = 1
+						add_planning = 1
+					}
+				}
+				
+				add_ideas = ALI_manu
+				else = {
+					add_ideas = MRS_manu
+					ROOT = {
+						MRS_mrs = {
+							add_skill_level = 1
+							add_attack = 1
+							add_defense = 1
+							add_logistics = 1
+							add_planning = 1
+						}
+					}
+					
+				}
+			}
+			country_event = { days = 2 id = hkr.71}
+		}
+		trigger = {
+			or = {
+				and = {
+					tag = MRS
+					or = {
+						has_government = fandong
+						has_government = oldorder
+					}
+				}
+				tag = ALI
+			}
+		}
+		ai_chance = {
+			base = 99
+		}
+	}
+	option = {
+		name = hkr.65.22
+		HKR = {
+			refused_event = yes
+		}
+		trigger = {
+			or = {
+				and = {
+					tag = MRS
+					or = {
+						has_government = fandong
+						has_government = oldorder
+					}
+				}
+				tag = ALI
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+news_event = { #名副其实的妖怪巫女(新闻)
+	id = hkr.66
+	title = hkr.66.t
+	desc = hkr.66.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = hkr.66.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.66.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.66.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+news_event = { #强调融入妖怪(新闻)
+	id = hkr.67
+	title = hkr.67.t
+	desc = hkr.67.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = hkr.67.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.67.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.67.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+news_event = { #强调种族变化(新闻)
+	id = hkr.68
+	title = hkr.68.t
+	desc = hkr.68.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = hkr.68.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.68.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.68.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+news_event = { #新时代的幻想乡，新时代的巫女(新闻)
+	id = hkr.69
+	title = hkr.69.t
+	desc = hkr.69.d
+	is_triggered_only = yes
+	picture = GFX_news_event_hkr.69
+	major = yes
+	option = {
+		name = hkr.69.1
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = {
+		name = hkr.69.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = hkr.69.3
+		trigger = {
+			not = {
+				has_idea = Human
+				tag = HKR
+			}
+		}
+	}
+}
+country_event = { #邀请魔理沙成为妖怪（同意之后）(魔理沙是领导人）
+	id = hkr.70
+	title = hkr.70.t
+	desc = hkr.70.d
+	is_triggered_only = yes
+	option = {
+		name = hkr.70.1
+	}
+}
+country_event = { #邀请魔理沙成为妖怪（同意之后）(魔理沙不是领导人）
+	id = hkr.71
+	title = hkr.71.t
+	desc = hkr.71.d
+	is_triggered_only = yes
+	option = {
+		name = hkr.70.1
+	}
+}

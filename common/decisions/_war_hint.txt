@@ -1,0 +1,156 @@
+on_going_war_decision = {
+	ongoing_war_on_decision_days_15 = {
+
+        allowed = {
+            always = no
+        }
+        activation = {
+            always = yes
+        }
+        target_trigger = {
+            always = no
+        }
+        available = {
+           always = no
+        }
+        modifier = {
+
+        }
+        complele_effect = {
+
+        }
+        timeout_effect = {
+            add_ai_strategy = {
+              type = prepare_for_war
+              id = FROM
+              value = -100
+            }
+            FROM = {
+              add_ai_strategy = {
+                type = prepare_for_war
+                id = ROOT
+                value = -100
+              }
+            }
+            effect_tooltip = {
+              FROM = {
+                declare_war_on = {
+                  target = ROOT
+                }
+              }
+            }
+        }
+
+        is_good = no
+
+        days_mission_timeout = 15
+
+        fire_only_once = yes
+
+        ai_will_do = {
+           factor = 100
+        }
+    }
+	ongoing_war_on_decision_days_30 = {
+
+        allowed = {
+            always = no
+        }
+        activation = {
+            always = no
+        }
+        target_trigger = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+
+        modifier = {
+
+        }
+
+        timeout_effect = {
+            add_ai_strategy = {
+              type = prepare_for_war
+              id = FROM
+              value = -100
+            }
+             FROM = {
+              add_ai_strategy = {
+                type = prepare_for_war
+                id = ROOT
+                value = -100
+              }
+            }
+            effect_tooltip = {
+              FROM = {
+                declare_war_on = {
+                  target = ROOT
+                }
+              }
+            }
+        }
+
+        is_good = no
+
+        days_mission_timeout = 30
+
+        fire_only_once = yes
+
+        ai_will_do = {
+           factor = 100
+        }
+    }
+	ongoing_war_on_decision_days_60 = {
+
+        allowed = {
+            always = no
+        }
+        activation = {
+            always = no
+        }
+        target_trigger = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+
+        modifier = {
+
+        }
+
+        timeout_effect = {
+            add_ai_strategy = {
+              type = prepare_for_war
+              id = FROM
+              value = -100
+            }
+             FROM = {
+              add_ai_strategy = {
+                type = prepare_for_war
+                id = ROOT
+                value = -100
+              }
+            }
+            effect_tooltip = {
+              FROM = {
+                declare_war_on = {
+                  target = ROOT
+                }
+              }
+            }
+        }
+
+        is_good = no
+
+        days_mission_timeout = 60
+
+        fire_only_once = yes
+
+        ai_will_do = {
+           factor = 100
+        }
+    }
+}

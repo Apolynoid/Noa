@@ -220,7 +220,6 @@ TEG_cooperate_with_LIL_tt:0 "若已完成§Y$TEG_jie_chu_chun_zhi_yao_jing$§!�
 TEG_end_investment_when_CFA_loses_tt:0 "当§Y[CFA.GetNameWithFlag]§!丧失独立时，投资将§R终止§!"
 
 TEG_cross_the_river_tt:0 "跨河惩罚：§G-50.0%§!"
-TEG_get_OTG_cores_tt:0 "§Y获得[OTG.GetName]的全部核心§!"
 
  TEG_xindetongmeng_tt:0 "§Y你将更容易得到妖怪山外的盟友。§!\n"
  TEG_tiangouluzhanmiji_tt:0 "$ma_infantry$、$sc_infantry$、$ma_light_infantry$、$sc_light_infantry$、$melee_infantry$和$melee_cavalry$获得$hills$、$mountain$、$urban$、$jungle$、$forest$和$river$地形的5%攻防加成。"
@@ -267,6 +266,3 @@ TEG_gong_he_guo_zong_dong_yuan_ling_desc:0 "从此刻起，直至敌人从共和
 
 # flag
 TEG_act_established_flag:0 "上一次通过法案"
-
-MRY_xin_yang_de_sheng_li_idea:0 "信仰的胜利"
-MRY_xin_yang_de_sheng_li_idea_desc:0 "终于，在我们成功粉碎了妖怪山的共和分子后，我们不仅成为了妖怪山的霸主，还成功的向幻想乡证明了信仰的强大力量，再也没有人敢于挑战守矢的地位。"

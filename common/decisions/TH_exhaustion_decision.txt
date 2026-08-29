@@ -1,0 +1,135 @@
+warexhaustion = {
+    warexhaustion_increase = {
+        activation = {
+            has_war = yes
+
+            any_country = {
+                has_war_with = ROOT
+                any_owned_state = {
+                    any_neighbor_state = {
+                        or = {
+                            is_controlled_by = ROOT
+                            ROOT = {
+                                any_allied_country = {
+                                    controls_state = PREV.PREV
+                                }
+                                any_country = {
+                                    is_subject_of = ROOT
+                                    controls_state = PREV.PREV
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            # or = {
+                has_country_flag = {
+                    flag = exhuastion_level
+                    value < 5
+                }
+            #     not = { has_country_flag = exhuastion_level}
+            # }
+            
+        }
+
+        available = {
+            has_war = no
+        }
+
+        is_good = no
+
+        days_mission_timeout = EXHC_time_increase
+
+        timeout_effect = {
+            exhuastion_increase_level_up = yes
+        }
+
+    }
+
+    warexhaustion_clear = {
+
+        activation = {
+            has_war = no
+            has_country_flag = exhuastion_level
+        }
+
+        available = {
+            has_war = yes
+        }
+
+        is_good = yes 
+
+        days_mission_timeout = 182
+
+        timeout_effect = {
+            clr_country_flag = exhuastion_level
+        }
+
+    }
+
+    warexhaustion_low = {
+
+        visible = {
+            check_variable = { EXHC_current_exhaustion > EXHC_floor_base }
+        }
+        available = {
+            political_power_daily > 0.25
+        }
+
+        is_good = yes 
+
+        days_re_enable = 365
+        days_remove = 182
+
+        cost = EXHC_low_cost
+
+        modifier = {
+            political_power_gain = -0.25
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = warexhaustion_low_tt
+            set_country_flag = {
+                flag = EXHC_lowing_exhaustion
+                value = 1
+                days = 182
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                check_variable = { EXHC_current_exhaustion < 12.5}
+                factor = 0
+                has_war = no
+            }
+            modifier = {
+                check_variable = { EXHC_current_exhaustion > 15}
+                factor = 1.5
+                has_war = yes
+            }
+            modifier = {
+                check_variable = { EXHC_current_exhaustion > 35}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { EXHC_current_exhaustion > 55}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { EXHC_current_exhaustion > 75}
+                factor = 1.5
+            }
+            modifier = {
+                check_variable = { EXHC_current_exhaustion > 135}
+                has_country_flag = {
+                    flag = exhuastion_level
+                    value > 4
+                }
+                factor = 0
+            }
+        }
+
+    }
+}

@@ -1,0 +1,16 @@
+# 守矢信仰
+MRY_shou_shi_xin_yang = {
+	icon = JAP_state_shintoism
+
+	priority = 95
+
+	allowed = {
+		original_tag = MRY
+	}
+
+	visible = {
+		has_completed_focus = MRY_chu_li_xin_yang_wei_ji
+	}
+
+	visible_when_empty = yes
+}

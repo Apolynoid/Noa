@@ -936,9 +936,15 @@ focus_tree = {
 		will_lead_to_war_with = SCA
 
 		completion_reward = {
-			create_wargoal = {
+			declare_war_on = {
 				target = SCA
 				type = topple_government
+			}
+			hidden_effect = {
+				news_event = {
+					id = teg.106
+					days = 5
+				}
 			}
 		}
 	

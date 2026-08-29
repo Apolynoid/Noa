@@ -588,7 +588,6 @@ faqiqingqiu = {
 youkai_mountain_country = {
 	or = {
 		tag = TEG#
-		tag = OTG#
 
 		tag = MRY#
 
@@ -760,7 +759,6 @@ Youkai_country = {
 Tenggu_country = {
 	or = {
 		#2
-		tag = OTG
 		tag = TEG
 	}
 }
@@ -825,23 +823,23 @@ lv2_manpower = {
 	NOT = { has_idea = isolation }
 }
 lv3_manpower = {
-	has_war_support > 0.3
+	has_war_support > 0.2
 	NOT = { has_idea = isolation }
 }
 lv4_manpower = {
-	has_war_support > 0.5
+	has_war_support > 0.4
 	NOT = { has_idea = isolation }
 }
 lv5_manpower = {
-	has_war_support > 0.7
+	has_war_support > 0.6
 	NOT = { has_idea = isolation }
 }
 lv6_manpower = {
-	has_war_support > 0.9
+	has_war_support > 0.8
 	NOT = { has_idea = isolation }
 }
 lv7_manpower = {
-	has_war_support > 1.2
+	has_war_support > 1.0
 	NOT = { has_idea = isolation }
 }
 

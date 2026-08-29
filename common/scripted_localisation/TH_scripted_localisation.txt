@@ -1,0 +1,2373 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+#scnairo_type
+defined_text = {
+	name = scnariotype
+	text = {
+	   trigger = {
+	      has_global_flag = main_scenario
+	   }
+	   localization_key = scnariotype.main
+	}
+}
+#difficult
+defined_text = {
+	name = modified_dif
+	text = {
+	   trigger = {
+	      has_country_flag = E_d
+	   }
+	   localization_key = modified_dif.e
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = N_d
+	   }
+	   localization_key = modified_dif.n
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = H_d
+	   }
+	   localization_key = modified_dif.h
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = L_d
+	   }
+	   localization_key = modified_dif.l
+	}
+}
+defined_text = {
+	name = scnario_dif
+	text = {
+	   trigger = {
+	      has_country_flag = E_s
+	   }
+	   localization_key = scnario_dif.e
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = N_s
+	   }
+	   localization_key = scnario_dif.n
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = H_s
+	   }
+	   localization_key = scnario_dif.h
+	}
+	text = {
+	   trigger = {
+	      has_country_flag = L_s
+	   }
+	   localization_key = scnario_dif.l
+	}
+}
+################Manufacture
+defined_text = {
+	name = manufacture_tt
+	text = {
+	    trigger = {
+	       always = yes
+	    }
+	    localization_key = manufacture_tt.a
+	}
+}
+#########GUI TEST
+defined_text = {
+	name = view_type
+
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 0 }
+	    }
+	    localization_key = "view_type.fanling"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 1 }
+	    }
+	    localization_key = "view_type.pingheng"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 2 }
+	    }
+	    localization_key = "view_type.weiwu"
+	}
+}
+defined_text = {
+	name = view_type_delayed
+
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 0 }
+	    }
+	    localization_key = "view_type_delayed.fanling"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 1 }
+	    }
+	    localization_key = "view_type_delayed.pingheng"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 2 }
+	    }
+	    localization_key = "view_type_delayed.weiwu"
+	}
+}
+defined_text = {
+	name = view_type_text
+
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 0 }
+	    }
+	    localization_key = "view_type_text.fanling"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 1 }
+	    }
+	    localization_key = "view_type_text.pingheng"
+	}
+	text = {
+	    trigger = {
+	        check_variable = { OL_view_type = 2 }
+	    }
+	    localization_key = "view_type_text.weiwu"
+	}
+}
+
+defined_text = {
+	name = fairy_sys_cant_sl
+
+	text = {
+	     trigger = {
+	     	ROOT = {
+	         	NOT = {has_idea = Fairy}
+	     	}
+	     }
+	     localization_key = "fairy_sys_not_fairy"
+	}
+	text = {
+	     trigger = {
+	     	ROOT = {
+	         	check_variable = {
+					modifier@FAPO_RULE_forbidden > 0 
+				}
+	     	}
+	     }
+	     localization_key = "fairy_sys_cant_do_this"
+	}
+	text = {
+	     trigger = {
+	     	NOT = {
+	     		AND = {
+	     			is_owned_by = ROOT
+					is_core_of = ROOT
+	     		}
+	     	}
+	     }
+	     localization_key = "fairy_sys_not_owned_or_core"
+	}
+	text = {
+	     trigger = {
+	     	NOT = {
+	     		infrastructure > 0
+	     	}
+	     }
+	     localization_key = "fairy_sys_not_enough_level"
+	}
+	text = {
+	     trigger = {
+	     	ROOT = {
+	     		has_country_flag = fairy_recent_reduced
+	     	}
+	     }
+	     localization_key = "fairy_sys_recent_action"
+	}
+	text = {
+	     trigger = {
+	     	has_state_flag = been_reduced
+	     }
+	     localization_key = "fairy_sys_recent_reduced"
+	}
+}
+defined_text = {
+	name = root_sys_cant_sl
+	text = {
+	     trigger = {
+	     	is_owned_by = ROOT
+	     }
+	     localization_key = "root_sys_is_owner"
+	}
+	text = {
+	     trigger = {
+	     	NOT = {
+	     		owner = {
+					has_war_with = ROOT
+				}
+	     	}
+	     }
+	     localization_key = "root_sys_not_war"
+	}
+	text = {
+	     trigger = {
+	     	NOT = {
+	     		ROOT = { has_full_control_of_state = PREV }
+	     	}
+	     }
+	     localization_key = "root_sys_not_full_controlled"
+	}
+	text = {
+	     trigger = {
+	     	ROOT = {
+				has_country_flag = recent_root_action
+			}
+	     }
+	     localization_key = "root_sys_recent_action"
+	}
+	text = {
+	     trigger = {
+	     	has_state_flag = been_rooted 
+	     }
+	     localization_key = "root_sys_recent_rooted"
+	}
+}
+defined_text = {
+	name = claim_sys_cant_sl
+	text = {
+		trigger = {
+			OR = {
+				is_core_of = ROOT
+				is_claimed_by = ROOT
+			}
+	     	
+	    }
+	    localization_key = "claim_sys_cant_is_core_or_claimed"
+	}
+	text = {
+		trigger = {
+	     	owner = {
+				NOT = {	is_neighbor_of = ROOT }
+			}
+	     }
+	     localization_key = "claim_sys_cant_not_neighbor"
+	}
+	text = {
+		trigger = {
+	     	owner = {
+				is_subject_of = ROOT
+			}
+	    }
+	    localization_key = "claim_sys_cant_is_subject"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_war = yes }
+	    }
+	    localization_key = "claim_sys_cant_has_war"
+	}
+	text = {
+		trigger = {
+			ROOT = {
+				has_country_flag = recent_claim_action
+ 			}
+	    }
+	    localization_key = "claim_sys_cant_recent_claim_action"
+	}
+	text = {
+		trigger = {
+			has_variable = in_claim_progress_of_@ROOT
+	    }
+	    localization_key = "claim_sys_cant_in_claim_progress"
+	}
+	
+	text = {
+		trigger = {
+			ROOT = {
+				set_temp_variable = { a = ROOT.political_power }
+				NOT = { check_variable = { ROOT.political_power > claim_cost } }
+ 			}
+	    }
+	    localization_key = "claim_sys_cant_not_enough_pp"
+	}
+}
+defined_text = {
+	name = core_sys_cant_sl
+	text = {
+		trigger = {
+	     	ROOT = {
+	     		has_war = yes
+	     	}
+	    }
+	    localization_key = "claim_sys_cant_has_war" #用了同一个
+	}
+	text = {
+		trigger = {
+	     	has_variable = in_core_progress_of_@ROOT
+	    }
+	    localization_key = "claim_sys_cant_in_claim_progress" #用了同一个
+	}
+	text = {
+		trigger = {
+	     	ROOT = { 
+				set_temp_variable = { a = ROOT.political_power }
+				set_temp_variable = { b = PREV.state_value }
+				multiply_temp_variable = { b = core_cost_factor }
+				NOT = { check_variable = { a > b } }
+			}
+	    }
+	    localization_key = "core_sys_cant_not_enough_pp" #用了同一个
+	}
+}
+
+defined_text = {
+	name = annex_sys_cant_sl
+	# text = {
+	# 	trigger = {
+	#      	owner = {
+	# 			NOT = {
+	# 				OR = {
+	# 					has_autonomy_state = autonomy_integrated_puppet_guli_neworder
+	# 					has_autonomy_state = autonomy_puppet_guli_neworder
+	# 					has_autonomy_state = autonomy_colony
+	# 				}
+	# 			}
+	# 		}
+	#     }
+	#     localization_key = "annex_sys_cant_not_annexiable"
+	# }
+	text = {
+		trigger = {
+			NOT = { check_variable = { ROOT.all_value > all_value_plus_manpower} }
+	    }
+	    localization_key = "annex_sys_cant_value_not_enough"
+	}
+
+	text = {
+		trigger = {
+			NOT = { is_neighbor_of = ROOT}
+		}
+		localization_key = "annex_sys_cant_not_neighbor"
+	}
+	
+	text = {
+		trigger = {
+			NOT = { has_variable = been_annexed_cooldown_of_@ROOT }
+	    }
+	    localization_key = "annex_sys_cant_cooldown1"
+	}
+	text = {
+		trigger = {
+			check_variable = { been_annexed_cooldown_of_@ROOT > 0}
+	    }
+	    localization_key = "annex_sys_cant_cooldown2"
+	}
+
+
+	text = {
+		trigger = {
+	     	ROOT = {
+				set_temp_variable = { a = political_power}
+				set_temp_variable = { b = PREV.all_value_plus_manpower}
+				multiply_temp_variable = { b = 0.1}
+				NOT = {check_variable = { a > b} }
+			}
+	    }
+	    localization_key = "annex_sys_cant_not_enough"
+	}
+	
+	text = {
+		trigger = {
+	     	ROOT = { has_war = yes }
+	    }
+	    localization_key = "annex_sys_cant_at_war"
+	}
+
+	text = {
+		trigger = {
+	     	ROOT = { has_idea = annex_subject_idea }
+	    }
+	    localization_key = "annex_sys_cant_progressing"
+	}
+
+	text = {
+		trigger = {
+	     	has_variable = in_annex_progress_of_@ROOT
+	    }
+	    localization_key = "annex_sys_cant_in_progress"
+	}
+	
+	
+	
+}
+
+defined_text = {
+	name = annex_sys_progress
+	text = {
+		trigger = {
+	     	NOT = { 
+	     		has_variable = in_annex_progress_of_@ROOT 
+	     		has_variable = annex_progress_display
+	     	}
+	    }
+	    localization_key = "annex_sys_not_progress"
+	}
+	text = {
+		trigger = {
+	     	has_variable = in_annex_progress_of_@ROOT
+	    }
+	    localization_key = "annex_sys_progressing"
+	}
+	text = {
+		trigger = {
+	     	has_variable = annex_progress_display
+	    }
+	    localization_key = "annex_sys_progressed"
+	}
+}
+
+defined_text = {
+	name = annex_sys_progress_show1_tt
+	text = {
+		trigger = {
+	     	NOT = { 
+	     		has_variable = in_annex_progress_of_@ROOT 
+	     		has_variable = annex_progress_display
+	     	}
+	    }
+	    localization_key = "annex_sys_progress_show2_tt"
+	}
+	text = {
+		trigger = {
+			or = {
+				has_variable = in_annex_progress_of_@ROOT
+				has_variable = annex_progress_display
+			}
+	    }
+	    localization_key = ""
+	}
+}
+defined_text = {
+	name = annex_sys_progress_show1_delayed_tt
+	text = {
+		trigger = {
+	     	NOT = { 
+	     		has_variable = in_annex_progress_of_@ROOT 
+	     		has_variable = annex_progress_display
+	     	}
+	    }
+	    localization_key = "annex_sys_progress_show2_delayed_tt"
+	}
+	text = {
+		trigger = {
+	     	or = {
+				has_variable = in_annex_progress_of_@ROOT
+				has_variable = annex_progress_display
+			}
+	    }
+	    localization_key = ""
+	}
+}
+
+#exhaustion
+defined_text = {
+	name = exhaustion_current
+	text = {
+	   trigger = {
+	   		or = {
+	   			check_variable = { EXHC_current_exhaustion < 0}
+	   			check_variable = { EXHC_current_exhaustion = 0}
+	   		}
+	   }
+	   localization_key = exhaustion_current.a
+	}
+	text = {
+	   trigger = {
+	      check_variable = { EXHC_current_exhaustion > 0}
+	      check_variable = { EXHC_current_exhaustion < 40}
+	   }
+	   localization_key = exhaustion_current.b
+	}
+	text = {
+	   trigger = {
+	      check_variable = { EXHC_current_exhaustion > 40}
+	   }
+	   localization_key = exhaustion_current.c
+	}
+}
+defined_text = {
+	name = exhaustion_increase
+	text = {
+	   trigger = {
+	   		or = {
+	   			check_variable = { EXHC_daily < 0}
+	      		check_variable = { EXHC_daily = 0}
+	   		}
+	   }
+	   localization_key = exhaustion_increase.a
+	}
+	text = {
+	   trigger = {
+	      check_variable = { EXHC_daily > 0}
+	   }
+	   localization_key = exhaustion_increase.c
+	}
+}
+defined_text = {
+	name = exhaustion_war_or_not
+	text = {
+	   trigger = {
+	      has_war = yes
+	   }
+	   localization_key = exhaustion_war_or_not.a
+	}
+	text = {
+	   trigger = {
+	      has_war = no
+	   }
+	   localization_key = exhaustion_war_or_not.b
+	}
+}
+defined_text = {
+	name = exhaustion_low_or_not
+	text = {
+	   trigger = {
+	      has_country_flag = EXHC_lowing_exhaustion
+	   }
+	   localization_key = exhaustion_low_or_not.a
+	}
+	text = {
+	   trigger = {
+	      not = { has_country_flag = EXHC_lowing_exhaustion }
+	   }
+	   localization_key = exhaustion_low_or_not.b
+	}
+}
+
+#Outlook viewtype
+defined_text = {
+	name = view_type_value
+	text = {
+	   trigger = {
+	   		or = {
+	   			and = {
+	   				check_variable = { OL_view_type = 0}
+	      			check_variable = { OL_view_value > global.OL_view0_mid}
+	   			}
+	   			and = {
+	   				check_variable = { OL_view_type = 2}
+	      			check_variable = { OL_view_value < global.OL_view2_mid}
+	   			}
+	   			and = {
+	   				check_variable = { OL_view_type = 1}
+	   				check_variable = { OL_view_value > global.OL_view1_border1 }
+	   				check_variable = { OL_view_value < global.OL_view1_border2 }
+	   			}
+	   			
+	   		}
+	      
+	   }
+	   localization_key = view_type_value.green
+	}
+	text = {
+	   trigger = {
+	      or = {
+	      	and = {
+      			check_variable = { OL_view_type = 0}
+      			or = {
+      				check_variable = { OL_view_value > global.OL_border2}
+      				check_variable = { OL_view_value = global.OL_border2}
+      			}
+      			or = {
+      				check_variable = { OL_view_value < global.OL_view0_mid}
+      				check_variable = { OL_view_value = global.OL_view0_mid}
+      			}
+	      	}
+	      	and = {
+      			check_variable = { OL_view_type = 2}
+      			or = {
+      				check_variable = { OL_view_value < global.OL_border1}
+      				check_variable = { OL_view_value = global.OL_border1}
+      			}
+      			or = {
+      				check_variable = { OL_view_value > global.OL_view2_mid}
+      				check_variable = { OL_view_value = global.OL_view2_mid}
+      			}
+	      	}
+	      	and = {
+      			check_variable = { OL_view_type = 1}
+      			or = {
+      				and = {
+      					or = {
+      						check_variable = { OL_view_value < global.OL_view1_border1}
+      						check_variable = { OL_view_value = global.OL_view1_border1}
+      					}
+      					or = {
+      						check_variable = { OL_view_value > global.OL_border1}
+      						check_variable = { OL_view_value = global.OL_border1}
+      					}
+      					
+      				}
+      				and = {
+      					or = {
+		      				check_variable = { OL_view_value > global.OL_view1_border2}
+		      				check_variable = { OL_view_value = global.OL_view1_border2}
+		      			}
+		      			or = {
+		      				check_variable = { OL_view_value < global.OL_border2}
+		      				check_variable = { OL_view_value = global.OL_border2}
+		      			}
+		      			
+      				}
+      			}
+	      	}
+	      }
+	   }
+	   localization_key = view_type_value.yellow
+	}
+	text = {
+	   trigger = {
+	   		or = {
+	   			and = {
+	   				check_variable = { OL_view_type = 0}
+	      			check_variable = { OL_view_value < global.OL_border2}
+	   			}
+	   			and = {
+	   				check_variable = { OL_view_type = 1}
+	   				or = {
+	   					check_variable = { OL_view_value < global.OL_border1}
+	   					check_variable = { OL_view_value > global.OL_border2}
+	   				}
+	   			}
+	   			and = {
+	   				check_variable = { OL_view_type = 2}
+	   				check_variable = { OL_view_value > global.OL_border1}
+	   			}
+	   		}
+	   	  
+	   }
+	   localization_key = view_type_value.red
+	}
+}
+#race
+defined_text = {
+	name = race_get
+	text = {
+	   trigger = {
+	      has_idea = Human
+	   }
+	   localization_key = Human
+	}
+	text = {
+	   trigger = {
+	      has_idea = Magician
+	   }
+	   localization_key = Magician
+	}
+	text = {
+	   trigger = {
+	      has_idea = God
+	   }
+	   localization_key = God
+	}
+	text = {
+	   trigger = {
+	      has_idea = Kappa
+	   }
+	   localization_key = Kappa
+	}
+	text = {
+	   trigger = {
+	      has_idea = Tenggu
+	   }
+	   localization_key = Tenggu
+	}
+	text = {
+	   trigger = {
+	      has_idea = Fairy
+	   }
+	   localization_key = Fairy
+	}
+	text = {
+	   trigger = {
+	      has_idea = Pri_youkai
+	   }
+	   localization_key = Pri_youkai
+	}
+	text = {
+	   trigger = {
+	      has_idea = Youkai
+	   }
+	   localization_key = Youkai
+	}
+	text = {
+	   trigger = {
+	      has_idea = Ghost
+	   }
+	   localization_key = Ghost
+	}
+	text = {
+	   trigger = {
+	      has_idea = Beast
+	   }
+	   localization_key = Beast
+	}
+}
+
+#Power
+defined_text = {
+	name = th_power
+	text = {
+	   trigger = {
+	   		or = {
+	   			check_variable = {
+			      	PO_average_mp > global.PO_high
+			    }
+			    check_variable = {
+			      	PO_average_mp = global.PO_high
+			    }
+	   		}
+	      
+	   }
+	   localization_key = th_power.a
+	}
+	text = {
+	   trigger = {
+	      check_variable = {
+	      	PO_average_mp < global.PO_high
+	      }
+	      check_variable = {
+	      	PO_average_mp > global.PO_low
+	      }
+	   }
+	   localization_key = th_power.b
+	}
+	text = {
+	   trigger = {
+	   	  or = {
+	   	  	check_variable = {
+		      	PO_average_mp < global.PO_low
+		    }
+		    check_variable = {
+		      	PO_average_mp = global.PO_low
+		    }
+	   	  }
+	      
+	   }
+	   localization_key = th_power.c
+	}
+}
+
+defined_text = {
+	name = th_power_range
+	text = {
+	   trigger = {
+	      set_temp_variable = { a = global.PO_change_ratio}
+	      divide_temp_variable = { a = 2 }
+	      subtract_from_temp_variable = { a = global.PO_change_constant}
+	      check_variable = { a > 0}
+	   }
+	   localization_key = th_power_range.green
+	}
+	text = {
+	   trigger = {
+	   	    set_temp_variable = { a = global.PO_change_ratio}
+		    divide_temp_variable = { a = 2 }
+		    subtract_from_temp_variable = { a = global.PO_change_constant}
+		    check_variable = { a = 0}
+	   }
+	   localization_key = th_power_range.yellow
+	}
+	text = {
+	   trigger = {
+	   	    set_temp_variable = { a = global.PO_change_ratio}
+		    divide_temp_variable = { a = 2 }
+		    subtract_from_temp_variable = { a = global.PO_change_constant}
+		    check_variable = { a < 0}
+	   }
+	   localization_key = th_power_range.red
+	}
+}
+
+defined_text = {
+	name = PO_power_daily_change
+	text = {
+	   trigger = {
+	      check_variable = { PO_power_daily_change > 0}
+	   }
+	   localization_key =PO_power_daily_change.green
+	}
+	text = {
+	   trigger = {
+		    check_variable = { PO_power_daily_change = 0}
+	   }
+	   localization_key = PO_power_daily_change.yellow
+	}
+	text = {
+	   trigger = {
+		    check_variable = { PO_power_daily_change < 0}
+	   }
+	   localization_key = PO_power_daily_change.red
+	}
+}
+
+defined_text = {
+	name = PO_random_display
+	text = {
+	   trigger = {
+	      check_variable = { global.PO_random > 0}
+	   }
+	   localization_key = PO_random.green
+	}
+	text = {
+	   trigger = {
+		    check_variable = { global.PO_random = 0}
+	   }
+	   localization_key = PO_random.yellow
+	}
+	text = {
+	   trigger = {
+		    check_variable = { global.PO_random < 0}
+	   }
+	   localization_key = PO_random.red
+	}
+}
+
+defined_text = {
+	name = PO_power_daily_change
+	text = {
+	   trigger = {
+	      check_variable = { PO_power_daily_change > 0}
+	   }
+	   localization_key = PO_power_daily_change.green
+	}
+	text = {
+	   trigger = {
+		    check_variable = { PO_power_daily_change = 0}
+	   }
+	   localization_key = PO_power_daily_change.yellow
+	}
+	text = {
+	   trigger = {
+		    check_variable = { PO_power_daily_change < 0}
+	   }
+	   localization_key = PO_power_daily_change.red
+	}
+}
+#Continent
+defined_text = {
+	name = continent_location
+	text = {
+	   trigger = {
+	      capital_scope = {
+	      	is_on_continent = Gensokyo
+	      }
+	   }
+	   localization_key = Gensokyo
+	}
+	text = {
+	   trigger = {
+   			capital_scope = {
+      			is_on_continent = Underground
+      		}
+	      
+	   }
+	   localization_key = Underground
+	}
+	text = {
+	   trigger = {
+   			capital_scope = {
+      			is_on_continent = Celestial
+      		}
+	      
+	   }
+	   localization_key = Celestial
+	}
+	text = {
+	   trigger = {
+   			capital_scope = {
+      			is_on_continent = Netherworld
+      		}
+	      
+	   }
+	   localization_key = Netherworld
+	}
+	text = {
+	   trigger = {
+   			capital_scope = {
+      			is_on_continent = Hell
+      		}
+	      
+	   }
+	   localization_key = Hell
+	}
+}
+
+defined_text = {
+	name = human_influ_yaoli
+	text = {
+	   trigger = {
+	   		not = { has_idea = God }
+	   }
+	   localization_key = human_influ_yaoli.1
+	}
+	text = {
+	   trigger = {
+	      has_idea = God
+	   }
+	   localization_key = human_influ_yaoli.2
+	}
+}
+
+defined_text = {
+	name = human_influ_yaoyan
+	text = {
+	   trigger = {
+	   		not = { has_idea = God }
+	   }
+	   localization_key = human_influ_yaoyan1
+	}
+	text = {
+	   trigger = {
+	      has_idea = God
+	   }
+	   localization_key = human_influ_yaoyan2
+	}
+}
+
+defined_text = {
+	name = human_influ_yexing
+	text = {
+	   trigger = {
+	   		not = { has_idea = God }
+	   }
+	   localization_key = human_influ_yexing1
+	}
+	text = {
+	   trigger = {
+	      has_idea = God
+	   }
+	   localization_key = human_influ_yexing2
+	}
+}
+
+
+defined_text = {
+	name = human_influ_xiji
+	text = {
+	   trigger = {
+	   		not = { has_idea = God }
+	   }
+	   localization_key = human_influ_xiji1
+	}
+	text = {
+	   trigger = {
+	      has_idea = God
+	   }
+	   localization_key = human_influ_xiji2
+	}
+}
+
+defined_text = {
+	name = th_power_influ_type
+	text = {
+	   trigger = {
+	   		check_variable = { OL_view_type = 0}
+	   }
+	   localization_key = th_power_influ_type0
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 1}
+	   }
+	   localization_key = th_power_influ_type0##改了
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 2}
+	   }
+	   localization_key = th_power_influ_type0##改了
+	}
+}
+
+defined_text = {
+	name = th_power_word_type
+	text = {
+	   trigger = {
+	   		check_variable = { OL_view_type = 0}
+	   }
+	   localization_key = th_power_word_type0
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 1}
+	   }
+	   localization_key = th_power_word_type1
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 2}
+	   }
+	   localization_key = th_power_word_type2
+	}
+}
+
+defined_text = {
+	name = generic_start
+	text = {
+	   trigger = {
+	   		capital_scope = {
+				is_on_continent = Gensokyo
+			}
+	   }
+	   localization_key = generic_start1
+	}
+	text = {
+	   trigger = {
+	      	capital_scope = {
+				not = { is_on_continent = Gensokyo }
+			}
+	   }
+	   localization_key = generic_start2
+	}
+}
+
+defined_text = {
+	name = th_hum_influ_guandian
+	text = {
+	   trigger = {
+	   		country_exists = HUM
+	   }
+	   localization_key = th_hum_influ_guandian1
+	}
+	text = {
+	   trigger = {
+	   		not = { country_exists = HUM }
+	   }
+	   localization_key = th_hum_influ_guandian2
+	}
+}
+defined_text = {
+	name = th_hum_influ_zhanjushoudu
+	text = {
+	   trigger = {
+	   		246 = {
+	   			is_owned_by = ROOT
+	   		}
+	   }
+	   localization_key = th_hum_influ_zhanjushoudu1
+	}
+	text = {
+	   trigger = {
+	   		246 = {
+	   			not = { is_owned_by = ROOT }
+	   		}
+	   }
+	   localization_key = th_hum_influ_zhanjushoudu2
+	}
+}
+
+defined_text = {
+	name = SS_given_power
+	text = {
+	   trigger = {
+	   		has_idea = Ghost
+	   }
+	   localization_key = SS_given_power_Ghost
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Fairy
+	   }
+	   localization_key = SS_given_power_Fairy
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Human
+	   }
+	   localization_key = SS_given_power_Human
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Pri_youkai
+	   }
+	   localization_key = SS_given_power_Pri_youkai
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Youkai
+	   }
+	   localization_key = SS_given_power_Youkai
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Tenggu
+	   }
+	   localization_key = SS_given_power_Tengu
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Kappa
+	   }
+	   localization_key = SS_given_power_Kappa
+	}
+	text = {
+	   trigger = {
+	   		has_idea = God
+	   }
+	   localization_key = SS_given_power_God
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Magician
+	   }
+	   localization_key = SS_given_power_Magician
+	}
+	text = {
+	   trigger = {
+	   		has_idea = Beast
+	   }
+	   localization_key = SS_given_power_Beast
+	}
+}
+
+defined_text = {
+	name = SS_current_power_G1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Ghost_power > 0 }
+	   }
+	   localization_key = SS_current_power_Ghost
+	}
+}
+defined_text = {
+	name = SS_current_power_F1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Fairy_power < 0 }
+	   }
+	   localization_key = SS_current_power_Fairy
+	}
+}
+defined_text = {
+	name = SS_current_power_H1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Human_power > 0 }
+	   }
+	   localization_key = SS_current_power_Human
+	}
+}
+defined_text = {
+	name = SS_current_power_P1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Pri_youkai_power > 0 }
+	   }
+	   localization_key = SS_current_power_Pri_youkai
+	}
+}
+defined_text = {
+	name = SS_current_power_Y1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Youkai_power > 0 }
+	   }
+	   localization_key = SS_current_power_Youkai
+	}
+}
+defined_text = {
+	name = SS_current_power_T1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Tengu_power > 0 }
+	   }
+	   localization_key = SS_current_power_Tengu
+	}
+}
+defined_text = {
+	name = SS_current_power_K1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Kappa_power > 0 }
+	   }
+	   localization_key = SS_current_power_Kappa
+	}
+}
+defined_text = {
+	name = SS_current_power_G2
+	text = {
+	   trigger = {
+	   		check_variable = { SS_God_power > 0 }
+	   }
+	   localization_key = SS_current_power_God
+	}
+}
+defined_text = {
+	name = SS_current_power_M1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Magician_power > 0 }
+	   }
+	   localization_key = SS_current_power_Magician
+	}
+}
+defined_text = {
+	name = SS_current_power_B1
+	text = {
+	   trigger = {
+	   		check_variable = { SS_Beast_power > 0 }
+	   }
+	   localization_key = SS_current_power_Beast
+	}
+}
+defined_text = {
+	name = SS_sb_or_ov
+	text = {
+	   trigger = {
+	   		is_subject = no
+	   }
+	   localization_key = SS_overlord
+	}
+	text = {
+	   trigger = {
+	   		is_subject = yes
+	   }
+	   localization_key = SS_subject
+	}
+}
+defined_text = {
+	name = SS_overlord_hint
+	text = {
+	   trigger = {
+	   		is_subject = no
+	   }
+	   localization_key = SS_overlord_hint1
+	}
+}
+defined_text = {
+	name = ideo_change_special
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengsuiyiqiehuanzhengti
+	   }
+	   localization_key = ideo_change_special1
+	}
+}
+defined_text = {
+	name = ideo_change_no_qinwai
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_qinwai
+	   }
+	   localization_key = ideo_change_no_qinwai1
+	}
+}
+defined_text = {
+	name = ideo_change_no_guli
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_guli
+	   }
+	   localization_key = ideo_change_no_guli1
+	}
+}
+defined_text = {
+	name = ideo_change_no_fandong
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_fandong
+	   }
+	   localization_key = ideo_change_no_fandong1
+	}
+}
+defined_text = {
+	name = ideo_change_no_neworder
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_neworder
+	   }
+	   localization_key = ideo_change_no_neworder1
+	}
+}
+defined_text = {
+	name = ideo_change_no_oldgenso
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_oldgenso
+	   }
+	   localization_key = ideo_change_no_oldgenso1
+	}
+}
+defined_text = {
+	name = ideo_change_no_oldorder
+	text = {
+	   trigger = {
+	   		has_country_flag = bunengqie_oldorder
+	   }
+	   localization_key = ideo_change_no_oldorder1
+	}
+}
+
+defined_text = {
+	name = continent_type
+	text = {
+	   trigger = {
+	   		capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			not = { has_idea = gensoukyo_creator_idea }
+	   }
+	   localization_key = continent_type1
+	}
+	text = {
+	   trigger = {
+	   		capital_scope = {
+				not = {
+					is_on_continent = Gensokyo
+				}
+			}
+	   }
+	   localization_key = continent_type2
+	}
+	text = {
+	   trigger = {
+	   		has_idea = gensoukyo_creator_idea
+	   }
+	   localization_key = continent_type3
+	}
+}
+
+defined_text = {
+	name = government_type
+	text = {
+	   trigger = {
+	   		check_variable = { current_government = 1 }
+	   }
+	   localization_key = "qinwai_type"
+	}
+	text = {
+	   trigger = {
+	   		check_variable = { current_government = 2 }
+	   }
+	   localization_key = "oldorder_type"
+	}
+	text = {
+	   trigger = {
+	   		check_variable = { current_government = 3 }
+	   }
+	   localization_key = "fandong_type"
+	}
+	text = {
+	   trigger = {
+	   		check_variable = { current_government = 4 }
+	   }
+	   localization_key = "neworder_type"
+	}
+	text = {
+	   trigger = {
+	   		check_variable = { current_government = 5 }
+	   }
+	   localization_key = "guli_type"
+	}
+}
+
+defined_text = {
+	name = FROM_World
+	text = {
+	   trigger = {
+	      FROM = {
+	      	has_cosmetic_tag = Gensokyo_united
+	      }
+	   }
+	   localization_key = Gensokyo
+	}
+	text = {
+	   trigger = {
+	   		FROM = {
+		      	has_cosmetic_tag = Underground_united
+		    }    
+	   }
+	   localization_key = Underground
+	}
+	text = {
+	   trigger = {
+   			FROM = {
+		      	has_cosmetic_tag = Celestial_united
+		    } 
+	   }
+	   localization_key = Celestial
+	}
+	text = {
+	   trigger = {
+   			FROM = {
+		      	has_cosmetic_tag = Netherworld_united
+		    } 
+	   }
+	   localization_key = Netherworld
+	}
+	text = {
+	   trigger = {
+   			FROM = {
+		      	has_cosmetic_tag = Hell_united
+		    } 
+	   }
+	   localization_key = Hell
+	}
+}
+
+defined_text = {
+	name = is_lowing_or_not
+	text = {
+	   trigger = {
+	      has_country_flag = LS_start_lowing
+	   }
+	   localization_key = LS_progress
+	}
+	text = {
+	   trigger = {
+		    not = { has_country_flag = LS_start_lowing }
+	   }
+	   localization_key = development_show
+	}
+}
+defined_text = {
+	name = is_lowing_or_not2
+	text = {
+	   trigger = {
+	      has_country_flag = LS_start_lowing
+	   }
+	   localization_key = ""
+	}
+	text = {
+	   trigger = {
+		    not = { has_country_flag = LS_start_lowing }
+	   }
+	   localization_key = development_show_tt
+	}
+}
+defined_text = {
+	name = is_lowing_or_not3
+	text = {
+	   trigger = {
+	      has_country_flag = LS_start_lowing
+	   }
+	   localization_key = ""
+	}
+	text = {
+	   trigger = {
+		    not = { has_country_flag = LS_start_lowing }
+	   }
+	   localization_key = development_show_delayed_tt
+	}
+}
+defined_text = {
+	name = SS_low_display_on
+	text = {
+	   trigger = {
+	      not = {
+			has_country_flag = LS_cooldown_completed
+		  }
+	   }
+	   localization_key = SS_low_display_1
+	}
+	text = {
+	   trigger = {
+		    has_country_flag = LS_cooldown_completed
+		    not = {
+		    	has_country_flag = LS_start_lowing
+		    }
+	   }
+	   localization_key = SS_low_display_2
+	}
+	text = {
+	   trigger = {
+		    has_country_flag = LS_cooldown_completed
+		    has_country_flag = LS_start_lowing
+	   }
+	   localization_key = SS_low_display_3
+	}
+}
+defined_text = {
+	name = origin_race_get
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 0}
+	   }
+	   localization_key = "GFX_state_Beast"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 1}
+	   }
+	   localization_key = "GFX_state_Pri_youkai"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 2}
+	   }
+	   localization_key = "GFX_state_Youkai"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 3}
+	   }
+	   localization_key = "GFX_state_God"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 4}
+	   }
+	   localization_key = "GFX_state_Human"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 5}
+	   }
+	   localization_key = "GFX_state_Magician"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 6}
+	   }
+	   localization_key = "GFX_state_Fairy"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 7}
+	   }
+	   localization_key = "GFX_state_Ghost"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 8}
+	   }
+	   localization_key = "GFX_state_Kappa"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 9}
+	   }
+	   localization_key = "GFX_state_Tenggu"
+	}
+}
+defined_text = {
+	name = present_race_get
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 0}
+	   }
+	   localization_key = "GFX_state_Beast"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 1}
+	   }
+	   localization_key = "GFX_state_Pri_youkai"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 2}
+	   }
+	   localization_key = "GFX_state_Youkai"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 3}
+	   }
+	   localization_key = "GFX_state_God"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 4}
+	   }
+	   localization_key = "GFX_state_Human"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 5}
+	   }
+	   localization_key = "GFX_state_Magician"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 6}
+	   }
+	   localization_key = "GFX_state_Fairy"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 7}
+	   }
+	   localization_key = "GFX_state_Ghost"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 8}
+	   }
+	   localization_key = "GFX_state_Kappa"
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 9}
+	   }
+	   localization_key = "GFX_state_Tenggu"
+	}
+}
+
+defined_text = {
+	name = th_origin_race_tt
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 0}
+	   }
+	   localization_key = Beast
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 1}
+	   }
+	   localization_key = Pri_youkai
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 2}
+	   }
+	   localization_key = Youkai
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 3}
+	   }
+	   localization_key = God
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 4}
+	   }
+	   localization_key = Human
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 5}
+	   }
+	   localization_key = Magician
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 6}
+	   }
+	   localization_key = Fairy
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 7}
+	   }
+	   localization_key = Ghost
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 8}
+	   }
+	   localization_key = Kappa
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_origin_race = 9}
+	   }
+	   localization_key = Tenggu
+	}
+}
+
+defined_text = {
+	name = th_present_race_tt
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 0}
+	   }
+	   localization_key = Beast
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 1}
+	   }
+	   localization_key = Pri_youkai
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 2}
+	   }
+	   localization_key = Youkai
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 3}
+	   }
+	   localization_key = God
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 4}
+	   }
+	   localization_key = Human
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 5}
+	   }
+	   localization_key = Magician
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 6}
+	   }
+	   localization_key = Fairy
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 7}
+	   }
+	   localization_key = Ghost
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 8}
+	   }
+	   localization_key = Kappa
+	}
+	text = {
+	   trigger = {
+	      check_variable = { ST_present_race = 9}
+	   }
+	   localization_key = Tenggu
+	}
+}
+defined_text = {
+	name = th_origin_race_loc
+	text = {
+	   trigger = {
+	      ST_origin_same_race = yes
+	   }
+	   localization_key = th_origin_race_z1
+	}
+	text = {
+	   trigger = {
+	      not = {
+	      	ST_origin_same_race = yes
+	      }
+	   }
+	   localization_key = th_origin_race_z2
+	}
+}
+defined_text = {
+	name = th_present_race_loc
+	text = {
+	   trigger = {
+	      ST_present_same_race = yes
+	   }
+	   localization_key = th_present_race_z1
+	}
+	text = {
+	   trigger = {
+	      not = {
+	      	ST_present_same_race = yes
+	      }
+	   }
+	   localization_key = th_present_race_z2
+	}
+}
+defined_text = {
+	name = CO_core_cant
+	text = {
+	   trigger = {
+	      has_variable = in_convert_progress_of_@ROOT
+	   }
+	   localization_key = CO_core_cant_3
+	}
+	text = {
+	   trigger = {
+	      has_variable = in_core_progress_of_@ROOT
+	   }
+	   localization_key = CO_core_cant_5
+	}
+	text = {
+	   trigger = {
+	      ROOT = { has_war = yes }
+	   }
+	   localization_key = CO_core_cant_2
+	}
+	text = {
+	   trigger = {
+	      compliance < ROOT.CO_core_compliance_needed
+	   }
+	   localization_key = CO_core_cant_1
+	}
+	text = {
+	   trigger = {
+
+	   }
+	   localization_key = CO_core_cant_4
+	}
+	
+}
+defined_text = {
+	name = CONV_cant_tt
+	text = {
+	   trigger = {
+			ROOT = { 
+				check_variable = {
+					modifier@CONV_RULE_cannot_convert > 0
+				}
+			}
+	   }
+	   localization_key = CONV_cant_6
+	}
+	text = {
+	   trigger = {
+	      not = { resistance < 5 }
+	   }
+	   localization_key = CONV_cant_5
+	}
+	text = {
+	   trigger = {
+	      has_variable = in_core_progress_of_@ROOT
+	   }
+	   localization_key = CONV_cant_2
+	}
+	text = {
+	   trigger = {
+	      has_variable = in_convert_progress_of_@ROOT
+	   }
+	   localization_key = CONV_cant_4
+	}
+	text = {
+	   trigger = {
+	      ROOT = { has_war = yes }
+	   }
+	   localization_key = CONV_cant_1
+	}
+	text = {
+	   trigger = {
+
+	   }
+	   localization_key = CONV_cant_3
+	}
+	
+}
+
+defined_text = {
+	name = progress_type
+	text = {
+	   trigger = {
+	      has_variable = in_core_progress_of_@ROOT
+	   }
+	   localization_key = core_progress
+	}
+	text = {
+	   trigger = {
+	      has_variable = in_convert_progress_of_@ROOT
+	   }
+	   localization_key = convert_progress
+	}
+	text = {
+	   trigger = {
+	      always = yes
+	   }
+	   localization_key = core_value
+	}
+}
+
+defined_text = {
+	name = up_influence
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 0}
+	   }
+	   localization_key = OL_view_0_high_ratio
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 1}
+	   }
+	   localization_key = OL_view_1_high_ratio
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 2}
+	   }
+	   localization_key = OL_view_2_high_ratio
+	}
+}
+
+defined_text = {
+	name = low_influence
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 0}
+	   }
+	   localization_key = OL_view_0_low_ratio
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 1}
+	   }
+	   localization_key = OL_view_1_low_ratio
+	}
+	text = {
+	   trigger = {
+	      check_variable = { OL_view_type = 2}
+	   }
+	   localization_key = OL_view_2_low_ratio
+	}
+}
+
+defined_text = {
+	name = ideo_type
+	text = {
+	   trigger = {
+	      has_government = qinwai
+	   }
+	   localization_key = qinwai
+	}
+	text = {
+	   trigger = {
+	      has_government = oldorder
+	   }
+	   localization_key = oldorder
+	}
+	text = {
+	   trigger = {
+	      has_government = guli
+	   }
+	   localization_key = guli
+	}
+	text = {
+	   trigger = {
+	      has_government = fandong
+	   }
+	   localization_key = fandong
+	}
+	text = {
+	   trigger = {
+	      has_government = neworder
+	   }
+	   localization_key = neworder
+	}
+}
+
+defined_text = {
+	name = magic_laws
+	text = {
+	   trigger = {
+	      has_idea = free_magic
+	   }
+	   localization_key = free_magic
+	}
+	text = {
+	   trigger = {
+	      has_idea = sc_rule
+	   }
+	   localization_key = sc_rule
+	}
+	text = {
+	   trigger = {
+	      has_idea = limit_magic
+	   }
+	   localization_key = limit_magic
+	}
+	text = {
+	   trigger = {
+	      has_idea = forbidden_magic
+	   }
+	   localization_key = forbidden_magic
+	}
+}
+
+defined_text = {
+	name = PO_magic_laws_up
+	text = {
+	   trigger = {
+	   		or = {
+	   			check_variable = { PO_average_mp > 50}
+	   			check_variable = { PO_average_mp = 50}
+	   		}
+	   }
+	   localization_key = th_magic_law_up_positive
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			check_variable = { PO_average_mp > 50}
+	   			check_variable = { PO_average_mp = 50}
+	   		}
+	   }
+	   localization_key = th_magic_law_up_passive
+	}
+}
+defined_text = {
+	name = PO_magic_laws_low
+	text = {
+	    trigger = {
+	   		not = {
+	   			and = {
+	   				check_variable = { PO_average_mp > 50}
+	   				check_variable = { OL_view_type = 0 }
+	   			}
+	   		}
+	    }
+	    localization_key = th_magic_law_low_positive
+	}
+	text = {
+		trigger = {
+	   		check_variable = { PO_average_mp > 50}
+	   		check_variable = { OL_view_type = 0 }
+	    }
+	    localization_key = th_magic_law_low_passive
+	}
+}
+
+defined_text = {
+	name = th_view_top_tt2
+	text = {
+	   trigger = {
+	      always = yes
+	   }
+	   localization_key = th_view_top_tt_2
+	}
+}
+
+defined_text = {
+	name = human_influence
+	text = {
+	   trigger = {
+	      not = {
+	      	 has_idea = Human
+	      }
+	   }
+	   localization_key = human_influ1
+	}
+	text = {
+	   trigger = {
+		   tag = HUM
+	   }
+	   localization_key = human_influ2
+	}
+}
+defined_text = {
+	name = human_influence_desc
+	text = {
+	   trigger = {
+	      not = {
+	      	 has_idea = Human
+	      }
+	   }
+	   localization_key = human_influ1_desc
+	}
+	text = {
+	   trigger = {
+		   tag = HUM
+	   }
+	   localization_key = human_influ2_desc
+	}
+}
+defined_text = {
+	name = LS_subject_sys_cant_delayed_tt0
+	text = {
+	   trigger = {
+	   		not = {
+	   			has_country_flag = LS_cooldown_completed
+	   		}
+	   }
+	   localization_key = LS_subject_sys_cant_delayed_tt1
+	}
+	text = {
+	   trigger = {
+	   		ROOT = {
+	   			has_war = yes
+	   		}
+	   }
+	   localization_key = LS_subject_sys_cant_delayed_tt2
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			is_neighbor_of = ROOT
+	   		}
+	   }
+	   localization_key = LS_subject_sys_cant_delayed_tt3
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			check_variable = {
+					ROOT.modifier@SS_cant_low_subjects = 0
+				}
+	   		}
+	   }
+	   localization_key = LS_subject_sys_cant_delayed_tt4
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			check_variable = {
+					modifier@SS_cant_being_lowed = 0
+				}
+	   		}
+	   }
+	   localization_key = LS_subject_sys_cant_delayed_tt5
+	}
+}
+defined_text = {
+	name = SS_subject_name0
+	text = {
+	   trigger = {
+	   		ROOT = { has_country_flag = wusuntunbing_@PREV }
+	   }
+	   localization_key = SS_subject_name2
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				is_same_race = yes
+			}
+	   }
+	   localization_key = SS_subject_name3
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			ROOT = { 
+					has_country_flag = wusuntunbing_@PREV 
+					is_same_race = yes
+				}
+	   		}
+	   }
+	   localization_key = SS_subject_name1
+	}
+}
+
+defined_text = {
+	name = map_mode_race
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 0 } }
+	   }
+	   localization_key = Beast
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 1} }
+	   }
+	   localization_key = Pri_youkai
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 2} }
+	   }
+	   localization_key = Youkai
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 3} }
+	   }
+	   localization_key = God
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 4} }
+	   }
+	   localization_key = Human
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 5} }
+	   }
+	   localization_key = Magician
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 6} }
+	   }
+	   localization_key = Fairy
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 7} }
+	   }
+	   localization_key = Ghost
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 8} }
+	   }
+	   localization_key = Kappa
+	}
+	text = {
+	   trigger = {
+	      FROM = { check_variable = { ST_present_race = 9} }
+	   }
+	   localization_key = Tenggu
+	}
+}
+defined_text = {
+	name = map_mode_race_delayed
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	ST_present_same_race = yes 
+			}
+	   }
+	   localization_key = map_mode_race_delayed_tt1
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	not = { ST_present_same_race = yes } 
+			}
+	   }
+	   localization_key = map_mode_race_delayed_tt2
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				not = { is_controlled_by = ROOT }
+			}
+	   }
+	   localization_key = map_mode_race_delayed_tt3
+	}
+}
+defined_text = {
+	name = map_mode_core
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	is_core_of = ROOT 
+			}
+	   }
+	   localization_key = core_mode_tooltip_tt1
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	not = { is_core_of = ROOT } 
+			}
+	   }
+	   localization_key = core_mode_tooltip_tt2
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				not = { is_controlled_by = ROOT }
+			  	is_core_of = ROOT
+			}
+	   }
+	   localization_key = core_mode_tooltip_tt3
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+			  	not = {
+					is_controlled_by = ROOT
+			  		is_core_of = ROOT 
+				}
+			}
+	   }
+	   localization_key = core_mode_tooltip_tt4
+	}
+}
+defined_text = {
+	name = map_mode_core_delayed
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_core_of = ROOT 
+				is_controlled_by = ROOT
+			}
+	   }
+	   localization_key = core_mode_tooltip_delayed_tt1
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	not = { is_core_of = ROOT } 
+				compliance < ROOT.CO_core_compliance_needed
+			}
+	   }
+	   localization_key = core_mode_tooltip_delayed_tt2
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				is_controlled_by = ROOT
+			  	not = { is_core_of = ROOT } 
+				compliance > ROOT.CO_core_compliance_needed
+			}
+	   }
+	   localization_key = core_mode_tooltip_delayed_tt3
+	}
+	text = {
+	   trigger = {
+	      	FROM = { 
+				not = { is_controlled_by = ROOT }
+			}
+	   }
+	   localization_key = core_mode_tooltip_delayed_tt4
+	}
+}
+defined_text = {
+	name = FAPO_average_display
+	text = {
+	   trigger = {
+	      	check_variable = {
+				FAPO_average < FAPO_cons_type
+			}
+	   }
+	   localization_key = FAPO_average_display_high
+	}
+	text = {
+	   trigger = {
+		   	not = {
+				check_variable = {
+					FAPO_average < FAPO_cons_type
+				}
+			}
+	   }
+	   localization_key = FAPO_average_display_low
+	}
+}
+defined_text = {
+	name = th_power_tt_display
+	text = {
+	   trigger = {
+	      	not = {
+				has_idea = Fairy
+			}
+	   }
+	   localization_key = th_power_tt_1
+	}
+	text = {
+	   trigger = {
+		   	has_idea = Fairy
+	   }
+	   localization_key = th_power_tt_2
+	}
+}

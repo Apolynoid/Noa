@@ -1,0 +1,3169 @@
+SAT_Underground_Administration = {
+    Placeholder = {
+        visible = {
+            tag = SAT
+            always = no
+        }
+        
+        available = {
+            always = no
+        }
+    }
+
+    SAT_establish_order_in_UNL = {
+		icon = generic_political_actions
+        visible = {
+            UNL = {
+                is_subject_of = ROOT
+            }
+        }
+        fire_only_once = yes
+		available = {
+			UNL = {
+                is_subject_of = ROOT
+            }
+		}
+        ai_will_do = {
+            factor = 4000
+        }
+        days_remove = 30
+        cost = 50
+        remove_effect = {
+            if = {
+                limit = { SAT = { has_government = qinwai } }
+                UNL = { 
+                    set_politics = {
+                        ruling_party = qinwai
+                    }
+                    add_popularity = {
+                        ideology = qinwai
+                        popularity = 0.75
+                    }
+                }
+            }
+            if = {
+                limit = { SAT = { has_government = oldorder } }
+                UNL = { 
+                    set_politics = {
+                        ruling_party = oldorder
+                    }
+                    add_popularity = {
+                        ideology = oldorder
+                        popularity = 0.75
+                    }
+                }
+            }
+            if = {
+                limit = { SAT = { has_government = guli } }
+                UNL = { 
+                    set_politics = {
+                        ruling_party = guli
+                    }
+                    add_popularity = {
+                        ideology = guli
+                        popularity = 0.75
+                    }
+                }
+            }
+            UNL = { 
+                add_ideas = { SAT_establish_order_idea } 
+	            remove_ideas = { wufadiqu_idea }
+                set_cosmetic_tag = UNL_SAT
+                hidden_effect = {
+                    add_offsite_building = {
+                        type = industrial_complex
+                        level = 8
+                    }
+                }
+            }
+        }
+
+	}
+
+	SAT_demand_puppet = {
+        visible = {
+            tag = SAT
+            OR = {
+                FROM = { tag = YUG }
+                has_completed_focus = SAT_secure_the_passages
+            }
+            OR = {
+                FROM = { tag = PRS }
+                FROM = { tag = YMM }
+                FROM = { tag = UNL }
+                has_completed_focus = SAT_the_acknowledgement_of_yukari
+            }
+        }
+        icon = generic_political_actions
+
+        modifier = {
+            political_power_gain = -0.25
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = YUG
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+			}
+        }
+        targets = { YUG PRS YMM UNL }
+        
+        available = {
+            political_power_daily > 0.25
+            FROM = {
+                is_subject = no
+                OR = {
+                    is_in_faction = no
+                    is_in_faction_with = ROOT
+                }
+                before_declare_war = yes
+            }
+            NOT = { has_war_with = FROM }
+            OR = { 
+                has_guaranteed = FROM
+                is_in_faction_with = FROM
+            }
+            # if = {
+            #     limit = {
+            #         FROM = { tag = YUG }
+            #     }
+            #     SAT_YUG_prestige_at_least_8 = yes
+            # }
+            if = {
+                limit = {
+                    FROM = { tag = PRS }
+                }
+                SAT_PRS_prestige_at_least_8 = yes
+            }
+            if = {
+                limit = {
+                    FROM = { tag = YMM }
+                }
+                SAT_YMM_prestige_at_least_8 = yes
+            }
+            if = {
+                limit = {
+                    FROM = { tag = UNL }
+                }
+                SAT_UNL_prestige_at_least_8 = yes
+                strength_ratio = {
+                    tag = UNL
+                    ratio > 1.5
+                }
+            }
+            if = {
+                limit = {
+                    FROM = { tag = YUG }
+                }
+                # SAT_YUG_prestige_at_least_4 = yes
+                has_completed_focus = SAT_the_acknowledgement_of_yukari
+            }
+        }
+
+        days_remove = 60
+
+        # fixed_random_seed = no
+
+        cost = 100
+
+        # days_re_enable = 90
+
+        fire_only_once = yes
+
+        complete_effect = {
+            add_ai_strategy = {
+                type = prepare_for_war
+                id = FROM
+                value = 100
+            }
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = und.1 hours = 3 } }
+            if = {
+                limit = { FROM = { tag = YUG } }
+                custom_effect_tooltip = SAT_war_with_YUG_still_possible_tt
+            }
+            add_ai_strategy = {
+                type = prepare_for_war
+                id = FROM
+                value = -100
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_demand_alliance = {
+        visible = {
+            tag = SAT
+            
+        }
+        icon = generic_political_actions
+
+        modifier = {
+            political_power_gain = -0.15
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = YUG
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+			}
+        }
+
+        targets = { YUG PRS YMM UNL }
+
+        available = {
+            political_power_daily > 0.15
+            is_faction_leader = yes
+            FROM = {
+                is_subject = no
+                is_in_faction = no
+            }
+            NOT = { has_war_with = FROM }
+            if = {
+                limit = {
+                    FROM = { tag = YUG }
+                }
+                SAT_YUG_prestige_at_least_6 = yes
+                # has_country_flag = SAT_YUG_alliance_available_flag
+            }
+            
+            if = {
+                limit = {
+                    FROM = { tag = PRS }
+                }
+                SAT_PRS_prestige_at_least_4 = yes
+            }
+            if = {
+                limit = {
+                    FROM = { tag = YMM }
+                }
+                SAT_YMM_prestige_at_least_4 = yes
+            }
+            if = {
+                limit = {
+                    FROM = { tag = UNL }
+                }
+                SAT_UNL_prestige_at_least_4 = yes
+                has_completed_focus = SAT_order_in_the_underworld
+            }
+        }
+
+        days_remove = 40
+
+        # fixed_random_seed = no
+
+        cost = 75
+
+        # days_re_enable = 90
+
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = und.4 hours = 3 } }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_join_MRY_research = {
+		icon = generic_political_actions
+
+		visible = {
+            tag = SAT
+            has_completed_focus = SAT_collabrate_technical_lab
+            SAT = { NOT = { is_in_tech_sharing_group = yaoguaishanziweiyanjiuzu } }
+        }
+
+		available = {
+            MRY = { is_in_tech_sharing_group = yaoguaishanziweiyanjiuzu }
+            SAT = { NOT = { is_in_tech_sharing_group = yaoguaishanziweiyanjiuzu } }
+		}
+
+        ai_will_do = {
+            factor = 5000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            
+        }
+
+        days_remove = 5
+        cost = 50
+
+        remove_effect = {
+            add_to_tech_sharing_group = yaoguaishanziweiyanjiuzu
+        }
+    }
+
+    SAT_invite_into_Chireidan_curreny_system = {
+		icon = generic_political_actions
+
+		visible = {
+            tag = SAT
+            has_completed_focus = SAT_issue_Chirendan_currency
+            FROM = {
+                NOT = { has_war_with = SAT }
+                OR = {
+                    AND = {
+                        NOT = { tag = MRY }
+                        NOT = { tag = YKR }
+                        NOT = { tag = HUB }
+                        NOT = { tag = AOO }
+                        NOT = { tag = AKO }
+                        NOT = { tag = UFA }
+                    }
+                    is_subject_of = SAT
+                }
+                OR = {
+                    AND = { 
+                        NOT = { tag = SAK }
+                        NOT = { tag = CLO }
+                        NOT = { tag = LIL }
+                        NOT = { tag = YCE }
+                    }
+                    OR = {
+                        is_subject_of = SAT
+                        any_neighbor_country = {
+                            OR = {
+                                is_subject_of = SAT
+                                has_idea = SAT_Chireidan_currency_others_ideas
+                                tag = SAT
+                            }
+                        }
+                    }
+                }
+            }  
+            OR = {
+                AND = {
+                    FROM = { tag = SEJ }
+                    SAT = { has_completed_focus = SAT_cooperate_on_Geyser }
+                }
+                AND = {
+                    FROM = { tag = SEJ }
+                    SEJ = { is_subject_of = SAT }
+                }
+                all_country = {
+                    OR = {
+                        tag = SAT
+                        is_major = no
+                        NOT = { is_in_faction_with = FROM }
+                        is_in_faction_with = SAT
+                    }
+                }
+            }
+            
+        }
+
+		available = {
+            FROM = {
+                OR = {
+                    is_subject = no
+                    is_subject_of = SAT
+                    OVERLORD = { 
+                        OR = {
+                            has_idea = SAT_Chireidan_currency_others_ideas
+                            is_in_faction_with = SAT
+                        }
+                    }
+                }
+                OR = {
+                    NOT = { tag = KEK }
+                    SAT = { has_completed_focus = SAT_lessons_from_wars }
+                }
+                OR = {
+                    NOT = { tag = SKI }
+                    SAT = { has_completed_focus = SAT_proclaim_our_past_role }
+                }
+                OR = {
+                    AND = {
+                        NOT = { tag = YOM }
+                        NOT = { tag = YYK }
+                    }
+                    OR = {
+                        SAT = { has_completed_focus = SAT_reinforce_yuyuko }
+                        is_subject_of = SAT
+                    }
+                }
+            }
+            
+		}
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = YUG
+					tag = PRS
+					tag = YMM
+					tag = UNL
+                    tag = YYK
+                    tag = YKR
+                    tag = SEJ
+                    tag = MRY
+                    tag = YOM
+                    tag = SKI
+                    tag = AOO
+                    tag = AKO
+                    tag = UFA
+                    tag = HUB
+                    tag = GYK
+                    tag = KEK
+                    tag = SAK
+                    tag = CLO
+                    tag = YCE
+                    tag = LIL
+				}
+			}
+        }
+
+        targets = { YUG PRS YMM UNL YYK YKR SEJ MRY YOM SKI AOO AKO UFA HUB GYK KEK SAK CLO YCE LIL }
+
+        ai_will_do = {
+            factor = 5000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            
+        }
+
+        days_remove = 5
+        cost = 25
+
+        remove_effect = {
+            FROM = { add_ideas = { SAT_Chireidan_currency_others_ideas } }
+            if = {
+                limit = { FROM = { tag = YUG } }
+                SAT_YUG_prestige_increase = yes
+            }
+            if = {
+                limit = { FROM = { tag = UNL } }
+                SAT_UNL_prestige_increase_2 = yes
+            }
+            if = {
+                limit = { FROM = { tag = YMM } }
+                SAT_YMM_prestige_increase_2 = yes
+            }
+            if = {
+                limit = { FROM = { tag = PRS } }
+                SAT_PRS_prestige_increase_2 = yes
+            }
+        }
+    }
+
+    SAT_integrate_economy = {
+        visible = {
+            tag = SAT
+            FROM = { 
+                is_subject_of = SAT
+                has_idea = SAT_Chireidan_currency_others_ideas
+            }
+        }
+        icon = generic_political_actions
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = YUG
+					tag = PRS
+					tag = YMM
+					tag = UNL
+                    tag = YYK
+                    tag = YKR
+                    tag = SEJ
+                    tag = MRY
+                    tag = YOM
+                    tag = SKI
+                    tag = AOO
+                    tag = AKO
+                    tag = UFA
+                    tag = HUB
+                    tag = GYK
+                    tag = KEK
+                    tag = SAK
+                    tag = CLO
+                    tag = YCE
+                    tag = LIL
+				}
+			}
+        }
+
+        targets = { YUG PRS YMM UNL YYK YKR SEJ MRY YOM SKI AOO AKO UFA HUB GYK KEK SAK CLO YCE LIL }
+
+        available = {
+            SAT = { is_subject = no }
+        } 
+
+        days_remove = 60
+
+        # fixed_random_seed = no
+
+        cost = 50
+
+        # days_re_enable = 90
+
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            FROM = { 
+                swap_ideas = {
+                    remove_idea = SAT_Chireidan_currency_others_ideas
+                    add_idea = SAT_Chireidan_currency_others_ideas_2
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 5000
+        }
+    }
+
+    YUG_invasion_of_UUG = {
+
+		icon = generic_independence
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 500
+
+		fire_only_once = yes
+		is_good = no 
+		activation = {
+			has_global_flag = UUG_unrest_global_flag
+		}
+
+		cancel_trigger = {
+			OR = {
+                UUG = { exists = no }
+                UUG = { is_subject = yes }
+                YUG = { is_in_faction_with = UUG }
+                has_global_flag = UUG_unrest_pacified_global_flag
+            }
+		}
+		timeout_effect = {
+			custom_effect_tooltip = YUG_will_handle_this_but_wont_trust_us_tt
+            YUG = { country_event = und.5 }
+            effect_tooltip = {
+                SAT_YUG_prestige_decrease_2 = yes
+            }
+		}
+	}
+
+    PRS_invasion_ACE = {
+		icon = generic_prepare_civil_war
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_passage_defence_HQ
+            ACE = { 
+                exists = yes 
+                NOT = { is_subject_of = ROOT }
+                NOT = { is_subject_of = PRS }
+                NOT = { is_in_faction_with = ROOT }
+                NOT = { is_in_faction_with = PRS }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1000
+            modifier = {
+                factor = 0
+                OR = {
+                    ACE = { is_in_faction = yes }
+                    ACE = { is_subject = yes }
+                }
+            }
+        }
+
+		available = {
+			OR = {
+                has_completed_focus = SAT_secure_the_passages
+                threat > 0.59
+            }
+            PRS = { 
+                NOT = { has_war_with = ACE } 
+                OR = {
+                    is_subject = no
+                    is_subject_of = ROOT
+                }
+            }
+            SAT_PRS_prestige_at_least_2 = yes
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+		cost = 75
+        complete_effect = {
+            if = {
+                limit = { is_ai = no }
+                SAT_PRS_prestige_decrease_2 = yes
+            }
+        }
+		remove_effect = {
+            custom_effect_tooltip = focus_warning3
+            if = {
+                limit = {
+                    PRS = { is_subject_of = ROOT }
+                }
+                declare_war_on = {
+                    target = ACE
+                    type = puppet_wargoal_focus
+                }
+                else = {
+                    PRS = { country_event = und.20 }
+                }
+            }
+        }
+	}
+
+    SAT_hire_YMM_construction_company = {
+		icon = generic_prepare_civil_war
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_Chirendan_defence
+        }
+
+        ai_will_do = {
+            factor = 1000
+        }
+
+		available = {
+			OR = {
+                has_completed_focus = SAT_secure_the_passages
+                SAT_YMM_prestige_at_least_6 = yes
+            }
+            SAT_YMM_prestige_at_least_2 = yes
+		}
+
+		days_remove = 30
+
+		fire_only_once = yes
+		cost = 75
+        complete_effect = {
+            if = {
+                limit = { is_ai = no }
+                SAT_PRS_prestige_decrease_2 = yes
+            }
+        }
+		remove_effect = {
+            add_ideas = { YMM_spider_company_idea }
+        }
+	}
+
+    SAT_arms_underground_forces = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_Chirendan_arms_factory
+        }
+        icon = generic_prepare_civil_war
+
+        modifier = {
+            political_power_gain = -0.10
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+			}
+        }
+
+        targets = { PRS YMM UNL }
+
+        available = {
+            # is_faction_leader = yes
+            political_power_daily > 0.10
+
+            FROM = {
+                OR = {
+                    is_subject = no
+                    is_subject_of = ROOT
+                }
+                OR = {
+                    is_in_faction = no
+                    is_in_faction_with = ROOT
+                }
+            }
+            NOT = { has_war_with = FROM }
+            OR = {
+                has_tech = spell_card2
+                has_tech = gun2
+            }
+        }
+
+        days_remove = 50
+
+        # fixed_random_seed = no
+
+        cost = 75
+
+        # days_re_enable = 90
+
+        fire_only_once = yes
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = sat.9 } }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = SAT_arms_sent_1
+                }
+            }
+            effect_tooltip = {
+                FROM = {
+                    if = {
+                        limit = {
+                            SAT = {
+                                has_tech = gun2
+                            }
+                        }
+                        add_equipment_to_stockpile = {
+                            type = gun141
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = magic_core141
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = PRS
+                    }
+                }
+                SAT_PRS_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = YMM
+                    }
+                }
+                SAT_YMM_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = UNL
+                    }
+                }
+                SAT_UNL_prestige_increase = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_arms_underground_forces_2 = {
+        name = SAT_arms_underground_forces
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_Chirendan_arms_factory
+        }
+        icon = generic_prepare_civil_war
+
+        modifier = {
+            political_power_gain = -0.10
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+                has_country_flag = SAT_arms_sent_1
+			}
+        }
+
+        targets = { PRS YMM UNL }
+
+        available = {
+            # is_faction_leader = yes
+            political_power_daily > 0.10
+
+            FROM = {
+                OR = {
+                    is_subject = no
+                    is_subject_of = ROOT
+                }
+                OR = {
+                    is_in_faction = no
+                    is_in_faction_with = ROOT
+                }
+            }
+            NOT = { has_war_with = FROM }
+            OR = {
+                has_tech = spell_card3
+                has_tech = gun3
+            }
+        }
+
+        days_remove = 50
+
+        cost = 75
+
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = sat.10 } }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = SAT_arms_sent_2
+                }
+            }
+            effect_tooltip = {
+                FROM = {
+                    if = {
+                        limit = {
+                            SAT = {
+                                has_tech = gun3
+                            }
+                        }
+                        add_equipment_to_stockpile = {
+                            type = gun147
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = magic_core147
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = PRS
+                    }
+                }
+                SAT_PRS_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = YMM
+                    }
+                }
+                SAT_YMM_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = UNL
+                    }
+                }
+                SAT_UNL_prestige_increase = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_arms_underground_forces_3 = {
+        name = SAT_arms_underground_forces
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_Chirendan_arms_factory
+        }
+        icon = generic_prepare_civil_war
+
+        modifier = {
+            political_power_gain = -0.10
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+                has_country_flag = SAT_arms_sent_2
+			}
+        }
+
+        targets = { PRS YMM UNL }
+
+        available = {
+            # is_faction_leader = yes
+            political_power_daily > 0.10
+
+            FROM = {
+                OR = {
+                    is_subject = no
+                    is_subject_of = ROOT
+                }
+                OR = {
+                    is_in_faction = no
+                    is_in_faction_with = ROOT
+                }
+            }
+            NOT = { has_war_with = FROM }
+            OR = {
+                has_tech = spell_card4
+                has_tech = gun4
+            }
+        }
+
+        days_remove = 50
+        cost = 75
+
+        fire_only_once = yes
+
+        complete_effect = {
+            
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = sat.11 } }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = SAT_arms_sent_3
+                }
+            }
+            effect_tooltip = {
+                FROM = {
+                    if = {
+                        limit = {
+                            SAT = {
+                                has_tech = gun4
+                            }
+                        }
+                        add_equipment_to_stockpile = {
+                            type = gun153
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = magic_core153
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = PRS
+                    }
+                }
+                SAT_PRS_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = YMM
+                    }
+                }
+                SAT_YMM_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = UNL
+                    }
+                }
+                SAT_UNL_prestige_increase = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_arms_underground_forces_4 = {
+        name = SAT_arms_underground_forces
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_Chirendan_arms_factory
+        }
+        icon = generic_prepare_civil_war
+
+        modifier = {
+            political_power_gain = -0.10
+        }
+
+        target_trigger = {
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = YMM
+					tag = UNL
+				}
+                has_country_flag = SAT_arms_sent_3
+			}
+        }
+
+        targets = { PRS YMM UNL }
+
+        available = {
+            is_faction_leader = yes
+            political_power_daily > 0.10
+
+            FROM = {
+                OR = {
+                    is_subject = no
+                    is_subject_of = ROOT
+                }
+                OR = {
+                    is_in_faction = no
+                    is_in_faction_with = ROOT
+                }
+            }
+            NOT = { has_war_with = FROM }
+            OR = {
+                has_tech = spell_card5
+                has_tech = gun5
+            }
+        }
+
+        days_remove = 50
+        cost = 75
+
+        fire_only_once = yes
+
+        complete_effect = {
+        }
+
+        remove_effect = {
+            FROM = { country_event = { id = sat.12 } }
+            hidden_effect = {
+                FROM = {
+                    set_country_flag = SAT_arms_sent_4
+                }
+            }
+            effect_tooltip = {
+                FROM = {
+                    if = {
+                        limit = {
+                            SAT = {
+                                has_tech = gun5
+                            }
+                        }
+                        add_equipment_to_stockpile = {
+                            type = gun159
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                    else = {
+                        add_equipment_to_stockpile = {
+                            type = magic_core159
+                            amount = 2000
+                            producer = SAT
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = PRS
+                    }
+                }
+                SAT_PRS_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = YMM
+                    }
+                }
+                SAT_YMM_prestige_increase = yes
+            }
+            if = {
+                limit = {
+                    FROM = {
+                        tag = UNL
+                    }
+                }
+                SAT_UNL_prestige_increase = yes
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+    }
+
+    SAT_army_reform_1 = {
+        name = SAT_army_reform
+		icon = generic_prepare_civil_war
+
+		available = {
+            or = {
+                AND = {
+                    has_army_experience > 19.99
+                    OR = {
+                        has_tech = ma_shield1
+                        has_tech = sc_shield1
+                    }
+                    OR = {
+                        has_tech = mortar1
+                        has_tech = magic_energy1
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                    any_enemy_country = {
+                        or = {
+                            tag = YUG
+                            tag = MRY
+                            tag = YYK
+                            tag = SEJ
+                            is_major = yes
+                        }
+                    }
+                }
+            }
+            has_idea = SAT_beast_army_2
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 2000
+		}
+		days_remove = 30
+
+		visible = {
+			has_completed_focus = SAT_a_new_army
+            has_idea = SAT_beast_army_2
+		}
+		remove_effect = {
+			swap_ideas = {
+                remove_idea = SAT_beast_army_2
+                add_idea = SAT_beast_army_3
+            }
+		}
+		complete_effect = {
+            if = {
+                limit = { is_ai = no }
+                army_experience = -20	
+            }
+			
+		}		
+	}
+
+    SAT_army_reform_2 = {
+        name = SAT_army_reform
+		icon = generic_prepare_civil_war
+
+		available = {
+            or = {
+                AND = {
+                    has_army_experience > 19
+                    has_tech = jisuangongju144
+                    OR = {
+                        has_tech = wuxiandian147
+                        has_tech = lingliganying147
+                    }
+                    OR = {
+                        has_tech = waijiefuzhushengchan147
+                        has_tech = linglifuzhushengchan147
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                    any_enemy_country = {
+                        or = {
+                            tag = YUG
+                            tag = MRY
+                            tag = YYK
+                            tag = SEJ
+                            is_major = yes
+                        }
+                    }
+                }
+            }
+            has_idea = SAT_beast_army_3
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 2000
+		}
+		days_remove = 30
+
+		visible = {
+			has_completed_focus = SAT_a_new_army
+            has_idea = SAT_beast_army_3
+		}
+		remove_effect = {
+			swap_ideas = {
+                remove_idea = SAT_beast_army_3
+                add_idea = SAT_beast_army_4
+            }
+		}
+		complete_effect = {
+			if = {
+                limit = { is_ai = no }
+                army_experience = -20	
+            }
+		}		
+	}
+
+    SAT_army_reform_3 = {
+        name = SAT_army_reform
+		icon = generic_prepare_civil_war
+
+		available = {
+            or = {
+                AND = {
+                    has_army_experience > 19
+                    has_tech = yunshucheliang146
+                    has_tech = jisuangongju149
+                    OR = {
+                        has_tech = ma_linglixishou
+                        has_tech = sc_linglixishou
+                    }
+                    OR = {
+                        has_tech = magic_energy2
+                        has_tech = mortar2
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                    any_enemy_country = {
+                        or = {
+                            tag = YUG
+                            tag = MRY
+                            tag = YYK
+                            tag = SEJ
+                            is_major = yes
+                        }
+                    }
+                }
+            }
+            has_idea = SAT_beast_army_4
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 2000
+		}
+		days_remove = 30
+
+		visible = {
+			has_completed_focus = SAT_a_new_army
+            has_idea = SAT_beast_army_4
+		}
+		remove_effect = {
+			swap_ideas = {
+                remove_idea = SAT_beast_army_4
+                add_idea = SAT_beast_army_5
+            }
+		}
+		complete_effect = {
+			if = {
+                limit = { is_ai = no }
+                army_experience = -20	
+            }
+		}		
+	}
+
+    Parade_Kyuuto_1 = {
+        name = Parade_Kyuuto
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_show_our_strength
+        }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			strength_ratio = {
+                tag = YUG
+                ratio > 0.94
+            }
+            NOT = { has_war_with = YUG }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_political_power = -50
+            add_command_power = -25
+        }
+
+        days_remove = 30
+
+        custom_cost_trigger = {
+            command_power > 24
+            has_political_power > 49
+        }
+
+        custom_cost_text = SAT_command_power_pp_tt
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_YUG_prestige_increase = yes
+            army_experience = 25
+            hidden_effect = {
+                set_country_flag = SAT_parade_complete_first
+            }
+        }
+	}
+
+    Parade_Kyuuto_2 = {
+        name = Parade_Kyuuto
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_show_our_strength
+            has_country_flag = SAT_parade_complete_first
+        }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			strength_ratio = {
+                tag = YUG
+                ratio > 1.4
+            }
+            NOT = { has_war_with = YUG }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_political_power = -50
+            add_command_power = -25
+        }
+
+        days_remove = 30
+
+        custom_cost_trigger = {
+            command_power > 24
+            has_political_power > 49
+        }
+
+        custom_cost_text = SAT_command_power_pp_tt
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_YUG_prestige_increase = yes
+            army_experience = 25
+            hidden_effect = {
+                set_country_flag = SAT_parade_complete_second
+            }
+        }
+	}
+
+    Parade_Kyuuto_3 = {
+        name = Parade_Kyuuto
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_show_our_strength
+            has_country_flag = SAT_parade_complete_second
+        }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			strength_ratio = {
+                tag = YUG
+                ratio > 1.4
+            }
+            NOT = { has_war_with = YUG }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_political_power = -50
+            add_command_power = -25
+        }
+
+        days_remove = 30
+
+        custom_cost_trigger = {
+            command_power > 24
+            has_political_power > 49
+        }
+
+        custom_cost_text = SAT_command_power_pp_tt
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_YUG_prestige_increase = yes
+            army_experience = 25
+            hidden_effect = {
+                set_country_flag = SAT_parade_complete_third
+            }
+        }
+	}
+
+    SAT_cease_fire_with_YYK = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_raid_the_hub
+        }
+
+		icon = generic_independence
+
+		available = {
+            has_war_with = YYK
+            is_in_faction = no
+            OR = {
+                AND = { 
+                    554 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                    96 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                    127 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                }
+                YYK = { surrender_progress > 0.29 }
+            }
+            NOT = { has_country_flag = SAT_YYK_defence_pact_enabled_flag }
+		}
+
+        ai_will_do = {
+            factor = 5000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_war_support = -0.025
+        }
+
+        days_remove = 5
+        cost = 10
+
+        fire_only_once = yes
+
+        remove_effect = {
+            YYK = { country_event = sat.17 }
+        }
+	}
+
+    SAT_cease_fire_with_AOO = {
+        visible = {
+            tag = SAT
+            OR = {
+                has_completed_focus = SAT_raid_the_hub
+                AND = {
+                    has_country_flag = SAT_invade_HUB_regardless_resistence
+                    has_war_with = AOO
+                }
+            }
+        }
+
+		icon = generic_independence
+
+		available = {
+            has_war_with = AOO
+            is_in_faction = no
+            OR = {
+                AND = { 
+                    554 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                    96 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                    127 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+                }
+                AOO = { surrender_progress > 0.29 }
+            }
+		}
+
+        ai_will_do = {
+            factor = 5000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            # add_war_support = -0.05
+        }
+
+        days_remove = 5
+        cost = 10
+
+        fire_only_once = yes
+
+        remove_effect = {
+            AOO = { country_event = sat.17 }
+        }
+	}
+}
+
+SAT_Underground_Construction = {
+    SAT_cooling_tower_spa = {
+		icon = generic_political_actions
+
+        visible = {
+            OR = {
+                has_completed_focus = SAT_raid_Geyser
+                has_completed_focus = SAT_cooperate_on_Geyser
+            }
+        }
+
+		available = {
+			OR = {
+                AND = {
+                    has_country_flag = SAT_SEJ_Pact_flag
+                    NOT = { has_war_with = SEJ }
+                    121 = { CONTROLLER = { OR = { tag = SEJ is_subject_of = SEJ } } }
+                }
+                121 = { CONTROLLER = { OR = { tag = SAT is_subject_of = SAT is_in_faction_with = SAT } } }
+            }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 60
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 60
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            swap_ideas = {
+                remove_idea = SAT_nuclear_fusion_complete
+                add_idea = SAT_nuclear_fusion_complete_2
+            }
+            if = {
+                limit = { SAT = { has_country_flag = SAT_SEJ_Pact_flag } }
+                SEJ = { add_ideas = { SAT_nuclear_fusion_SEJ_profit_idea } } 
+            }
+        }
+	}
+
+    YMM_fortress_first = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_periphery_defence
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            503 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YMM is_subject_of = YMM } } } 
+			502 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YMM is_subject_of = YMM } } }
+            NOT = { has_war_with = YMM }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 25
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 25
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            502 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 6656
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 6667
+                    instant_build = yes
+                }
+            }
+            503 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 2396
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 1502
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 1494
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 2203
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 373
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 6645
+                    instant_build = yes
+                }
+            }
+            SAT_YMM_prestige_increase = yes
+        }
+	}
+
+    YMM_fortress_second = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_periphery_defence
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            17 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YMM is_subject_of = YMM } } } 
+			501 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YMM is_subject_of = YMM } } }
+            NOT = { has_war_with = YMM }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_3
+                days = 25
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 25
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            501 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 6655
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 2572
+                    instant_build = yes
+                }
+            }
+            17 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 2213
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 2585
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 951
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = supply_node
+                    level = 1
+                    province = 459
+                    instant_build = yes
+                }
+            }
+            SAT_YMM_prestige_increase = yes
+        }
+	}
+
+    PRS_fortress_north = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_periphery_defence
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            18 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            NOT = { has_war_with = PRS }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 35
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 35
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            18 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 1930
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 684
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 2596
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 1152
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 925
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 2576
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 1586
+                    instant_build = yes
+                }
+            }
+            SAT_PRS_prestige_increase = yes
+        }
+	}
+
+    PRS_fortress_south_out = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_periphery_defence
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            # 89 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            # 72 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            508 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            NOT = { has_war_with = PRS }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 30
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 30
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            508 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 6632
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 690
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 1454
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 4
+                    province = 6635
+                    instant_build = yes
+                }
+            }
+            SAT_PRS_prestige_increase = yes
+        }
+	}
+
+    PRS_fortress_south_in = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_periphery_defence
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            # 89 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            # 72 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = PRS is_subject_of = PRS } } } 
+            47 = { 
+                CONTROLLER = { 
+                    OR = { 
+                        tag = ROOT 
+                        is_subject_of = ROOT 
+                        AND = {
+                            OR = {
+                                tag = PRS 
+                                is_subject_of = PRS 
+                            }
+                            SAT = { NOT = { has_war_with = PRS } }
+                        }
+                        AND = {
+                            OR = {
+                                tag = UNL 
+                                is_subject_of = UNL 
+                            }
+                            SAT = { NOT = { has_war_with = UNL } }
+                        }
+                    } 
+                } 
+            } 
+            54 = { 
+                CONTROLLER = { 
+                    OR = { 
+                        tag = ROOT 
+                        is_subject_of = ROOT 
+                        AND = {
+                            OR = {
+                                tag = PRS 
+                                is_subject_of = PRS 
+                            }
+                            SAT = { NOT = { has_war_with = PRS } }
+                        }
+                        AND = {
+                            OR = {
+                                tag = UNL 
+                                is_subject_of = UNL 
+                            }
+                            SAT = { NOT = { has_war_with = UNL } }
+                        }
+                    } 
+                } 
+            } 
+            561 = { 
+                CONTROLLER = { 
+                    OR = { 
+                        tag = ROOT 
+                        is_subject_of = ROOT 
+                        AND = {
+                            OR = {
+                                tag = PRS 
+                                is_subject_of = PRS 
+                            }
+                            SAT = { NOT = { has_war_with = PRS } }
+                        }
+                        AND = {
+                            OR = {
+                                tag = UNL 
+                                is_subject_of = UNL 
+                            }
+                            SAT = { NOT = { has_war_with = UNL } }
+                        }
+                    } 
+                } 
+            }  
+            # 
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 35
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 35
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            561 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 2143
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 31
+                    instant_build = yes
+                }
+            }
+            47 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 2178
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 1511
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 416
+                    instant_build = yes
+                }
+            }
+            497 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 497
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 867
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 1891
+                    instant_build = yes
+                }
+            }
+            if = {
+                limit = {
+                    54 = { CONTROLLER = { OR = { tag = PRS is_subject_of = PRS } } }
+                }
+                SAT_PRS_prestige_increase_2 = yes
+                else = {
+                    SAT_PRS_prestige_increase = yes
+                }
+            }
+            
+            SAT_UNL_prestige_increase_2 = yes
+        }
+	}
+
+	UUG_railway_first = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_connect_the_underworld
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            has_full_control_of_state = 298
+            has_full_control_of_state = 83
+            50 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } } 
+			58 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } }
+            33 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } }
+            NOT = { has_war_with = YUG }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_3
+                days = 80
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 80
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            50 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            58 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 3059 1733 1133 1809 1963 659 2103 961 304 1435 }
+            }
+            
+            hidden_effect = {
+                set_country_flag = SAT_YUG_railway_finished_flag_1
+            }
+        }
+	}
+
+    UUG_railway_second = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_connect_the_underworld
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            has_full_control_of_state = 298
+            has_full_control_of_state = 83
+            75 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } } 
+            55 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } } 
+			37 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } }
+            NOT = { has_war_with = YUG }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_2
+                days = 70
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 70
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            55 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 2111 248 2108 1622 1256 1922 1592 2607 2152 1928 }
+            }
+            
+            hidden_effect = {
+                set_country_flag = SAT_YUG_railway_finished_flag_2
+            }
+        }
+	}
+
+    UUG_railway_third = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_connect_the_underworld
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            has_full_control_of_state = 298
+            has_full_control_of_state = 83
+            53 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } } 
+			22 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT tag = YUG is_subject_of = YUG } } }
+            NOT = { has_war_with = YUG }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost
+                days = 55
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 55
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            53 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            22 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 1962 1653 1236 1168 1350 1606 }
+            }
+            
+            hidden_effect = {
+                set_country_flag = SAT_YUG_railway_finished_flag_3
+            }
+        }
+	}
+
+    SAT_PRS_railway_first = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_passage_defence_HQ
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            23 = { CONTROLLER = { OR = { tag = PRS tag = SAT is_subject_of = PRS is_subject_of = SAT } } }
+            25 = { CONTROLLER = { OR = { tag = PRS tag = SAT is_subject_of = PRS is_subject_of = SAT } } }
+            47 = { CONTROLLER = { OR = { tag = PRS tag = SAT is_subject_of = PRS is_subject_of = SAT } } }
+            18 = { CONTROLLER = { OR = { tag = PRS tag = SAT is_subject_of = PRS is_subject_of = SAT } } }
+            NOT = { has_war_with = PRS }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_3
+                days = 35
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 35
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            18 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            47 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 1425 2529 260 1338 2596 }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 1794 2632 540 520 2613 1338 2596 }
+            }
+            SAT_PRS_prestige_increase_2 = yes
+        }
+	}
+
+    SAT_PRS_railway_second = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_passage_defence_HQ
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            17 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            18 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            NOT = { has_war_with = PRS }
+            NOT = { has_war_with = YMM }
+            YMM = { NOT = { has_war_with = PRS } }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_4
+                days = 60
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 60
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            18 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = supply_node
+                    level = 1
+                    province = 1527
+                    instant_build = yes
+                }
+            }
+            17 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 2
+                # fallback = yes
+                path = { 2596 356 1668 5 2164 1527 684 459 1850 2213 }
+            }
+            SAT_PRS_prestige_increase = yes
+            SAT_YMM_prestige_increase = yes
+        }
+	}
+
+    SAT_YMM_railway_expansion = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_passage_defence_HQ
+        }
+
+		icon = generic_independence
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+            17 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            501 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            502 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            503 = { CONTROLLER = { OR = { tag = PRS tag = YMM tag = SAT is_subject_of = PRS is_subject_of = YMM is_subject_of = SAT } } }
+            # NOT = { has_war_with = PRS }
+            NOT = { has_war_with = YMM }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_3
+                days = 40
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+        days_remove = 40
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            501 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            502 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            503 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            17 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 174 2283 754 6659 6671 }
+            }
+            build_railway = {
+                level = 1
+                # fallback = yes
+                path = { 6679 6686 6670 6671 6673 6655 2572 2213 }
+            }
+            SAT_YMM_prestige_increase_2 = yes
+        }
+	}
+
+    UUG_railway_celebration = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_connect_the_underworld
+        }
+
+		icon = generic_independence
+
+		available = {
+			has_country_flag = SAT_YUG_railway_finished_flag_1
+            has_country_flag = SAT_YUG_railway_finished_flag_2
+            has_country_flag = SAT_YUG_railway_finished_flag_3
+            NOT = { has_war_with = YUG }
+		}
+
+        ai_will_do = {
+            factor = 10000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+        }
+
+        days_remove = 5
+        cost = 25
+
+        fire_only_once = yes
+
+        remove_effect = {
+            add_political_power = 100
+            SAT_YUG_prestige_increase_2 = yes
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
+	}   
+
+    SAT_lullaby_expand_control_center = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_the_lullaby
+        }
+
+		icon = generic_independence
+
+		available = {
+			has_tech = jianzaojishu146
+            OR = {
+                has_tech = linglishengchan140
+                has_tech = fangwaijieshengchan140
+            }
+            has_full_control_of_state = 75
+            SAT_no_civilian_factories_using = yes
+		}
+
+        ai_will_do = {
+            factor = 500
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_civil_industrial_cost_2
+                days = 75
+            }
+        }
+
+        days_remove = 75
+        cost = 50
+
+        fire_only_once = yes
+
+        remove_effect = {
+            75 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            SAT_civil_factory_used_clear = yes
+            add_tech_bonus = {
+                name = SAT_lullaby_expand_control_center
+                category = industrys
+                bonus = 0.25
+                uses = 1
+            }
+        }
+	}
+
+    SAT_artillery_casting_factory = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_the_lullaby
+        }
+
+		icon = generic_independence
+
+		available = {
+            has_tech = basic_machine_tools
+            has_tech = jinshu145
+            has_tech = mortar1
+            has_full_control_of_state = 99
+            SAT_no_military_spending_using = yes
+		}
+
+        ai_will_do = {
+            factor = 500
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_military_industrial_cost_2
+                days = 60
+            }
+        }
+
+        days_remove = 60
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            99 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+            }
+            SAT_military_spend_used_clear = yes
+            add_tech_bonus = {
+                name = SAT_artillery_casting_factory
+                category = artillery_tech
+                bonus = 0.25
+                uses = 1
+            }
+            add_ideas = { SAT_artillery_high_temperature }
+        }
+	}
+
+    SAT_power_matrix = {
+        visible = {
+            tag = SAT
+            has_completed_focus = SAT_the_lullaby
+        }
+
+		icon = generic_independence
+
+		available = {
+            has_tech = linglijiejie149
+            has_tech = lingqi145
+            OR = {
+                has_tech = ma_shield1
+                has_tech = sc_shield1
+            }
+            has_full_control_of_state = 99
+            SAT_no_military_spending_using = yes
+		}
+
+        ai_will_do = {
+            factor = 500
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                idea = SAT_military_industrial_cost_2
+                days = 60
+            }
+        }
+
+        days_remove = 60
+        cost = 75
+
+        fire_only_once = yes
+
+        remove_effect = {
+            99 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+            SAT_military_spend_used_clear = yes
+            add_tech_bonus = {
+                name = SAT_power_matrix
+                category = industrys
+                bonus = 0.25
+                uses = 1
+            }
+            add_ideas = { SAT_power_matrix_idea }
+        }
+	}
+
+    SAT_reinit_old_facilities_as_old_hell = {
+		icon = generic_political_actions
+        visible = {
+            has_completed_focus = SAT_reinit_old_facilities
+        }
+
+		available = {
+			SAT_no_civilian_factories_using = yes
+		}
+
+		state_target = yes
+
+		target_array = controlled_states
+
+        ai_will_do = {
+            factor = 2000
+            modifier = {
+                AND = {
+                    is_ai = yes
+                    NOT = { has_country_flag = SAT_ai_reformist_chosen_flag }
+                }
+                factor = 0.01
+            }
+        }
+
+		target_trigger = {
+			FROM = {
+				OR = {
+                    state = 114
+                    state = 92
+                    state = 58
+                    state = 33
+                    state = 39
+                    state = 561
+                    state = 540
+                    state = 47
+                    state = 18
+                }
+                CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } }
+				# is_fully_controlled_by = ROOT
+			}
+		}
+
+        targets = { 114 92 58 33 39 561 540 47 18 }
+
+        cost = 20
+        days_remove = 30
+		fire_only_once = yes
+
+		complete_effect = {
+            add_timed_idea = {
+                days = 30
+                idea = SAT_civil_industrial_cost_4 
+            }
+        }
+
+        remove_effect = {
+            SAT_civil_factory_used_clear = yes
+            FROM = { 
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        } 
+	}
+
+    SAT_stabilize_nuclear_fusion = {
+		icon = generic_political_actions
+
+		visible = {
+            has_completed_focus = SAT_remodel_the_reactor
+        }
+
+		icon = generic_political_actions
+
+		available = {
+            # has_country_flag = SAT_has_deal_with_MRY_flag
+		}
+
+        ai_will_do = {
+            factor = 5000
+        }
+
+		fire_only_once = yes
+
+		complete_effect = {
+            SAT = {
+                add_timed_idea = {
+                    days = 100
+                    idea = SAT_MRY_cooperation
+                }
+            }
+            MRY = {
+                add_timed_idea = {
+                    days = 100
+                    idea = SAT_MRY_cooperation_MRY
+                }
+            }
+        }
+
+        days_remove = ROOT.SAT_NUCLEAR_COMPLETE_DAYS
+
+        cost = 100
+
+        remove_effect = {
+            SAT_stabilize_nuclear_fusion = yes
+        }
+    }
+
+    SAT_nuclear_fusion_status_change = {
+		icon = generic_political_actions
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 80
+
+		fire_only_once = no
+		is_good = no
+		activation = {
+			OR = {
+                has_idea = SAT_nuclear_fusion_calm
+                has_idea = SAT_nuclear_fusion_normal
+                has_idea = SAT_nuclear_fusion_unstable
+                has_idea = SAT_nuclear_fusion_rage
+            }
+		}
+
+		cancel_trigger = {
+			NOT = { has_idea = SAT_nuclear_fusion_calm }
+            NOT = { has_idea = SAT_nuclear_fusion_normal }
+            NOT = { has_idea = SAT_nuclear_fusion_unstable }
+            NOT = { has_idea = SAT_nuclear_fusion_rage }
+		}
+
+		timeout_effect = {
+			if = {
+                limit = { has_idea = SAT_nuclear_fusion_calm }
+                random_list = {
+                    70 = {
+                        SAT_nuclear_fusion_crazy = yes
+                    }
+                    30 = {
+                        custom_effect_tooltip = SAT_Nothing_happens_tt
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_idea = SAT_nuclear_fusion_rage }
+                random_list = {
+                    70 = {
+                        SAT_nuclear_fusion_calm = yes
+                    }
+                    30 = {
+                        custom_effect_tooltip = SAT_Nothing_happens_tt
+                    }
+                }
+            }
+            else = {
+                random_list = {
+                    30 = {
+                        SAT_nuclear_fusion_calm = yes
+                    }
+                    40 = {
+                        custom_effect_tooltip = SAT_Nothing_happens_tt
+                    }
+                    30 = {
+                        SAT_nuclear_fusion_crazy = yes
+                    }
+                }
+            }
+		}
+    }
+
+}
+
+SAT_Problem_of_Ghosts = {
+    SAT_assimilate_ghost = {
+		icon = generic_political_actions
+
+		visible = {
+            has_country_flag = SAT_received_YKR_letter_flag
+            check_variable = {
+                var = ROOT.SAT_GHOST_IMMIGRANT
+                value = 20
+                compare = less_than
+            }
+        }
+
+		icon = generic_independence
+
+		available = {
+            # has_war_with = AOO
+            is_in_faction = no
+            NOT = { has_idea = SAT_UUG_unrest_plus_1 }
+            #OR = {
+                #AND = {
+                #    UUG = { exists = yes }
+                #    UUG = { is_subject_of = SAT }  
+                #}
+                #any_state = {
+                #    ST_race_is_Ghost = yes
+                #    CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } }
+                #    is_on_continent = Underground
+                #}
+                # OR = {
+                #     39 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     71 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     58 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     50 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     55 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     54 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                #     561 = { AND = { ST_race_is_Ghost = yes CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } } } }
+                # }
+            #}
+		}
+
+        ai_will_do = {
+            factor = 5000
+            modifier = {
+                OR = {
+                    has_idea = SAT_UUG_unrest
+                    has_idea = SAT_UUG_unrest_plus
+                    has_idea = SAT_UUG_unrest_plus_1
+                }
+                factor = 0
+            }
+            modifier = {
+                AND = {
+                    is_ai = yes
+                    has_country_flag = SAT_ai_isolationist_chosen_flag
+                }
+                factor = 0
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            # add_war_support = -0.05
+        }
+
+        days_remove = 30
+        cost = 25
+
+        remove_effect = {
+            SAT_Ghost_assimilate_increase = yes
+            SAT_UUG_unrest_increase = yes
+            if = {
+                limit = { 
+                    UUG = { exists = yes }
+                    UUG = { is_subject_of = SAT }  
+                }
+                UUG = {
+                    set_temp_variable = { random_pop = rnd }
+                    multiply_temp_variable = { random_pop = 50000 }
+                    add_manpower = 30000
+                }
+                else = {
+                    random_state = {
+                        limit = {
+                            ST_race_is_Ghost = yes
+                            CONTROLLER = { OR = { tag = SAT is_subject_of = SAT } }
+                            is_on_continent = Underground
+                        }
+                        set_temp_variable = { random_pop = rnd }
+                        multiply_temp_variable = { random_pop = 50000 }
+                        add_manpower = 25000
+                    }
+                }
+            }
+        }
+	}
+
+    SAT_assimilate_ghost_tooltip = {
+		icon = generic_political_actions
+        visible = {
+            has_country_flag = SAT_received_YKR_letter_flag
+            check_variable = {
+                var = ROOT.SAT_GHOST_IMMIGRANT
+                value = 21
+                compare = less_than
+            }
+        }
+		available = {
+			always = no
+		}
+
+	}
+
+    SAT_ghost_unrest_level_down = {
+		icon = generic_political_actions
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 90
+
+		fire_only_once = no
+		is_good = yes
+		activation = {
+			OR = {
+                has_idea = SAT_UUG_unrest_plus_1
+                has_idea = SAT_UUG_unrest_plus
+                has_idea = SAT_UUG_unrest
+                has_idea = SAT_UUG_unrest_2
+                has_idea = SAT_UUG_unrest_3
+            }
+		}
+
+		cancel_trigger = {
+			NOT = { has_idea = SAT_UUG_unrest_plus_1 }
+            NOT = { has_idea = SAT_UUG_unrest_plus }
+            NOT = { has_idea = SAT_UUG_unrest }
+            NOT = { has_idea = SAT_UUG_unrest_2 }
+            NOT = { has_idea = SAT_UUG_unrest_3 }
+		}
+
+		timeout_effect = {
+			SAT_UUG_unrest_reduce = yes
+		}
+	}
+
+    SAT_talk_with_ghost = {
+		icon = generic_political_actions
+
+		visible = {
+            has_completed_focus = SAT_try_to_talk_with_ghost
+            NOT = { has_completed_focus = SAT_the_acknowledgement_of_yukari }
+        }
+
+		available = {
+            has_active_mission = SAT_ghost_unrest_level_down
+		}
+
+        ai_will_do = {
+            factor = 5000
+            modifier = {
+                AND = {
+                    is_ai = yes
+                    has_country_flag = SAT_ai_youkaism_chosen_flag
+                }
+                factor = 0
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            add_popularity = {
+                popularity = 0.025
+                ideology = qinwai
+            }
+            add_stability = 0.025
+            # add_war_support = -0.05
+        }
+
+        days_remove = 5
+        days_re_enable = 15
+        cost = 30
+
+        remove_effect = {
+            add_days_mission_timeout = {
+                mission = SAT_ghost_unrest_level_down
+                days = -40
+            }
+        }
+    }
+
+
+    SAT_cleanse_ghost = {
+		icon = generic_political_actions
+
+		visible = {
+            has_completed_focus = SAT_anti_ghost_weapons
+            NOT = { has_completed_focus = SAT_proclaim_our_past_role }
+        }
+
+		available = {
+            has_active_mission = SAT_ghost_unrest_level_down
+		}
+
+        ai_will_do = {
+            factor = 5000
+            modifier = {
+                AND = {
+                    is_ai = yes
+                    has_country_flag = SAT_ai_reformist_chosen_flag
+                }
+                factor = 0
+            }
+        }
+
+		fire_only_once = no
+
+		complete_effect = {
+            add_popularity = {
+                popularity = 0.025
+                ideology = oldorder
+            }
+            army_experience = 5
+            # add_war_support = -0.05
+        }
+
+        days_remove = 5
+        days_re_enable = 15
+        cost = 20
+
+        remove_effect = {
+            add_days_mission_timeout = {
+                mission = SAT_ghost_unrest_level_down
+                days = -40
+            }
+            if = {
+                limit = { UUG = { exists = yes is_subject_of = ROOT } }
+                set_temp_variable = { random_pop = rnd }
+                multiply_temp_variable = { random_pop = 8000 }
+                multiply_temp_variable = { random_pop = -1 }
+                add_manpower = random_pop
+            }
+        }
+    }
+
+}

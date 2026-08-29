@@ -108,9 +108,11 @@ ideas = {
 			}
 			equipment_bonus = {
 				gun_a = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 				mortar_a = {
+					instant = yes
 					build_cost_ic = -0.1
 				}
 			}

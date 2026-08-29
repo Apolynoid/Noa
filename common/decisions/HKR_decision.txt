@@ -1,0 +1,79 @@
+HKR_category = {
+    HKR_ershoumingong = {
+        visible = {
+            tag = HKR
+            has_country_flag = HKR_ershoumingong
+        }
+        available = {
+            num_of_factories < 35
+            # has_idea = TEG_jianshaozhengbing_idea
+        }
+
+        days_remove = 182
+        fire_only_once = no
+
+        cost = hkr_mingong_cost
+
+
+        complete_effect = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            add_to_variable = {
+                hkr_mingong_cost = 20
+            }
+            custom_effect_tooltip = zujie_tt
+        }
+        remove_effect = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = -2
+            }
+        }
+
+        ai_will_do = {
+            factor = 1000
+        }
+
+    }
+
+    HKR_ershoujungong = {
+        visible = {
+            tag = HKR
+            has_country_flag = HKR_ershoujungong
+        }
+        available = {
+            num_of_factories < 35
+            # has_idea = TEG_jianshaozhengbing_idea
+        }
+
+        days_remove = 182
+        fire_only_once = no
+
+        cost = hkr_jungong_cost
+
+
+        complete_effect = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
+            add_to_variable = {
+                hkr_jungong_cost = 20
+            }
+            custom_effect_tooltip = zujie_tt
+        }
+        remove_effect = {
+            add_offsite_building = {
+                type = arms_factory
+                level = -2
+            }
+        }
+
+        ai_will_do = {
+            factor = 1000
+        }
+
+    }
+}

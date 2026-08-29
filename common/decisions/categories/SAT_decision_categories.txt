@@ -1,0 +1,71 @@
+SAT_Underground_Administration = {
+
+	icon = generic_political_actions
+
+	priority = 90
+	visible_when_empty = yes
+  
+  	allowed = {
+    	original_tag = SAT
+	}
+
+	visible = {
+	    original_tag = SAT
+	    is_subject = no
+	}
+}
+
+SAT_Foreign_Affairs = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = SAT
+	}
+
+	visible = {
+	    original_tag = SAT
+		OR = {
+			has_completed_focus = SAT_stable_our_rudder
+			has_completed_focus = SAT_chaos_of_Higan
+		}
+	}
+}
+
+SAT_Underground_Construction = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = SAT
+	}
+
+	visible = {
+	    original_tag = SAT
+		has_completed_focus = SAT_dive_in_the_library
+	}
+}
+
+SAT_Problem_of_Ghosts = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = SAT
+	}
+	visible_when_empty = yes
+
+	visible = {
+	    original_tag = SAT
+		# has_country_flag = SAT_received_YKR_letter_flag
+
+		# has_completed_focus = SAT_start_our_agenda
+		### TODO: Talk to Ghost
+	}
+}

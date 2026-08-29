@@ -189,7 +189,7 @@ focus_tree = {
   # 加强基层组织建设
   focus = {
     id = SCA_puppet_jia_qiang_ji_ceng_zu_zhi_jian_she
-    icon = unknown
+    icon = GFX_focus_generic_improve_the_administration_2
     cost = 7
     x = 0
     y = 1
@@ -321,7 +321,7 @@ focus_tree = {
   # 重新审视帝国纽带
   focus = {
     id = SCA_puppet_chong_xin_shen_shi_di_guo_niu_dai
-    icon = unknown
+    icon = SCA_focus_sphere_of_influence
     cost = 7
     x = 0
     y = 4
