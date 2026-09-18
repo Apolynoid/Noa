@@ -1,0 +1,83 @@
+﻿l_english:
+# 政治线 political
+# 内战部分 civil war
+NAR_shu_yu_ruo_zhe_de_jun_dui:0 "An Army of the Weak"
+NAR_shu_yu_ruo_zhe_de_jun_dui_desc:0 ""
+NAR_tong_yi_zhi_hui_xi_tong:0 "Unified Command System"
+NAR_tong_yi_zhi_hui_xi_tong_desc:0 ""
+NAR_yao_jing_de_ling_li:0 "Fairy Spirit Power"
+NAR_yao_jing_de_ling_li_desc:0 ""
+NAR_lian_he_ti_sheng_chan_neng_li:0 "Union Production Capacity"
+NAR_lian_he_ti_sheng_chan_neng_li_desc:0 ""
+NAR_yao_guai_de_zhan_dou_li:0 "Youkai Combat Power"
+NAR_yao_guai_de_zhan_dou_li_desc:0 ""
+NAR_jie_chu_ji_jin_tong_qing_zhe:0 "Contact Radical Sympathizers"
+NAR_jie_chu_ji_jin_tong_qing_zhe_desc:0 ""
+NAR_qing_qiu_wai_bu_yuan_zhu:0 "Request Outside Aid"
+NAR_qing_qiu_wai_bu_yuan_zhu_desc:0 ""
+NAR_zhun_bei_zui_hou_yi_ji:0 "Prepare the Final Blow"
+NAR_zhun_bei_zui_hou_yi_ji_desc:0 ""
+NAR_yu_huo_chong_sheng:0 "Reborn from the Ashes"
+NAR_yu_huo_chong_sheng_desc:0 ""
+NAR_sheng_er_ping_deng:0 "Born Equal"
+NAR_sheng_er_ping_deng_desc:0 ""
+NAR_she_hui_hua_sheng_chan:0 "Socialized Production"
+NAR_she_hui_hua_sheng_chan_desc:0 ""
+NAR_chong_jian_min_bing_zu_zhi:0 "Rebuild the Militia"
+NAR_chong_jian_min_bing_zu_zhi_desc:0 ""
+NAR_mo_fa_zhi_sen_ke_xue_yuan:0 "Magic Forest Academy of Sciences"
+NAR_mo_fa_zhi_sen_ke_xue_yuan_desc:0 ""
+NAR_zhan_hou_shen_pan:0 "Post-War Trials"
+NAR_zhan_hou_shen_pan_desc:0 ""
+NAR_qiang_hua_lian_he_ti_yi_hui:0 "Strengthen the Union Council"
+NAR_qiang_hua_lian_he_ti_yi_hui_desc:0 ""
+NAR_ge_ming_de_lian_he_ti:0 "Revolutionary Union"
+NAR_ge_ming_de_lian_he_ti_desc:0 ""
+NAR_ge_ming_wai_jiao:0 "Revolutionary Diplomacy"
+NAR_ge_ming_wai_jiao_desc:0 ""
+NAR_jia_ru_ge_ming_yun_dong:0 "Join the Revolutionary Movement"
+NAR_jia_ru_ge_ming_yun_dong_desc:0 ""
+NAR_du_li_zi_zhu:0 "Independent Diplomacy"
+NAR_du_li_zi_zhu_desc:0 ""
+NAR_fen_sui_di_guo:0 "Shatter the Empire"
+NAR_fen_sui_di_guo_desc:0 ""
+NAR_xiao_chu_shou_dao_wei_xie:0 "Eliminate the Kemonomichi Threat"
+NAR_xiao_chu_shou_dao_wei_xie_desc:0 ""
+NAR_ge_ming_xuan_chuan:0 "Revolutionary Propaganda"
+NAR_ge_ming_xuan_chuan_desc:0 ""
+NAR_wu_zhuang_qun_zhong:0 "Arm the Masses"
+NAR_wu_zhuang_qun_zhong_desc:0 ""
+
+#idea
+nar_she_hui_hua_sheng_chan_idea:0 "Socialized Production"
+nar_she_hui_hua_sheng_chan_idea_desc:0 ""
+nar_min_bing_idea:0 "Militia"
+nar_min_bing_idea_desc:0 "The militia proved its worth in the civil war. To safeguard the security of the Magic Forest, we should maintain this form of organization."
+nar_lian_he_ti_yi_hui_idea:0 "Union Council"
+nar_lian_he_ti_yi_hui_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_a_idea:0 "Union Council"
+nar_lian_he_ti_yi_hui_a_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_b_idea:0 "Union Council"
+nar_lian_he_ti_yi_hui_b_idea_desc:0 ""
+nar_lian_he_ti_yi_hui_c_idea:0 "Union Council"
+nar_lian_he_ti_yi_hui_c_idea_desc:0 ""
+
+#op
+NAR_ge_ming_wai_jiao_radicalist_op:0 "Revolutionary Diplomacy"
+NAR_ge_ming_wai_jiao_non_radicalist_op:0 "Revolutionary Diplomacy"
+NAR_tuan_jie_mo_fa_dao_ju_op:0 "Unite the Magical Tools"
+
+#tt
+
+
+ #decision
+
+
+# flag
+NAR_ask_SEJ_for_help_flag:0 "Ask [SEJ.GetName] for Help"
+NAR_ask_CIR_for_help_flag:0 "Ask [CIR.GetName] for Help"
+NAR_ask_TKM_for_help_flag:0 "Ask [TKM.GetName] for Help"
+NAR_request_accepted_flag:0 "They Accepted the Request"
+NAR_request_denied_flag:0 "They Denied the Request"
+
+ #other

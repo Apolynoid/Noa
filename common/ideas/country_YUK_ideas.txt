@@ -186,7 +186,7 @@ ideas = {
 
 		# 花田势力圈
 		YUK_hua_tian_shi_li_quan_idea = {
-	    	picture = SCA_Puppet_scarlet_sphere
+	    	picture = YUK_flowerfield_sphere
 			cancel = {
 				NOT = {
 					is_puppet_of = YUK

@@ -6,4 +6,5 @@ MRY_shou_shi_xin_yang_idea = {
 	war_support_factor = MRY_faith_bonus_general
 	production_speed_buildings_factor = MRY_faith_bonus_building
 	army_attack_factor = MRY_faith_bonus_military
+	terrain_penalty_reduction = MRY_faith_bonus_military
 }

@@ -19,8 +19,9 @@ state={
 				infrastructure =7
 				industrial_complex = 10
 				arms_factory = 3
-				
-
+				2027 = {
+					nuclear_facility = 1
+				}
 			}
 
 		}

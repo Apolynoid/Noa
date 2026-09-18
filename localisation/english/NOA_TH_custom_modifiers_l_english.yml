@@ -1,0 +1,19 @@
+﻿l_english:
+ scientific_weapons_research:0 "Scientific Weapons Research Speed"
+ scientific_weapons:0 "Scientific Weapons"
+ magical_weapons_research:0 "Magical Weapons Research Speed"
+ magical_weapons:0 "Magical Weapons"
+ combined_weapons_research:0 "Combined Weapons Research Speed"
+ combined_weapons:0 "Combined Weapons"
+
+ transportation:0 "Transport Vehicles"
+ transportation_research:0 "Transport Vehicles Research Speed"
+
+ ####系统修正
+  ST_race_penalty_Fairy_factor:0 "§Y$Fairy$§! Uncooperative Race Penalty"
+  CO_auto_core_Fairy:0 "Provinces of the §Y$Fairy$§! race will automatically gain cores"
+
+
+ 
+
+ 

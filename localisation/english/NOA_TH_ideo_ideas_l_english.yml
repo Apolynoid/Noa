@@ -1,0 +1,17 @@
+﻿l_english:
+ gekokujyo_spirit:0 "Gekokujou Spirit"
+
+ political_power_focus:0 "Focus on Power"
+ war_propaganda_focus:0 "Focus on Propaganda"
+ intel_focus:0 "Focus on Intelligence"
+
+ army_exp_focus:0 "Focus on Experience"
+ logistic_focus:0 "Focus on Logistics"
+ military_planning_focus:0 "Focus on Planning"
+ army_mobilisation_focus:0 "Focus on Mobility"
+
+ consumer_goods_focus:0 "Focus on Welfare"
+ factory_output_focus:0 "Focus on Output"
+ factory_focus:0 "Focus on Industry"
+
+ gain_1_civ_and_2_mil_tt:0 "§GGain§! 1 civilian factory and 2 military factories"

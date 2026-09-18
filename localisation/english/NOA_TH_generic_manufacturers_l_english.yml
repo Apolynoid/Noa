@@ -1,0 +1,14 @@
+﻿l_english:
+generic_materiel_manufacturer_idea:0 "Generic Materiel Manufacturer"
+generic_science_materiel_manufacturer_idea:0 "Scientific Materiel Manufacturer"
+generic_magic_materiel_manufacturer_idea:0 "Magical Materiel Manufacturer"
+generic_armor_manufacturer_idea:0 "Generic Armor Manufacturer"
+generic_aircraft_manufacturer_idea:0 "Generic Aircraft Manufacturer"
+
+generic_materiel_manufacturer_trait:0 "Generic Materiel Manufacturer"
+generic_armor_manufacturer_trait:0 "Generic Armor Manufacturer"
+generic_aircraft_manufacturer_trait:0 "Generic Aircraft Manufacturer"
+
+standardized_production_material_magic_trait:0 "Standardized Materiel Manufacturer"
+quality_production_material_science_trait:0 "Quality Materiel Manufacturer"
+quality_production_material_science_improved_trait:0 "$quality_production_material_science_trait$"

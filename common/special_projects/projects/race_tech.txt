@@ -102,6 +102,115 @@ sp_race_aggressive_nature = {
 	}
 }
 
+# 妖怪
+sp_race_special_operation = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_special_operation
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = Youkai
+				has_country_flag = can_research_youkai_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = Youkai
+				has_country_flag = can_research_youkai_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_te_zhong_zuo_zhan_idea
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
+# 天狗
+sp_race_tengu_kamikaze = {
+	specialization = specialization_race	
+	icon = GFX_sp_race_tengu_kamikaze
+	complexity = sp_complexity.medium 
+
+	project_tags = sp_tag_race
+
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			OR = {
+				has_idea = Tenggu
+				has_country_flag = can_research_tengu_sp_flag
+			}
+		}
+	}
+	available = { 
+		FROM = {
+			OR = {
+				has_idea = Tenggu
+				has_country_flag = can_research_tengu_sp_flag
+			}
+		}
+	}
+	
+	resource_cost = {
+		resources = { }
+	}
+
+	prototype_time = sp_time.prototype.medium	
+	
+	project_output = {
+		country_effects = {
+			add_ideas = sp_tian_gou_shen_feng_idea
+			hidden_effect = {
+				set_technology = {
+					
+				}
+			}
+		}
+		facility_state_effects = {
+			
+		}
+	}
+
+	generic_prototype_rewards = {
+		
+	}
+
+	unique_prototype_rewards = {
+		
+	}
+}
+
 # 神明
 sp_race_deification = {
 	specialization = specialization_race	

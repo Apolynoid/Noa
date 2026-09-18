@@ -51,6 +51,7 @@
     add_ideas = {
         God
         Town
+        low_economic_mobilisation
         hawk1
         close2
         free_magic

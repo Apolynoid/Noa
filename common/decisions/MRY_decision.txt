@@ -115,4 +115,52 @@ MRY_shou_shi_xin_yang = {
 			}
 		}
 	}
+
+	# 显生造营
+	MRY_xian_sheng_zao_ying = {
+		icon = generic_factory
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allowed = {
+			original_tag = MRY
+		}
+
+		visible = {
+			has_completed_focus = MRY_shou_shi_jian_she_qi_ji
+		}
+
+		days_remove = 60
+		days_re_enable = 60
+		custom_cost_text = MRY_10_faith
+
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MRY_target_faith = 10.0
+			}
+            MRY_has__MRY_target_faith__faith = yes
+        }
+
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = {
+					MRY_faith_lost = 10
+				}
+				MRY_lose__MRY_faith_lost__faith = yes
+			}
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
 }

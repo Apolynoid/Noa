@@ -1,0 +1,30 @@
+﻿l_english:
+ generic_strengthen_cooperation_op:0 "Strengthen Cooperation"
+
+ if_they_accept_tt:0 "If they accept:"
+ else_tt:0 "Otherwise:"
+ current_effect_tt:0 "Current effect:"
+ army_locked_tt:0 "§RCannot train or disband units, or create or modify templates§!"
+ disband_militia_tt:0 "§RDisband§! all militia units"
+ auto_complete_tt:0 "§GThis focus will complete automatically with progress§!"
+ occupation_law_introduce_tt:0 "Beyond its numerical advantages, enacting the §Y$integration_law$§! law in a fully occupied, claimed state with over 50 compliance will automatically grant you a core on it."
+
+ decision_fire_once_tt:0 "This decision can only be taken §Yonce§!!"
+
+ on_select_tt:0 "On selection:"
+ on_complete_tt:0 "On completion:"
+ on_war_tt:0 "When at war:"
+
+ after_civil_war_begins_tt:0 "After the civil war begins:"
+
+ already_highest_tt:0 "Already at maximum; cannot be increased further."
+ already_lowest_tt:0 "Already at minimum; cannot be decreased further."
+
+ decision_cost_increase_20_tt:0 "Each time this decision is selected, its cost §Rincreases§! by £pol_power 20"
+
+ decreased_force_attack_cost_tt:0 "Greatly reduces the command power cost of §Y$ABILITY_FORCE_ATTACK$§!"
+ decreased_last_stand_cost_tt:0 "Greatly reduces the command power cost of §Y$ABILITY_LAST_STAND$§!"
+
+ clr_world_limit_tt:0 "Can set the scale to §YWorld§!"
+
+ bug_report_tt:0 "If you see this message, the mod has a bug. Please report it to the dev team. (Documents/Paradox Interactive/Hearts of Iron IV/logs/game.log will be very helpful for the team's debugging.)"

@@ -1,0 +1,637 @@
+power_defines = {
+	set_variable = { global.PO_lowest = 0}
+	set_variable = { global.PO_highest = 100}
+
+	set_variable = { global.PO_low = 33}
+	set_variable = { global.PO_high = 66}
+
+	set_variable = { global.PO_human_cons = 10}
+	set_variable = { global.PO_ghost_cons = 15}
+	set_variable = { global.PO_youkai_cons = 30}
+	set_variable = { global.PO_beast_cons = 20}
+	set_variable = { global.PO_tenggu_cons = 20}
+	set_variable = { global.PO_kappa_cons = 20}
+	set_variable = { global.PO_magician_cons = 15}
+	set_variable = { global.PO_god_cons = 30}
+	set_variable = { global.PO_pri_youkai_cons = 25}
+	set_variable = { global.PO_fairy_cons = 30}
+
+	set_variable = { global.PO_contiG_ratio = 5}#gensokyo
+	set_variable = { global.PO_contiG_cons = 0}#gensokyo
+	set_variable = { global.PO_contiN_ratio = 5}#not gensokyo
+	set_variable = { global.PO_contiN_cons = 40}#not gensokyo
+	set_variable = { global.PO_sage_ratio = 10} #sage
+	set_variable = { global.PO_sage_cons = 25}#sage
+	
+	set_variable = { global.PO_view0_up_ratio = 4 }
+	set_variable = { global.PO_view0_low_ratio = -2.5 }
+	set_variable = { global.PO_view1_up_ratio = 1 }
+	set_variable = { global.PO_view1_low_ratio = 1 }
+	set_variable = { global.PO_view2_up_ratio = 0.5}#无负面
+	set_variable = { global.PO_view2_low_ratio = 2}#无负面
+
+	set_variable = { global.PO_view0_cons = 0 }
+	set_variable = { global.PO_view1_cons = 20}
+	set_variable = { global.PO_view2_cons = 40}
+
+	set_variable = { global.PO_attack_defence_ratio = 0.1}
+	set_variable = { global.PO_org_recover_ratio = 0.1}
+
+	set_variable = { global.PO_research_ratio = 0.2}
+	set_variable = { global.PO_conscription_ratio = 0.1}
+
+	set_variable = { global.PO_ML_free_magic_up = 0.6}
+	set_variable = { global.PO_ML_free_magic_low = -1}
+
+	set_variable = { global.PO_ML_sc_rule_up = 0}
+	set_variable = { global.PO_ML_sc_rule_low = -0.5}
+
+	set_variable = { global.PO_ML_limit_magic_up = -0.35}
+	set_variable = { global.PO_ML_limit_magic_low = 0}
+
+	set_variable = { global.PO_ML_forbidden_magic_up = -0.7}
+	set_variable = { global.PO_ML_forbidden_magic_low = 0.75}
+}
+
+power_ratio_seton = {
+	####race ratio
+	if = {
+		limit = {
+			has_idea = Human
+		}
+		set_variable = { PO_race_cons = global.PO_human_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Ghost
+		}
+		set_variable = { PO_race_cons = global.PO_ghost_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Youkai
+		}
+		set_variable = { PO_race_cons = global.PO_youkai_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Tenggu
+		}
+		set_variable = { PO_race_cons = global.PO_tenggu_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Kappa
+		}
+		set_variable = { PO_race_cons = global.PO_kappa_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Magician
+		}
+		set_variable = { PO_race_cons = global.PO_magician_cons}
+	}
+	if = {
+		limit = {
+			has_idea = God
+		}
+		set_variable = { PO_race_cons = global.PO_god_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Pri_youkai
+		}
+		set_variable = { PO_race_cons = global.PO_pri_youkai_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Fairy
+		}
+		set_variable = { PO_race_cons = global.PO_fairy_cons}
+	}
+	if = {
+		limit = {
+			has_idea = Beast
+		}
+		set_variable = { PO_race_cons = global.PO_beast_cons}
+	}
+	####outlook cons
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 0}
+		}
+		set_variable = { PO_view_cons = global.PO_view0_cons}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 1}
+		}
+		set_variable = { PO_view_cons = global.PO_view1_cons}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 2}
+		}
+		set_variable = { PO_view_cons = global.PO_view2_cons}
+	}
+
+	####continent
+	if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+		set_variable = { PO_conti_ratio = global.PO_contiG_ratio}
+		set_variable = { PO_conti_cons = global.PO_contiG_cons}
+	}
+	if = {
+		limit = {
+			capital_scope = {
+				not = {
+					is_on_continent = Gensokyo
+				}
+			}
+		}
+		set_variable = { PO_conti_ratio = global.PO_contiN_ratio}
+		set_variable = { PO_conti_cons = global.PO_contiN_cons}
+
+	}
+	if = {
+		limit = {
+			has_idea = gensoukyo_creator_idea
+		}
+		set_variable = { PO_conti_ratio = global.PO_sage_ratio}
+		set_variable = { PO_conti_cons = global.PO_sage_cons}
+	}
+}
+
+power_global_value_generator = {
+	if = {
+		limit = {
+			not = {
+				has_global_flag = PO_changer
+			}
+		}
+
+		add_to_variable = {global.PO_change_times = 1}
+		if = {
+			limit = {
+				check_variable = { global.PO_change_times = 3}
+				check_variable = { global.PO_gensokyo_p > 0 }
+			}
+			power_global_value_range_changer = yes
+			set_variable = {global.PO_change_times = 0}
+		}
+
+		set_global_flag = {
+			flag = PO_changer
+			value = 1
+			days = 60
+		}
+		set_variable = { global.PO_random = random}
+	}
+}
+
+power_daily_changer = {
+	
+	#灵力的构成组合
+	#种族
+	set_variable = { PO_raw = PO_race_cons } 
+
+	#世界观
+	add_to_variable = { PO_raw = PO_view_cons } 
+
+	#大陆
+	set_variable = { PO_conti_p = 0}
+	add_to_variable = { PO_conti_p = global.PO_random}
+	multiply_variable = { PO_conti_p = PO_conti_ratio}
+	add_to_variable = { PO_conti_p = PO_conti_cons}
+	if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			not = { check_variable = { global.PO_gensokyo_p < 0 } }
+		}
+		add_to_variable = { PO_conti_p = global.PO_gensokyo_p}
+	}
+	add_to_variable = { PO_raw = PO_conti_p }
+
+	#灵气转换
+	add_to_variable = { PO_raw = POconvert_power }
+
+	#妖精种族变化
+	add_to_variable = {	PO_raw = FAPO_current_PO } #只有妖精有
+
+	#除额外加成的总和
+	set_variable = { PO_average_mp = PO_raw}
+	
+
+	##每日常数变化###
+	set_variable = { PO_power_daily_change = 0 }
+	add_to_variable = {	PO_power_daily_change = modifier@PO_daily_gain }
+	add_to_variable = { PO_mp_add = PO_power_daily_change }
+	#####
+
+	add_to_variable = { PO_average_mp = PO_mp_add}
+	clamp_variable = { 
+		var = PO_average_mp
+		min = global.PO_lowest
+		max = global.PO_highest
+	}
+
+	set_temp_variable = { PO_cal_mp = PO_average_mp }
+	add_to_temp_variable = { PO_cal_mp = -50}
+	multiply_temp_variable = { PO_cal_mp = 0.005}
+
+	set_variable = { PO_attack_defence = PO_cal_mp}
+	set_variable = { PO_org_recover = PO_cal_mp}
+	set_variable = { PO_conscription = PO_cal_mp}
+	set_variable = { PO_research = PO_cal_mp}
+
+	multiply_variable = { PO_attack_defence = global.PO_attack_defence_ratio}
+	multiply_variable = { PO_org_recover = global.PO_org_recover_ratio}
+	multiply_variable = { PO_conscription = global.PO_conscription_ratio}
+	multiply_variable = { PO_research = global.PO_research_ratio}
+
+
+	#base
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 0}
+		}
+		multiply_variable = { PO_attack_defence = global.PO_view0_up_ratio}
+		multiply_variable = { PO_org_recover = global.PO_view0_up_ratio}
+
+		multiply_variable = { PO_conscription = global.PO_view0_low_ratio}
+		multiply_variable = { PO_research = global.PO_view0_low_ratio}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 1}
+		}
+		multiply_variable = { PO_attack_defence = global.PO_view1_up_ratio }
+		multiply_variable = { PO_org_recover = global.PO_view1_up_ratio }
+
+		multiply_variable = { PO_conscription = global.PO_view1_low_ratio }
+		multiply_variable = { PO_research = global.PO_view1_low_ratio }
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 2}
+			check_variable = { PO_cal_mp > 0}
+		}
+		multiply_variable = { PO_attack_defence = global.PO_view2_up_ratio }
+		multiply_variable = { PO_org_recover = global.PO_view2_up_ratio }
+
+		multiply_variable = { PO_conscription = global.PO_view2_low_ratio }
+		multiply_variable = { PO_research = global.PO_view2_low_ratio }
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 2}
+			check_variable = { PO_cal_mp < 0}
+		}
+		multiply_variable = { PO_attack_defence = 0}
+		multiply_variable = { PO_conscription = 0}
+		multiply_variable = { PO_org_recover = 0}
+		multiply_variable = { PO_research = 0}
+	}
+
+	####灵力的影响基础百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_influence_factor }	
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	multiply_variable = { PO_attack_defence = percentage }
+	multiply_variable = { PO_org_recover = percentage }
+	multiply_variable = { PO_conscription = percentage }
+	multiply_variable = { PO_research = percentage }
+	####灵力对于战斗力（部队组织度和攻防）影响的基础百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_battle_influence_factor }	
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	multiply_variable = { PO_attack_defence = percentage }
+	multiply_variable = { PO_org_recover = percentage }
+	####灵力对于人文（研究速度和征兆比）影响的基础百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_humanism_influence_factor }	
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	multiply_variable = { PO_conscription = percentage }
+	multiply_variable = { PO_research = percentage }
+
+	####正面灵力全局修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_good_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_attack_defence > 0 }
+		}
+		multiply_variable = { PO_attack_defence = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_org_recover > 0 }
+		}
+		multiply_variable = { PO_org_recover = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_conscription > 0 }
+		}
+		multiply_variable = { PO_conscription = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_research > 0 }
+		}
+		multiply_variable = { PO_research = percentage }
+	}
+	####灵力对于战斗力（部队组织度和攻防）的#正面#的百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_good_battle_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_attack_defence > 0 }
+		}
+		multiply_variable = { PO_attack_defence = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_org_recover > 0 }
+		}
+		multiply_variable = { PO_org_recover = percentage }
+	}
+	####灵力对于人文（研究速度和征兆比）的#正面#的百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_good_humanism_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_conscription > 0 }
+		}
+		multiply_variable = { PO_conscription = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_research > 0 }
+		}
+		multiply_variable = { PO_research = percentage }
+	}
+
+	####负面灵力全局修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_bad_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_attack_defence < 0 }
+		}
+		multiply_variable = { PO_attack_defence = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_org_recover < 0 }
+		}
+		multiply_variable = { PO_org_recover = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_conscription < 0 }
+		}
+		multiply_variable = { PO_conscription = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_research < 0 }
+		}
+		multiply_variable = { PO_research = percentage }
+	}
+	####灵力对于战斗力（部队组织度和攻防）的#负面#的百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_bad_battle_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_attack_defence < 0 }
+		}
+		multiply_variable = { PO_attack_defence = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_org_recover < 0 }
+		}
+		multiply_variable = { PO_org_recover = percentage }
+	}
+	####灵力对于人文（研究速度和征兆比）的#正面#的百分比修正
+	set_temp_variable = { percentage = 1 }
+	add_to_temp_variable = { percentage = modifier@PO_bad_humanism_influence_factor }
+	clamp_temp_variable = {
+		var = percentage
+		min = 0
+	}
+	if = {
+		limit = {
+			check_variable = { PO_conscription < 0 }
+		}
+		multiply_variable = { PO_conscription = percentage }
+	}
+	if = {
+		limit = {
+			check_variable = { PO_research < 0 }
+		}
+		multiply_variable = { PO_research = percentage }
+	}
+
+	####无负面影响修正
+	if = {
+		limit = {
+			check_variable = { modifier@PO_RULE_no_bad_influence > 0 } #灵力无负面影响
+		}
+		if = {
+			limit = {
+				check_variable = { PO_attack_defence < 0 }
+			}
+			set_variable = { PO_attack_defence = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { PO_conscription < 0 }
+			}
+			set_variable = { PO_conscription = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { PO_research < 0 }
+			}
+			set_variable = { PO_research = 0 }
+		}
+		if = {
+			limit = {
+				check_variable = { PO_org_recover < 0 }
+			}
+			set_variable = { PO_org_recover = 0 }
+		}
+	}
+}
+
+power_global_value_range_changer = {
+	if = {
+		limit = {
+			not = {
+				has_global_flag = not_ready
+			}
+		}
+		random_list = {
+			5 = {
+		        add_to_variable = { global.PO_gensokyo_p = -2}
+		        news_event = { id = gen.5 days = 2 }
+		    }
+		    5 = {
+		        add_to_variable = { global.PO_gensokyo_p = -1.6}
+		        news_event = { id = gen.5 days = 2 }
+		    }
+		    22 = {
+		        add_to_variable = { global.PO_gensokyo_p = -1.2}
+		    }
+		    22 = {
+		        add_to_variable = { global.PO_gensokyo_p = -1}
+		    }
+		    16 = {
+		        add_to_variable = { global.PO_gensokyo_p = -0.8}
+		    }
+		    15 = {
+		        add_to_variable = { global.PO_gensokyo_p = -0.4}
+		    }
+		    15 = {
+		        add_to_variable = { global.PO_gensokyo_p = -0.2}
+		    }
+		}
+	}
+	
+}
+
+PO_minus1 = {
+	custom_effect_tooltip = PO_d1_tt
+	add_to_variable = { PO_mp_add = -1}
+}
+PO_minus2 = {
+	custom_effect_tooltip = PO_d2_tt
+	add_to_variable = { PO_mp_add = -2}
+}
+PO_minus2.5 = {
+	custom_effect_tooltip = PO_d2.5_tt
+	add_to_variable = { PO_mp_add = -2.5}
+}
+PO_minus3 = {
+	custom_effect_tooltip = PO_d3_tt
+	add_to_variable = { PO_mp_add = -3}
+}
+PO_minus4 = {
+	custom_effect_tooltip = PO_d4_tt
+	add_to_variable = { PO_mp_add = -4}
+}
+PO_minus5 = {
+	custom_effect_tooltip = PO_d5_tt
+	add_to_variable = { PO_mp_add = -5}
+}
+PO_minus6 = {
+	custom_effect_tooltip = PO_d6_tt
+	add_to_variable = { PO_mp_add = -6}
+}
+PO_minus7 = {
+	custom_effect_tooltip = PO_d7_tt
+	add_to_variable = { PO_mp_add = -7}
+}
+PO_minus7.5 = {
+	custom_effect_tooltip = PO_d7.5_tt
+	add_to_variable = { PO_mp_add = -7.5}
+}
+PO_minus8 = {
+	custom_effect_tooltip = PO_d8_tt
+	add_to_variable = { PO_mp_add = -8}
+}
+PO_minus9 = {
+	custom_effect_tooltip = PO_d9_tt
+	add_to_variable = { PO_mp_add = -9}
+}
+PO_minus10 = {
+	custom_effect_tooltip = PO_d10_tt
+	add_to_variable = { PO_mp_add = -10}
+}
+
+PO_add1 = {
+	custom_effect_tooltip = PO_i1_tt
+	add_to_variable = { PO_mp_add = 1}
+}
+PO_add2 = {
+	custom_effect_tooltip = PO_i2_tt
+	add_to_variable = { PO_mp_add = 2}
+}
+PO_add2.5 = {
+	custom_effect_tooltip = PO_i2.5_tt
+	add_to_variable = { PO_mp_add = 2.5}
+}
+PO_add3 = {
+	custom_effect_tooltip = PO_i3_tt
+	add_to_variable = { PO_mp_add = 3}
+}
+PO_add4 = {
+	custom_effect_tooltip = PO_i4_tt
+	add_to_variable = { PO_mp_add = 4}
+}
+PO_add5 = {
+	custom_effect_tooltip = PO_i5_tt
+	add_to_variable = { PO_mp_add = 5}
+}
+PO_add6 = {
+	custom_effect_tooltip = PO_i6_tt
+	add_to_variable = { PO_mp_add = 6}
+}
+PO_add7 = {
+	custom_effect_tooltip = PO_i7_tt
+	add_to_variable = { PO_mp_add = 7}
+}
+PO_add7.5 = {
+	custom_effect_tooltip = PO_i7.5_tt
+	add_to_variable = { PO_mp_add = 7.5}
+}
+PO_add8 = {
+	custom_effect_tooltip = PO_i8_tt
+	add_to_variable = { PO_mp_add = 8}
+}
+PO_add9 = {
+	custom_effect_tooltip = PO_i9_tt
+	add_to_variable = { PO_mp_add = 9}
+}
+PO_add10 = {
+	custom_effect_tooltip = PO_i10_tt
+	add_to_variable = { PO_mp_add = 10}
+}

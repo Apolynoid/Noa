@@ -608,7 +608,7 @@ focus_tree = {
 	focus = {
 		id = TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
 		icon = GFX_focus_befriend_CFA
-		cost = 7
+		cost = 3
 		x = 2
 		y = 2
 

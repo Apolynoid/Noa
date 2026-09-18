@@ -114,6 +114,8 @@ guiTypes = {
 						format = "UPPER_LEFT"
 					}
 				}
+
+				
 				#################################
 				iconType = {
 					name = "docyards_output_icon"
@@ -1118,8 +1120,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "resources"
-			position = { x = 10 y = 50 }
-			size = { width = 100% height = 100% }
+			position = { x = 18 y = 50 }
+			size = { width = 462 height = 35 }
 
 			background = {
 				name = "Background"
@@ -4580,6 +4582,23 @@ guiTypes = {
 			}
 		}
 		
+		iconType = {
+			name ="dominance_icon"
+			spriteType = "GFX_naval_dominance_support_strip"
+			position = { x= 310 y = 8 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "dominance_value"
+			position = { x = 343 y = 8 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			maxWidth = 50
+			maxHeight = 20
+			format = left
+		}
+		
 		gridBoxType = {
 			name = "resources_grid"
 			position = { x = 376 y = 8 }
@@ -4843,9 +4862,9 @@ guiTypes = {
 		size = { width = 70 height = 30 }
 		clipping = no
 
-		background = {
-			name = "bg"
-			quadTextureSprite ="GFX_mini_tooltip"
+		buttonType = {
+			name = "button"
+			quadTextureSprite ="resource_item_background"
 		}
 
 		iconType = {
@@ -4854,10 +4873,11 @@ guiTypes = {
 			position = { x = 5 y = 5 }
 		}
 
-		buttonType = {
+		iconType = {
 			name = "icon"
 			position = { x=4 y=2 }
 			spriteType = "GFX_resources_strip"
+			alwaystransparent = yes
 		}
 		
 		instantTextboxType = {
@@ -4870,6 +4890,7 @@ guiTypes = {
 			maxHeight = 30
 			format = left
 			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
 		}	
 
 	}

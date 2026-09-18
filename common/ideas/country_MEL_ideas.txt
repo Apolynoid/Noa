@@ -91,7 +91,7 @@ ideas = {
 
 		# 国防预算增加
 		MEL_guo_fang_yu_suan_zeng_jia_idea = {
-			picture = yug_federal_defense_council
+			picture = YUG_federal_defense_council
 			modifier = {
 				production_speed_arms_factory_factor = 0.15
 			}

@@ -38,6 +38,7 @@
         type1_manpowerlv3
         Tribal
         Fairy
+        low_economic_mobilisation
         hawk1
         close2
         free_magic

@@ -292,6 +292,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		original_tag = TES
 		all_state = {
 			OR = {
 				NOT = {
@@ -307,6 +308,95 @@ country_event = {
 		custom_effect_tooltip = clr_world_limit_tt
 		hidden_effect = {
 			clr_country_flag = world_limit
+		}
+	}
+}
+
+# 强调交付标准
+country_event = {
+	id = tes.107
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		deactivate_shine_on_focus = TES_qiang_diao_jiao_fu_biao_zhun
+		complete_national_focus = {
+			focus = TES_qiang_diao_jiao_fu_biao_zhun
+			use_side_message = yes
+			originator_name = TES_celestial_army_command
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES_can_mou_bu_ren_shi_gai_ge
+				has_completed_focus = TES_che_huan_bu_chen_zhi_jun_guan
+			}
+			TES_activate_army_reborn = yes
+		}
+	}
+}
+
+# 参谋部人事改革
+country_event = {
+	id = tes.108
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		deactivate_shine_on_focus = TES_can_mou_bu_ren_shi_gai_ge
+		complete_national_focus = {
+			focus = TES_can_mou_bu_ren_shi_gai_ge
+			use_side_message = yes
+			originator_name = TES_celestial_army_command
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES_qiang_diao_jiao_fu_biao_zhun
+				has_completed_focus = TES_che_huan_bu_chen_zhi_jun_guan
+			}
+			TES_activate_army_reborn = yes
+		}
+	}
+}
+
+# 撤换不称职军官
+country_event = {
+	id = tes.109
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		deactivate_shine_on_focus = TES_che_huan_bu_chen_zhi_jun_guan
+		complete_national_focus = {
+			focus = TES_che_huan_bu_chen_zhi_jun_guan
+			use_side_message = yes
+			originator_name = TES_celestial_army_command
+		}
+		if = {
+			limit = {
+				has_completed_focus = TES_qiang_diao_jiao_fu_biao_zhun
+				has_completed_focus = TES_can_mou_bu_ren_shi_gai_ge
+			}
+			TES_activate_army_reborn = yes
+		}
+	}
+}
+
+# 军队重生
+country_event = {
+	id = tes.110
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		deactivate_shine_on_focus = TES_jun_dui_chong_sheng
+		complete_national_focus = {
+			focus = TES_jun_dui_chong_sheng
+			use_side_message = yes
+			originator_name = TES_celestial_army_command
 		}
 	}
 }

@@ -23,17 +23,10 @@ division_template = {
 		ma_infantry = { x = 0 y = 0 }
 		ma_infantry = { x = 0 y = 1 }
 		ma_infantry = { x = 0 y = 2 }
-		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
 	}
 }
-division_template = {
-	name = "天人安全卫队"
-	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-	}
-}
-
 
 ######################
 ######东####
@@ -185,16 +178,16 @@ units = {
 
 	###西
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 1958
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 1958
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -214,16 +207,16 @@ units = {
 	}
 
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 1958
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 1958
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -243,16 +236,16 @@ units = {
 	}
 
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 456
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 456
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -315,9 +308,9 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 700
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -365,9 +358,9 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "天人安全卫队"
+		name = "武装天女分队"
 		location = 1691
-		division_template = "天人安全卫队"
+		division_template = "武装天女分队"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}

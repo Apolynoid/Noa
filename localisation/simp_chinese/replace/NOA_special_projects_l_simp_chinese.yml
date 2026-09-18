@@ -6,6 +6,10 @@
  sp_race_norcturnal_intuition_desc:0 "凭借自身的直觉与灵力，妖兽能够在夜间更好的感知周遭环境。通过有计划的将这一特点应用于作战计划中，我们的战士在夜间作战中将取得更大的优势。"
  sp_race_aggressive_nature:0 "侵略天性"
  sp_race_aggressive_nature_desc:0 "我们身为草根妖怪的本性使得我们渴望战斗。通过适当引导这一本性，我们能使我们的战士发挥出更好的战斗力。"
+ sp_race_special_operation:0 "特种作战"
+ sp_race_special_operation_desc:0 "即使力量减弱，妖怪种族仍然保留有对个人力量的追求。通过适当引导与应用先进装备，我们的战士将能在战场上发挥出强大的个人作战能力。"
+ sp_race_tengu_kamikaze:0 "天狗神风"
+ sp_race_tengu_kamikaze_desc:0 "天狗种族天生追求速度。我们应当将这一特点融入军事训练，使我们的战士在战场上获得更好的机动性，并在复杂地形中取得优势。"
  sp_race_deification:0 "神格显现"
  sp_race_deification_desc:0 "神明可以通过显现自己的神格为治下的民众带来恩惠。这既可以用于祝福作物丰收，也可以用于更好安排军事计划。"
  sp_race_nature_intergration:0 "自然融合"
@@ -13,10 +17,15 @@
 
  sp_ye_jian_zhi_jue_idea:0 "夜间直觉"
  sp_qin_lve_tian_xing_idea:0 "侵略天性"
+ sp_te_zhong_zuo_zhan_idea:0 "特种作战"
+ sp_tian_gou_shen_feng_idea:0 "天狗神风"
  sp_shen_ge_xian_xian_idea:0 "神格显现"
  sp_zi_ran_rong_he_idea:0 "自然融合"
 
+ can_research_beast_sp_flag:0 "可以研究妖兽种族科技"
  can_research_pri_youkai_sp_flag:0 "可以研究草根妖怪种族科技"
+ can_research_youkai_sp_flag:0 "可以研究妖怪种族科技"
+ can_research_tengu_sp_flag:0 "可以研究天狗种族科技"
  can_research_god_sp_flag:0 "可以研究神明种族科技"
  can_research_fairy_sp_flag:0 "可以研究妖精种族科技"
 

@@ -661,7 +661,7 @@ focus_tree = {
 	focus = {
 		id = CFA_xia_ke_shang_jun_shi_yuan_zhu
 		icon = CIR_focus_SEJ_military_aid
-		cost = 7
+		cost = 3
 		x = 1
 		y = 1
 
@@ -678,7 +678,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 30
+			add_mastery = {
+				amount = 30
+				folder = land
+			}
 		}
 
 		ai_will_do = {

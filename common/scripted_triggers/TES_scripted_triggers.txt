@@ -14,13 +14,13 @@ TES_has_personal_cult = {
 
 TES_has_military_expansion = {
 	TES = {
-		check_variable = { num_equipment_in_armies_k@magic_core_a > 40 }
+		check_variable = { num_equipment_in_armies_k@magic_core_a > 35 }
 	}
 }
 
 TES_has_industrial_construction = {
 	TES = {
-		arms_factory > 30
+		arms_factory > 20
 	}
 }
 

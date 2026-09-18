@@ -10,8 +10,18 @@ spriteTypes = {
 	}	
 
 	spriteType = {
+		name = "GFX_sp_race_special_operation"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_special_operation.png"
+	}
+
+	spriteType = {
 		name = "GFX_sp_race_deification"
 		texturefile = "gfx/interface/special_project/project_icons/sp_race_deification.png"
+	}
+
+	spriteType = {
+		name = "GFX_sp_race_tengu_kamikaze"
+		texturefile = "gfx/interface/special_project/project_icons/sp_race_tengu_kamikaze.png"
 	}
 
 	spriteType = {

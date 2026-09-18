@@ -601,13 +601,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			is_ally_with = KAP
-			OR = {
-				MRY = {
-					NOA_is_independent = no
-				}
-				has_war_with = NTR
-			}
 		}
 
 		continue_if_invalid = yes
@@ -1326,6 +1319,7 @@ focus_tree = {
 			hidden_effect = {
 				MRY_clamp_and_calc_faith_bonus = yes
 			}
+			unlock_decision_tooltip = MRY_xian_sheng_zao_ying
 		}
 	
 		ai_will_do = {

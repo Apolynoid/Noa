@@ -5,6 +5,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_immigration_NOA"
+		texturefile = "gfx/interface/goals/focus_generic_immigration_NOA.png"			
+	}
+
+	SpriteType = {
 		name = "GFX_focus_befriend_TKM_NOA"
 		texturefile = "gfx/interface/goals/focus_generic_befriend_TKM_NOA.png"			
 	}

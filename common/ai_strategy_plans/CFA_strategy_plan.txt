@@ -1,0 +1,74 @@
+CFA_focus = {
+	name = "CFA focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = CFA
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# ask for help first
+		CFA_wai_jiao_zheng_ce
+		CFA_tian_gou_gong_ye_yuan_zhu
+		# develop industry
+		CL_tian_jie_fa_zhan_ji_hua
+		CL_cheng_li_gong_ye_bu
+		CL_ji_chu_she_shi_jian_she
+		CL_shui_zhi_gai_ge
+		CL_jiao_yu_gai_ge
+		CL_sheng_chan_ji_shu_you_hua
+		CL_tou_zi_jun_shi_gong_ye
+		# prepare for the war
+		CFA_han_wei_du_li
+		CFA_cheng_shi_bao_lei_hua_ji_hua
+		CFA_guo_jia_jin_ji_zhuang_tai
+		CFA_jing_ji_dong_yuan
+		CFA_jin_ji_sheng_chan
+		CFA_zhan_zheng_dong_yuan
+		CFA_kuo_da_zheng_bing
+		# continue for the factories
+		CL_tou_zi_min_yong_gong_ye
+		# military
+		CFA_jun_shi_gai_ge
+		CFA_tian_jie_yao_jing_jun_shi_xue_yuan
+		CL_ji_chu_wu_qi_yan_jiu
+		CL_pei_yang_ji_shu_gong_ren
+		CL_guo_li_ke_xue_yuan
+		CL_huo_pao_yan_jiu
+		CFA_jun_shi_li_lun_tan_suo
+		CFA_jiao_huo_zhan_shu
+		CFA_fang_yu_zhan_shu
+		CFA_ben_tu_fang_wei
+		# found the republic
+		CFA_tian_jie_yao_jing_gong_he_guo
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

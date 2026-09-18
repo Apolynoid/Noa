@@ -15,6 +15,26 @@ ideas = {
 			}
 		}
 
+		# 特种作战
+		sp_te_zhong_zuo_zhan_idea = {
+			modifier = {
+				army_armor_attack_factor = 0.2
+				army_armor_defence_factor = 0.2
+				army_armor_speed_factor = 0.07
+			}
+		}
+
+		# 河童科技
+
+		# 天狗神风
+		sp_tian_gou_shen_feng_idea = {
+			modifier = {
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.1
+				terrain_penalty_reduction = 0.05
+			}
+		}
+
 		# 神格显现
 		sp_shen_ge_xian_xian_idea = {
 			modifier = {

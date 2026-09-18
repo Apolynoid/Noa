@@ -1,0 +1,17 @@
+﻿l_english:
+SUKIMA_RULE_OKI_HEL:0 "Gate to Former Hell"
+SUKIMA_RULE_OKI_SCA:0 "Gate to Misty Lake"
+SUKIMA_RULE_OKI_GEN:0 "Gate to Muenzuka"
+SUKIMA_RULE_OKI_HUM:0 "Gate to the Human Village"
+SUKIMA_RULE_OKI_BYA:0 "Gate to the Bamboo Forest"
+SUKIMA_RULE_OKI_HEL2:0 "Gate to Hell"
+
+SUKIMA_RULE_YKR_SCA:0 "Phantom Grassland Sukima"
+SUKIMA_RULE_YKR_CHE:0 "Youkai Mountain Sukima"
+SUKIMA_RULE_YKR_NET:0 "Netherworld Sukima"
+SUKIMA_RULE_YKR_HKR:0 "Shrine Sukima"
+SUKIMA_RULE_YKR_KAG:0 "Bamboo Forest Sukima"
+SUKIMA_RULE_YKR_EMB:0 "Village Sukima"
+
+sukima_blocked_tt:0 "Requires the §Y$kongjianmonijishu$§! technology"
+back_door_blocked_tt:0 "Requires the §Y$back_door_simulation_tech$§! technology"

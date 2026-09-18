@@ -149,10 +149,11 @@ MRY_shou_shi_xin_yang_idea:0 "守矢信仰"
 MRY_faith_tt:0 "£faith_texticon §Y信仰§!"
 # decisions
 MRY_shou_shi_xin_yang:0 "守矢信仰"
-MRY_shou_shi_xin_yang_desc:0 "当前$MRY_faith_tt$：[?MRY_faith_value|1]"
+MRY_shou_shi_xin_yang_desc:0 "守矢的神明依赖信仰而存在，信仰充足时，神社的政治、军事、工业都能得到神力的§G庇佑§!；相反，信仰不足时则会§R影响神社的正常运行§!。同时，守矢神明也能通过消耗信仰，给予神社与信众更直接的§G恩惠§!。\n\n$MRY_faith_tt$的主要来源是§Y御柱祭§!与§Y巡回传教§!，而这些活动的§Y成本§!会随着重复举行而§R逐次上涨§!。向§Y天狗§!与§Y河童§!盟友许下§Y收复领土§!的承诺，也能在对抗§Y共和派§!的战事顺利推进时为我们带来$MRY_faith_tt$。相反，战争中的失利会使$MRY_faith_tt$迅速§R流失§!。\n\n当前$MRY_faith_tt$：[?MRY_faith_value|1]/100.0"
 MRY_ju_xing_yu_zhu_ji:0 "举行御柱祭"
 MRY_xun_hui_chuan_jiao:0 "巡回传教"
 MRY_yu_qian_yan_wu:0 "御前演武"
+MRY_xian_sheng_zao_ying:0 "显生造营"
 
 MRY_10_faith:0 "£faith_texticon  §Y10§!"
 MRY_10_faith_blocked:0 "£faith_texticon  §R10§!"
@@ -170,7 +171,7 @@ MRY_activate_faith_for_military_tt:0 "$MRY_faith_tt$将提供§Y陆军攻击§!�
 MRY_faith_for_attacking_TEG_tt:0 "在与§Y[TEG.GetNameWithFlag]§!交战时，随着其战争失利获得$MRY_faith_tt$，至多§G40.0§!点。"
 MRY_faith_for_attacking_NTR_tt:0 "在与§Y[NTR.GetNameWithFlag]§!交战时，随着其战争失利获得$MRY_faith_tt$，至多§G10.0§!点。"
 
-MRY_faith_for_autarky_tt:0 "在不进口§Y谐晶§!资源的条件下，满足工业谐晶需求时，每周$MRY_faith_tt$增长§G0.3§!。"
+MRY_faith_for_autarky_tt:0 "在不进口§Y谐晶§!资源的条件下，满足工业谐晶需求时，每周$MRY_faith_tt$增长§G0.6§!。"
 
 MRY_tengu_exile_character_tt:0 "§Y$OTG_megumu$§!和§Y$OTG_tsukasa$§!将会作为将领§G加入§!！"
 

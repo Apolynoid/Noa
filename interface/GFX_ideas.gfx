@@ -619,6 +619,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/mel_political_collapse.png"
 	}
 
+	#### YUK 太阳花田
+	spriteType = {
+		name = "GFX_idea_YUK_flowerfield_sphere"
+		texturefile = "gfx/interface/ideas/yuk_flowerfield_sphere.png"
+	}
+
 	#### SRB Toyosatomimi no Miko 神灵庙
 	spriteType = {
 		name = "GFX_idea_SRB_trade_with_SRB"

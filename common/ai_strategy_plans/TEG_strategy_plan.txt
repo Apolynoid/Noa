@@ -1,0 +1,83 @@
+TEG_focus = {
+	name = "TEG focus"
+	desc = "just something basic"
+
+	allowed = {
+		original_tag = TEG
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		# war bonds always goes first
+		TEG_bao_wei_gong_he_guo
+		TEG_fa_xing_zhan_zheng_zhai_quan
+		# political first
+		TEG_da_xuan
+		TEG_she_ming_wan_wen_zong_tong
+		TEG_gong_he_guo_zai_jiu_ye_fa_an
+		TEG_gong_he_guo_xuan_chuan_bu
+		# rush for industry
+		TEG_gong_he_guo_gong_ye_bu
+		TEG_gong_he_guo_gong_cheng_ji_shu_xue_yuan
+		# back to politics
+		TEG_gong_he_guo_wai_jiao_bu
+		TEG_yu_xia_ke_shang_de_meng_yue
+		TEG_jie_chu_chun_zhi_yao_jing
+		TEG_shang_yi_yuan_zhu_tian_jie_yao_jing
+		TEG_gong_gong_zhu_fang_fa_an
+		# continue with industry
+		TEG_ji_yu_ren_lei_ke_xue_jia_gong_min_quan
+		TEG_tou_zi_ji_chu_ke_xue
+		TEG_gong_he_guo_ke_yan_wei_yuan_hui
+		TEG_jun_shi_gong_ye_jian_she
+		TEG_tou_zi_ying_yong_ke_xue
+		# continue with industry
+		TEG_gong_ye_fu_xing_fa_an
+		TEG_tou_zi_hong_ye_bing_gong_chang
+		TEG_gong_he_guo_gong_lu_wang
+		TEG_min_yong_gong_ye_jian_she
+		TEG_wan_cheng_chong_jian
+		# ready for war asap
+		TEG_huan_xiang_xiang_de_min_zhu_bing_gong_chang
+		TEG_zhan_zheng_jing_ji_dong_yuan
+		TEG_xiao_mie_gong_he_zhi_di
+		# military
+		TEG_gong_he_guo_guo_fang_bu
+		TEG_qiang_hua_guo_min_wei_dui
+		TEG_hui_fu_zheng_bing_zhi
+		TEG_yan_jiu_bu_bing_wu_qi
+		TEG_huo_pao_yan_jiu
+		# fight!
+		TEG_jie_jue_tian_jie_wei_xie
+		TEG_jie_jue_shou_shi_wei_xie
+		TEG_jin_jun_hong_mo_guan
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 10.0
+	}
+
+}
+

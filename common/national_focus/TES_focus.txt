@@ -42,7 +42,7 @@ focus_tree = {
 	focus = {
 		id = TES_qing_xi_jiu_yi_hui
 		icon = GFX_focus_purge
-		cost = 7
+		cost = 3
 		x = -2
 		y = 1
 
@@ -119,7 +119,7 @@ focus_tree = {
 	focus = {
 		id = TES_yu_jiu_yi_hui_he_zuo
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 7
+		cost = 3
 		x = 2
 		y = 1
 
@@ -196,7 +196,7 @@ focus_tree = {
 	focus = {
 		id = TES_zeng_jia_xing_dong_zhen_xian_xi_wei
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 7
+		cost = 3
 		x = -2
 		y = 2
 
@@ -241,6 +241,10 @@ focus_tree = {
 		select_effect = {
 			add_political_power = -200
 		}
+
+		cancelable = no
+
+		continue_if_invalid = yes
 
 		completion_reward = {
 			custom_effect_tooltip = on_select_tt
@@ -338,6 +342,14 @@ focus_tree = {
 			add_offsite_building = {
 				type = arms_factory
 				level = 1
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+					}
+					TES_activate_delivery_standard = yes
+				}
 			}
 		}
 	
@@ -595,7 +607,7 @@ focus_tree = {
 	focus = {
 		id = TES_jian_wei_tuan_you_xian
 		icon = GFX_focus_RAJ_a_private_military
-		cost = 7
+		cost = 3
 		x = -2
 		y = 1
 
@@ -643,6 +655,14 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = TES_jun_dui_fen_lie_b_idea
 				add_idea = TES_jun_dui_fen_lie_c_idea
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+					}
+					TES_activate_officer_replacement = yes
+				}
 			}
 		}
 		
@@ -707,7 +727,7 @@ focus_tree = {
 	focus = {
 		id = TES_chuan_tong_lu_jun_you_xian
 		icon = GFX_focus_generic_manpower
-		cost = 7
+		cost = 3
 		x = 2
 		y = 1
 
@@ -778,6 +798,14 @@ focus_tree = {
 				remove_idea = TES_jun_dui_fen_lie_g_idea
 				add_idea = TES_jun_dui_fen_lie_h_idea
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+					}
+					TES_activate_officer_replacement = yes
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -828,6 +856,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TES_tian_jie_jun_shi_xue_yuan_idea
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = TES_tian_jie_lu_jun_jin_ji_hui_yi
+					}
+					TES_activate_personnel_reform = yes
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -862,7 +898,7 @@ focus_tree = {
 	focus = {
 		id = TES_liang_chan_xing_yao_shi_fu_you_pao
 		icon = GFX_focus_SWE_let_fly_all_guns
-		cost = 12
+		cost = 7
 		x = -1
 		y = 1
 
@@ -914,7 +950,7 @@ focus_tree = {
 	focus = {
 		id = TES_tong_yi_zhi_hui_quan
 		icon = GFX_focus_military_command
-		cost = 12
+		cost = 7
 		x = 0
 		y = 3
 
@@ -952,7 +988,7 @@ focus_tree = {
 	focus = {
 		id = TES_tian_jie_lu_jun_jin_ji_hui_yi
 		icon = GFX_goal_generic_axis_build_infantry
-		cost = 7
+		cost = 3
 		x = 22
 		y = 6
 
@@ -965,9 +1001,33 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = TES_celestial_army_command_auto_complete_tt
 			swap_ideas = {
 				remove_idea = TES_bu_xie_tiao_zhong_de_jun_dui_idea
 				add_idea = TES_bu_xie_tiao_zhong_de_jun_dui_111_idea
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = TES_jie_chu_gong_ye_jia_lian_he_hui
+					}
+					TES_activate_delivery_standard = yes
+				}
+				if = {
+					limit = {
+						has_completed_focus = TES_tian_jie_jun_shi_xue_yuan
+					}
+					TES_activate_personnel_reform = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							has_completed_focus = TES_she_li_du_dao_jun_guan
+							has_completed_focus = TES_ti_gao_jun_guan_xin_zi
+						}
+					}
+					TES_activate_officer_replacement = yes
+				}
 			}
 		}
 
@@ -992,6 +1052,10 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = TES_jie_chu_gong_ye_jia_lian_he_hui
+			custom_trigger_tooltip = {
+				tooltip = TES_auto_complete_tt
+				always = no
+			}
 		}
 
 		completion_reward = {
@@ -1048,6 +1112,10 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = TES_tian_jie_jun_shi_xue_yuan
+			custom_trigger_tooltip = {
+				tooltip = TES_auto_complete_tt
+				always = no
+			}
 		}
 
 		completion_reward = {
@@ -1107,6 +1175,10 @@ focus_tree = {
 				has_completed_focus = TES_she_li_du_dao_jun_guan
 				has_completed_focus = TES_ti_gao_jun_guan_xin_zi
 			}
+			custom_trigger_tooltip = {
+				tooltip = TES_auto_complete_tt
+				always = no
+			}
 		}
 
 		completion_reward = {
@@ -1151,11 +1223,18 @@ focus_tree = {
 	focus = {
 		id = TES_jun_dui_chong_sheng
 		icon = GFX_focus_GER_demonstration_of_military_achievements
-		cost = 7
+		cost = 3
 		x = 0
 		y = 2
 
 		relative_position_id = TES_tian_jie_lu_jun_jin_ji_hui_yi
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = TES_auto_complete_tt
+				always = no
+			}
+		}
 
 		prerequisite = {
 			focus = TES_qiang_diao_jiao_fu_biao_zhun

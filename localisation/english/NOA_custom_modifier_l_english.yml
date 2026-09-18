@@ -1,0 +1,11 @@
+﻿l_english:
+NOA_ban_scale_change:0 "Forbid Scale Change"
+NOA_TKM_monthly_sp_bead_cost:0 "Monthly Spirit Power Bead Cost"
+
+echoryte_res:0 "Echoryte Resources"
+echoryte_res_research:0 "Echoryte Resources Research Speed"
+PRODUCTION_MATERIALS_ECHORYTE:1 "Echoryte"
+echoryte_desc:0 "A mineral that produces stable resonance under certain conditions, widely used in Gensokyo as an industrial energy source."
+
+country_resource_echoryte: "Echoryte"
+country_resource_echoryte_tt: "$country_resource_echoryte$: $RIGHT|+=$"

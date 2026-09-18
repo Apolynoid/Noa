@@ -1,4 +1,4 @@
-﻿### Names generation for aces ###
+### Names generation for aces ###
 # Surnames can be male/female dependent or general. Fe. in Polish some surnames has different endings depending on the gender.
 # Names and Surnames are randomly picked and will sometimes repeat, but will never repeat in combinations for example there will never be generated another "John Smith".
 # Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
@@ -129,6 +129,59 @@ CLO = {
 				 "Garnet" "Beryl" "Onyx" }
 	callsigns = { "Wind Runner" "Sky Flicker" "Star Strike" "Tiny Terror" "Big Trouble" 
 				 "Whirlwind" "Slipstream" "Wild Card" "White Out" "Fire Fly" }
+}
+
+# Gods
+MRY = {
+	male = {
+		names = { "Mizuho" "Isuzu" "Minori" "Honami" "Chiyo" "Sayuri" "Wakana" "Yunagi" "Shinonome"
+				 "Yuu" "Shigure" }
+		surnames = { }
+		callsigns = { }
+	}
+	surnames = { "Takama" "Izumo" "Iwakura" "Hyuga" "Amatsugi" "Iwasaka" "Konohana" "Miwa" "Kamo"
+				 "Kagurazaka" }
+	callsigns = { "Amatsu" "Nichirin" "Raicho" "Hakukyo" "Suiyu" "Asagasumi" "Konji" "Yatagarasu"
+				 "Hamaya" "Amenohabaya" }
+}
+
+AKI = {
+	male = {
+		names = { "Mizuho" "Isuzu" "Minori" "Honami" "Chiyo" "Sayuri" "Wakana" "Yunagi" "Shinonome"
+				 "Yuu" "Shigure" }
+		surnames = { }
+		callsigns = { }
+	}
+	surnames = { "Takama" "Izumo" "Iwakura" "Hyuga" "Amatsugi" "Iwasaka" "Konohana" "Miwa" "Kamo"
+				 "Kagurazaka" }
+	callsigns = { "Amatsu" "Nichirin" "Raicho" "Hakukyo" "Suiyu" "Asagasumi" "Konji" "Yatagarasu"
+				 "Hamaya" "Amenohabaya" }
+}
+
+SRB = {
+	male = {
+		names = { "Mizuho" "Isuzu" "Minori" "Honami" "Chiyo" "Sayuri" "Wakana" "Yunagi" "Shinonome"
+				 "Yuu" "Shigure" }
+		surnames = { }
+		callsigns = { }
+	}
+	surnames = { "Takama" "Izumo" "Iwakura" "Hyuga" "Amatsugi" "Iwasaka" "Konohana" "Miwa" "Kamo"
+				 "Kagurazaka" }
+	callsigns = { "Amatsu" "Nichirin" "Raicho" "Hakukyo" "Suiyu" "Asagasumi" "Konji" "Yatagarasu"
+				 "Hamaya" "Amenohabaya" }
+}
+
+OKI = {
+	male = {
+		names = { "Mizuho" "Isuzu" "Minori" "Honami" "Chiyo" "Sayuri" "Wakana" "Yunagi" "Shinonome"
+				 "Yuu" "Shigure" }
+		surnames = { }
+		callsigns = { }
+	}
+	surnames = { "Takama" "Izumo" "Iwakura" "Hyuga" "Amatsugi" "Iwasaka" "Konohana" "Miwa" "Kamo"
+				 "Kagurazaka" }
+	callsigns = { "Amatsu" "Nichirin" "Raicho" "Hakukyo" "Suiyu" "Asagasumi" "Konji" "Yatagarasu"
+				 "Hamaya" "Amenohabaya" }
 }
 
 default = {

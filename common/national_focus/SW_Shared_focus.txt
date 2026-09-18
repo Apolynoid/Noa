@@ -387,7 +387,7 @@ shared_focus = {
 # 鼓励拓荒移民
 shared_focus = {
 	id = SW_gu_li_tuo_huang_yi_min
-	icon = GFX_focus_immigration
+	icon = GFX_focus_immigration_NOA
 	cost = 7
 	x = 0
 	y = 2

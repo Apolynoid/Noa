@@ -1,0 +1,11 @@
+﻿l_english:
+ STATE_CATEGORY_s0: "Wasteland"
+ STATE_CATEGORY_s2: "Scattered Settlements"
+ STATE_CATEGORY_s5: "Small Settlement"
+ STATE_CATEGORY_s7: "Small Village"
+ STATE_CATEGORY_s10: "Rural Region"
+ STATE_CATEGORY_s12: "Town"
+ STATE_CATEGORY_s15: "Large Town"
+ STATE_CATEGORY_s17: "City"
+ STATE_CATEGORY_s20: "Large City"
+ STATE_CATEGORY_s25: "Metropolis"

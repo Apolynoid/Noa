@@ -1,0 +1,12 @@
+﻿l_english:
+ COLLECTION_WORLD_RADICALIST_COUNTRIES: "All Radicalist Countries" 
+ COLLECTION_NON_CHANGEMAKER_STATES: "Non-Radicalist and Non-Reformist controlled states"
+
+ COLLECTION_faction_allies_core_and_claimed_states:0 "Core and claimed states of faction members"
+ COLLECTION_faction_allies_controlled_core_and_claimed_states:0 "Core and claimed states controlled by faction members"
+ COLLECTION_faction_owned_controlled_states_with_3_or_more_mils:0 "States owned and controlled by the faction with 3 or more $arms_factory$"
+
+ COLLECTION_CASUALTIES_INFLICTED_BY_FACTION_MEMBERS_2k: "Number of faction members that inflicted more than 2,000 casualties on the enemy in a defensive war"
+ COLLECTION_FACTION_BORDER_STATES_LV2_INFRASTRUCTURE: "Faction-controlled border states below level 2 infrastructure"
+ COLLECTION_STATES_MY_CONTINENT_CONTROLLED_AUTHORITY: "States on the same Continent controlled by Non-§YRadicalist§! and Non-§YReformist§! Countries"
+ COLLECTION_AMOUNT_OF_CHANGEMAKER_CONTROLLED_STATES_SAME_CONTINENT: "States on the same Continent controlled by §YRadicalist§! or §YReformist§! Countries"

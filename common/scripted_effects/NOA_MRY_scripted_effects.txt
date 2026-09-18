@@ -24,7 +24,7 @@ MRY_clamp_and_calc_faith_bonus = {
 			has_completed_focus = MRY_shou_shi_jian_she_qi_ji
 		}
 		set_variable = {
-			MRY_faith_bonus_building = { value = MRY_faith_value divide = 500 }
+			MRY_faith_bonus_building = { value = MRY_faith_value divide = 400 }
 		}
 		clamp_variable = {
 			var = MRY_faith_bonus_building

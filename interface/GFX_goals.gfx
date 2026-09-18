@@ -373,11 +373,6 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_immigration"
-		texturefile = "gfx/interface/goals/focus_generic_immigration.png"			
-	}
-
-	SpriteType = {
 		name = "GFX_focus_peace_propaganda"
 		texturefile = "gfx/interface/goals/focus_generic_peace_propaganda.dds"			
 	}

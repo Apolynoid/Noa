@@ -64,7 +64,7 @@ NTR_mao_yi_xie_ding_op:0 "贸易协定"
 
  ###ttt
 NTR_national_investment_tt:0 "§Y180天§!后，移除§Y$NTR_ji_jin_pai_wen_ti_a_idea$§!精神并获得§Y1§!座民用工厂。"
-NTR_assault_engineers_tt:0 "增强§Ysp_zhanchanggongbing§!跨河、城市战与对堡垒的攻击能力。"
+NTR_assault_engineers_tt:0 "增强§Y$sp_zhanchanggongbing$§!跨河、城市战与对堡垒的攻击能力。"
 NTR_mass_army_tt:0 "如果启用§Y$mass_assault$§!学说，则改为获得§Y50§!精通度。"
 NTR_elite_army_tt:0 "如果启用§Y$fire_support$§!学说，则改为获得§Y50§!精通度。"
 NTR_if_TEG_agree_tt:0 "如果[TEG.GetFlag][TEG.GetName]同意，则："

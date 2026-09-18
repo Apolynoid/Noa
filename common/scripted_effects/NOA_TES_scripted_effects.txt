@@ -61,3 +61,35 @@ TES_calc_mandate_value = {
         TES_mandate_buff_value = 0.04
     }
 }
+
+TES_activate_delivery_standard = {
+    activate_shine_on_focus = TES_qiang_diao_jiao_fu_biao_zhun
+    country_event = {
+        id = tes.107
+        days = 15
+    }
+}
+
+TES_activate_personnel_reform = {
+    activate_shine_on_focus = TES_can_mou_bu_ren_shi_gai_ge
+    country_event = {
+        id = tes.108
+        days = 15
+    }
+}
+
+TES_activate_officer_replacement = {
+    activate_shine_on_focus = TES_che_huan_bu_chen_zhi_jun_guan
+    country_event = {
+        id = tes.109
+        days = 15
+    }
+}
+
+TES_activate_army_reborn = {
+    activate_shine_on_focus = TES_jun_dui_chong_sheng
+    country_event = {
+        id = tes.110
+        days = 15
+    }
+}

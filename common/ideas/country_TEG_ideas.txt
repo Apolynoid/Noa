@@ -167,7 +167,7 @@ ideas = {
 		TEG_liu_wang_ren_lei_ke_xue_jia_idea = {
 	    	picture = SOV_scientist_defect	
 			research_bonus = {
-				math = 0.08
+				math = 0.05
 			}
 	    }
 
@@ -175,10 +175,10 @@ ideas = {
 		TEG_gui_hua_ren_lei_ke_xue_jia_idea = {
 	    	picture = SOV_scientist_defect	
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.05
 			}
 			research_bonus = {
-				math = 0.1
+				math = 0.08
 			}
 	    }
 
